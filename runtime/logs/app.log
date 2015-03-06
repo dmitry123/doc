@@ -3486,3 +3486,107 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1425630925.3218
     'REQUEST_TIME' => 1425630925
 ]
+2015-03-06 12:52:52 [127.0.0.1][-][c8vshu6a53qengh0vo2suc3dp7][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\models\LoginForm' not found' in F:\Hosts\Celeroctos\Toonftp\www\doc\controllers\SiteController.php:61
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-06 12:52:52 [127.0.0.1][-][c8vshu6a53qengh0vo2suc3dp7][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'c8vshu6a53qengh0vo2suc3dp7'
+]
+
+$_SESSION = [
+    '062f22bc88ca9d092e9f8afe8e996aac__id' => 'SYSTEM'
+    '062f22bc88ca9d092e9f8afe8e996aac__name' => 'SYSTEM'
+    '062f22bc88ca9d092e9f8afe8e996aaclogin' => 'SYSTEM'
+    '062f22bc88ca9d092e9f8afe8e996aacid' => 1
+    '062f22bc88ca9d092e9f8afe8e996aacusername' => 'Супервайзер'
+    '062f22bc88ca9d092e9f8afe8e996aacroleId' => [
+        0 => [
+            'id' => 15
+            'name' => 'Главврач'
+            'parent_id' => -1
+            'startpage_id' => 29
+            'priority' => 15
+            'url' => '/statistic/history/view'
+        ]
+        1 => [
+            'id' => 11
+            'name' => 'Супервайзер'
+            'parent_id' => -1
+            'startpage_id' => 21
+            'priority' => 1
+            'url' => '/admin/users/view'
+        ]
+        2 => [
+            'id' => 18
+            'name' => 'Тестирование'
+            'parent_id' => -1
+            'startpage_id' => null
+            'priority' => null
+            'url' => null
+        ]
+    ]
+    '062f22bc88ca9d092e9f8afe8e996aacdoctorId' => 15
+    '062f22bc88ca9d092e9f8afe8e996aacmedworkerId' => 11
+    '062f22bc88ca9d092e9f8afe8e996aacenterpriseId' => 1
+    '062f22bc88ca9d092e9f8afe8e996aacfio' => 'Системный Администратор '
+    '062f22bc88ca9d092e9f8afe8e996aacstartpageUrl' => '/statistic/history/view'
+    '062f22bc88ca9d092e9f8afe8e996aacmedcardGenRuleId' => 15
+    '062f22bc88ca9d092e9f8afe8e996aacfontSize' => 12
+    '062f22bc88ca9d092e9f8afe8e996aac__states' => [
+        'login' => true
+        'id' => true
+        'username' => true
+        'roleId' => true
+        'doctorId' => true
+        'medworkerId' => true
+        'enterpriseId' => true
+        'fio' => true
+        'startpageUrl' => true
+        'medcardGenRuleId' => true
+        'fontSize' => true
+    ]
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:81/doc/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=c8vshu6a53qengh0vo2suc3dp7'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '55741'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/doc/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425631972.906
+    'REQUEST_TIME' => 1425631972
+]

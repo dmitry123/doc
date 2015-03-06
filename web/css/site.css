@@ -1,6 +1,11 @@
 html,
 body {
-    height: 100%;
+    margin-top: 20px;
+    height: calc(100% - 20px);
+}
+
+.container {
+    padding: 0;
 }
 
 .wrap {
@@ -10,13 +15,43 @@ body {
     padding: 0 0 60px;
 }
 
-.wrap > .container {
-    padding: 70px 15px 20px;
-}
-
 .not-set {
     color: #c55;
     font-style: italic;
+}
+
+.navbar-xs {
+    min-height: 30px;
+    height: 30px;
+}
+
+.navbar-xs .navbar-brand {
+    padding: 0 12px;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.navbar-xs .navbar-nav > li > a {
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 30px;
+}
+
+.navbar-sm {
+    min-height: 40px;
+    height: 40px;
+}
+
+.navbar-sm .navbar-brand {
+    padding: 0 12px;
+    font-size: 14px;
+    line-height: 40px;
+}
+
+.navbar-sm .navbar-nav > li > a {
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 39px;
 }
 
 /* add sorting icons to gridview sort links */
