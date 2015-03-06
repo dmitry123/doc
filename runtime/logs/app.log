@@ -2057,3 +2057,1331 @@ $_SERVER = [
     'argv' => []
     'argc' => 0
 ]
+2015-03-06 09:09:46 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\models\ContactForm' not found' in F:\Hosts\Celeroctos\Toonftp\www\doc\controllers\SiteController.php:80
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-06 09:09:46 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/contact'
+]
+
+$_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'c8vshu6a53qengh0vo2suc3dp7'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:81/doc/web/index.php?r=site%2Fabout'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=c8vshu6a53qengh0vo2suc3dp7'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '51472'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fcontact'
+    'REQUEST_URI' => '/doc/web/index.php?r=site%2Fcontact'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425618586.493
+    'REQUEST_TIME' => 1425618586
+]
+2015-03-06 09:09:50 [127.0.0.1][-][c8vshu6a53qengh0vo2suc3dp7][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\models\LoginForm' not found' in F:\Hosts\Celeroctos\Toonftp\www\doc\controllers\SiteController.php:61
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-06 09:09:49 [127.0.0.1][-][c8vshu6a53qengh0vo2suc3dp7][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'c8vshu6a53qengh0vo2suc3dp7'
+]
+
+$_SESSION = [
+    '062f22bc88ca9d092e9f8afe8e996aac__id' => 'SYSTEM'
+    '062f22bc88ca9d092e9f8afe8e996aac__name' => 'SYSTEM'
+    '062f22bc88ca9d092e9f8afe8e996aaclogin' => 'SYSTEM'
+    '062f22bc88ca9d092e9f8afe8e996aacid' => 1
+    '062f22bc88ca9d092e9f8afe8e996aacusername' => 'Супервайзер'
+    '062f22bc88ca9d092e9f8afe8e996aacroleId' => [
+        0 => [
+            'id' => 15
+            'name' => 'Главврач'
+            'parent_id' => -1
+            'startpage_id' => 29
+            'priority' => 15
+            'url' => '/statistic/history/view'
+        ]
+        1 => [
+            'id' => 11
+            'name' => 'Супервайзер'
+            'parent_id' => -1
+            'startpage_id' => 21
+            'priority' => 1
+            'url' => '/admin/users/view'
+        ]
+        2 => [
+            'id' => 18
+            'name' => 'Тестирование'
+            'parent_id' => -1
+            'startpage_id' => null
+            'priority' => null
+            'url' => null
+        ]
+    ]
+    '062f22bc88ca9d092e9f8afe8e996aacdoctorId' => 15
+    '062f22bc88ca9d092e9f8afe8e996aacmedworkerId' => 11
+    '062f22bc88ca9d092e9f8afe8e996aacenterpriseId' => 1
+    '062f22bc88ca9d092e9f8afe8e996aacfio' => 'Системный Администратор '
+    '062f22bc88ca9d092e9f8afe8e996aacstartpageUrl' => '/statistic/history/view'
+    '062f22bc88ca9d092e9f8afe8e996aacmedcardGenRuleId' => 15
+    '062f22bc88ca9d092e9f8afe8e996aacfontSize' => 12
+    '062f22bc88ca9d092e9f8afe8e996aac__states' => [
+        'login' => true
+        'id' => true
+        'username' => true
+        'roleId' => true
+        'doctorId' => true
+        'medworkerId' => true
+        'enterpriseId' => true
+        'fio' => true
+        'startpageUrl' => true
+        'medcardGenRuleId' => true
+        'fontSize' => true
+    ]
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:81/doc/web/index.php?r=site%2Fabout'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=c8vshu6a53qengh0vo2suc3dp7'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '51477'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/doc/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425618589.986
+    'REQUEST_TIME' => 1425618589
+]
+2015-03-06 09:13:41 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\models\ContactForm' not found' in F:\Hosts\Celeroctos\Toonftp\www\doc\controllers\SiteController.php:80
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-06 09:13:41 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/contact'
+]
+
+$_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'c8vshu6a53qengh0vo2suc3dp7'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:81/doc/web/index.php?r=site%2Fabout'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=c8vshu6a53qengh0vo2suc3dp7'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '51533'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fcontact'
+    'REQUEST_URI' => '/doc/web/index.php?r=site%2Fcontact'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425618821.547
+    'REQUEST_TIME' => 1425618821
+]
+2015-03-06 09:13:43 [127.0.0.1][-][c8vshu6a53qengh0vo2suc3dp7][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\models\LoginForm' not found' in F:\Hosts\Celeroctos\Toonftp\www\doc\controllers\SiteController.php:61
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-06 09:13:43 [127.0.0.1][-][c8vshu6a53qengh0vo2suc3dp7][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'c8vshu6a53qengh0vo2suc3dp7'
+]
+
+$_SESSION = [
+    '062f22bc88ca9d092e9f8afe8e996aac__id' => 'SYSTEM'
+    '062f22bc88ca9d092e9f8afe8e996aac__name' => 'SYSTEM'
+    '062f22bc88ca9d092e9f8afe8e996aaclogin' => 'SYSTEM'
+    '062f22bc88ca9d092e9f8afe8e996aacid' => 1
+    '062f22bc88ca9d092e9f8afe8e996aacusername' => 'Супервайзер'
+    '062f22bc88ca9d092e9f8afe8e996aacroleId' => [
+        0 => [
+            'id' => 15
+            'name' => 'Главврач'
+            'parent_id' => -1
+            'startpage_id' => 29
+            'priority' => 15
+            'url' => '/statistic/history/view'
+        ]
+        1 => [
+            'id' => 11
+            'name' => 'Супервайзер'
+            'parent_id' => -1
+            'startpage_id' => 21
+            'priority' => 1
+            'url' => '/admin/users/view'
+        ]
+        2 => [
+            'id' => 18
+            'name' => 'Тестирование'
+            'parent_id' => -1
+            'startpage_id' => null
+            'priority' => null
+            'url' => null
+        ]
+    ]
+    '062f22bc88ca9d092e9f8afe8e996aacdoctorId' => 15
+    '062f22bc88ca9d092e9f8afe8e996aacmedworkerId' => 11
+    '062f22bc88ca9d092e9f8afe8e996aacenterpriseId' => 1
+    '062f22bc88ca9d092e9f8afe8e996aacfio' => 'Системный Администратор '
+    '062f22bc88ca9d092e9f8afe8e996aacstartpageUrl' => '/statistic/history/view'
+    '062f22bc88ca9d092e9f8afe8e996aacmedcardGenRuleId' => 15
+    '062f22bc88ca9d092e9f8afe8e996aacfontSize' => 12
+    '062f22bc88ca9d092e9f8afe8e996aac__states' => [
+        'login' => true
+        'id' => true
+        'username' => true
+        'roleId' => true
+        'doctorId' => true
+        'medworkerId' => true
+        'enterpriseId' => true
+        'fio' => true
+        'startpageUrl' => true
+        'medcardGenRuleId' => true
+        'fontSize' => true
+    ]
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:81/doc/web/index.php?r=site%2Fabout'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=c8vshu6a53qengh0vo2suc3dp7'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '51536'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/doc/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425618823.736
+    'REQUEST_TIME' => 1425618823
+]
+2015-03-06 11:31:11 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\models\ContactForm' not found' in F:\Hosts\Celeroctos\Toonftp\www\doc\controllers\SiteController.php:80
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-06 11:31:11 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/contact'
+]
+
+$_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'c8vshu6a53qengh0vo2suc3dp7'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:81/doc/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=c8vshu6a53qengh0vo2suc3dp7'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '54250'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fcontact'
+    'REQUEST_URI' => '/doc/web/index.php?r=site%2Fcontact'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425627071.304
+    'REQUEST_TIME' => 1425627071
+]
+2015-03-06 11:31:15 [127.0.0.1][-][c8vshu6a53qengh0vo2suc3dp7][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\models\LoginForm' not found' in F:\Hosts\Celeroctos\Toonftp\www\doc\controllers\SiteController.php:61
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-06 11:31:15 [127.0.0.1][-][c8vshu6a53qengh0vo2suc3dp7][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'c8vshu6a53qengh0vo2suc3dp7'
+]
+
+$_SESSION = [
+    '062f22bc88ca9d092e9f8afe8e996aac__id' => 'SYSTEM'
+    '062f22bc88ca9d092e9f8afe8e996aac__name' => 'SYSTEM'
+    '062f22bc88ca9d092e9f8afe8e996aaclogin' => 'SYSTEM'
+    '062f22bc88ca9d092e9f8afe8e996aacid' => 1
+    '062f22bc88ca9d092e9f8afe8e996aacusername' => 'Супервайзер'
+    '062f22bc88ca9d092e9f8afe8e996aacroleId' => [
+        0 => [
+            'id' => 15
+            'name' => 'Главврач'
+            'parent_id' => -1
+            'startpage_id' => 29
+            'priority' => 15
+            'url' => '/statistic/history/view'
+        ]
+        1 => [
+            'id' => 11
+            'name' => 'Супервайзер'
+            'parent_id' => -1
+            'startpage_id' => 21
+            'priority' => 1
+            'url' => '/admin/users/view'
+        ]
+        2 => [
+            'id' => 18
+            'name' => 'Тестирование'
+            'parent_id' => -1
+            'startpage_id' => null
+            'priority' => null
+            'url' => null
+        ]
+    ]
+    '062f22bc88ca9d092e9f8afe8e996aacdoctorId' => 15
+    '062f22bc88ca9d092e9f8afe8e996aacmedworkerId' => 11
+    '062f22bc88ca9d092e9f8afe8e996aacenterpriseId' => 1
+    '062f22bc88ca9d092e9f8afe8e996aacfio' => 'Системный Администратор '
+    '062f22bc88ca9d092e9f8afe8e996aacstartpageUrl' => '/statistic/history/view'
+    '062f22bc88ca9d092e9f8afe8e996aacmedcardGenRuleId' => 15
+    '062f22bc88ca9d092e9f8afe8e996aacfontSize' => 12
+    '062f22bc88ca9d092e9f8afe8e996aac__states' => [
+        'login' => true
+        'id' => true
+        'username' => true
+        'roleId' => true
+        'doctorId' => true
+        'medworkerId' => true
+        'enterpriseId' => true
+        'fio' => true
+        'startpageUrl' => true
+        'medcardGenRuleId' => true
+        'fontSize' => true
+    ]
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:81/doc/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=c8vshu6a53qengh0vo2suc3dp7'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '54251'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/doc/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425627075.516
+    'REQUEST_TIME' => 1425627075
+]
+2015-03-06 11:46:08 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\models\ContactForm' not found' in F:\Hosts\Celeroctos\Toonftp\www\doc\controllers\SiteController.php:80
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-06 11:46:08 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/contact'
+]
+
+$_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'c8vshu6a53qengh0vo2suc3dp7'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:81/doc/web/index.php?r=site%2Fabout'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=c8vshu6a53qengh0vo2suc3dp7'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '54433'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fcontact'
+    'REQUEST_URI' => '/doc/web/index.php?r=site%2Fcontact'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425627968.687
+    'REQUEST_TIME' => 1425627968
+]
+2015-03-06 11:46:10 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\models\ContactForm' not found' in F:\Hosts\Celeroctos\Toonftp\www\doc\controllers\SiteController.php:80
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-06 11:46:10 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/contact'
+]
+
+$_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'c8vshu6a53qengh0vo2suc3dp7'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:81/doc/web/index.php?r=site%2Fabout'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=c8vshu6a53qengh0vo2suc3dp7'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '54436'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fcontact'
+    'REQUEST_URI' => '/doc/web/index.php?r=site%2Fcontact'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425627970.729
+    'REQUEST_TIME' => 1425627970
+]
+2015-03-06 11:46:12 [127.0.0.1][-][c8vshu6a53qengh0vo2suc3dp7][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\models\LoginForm' not found' in F:\Hosts\Celeroctos\Toonftp\www\doc\controllers\SiteController.php:61
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-06 11:46:12 [127.0.0.1][-][c8vshu6a53qengh0vo2suc3dp7][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'c8vshu6a53qengh0vo2suc3dp7'
+]
+
+$_SESSION = [
+    '062f22bc88ca9d092e9f8afe8e996aac__id' => 'SYSTEM'
+    '062f22bc88ca9d092e9f8afe8e996aac__name' => 'SYSTEM'
+    '062f22bc88ca9d092e9f8afe8e996aaclogin' => 'SYSTEM'
+    '062f22bc88ca9d092e9f8afe8e996aacid' => 1
+    '062f22bc88ca9d092e9f8afe8e996aacusername' => 'Супервайзер'
+    '062f22bc88ca9d092e9f8afe8e996aacroleId' => [
+        0 => [
+            'id' => 15
+            'name' => 'Главврач'
+            'parent_id' => -1
+            'startpage_id' => 29
+            'priority' => 15
+            'url' => '/statistic/history/view'
+        ]
+        1 => [
+            'id' => 11
+            'name' => 'Супервайзер'
+            'parent_id' => -1
+            'startpage_id' => 21
+            'priority' => 1
+            'url' => '/admin/users/view'
+        ]
+        2 => [
+            'id' => 18
+            'name' => 'Тестирование'
+            'parent_id' => -1
+            'startpage_id' => null
+            'priority' => null
+            'url' => null
+        ]
+    ]
+    '062f22bc88ca9d092e9f8afe8e996aacdoctorId' => 15
+    '062f22bc88ca9d092e9f8afe8e996aacmedworkerId' => 11
+    '062f22bc88ca9d092e9f8afe8e996aacenterpriseId' => 1
+    '062f22bc88ca9d092e9f8afe8e996aacfio' => 'Системный Администратор '
+    '062f22bc88ca9d092e9f8afe8e996aacstartpageUrl' => '/statistic/history/view'
+    '062f22bc88ca9d092e9f8afe8e996aacmedcardGenRuleId' => 15
+    '062f22bc88ca9d092e9f8afe8e996aacfontSize' => 12
+    '062f22bc88ca9d092e9f8afe8e996aac__states' => [
+        'login' => true
+        'id' => true
+        'username' => true
+        'roleId' => true
+        'doctorId' => true
+        'medworkerId' => true
+        'enterpriseId' => true
+        'fio' => true
+        'startpageUrl' => true
+        'medcardGenRuleId' => true
+        'fontSize' => true
+    ]
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:81/doc/web/index.php?r=site%2Fabout'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=c8vshu6a53qengh0vo2suc3dp7'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '54437'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/doc/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425627972.652
+    'REQUEST_TIME' => 1425627972
+]
+2015-03-06 11:56:06 [127.0.0.1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '?>'' in F:\Hosts\Celeroctos\Toonftp\www\doc\views\layouts\main.php:26
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-06 11:56:06 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'c8vshu6a53qengh0vo2suc3dp7'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:81/doc/web/index.php?r=site%2Fabout'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=c8vshu6a53qengh0vo2suc3dp7'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '54503'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/doc/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425628566.634
+    'REQUEST_TIME' => 1425628566
+]
+2015-03-06 11:56:21 [127.0.0.1][-][-][error][yii\base\InvalidParamException] exception 'yii\base\InvalidParamException' with message 'The view file does not exist: F:\Hosts\Celeroctos\Toonftp\www\doc\widgets\views\app\widgets\Menu.php' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\View.php:226
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('F:\Hosts\Celero...', Array, Object(app\widgets\Menu))
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Widget.php(182): yii\base\View->render('app\widgets\Men...', Array, Object(app\widgets\Menu))
+#2 F:\Hosts\Celeroctos\Toonftp\www\doc\widgets\Menu.php(20): yii\base\Widget->render('app\widgets\Men...')
+#3 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Widget.php(96): app\widgets\Menu->run()
+#4 F:\Hosts\Celeroctos\Toonftp\www\doc\views\layouts\main.php(26): yii\base\Widget::widget()
+#5 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\View.php(325): require('F:\Hosts\Celero...')
+#6 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('F:\Hosts\Celero...', Array)
+#7 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Controller.php(382): yii\base\View->renderFile('F:\Hosts\Celero...', Array, Object(app\controllers\SiteController))
+#8 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Controller.php(368): yii\base\Controller->renderContent('<div class="sit...')
+#9 F:\Hosts\Celeroctos\Toonftp\www\doc\controllers\SiteController.php(52): yii\base\Controller->render('index')
+#10 [internal function]: app\controllers\SiteController->actionIndex()
+#11 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#12 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#13 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('index', Array)
+#14 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('site/index', Array)
+#15 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#17 {main}
+2015-03-06 11:56:21 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'c8vshu6a53qengh0vo2suc3dp7'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:81/doc/web/index.php?r=site%2Fabout'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=c8vshu6a53qengh0vo2suc3dp7'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '54506'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/doc/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425628581.144
+    'REQUEST_TIME' => 1425628581
+]
+2015-03-06 11:56:46 [127.0.0.1][-][-][error][yii\base\InvalidParamException] exception 'yii\base\InvalidParamException' with message 'The view file does not exist: F:\Hosts\Celeroctos\Toonftp\www\doc\widgets\views\app\widgets\Menu.php' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\View.php:226
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('F:\Hosts\Celero...', Array, Object(app\widgets\Menu))
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Widget.php(182): yii\base\View->render('app\widgets\Men...', Array, Object(app\widgets\Menu))
+#2 F:\Hosts\Celeroctos\Toonftp\www\doc\widgets\Menu.php(20): yii\base\Widget->render('app\widgets\Men...')
+#3 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Widget.php(96): app\widgets\Menu->run()
+#4 F:\Hosts\Celeroctos\Toonftp\www\doc\views\layouts\main.php(26): yii\base\Widget::widget()
+#5 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\View.php(325): require('F:\Hosts\Celero...')
+#6 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('F:\Hosts\Celero...', Array)
+#7 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Controller.php(382): yii\base\View->renderFile('F:\Hosts\Celero...', Array, Object(app\controllers\SiteController))
+#8 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Controller.php(368): yii\base\Controller->renderContent('<div class="sit...')
+#9 F:\Hosts\Celeroctos\Toonftp\www\doc\controllers\SiteController.php(52): yii\base\Controller->render('index')
+#10 [internal function]: app\controllers\SiteController->actionIndex()
+#11 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#12 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#13 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('index', Array)
+#14 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('site/index', Array)
+#15 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#17 {main}
+2015-03-06 11:56:46 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'c8vshu6a53qengh0vo2suc3dp7'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:81/doc/web/index.php?r=site%2Fabout'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=c8vshu6a53qengh0vo2suc3dp7'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '54518'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/doc/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425628606.043
+    'REQUEST_TIME' => 1425628606
+]
+2015-03-06 11:57:12 [127.0.0.1][-][-][error][yii\base\ErrorException:64] exception 'yii\base\ErrorException' with message 'Cannot use yii\widgets\Menu as Menu because the name is already in use' in F:\Hosts\Celeroctos\Toonftp\www\doc\widgets\SideNav.php:18
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-06 11:57:11 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'c8vshu6a53qengh0vo2suc3dp7'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:81/doc/web/index.php?r=site%2Fabout'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=c8vshu6a53qengh0vo2suc3dp7'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '54528'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/doc/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425628631.956
+    'REQUEST_TIME' => 1425628631
+]
+2015-03-06 12:01:32 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\models\ContactForm' not found' in F:\Hosts\Celeroctos\Toonftp\www\doc\controllers\SiteController.php:80
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-06 12:01:32 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/contact'
+]
+
+$_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'c8vshu6a53qengh0vo2suc3dp7'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:81/doc/web/index.php?r=site%2Fabout'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=c8vshu6a53qengh0vo2suc3dp7'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '54623'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fcontact'
+    'REQUEST_URI' => '/doc/web/index.php?r=site%2Fcontact'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425628892.378
+    'REQUEST_TIME' => 1425628892
+]
+2015-03-06 12:01:34 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\models\ContactForm' not found' in F:\Hosts\Celeroctos\Toonftp\www\doc\controllers\SiteController.php:80
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-06 12:01:34 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/contact'
+]
+
+$_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'c8vshu6a53qengh0vo2suc3dp7'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:81/doc/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=c8vshu6a53qengh0vo2suc3dp7'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '54621'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fcontact'
+    'REQUEST_URI' => '/doc/web/index.php?r=site%2Fcontact'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425628894.145
+    'REQUEST_TIME' => 1425628894
+]
+2015-03-06 12:01:36 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\models\ContactForm' not found' in F:\Hosts\Celeroctos\Toonftp\www\doc\controllers\SiteController.php:80
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-06 12:01:36 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/contact'
+]
+
+$_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'c8vshu6a53qengh0vo2suc3dp7'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:81/doc/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=c8vshu6a53qengh0vo2suc3dp7'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '54616'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fcontact'
+    'REQUEST_URI' => '/doc/web/index.php?r=site%2Fcontact'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425628896.402
+    'REQUEST_TIME' => 1425628896
+]
+2015-03-06 12:01:38 [127.0.0.1][-][c8vshu6a53qengh0vo2suc3dp7][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\models\LoginForm' not found' in F:\Hosts\Celeroctos\Toonftp\www\doc\controllers\SiteController.php:61
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-06 12:01:38 [127.0.0.1][-][c8vshu6a53qengh0vo2suc3dp7][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'c8vshu6a53qengh0vo2suc3dp7'
+]
+
+$_SESSION = [
+    '062f22bc88ca9d092e9f8afe8e996aac__id' => 'SYSTEM'
+    '062f22bc88ca9d092e9f8afe8e996aac__name' => 'SYSTEM'
+    '062f22bc88ca9d092e9f8afe8e996aaclogin' => 'SYSTEM'
+    '062f22bc88ca9d092e9f8afe8e996aacid' => 1
+    '062f22bc88ca9d092e9f8afe8e996aacusername' => 'Супервайзер'
+    '062f22bc88ca9d092e9f8afe8e996aacroleId' => [
+        0 => [
+            'id' => 15
+            'name' => 'Главврач'
+            'parent_id' => -1
+            'startpage_id' => 29
+            'priority' => 15
+            'url' => '/statistic/history/view'
+        ]
+        1 => [
+            'id' => 11
+            'name' => 'Супервайзер'
+            'parent_id' => -1
+            'startpage_id' => 21
+            'priority' => 1
+            'url' => '/admin/users/view'
+        ]
+        2 => [
+            'id' => 18
+            'name' => 'Тестирование'
+            'parent_id' => -1
+            'startpage_id' => null
+            'priority' => null
+            'url' => null
+        ]
+    ]
+    '062f22bc88ca9d092e9f8afe8e996aacdoctorId' => 15
+    '062f22bc88ca9d092e9f8afe8e996aacmedworkerId' => 11
+    '062f22bc88ca9d092e9f8afe8e996aacenterpriseId' => 1
+    '062f22bc88ca9d092e9f8afe8e996aacfio' => 'Системный Администратор '
+    '062f22bc88ca9d092e9f8afe8e996aacstartpageUrl' => '/statistic/history/view'
+    '062f22bc88ca9d092e9f8afe8e996aacmedcardGenRuleId' => 15
+    '062f22bc88ca9d092e9f8afe8e996aacfontSize' => 12
+    '062f22bc88ca9d092e9f8afe8e996aac__states' => [
+        'login' => true
+        'id' => true
+        'username' => true
+        'roleId' => true
+        'doctorId' => true
+        'medworkerId' => true
+        'enterpriseId' => true
+        'fio' => true
+        'startpageUrl' => true
+        'medcardGenRuleId' => true
+        'fontSize' => true
+    ]
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:81/doc/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=c8vshu6a53qengh0vo2suc3dp7'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '54628'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/doc/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425628898.312
+    'REQUEST_TIME' => 1425628898
+]
+2015-03-06 12:17:48 [127.0.0.1][-][c8vshu6a53qengh0vo2suc3dp7][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\models\LoginForm' not found' in F:\Hosts\Celeroctos\Toonftp\www\doc\controllers\SiteController.php:61
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-06 12:17:48 [127.0.0.1][-][c8vshu6a53qengh0vo2suc3dp7][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'c8vshu6a53qengh0vo2suc3dp7'
+]
+
+$_SESSION = [
+    '062f22bc88ca9d092e9f8afe8e996aac__id' => 'SYSTEM'
+    '062f22bc88ca9d092e9f8afe8e996aac__name' => 'SYSTEM'
+    '062f22bc88ca9d092e9f8afe8e996aaclogin' => 'SYSTEM'
+    '062f22bc88ca9d092e9f8afe8e996aacid' => 1
+    '062f22bc88ca9d092e9f8afe8e996aacusername' => 'Супервайзер'
+    '062f22bc88ca9d092e9f8afe8e996aacroleId' => [
+        0 => [
+            'id' => 15
+            'name' => 'Главврач'
+            'parent_id' => -1
+            'startpage_id' => 29
+            'priority' => 15
+            'url' => '/statistic/history/view'
+        ]
+        1 => [
+            'id' => 11
+            'name' => 'Супервайзер'
+            'parent_id' => -1
+            'startpage_id' => 21
+            'priority' => 1
+            'url' => '/admin/users/view'
+        ]
+        2 => [
+            'id' => 18
+            'name' => 'Тестирование'
+            'parent_id' => -1
+            'startpage_id' => null
+            'priority' => null
+            'url' => null
+        ]
+    ]
+    '062f22bc88ca9d092e9f8afe8e996aacdoctorId' => 15
+    '062f22bc88ca9d092e9f8afe8e996aacmedworkerId' => 11
+    '062f22bc88ca9d092e9f8afe8e996aacenterpriseId' => 1
+    '062f22bc88ca9d092e9f8afe8e996aacfio' => 'Системный Администратор '
+    '062f22bc88ca9d092e9f8afe8e996aacstartpageUrl' => '/statistic/history/view'
+    '062f22bc88ca9d092e9f8afe8e996aacmedcardGenRuleId' => 15
+    '062f22bc88ca9d092e9f8afe8e996aacfontSize' => 12
+    '062f22bc88ca9d092e9f8afe8e996aac__states' => [
+        'login' => true
+        'id' => true
+        'username' => true
+        'roleId' => true
+        'doctorId' => true
+        'medworkerId' => true
+        'enterpriseId' => true
+        'fio' => true
+        'startpageUrl' => true
+        'medcardGenRuleId' => true
+        'fontSize' => true
+    ]
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:81/doc/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=c8vshu6a53qengh0vo2suc3dp7'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '54912'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/doc/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425629868.456
+    'REQUEST_TIME' => 1425629868
+]
+2015-03-06 12:17:50 [127.0.0.1][-][c8vshu6a53qengh0vo2suc3dp7][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\models\LoginForm' not found' in F:\Hosts\Celeroctos\Toonftp\www\doc\controllers\SiteController.php:61
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-06 12:17:50 [127.0.0.1][-][c8vshu6a53qengh0vo2suc3dp7][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'c8vshu6a53qengh0vo2suc3dp7'
+]
+
+$_SESSION = [
+    '062f22bc88ca9d092e9f8afe8e996aac__id' => 'SYSTEM'
+    '062f22bc88ca9d092e9f8afe8e996aac__name' => 'SYSTEM'
+    '062f22bc88ca9d092e9f8afe8e996aaclogin' => 'SYSTEM'
+    '062f22bc88ca9d092e9f8afe8e996aacid' => 1
+    '062f22bc88ca9d092e9f8afe8e996aacusername' => 'Супервайзер'
+    '062f22bc88ca9d092e9f8afe8e996aacroleId' => [
+        0 => [
+            'id' => 15
+            'name' => 'Главврач'
+            'parent_id' => -1
+            'startpage_id' => 29
+            'priority' => 15
+            'url' => '/statistic/history/view'
+        ]
+        1 => [
+            'id' => 11
+            'name' => 'Супервайзер'
+            'parent_id' => -1
+            'startpage_id' => 21
+            'priority' => 1
+            'url' => '/admin/users/view'
+        ]
+        2 => [
+            'id' => 18
+            'name' => 'Тестирование'
+            'parent_id' => -1
+            'startpage_id' => null
+            'priority' => null
+            'url' => null
+        ]
+    ]
+    '062f22bc88ca9d092e9f8afe8e996aacdoctorId' => 15
+    '062f22bc88ca9d092e9f8afe8e996aacmedworkerId' => 11
+    '062f22bc88ca9d092e9f8afe8e996aacenterpriseId' => 1
+    '062f22bc88ca9d092e9f8afe8e996aacfio' => 'Системный Администратор '
+    '062f22bc88ca9d092e9f8afe8e996aacstartpageUrl' => '/statistic/history/view'
+    '062f22bc88ca9d092e9f8afe8e996aacmedcardGenRuleId' => 15
+    '062f22bc88ca9d092e9f8afe8e996aacfontSize' => 12
+    '062f22bc88ca9d092e9f8afe8e996aac__states' => [
+        'login' => true
+        'id' => true
+        'username' => true
+        'roleId' => true
+        'doctorId' => true
+        'medworkerId' => true
+        'enterpriseId' => true
+        'fio' => true
+        'startpageUrl' => true
+        'medcardGenRuleId' => true
+        'fontSize' => true
+    ]
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:81/doc/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=c8vshu6a53qengh0vo2suc3dp7'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '54913'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/doc/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425629870.269
+    'REQUEST_TIME' => 1425629870
+]

@@ -15,8 +15,8 @@ $config = [
             'class' => 'yii\caching\FileCache',
         ],
         'user' => [
-            'identityClass' => 'app\models\User',
-            'enableAutoLogin' => true,
+            'identityClass' => 'app\core\UserIdentity',
+            'enableAutoLogin' => false,
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -44,11 +44,11 @@ $config = [
 
 if (YII_ENV_DEV) {
     // configuration adjustments for 'dev' environment
-    $config['bootstrap'][] = 'debug';
-    $config['modules']['debug'] = 'yii\debug\Module';
+//    $config['bootstrap'][] = 'debug';
+//    $config['modules']['debug'] = 'yii\debug\Module';
 
-    $config['bootstrap'][] = 'gii';
-    $config['modules']['gii'] = 'yii\gii\Module';
+//    $config['bootstrap'][] = 'gii';
+//    $config['modules']['gii'] = 'yii\gii\Module';
 }
 
 return $config;
