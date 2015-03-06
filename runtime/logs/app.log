@@ -1,0 +1,2059 @@
+2015-03-02 19:04:17 [::1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'yii\web\Request::cookieValidationKey must be configured with a secret key.' in /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/web/Request.php:1212
+Stack trace:
+#0 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/web/Request.php(1194): yii\web\Request->loadCookies()
+#1 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/web/Request.php(1280): yii\web\Request->getCookies()
+#2 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/web/Request.php(1259): yii\web\Request->loadCsrfToken()
+#3 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/helpers/BaseHtml.php(275): yii\web\Request->getCsrfToken()
+#4 /Volumes/Storage/code/PHP/basic/views/layouts/main.php(19): yii\helpers\BaseHtml::csrfMetaTags()
+#5 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/View.php(325): require('/Volumes/Storag...')
+#6 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/Volumes/Storag...', Array)
+#7 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Controller.php(382): yii\base\View->renderFile('/Volumes/Storag...', Array, Object(app\controllers\SiteController))
+#8 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Controller.php(368): yii\base\Controller->renderContent('<div class="sit...')
+#9 /Volumes/Storage/code/PHP/basic/controllers/SiteController.php(52): yii\base\Controller->render('index')
+#10 [internal function]: app\controllers\SiteController->actionIndex()
+#11 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#12 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#13 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('', Array)
+#14 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('', Array)
+#15 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 /Volumes/Storage/code/PHP/basic/web/index.php(12): yii\base\Application->run()
+#17 {main}
+2015-03-02 19:04:17 [::1][-][-][info][application] $_COOKIE = [
+    'PPA_ID' => 'c04cdd2cd7ac176d6a25976c7ffe3aaf'
+    'webfx-tree-cookie-persistence' => 'wfxt-6 wfxt-4 wfxt-16 wfxt-18'
+    'PHPSESSID' => '65a027b2f249704de37e990f0b80bc50'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PPA_ID=c04cdd2cd7ac176d6a25976c7ffe3aaf; webfx-tree-cookie-persistence=wfxt-6+wfxt-4+wfxt-16+wfxt-18; PHPSESSID=65a027b2f249704de37e990f0b80bc50'
+    'PATH' => '/Library/PostgreSQL/9.3/bin/'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.6.1 mod_ssl/2.2.29 OpenSSL/0.9.8zc DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Volumes/Storage/code/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Volumes/Storage/code/PHP/basic/web/index.php'
+    'REMOTE_PORT' => '49865'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/basic/web/index.php'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425319457.07
+    'REQUEST_TIME' => 1425319457
+    'argv' => []
+    'argc' => 0
+]
+2015-03-02 19:04:32 [::1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'yii\web\Request::cookieValidationKey must be configured with a secret key.' in /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/web/Request.php:1212
+Stack trace:
+#0 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/web/Request.php(1194): yii\web\Request->loadCookies()
+#1 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/web/Request.php(1280): yii\web\Request->getCookies()
+#2 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/web/Request.php(1259): yii\web\Request->loadCsrfToken()
+#3 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/helpers/BaseHtml.php(275): yii\web\Request->getCsrfToken()
+#4 /Volumes/Storage/code/PHP/basic/views/layouts/main.php(19): yii\helpers\BaseHtml::csrfMetaTags()
+#5 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/View.php(325): require('/Volumes/Storag...')
+#6 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/Volumes/Storag...', Array)
+#7 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Controller.php(382): yii\base\View->renderFile('/Volumes/Storag...', Array, Object(app\controllers\SiteController))
+#8 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Controller.php(368): yii\base\Controller->renderContent('<div class="sit...')
+#9 /Volumes/Storage/code/PHP/basic/controllers/SiteController.php(52): yii\base\Controller->render('index')
+#10 [internal function]: app\controllers\SiteController->actionIndex()
+#11 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#12 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#13 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('', Array)
+#14 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('', Array)
+#15 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 /Volumes/Storage/code/PHP/basic/web/index.php(12): yii\base\Application->run()
+#17 {main}
+2015-03-02 19:04:32 [::1][-][-][info][application] $_COOKIE = [
+    'PPA_ID' => 'c04cdd2cd7ac176d6a25976c7ffe3aaf'
+    'webfx-tree-cookie-persistence' => 'wfxt-6 wfxt-4 wfxt-16 wfxt-18'
+    'PHPSESSID' => '65a027b2f249704de37e990f0b80bc50'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PPA_ID=c04cdd2cd7ac176d6a25976c7ffe3aaf; webfx-tree-cookie-persistence=wfxt-6+wfxt-4+wfxt-16+wfxt-18; PHPSESSID=65a027b2f249704de37e990f0b80bc50'
+    'PATH' => '/Library/PostgreSQL/9.3/bin/'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.6.1 mod_ssl/2.2.29 OpenSSL/0.9.8zc DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Volumes/Storage/code/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Volumes/Storage/code/PHP/basic/web/index.php'
+    'REMOTE_PORT' => '49869'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/basic/web/'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425319472.21
+    'REQUEST_TIME' => 1425319472
+    'argv' => []
+    'argc' => 0
+]
+2015-03-02 19:06:43 [::1][-][65a027b2f249704de37e990f0b80bc50][error][yii\base\ErrorException:32] exception 'yii\base\ErrorException' with message 'PHP Startup: Unable to load dynamic library '/Applications/MAMP/bin/php/php5.6.1/lib/php/extensions/no-debug-non-zts-20121212/mongo.so' - dlopen(/Applications/MAMP/bin/php/php5.6.1/lib/php/extensions/no-debug-non-zts-20121212/mongo.so, 9): image not found' in Unknown:0
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-02 19:06:43 [::1][-][65a027b2f249704de37e990f0b80bc50][info][application] $_COOKIE = [
+    'PPA_ID' => 'c04cdd2cd7ac176d6a25976c7ffe3aaf'
+    'webfx-tree-cookie-persistence' => 'wfxt-6 wfxt-4 wfxt-16 wfxt-18'
+    'PHPSESSID' => '65a027b2f249704de37e990f0b80bc50'
+]
+
+$_SESSION = [
+    'visits' => 20
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PPA_ID=c04cdd2cd7ac176d6a25976c7ffe3aaf; webfx-tree-cookie-persistence=wfxt-6+wfxt-4+wfxt-16+wfxt-18; PHPSESSID=65a027b2f249704de37e990f0b80bc50'
+    'PATH' => '/Library/PostgreSQL/9.3/bin/'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.6.1 mod_ssl/2.2.29 OpenSSL/0.9.8zc DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Volumes/Storage/code/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Volumes/Storage/code/PHP/basic/web/index.php'
+    'REMOTE_PORT' => '49992'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/basic/web/'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425319603.42
+    'REQUEST_TIME' => 1425319603
+    'argv' => []
+    'argc' => 0
+]
+2015-03-02 19:15:45 [::1][-][65a027b2f249704de37e990f0b80bc50][error][yii\base\ErrorException:32] exception 'yii\base\ErrorException' with message 'PHP Startup: Unable to load dynamic library '/Applications/MAMP/bin/php/php5.6.1/lib/php/extensions/no-debug-non-zts-20121212/mongo.so' - dlopen(/Applications/MAMP/bin/php/php5.6.1/lib/php/extensions/no-debug-non-zts-20121212/mongo.so, 9): image not found' in Unknown:0
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-02 19:15:45 [::1][-][65a027b2f249704de37e990f0b80bc50][info][application] $_COOKIE = [
+    'PPA_ID' => 'c04cdd2cd7ac176d6a25976c7ffe3aaf'
+    'webfx-tree-cookie-persistence' => 'wfxt-6 wfxt-4 wfxt-16 wfxt-18'
+    'PHPSESSID' => '65a027b2f249704de37e990f0b80bc50'
+]
+
+$_SESSION = [
+    'visits' => 20
+    '__flash' => []
+    '__captcha/site/captcha' => 'tazeqo'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PPA_ID=c04cdd2cd7ac176d6a25976c7ffe3aaf; webfx-tree-cookie-persistence=wfxt-6+wfxt-4+wfxt-16+wfxt-18; PHPSESSID=65a027b2f249704de37e990f0b80bc50'
+    'PATH' => '/Library/PostgreSQL/9.3/bin/'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.6.1 mod_ssl/2.2.29 OpenSSL/0.9.8zc DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Volumes/Storage/code/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Volumes/Storage/code/PHP/basic/web/index.php'
+    'REMOTE_PORT' => '50079'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/basic/web/'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425320145.45
+    'REQUEST_TIME' => 1425320145
+    'argv' => []
+    'argc' => 0
+]
+2015-03-02 19:16:48 [::1][-][65a027b2f249704de37e990f0b80bc50][error][yii\base\ErrorException:32] exception 'yii\base\ErrorException' with message 'PHP Startup: Unable to load dynamic library '/Applications/MAMP/bin/php/php5.6.1/lib/php/extensions/no-debug-non-zts-20121212/mongo.so' - dlopen(/Applications/MAMP/bin/php/php5.6.1/lib/php/extensions/no-debug-non-zts-20121212/mongo.so, 9): image not found' in Unknown:0
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-02 19:16:48 [::1][-][65a027b2f249704de37e990f0b80bc50][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_COOKIE = [
+    'PPA_ID' => 'c04cdd2cd7ac176d6a25976c7ffe3aaf'
+    'webfx-tree-cookie-persistence' => 'wfxt-6 wfxt-4 wfxt-16 wfxt-18'
+    'PHPSESSID' => '65a027b2f249704de37e990f0b80bc50'
+]
+
+$_SESSION = [
+    'visits' => 20
+    '__flash' => []
+    '__captcha/site/captcha' => 'tazeqo'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8888/basic/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PPA_ID=c04cdd2cd7ac176d6a25976c7ffe3aaf; webfx-tree-cookie-persistence=wfxt-6+wfxt-4+wfxt-16+wfxt-18; PHPSESSID=65a027b2f249704de37e990f0b80bc50'
+    'PATH' => '/Library/PostgreSQL/9.3/bin/'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.6.1 mod_ssl/2.2.29 OpenSSL/0.9.8zc DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Volumes/Storage/code/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Volumes/Storage/code/PHP/basic/web/index.php'
+    'REMOTE_PORT' => '50102'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/basic/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425320208.21
+    'REQUEST_TIME' => 1425320208
+    'argv' => [
+        0 => 'r=site%2Findex'
+    ]
+    'argc' => 1
+]
+2015-03-02 19:21:34 [::1][-][65a027b2f249704de37e990f0b80bc50][error][yii\base\ErrorException:32] exception 'yii\base\ErrorException' with message 'PHP Startup: Unable to load dynamic library '/Applications/MAMP/bin/php/php5.6.1/lib/php/extensions/no-debug-non-zts-20121212/mongo.so' - dlopen(/Applications/MAMP/bin/php/php5.6.1/lib/php/extensions/no-debug-non-zts-20121212/mongo.so, 9): image not found' in Unknown:0
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-02 19:21:34 [::1][-][65a027b2f249704de37e990f0b80bc50][info][application] $_COOKIE = [
+    'PPA_ID' => 'c04cdd2cd7ac176d6a25976c7ffe3aaf'
+    'webfx-tree-cookie-persistence' => 'wfxt-6 wfxt-4 wfxt-16 wfxt-18'
+    'PHPSESSID' => '65a027b2f249704de37e990f0b80bc50'
+]
+
+$_SESSION = [
+    'visits' => 20
+    '__flash' => []
+    '__captcha/site/captcha' => 'tazeqo'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PPA_ID=c04cdd2cd7ac176d6a25976c7ffe3aaf; webfx-tree-cookie-persistence=wfxt-6+wfxt-4+wfxt-16+wfxt-18; PHPSESSID=65a027b2f249704de37e990f0b80bc50'
+    'PATH' => '/Library/PostgreSQL/9.3/bin/'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.6.1 mod_ssl/2.2.29 OpenSSL/0.9.8zc DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Volumes/Storage/code/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Volumes/Storage/code/PHP/basic/web/index.php'
+    'REMOTE_PORT' => '50140'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/basic/web/'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425320494.4
+    'REQUEST_TIME' => 1425320494
+    'argv' => []
+    'argc' => 0
+]
+2015-03-05 12:07:56 [::1][-][65a027b2f249704de37e990f0b80bc50][error][yii\base\ErrorException:32] exception 'yii\base\ErrorException' with message 'PHP Startup: Unable to load dynamic library '/Applications/MAMP/bin/php/php5.6.1/lib/php/extensions/no-debug-non-zts-20121212/mongo.so' - dlopen(/Applications/MAMP/bin/php/php5.6.1/lib/php/extensions/no-debug-non-zts-20121212/mongo.so, 9): image not found' in Unknown:0
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-05 12:07:56 [::1][-][65a027b2f249704de37e990f0b80bc50][info][application] $_COOKIE = [
+    'PPA_ID' => 'c04cdd2cd7ac176d6a25976c7ffe3aaf'
+    'webfx-tree-cookie-persistence' => 'wfxt-6 wfxt-4 wfxt-16 wfxt-18'
+    'PHPSESSID' => '65a027b2f249704de37e990f0b80bc50'
+]
+
+$_SESSION = [
+    'visits' => 20
+    '__flash' => []
+    '__captcha/site/captcha' => 'tazeqo'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PPA_ID=c04cdd2cd7ac176d6a25976c7ffe3aaf; webfx-tree-cookie-persistence=wfxt-6+wfxt-4+wfxt-16+wfxt-18; PHPSESSID=65a027b2f249704de37e990f0b80bc50'
+    'PATH' => '/Library/PostgreSQL/9.3/bin/'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.6.1 mod_ssl/2.2.29 OpenSSL/0.9.8zc DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Volumes/Storage/code/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Volumes/Storage/code/PHP/basic/web/index.php'
+    'REMOTE_PORT' => '53078'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/basic/web/'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425553676.17
+    'REQUEST_TIME' => 1425553676
+    'argv' => []
+    'argc' => 0
+]
+2015-03-05 11:27:28 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'could not find driver' in /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php:579
+Stack trace:
+#0 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(579): PDO->__construct('pgsql:host=loca...', 'postgres', '12345', NULL)
+#1 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#3 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(383): yii\db\Connection->getSlavePdo()
+#5 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(732): yii\db\Schema->quoteValue('migration')
+#6 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(319): yii\db\Connection->quoteValue('migration')
+#7 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(160): yii\db\pgsql\Schema->findColumns(Object(yii\db\TableSchema))
+#8 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(140): yii\db\pgsql\Schema->loadTableSchema('migration')
+#9 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/MigrateController.php(121): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp('new')
+#13 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#14 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#15 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#16 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#17 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate', Array)
+#18 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate', Array)
+#19 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /Volumes/Storage/code/PHP/basic/yii(23): yii\base\Application->run()
+#21 {main}
+
+Next exception 'yii\db\Exception' with message 'could not find driver' in /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php:534
+Stack trace:
+#0 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#1 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(383): yii\db\Connection->getSlavePdo()
+#3 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(732): yii\db\Schema->quoteValue('migration')
+#4 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(319): yii\db\Connection->quoteValue('migration')
+#5 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(160): yii\db\pgsql\Schema->findColumns(Object(yii\db\TableSchema))
+#6 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(140): yii\db\pgsql\Schema->loadTableSchema('migration')
+#7 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/MigrateController.php(121): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#8 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#9 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#10 [internal function]: yii\console\controllers\BaseMigrateController->actionUp('new')
+#11 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#12 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#13 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#14 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#15 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate', Array)
+#16 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate', Array)
+#17 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#18 /Volumes/Storage/code/PHP/basic/yii(23): yii\base\Application->run()
+#19 {main}
+Additional Information:
+
+2015-03-05 11:27:28 [-][-][-][info][application] $_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/r7/1r2px7ws4_98__gwbj4cy2100000gn/T/'
+    'EnvAgent_vars' => 'PATH'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.y1CG3JWFOu/Render'
+    'TERM_PROGRAM_VERSION' => '343.6'
+    'OLDPWD' => '/Volumes/Storage/Code/php'
+    'TERM_SESSION_ID' => '559BF6BE-E27D-4F83-9E2D-B6BCDBD32244'
+    'USER' => 'dmitry'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.ynxbuIvHwy/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x7:0x31'
+    'PATH' => '/Users/dmitry/Library/Application Support/GoodSync:/opt/local/bin:/opt/local/sbin:/Library/PostgreSQL/9.3/bin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'PWD' => '/Volumes/Storage/Code/php/basic'
+    'LANG' => 'ru_RU.UTF-8'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '1'
+    'HOME' => '/Users/dmitry'
+    'LOGNAME' => 'dmitry'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1425554848.5102
+    'REQUEST_TIME' => 1425554848
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+        2 => 'new'
+    ]
+    'argc' => 3
+]
+2015-03-05 12:28:15 [::1][-][65a027b2f249704de37e990f0b80bc50][error][yii\base\ErrorException:32] exception 'yii\base\ErrorException' with message 'PHP Startup: Unable to load dynamic library '/Applications/MAMP/bin/php/php5.6.1/lib/php/extensions/no-debug-non-zts-20121212/mongo.so' - dlopen(/Applications/MAMP/bin/php/php5.6.1/lib/php/extensions/no-debug-non-zts-20121212/mongo.so, 9): image not found' in Unknown:0
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-05 12:28:15 [::1][-][65a027b2f249704de37e990f0b80bc50][info][application] $_COOKIE = [
+    'PPA_ID' => 'c04cdd2cd7ac176d6a25976c7ffe3aaf'
+    'webfx-tree-cookie-persistence' => 'wfxt-6 wfxt-4 wfxt-16 wfxt-18'
+    'PHPSESSID' => '65a027b2f249704de37e990f0b80bc50'
+]
+
+$_SESSION = [
+    'visits' => 20
+    '__flash' => []
+    '__captcha/site/captcha' => 'tazeqo'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PPA_ID=c04cdd2cd7ac176d6a25976c7ffe3aaf; webfx-tree-cookie-persistence=wfxt-6+wfxt-4+wfxt-16+wfxt-18; PHPSESSID=65a027b2f249704de37e990f0b80bc50'
+    'PATH' => '/Library/PostgreSQL/9.3/bin/'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.6.1 mod_ssl/2.2.29 OpenSSL/0.9.8zc DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Volumes/Storage/code/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Volumes/Storage/code/PHP/basic/web/index.php'
+    'REMOTE_PORT' => '53170'
+    'REDIRECT_URL' => '/basic/web/requirements.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/basic/web/requirements.php'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425554895.74
+    'REQUEST_TIME' => 1425554895
+    'argv' => []
+    'argc' => 0
+]
+2015-03-05 12:28:25 [::1][-][65a027b2f249704de37e990f0b80bc50][error][yii\base\ErrorException:32] exception 'yii\base\ErrorException' with message 'PHP Startup: Unable to load dynamic library '/Applications/MAMP/bin/php/php5.6.1/lib/php/extensions/no-debug-non-zts-20121212/mongo.so' - dlopen(/Applications/MAMP/bin/php/php5.6.1/lib/php/extensions/no-debug-non-zts-20121212/mongo.so, 9): image not found' in Unknown:0
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-05 12:28:25 [::1][-][65a027b2f249704de37e990f0b80bc50][info][application] $_COOKIE = [
+    'PPA_ID' => 'c04cdd2cd7ac176d6a25976c7ffe3aaf'
+    'webfx-tree-cookie-persistence' => 'wfxt-6 wfxt-4 wfxt-16 wfxt-18'
+    'PHPSESSID' => '65a027b2f249704de37e990f0b80bc50'
+]
+
+$_SESSION = [
+    'visits' => 20
+    '__flash' => []
+    '__captcha/site/captcha' => 'tazeqo'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PPA_ID=c04cdd2cd7ac176d6a25976c7ffe3aaf; webfx-tree-cookie-persistence=wfxt-6+wfxt-4+wfxt-16+wfxt-18; PHPSESSID=65a027b2f249704de37e990f0b80bc50'
+    'PATH' => '/Library/PostgreSQL/9.3/bin/'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.6.1 mod_ssl/2.2.29 OpenSSL/0.9.8zc DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Volumes/Storage/code/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Volumes/Storage/code/PHP/basic/web/index.php'
+    'REMOTE_PORT' => '53174'
+    'REDIRECT_URL' => '/basic/web/requirements.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/basic/web/requirements.php'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425554905.82
+    'REQUEST_TIME' => 1425554905
+    'argv' => []
+    'argc' => 0
+]
+2015-03-05 12:31:03 [::1][-][65a027b2f249704de37e990f0b80bc50][error][yii\base\ErrorException:32] exception 'yii\base\ErrorException' with message 'PHP Startup: Unable to load dynamic library '/Applications/MAMP/bin/php/php5.6.1/lib/php/extensions/no-debug-non-zts-20121212/mongo.so' - dlopen(/Applications/MAMP/bin/php/php5.6.1/lib/php/extensions/no-debug-non-zts-20121212/mongo.so, 9): image not found' in Unknown:0
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-05 12:31:03 [::1][-][65a027b2f249704de37e990f0b80bc50][info][application] $_COOKIE = [
+    'PPA_ID' => 'c04cdd2cd7ac176d6a25976c7ffe3aaf'
+    'webfx-tree-cookie-persistence' => 'wfxt-6 wfxt-4 wfxt-16 wfxt-18'
+    'PHPSESSID' => '65a027b2f249704de37e990f0b80bc50'
+]
+
+$_SESSION = [
+    'visits' => 20
+    '__flash' => []
+    '__captcha/site/captcha' => 'tazeqo'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PPA_ID=c04cdd2cd7ac176d6a25976c7ffe3aaf; webfx-tree-cookie-persistence=wfxt-6+wfxt-4+wfxt-16+wfxt-18; PHPSESSID=65a027b2f249704de37e990f0b80bc50'
+    'PATH' => '/Library/PostgreSQL/9.3/bin/'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.6.1 mod_ssl/2.2.29 OpenSSL/0.9.8zc DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Volumes/Storage/code/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Volumes/Storage/code/PHP/basic/web/index.php'
+    'REMOTE_PORT' => '53184'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/basic/web/'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425555063.07
+    'REQUEST_TIME' => 1425555063
+    'argv' => []
+    'argc' => 0
+]
+2015-03-05 12:38:43 [127.0.0.1][-][65a027b2f249704de37e990f0b80bc50][error][yii\base\ErrorException:32] exception 'yii\base\ErrorException' with message 'PHP Startup: Unable to load dynamic library '/Applications/MAMP/bin/php/php5.6.1/lib/php/extensions/no-debug-non-zts-20121212/mongo.so' - dlopen(/Applications/MAMP/bin/php/php5.6.1/lib/php/extensions/no-debug-non-zts-20121212/mongo.so, 9): image not found' in Unknown:0
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-05 12:38:43 [127.0.0.1][-][65a027b2f249704de37e990f0b80bc50][info][application] $_COOKIE = [
+    'PPA_ID' => 'c04cdd2cd7ac176d6a25976c7ffe3aaf'
+    'webfx-tree-cookie-persistence' => 'wfxt-6 wfxt-4 wfxt-16 wfxt-18'
+    'PHPSESSID' => '65a027b2f249704de37e990f0b80bc50'
+]
+
+$_SESSION = [
+    'visits' => 20
+    '__flash' => []
+    '__captcha/site/captcha' => 'tazeqo'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PPA_ID=c04cdd2cd7ac176d6a25976c7ffe3aaf; webfx-tree-cookie-persistence=wfxt-6+wfxt-4+wfxt-16+wfxt-18; PHPSESSID=65a027b2f249704de37e990f0b80bc50'
+    'PATH' => '/Library/PostgreSQL/9.3/bin/'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.6.1 mod_ssl/2.2.29 OpenSSL/0.9.8zc DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Volumes/Storage/code/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Volumes/Storage/code/PHP/basic/web/index.php'
+    'REMOTE_PORT' => '53225'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/basic/web/'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425555523.12
+    'REQUEST_TIME' => 1425555523
+    'argv' => []
+    'argc' => 0
+]
+2015-03-05 12:40:50 [127.0.0.1][-][65a027b2f249704de37e990f0b80bc50][error][yii\base\ErrorException:32] exception 'yii\base\ErrorException' with message 'PHP Startup: Unable to load dynamic library '/Applications/MAMP/bin/php/php5.5.17/lib/php/extensions/no-debug-non-zts-20121212/mongo.so' - dlopen(/Applications/MAMP/bin/php/php5.5.17/lib/php/extensions/no-debug-non-zts-20121212/mongo.so, 9): image not found' in Unknown:0
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-05 12:40:50 [127.0.0.1][-][65a027b2f249704de37e990f0b80bc50][info][application] $_COOKIE = [
+    'PPA_ID' => 'c04cdd2cd7ac176d6a25976c7ffe3aaf'
+    'webfx-tree-cookie-persistence' => 'wfxt-6 wfxt-4 wfxt-16 wfxt-18'
+    'PHPSESSID' => '65a027b2f249704de37e990f0b80bc50'
+]
+
+$_SESSION = [
+    'visits' => 20
+    '__flash' => []
+    '__captcha/site/captcha' => 'tazeqo'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PPA_ID=c04cdd2cd7ac176d6a25976c7ffe3aaf; webfx-tree-cookie-persistence=wfxt-6+wfxt-4+wfxt-16+wfxt-18; PHPSESSID=65a027b2f249704de37e990f0b80bc50'
+    'PATH' => '/Library/PostgreSQL/9.3/bin/'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.5.17 mod_ssl/2.2.29 OpenSSL/0.9.8zc DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Volumes/Storage/code/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Volumes/Storage/code/PHP/basic/web/index.php'
+    'REMOTE_PORT' => '53230'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/basic/web/'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425555650.76
+    'REQUEST_TIME' => 1425555650
+    'argv' => []
+    'argc' => 0
+]
+2015-03-05 12:42:35 [::1][-][65a027b2f249704de37e990f0b80bc50][error][yii\base\ErrorException:32] exception 'yii\base\ErrorException' with message 'PHP Startup: Unable to load dynamic library '/Applications/MAMP/bin/php/php5.5.17/lib/php/extensions/no-debug-non-zts-20121212/mongo.so' - dlopen(/Applications/MAMP/bin/php/php5.5.17/lib/php/extensions/no-debug-non-zts-20121212/mongo.so, 9): image not found' in Unknown:0
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-05 12:42:34 [::1][-][65a027b2f249704de37e990f0b80bc50][info][application] $_COOKIE = [
+    'PPA_ID' => 'c04cdd2cd7ac176d6a25976c7ffe3aaf'
+    'webfx-tree-cookie-persistence' => 'wfxt-6 wfxt-4 wfxt-16 wfxt-18'
+    'PHPSESSID' => '65a027b2f249704de37e990f0b80bc50'
+]
+
+$_SESSION = [
+    'visits' => 20
+    '__flash' => []
+    '__captcha/site/captcha' => 'tazeqo'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PPA_ID=c04cdd2cd7ac176d6a25976c7ffe3aaf; webfx-tree-cookie-persistence=wfxt-6+wfxt-4+wfxt-16+wfxt-18; PHPSESSID=65a027b2f249704de37e990f0b80bc50'
+    'PATH' => '/Library/PostgreSQL/9.3/bin/'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.5.17 mod_ssl/2.2.29 OpenSSL/0.9.8zc DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Volumes/Storage/code/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Volumes/Storage/code/PHP/basic/web/index.php'
+    'REMOTE_PORT' => '53246'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/basic/web/'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425555754.95
+    'REQUEST_TIME' => 1425555754
+    'argv' => []
+    'argc' => 0
+]
+2015-03-05 11:45:19 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'could not find driver' in /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php:579
+Stack trace:
+#0 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(579): PDO->__construct('pgsql:host=loca...', 'postgres', '12345', NULL)
+#1 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#3 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(383): yii\db\Connection->getSlavePdo()
+#5 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(732): yii\db\Schema->quoteValue('migration')
+#6 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(319): yii\db\Connection->quoteValue('migration')
+#7 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(160): yii\db\pgsql\Schema->findColumns(Object(yii\db\TableSchema))
+#8 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(140): yii\db\pgsql\Schema->loadTableSchema('migration')
+#9 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/MigrateController.php(121): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp('new')
+#13 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#14 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#15 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#16 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#17 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate', Array)
+#18 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate', Array)
+#19 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /Volumes/Storage/code/PHP/basic/yii(23): yii\base\Application->run()
+#21 {main}
+
+Next exception 'yii\db\Exception' with message 'could not find driver' in /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php:534
+Stack trace:
+#0 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#1 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(383): yii\db\Connection->getSlavePdo()
+#3 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(732): yii\db\Schema->quoteValue('migration')
+#4 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(319): yii\db\Connection->quoteValue('migration')
+#5 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(160): yii\db\pgsql\Schema->findColumns(Object(yii\db\TableSchema))
+#6 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(140): yii\db\pgsql\Schema->loadTableSchema('migration')
+#7 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/MigrateController.php(121): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#8 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#9 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#10 [internal function]: yii\console\controllers\BaseMigrateController->actionUp('new')
+#11 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#12 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#13 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#14 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#15 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate', Array)
+#16 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate', Array)
+#17 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#18 /Volumes/Storage/code/PHP/basic/yii(23): yii\base\Application->run()
+#19 {main}
+Additional Information:
+
+2015-03-05 11:45:19 [-][-][-][info][application] $_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/r7/1r2px7ws4_98__gwbj4cy2100000gn/T/'
+    'EnvAgent_vars' => 'PATH'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.y1CG3JWFOu/Render'
+    'TERM_PROGRAM_VERSION' => '343.6'
+    'OLDPWD' => '/volumes/storage/code/php'
+    'TERM_SESSION_ID' => '34443EB8-E91D-44D2-816E-143AE114B2AC'
+    'USER' => 'dmitry'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.ynxbuIvHwy/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x7:0x31'
+    'PATH' => '/Users/dmitry/Library/Application Support/GoodSync:/opt/local/bin:/opt/local/sbin:/Library/PostgreSQL/9.3/bin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'PWD' => '/volumes/storage/code/php/basic'
+    'LANG' => 'ru_RU.UTF-8'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '1'
+    'HOME' => '/Users/dmitry'
+    'LOGNAME' => 'dmitry'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1425555919.562
+    'REQUEST_TIME' => 1425555919
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+        2 => 'new'
+    ]
+    'argc' => 3
+]
+2015-03-05 11:46:32 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'could not find driver' in /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php:579
+Stack trace:
+#0 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(579): PDO->__construct('pgsql:host=loca...', 'postgres', '12345', NULL)
+#1 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#3 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(383): yii\db\Connection->getSlavePdo()
+#5 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(732): yii\db\Schema->quoteValue('migration')
+#6 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(319): yii\db\Connection->quoteValue('migration')
+#7 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(160): yii\db\pgsql\Schema->findColumns(Object(yii\db\TableSchema))
+#8 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(140): yii\db\pgsql\Schema->loadTableSchema('migration')
+#9 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/MigrateController.php(121): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#14 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#15 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#16 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#17 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate', Array)
+#18 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate', Array)
+#19 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /Volumes/Storage/code/PHP/basic/yii(23): yii\base\Application->run()
+#21 {main}
+
+Next exception 'yii\db\Exception' with message 'could not find driver' in /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php:534
+Stack trace:
+#0 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#1 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(383): yii\db\Connection->getSlavePdo()
+#3 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(732): yii\db\Schema->quoteValue('migration')
+#4 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(319): yii\db\Connection->quoteValue('migration')
+#5 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(160): yii\db\pgsql\Schema->findColumns(Object(yii\db\TableSchema))
+#6 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(140): yii\db\pgsql\Schema->loadTableSchema('migration')
+#7 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/MigrateController.php(121): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#8 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#9 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#10 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#11 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#12 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#13 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#14 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#15 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate', Array)
+#16 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate', Array)
+#17 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#18 /Volumes/Storage/code/PHP/basic/yii(23): yii\base\Application->run()
+#19 {main}
+Additional Information:
+
+2015-03-05 11:46:32 [-][-][-][info][application] $_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/r7/1r2px7ws4_98__gwbj4cy2100000gn/T/'
+    'EnvAgent_vars' => 'PATH'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.y1CG3JWFOu/Render'
+    'TERM_PROGRAM_VERSION' => '343.6'
+    'OLDPWD' => '/volumes/storage/code/php'
+    'TERM_SESSION_ID' => '34443EB8-E91D-44D2-816E-143AE114B2AC'
+    'USER' => 'dmitry'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.ynxbuIvHwy/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x7:0x31'
+    'PATH' => '/Users/dmitry/Library/Application Support/GoodSync:/opt/local/bin:/opt/local/sbin:/Library/PostgreSQL/9.3/bin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'PWD' => '/volumes/storage/code/php/basic'
+    'LANG' => 'ru_RU.UTF-8'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '1'
+    'HOME' => '/Users/dmitry'
+    'LOGNAME' => 'dmitry'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1425555992.6989
+    'REQUEST_TIME' => 1425555992
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2015-03-05 11:49:24 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'could not find driver' in /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php:579
+Stack trace:
+#0 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(579): PDO->__construct('pgsql:host=loca...', 'postgres', '12345', NULL)
+#1 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#3 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(383): yii\db\Connection->getSlavePdo()
+#5 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(732): yii\db\Schema->quoteValue('migration')
+#6 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(319): yii\db\Connection->quoteValue('migration')
+#7 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(160): yii\db\pgsql\Schema->findColumns(Object(yii\db\TableSchema))
+#8 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(140): yii\db\pgsql\Schema->loadTableSchema('migration')
+#9 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/MigrateController.php(121): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#14 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#15 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#16 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#17 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate', Array)
+#18 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate', Array)
+#19 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /Volumes/Storage/code/PHP/basic/yii(23): yii\base\Application->run()
+#21 {main}
+
+Next exception 'yii\db\Exception' with message 'could not find driver' in /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php:534
+Stack trace:
+#0 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#1 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(383): yii\db\Connection->getSlavePdo()
+#3 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(732): yii\db\Schema->quoteValue('migration')
+#4 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(319): yii\db\Connection->quoteValue('migration')
+#5 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(160): yii\db\pgsql\Schema->findColumns(Object(yii\db\TableSchema))
+#6 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(140): yii\db\pgsql\Schema->loadTableSchema('migration')
+#7 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/MigrateController.php(121): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#8 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#9 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#10 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#11 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#12 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#13 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#14 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#15 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate', Array)
+#16 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate', Array)
+#17 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#18 /Volumes/Storage/code/PHP/basic/yii(23): yii\base\Application->run()
+#19 {main}
+Additional Information:
+
+2015-03-05 11:49:24 [-][-][-][info][application] $_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/r7/1r2px7ws4_98__gwbj4cy2100000gn/T/'
+    'EnvAgent_vars' => 'PATH'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.y1CG3JWFOu/Render'
+    'TERM_PROGRAM_VERSION' => '343.6'
+    'OLDPWD' => '/volumes/storage/code/php'
+    'TERM_SESSION_ID' => '34443EB8-E91D-44D2-816E-143AE114B2AC'
+    'USER' => 'dmitry'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.ynxbuIvHwy/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x7:0x31'
+    'PATH' => '/Users/dmitry/Library/Application Support/GoodSync:/opt/local/bin:/opt/local/sbin:/Library/PostgreSQL/9.3/bin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'PWD' => '/volumes/storage/code/php/basic'
+    'LANG' => 'ru_RU.UTF-8'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '1'
+    'HOME' => '/Users/dmitry'
+    'LOGNAME' => 'dmitry'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1425556164.7346
+    'REQUEST_TIME' => 1425556164
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2015-03-05 12:07:51 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'could not find driver' in /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php:579
+Stack trace:
+#0 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(579): PDO->__construct('pgsql:host=loca...', 'postgres', '12345', NULL)
+#1 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#3 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(383): yii\db\Connection->getSlavePdo()
+#5 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(732): yii\db\Schema->quoteValue('migration')
+#6 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(319): yii\db\Connection->quoteValue('migration')
+#7 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(160): yii\db\pgsql\Schema->findColumns(Object(yii\db\TableSchema))
+#8 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(140): yii\db\pgsql\Schema->loadTableSchema('migration')
+#9 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/MigrateController.php(121): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#14 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#15 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#16 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#17 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate', Array)
+#18 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate', Array)
+#19 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /Volumes/Storage/code/PHP/basic/yii(23): yii\base\Application->run()
+#21 {main}
+
+Next exception 'yii\db\Exception' with message 'could not find driver' in /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php:534
+Stack trace:
+#0 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#1 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(383): yii\db\Connection->getSlavePdo()
+#3 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(732): yii\db\Schema->quoteValue('migration')
+#4 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(319): yii\db\Connection->quoteValue('migration')
+#5 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(160): yii\db\pgsql\Schema->findColumns(Object(yii\db\TableSchema))
+#6 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(140): yii\db\pgsql\Schema->loadTableSchema('migration')
+#7 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/MigrateController.php(121): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#8 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#9 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#10 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#11 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#12 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#13 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#14 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#15 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate', Array)
+#16 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate', Array)
+#17 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#18 /Volumes/Storage/code/PHP/basic/yii(23): yii\base\Application->run()
+#19 {main}
+Additional Information:
+
+2015-03-05 12:07:51 [-][-][-][info][application] $_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/r7/1r2px7ws4_98__gwbj4cy2100000gn/T/'
+    'EnvAgent_vars' => 'PATH'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.y1CG3JWFOu/Render'
+    'TERM_PROGRAM_VERSION' => '343.6'
+    'OLDPWD' => '/volumes/storage/code/php'
+    'TERM_SESSION_ID' => '34443EB8-E91D-44D2-816E-143AE114B2AC'
+    'USER' => 'dmitry'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.ynxbuIvHwy/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x7:0x31'
+    'PATH' => '/Users/dmitry/Library/Application Support/GoodSync:/opt/local/bin:/opt/local/sbin:/Library/PostgreSQL/9.3/bin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'PWD' => '/volumes/storage/code/php/basic'
+    'LANG' => 'ru_RU.UTF-8'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '1'
+    'HOME' => '/Users/dmitry'
+    'LOGNAME' => 'dmitry'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1425557271.8891
+    'REQUEST_TIME' => 1425557271
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2015-03-05 12:10:27 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'could not find driver' in /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php:579
+Stack trace:
+#0 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(579): PDO->__construct('pgsql:host=loca...', 'postgres', '12345', NULL)
+#1 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#3 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(383): yii\db\Connection->getSlavePdo()
+#5 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(732): yii\db\Schema->quoteValue('migration')
+#6 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(319): yii\db\Connection->quoteValue('migration')
+#7 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(160): yii\db\pgsql\Schema->findColumns(Object(yii\db\TableSchema))
+#8 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(140): yii\db\pgsql\Schema->loadTableSchema('migration')
+#9 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/MigrateController.php(121): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#14 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#15 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#16 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#17 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate', Array)
+#18 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate', Array)
+#19 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /Volumes/Storage/code/PHP/basic/yii(23): yii\base\Application->run()
+#21 {main}
+
+Next exception 'yii\db\Exception' with message 'could not find driver' in /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php:534
+Stack trace:
+#0 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#1 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(383): yii\db\Connection->getSlavePdo()
+#3 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(732): yii\db\Schema->quoteValue('migration')
+#4 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(319): yii\db\Connection->quoteValue('migration')
+#5 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(160): yii\db\pgsql\Schema->findColumns(Object(yii\db\TableSchema))
+#6 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(140): yii\db\pgsql\Schema->loadTableSchema('migration')
+#7 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/MigrateController.php(121): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#8 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#9 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#10 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#11 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#12 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#13 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#14 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#15 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate', Array)
+#16 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate', Array)
+#17 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#18 /Volumes/Storage/code/PHP/basic/yii(23): yii\base\Application->run()
+#19 {main}
+Additional Information:
+
+2015-03-05 12:10:27 [-][-][-][info][application] $_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/r7/1r2px7ws4_98__gwbj4cy2100000gn/T/'
+    'EnvAgent_vars' => 'PATH'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.y1CG3JWFOu/Render'
+    'TERM_PROGRAM_VERSION' => '343.6'
+    'OLDPWD' => '/volumes/storage/code/php'
+    'TERM_SESSION_ID' => '34443EB8-E91D-44D2-816E-143AE114B2AC'
+    'USER' => 'dmitry'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.ynxbuIvHwy/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x7:0x31'
+    'PATH' => '/Users/dmitry/Library/Application Support/GoodSync:/opt/local/bin:/opt/local/sbin:/Library/PostgreSQL/9.3/bin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'PWD' => '/volumes/storage/code/php/basic'
+    'LANG' => 'ru_RU.UTF-8'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '1'
+    'HOME' => '/Users/dmitry'
+    'LOGNAME' => 'dmitry'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1425557427.8955
+    'REQUEST_TIME' => 1425557427
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2015-03-05 12:10:30 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'could not find driver' in /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php:579
+Stack trace:
+#0 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(579): PDO->__construct('pgsql:host=loca...', 'postgres', '12345', NULL)
+#1 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#3 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(383): yii\db\Connection->getSlavePdo()
+#5 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(732): yii\db\Schema->quoteValue('migration')
+#6 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(319): yii\db\Connection->quoteValue('migration')
+#7 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(160): yii\db\pgsql\Schema->findColumns(Object(yii\db\TableSchema))
+#8 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(140): yii\db\pgsql\Schema->loadTableSchema('migration')
+#9 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/MigrateController.php(121): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp('new')
+#13 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#14 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#15 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#16 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#17 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate', Array)
+#18 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate', Array)
+#19 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /Volumes/Storage/code/PHP/basic/yii(23): yii\base\Application->run()
+#21 {main}
+
+Next exception 'yii\db\Exception' with message 'could not find driver' in /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php:534
+Stack trace:
+#0 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#1 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(383): yii\db\Connection->getSlavePdo()
+#3 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(732): yii\db\Schema->quoteValue('migration')
+#4 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(319): yii\db\Connection->quoteValue('migration')
+#5 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(160): yii\db\pgsql\Schema->findColumns(Object(yii\db\TableSchema))
+#6 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(140): yii\db\pgsql\Schema->loadTableSchema('migration')
+#7 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/MigrateController.php(121): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#8 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#9 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#10 [internal function]: yii\console\controllers\BaseMigrateController->actionUp('new')
+#11 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#12 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#13 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#14 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#15 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate', Array)
+#16 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate', Array)
+#17 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#18 /Volumes/Storage/code/PHP/basic/yii(23): yii\base\Application->run()
+#19 {main}
+Additional Information:
+
+2015-03-05 12:10:30 [-][-][-][info][application] $_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/r7/1r2px7ws4_98__gwbj4cy2100000gn/T/'
+    'EnvAgent_vars' => 'PATH'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.y1CG3JWFOu/Render'
+    'TERM_PROGRAM_VERSION' => '343.6'
+    'OLDPWD' => '/volumes/storage/code/php'
+    'TERM_SESSION_ID' => '34443EB8-E91D-44D2-816E-143AE114B2AC'
+    'USER' => 'dmitry'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.ynxbuIvHwy/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x7:0x31'
+    'PATH' => '/Users/dmitry/Library/Application Support/GoodSync:/opt/local/bin:/opt/local/sbin:/Library/PostgreSQL/9.3/bin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'PWD' => '/volumes/storage/code/php/basic'
+    'LANG' => 'ru_RU.UTF-8'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '1'
+    'HOME' => '/Users/dmitry'
+    'LOGNAME' => 'dmitry'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1425557430.3239
+    'REQUEST_TIME' => 1425557430
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+        2 => 'new'
+    ]
+    'argc' => 3
+]
+2015-03-05 12:11:21 [-][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Setting unknown property: yii\db\Connection::connectionString' in /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Component.php:197
+Stack trace:
+#0 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/BaseYii.php(518): yii\base\Component->__set('connectionStrin...', 'pgsql:host=loca...')
+#1 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Object.php(105): yii\BaseYii::configure(Object(yii\db\Connection), Array)
+#2 [internal function]: yii\base\Object->__construct(Array)
+#3 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/di/Container.php(372): ReflectionClass->newInstanceArgs(Array)
+#4 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/di/Container.php(151): yii\di\Container->build('yii\\db\\Connecti...', Array, Array)
+#5 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('yii\\db\\Connecti...', Array, Array)
+#6 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/di/ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#7 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/di/Instance.php(152): yii\di\ServiceLocator->get('db')
+#8 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/di/Instance.php(128): yii\di\Instance->get(NULL)
+#9 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/MigrateController.php(95): yii\di\Instance::ensure('db', 'yii\\db\\Connecti...')
+#10 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Controller.php(149): yii\console\controllers\MigrateController->beforeAction(Object(yii\base\InlineAction))
+#11 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#12 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#13 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate', Array)
+#14 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate', Array)
+#15 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#16 /Volumes/Storage/code/PHP/basic/yii(23): yii\base\Application->run()
+#17 {main}
+2015-03-05 12:11:21 [-][-][-][info][application] $_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/r7/1r2px7ws4_98__gwbj4cy2100000gn/T/'
+    'EnvAgent_vars' => 'PATH'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.y1CG3JWFOu/Render'
+    'TERM_PROGRAM_VERSION' => '343.6'
+    'OLDPWD' => '/volumes/storage/code/php'
+    'TERM_SESSION_ID' => '34443EB8-E91D-44D2-816E-143AE114B2AC'
+    'USER' => 'dmitry'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.ynxbuIvHwy/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x7:0x31'
+    'PATH' => '/Users/dmitry/Library/Application Support/GoodSync:/opt/local/bin:/opt/local/sbin:/Library/PostgreSQL/9.3/bin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'PWD' => '/volumes/storage/code/php/basic'
+    'LANG' => 'ru_RU.UTF-8'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '1'
+    'HOME' => '/Users/dmitry'
+    'LOGNAME' => 'dmitry'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1425557481.5438
+    'REQUEST_TIME' => 1425557481
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+        2 => 'new'
+    ]
+    'argc' => 3
+]
+2015-03-05 12:11:25 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'could not find driver' in /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php:579
+Stack trace:
+#0 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(579): PDO->__construct('pgsql:host=loca...', 'postgres', '12345', NULL)
+#1 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#3 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(383): yii\db\Connection->getSlavePdo()
+#5 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(732): yii\db\Schema->quoteValue('migration')
+#6 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(319): yii\db\Connection->quoteValue('migration')
+#7 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(160): yii\db\pgsql\Schema->findColumns(Object(yii\db\TableSchema))
+#8 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(140): yii\db\pgsql\Schema->loadTableSchema('migration')
+#9 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/MigrateController.php(121): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp('new')
+#13 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#14 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#15 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#16 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#17 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate', Array)
+#18 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate', Array)
+#19 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /Volumes/Storage/code/PHP/basic/yii(23): yii\base\Application->run()
+#21 {main}
+
+Next exception 'yii\db\Exception' with message 'could not find driver' in /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php:534
+Stack trace:
+#0 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#1 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(383): yii\db\Connection->getSlavePdo()
+#3 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(732): yii\db\Schema->quoteValue('migration')
+#4 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(319): yii\db\Connection->quoteValue('migration')
+#5 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(160): yii\db\pgsql\Schema->findColumns(Object(yii\db\TableSchema))
+#6 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(140): yii\db\pgsql\Schema->loadTableSchema('migration')
+#7 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/MigrateController.php(121): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#8 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#9 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#10 [internal function]: yii\console\controllers\BaseMigrateController->actionUp('new')
+#11 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#12 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#13 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#14 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#15 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate', Array)
+#16 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate', Array)
+#17 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#18 /Volumes/Storage/code/PHP/basic/yii(23): yii\base\Application->run()
+#19 {main}
+Additional Information:
+
+2015-03-05 12:11:25 [-][-][-][info][application] $_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/r7/1r2px7ws4_98__gwbj4cy2100000gn/T/'
+    'EnvAgent_vars' => 'PATH'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.y1CG3JWFOu/Render'
+    'TERM_PROGRAM_VERSION' => '343.6'
+    'OLDPWD' => '/volumes/storage/code/php'
+    'TERM_SESSION_ID' => '34443EB8-E91D-44D2-816E-143AE114B2AC'
+    'USER' => 'dmitry'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.ynxbuIvHwy/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x7:0x31'
+    'PATH' => '/Users/dmitry/Library/Application Support/GoodSync:/opt/local/bin:/opt/local/sbin:/Library/PostgreSQL/9.3/bin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'PWD' => '/volumes/storage/code/php/basic'
+    'LANG' => 'ru_RU.UTF-8'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '1'
+    'HOME' => '/Users/dmitry'
+    'LOGNAME' => 'dmitry'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1425557485.3034
+    'REQUEST_TIME' => 1425557485
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+        2 => 'new'
+    ]
+    'argc' => 3
+]
+2015-03-05 12:11:46 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'could not find driver' in /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php:579
+Stack trace:
+#0 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(579): PDO->__construct('pgsql:host=loca...', 'postgres', '12345', NULL)
+#1 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#3 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(383): yii\db\Connection->getSlavePdo()
+#5 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(732): yii\db\Schema->quoteValue('migration')
+#6 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(319): yii\db\Connection->quoteValue('migration')
+#7 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(160): yii\db\pgsql\Schema->findColumns(Object(yii\db\TableSchema))
+#8 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(140): yii\db\pgsql\Schema->loadTableSchema('migration')
+#9 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/MigrateController.php(121): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp('new')
+#13 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#14 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#15 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#16 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#17 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate', Array)
+#18 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate', Array)
+#19 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /Volumes/Storage/code/PHP/basic/yii(23): yii\base\Application->run()
+#21 {main}
+
+Next exception 'yii\db\Exception' with message 'could not find driver' in /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php:534
+Stack trace:
+#0 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#1 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(383): yii\db\Connection->getSlavePdo()
+#3 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(732): yii\db\Schema->quoteValue('migration')
+#4 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(319): yii\db\Connection->quoteValue('migration')
+#5 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(160): yii\db\pgsql\Schema->findColumns(Object(yii\db\TableSchema))
+#6 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(140): yii\db\pgsql\Schema->loadTableSchema('migration')
+#7 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/MigrateController.php(121): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#8 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#9 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#10 [internal function]: yii\console\controllers\BaseMigrateController->actionUp('new')
+#11 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#12 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#13 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#14 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#15 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate', Array)
+#16 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate', Array)
+#17 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#18 /Volumes/Storage/code/PHP/basic/yii(23): yii\base\Application->run()
+#19 {main}
+Additional Information:
+
+2015-03-05 12:11:46 [-][-][-][info][application] $_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/r7/1r2px7ws4_98__gwbj4cy2100000gn/T/'
+    'EnvAgent_vars' => 'PATH'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.y1CG3JWFOu/Render'
+    'TERM_PROGRAM_VERSION' => '343.6'
+    'OLDPWD' => '/volumes/storage/code/php'
+    'TERM_SESSION_ID' => '34443EB8-E91D-44D2-816E-143AE114B2AC'
+    'USER' => 'dmitry'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.ynxbuIvHwy/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x7:0x31'
+    'PATH' => '/Users/dmitry/Library/Application Support/GoodSync:/opt/local/bin:/opt/local/sbin:/Library/PostgreSQL/9.3/bin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'PWD' => '/volumes/storage/code/php/basic'
+    'LANG' => 'ru_RU.UTF-8'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '1'
+    'HOME' => '/Users/dmitry'
+    'LOGNAME' => 'dmitry'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1425557506.498
+    'REQUEST_TIME' => 1425557506
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+        2 => 'new'
+    ]
+    'argc' => 3
+]
+2015-03-05 12:13:14 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'could not find driver' in /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php:579
+Stack trace:
+#0 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(579): PDO->__construct('pgsql:host=loca...', 'postgres', '12345', NULL)
+#1 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#3 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(383): yii\db\Connection->getSlavePdo()
+#5 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(732): yii\db\Schema->quoteValue('migration')
+#6 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(319): yii\db\Connection->quoteValue('migration')
+#7 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(160): yii\db\pgsql\Schema->findColumns(Object(yii\db\TableSchema))
+#8 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(140): yii\db\pgsql\Schema->loadTableSchema('migration')
+#9 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/MigrateController.php(121): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp('new')
+#13 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#14 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#15 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#16 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#17 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate', Array)
+#18 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate', Array)
+#19 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /Volumes/Storage/code/PHP/basic/yii(23): yii\base\Application->run()
+#21 {main}
+
+Next exception 'yii\db\Exception' with message 'could not find driver' in /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php:534
+Stack trace:
+#0 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#1 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(383): yii\db\Connection->getSlavePdo()
+#3 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(732): yii\db\Schema->quoteValue('migration')
+#4 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(319): yii\db\Connection->quoteValue('migration')
+#5 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(160): yii\db\pgsql\Schema->findColumns(Object(yii\db\TableSchema))
+#6 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(140): yii\db\pgsql\Schema->loadTableSchema('migration')
+#7 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/MigrateController.php(121): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#8 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#9 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#10 [internal function]: yii\console\controllers\BaseMigrateController->actionUp('new')
+#11 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#12 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#13 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#14 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#15 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate', Array)
+#16 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate', Array)
+#17 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#18 /Volumes/Storage/code/PHP/basic/yii(23): yii\base\Application->run()
+#19 {main}
+Additional Information:
+
+2015-03-05 12:13:14 [-][-][-][info][application] $_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/r7/1r2px7ws4_98__gwbj4cy2100000gn/T/'
+    'EnvAgent_vars' => 'PATH'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.y1CG3JWFOu/Render'
+    'TERM_PROGRAM_VERSION' => '343.6'
+    'OLDPWD' => '/volumes/storage/code/php'
+    'TERM_SESSION_ID' => '34443EB8-E91D-44D2-816E-143AE114B2AC'
+    'USER' => 'dmitry'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.ynxbuIvHwy/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x7:0x31'
+    'PATH' => '/Users/dmitry/Library/Application Support/GoodSync:/opt/local/bin:/opt/local/sbin:/Library/PostgreSQL/9.3/bin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'PWD' => '/volumes/storage/code/php/basic'
+    'LANG' => 'ru_RU.UTF-8'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '1'
+    'HOME' => '/Users/dmitry'
+    'LOGNAME' => 'dmitry'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1425557594.3643
+    'REQUEST_TIME' => 1425557594
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+        2 => 'new'
+    ]
+    'argc' => 3
+]
+2015-03-05 12:40:15 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'could not find driver' in /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php:579
+Stack trace:
+#0 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(579): PDO->__construct('pgsql:host=loca...', 'postgres', '12345', NULL)
+#1 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#3 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(383): yii\db\Connection->getSlavePdo()
+#5 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(732): yii\db\Schema->quoteValue('migration')
+#6 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(319): yii\db\Connection->quoteValue('migration')
+#7 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(160): yii\db\pgsql\Schema->findColumns(Object(yii\db\TableSchema))
+#8 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(140): yii\db\pgsql\Schema->loadTableSchema('migration')
+#9 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/MigrateController.php(121): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp('new')
+#13 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#14 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#15 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#16 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#17 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate', Array)
+#18 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate', Array)
+#19 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /Volumes/Storage/code/PHP/basic/yii(23): yii\base\Application->run()
+#21 {main}
+
+Next exception 'yii\db\Exception' with message 'could not find driver' in /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php:534
+Stack trace:
+#0 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#1 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(383): yii\db\Connection->getSlavePdo()
+#3 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(732): yii\db\Schema->quoteValue('migration')
+#4 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(319): yii\db\Connection->quoteValue('migration')
+#5 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(160): yii\db\pgsql\Schema->findColumns(Object(yii\db\TableSchema))
+#6 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(140): yii\db\pgsql\Schema->loadTableSchema('migration')
+#7 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/MigrateController.php(121): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#8 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#9 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#10 [internal function]: yii\console\controllers\BaseMigrateController->actionUp('new')
+#11 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#12 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#13 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#14 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#15 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate', Array)
+#16 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate', Array)
+#17 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#18 /Volumes/Storage/code/PHP/basic/yii(23): yii\base\Application->run()
+#19 {main}
+Additional Information:
+
+2015-03-05 12:40:15 [-][-][-][error][yii\base\ErrorException:32] exception 'yii\base\ErrorException' with message 'PHP Startup: Unable to load dynamic library '/usr/local/Cellar/php54/5.4.33/lib/php/extensions/no-debug-non-zts-20100525/pdo_mysql.so' - dlopen(/usr/local/Cellar/php54/5.4.33/lib/php/extensions/no-debug-non-zts-20100525/pdo_mysql.so, 9): image not found' in Unknown:0
+Stack trace:
+#0 {main}
+2015-03-05 12:40:15 [-][-][-][info][application] $_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/r7/1r2px7ws4_98__gwbj4cy2100000gn/T/'
+    'EnvAgent_vars' => 'PATH'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.y1CG3JWFOu/Render'
+    'TERM_PROGRAM_VERSION' => '343.6'
+    'OLDPWD' => '/volumes/storage/code/php'
+    'TERM_SESSION_ID' => 'C96797F9-B8FB-4DF9-B6CE-E17D0412064A'
+    'USER' => 'dmitry'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.ynxbuIvHwy/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x7:0x31'
+    'PATH' => '/Users/dmitry/Library/Application Support/GoodSync:/opt/local/bin:/opt/local/sbin:/Library/PostgreSQL/9.3/bin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'PWD' => '/volumes/storage/code/php/basic'
+    'LANG' => 'ru_RU.UTF-8'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '1'
+    'HOME' => '/Users/dmitry'
+    'LOGNAME' => 'dmitry'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1425559215.962
+    'REQUEST_TIME' => 1425559215
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+        2 => 'new'
+    ]
+    'argc' => 3
+]
+2015-03-05 12:41:53 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'could not find driver' in /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php:579
+Stack trace:
+#0 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(579): PDO->__construct('pgsql:host=loca...', 'postgres', '12345', NULL)
+#1 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#3 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(383): yii\db\Connection->getSlavePdo()
+#5 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(732): yii\db\Schema->quoteValue('migration')
+#6 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(319): yii\db\Connection->quoteValue('migration')
+#7 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(160): yii\db\pgsql\Schema->findColumns(Object(yii\db\TableSchema))
+#8 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(140): yii\db\pgsql\Schema->loadTableSchema('migration')
+#9 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/MigrateController.php(121): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp('new')
+#13 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#14 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#15 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#16 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#17 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate', Array)
+#18 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate', Array)
+#19 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /Volumes/Storage/code/PHP/basic/yii(23): yii\base\Application->run()
+#21 {main}
+
+Next exception 'yii\db\Exception' with message 'could not find driver' in /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php:534
+Stack trace:
+#0 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#1 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(383): yii\db\Connection->getSlavePdo()
+#3 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(732): yii\db\Schema->quoteValue('migration')
+#4 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(319): yii\db\Connection->quoteValue('migration')
+#5 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(160): yii\db\pgsql\Schema->findColumns(Object(yii\db\TableSchema))
+#6 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(140): yii\db\pgsql\Schema->loadTableSchema('migration')
+#7 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/MigrateController.php(121): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#8 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#9 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#10 [internal function]: yii\console\controllers\BaseMigrateController->actionUp('new')
+#11 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#12 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#13 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#14 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#15 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate', Array)
+#16 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate', Array)
+#17 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#18 /Volumes/Storage/code/PHP/basic/yii(23): yii\base\Application->run()
+#19 {main}
+Additional Information:
+
+2015-03-05 12:41:53 [-][-][-][error][yii\base\ErrorException:32] exception 'yii\base\ErrorException' with message 'PHP Startup: Unable to load dynamic library '/usr/local/Cellar/php54/5.4.33/lib/php/extensions/no-debug-non-zts-20100525/pdo_mysql.so' - dlopen(/usr/local/Cellar/php54/5.4.33/lib/php/extensions/no-debug-non-zts-20100525/pdo_mysql.so, 9): image not found' in Unknown:0
+Stack trace:
+#0 {main}
+2015-03-05 12:41:53 [-][-][-][info][application] $_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/r7/1r2px7ws4_98__gwbj4cy2100000gn/T/'
+    'EnvAgent_vars' => 'PATH'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.y1CG3JWFOu/Render'
+    'TERM_PROGRAM_VERSION' => '343.6'
+    'OLDPWD' => '/volumes/storage/code/php'
+    'TERM_SESSION_ID' => 'C96797F9-B8FB-4DF9-B6CE-E17D0412064A'
+    'USER' => 'dmitry'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.ynxbuIvHwy/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x7:0x31'
+    'PATH' => '/Users/dmitry/Library/Application Support/GoodSync:/opt/local/bin:/opt/local/sbin:/Library/PostgreSQL/9.3/bin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'PWD' => '/volumes/storage/code/php/basic'
+    'LANG' => 'ru_RU.UTF-8'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '1'
+    'HOME' => '/Users/dmitry'
+    'LOGNAME' => 'dmitry'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1425559313.2225
+    'REQUEST_TIME' => 1425559313
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+        2 => 'new'
+    ]
+    'argc' => 3
+]
+2015-03-05 12:42:18 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'could not find driver' in /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php:579
+Stack trace:
+#0 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(579): PDO->__construct('pgsql:host=loca...', 'postgres', '12345', NULL)
+#1 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#3 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(383): yii\db\Connection->getSlavePdo()
+#5 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(732): yii\db\Schema->quoteValue('migration')
+#6 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(319): yii\db\Connection->quoteValue('migration')
+#7 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(160): yii\db\pgsql\Schema->findColumns(Object(yii\db\TableSchema))
+#8 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(140): yii\db\pgsql\Schema->loadTableSchema('migration')
+#9 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/MigrateController.php(121): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp('new')
+#13 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#14 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#15 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#16 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#17 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate', Array)
+#18 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate', Array)
+#19 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /Volumes/Storage/code/PHP/basic/yii(23): yii\base\Application->run()
+#21 {main}
+
+Next exception 'yii\db\Exception' with message 'could not find driver' in /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php:534
+Stack trace:
+#0 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#1 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(383): yii\db\Connection->getSlavePdo()
+#3 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Connection.php(732): yii\db\Schema->quoteValue('migration')
+#4 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(319): yii\db\Connection->quoteValue('migration')
+#5 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/pgsql/Schema.php(160): yii\db\pgsql\Schema->findColumns(Object(yii\db\TableSchema))
+#6 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/db/Schema.php(140): yii\db\pgsql\Schema->loadTableSchema('migration')
+#7 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/MigrateController.php(121): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#8 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#9 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#10 [internal function]: yii\console\controllers\BaseMigrateController->actionUp('new')
+#11 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#12 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#13 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#14 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#15 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate', Array)
+#16 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate', Array)
+#17 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#18 /Volumes/Storage/code/PHP/basic/yii(23): yii\base\Application->run()
+#19 {main}
+Additional Information:
+
+2015-03-05 12:42:18 [-][-][-][error][yii\base\ErrorException:32] exception 'yii\base\ErrorException' with message 'PHP Startup: pdo_mysql: Unable to initialize module
+Module compiled with module API=20131226
+PHP    compiled with module API=20100525
+These options need to match
+' in Unknown:0
+Stack trace:
+#0 {main}
+2015-03-05 12:42:18 [-][-][-][info][application] $_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/r7/1r2px7ws4_98__gwbj4cy2100000gn/T/'
+    'EnvAgent_vars' => 'PATH'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.y1CG3JWFOu/Render'
+    'TERM_PROGRAM_VERSION' => '343.6'
+    'OLDPWD' => '/volumes/storage/code/php'
+    'TERM_SESSION_ID' => 'C96797F9-B8FB-4DF9-B6CE-E17D0412064A'
+    'USER' => 'dmitry'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.ynxbuIvHwy/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x7:0x31'
+    'PATH' => '/Users/dmitry/Library/Application Support/GoodSync:/opt/local/bin:/opt/local/sbin:/Library/PostgreSQL/9.3/bin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'PWD' => '/volumes/storage/code/php/basic'
+    'LANG' => 'ru_RU.UTF-8'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '1'
+    'HOME' => '/Users/dmitry'
+    'LOGNAME' => 'dmitry'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1425559338.7284
+    'REQUEST_TIME' => 1425559338
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+        2 => 'new'
+    ]
+    'argc' => 3
+]
+2015-03-05 13:44:52 [-][-][-][error][yii\base\ErrorException:32] exception 'yii\base\ErrorException' with message 'PHP Startup: Unable to load dynamic library '/Applications/MAMP/bin/php/php5.4.33/lib/php/extensions/no-debug-non-zts-20100525/mongo.so' - dlopen(/Applications/MAMP/bin/php/php5.4.33/lib/php/extensions/no-debug-non-zts-20100525/mongo.so, 9): image not found' in Unknown:0
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-05 13:44:52 [-][-][-][info][application] $_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/r7/1r2px7ws4_98__gwbj4cy2100000gn/T/'
+    'EnvAgent_vars' => 'PATH'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.y1CG3JWFOu/Render'
+    'TERM_PROGRAM_VERSION' => '343.6'
+    'OLDPWD' => '/volumes/storage/code/php'
+    'TERM_SESSION_ID' => 'C96797F9-B8FB-4DF9-B6CE-E17D0412064A'
+    'USER' => 'dmitry'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.ynxbuIvHwy/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x7:0x31'
+    'PATH' => '/Users/dmitry/Library/Application Support/GoodSync:/opt/local/bin:/opt/local/sbin:/Library/PostgreSQL/9.3/bin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'PWD' => '/volumes/storage/code/php/basic'
+    'LANG' => 'ru_RU.UTF-8'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '1'
+    'HOME' => '/Users/dmitry'
+    'LOGNAME' => 'dmitry'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1425559492.22
+    'REQUEST_TIME' => 1425559492
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+        2 => 'new'
+    ]
+    'argc' => 3
+]
+2015-03-05 13:45:21 [-][-][-][error][yii\base\ErrorException:32] exception 'yii\base\ErrorException' with message 'PHP Startup: Unable to load dynamic library '/Applications/MAMP/bin/php/php5.4.33/lib/php/extensions/no-debug-non-zts-20100525/mongo.so' - dlopen(/Applications/MAMP/bin/php/php5.4.33/lib/php/extensions/no-debug-non-zts-20100525/mongo.so, 9): image not found' in Unknown:0
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-05 13:45:21 [-][-][-][info][application] $_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/r7/1r2px7ws4_98__gwbj4cy2100000gn/T/'
+    'EnvAgent_vars' => 'PATH'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.y1CG3JWFOu/Render'
+    'TERM_PROGRAM_VERSION' => '343.6'
+    'OLDPWD' => '/volumes/storage/code/php'
+    'TERM_SESSION_ID' => 'C96797F9-B8FB-4DF9-B6CE-E17D0412064A'
+    'USER' => 'dmitry'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.ynxbuIvHwy/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x7:0x31'
+    'PATH' => '/Users/dmitry/Library/Application Support/GoodSync:/opt/local/bin:/opt/local/sbin:/Library/PostgreSQL/9.3/bin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'PWD' => '/volumes/storage/code/php/basic'
+    'LANG' => 'ru_RU.UTF-8'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '1'
+    'HOME' => '/Users/dmitry'
+    'LOGNAME' => 'dmitry'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1425559521.45
+    'REQUEST_TIME' => 1425559521
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+        2 => 'new'
+    ]
+    'argc' => 3
+]
+2015-03-05 15:27:42 [-][-][-][error][yii\console\Exception] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "?".' in /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Module.php:461
+Stack trace:
+#0 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('?', Array)
+#1 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('?', Array)
+#2 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#3 /Volumes/Storage/code/PHP/basic/yii(23): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\console\Exception' with message 'Unknown command "?".' in /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php:163
+Stack trace:
+#0 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('?', Array)
+#1 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#2 /Volumes/Storage/code/PHP/basic/yii(23): yii\base\Application->run()
+#3 {main}
+2015-03-05 15:27:42 [-][-][-][info][application] $_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/r7/1r2px7ws4_98__gwbj4cy2100000gn/T/'
+    'EnvAgent_vars' => 'PATH'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.y1CG3JWFOu/Render'
+    'TERM_PROGRAM_VERSION' => '343.6'
+    'OLDPWD' => '/volumes/storage/code/php'
+    'TERM_SESSION_ID' => 'C96797F9-B8FB-4DF9-B6CE-E17D0412064A'
+    'USER' => 'dmitry'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.ynxbuIvHwy/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x7:0x31'
+    'PATH' => '/Users/dmitry/Library/Application Support/GoodSync:/opt/local/bin:/opt/local/sbin:/Library/PostgreSQL/9.3/bin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'PWD' => '/volumes/storage/code/php/basic'
+    'LANG' => 'ru_RU.UTF-8'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '1'
+    'HOME' => '/Users/dmitry'
+    'LOGNAME' => 'dmitry'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1425565662.39
+    'REQUEST_TIME' => 1425565662
+    'argv' => [
+        0 => './yii'
+        1 => '?'
+    ]
+    'argc' => 2
+]
+2015-03-05 17:17:24 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "".' in /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Module.php:461
+Stack trace:
+#0 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('', Array)
+#1 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Volumes/Storage/code/PHP/basic/web/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/web/Application.php:95
+Stack trace:
+#0 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Volumes/Storage/code/PHP/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2015-03-05 17:17:24 [::1][-][-][info][application] $_COOKIE = [
+    'PPA_ID' => 'c04cdd2cd7ac176d6a25976c7ffe3aaf'
+    'webfx-tree-cookie-persistence' => 'wfxt-6 wfxt-4 wfxt-16 wfxt-18'
+    'PHPSESSID' => '65a027b2f249704de37e990f0b80bc50'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PPA_ID=c04cdd2cd7ac176d6a25976c7ffe3aaf; webfx-tree-cookie-persistence=wfxt-6+wfxt-4+wfxt-16+wfxt-18; PHPSESSID=65a027b2f249704de37e990f0b80bc50'
+    'PATH' => '/Library/PostgreSQL/9.3/bin/'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.5.17 mod_ssl/2.2.29 OpenSSL/0.9.8zc DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Volumes/Storage/code/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Volumes/Storage/code/PHP/basic/web/index.php'
+    'REMOTE_PORT' => '53612'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/basic/web/'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425572244.9
+    'REQUEST_TIME' => 1425572244
+    'argv' => []
+    'argc' => 0
+]
+2015-03-05 17:17:37 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "".' in /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Module.php:461
+Stack trace:
+#0 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('', Array)
+#1 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Volumes/Storage/code/PHP/basic/web/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/web/Application.php:95
+Stack trace:
+#0 /Volumes/Storage/code/PHP/basic/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Volumes/Storage/code/PHP/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2015-03-05 17:17:37 [::1][-][-][info][application] $_COOKIE = [
+    'PPA_ID' => 'c04cdd2cd7ac176d6a25976c7ffe3aaf'
+    'webfx-tree-cookie-persistence' => 'wfxt-6 wfxt-4 wfxt-16 wfxt-18'
+    'PHPSESSID' => '65a027b2f249704de37e990f0b80bc50'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PPA_ID=c04cdd2cd7ac176d6a25976c7ffe3aaf; webfx-tree-cookie-persistence=wfxt-6+wfxt-4+wfxt-16+wfxt-18; PHPSESSID=65a027b2f249704de37e990f0b80bc50'
+    'PATH' => '/Library/PostgreSQL/9.3/bin/'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.5.17 mod_ssl/2.2.29 OpenSSL/0.9.8zc DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Volumes/Storage/code/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Volumes/Storage/code/PHP/basic/web/index.php'
+    'REMOTE_PORT' => '53616'
+    'REDIRECT_URL' => '/basic/web/test/view'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/basic/web/test/view'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425572257.53
+    'REQUEST_TIME' => 1425572257
+    'argv' => []
+    'argc' => 0
+]
