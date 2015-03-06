@@ -26,10 +26,10 @@ AppAsset::register($this);
     <div class="wrap">
         <?php
             NavBar::begin([
-                'brandLabel' => 'ИСОИПДВУЗ',
+                'brandLabel' => 'ИСОИПД',
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
-                    'class' => 'navbar-inverse navbar-fixed-top',
+                    'class' => 'navbar-inverse',
                 ],
             ]);
             echo Nav::widget([
@@ -47,8 +47,13 @@ AppAsset::register($this);
             ]);
             NavBar::end();
         ?>
-		<div style="width: 300px">
-			<?= \app\widgets\SideMenu::widget() ?>
+		<div class="col-xs-12">
+			<div class="col-xs-3">
+				<?= \app\widgets\SideMenu::widget() ?>
+			</div>
+			<div class="col-xs-9">
+				<?= $content ?>
+			</div>
 		</div>
     </div>
 
