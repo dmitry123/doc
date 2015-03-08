@@ -2,6 +2,7 @@
 
 namespace app\core;
 
+use yii\base\ErrorException;
 use yii\db\Query;
 
 abstract class ActiveRecord extends \yii\db\ActiveRecord {
@@ -30,6 +31,23 @@ abstract class ActiveRecord extends \yii\db\ActiveRecord {
 	}
 
 	private static $cached = [];
+
+	/**
+	 * Moved from Yii 1.1 for backward compatibility
+	 * @param int|string $id - Primary key value
+	 * @return integer|false - The number of rows deleted, or false if the deletion is unsuccessful for some reason
+	 * @throws ErrorException - Will be thrown, if table hasn't primary key
+	 * @throws \Exception
+	 */
+	public function deleteByPk($id) {
+		$keys = $this->primaryKey();
+		if (!isset($keys[0])) {
+			throw new ErrorException("Unresolved table primary key");
+		}
+		$pk = $keys[0];
+		$this->$pk = $id;
+		return $this->delete();
+	}
 
 	/**
 	 * Get new query instance to build sql command

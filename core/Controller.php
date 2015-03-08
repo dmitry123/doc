@@ -268,10 +268,10 @@ abstract class Controller extends \yii\base\Controller {
 		try {
 			$model = $this->getFormModel("model", "post");
 			if (is_array($model)) {
-				throw new CException("Forms to register mustn't be array");
+				throw new ErrorException("Forms to register mustn't be array");
 			}
 			if (($table = $this->getModel()) == null) {
-				throw new CException("Your controller must override LController::getModel method");
+				throw new ErrorException("Your controller must override LController::getModel method");
 			}
 			foreach ($model->attributes as $key => $value) {
 				$table->__set($key, $value);
@@ -281,7 +281,7 @@ abstract class Controller extends \yii\base\Controller {
 			$this->leave([
 				"message" => "Данные успешно сохранены"
 			]);
-		} catch (Exception $e) {
+		} catch (\Exception $e) {
 			$this->exception($e);
 		}
 	}

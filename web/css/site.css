@@ -1,7 +1,25 @@
 html,
 body {
-    margin-top: 20px;
-    height: calc(100% - 20px);
+    margin-top: 30px;
+    height: calc(100% - 30px);
+}
+
+.form-group {
+    margin: 0;
+}
+
+.navbar .container {
+    margin: 0 0 0 20px;
+    width: calc(100% - 40px);
+}
+
+.disable-selection {
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+       -khtml-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
 }
 
 .container {

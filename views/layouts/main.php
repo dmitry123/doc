@@ -2,7 +2,6 @@
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 
 /* @var $this \yii\web\View */
@@ -29,7 +28,7 @@ AppAsset::register($this);
                 'brandLabel' => 'Документооборот',
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
-                    'class' => 'navbar-xs navbar-fixed-top navbar-default',
+                    'class' => 'navbar-sm navbar-fixed-top navbar-default',
                 ],
             ]);
             echo Nav::widget([

@@ -1,79 +1,44 @@
 <?php
 
-namespace app\models;
+namespace app\forms;
 
-use Yii;
-use yii\base\Model;
+use app\core\FormModel;
 
-/**
- * LoginForm is the model behind the login form.
- */
-class LoginForm extends Model
-{
-    public $username;
-    public $password;
-    public $rememberMe = true;
+class LoginForm extends FormModel {
 
-    private $_user = false;
+	public $login;
+	public $password;
 
+	/**
+	 * Override that method to return additional rule configuration, like
+	 * scenario conditions or others
+	 * @return array - Array with rule configuration
+	 */
+	public function backward() {
+		return [
+		];
+	}
 
-    /**
-     * @return array the validation rules.
-     */
-    public function rules()
-    {
-        return [
-            // username and password are both required
-            [['username', 'password'], 'required'],
-            // rememberMe must be a boolean value
-            ['rememberMe', 'boolean'],
-            // password is validated by validatePassword()
-            ['password', 'validatePassword'],
-        ];
-    }
-
-    /**
-     * Validates the password.
-     * This method serves as the inline validation for password.
-     *
-     * @param string $attribute the attribute currently being validated
-     * @param array $params the additional name-value pairs given in the rule
-     */
-    public function validatePassword($attribute, $params)
-    {
-        if (!$this->hasErrors()) {
-            $user = $this->getUser();
-
-            if (!$user || !$user->validatePassword($this->password)) {
-                $this->addError($attribute, 'Incorrect username or password.');
-            }
-        }
-    }
-
-    /**
-     * Logs in a user using the provided username and password.
-     * @return boolean whether the user is logged in successfully
-     */
-    public function login()
-    {
-        if ($this->validate()) {
-            return Yii::$app->user->login($this->getUser(), $this->rememberMe ? 3600*24*30 : 0);
-        } else {
-            return false;
-        }
-    }
-
-    /**
-     * Finds user by [[username]]
-     *
-     * @return User|null
-     */
-    public function getUser()
-    {
-        if ($this->_user === false) {
-            $this->_user = User::findByUsername($this->username);
-        }
-
-        return $this->_user;
-    }
+	/**
+	 * Override that method to return config. Config should return array associated with
+	 * model's variables. Every field must contains 3 parameters:
+	 *  + label - Variable's label, will be displayed in the form
+	 *  + type - Input type (@see _LFormInternalRender#render())
+	 *  + rules - Basic form's Yii rules, such as 'required' or 'numeric' etc
+	 * @return Array - Model's config
+	 */
+	public function config() {
+		return [
+			"login" => [
+				"label" => "Логин",
+				"type" => "text",
+				"rules" => "required"
+			],
+			"password" => [
+				"label" => "Пароль",
+				"type" => "password",
+				"rules" => "required"
+			]
+		];
+	}
 }
