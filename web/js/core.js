@@ -165,20 +165,25 @@ var Doc = Doc || {};
 	 */
 	Doc.createPlugin = function(func) {
 		return function(options) {
-			if (typeof options == "string") {
-				var c = $(this).data("doc");
-				if (!c) {
-					throw new Error("Component hasn't been initialized, create it first");
-				}
-				c[options].apply(c, arguments.splice(0, 1));
-			} else {
-				if (typeof this != "function") {
-					Doc[func](this[0], options);
+			return this.each(function(it, me) {
+				me = $(me);
+				if (options !== void 0 && typeof options == "string") {
+					var c = me.data("doc");
+					if (!c) {
+						throw new Error("Component hasn't been initialized, create it first");
+					}
+					c[options].apply(c, arguments.splice(0, 1));
 				} else {
-					Doc[func](options);
+					if ($(me.parents(".multiple")[0]).data("doc")) {
+						return ;
+					}
+					if (typeof me != "function") {
+						Doc[func](me[0], options);
+					} else {
+						Doc[func](options);
+					}
 				}
-			}
-			return this;
+			});
 		};
 	};
 

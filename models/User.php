@@ -124,7 +124,7 @@ class User extends ActiveRecord implements IdentityInterface {
 	 * @return string|integer an ID that uniquely identifies a user identity.
 	 */
 	public function getId() {
-		return $this->findByLoginAndPassword($this->login, $this->password)["id"];
+		return $this->login;
 	}
 
 	/**

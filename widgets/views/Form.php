@@ -16,7 +16,7 @@ use yii\widgets\ActiveForm;
 $form = ActiveForm::begin([
 	"enableClientValidation" => true,
 	"enableAjaxValidation" => true,
-	"options" => [
+	"options" => $self->options + [
 		"id" => $id,
 		"class" => "form-horizontal col-xs-12",
 		"action" => $url,
@@ -28,7 +28,7 @@ $form = ActiveForm::begin([
 
 <? foreach ($model->getConfig() as $key => $value): ?>
     <div class="form-group <?= $self->isHidden($key) ? "hidden" : "" ?>">
-        <?php if (!$self->checkType($key, "Hidden")) : ?>
+        <?php if (!$self->checkType($key, "Hidden") && $self->labels) : ?>
 			<label class="col-xs-3 control-label" for="<?= $key ?>"><?= $value["label"] ?></label>
         <? endif; ?>
         <div class="col-xs-8">
@@ -51,5 +51,9 @@ $form = ActiveForm::begin([
         <? endif; ?>
     </div>
 <? endforeach; ?>
+
+<? if ($self->button != null): ?>
+	<button class="<?= $self->button["class"] ?>" type="submit"><?= $self->button["text"] ?></button>
+<? endif; ?>
 
 <? ActiveForm::end(); ?>

@@ -117,10 +117,15 @@ var Doc = Doc || {};
 		Doc.createObject(new Multiple(properties, $(selector)), selector, true);
 	};
 
-	$.fn.multiple = Doc.createPlugin("createMultiple");
+	$.fn.multiple = Doc.createPlugin(
+		"createMultiple"
+	);
+
+	$(document).ready(function() {
+		$("select[multiple]").multiple();
+	});
+	$(document).bind("ajaxSuccess", function() {
+		$("select[multiple]").multiple();
+	});
 
 })(Doc);
-
-$(document).ready(function() {
-	$("#test-multiple").multiple();
-});

@@ -29,6 +29,26 @@ class Form extends Widget {
      */
     public $model = null;
 
+	/**
+	 * @var bool - False to display labels
+	 */
+	public $labels = true;
+
+	/**
+	 * @var array - Extra form HTML options
+	 */
+	public $options = [];
+
+	/**
+	 * @var string - Form wrapper with submit button
+	 */
+	public $wrapper = null;
+
+	/**
+	 * @var array - Array with submit button configuration
+	 */
+	public $button = null;
+
     /**
      * Override that method to return just rendered component
      * @throws ErrorException

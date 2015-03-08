@@ -9,8 +9,8 @@ body {
 }
 
 .navbar .container {
-    margin: 0 0 0 20px;
-    width: calc(100% - 40px);
+    margin: 0 0 0 25px;
+    width: calc(100% - 50px);
 }
 
 .disable-selection {
@@ -25,6 +25,15 @@ body {
 .container {
     padding: 0;
 }
+
+#navigation .col-xs-8 {
+    padding: 0;
+}
+#navigation button {
+    margin-top: -10px;
+}
+
+/* Not Mine! */
 
 .wrap {
     min-height: 100%;
