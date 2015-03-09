@@ -59,7 +59,7 @@ class Form extends Widget {
             $config = [];
             foreach ($this->model as $i => $model) {
                 if ($this->test($model)) {
-                    $config += $model->config();
+                    $config += $model->getConfig();
                 }
             }
             $this->model = new FormModelAdapter($config);
@@ -221,7 +221,7 @@ class Form extends Widget {
      * @return bool - True if type if equal else false
      */
     public function checkType($key, $type) {
-        $config = $this->model->config()[$key];
+        $config = $this->model->getConfig()[$key];
         if (!isset($config["type"])) {
             $config["type"] = "text";
         }
@@ -234,7 +234,7 @@ class Form extends Widget {
 	 * @return bool - True if field must be hidden
 	 */
 	public function getForm($key) {
-		$config = $this->model->config()[$key];
+		$config = $this->model->getConfig()[$key];
 		if (!isset($config["form"])) {
 			return false;
 		}
@@ -247,10 +247,13 @@ class Form extends Widget {
      * @return bool - True if field must be hidden
      */
     public function isHidden($key) {
-        $config = $this->model->config()[$key];
-        if (!isset($config["hidden"])) {
-            return false;
-        }
-        return $config["hidden"];
+        $config = $this->model->getConfig()[$key];
+		if (isset($config["hidden"])) {
+			return true;
+		}  else if (isset($config["type"]) && !strcasecmp($config["type"], "hidden")) {
+            return true;
+        } else {
+			return false;
+		}
     }
 } 

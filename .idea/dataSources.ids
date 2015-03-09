@@ -265,6 +265,7 @@
       <column name="password" sqlType="varchar" precision="123" scale="0" nullable="false" jdbcType="12"/>
       <column name="email" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12" def="Jyc="/>
       <column name="register_date" sqlType="timestamp" precision="29" scale="6" nullable="true" jdbcType="93" def="bm93KCk="/>
+      <column name="access_token" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12" def="TlVMTA=="/>
       <primary-key name="user_pkey" columns="id"/>
       <exported-key name="employee_user_id_fkey" table="employee" schema="public" catalog="doc" columns="user_id"/>
       <exported-key name="log_user_id_fkey" table="log" schema="public" catalog="doc" columns="user_id"/>

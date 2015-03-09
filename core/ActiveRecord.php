@@ -23,14 +23,14 @@ abstract class ActiveRecord extends \yii\db\ActiveRecord {
 		if ($class == null) {
 			$class = get_called_class();;
 		}
-		if (!isset(static::$cached[$class])) {
-			return (static::$cached[$class] = new static());
+		if (!isset(self::$models[$class])) {
+			return (self::$models[$class] = new $class());
 		} else {
-			return static::$cached[$class];
+			return self::$models[$class];
 		}
 	}
 
-	private static $cached = [];
+	private static $models = [];
 
 	/**
 	 * Moved from Yii 1.1 for backward compatibility

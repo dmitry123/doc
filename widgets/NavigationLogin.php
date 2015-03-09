@@ -3,14 +3,14 @@
 namespace app\widgets;
 
 use app\core\Widget;
-use app\forms\LoginForm;
+use app\forms\UserForm;
 use Yii;
 
 class NavigationLogin extends Widget {
 
 	public function run() {
 		return Form::widget([
-			"model" => new LoginForm("login"),
+			"model" => new UserForm("login"),
 			"options" => [
 				"class" => "navbar-form navbar-right",
 				"role" => "search",

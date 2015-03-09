@@ -3,11 +3,17 @@
 namespace app\forms;
 
 use app\core\FormModel;
+use app\models\User;
 
-class LoginForm extends FormModel {
+class UserForm extends FormModel {
 
+	public $id;
 	public $login;
 	public $password;
+	public $password2;
+	public $email;
+	public $register_date;
+	public $access_token;
 
 	/**
 	 * Override that method to return additional rule configuration, like
@@ -15,8 +21,10 @@ class LoginForm extends FormModel {
 	 * @return array - Array with rule configuration
 	 */
 	public function backward() {
-		return [
-		];
+		return User::getRules([
+			[ [ "id", "password2", "email" ], "hide", "on" => "login" ],
+			[ [ "id", "login" ], "hide", "on" => [ "register", "update" ] ]
+		]);
 	}
 
 	/**
@@ -29,6 +37,11 @@ class LoginForm extends FormModel {
 	 */
 	public function config() {
 		return [
+			"id" => [
+				"label" => "Идентификатор",
+				"type" => "hidden",
+				"rules" => "safe"
+			],
 			"login" => [
 				"label" => "Логин",
 				"type" => "text",
@@ -38,6 +51,16 @@ class LoginForm extends FormModel {
 				"label" => "Пароль",
 				"type" => "password",
 				"rules" => "required"
+			],
+			"password2" => [
+				"label" => "Повторите пароль",
+				"type" => "password",
+				"rules" => "safe"
+			],
+			"email" => [
+				"label" => "Почтовый ящик",
+				"type" => "email",
+				"rules" => "email"
 			]
 		];
 	}

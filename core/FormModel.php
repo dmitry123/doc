@@ -81,7 +81,7 @@ abstract class FormModel extends Model {
 	 */
 	public function backward() {
 		return [
-			[ "id", "required", "on" => [ "update", "search" ] ]
+			[ "id", "required", "on" => [ "update", "delete" ] ]
 		];
 	}
 
@@ -147,7 +147,7 @@ abstract class FormModel extends Model {
 
 		// Get model's configuration
 		if ($config == null) {
-			$config = $this->config();
+			$config = $this->getConfig();
 		}
 
 		// Reset rules and labels arrays
@@ -180,6 +180,40 @@ abstract class FormModel extends Model {
 				$this->_container[$key] = null;
 			}
 		}
+
+		$this->_backward = $this->backward();
+
+		foreach ($this->_backward as $i => &$b) {
+			if (isset($b[1]) && $b[1] == "hide") {
+				if (is_array($b[0]) && $this->checkScenario($b["on"])) {
+					foreach ($b[0] as $r) {
+						$this->_config[$r]["type"] = "hidden";
+					}
+				} else if ($this->checkScenario($b["on"])) {
+					$this->_config[$b[0]]["type"] = "hidden";
+				}
+				array_splice($this->_backward, $i, 1);
+			}
+		}
+	}
+
+	/**
+	 * Check if current model has been loaded with that
+	 * one of that scenario
+	 * @param array|string $scenario - Scenario name or array with names
+	 * @return bool - True if scenario exists
+	 */
+	private function checkScenario($scenario) {
+		if (is_array($scenario)) {
+			foreach ($scenario as $s) {
+				if (!strcasecmp($s, $this->scenario)) {
+					return true;
+				}
+			}
+		} else {
+			return !strcasecmp($scenario, $this->scenario);
+		}
+		return false;
 	}
 
 	/**
@@ -304,7 +338,7 @@ abstract class FormModel extends Model {
 			}
 		}
 		return $this->_cached = array_merge($result, array_merge($this->_strong,
-			$this->replaceRules($this->backward())
+			$this->replaceRules($this->_backward)
 		));
 	}
 
@@ -338,4 +372,5 @@ abstract class FormModel extends Model {
 	protected $_types = null;
 	protected $_config = null;
 	protected $_data = null;
+	protected $_backward = null;
 } 

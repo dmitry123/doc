@@ -7,7 +7,7 @@ echo \app\widgets\Modal::widget([
 	"id" => "login-modal",
 	"title" => "Вход",
 	"body" => \app\widgets\Form::widget([
-		"model" => new \app\forms\LoginForm("login")
+		"model" => new \app\forms\UserForm("login")
 	]),
 	"buttons" => [
 		"register-button" => [

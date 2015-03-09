@@ -3,6 +3,7 @@
 namespace app\models;
 
 use app\core\ActiveRecord;
+use yii\validators\StringValidator;
 use yii\web\IdentityInterface;
 
 class User extends ActiveRecord implements IdentityInterface {
@@ -13,6 +14,7 @@ class User extends ActiveRecord implements IdentityInterface {
 	public $password2;
 	public $email;
 	public $register_date;
+	public $access_token;
 
 	/**
 	 * Find model by it's name
@@ -37,19 +39,37 @@ class User extends ActiveRecord implements IdentityInterface {
 	 */
 	public function rules() {
 		return [
+			// set required for identification number on update
+			[ "id", "required", "on" => "update" ],
+
 			// set maximum and minimum length for 'login' and 'email' fields (see db)
-			[["login", "email"], "length", "min" => 1, "max" => 50],
+			[ [ "login", "email", "access_token" ], "string", "max" => 50 ],
 
 			// set fields to required for register scenario
-			[["login", "password", "password2", "email"], "required", "on" => "register"],
+			[ [ "login", "password", "password2", "email" ], "required", "on" => "register" ],
 
 			// set fields to required for login scenario
-			[["login", "password"], "required", "on" => "login"],
+			[ [ "login", "password" ], "required", "on" => "login" ],
 
 			// compare two passwords on register
-			["password", "compare", "compareAttribute" => "password2", "on" => "register"]
+			[ "password", "compare", "compareAttribute" => "password2", "on" => "register" ]
 		];
 	}
+
+	/**
+	 * Get array with validation rules for current class
+	 * @param $extra array - Additional validation rules (for hidden fields)
+	 * @return array - Array with validation rules
+	 */
+	public static function getRules($extra = []) {
+		if (!self::$rules) {
+			return (self::$rules = array_merge(static::model()->rules(), $extra));
+		} else {
+			return self::$rules;
+		}
+	}
+
+	private static $rules = null;
 
 	/**
 	 * Fetch user row from table by it's login and password
@@ -59,7 +79,7 @@ class User extends ActiveRecord implements IdentityInterface {
 	 * 		null if user has not been found
 	 */
 	public function findByLoginAndPassword($login, $password) {
-		$row = $this->createQuery()
+		$row = static::find()
 			->select("*")
 			->from("user")
 			->where("lower(login) = :login")
@@ -81,7 +101,7 @@ class User extends ActiveRecord implements IdentityInterface {
 	 * @return array|null - Array with user's information
 	 */
 	public function findById($id) {
-		$row = $this->createQuery()
+		$row = static::find()
 			->select("*")
 			->from("user")
 			->where("id = :id")
