@@ -27,6 +27,10 @@ app\assets\AppAsset::register($this);
 			<div class="col-xs-9">
 				<?= $content ?>
 			</div>
+		<? else: ?>
+			<div class="col-xs-12">
+				<?= $content ?>
+			</div>
 		<? endif ?>
 	</div>
 </div>

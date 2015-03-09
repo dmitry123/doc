@@ -9,7 +9,6 @@
 
 namespace app\widgets;
 
-use app\assets\SideNavAsset;
 use Yii;
 use yii\base\InvalidConfigException;
 use yii\helpers\Html;
@@ -141,7 +140,6 @@ class SideNav extends Menu
     public function init()
     {
         parent::init();
-		SideNavAsset::register($this->getView());
         $this->activateParents = true;
         $this->submenuTemplate = "\n<ul class='nav nav-pills nav-stacked'>\n{items}\n</ul>\n";
         $this->linkTemplate = '<a href="{url}">{icon}{label}</a>';

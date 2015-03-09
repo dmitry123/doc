@@ -6,4 +6,6 @@
 
 \app\assets\AdminAsset::register($this);
 
-require "main.php";
+print $this->renderPhpFile(Yii::$app->getLayoutPath() . "/main.php", [
+	"content" => $content
+]);

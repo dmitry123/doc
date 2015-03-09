@@ -1,12 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Savonin
- * Date: 2015-03-07
- * Time: 20:54
- */
 
-namespace app\module\admin\controllers;
+namespace app\modules\admin\controllers;
 
 use app\core\ActiveRecord;
 use app\core\Controller;
@@ -14,7 +8,7 @@ use app\core\Controller;
 class TestController extends Controller {
 
 	public function actionView() {
-		print "123";
+		print $this->render("view");
 	}
 
 	/**
