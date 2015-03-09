@@ -4,10 +4,10 @@
  */
 
 echo \app\widgets\Modal::widget([
-	"id" => "login-modal",
-	"title" => "Вход",
+	"id" => "register-modal",
+	"title" => "Регистрация",
 	"body" => \app\widgets\Form::widget([
-		"model" => new \app\forms\UserForm("login")
+		"model" => new \app\forms\UserForm("register")
 	]),
 	"buttons" => [
 		"register-button" => [
@@ -16,6 +16,11 @@ echo \app\widgets\Modal::widget([
 			"type" => "submit"
 		]
 	]
-]); ?>
+]);
+?>
 
-<button class="btn btn-primary" data-toggle="modal" data-target="#login-modal">Click On Me</button>
+<div class="col-xs-6">
+	<?= \app\widgets\Form::widget([
+		"model" => new \app\forms\UserForm("login")
+	]); ?>
+</div>

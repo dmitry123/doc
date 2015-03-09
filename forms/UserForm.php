@@ -23,7 +23,8 @@ class UserForm extends FormModel {
 	public function backward() {
 		return User::getRules([
 			[ [ "id", "password2", "email" ], "hide", "on" => "login" ],
-			[ [ "id", "login" ], "hide", "on" => [ "register", "update" ] ]
+			[ "id", "hide", "on" => "register" ],
+			[ [ "id", "login" ], "hide", "on" => "update" ]
 		]);
 	}
 

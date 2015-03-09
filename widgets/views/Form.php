@@ -29,7 +29,12 @@ $form = ActiveForm::begin([
 <? foreach ($model->getConfig() as $key => $value): ?>
     <div class="form-group <?= $self->isHidden($key) ? "hidden" : "" ?>">
         <?php if (!$self->checkType($key, "Hidden") && $self->labels) : ?>
-			<label class="col-xs-4 control-label" for="<?= $key ?>"><?= $value["label"] ?></label>
+			<label class="col-xs-4 control-label" for="<?= $key ?>">
+				<?= $value["label"] ?>
+				<? if (!empty($value["label"])): ?>
+					<span class="required">*</span>
+				<? endif ?>
+			</label>
         <? endif; ?>
         <div class="col-xs-7">
             <?= $field = $self->prepare($key)->render($form, $model)->label(false)->render() ?>

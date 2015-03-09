@@ -12,8 +12,6 @@ class NavigationLogin extends Widget {
 		return Form::widget([
 			"model" => new UserForm("login"),
 			"options" => [
-				"class" => "navbar-form navbar-right",
-				"role" => "search",
 				"style" => "margin-bottom: -2px"
 			],
 			"wrapper" => ".navigation-login-wrapper",
