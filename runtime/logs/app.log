@@ -9932,3 +9932,1309 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1425940677.435
     'REQUEST_TIME' => 1425940677
 ]
+2015-03-10 05:47:16 [127.0.0.1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '`'' in F:\Hosts\Celeroctos\Toonftp\www\doc\views\layouts\main.php:19
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-10 05:47:16 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'p19of410l7asvm2d9ta08nebu5'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=p19of410l7asvm2d9ta08nebu5'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '57142'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425952036.405
+    'REQUEST_TIME' => 1425952036
+]
+2015-03-10 06:22:11 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "login".' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('login', Array)
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-03-10 06:22:11 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'p19of410l7asvm2d9ta08nebu5'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=p19of410l7asvm2d9ta08nebu5'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '58182'
+    'REDIRECT_URL' => '/doc/web/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/login'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425954131.345
+    'REQUEST_TIME' => 1425954131
+]
+2015-03-10 06:22:34 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "login".' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('login', Array)
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-03-10 06:22:34 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'p19of410l7asvm2d9ta08nebu5'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=p19of410l7asvm2d9ta08nebu5'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '58196'
+    'REDIRECT_URL' => '/doc/web/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/login'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425954154.925
+    'REQUEST_TIME' => 1425954154
+]
+2015-03-10 06:22:42 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "index".' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('index', Array)
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-03-10 06:22:42 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'p19of410l7asvm2d9ta08nebu5'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=p19of410l7asvm2d9ta08nebu5'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '58204'
+    'REDIRECT_URL' => '/doc/web/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/index'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425954162.793
+    'REQUEST_TIME' => 1425954162
+]
+2015-03-10 06:22:59 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "login".' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('login', Array)
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-03-10 06:22:58 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'p19of410l7asvm2d9ta08nebu5'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=p19of410l7asvm2d9ta08nebu5'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '58210'
+    'REDIRECT_URL' => '/doc/web/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/login'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425954178.992
+    'REQUEST_TIME' => 1425954178
+]
+2015-03-10 06:23:08 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "login".' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('login', Array)
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-03-10 06:23:08 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'p19of410l7asvm2d9ta08nebu5'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=p19of410l7asvm2d9ta08nebu5'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '58221'
+    'REDIRECT_URL' => '/doc/web/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/login'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425954188.077
+    'REQUEST_TIME' => 1425954188
+]
+2015-03-10 06:23:11 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "login".' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('login', Array)
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-03-10 06:23:10 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'p19of410l7asvm2d9ta08nebu5'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=p19of410l7asvm2d9ta08nebu5'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '58221'
+    'REDIRECT_URL' => '/doc/web/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/login'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425954190.991
+    'REQUEST_TIME' => 1425954190
+]
+2015-03-10 06:23:17 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "login".' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('login', Array)
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-03-10 06:23:17 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'p19of410l7asvm2d9ta08nebu5'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=p19of410l7asvm2d9ta08nebu5'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '58227'
+    'REDIRECT_URL' => '/doc/web/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/login'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425954197.163
+    'REQUEST_TIME' => 1425954197
+]
+2015-03-10 06:23:27 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "login".' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('login', Array)
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-03-10 06:23:27 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'p19of410l7asvm2d9ta08nebu5'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=p19of410l7asvm2d9ta08nebu5'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '58233'
+    'REDIRECT_URL' => '/doc/web/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/login'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425954207.511
+    'REQUEST_TIME' => 1425954207
+]
+2015-03-10 06:23:29 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "login".' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('login', Array)
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-03-10 06:23:28 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'p19of410l7asvm2d9ta08nebu5'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=p19of410l7asvm2d9ta08nebu5'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '58234'
+    'REDIRECT_URL' => '/doc/web/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/login'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425954208.991
+    'REQUEST_TIME' => 1425954208
+]
+2015-03-10 06:23:44 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "login".' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('login', Array)
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-03-10 06:23:44 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'p19of410l7asvm2d9ta08nebu5'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=p19of410l7asvm2d9ta08nebu5'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '58253'
+    'REDIRECT_URL' => '/doc/web/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/login'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425954224.075
+    'REQUEST_TIME' => 1425954224
+]
+2015-03-10 06:23:48 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "logout".' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('logout', Array)
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-03-10 06:23:48 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'p19of410l7asvm2d9ta08nebu5'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=p19of410l7asvm2d9ta08nebu5'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '58258'
+    'REDIRECT_URL' => '/doc/web/logout'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/logout'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425954228.44
+    'REQUEST_TIME' => 1425954228
+]
+2015-03-10 06:23:50 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "login".' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('login', Array)
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-03-10 06:23:50 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'p19of410l7asvm2d9ta08nebu5'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=p19of410l7asvm2d9ta08nebu5'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '58258'
+    'REDIRECT_URL' => '/doc/web/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/login'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425954230.945
+    'REQUEST_TIME' => 1425954230
+]
+2015-03-10 06:24:55 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "login".' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('login', Array)
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-03-10 06:24:55 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'p19of410l7asvm2d9ta08nebu5'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=p19of410l7asvm2d9ta08nebu5'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '58279'
+    'REDIRECT_URL' => '/doc/web/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/login'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425954295.532
+    'REQUEST_TIME' => 1425954295
+]
+2015-03-10 06:25:04 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "login".' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('login', Array)
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-03-10 06:25:04 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'p19of410l7asvm2d9ta08nebu5'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=p19of410l7asvm2d9ta08nebu5'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '58279'
+    'REDIRECT_URL' => '/doc/web/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/login'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425954304.37
+    'REQUEST_TIME' => 1425954304
+]
+2015-03-10 06:25:30 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "login".' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('login', Array)
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-03-10 06:25:30 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'p19of410l7asvm2d9ta08nebu5'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=p19of410l7asvm2d9ta08nebu5'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '58319'
+    'REDIRECT_URL' => '/doc/web/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/login'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425954330.861
+    'REQUEST_TIME' => 1425954330
+]
+2015-03-10 06:27:12 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "login".' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('login', Array)
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-03-10 06:27:12 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'p19of410l7asvm2d9ta08nebu5'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=p19of410l7asvm2d9ta08nebu5'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '58406'
+    'REDIRECT_URL' => '/doc/web/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/login'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425954432.391
+    'REQUEST_TIME' => 1425954432
+]
+2015-03-10 06:27:20 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "login".' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('login', Array)
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-03-10 06:27:20 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'p19of410l7asvm2d9ta08nebu5'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=p19of410l7asvm2d9ta08nebu5'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '58407'
+    'REDIRECT_URL' => '/doc/web/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/login'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425954440.137
+    'REQUEST_TIME' => 1425954440
+]
+2015-03-10 06:29:17 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "login".' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('login', Array)
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-03-10 06:29:17 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'p19of410l7asvm2d9ta08nebu5'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=p19of410l7asvm2d9ta08nebu5'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '58469'
+    'REDIRECT_URL' => '/doc/web/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/login'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425954557.782
+    'REQUEST_TIME' => 1425954557
+]
+2015-03-10 06:29:35 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "login".' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('login', Array)
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-03-10 06:29:35 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'p19of410l7asvm2d9ta08nebu5'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=p19of410l7asvm2d9ta08nebu5'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '58482'
+    'REDIRECT_URL' => '/doc/web/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/login'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425954575.23
+    'REQUEST_TIME' => 1425954575
+]
+2015-03-10 06:29:59 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: user/' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('user', Array)
+#2 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-03-10 06:29:59 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'p19of410l7asvm2d9ta08nebu5'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=p19of410l7asvm2d9ta08nebu5'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '58499'
+    'REDIRECT_URL' => '/doc/web/user'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/user'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425954599.114
+    'REQUEST_TIME' => 1425954599
+]
+2015-03-10 06:30:42 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: user/login' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('login', Array)
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('user/login', Array)
+#2 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-03-10 06:30:42 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'p19of410l7asvm2d9ta08nebu5'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=p19of410l7asvm2d9ta08nebu5'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '58517'
+    'REDIRECT_URL' => '/doc/web/user/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/user/login'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425954642.341
+    'REQUEST_TIME' => 1425954642
+]
+2015-03-10 06:32:04 [127.0.0.1][-][-][error][yii\base\InvalidParamException] exception 'yii\base\InvalidParamException' with message 'The view file does not exist: F:\Hosts\Celeroctos\Toonftp\www\doc\views\user\index.php' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\View.php:226
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('F:\Hosts\Celero...', Array, Object(app\controllers\UserController))
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('index', Array, Object(app\controllers\UserController))
+#2 F:\Hosts\Celeroctos\Toonftp\www\doc\controllers\UserController.php(18): yii\base\Controller->render('index')
+#3 [internal function]: app\controllers\UserController->actionIndex()
+#4 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#7 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('user', Array)
+#8 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2015-03-10 06:32:04 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'p19of410l7asvm2d9ta08nebu5'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=p19of410l7asvm2d9ta08nebu5'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '58527'
+    'REDIRECT_URL' => '/doc/web/user'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/user'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425954724.088
+    'REQUEST_TIME' => 1425954724
+]
+2015-03-10 06:33:29 [127.0.0.1][-][-][error][yii\base\InvalidParamException] exception 'yii\base\InvalidParamException' with message 'The view file does not exist: F:\Hosts\Celeroctos\Toonftp\www\doc\views\login\index.php' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\View.php:226
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('F:\Hosts\Celero...', Array, Object(app\controllers\LoginController))
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('index', Array, Object(app\controllers\LoginController))
+#2 F:\Hosts\Celeroctos\Toonftp\www\doc\controllers\LoginController.php(18): yii\base\Controller->render('index')
+#3 [internal function]: app\controllers\LoginController->actionIndex()
+#4 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#7 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('login', Array)
+#8 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2015-03-10 06:33:29 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'p19of410l7asvm2d9ta08nebu5'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=p19of410l7asvm2d9ta08nebu5'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '58584'
+    'REDIRECT_URL' => '/doc/web/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/login'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425954809.332
+    'REQUEST_TIME' => 1425954809
+]
+2015-03-10 06:34:00 [127.0.0.1][-][-][error][yii\base\InvalidParamException] exception 'yii\base\InvalidParamException' with message 'The view file does not exist: F:\Hosts\Celeroctos\Toonftp\www\doc\views\layouts\.php' in F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\View.php:226
+Stack trace:
+#0 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Controller.php(382): yii\base\View->renderFile('F:\Hosts\Celero...', Array, Object(app\controllers\LoginController))
+#1 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Controller.php(368): yii\base\Controller->renderContent('<h1>123</h1>')
+#2 F:\Hosts\Celeroctos\Toonftp\www\doc\controllers\LoginController.php(20): yii\base\Controller->render('index')
+#3 [internal function]: app\controllers\LoginController->actionIndex()
+#4 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#7 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('login', Array)
+#8 F:\Hosts\Celeroctos\Toonftp\www\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 F:\Hosts\Celeroctos\Toonftp\www\doc\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2015-03-10 06:34:00 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'YII_CSRF_TOKEN' => '1fe62034ab0ec375f023bc4961caea38be743a76s:40:\"e1e75ca64d492dfbb0313242986e88388f69a4c6\";'
+    'PHPSESSID' => 'p19of410l7asvm2d9ta08nebu5'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'YII_CSRF_TOKEN=1fe62034ab0ec375f023bc4961caea38be743a76s%3A40%3A%22e1e75ca64d492dfbb0313242986e88388f69a4c6%22%3B; PHPSESSID=p19of410l7asvm2d9ta08nebu5'
+    'PATH' => 'C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Hosts/Celeroctos/Toonftp/www'
+    'SERVER_ADMIN' => 'toonftp@gmail.com'
+    'SCRIPT_FILENAME' => 'F:/Hosts/Celeroctos/Toonftp/www/doc/web/index.php'
+    'REMOTE_PORT' => '58592'
+    'REDIRECT_URL' => '/doc/web/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/login'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1425954840.109
+    'REQUEST_TIME' => 1425954840
+]

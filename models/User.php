@@ -3,7 +3,6 @@
 namespace app\models;
 
 use app\core\ActiveRecord;
-use yii\validators\StringValidator;
 use yii\web\IdentityInterface;
 
 class User extends ActiveRecord implements IdentityInterface {
@@ -22,15 +21,6 @@ class User extends ActiveRecord implements IdentityInterface {
 	 */
 	public static function model() {
 		return parent::model(__CLASS__);
-	}
-
-	/**
-	 * Override that method to return name of
-	 * current table in database
-	 * @return string - Name of table in database
-	 */
-	public function getTableName() {
-		return "user";
 	}
 
 	/**

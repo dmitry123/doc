@@ -22,7 +22,8 @@ $form = ActiveForm::begin([
 		"action" => $url,
 		"role" => "form",
 		"data-form" => get_class($model),
-		"data-widget" => get_class($this)
+		"data-widget" => get_class($this),
+		"method" => "post"
 	]
 ]); ?>
 

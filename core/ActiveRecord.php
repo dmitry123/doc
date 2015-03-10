@@ -8,13 +8,6 @@ use yii\db\Query;
 abstract class ActiveRecord extends \yii\db\ActiveRecord {
 
 	/**
-	 * Override that method to return name of
-	 * current table in database
-	 * @return string - Name of table in database
-	 */
-	public abstract function getTableName();
-
-	/**
 	 * Find model by it's name
 	 * @param string $class - Name of model class or null (default)
 	 * @return ActiveRecord - Active record class instance

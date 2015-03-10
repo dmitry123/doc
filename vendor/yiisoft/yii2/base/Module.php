@@ -76,7 +76,7 @@ class Module extends ServiceLocator
      *
      * ~~~
      * [
-     *   'account' => 'app\controllers\UserController',
+     *   'account' => 'app\controllers\LoginController',
      *   'article' => [
      *      'class' => 'app\controllers\PostController',
      *      'pageTitle' => 'something new',

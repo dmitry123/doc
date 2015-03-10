@@ -11,8 +11,7 @@ use yii\web\View;
 	<div class="navbar-header">
 		<a class="navbar-brand" href="#">Документооборот</a>
 	</div>
-	<form class="navbar-form navbar-left" role="search">
-		<?= \app\widgets\NavigationLogin::widget() ?>
+	<form class="navbar-form navbar-left">
 	</form>
 </div>
 </nav>

@@ -36,11 +36,32 @@
       <column name="parent_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="type" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="status" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="category_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <primary-key name="document_pkey" columns="id"/>
+      <foreign-key name="document_category_id_fkey" columns="category_id" ref-table="document_category" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="document_employee_id_fkey" columns="employee_id" ref-table="employee" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <exported-key name="history_current_id_fkey" table="history" schema="public" catalog="doc" columns="current_id"/>
       <exported-key name="history_original_id_fkey" table="history" schema="public" catalog="doc" columns="original_id"/>
       <exported-key name="template_document_id_fkey" table="template" schema="public" catalog="doc" columns="document_id"/>
+    </table>
+    <table name="document_category" schema="public" catalog="doc" type="TABLE">
+      <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnZG9jdW1lbnRfY2F0ZWdvcnlfaWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
+      <column name="name" sqlType="varchar" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="description" sqlType="text" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="document_category_pkey" columns="id"/>
+      <exported-key name="document_category_id_fkey" table="document" schema="public" catalog="doc" columns="category_id"/>
+    </table>
+    <table name="document_category_id_seq" schema="public" catalog="doc" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
     </table>
     <table name="document_id_seq" schema="public" catalog="doc" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>

@@ -22,8 +22,8 @@ body {
 
 /* Styles for required */
 .required {
-    color: red;
     white-space: nowrap;
+    color: red;
 }
 
 /* Different fixes for navigation bar menu */
