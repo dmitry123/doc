@@ -2,37 +2,32 @@
 
 namespace app\controllers;
 
+use app\core\ActiveRecord;
+use app\core\Controller;
 use Yii;
-use yii\web\Controller;
+use yii\base\Model;
 
 class SiteController extends Controller {
 
-    public function actions() {
-        return [
-            'error' => [
-                'class' => 'yii\web\ErrorAction',
-            ]
-        ];
-    }
-
+	/**
+	 * Main site index view action, it will display
+	 * login form or main page with documents
+	 * @return string - Rendered content
+	 */
     public function actionIndex() {
-        return $this->render('index');
+		if (Yii::$app->getUser()->getIsGuest()) {
+			return $this->render2("block", "login");
+		} else {
+			return $this->render2("main", "index");
+		}
     }
 
-    public function actionLogin() {
-        if (!\Yii::$app->user->isGuest) {
-            return $this->goHome();
-        }
-		return $this->render("login");
-    }
-
-    public function actionLogout() {
-        Yii::$app->user->logout();
-        return $this->goHome();
-    }
-
-    public function actionAbout()
-    {
-        return $this->render('about');
-    }
+	/**
+	 * Override that method to return model for current controller instance or null
+	 * @param $model Model - Another model to clone
+	 * @return ActiveRecord - Active record instance or null
+	 */
+	public function getModel($model) {
+		return null;
+	}
 }

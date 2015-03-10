@@ -3,7 +3,7 @@
  * @var $this \yii\web\View
  * @var $content string
  */
-app\assets\AppAsset::register($this);
+app\assets\CoreAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>

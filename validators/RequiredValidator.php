@@ -13,8 +13,8 @@ class RequiredValidator extends \yii\validators\RequiredValidator {
 	 */
 	public function init() {
 		parent::init();
-		$this->message = $this->requiredValue === null ? Yii::t('yii', 'Поле \"{attribute}\" должно быть заполнено.')
-			: Yii::t('yii', '{attribute} must be "{requiredValue}".');
+		$this->message = $this->requiredValue === null ? Yii::t("yii", "Поле \"{attribute}\" должно быть заполнено.")
+			: Yii::t("yii", "{attribute} must be \"{requiredValue}\".");
 	}
 
 	/**
@@ -67,13 +67,10 @@ class RequiredValidator extends \yii\validators\RequiredValidator {
 		if ($this->strict) {
 			$options['strict'] = 1;
 		}
-
 		$options['message'] = Yii::$app->getI18n()->format($options['message'], [
 			'attribute' => $model->getAttributeLabel($attribute),
 		], Yii::$app->language);
-
 		ValidationAsset::register($view);
-
 		return 'yii.validation.required(value, messages, ' . json_encode($options, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) . ');';
 	}
 }

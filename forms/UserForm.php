@@ -16,6 +16,20 @@ class UserForm extends FormModel {
 	public $access_token;
 
 	/**
+	 * Returns attribute values.
+	 * @param array $names list of attributes whose value needs to be returned.
+	 * Defaults to null, meaning all attributes listed in [[attributes()]] will be returned.
+	 * If it is an array, only the attributes in the array will be returned.
+	 * @param array $except list of attributes whose value should NOT be returned.
+	 * @return array attribute values (name => value).
+	 */
+	public function getAttributes($names = null, $except = []) {
+		return parent::getAttributes($names, [
+			"password2", "register_date", "access_token"
+		]);
+	}
+
+	/**
 	 * Override that method to return additional rule configuration, like
 	 * scenario conditions or others
 	 * @return array - Array with rule configuration

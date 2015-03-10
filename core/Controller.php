@@ -8,11 +8,39 @@ use yii\base\Model;
 use yii\base\Widget;
 use yii\web\Session;
 
-abstract class Controller extends \yii\base\Controller {
+abstract class Controller extends \yii\web\Controller {
+
+	/**
+	 * Declares external actions for the controller.
+	 * This method is meant to be overwritten to declare external actions for the controller.
+	 * It should return an array, with array keys being action IDs, and array values the corresponding
+	 * action class names or action configuration arrays. For example,
+	 *
+	 * ~~~
+	 * return [
+	 *     'action1' => 'app\components\Action1',
+	 *     'action2' => [
+	 *         'class' => 'app\components\Action2',
+	 *         'property1' => 'value1',
+	 *         'property2' => 'value2',
+	 *     ],
+	 * ];
+	 * ~~~
+	 *
+	 * [[\Yii::createObject()]] will be used later to create the requested action
+	 * using the configuration provided here.
+	 */
+	public function actions() {
+		return [
+			'error' => [
+				'class' => 'yii\web\ErrorAction',
+			]
+		];
+	}
 
 	/**
 	 * Override that method to return model for current controller instance or null
-	 * @param $model Model - Another model to clone
+	 * @param $model FormModel - Another model to clone
 	 * @return ActiveRecord - Active record instance or null
 	 */
 	public abstract function getModel($model);
@@ -62,6 +90,18 @@ abstract class Controller extends \yii\base\Controller {
 		if ($id && ($index = array_search(intval($id), $rows)) !== false) {
 			array_splice($rows, $index, 1);
 		}
+	}
+
+	/**
+	 * Render some view with specific layout
+	 * @param string $layout - Default view's layout
+	 * @param string $view - Page to render
+	 * @param array $content - View content
+	 * @return string - Just rendered content
+	 */
+	public function render2($layout, $view, $content = []) {
+		$this->layout = $layout;
+		return $this->render($view, $content);
 	}
 
 	/**
@@ -153,7 +193,7 @@ abstract class Controller extends \yii\base\Controller {
 	 * @return FormModel|Array - Model with attributes or array with founded forms
 	 * @throws ErrorException
 	 */
-	public function getFormModel($model = "model", $method = "get", $scenario = null) {
+	public function getFormModel($model = "model", $method = "post", $scenario = "default") {
 		$form = $this->$method($model);
 		if (!is_array($form)) {
 			return $this->getUrlForm($form, true, $scenario);
@@ -286,7 +326,7 @@ abstract class Controller extends \yii\base\Controller {
 			if (is_array($model)) {
 				throw new ErrorException("Forms to register mustn't be array");
 			}
-			if (($table = $this->getModel()) == null) {
+			if (($table = $this->getModel(null)) == null) {
 				throw new ErrorException("Your controller must override LController::getModel method");
 			}
 			foreach ($model->attributes as $key => $value) {
@@ -314,7 +354,7 @@ abstract class Controller extends \yii\base\Controller {
 	 */
 	protected function actionDelete() {
 		try {
-			$this->getModel()->deleteByPk($this->post("id"), "id = :id", [
+			$this->getModel(null)->deleteByPk($this->post("id"), "id = :id", [
 				":id" => $this->post("id")
 			]);
 			$this->leave([

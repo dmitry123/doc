@@ -3,24 +3,20 @@
 namespace app\core;
 
 use yii\base\ErrorException;
-use yii\base\Model;
 use yii\db\Query;
 
 abstract class ActiveRecord extends \yii\db\ActiveRecord {
 
 	/**
 	 * Construct active record with another model and configuration
-	 * @param Model $model - Another model to clone
+	 * @param FormModel $model - Another model to clone
 	 * @param array $config - Configuration
 	 */
 	public function __construct($model = null, $config = []) {
 		parent::__construct($config);
 		if ($model != null) {
-			print "<pre>";
-			print_r($model);
-			print "</pre>";
 			foreach ($model->getAttributes() as $key => $value) {
-				$this->$key = $model->$key;
+				$this->setAttribute($key, $value);
 			}
 		}
 	}
@@ -57,6 +53,33 @@ abstract class ActiveRecord extends \yii\db\ActiveRecord {
 	}
 
 	private static $rules = null;
+
+	/**
+	 * Returns attribute values.
+	 * @param array $names list of attributes whose value needs to be returned.
+	 * Defaults to null, meaning all attributes listed in [[attributes()]] will be returned.
+	 * If it is an array, only the attributes in the array will be returned.
+	 * @param array $except list of attributes whose value should NOT be returned.
+	 * @return array attribute values (name => value).
+	 */
+	public function getAttributes($names = null, $except = []) {
+		$values = [];
+		if ($names === null) {
+			$names = $this->attributes();
+		}
+		foreach ($names as $name) {
+			$values[$name] = $this->$name;
+		}
+		foreach ($except as $name) {
+			unset($values[$name]);
+		}
+		foreach ($values as $key => &$v) {
+			if (empty($v)) {
+				unset($values[$key]);
+			}
+		}
+		return $values;
+	}
 
 	/**
 	 * Moved from Yii 1.1 for backward compatibility

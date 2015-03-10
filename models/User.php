@@ -7,19 +7,12 @@ use yii\web\IdentityInterface;
 
 class User extends ActiveRecord implements IdentityInterface {
 
-	public $id;
-	public $login;
-	public $password;
-	public $password2;
-	public $email;
-	public $register_date;
-	public $access_token;
-
 	/**
 	 * Find model by it's name
+	 * @param string $class - Name of model class or null (default)
 	 * @return User - Active record class instance
 	 */
-	public static function model() {
+	public static function model($class = null) {
 		return parent::model(__CLASS__);
 	}
 
@@ -72,16 +65,16 @@ class User extends ActiveRecord implements IdentityInterface {
 
 	/**
 	 * Find user in database by it's identification number
-	 * @param int $id - User's identification number
+	 * @param int $login - User's identification number
 	 * @return array|null - Array with user's information
 	 */
-	public function findById($id) {
+	public function findById($login) {
 		$row = static::find()
 			->select("*")
 			->from("user")
-			->where("id = :id")
+			->where("login = :id")
 			->addParams([
-				":id" => $id
+				":id" => $login
 			])->one();
 		if ($row !== false) {
 			return $row;
@@ -119,7 +112,7 @@ class User extends ActiveRecord implements IdentityInterface {
 	 * @return string|integer an ID that uniquely identifies a user identity.
 	 */
 	public function getId() {
-		return $this->login;
+		return $this->{"id"};
 	}
 
 	/**

@@ -66,6 +66,33 @@ abstract class FormModel extends Model {
 	}
 
 	/**
+	 * Returns attribute values.
+	 * @param array $names list of attributes whose value needs to be returned.
+	 * Defaults to null, meaning all attributes listed in [[attributes()]] will be returned.
+	 * If it is an array, only the attributes in the array will be returned.
+	 * @param array $except list of attributes whose value should NOT be returned.
+	 * @return array attribute values (name => value).
+	 */
+	public function getAttributes($names = null, $except = []) {
+		$values = [];
+		if ($names === null) {
+			$names = $this->attributes();
+		}
+		foreach ($names as $name) {
+			$values[$name] = $this->$name;
+		}
+		foreach ($except as $name) {
+			unset($values[$name]);
+		}
+		foreach ($values as $key => &$v) {
+			if (empty($v)) {
+				unset($values[$key]);
+			}
+		}
+		return $values;
+	}
+
+	/**
 	 * Override that method to return list with replacements, don't
 	 * forget parents replacements
 	 * @return array - Array with rules replacements

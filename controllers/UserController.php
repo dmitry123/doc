@@ -4,23 +4,41 @@ namespace app\controllers;
 
 use app\core\ActiveRecord;
 use app\core\Controller;
-use app\forms\UserForm;
+use app\core\FormModel;
 use app\models\User;
-use yii\base\Model;
 
 class UserController extends Controller {
 
+	/**
+	 * That action will register user in database
+	 * and return json response with response or
+	 * redirect to main view view message
+	 *
+	 * @in (POST):
+	 *  + model - Serialized client's form
+	 *
+	 * @out (JSON):
+	 *  + message - Response message
+	 *  + status - Status (true or false)
+	 *
+	 * @throws \Exception
+	 */
 	public function actionRegister() {
 		try {
-			$model = new UserForm("register");
-			$model->attributes = \Yii::$app->getRequest()->post();
-			if ($model->validate()) {
-				$user = new User($model);
-				if (!$user->save(false)) {
-					$this->error("Произошли ошибки во время сохранения данных");
+			$form = $this->getFormModel("model", "post", "register");
+			if (!$form->validate()) {
+				if ($form->hasErrors()) {
+					$this->postValidationErrors($form);
+				} else {
+					$this->error("Произошла неизвестная ошибка при валидации формы");
 				}
-			} else if ($model->hasErrors()) {
-				$this->postValidationErrors($model);
+			}
+			$model = $this->getModel($form);
+			$model->{"password"} = \Yii::$app->getSecurity()->generatePasswordHash(
+				$model->{"password"}
+			);
+			if (!$model->save()) {
+				$this->error("Произошли ошибки во время сохранения данных");
 			}
 			$this->leave([
 				"message" => "Пользователь успешно зарегистрирован"
@@ -30,8 +48,52 @@ class UserController extends Controller {
 		}
 	}
 
+	/**
+	 * That action will begin user's session
+	 *
+	 * @in (POST):
+	 *  + model - Client's model
+	 *
+	 * @out (JSON):
+	 *  + message - Response message
+	 *  + status - Status (true or false)
+	 *
+	 * @throws \Exception
+	 */
 	public function actionLogin() {
 		try {
+			$form = $this->getFormModel("model", "post", "login");
+			if (!$form->validate()) {
+				if ($form->hasErrors()) {
+					$this->postValidationErrors($form);
+				} else {
+					$this->error("Произошла неизвестная ошибка при валидации формы");
+				}
+			}
+			/** @var User $user */
+			$user = User::model()->find()->where("lower(login) = :login", [
+				":login" => strtolower($form->{"login"})
+			])->one();
+			if (!$user) {
+				$user = User::model()->find()->where("lower(email) = :email", [
+					":email" => strtolower($form->{"login"})
+				])->one();
+			}
+			if (!$user) {
+				$this->error("Неверный логин/email или пароль");
+			}
+			$r = \Yii::$app->getSecurity()->validatePassword(
+				$form->{"password"}, $user->{"password"}
+			);
+			if (!$r) {
+				$this->error("Неверный логин/email или пароль");
+			}
+			if (!\Yii::$app->getUser()->login($user)) {
+				$this->error("Произошла ошибка при входе в систему");
+			}
+			$this->leave([
+				"message" => "Пользователь успешно вошел в систему"
+			]);
 		} catch (\Exception $e) {
 			$this->exception($e);
 		}
@@ -46,7 +108,7 @@ class UserController extends Controller {
 
 	/**
 	 * Override that method to return model for current controller instance or null
-	 * @param $model Model - Another model to clone
+	 * @param $model FormModel - Another model to clone
 	 * @return ActiveRecord - Active record instance or null
 	 */
 	public function getModel($model) {

@@ -122,7 +122,9 @@ var Doc = Doc || {};
 			});
 		}
 		var me = this;
-		$.post(this.property("url"), form.serialize(), function(json) {
+		$.post(this.property("url"), {
+            model: form.serialize()
+        }, function(json) {
 			me.after();
 			if (!json["status"]) {
 				after && after(me, false);
@@ -161,10 +163,14 @@ var Doc = Doc || {};
 	};
 
 	Doc.createForm = function(selector, properties) {
-		return Doc.createObject(new Form(properties, $(selector)), selector, false);
+        var $selector = $(selector);
+        $selector.on("submit", function(e) {
+            e.preventDefault();
+        });
+		return Doc.createObject(new Form(properties, $selector), selector, false);
 	};
 
-	$.fn.multiple = Doc.createPlugin(
+	$.fn.form = Doc.createPlugin(
 		"createForm"
 	);
 
