@@ -70,7 +70,7 @@ class Form extends Widget {
 			"self" => $this,
             "model" => $this->model,
 			"id" => $this->id,
-			"url" => Yii::$app->getRequest()->getBaseUrl() . $this->url
+			"url" => $this->url
         ]);
     }
 

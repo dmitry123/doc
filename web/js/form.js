@@ -11,49 +11,9 @@ var Doc = Doc || {};
 			url: null,
 			parent: null
 		}, selector);
-		this.property("parent") && this.property("parent").find(".form-search-button").each(function(i, item) {
-			var form = $(item).parent("a").data("form");
-			console.log(form);
-			$(item).click(function() {
-				if (!$(item).data("popover")) {
-					$.get(url("/laboratory/laboratory/getWidget"), {
-						class: "LForm",
-						model: form
-					}, function(json) {
-						if (!Message.display(json)) {
-							return void 0;
-						}
-						var component = $(json["component"]);
-						component.find(".form-group div")
-							.removeClass("col-xs-7")
-							.addClass("col-xs-8");
-						component.find(".form-group .glyphicon")
-							.remove();
-						component.find("form").css("width", "300px");
-						$(item).popover({
-							content: $("<div>", {
-								style: "margin: 0; padding 0;"
-							}).append(component).append(
-								$("<div>", {
-									style: "width: 100%; text-align: center"
-								}).append(
-									$("<button>", {
-										text: "Добавить",
-										class: "btn btn-default btn-sm btn-block"
-									})
-								)
-							),
-							placement: "top",
-							title: "Быстрое добавление",
-							html: true
-						}).popover("show").data("popover", true);
-					}, "json");
-				}
-			});
-		});
 	};
 
-	Doc.extend(Form, Laboratory.Component);
+	Doc.extend(Form, Doc.Component);
 
 	Form.prototype.render = function() {
 		this.update();
@@ -88,7 +48,7 @@ var Doc = Doc || {};
 		var me = this;
 		var form = this.selector();
 		if (!this.property("url")) {
-			return Laboratory.createMessage({
+			return Doc.createMessage({
 				message: "Missed 'url' property for Form component"
 			});
 		}
@@ -106,7 +66,7 @@ var Doc = Doc || {};
 			if (!json.status) {
 				me.after();
 				me.activate();
-				return Laboratory.createMessage({
+				return Doc.createMessage({
 					message: json.message
 				});
 			}
@@ -147,7 +107,7 @@ var Doc = Doc || {};
 				}).appendTo(html);
 			}
 		}
-		return Laboratory.createMessage({
+		return Doc.createMessage({
 			message: json["message"] + html.html(),
 			delay: 10000
 		});
@@ -157,14 +117,12 @@ var Doc = Doc || {};
 		this.selector().find(".form-group").removeClass("has-error");
 		var form = this.selector();
 		if (!this.property("url")) {
-			return Laboratory.createMessage({
+			return Doc.createMessage({
 				message: "Missed 'url' property for Form component"
 			});
 		}
 		var me = this;
-		$.post(this.property("url"), {
-			model: form.serialize()
-		}, function(json) {
+		$.post(this.property("url"), form.serialize(), function(json) {
 			me.after();
 			if (!json["status"]) {
 				after && after(me, false);
@@ -177,7 +135,7 @@ var Doc = Doc || {};
 						}).appendTo(html);
 					}
 				}
-				return Laboratory.createMessage({
+				return Doc.createMessage({
 					message: json["message"] + html.html(),
 					delay: 10000
 				});
@@ -188,7 +146,7 @@ var Doc = Doc || {};
 				after && after(me, true);
 			}
 			if (json["message"]) {
-				Laboratory.createMessage({
+				Doc.createMessage({
 					type: "success",
 					sign: "ok",
 					message: json["message"]
@@ -206,14 +164,23 @@ var Doc = Doc || {};
 		return Doc.createObject(new Form(properties, $(selector)), selector, false);
 	};
 
+	$.fn.multiple = Doc.createPlugin(
+		"createForm"
+	);
+
 	$(document).ready(function() {
 		$("[id$='-panel'], [id$='-modal']").each(function(i, item) {
-			if (!$(item).find("form").length) {
+			var forms = $(item).find("form");
+			if (!forms.length) {
 				return void 0;
 			}
-			var f = Laboratory.createForm($(item).find("form")[0], {
-				url: $(item).find("form").attr("action"),
+			var form = $(forms[0]);
+			var f = Doc.createForm(form[0], {
+				url: form.attr("action"),
 				parent: $(item)
+			});
+			form.submit(function(e) {
+				e.preventDefault();
 			});
 			$(item).find("button.btn[type='submit']").click(function() {
 				var btn = this;
@@ -222,7 +189,7 @@ var Doc = Doc || {};
 					if (status) {
 						$(item).modal("hide");
 					} else if (msg) {
-						Laboratory.createMessage({
+						Doc.createMessage({
 							message: "Произошла ошибка при отправке запроса. Обратитесь к администратору"
 						});
 					}
@@ -233,7 +200,6 @@ var Doc = Doc || {};
 			});
 		});
 		$("[id$='-modal']").on("show.bs.modal", function() {
-			$(this).draggable("disable");
 			var form = $(this).find("form");
 			if (!form.length) {
 				return void 0;

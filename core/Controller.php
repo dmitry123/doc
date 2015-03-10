@@ -4,17 +4,18 @@ namespace app\core;
 
 use app\widgets\Form;
 use yii\base\ErrorException;
+use yii\base\Model;
 use yii\base\Widget;
 use yii\web\Session;
 
 abstract class Controller extends \yii\base\Controller {
 
 	/**
-	 * Override that method to return model for
-	 * current controller instance or null
+	 * Override that method to return model for current controller instance or null
+	 * @param $model Model - Another model to clone
 	 * @return ActiveRecord - Active record instance or null
 	 */
-	public abstract function getModel();
+	public abstract function getModel($model);
 
 	/**
 	 * That method will help to remove row from an array. Why do you need it? For example you
@@ -99,15 +100,17 @@ abstract class Controller extends \yii\base\Controller {
 	 * @param string $form - String with encode form's url
 	 * @param bool $error - Set that flag to false to store errors in array
 	 * @param string $name - Form's name will be in that field
+	 * @param string $scenario - Form's module usage scenario
 	 * @return FormModel - Form's model with attributes
 	 * @throws ErrorException
 	 */
-	public function getUrlForm($form, $error = true, &$name = "") {
+	public function getUrlForm($form, $error = true, $scenario = null, &$name = "") {
 		if (!is_string($form)) {
 			throw new ErrorException("Form's model must be serialized form string");
 		}
 		$array = $this->decode($form, $name);
-		$form = new $name();
+		$name = "\\app\\forms\\" . $name;
+		$form = new $name($scenario);
 		if (!($form instanceof FormModel)) {
 			throw new ErrorException("Form must be instance of LFormModel class");
 		}
@@ -130,21 +133,34 @@ abstract class Controller extends \yii\base\Controller {
 	}
 
 	/**
+	 * Post validation errors and return as JSON response
+	 * @param Model $model - Model with errors
+	 */
+	public function postValidationErrors($model) {
+		$this->leave([
+			"message" => "Произошли ошибки во время валидации формы",
+			"errors" => $model->getErrors(),
+			"status" => false
+		]);
+	}
+
+	/**
 	 * Get model via GET method, it will check it for array and decode if model
 	 * is simply serialized string
 	 * @param string $model - Model's name from GET/POST arrays
 	 * @param string $method - Receive method type
+	 * @param string $scenario - Name of scenario
 	 * @return FormModel|Array - Model with attributes or array with founded forms
-	 * @throws ErrorException - If form's model instance don't extends LFormModel
+	 * @throws ErrorException
 	 */
-	public function getFormModel($model = "model", $method = "get") {
+	public function getFormModel($model = "model", $method = "get", $scenario = null) {
 		$form = $this->$method($model);
 		if (!is_array($form)) {
-			return $this->getUrlForm($form);
+			return $this->getUrlForm($form, true, $scenario);
 		}
 		$array = [];
 		foreach ($form as $f) {
-			$array[] = $this->getUrlForm($f, false);
+			$array[] = $this->getUrlForm($f, false, $scenario);
 		}
 		if (count($this->errors) > 0) {
 			$this->leave([
@@ -266,7 +282,7 @@ abstract class Controller extends \yii\base\Controller {
 	 */
 	protected function actionRegister() {
 		try {
-			$model = $this->getFormModel("model", "post");
+			$model = $this->getFormModel("model", "post", "register");
 			if (is_array($model)) {
 				throw new ErrorException("Forms to register mustn't be array");
 			}
@@ -389,7 +405,7 @@ abstract class Controller extends \yii\base\Controller {
 	 */
 	public function exception(\Exception $exception) {
 		$method = $exception->getTrace()[0];
-		if (\Yii::$app->getRequest()->getIsAjax()) {
+		if (\Yii::$app->getRequest()->getIsAjax() && false) {
 			$this->leave([
 				"message" => basename($method["file"])."[".$method["line"]."] ".$method["class"]."::".$method["function"]."(): \"".$exception->getMessage()."\"",
 				"file" => basename($method["file"]),

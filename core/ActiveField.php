@@ -12,6 +12,8 @@ use yii\helpers\Html;
 
 class ActiveField extends \yii\widgets\ActiveField {
 
+	public $options = [];
+
 	/**
 	 * Renders the whole field.
 	 * This method will generate the label, error tag, input tag and hint tag (if any), and

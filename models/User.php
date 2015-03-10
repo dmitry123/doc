@@ -47,21 +47,6 @@ class User extends ActiveRecord implements IdentityInterface {
 	}
 
 	/**
-	 * Get array with validation rules for current class
-	 * @param $extra array - Additional validation rules (for hidden fields)
-	 * @return array - Array with validation rules
-	 */
-	public static function getRules($extra = []) {
-		if (!self::$rules) {
-			return (self::$rules = array_merge(static::model()->rules(), $extra));
-		} else {
-			return self::$rules;
-		}
-	}
-
-	private static $rules = null;
-
-	/**
 	 * Fetch user row from table by it's login and password
 	 * @param string $login - Original user name
 	 * @param string $password - Hashed password

@@ -17,15 +17,30 @@ app\assets\BlockAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
-<div id="page-content">
-	<div class="col-xs-12">
-		<div class="col-xs-3">
-			<?= \app\widgets\SideMenu::widget() ?>
-		</div>
-		<div class="col-xs-9" id="page-content">
-			<?= $content ?>
-		</div>
-	</div>
+<div id="page-content" class="page-block">
+	<table align="center">
+		<tr>
+			<td valign="middle" width="150px">
+				<?= \yii\helpers\Html::img("img/logo-big.png", [
+					"width" => "100%"
+				]) ?>
+			</td>
+			<td valign="middle" style="width: 50px"></td>
+			<td valign="middle">
+				<?= $content ?>
+			</td>
+		</tr>
+	</table>
+<!--	<div class="col-xs-12">-->
+<!--		<div class="col-xs-4">-->
+<!--			--><?//= \yii\helpers\Html::img("img/logo-big.png", [
+//				"width" => "100%"
+//			]) ?>
+<!--		</div>-->
+<!--		<div class="col-xs-8">-->
+<!--			--><?//= $content ?>
+<!--		</div>-->
+<!--	</div>-->
 </div>
 <?php $this->endBody() ?>
 </body>

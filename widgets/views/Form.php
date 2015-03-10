@@ -19,12 +19,12 @@ $form = ActiveForm::begin([
 	"options" => $self->options + [
 		"id" => $id,
 		"class" => "form-horizontal col-xs-12",
-		"action" => $url,
 		"role" => "form",
 		"data-form" => get_class($model),
 		"data-widget" => get_class($this),
 		"method" => "post"
-	]
+	],
+	"action" => $url
 ]); ?>
 
 <? foreach ($model->getConfig() as $key => $value): ?>

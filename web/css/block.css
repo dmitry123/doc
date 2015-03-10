@@ -1,0 +1,55 @@
+/* Remove all parameters, fix top offset and set background color */
+html, body {
+    margin-top: 0;
+    background-color: #5e6771;
+}
+
+/* Construct centered main block for that layout */
+.page-block {
+    position: absolute;
+    max-height: 260px;
+    width: 625px;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #f5f5f5;
+    border-radius: 7px;
+    vertical-align: middle;
+    padding: 40px;
+}
+
+/* Fix column left and right padding */
+.page-block .col-xs-12 {
+    margin: 0;
+    padding: 0;
+}
+
+/* Fix for top glyphicon top offset */
+.page-block .input-group .glyphicon {
+    top: 0;
+}
+
+.block-field {
+    padding-bottom: 10px;
+}
+
+.login-button-group {
+    width: 100%;
+    margin-top: 10px;
+}
+.login-button-group button {
+    width: 50%;
+}
+
+button:active, button .active {
+    border: 0;
+}
+
+.login-button-group button:focus,
+.login-button-group button:active,
+.login-button-group button:hover {
+    outline: 0 !important;
+    -webkit-appearance: none;
+}

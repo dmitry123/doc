@@ -3,9 +3,27 @@
 namespace app\core;
 
 use yii\base\ErrorException;
+use yii\base\Model;
 use yii\db\Query;
 
 abstract class ActiveRecord extends \yii\db\ActiveRecord {
+
+	/**
+	 * Construct active record with another model and configuration
+	 * @param Model $model - Another model to clone
+	 * @param array $config - Configuration
+	 */
+	public function __construct($model = null, $config = []) {
+		parent::__construct($config);
+		if ($model != null) {
+			print "<pre>";
+			print_r($model);
+			print "</pre>";
+			foreach ($model->getAttributes() as $key => $value) {
+				$this->$key = $model->$key;
+			}
+		}
+	}
 
 	/**
 	 * Find model by it's name
@@ -24,6 +42,21 @@ abstract class ActiveRecord extends \yii\db\ActiveRecord {
 	}
 
 	private static $models = [];
+
+	/**
+	 * Get array with validation rules for current class
+	 * @param $extra array - Additional validation rules (for hidden fields)
+	 * @return array - Array with validation rules
+	 */
+	public static function getRules($extra = []) {
+		if (!self::$rules) {
+			return (self::$rules = array_merge(static::model()->rules(), $extra));
+		} else {
+			return self::$rules;
+		}
+	}
+
+	private static $rules = null;
 
 	/**
 	 * Moved from Yii 1.1 for backward compatibility
