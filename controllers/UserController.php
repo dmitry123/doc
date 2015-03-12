@@ -6,6 +6,7 @@ use app\core\ActiveRecord;
 use app\core\Controller;
 use app\core\FormModel;
 use app\models\User;
+use yii\helpers\Url;
 
 class UserController extends Controller {
 
@@ -92,7 +93,8 @@ class UserController extends Controller {
 				$this->error("Произошла ошибка при входе в систему");
 			}
 			$this->leave([
-				"message" => "Пользователь успешно вошел в систему"
+				"message" => "Пользователь успешно вошел в систему",
+				"redirect" => \Yii::$app->getHomeUrl()
 			]);
 		} catch (\Exception $e) {
 			$this->exception($e);
@@ -101,6 +103,10 @@ class UserController extends Controller {
 
 	public function actionLogout() {
 		try {
+			if (!\Yii::$app->getUser()->getIsGuest()) {
+				\Yii::$app->getUser()->logout(true);
+			}
+			$this->goHome();
 		} catch (\Exception $e) {
 			$this->exception($e);
 		}

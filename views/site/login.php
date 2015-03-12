@@ -36,7 +36,7 @@ $form = \yii\widgets\ActiveForm::begin([
 		<input type="password" name="UserForm[password]" class="form-control" placeholder="Пароль" aria-describedby="addon-password">
 	</div>
 	<div class="btn-group login-button-group" role="group">
-		<button class="btn btn-primary btn-lg" type="submit">Войти</button>
+		<button class="btn btn-primary btn-lg" type="button">Войти</button>
 		<button class="btn btn-danger btn-lg" type="button" data-toggle="modal" data-target="#user-register-modal">Регистрация</button>
 	</div>
 

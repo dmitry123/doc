@@ -21326,3 +21326,68 @@ $_SERVER = [
     'argv' => []
     'argc' => 0
 ]
+2015-03-12 13:13:52 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'POST.model' in /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/ErrorException.php:30
+Stack trace:
+#0 /Volumes/Storage/code/PHP/doc/core/Controller.php(197): app\core\Controller->post('model')
+#1 /Volumes/Storage/code/PHP/doc/controllers/UserController.php(66): app\core\Controller->getFormModel('model', 'post', 'login')
+#2 [internal function]: app\controllers\UserController->actionLogin()
+#3 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#4 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#5 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('login', Array)
+#6 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('user/login', Array)
+#7 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /Volumes/Storage/code/PHP/doc/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2015-03-12 13:13:52 [::1][-][-][info][application] $_POST = [
+    'UserForm' => [
+        'login' => ''
+        'password' => ''
+    ]
+]
+
+$_COOKIE = [
+    'PPA_ID' => 'c04cdd2cd7ac176d6a25976c7ffe3aaf'
+    'webfx-tree-cookie-persistence' => 'wfxt-6 wfxt-4 wfxt-16 wfxt-18'
+    '_identity' => '[\"100\",\"test100key\",2592000]'
+    'PHPSESSID' => '7a8dcd9a0c43a26e62a595ed3bf7d592'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '44'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://localhost:8888'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.76 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://localhost:8888/doc/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PPA_ID=c04cdd2cd7ac176d6a25976c7ffe3aaf; webfx-tree-cookie-persistence=wfxt-6+wfxt-4+wfxt-16+wfxt-18; _identity=%5B%22100%22%2C%22test100key%22%2C2592000%5D; PHPSESSID=7a8dcd9a0c43a26e62a595ed3bf7d592'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.5.17 mod_ssl/2.2.29 OpenSSL/0.9.8zc DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Volumes/Storage/code/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Volumes/Storage/code/PHP/doc/web/index.php'
+    'REMOTE_PORT' => '50705'
+    'REDIRECT_URL' => '/doc/web/user/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/user/login'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1426162432.23
+    'REQUEST_TIME' => 1426162432
+    'argv' => []
+    'argc' => 0
+]

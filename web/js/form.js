@@ -9,7 +9,8 @@ var Doc = Doc || {};
 			opacity: 0.4,
 			animation: 100,
 			url: null,
-			parent: null
+			parent: null,
+            locked: false
 		}, selector);
 	};
 
@@ -46,6 +47,9 @@ var Doc = Doc || {};
 
 	Form.prototype.update = function(after) {
 		var me = this;
+        if (this.property("locked")) {
+            return void 0;
+        }
 		var form = this.selector();
 		if (!this.property("url")) {
 			return Doc.createMessage({
@@ -154,6 +158,9 @@ var Doc = Doc || {};
 					message: json["message"]
 				});
 			}
+            if (json["redirect"]) {
+                window.location.href = json["redirect"];
+            }
 			$("#" + me.selector().attr("id")).trigger("success", json);
 		}, "json").fail(function() {
 			after && after(me, false, arguments[2]);
