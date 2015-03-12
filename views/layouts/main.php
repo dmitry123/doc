@@ -20,12 +20,12 @@ app\assets\CoreAsset::register($this);
 <div id="page-content">
 	<?= \app\widgets\Navigation::widget(); ?>
 	<div class="col-xs-12">
-		<div class="col-xs-3">
-			<?= \app\widgets\SideMenu::widget() ?>
-		</div>
-		<div class="col-xs-9" id="page-content">
+<!--		<div class="col-xs-3">-->
+<!--			--><?//= \app\widgets\SideMenu::widget() ?>
+<!--		</div>-->
+<!--		<div class="col-xs-9" id="page-content">-->
 			<?= $content ?>
-		</div>
+<!--		</div>-->
 	</div>
 </div>
 <?php $this->endBody() ?>

@@ -65,6 +65,24 @@ a.desc:after {
     white-space: nowrap;
 }
 
+/* Fix for buttons margins as drop down list */
+#navigation ul li .btn {
+    margin: 5px;
+}
+
+.user-panel-wrapper {
+    position: absolute;
+    height: calc(100% - 50px);
+    right: 0;
+    top: 50px;
+    width: 250px;
+    background-color: lightcoral;
+}
+
+.user-panel-wrapper .user-info-header .glyphicon-user {
+    font-size: 50px;
+}
+
 .hint-block {
     display: block;
     margin-top: 5px;
@@ -77,9 +95,4 @@ a.desc:after {
     border-left: 3px solid #eed3d7;
     padding: 10px 20px;
     margin: 0 0 15px 0;
-}
-
-#navigation ul li .btn {
-    margin-left: 5px;
-    margin-right: 5px;
 }

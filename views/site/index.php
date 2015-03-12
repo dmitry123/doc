@@ -17,10 +17,3 @@ echo \app\widgets\Modal::widget([
 		]
 	]
 ]);
-?>
-
-<div class="col-xs-6">
-	<?= \app\widgets\Form::widget([
-		"model" => new \app\forms\UserForm("login")
-	]); ?>
-</div>

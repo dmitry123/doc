@@ -21391,3 +21391,289 @@ $_SERVER = [
     'argv' => []
     'argc' => 0
 ]
+2015-03-12 18:08:58 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'POST.model' in /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/ErrorException.php:30
+Stack trace:
+#0 /Volumes/Storage/code/PHP/doc/core/Controller.php(197): app\core\Controller->post('model')
+#1 /Volumes/Storage/code/PHP/doc/controllers/UserController.php(66): app\core\Controller->getFormModel('model', 'post', 'login')
+#2 [internal function]: app\controllers\UserController->actionLogin()
+#3 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#4 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#5 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('login', Array)
+#6 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('user/login', Array)
+#7 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /Volumes/Storage/code/PHP/doc/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2015-03-12 18:08:58 [::1][-][-][info][application] $_COOKIE = [
+    'PPA_ID' => 'c04cdd2cd7ac176d6a25976c7ffe3aaf'
+    'webfx-tree-cookie-persistence' => 'wfxt-6 wfxt-4 wfxt-16 wfxt-18'
+    '_identity' => '[\"100\",\"test100key\",2592000]'
+    'PHPSESSID' => 'e161f328dd0b016e4a84c72b359427b1'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.76 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PPA_ID=c04cdd2cd7ac176d6a25976c7ffe3aaf; webfx-tree-cookie-persistence=wfxt-6+wfxt-4+wfxt-16+wfxt-18; _identity=%5B%22100%22%2C%22test100key%22%2C2592000%5D; PHPSESSID=e161f328dd0b016e4a84c72b359427b1'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.5.17 mod_ssl/2.2.29 OpenSSL/0.9.8zc DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Volumes/Storage/code/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Volumes/Storage/code/PHP/doc/web/index.php'
+    'REMOTE_PORT' => '50919'
+    'REDIRECT_URL' => '/doc/web/user/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/user/login'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1426180138.8
+    'REQUEST_TIME' => 1426180138
+    'argv' => []
+    'argc' => 0
+]
+2015-03-12 18:37:37 [::1][dmitry][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: yii\web\User::login' in /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Component.php:143
+Stack trace:
+#0 /Volumes/Storage/code/PHP/doc/widgets/views/UserPanel.php(12): yii\base\Component->__get('login')
+#1 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(325): require('/Volumes/Storag...')
+#2 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/Volumes/Storag...', Array)
+#3 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/Volumes/Storag...', Array, Object(app\widgets\UserPanel))
+#4 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Widget.php(182): yii\base\View->render('UserPanel', Array, Object(app\widgets\UserPanel))
+#5 /Volumes/Storage/code/PHP/doc/widgets/UserPanel.php(12): yii\base\Widget->render('UserPanel', Array)
+#6 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Widget.php(96): app\widgets\UserPanel->run()
+#7 /Volumes/Storage/code/PHP/doc/views/site/index.php(26): yii\base\Widget::widget(Array)
+#8 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(325): require('/Volumes/Storag...')
+#9 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/Volumes/Storag...', Array)
+#10 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/Volumes/Storag...', Array, Object(app\controllers\SiteController))
+#11 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(367): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#12 /Volumes/Storage/code/PHP/doc/core/Controller.php(104): yii\base\Controller->render('index', Array)
+#13 /Volumes/Storage/code/PHP/doc/controllers/SiteController.php(21): app\core\Controller->render2('main', 'index')
+#14 [internal function]: app\controllers\SiteController->actionIndex()
+#15 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#16 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#17 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('', Array)
+#18 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('', Array)
+#19 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 /Volumes/Storage/code/PHP/doc/web/index.php(12): yii\base\Application->run()
+#21 {main}
+2015-03-12 18:37:37 [::1][dmitry][-][info][application] $_COOKIE = [
+    'PPA_ID' => 'c04cdd2cd7ac176d6a25976c7ffe3aaf'
+    'webfx-tree-cookie-persistence' => 'wfxt-6 wfxt-4 wfxt-16 wfxt-18'
+    '_identity' => '[\"100\",\"test100key\",2592000]'
+    'PHPSESSID' => '28c06d7f2f33338cf87f03281535ce18'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 'dmitry'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.76 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8888/doc/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PPA_ID=c04cdd2cd7ac176d6a25976c7ffe3aaf; webfx-tree-cookie-persistence=wfxt-6+wfxt-4+wfxt-16+wfxt-18; _identity=%5B%22100%22%2C%22test100key%22%2C2592000%5D; PHPSESSID=28c06d7f2f33338cf87f03281535ce18'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.5.17 mod_ssl/2.2.29 OpenSSL/0.9.8zc DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Volumes/Storage/code/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Volumes/Storage/code/PHP/doc/web/index.php'
+    'REMOTE_PORT' => '51453'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1426181857.35
+    'REQUEST_TIME' => 1426181857
+    'argv' => []
+    'argc' => 0
+]
+2015-03-12 18:49:45 [::1][dmitry][28c06d7f2f33338cf87f03281535ce18][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected end of file' in /Volumes/Storage/code/PHP/doc/views/site/index.php:21
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-12 18:49:45 [::1][dmitry][28c06d7f2f33338cf87f03281535ce18][info][application] $_COOKIE = [
+    'PPA_ID' => 'c04cdd2cd7ac176d6a25976c7ffe3aaf'
+    'webfx-tree-cookie-persistence' => 'wfxt-6 wfxt-4 wfxt-16 wfxt-18'
+    '_identity' => '[\"100\",\"test100key\",2592000]'
+    'PHPSESSID' => '28c06d7f2f33338cf87f03281535ce18'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 'dmitry'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.76 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8888/doc/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PPA_ID=c04cdd2cd7ac176d6a25976c7ffe3aaf; webfx-tree-cookie-persistence=wfxt-6+wfxt-4+wfxt-16+wfxt-18; _identity=%5B%22100%22%2C%22test100key%22%2C2592000%5D; PHPSESSID=28c06d7f2f33338cf87f03281535ce18'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.5.17 mod_ssl/2.2.29 OpenSSL/0.9.8zc DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Volumes/Storage/code/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Volumes/Storage/code/PHP/doc/web/index.php'
+    'REMOTE_PORT' => '51873'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1426182585.62
+    'REQUEST_TIME' => 1426182585
+    'argv' => []
+    'argc' => 0
+]
+2015-03-12 19:01:29 [::1][dmitry][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: :user_id' in /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php:271
+Stack trace:
+#0 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php(271): PDOStatement->bindValue(':user_id', 5, 1)
+#1 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php(215): yii\db\Command->bindPendingParams()
+#2 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php(816): yii\db\Command->prepare(true)
+#3 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php(364): yii\db\Command->queryInternal('fetch', NULL)
+#4 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Query.php(243): yii\db\Command->queryOne()
+#5 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/ActiveQuery.php(285): yii\db\Query->one(NULL)
+#6 /Volumes/Storage/code/PHP/doc/widgets/UserPanel.php(15): yii\db\ActiveQuery->one()
+#7 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Widget.php(96): app\widgets\UserPanel->run()
+#8 /Volumes/Storage/code/PHP/doc/widgets/views/Navigation.php(32): yii\base\Widget::widget()
+#9 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(325): require('/Volumes/Storag...')
+#10 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/Volumes/Storag...', Array)
+#11 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/Volumes/Storag...', Array, Object(app\widgets\Navigation))
+#12 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Widget.php(182): yii\base\View->render('Navigation', Array, Object(app\widgets\Navigation))
+#13 /Volumes/Storage/code/PHP/doc/widgets/Navigation.php(10): yii\base\Widget->render('Navigation')
+#14 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Widget.php(96): app\widgets\Navigation->run()
+#15 /Volumes/Storage/code/PHP/doc/views/layouts/main.php(21): yii\base\Widget::widget()
+#16 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(325): require('/Volumes/Storag...')
+#17 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/Volumes/Storag...', Array)
+#18 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(382): yii\base\View->renderFile('/Volumes/Storag...', Array, Object(app\controllers\SiteController))
+#19 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(368): yii\base\Controller->renderContent('\n<div id="regis...')
+#20 /Volumes/Storage/code/PHP/doc/core/Controller.php(104): yii\base\Controller->render('index', Array)
+#21 /Volumes/Storage/code/PHP/doc/controllers/SiteController.php(21): app\core\Controller->render2('main', 'index')
+#22 [internal function]: app\controllers\SiteController->actionIndex()
+#23 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#24 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#25 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('', Array)
+#26 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('', Array)
+#27 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 /Volumes/Storage/code/PHP/doc/web/index.php(12): yii\base\Application->run()
+#29 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY093]: Invalid parameter number: :user_id
+Failed to prepare SQL: SELECT * FROM "employee" WHERE id = :id' in /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php:219
+Stack trace:
+#0 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php(816): yii\db\Command->prepare(true)
+#1 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php(364): yii\db\Command->queryInternal('fetch', NULL)
+#2 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Query.php(243): yii\db\Command->queryOne()
+#3 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/ActiveQuery.php(285): yii\db\Query->one(NULL)
+#4 /Volumes/Storage/code/PHP/doc/widgets/UserPanel.php(15): yii\db\ActiveQuery->one()
+#5 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Widget.php(96): app\widgets\UserPanel->run()
+#6 /Volumes/Storage/code/PHP/doc/widgets/views/Navigation.php(32): yii\base\Widget::widget()
+#7 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(325): require('/Volumes/Storag...')
+#8 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/Volumes/Storag...', Array)
+#9 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/Volumes/Storag...', Array, Object(app\widgets\Navigation))
+#10 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Widget.php(182): yii\base\View->render('Navigation', Array, Object(app\widgets\Navigation))
+#11 /Volumes/Storage/code/PHP/doc/widgets/Navigation.php(10): yii\base\Widget->render('Navigation')
+#12 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Widget.php(96): app\widgets\Navigation->run()
+#13 /Volumes/Storage/code/PHP/doc/views/layouts/main.php(21): yii\base\Widget::widget()
+#14 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(325): require('/Volumes/Storag...')
+#15 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/Volumes/Storag...', Array)
+#16 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(382): yii\base\View->renderFile('/Volumes/Storag...', Array, Object(app\controllers\SiteController))
+#17 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(368): yii\base\Controller->renderContent('\n<div id="regis...')
+#18 /Volumes/Storage/code/PHP/doc/core/Controller.php(104): yii\base\Controller->render('index', Array)
+#19 /Volumes/Storage/code/PHP/doc/controllers/SiteController.php(21): app\core\Controller->render2('main', 'index')
+#20 [internal function]: app\controllers\SiteController->actionIndex()
+#21 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#22 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#23 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('', Array)
+#24 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('', Array)
+#25 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#26 /Volumes/Storage/code/PHP/doc/web/index.php(12): yii\base\Application->run()
+#27 {main}
+Additional Information:
+Array
+(
+    [0] => HY093
+    [1] => 0
+)
+
+2015-03-12 19:01:28 [::1][dmitry][-][info][application] $_COOKIE = [
+    'PPA_ID' => 'c04cdd2cd7ac176d6a25976c7ffe3aaf'
+    'webfx-tree-cookie-persistence' => 'wfxt-6 wfxt-4 wfxt-16 wfxt-18'
+    '_identity' => '[\"100\",\"test100key\",2592000]'
+    'PHPSESSID' => '28c06d7f2f33338cf87f03281535ce18'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 'dmitry'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.76 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8888/doc/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PPA_ID=c04cdd2cd7ac176d6a25976c7ffe3aaf; webfx-tree-cookie-persistence=wfxt-6+wfxt-4+wfxt-16+wfxt-18; _identity=%5B%22100%22%2C%22test100key%22%2C2592000%5D; PHPSESSID=28c06d7f2f33338cf87f03281535ce18'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.5.17 mod_ssl/2.2.29 OpenSSL/0.9.8zc DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Volumes/Storage/code/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Volumes/Storage/code/PHP/doc/web/index.php'
+    'REMOTE_PORT' => '52142'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1426183288.98
+    'REQUEST_TIME' => 1426183288
+    'argv' => []
+    'argc' => 0
+]
