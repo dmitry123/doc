@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
   <data-source name="PostgreSQL - doc@localhost" uuid="4a1bea19-9630-4f7c-a585-745035fe4694">
-    <database-info product="PostgreSQL" version="9.3.5" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.3 JDBC4 (build 1100)">
+    <database-info product="PostgreSQL" version="9.3.0" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.3 JDBC4 (build 1100)">
       <identifier-quote-string>&quot;</identifier-quote-string>
     </database-info>
     <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact"/>
@@ -81,7 +81,7 @@
       <column name="name" sqlType="varchar" precision="50" scale="0" nullable="false" jdbcType="12"/>
       <column name="patronymic" sqlType="varchar" precision="100" scale="0" nullable="false" jdbcType="12"/>
       <column name="birthday" sqlType="date" precision="13" scale="0" nullable="false" jdbcType="91"/>
-      <column name="role_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="role_id" sqlType="varchar" precision="20" scale="0" nullable="true" jdbcType="12"/>
       <column name="user_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="department_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="phone_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
@@ -92,6 +92,7 @@
       <foreign-key name="employee_user_id_fkey" columns="user_id" ref-table="user" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <exported-key name="document_employee_id_fkey" table="document" schema="public" catalog="doc" columns="employee_id"/>
       <exported-key name="history_employee_id_fkey" table="history" schema="public" catalog="doc" columns="employee_id"/>
+      <exported-key name="role_to_employee_employee_id_fkey" table="role_to_employee" schema="public" catalog="doc" columns="employee_id"/>
     </table>
     <table name="employee_id_seq" schema="public" catalog="doc" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
@@ -202,7 +203,7 @@
     <table name="privilege_to_role" schema="public" catalog="doc" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgncHJpdmlsZWdlX3RvX3JvbGVfaWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
       <column name="privilege_id" sqlType="varchar" precision="10" scale="0" nullable="true" jdbcType="12"/>
-      <column name="role_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="role_id" sqlType="varchar" precision="20" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="privilege_to_role_pkey" columns="id"/>
       <foreign-key name="privilege_to_role_privilege_id_fkey" columns="privilege_id" ref-table="privilege" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="privilege_to_role_role_id_fkey" columns="role_id" ref-table="role" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
@@ -220,14 +221,23 @@
       <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
     </table>
     <table name="role" schema="public" catalog="doc" type="TABLE">
-      <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgncm9sZV9pZF9zZXEnOjpyZWdjbGFzcyk=" autoIncrement="true"/>
+      <column name="id" sqlType="varchar" precision="20" scale="0" nullable="false" jdbcType="12"/>
       <column name="name" sqlType="varchar" precision="100" scale="0" nullable="true" jdbcType="12"/>
       <column name="description" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="role_pkey" columns="id"/>
       <exported-key name="employee_role_id_fkey" table="employee" schema="public" catalog="doc" columns="role_id"/>
       <exported-key name="privilege_to_role_role_id_fkey" table="privilege_to_role" schema="public" catalog="doc" columns="role_id"/>
+      <exported-key name="role_to_employee_role_id_fkey" table="role_to_employee" schema="public" catalog="doc" columns="role_id"/>
     </table>
-    <table name="role_id_seq" schema="public" catalog="doc" type="SEQUENCE">
+    <table name="role_to_employee" schema="public" catalog="doc" type="TABLE">
+      <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgncm9sZV90b19lbXBsb3llZV9pZF9zZXEnOjpyZWdjbGFzcyk=" autoIncrement="true"/>
+      <column name="employee_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="role_id" sqlType="varchar" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="role_to_employee_pkey" columns="id"/>
+      <foreign-key name="role_to_employee_employee_id_fkey" columns="employee_id" ref-table="employee" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="role_to_employee_role_id_fkey" columns="role_id" ref-table="role" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+    </table>
+    <table name="role_to_employee_id_seq" schema="public" catalog="doc" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
       <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>

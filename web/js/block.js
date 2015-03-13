@@ -8,15 +8,10 @@ var UserForm = {
         });
         var btn = form.find("button:not([data-toggle])");
         btn.click(function() {
-            var done = false;
-            setTimeout(function() {
-                if (!done) {
-                    UserForm.before();
-                }
-            }, 250);
             form.data("doc").send(function() {
-                done = true;
+				UserForm.after();
             });
+			UserForm.before();
         });
     },
     before: function() {
@@ -38,10 +33,12 @@ var UserForm = {
     },
     after: function() {
         var block = $("#user-login-form").parents(".page-block");
-        block.find(".loading-image").fadeOut("slow", function() {
-            $(this).remove();
-        });
-        block.find("*:not(.loading-image)").fadeIn("slow");
+        block.find(".loading-image").promise().done(function() {
+			$(this).fadeOut("slow");
+		});
+        block.find("*:not(.loading-image)").promise().done(function() {
+			$(this).fadeIn("slow");
+		});
     }
 };
 

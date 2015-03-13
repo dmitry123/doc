@@ -33,6 +33,23 @@ app\assets\BlockAsset::register($this);
 		</tr>
 	</table>
 </div>
+<!-- TODO - "Remove that modal from layout, can't put it in view, cuz it will crash animation" -->
+<?= \app\widgets\Modal::widget([
+	"title" => "Регистрация",
+	"body" => \app\widgets\Form::widget([
+		"model" => new \app\forms\UserForm("register"),
+		"id" => "user-register-form",
+		"url" => \yii\helpers\Url::toRoute("user/register")
+	]),
+	"id" => "user-register-modal",
+	"buttons" => [
+		"register" => [
+			"text" => "Регистрация",
+			"class" => "btn btn-primary",
+			"type" => "submit"
+		]
+	]
+]); ?>
 <?php $this->endBody() ?>
 </body>
 </html>

@@ -15,12 +15,15 @@ use yii\web\View;
 ?>
 <br>
 <div class="col-xs-12 text-center user-info-header">
-	<span class="glyphicon glyphicon-user"></span>
+	<span class="glyphicon glyphicon-user glyphicon-45"></span>
+	<br>
+	<b><?= $user->{"login"} ?></b>
 </div>
-<div class="col-xs-12 text-center">
-	<b><?= $user->{"login"} ?>&nbsp;(<?= $user->{"id"} ?>)</b>
+<div class="col-xs-12 text-center user-info-body">
 </div>
-<div class="col-xs-12">
-	<span class="glyphicon glyphicon-filter"></span>
-	<span class="glyphicon glyphicon-log-out"></span>
+<hr>
+<div class="col-xs-12 user-info-footer text-center">
+	<a href="<?= \yii\helpers\Url::toRoute("user/logout") ?>">
+		<span class="text-center glyphicon glyphicon-off glyphicon-45" data-toggle="tooltip" data-placement="top" title="Выход"></span>
+	</a>
 </div>

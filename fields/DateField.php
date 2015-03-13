@@ -16,7 +16,7 @@ class DateField extends Field {
 	 * @return ActiveField - Just rendered field result
 	 */
 	public function render($form, $model) {
-		$form->field($model, $this->getKey())->input("date", $this->getOptions([
+		return $form->field($model, $this->getKey())->input("date", $this->getOptions([
 			'class' => 'form-control',
 			'value' => $this->getValue()
 		]));

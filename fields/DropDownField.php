@@ -16,7 +16,11 @@ class DropDownField extends Field {
 	 * @return ActiveField - Just rendered field result
 	 */
 	public function render($form, $model) {
-		return $form->field($model, $this->getKey())->dropDownList($this->getData(), $this->getOptions([
+		$data = $this->getData();
+		if (!isset($data[-1])) {
+			$data[-1] = "Нет";
+		}
+		return $form->field($model, $this->getKey())->dropDownList($data, $this->getOptions([
 			'onchange' => "DropDown && DropDown.change && DropDown.change.call(this)",
 			'class' => 'form-control',
 			'options' => [ $this->getValue() => [ 'selected' => true ] ]

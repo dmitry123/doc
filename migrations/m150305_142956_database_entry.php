@@ -2,7 +2,7 @@
 
 use yii\db\Migration;
 
-class m150305_142956_entry extends Migration {
+class m150305_142956_database_entry extends Migration {
 
 	public function safeUp() {
 
@@ -17,7 +17,7 @@ class m150305_142956_entry extends Migration {
 			);
 
 			CREATE TABLE "role" (
-			  "id" SERIAL PRIMARY KEY,
+			  "id" VARCHAR(20) PRIMARY KEY,
 			  "name" VARCHAR(100),
 			  "description" TEXT
 			);
@@ -31,7 +31,7 @@ class m150305_142956_entry extends Migration {
 			CREATE TABLE "privilege_to_role" (
 			  "id" SERIAL PRIMARY KEY,
 			  "privilege_id" VARCHAR(10) REFERENCES "privilege"("id"),
-			  "role_id" INT REFERENCES "role"("id")
+			  "role_id" VARCHAR(20) REFERENCES "role"("id")
 			);
 
 			CREATE TABLE "institute" (
@@ -59,7 +59,7 @@ class m150305_142956_entry extends Migration {
 			  "name" VARCHAR(50) NOT NULL,
 			  "patronymic" VARCHAR(100) NOT NULL,
 			  "birthday" DATE NOT NULL,
-			  "role_id" INT REFERENCES "role"("id"),
+			  "role_id" VARCHAR(20) REFERENCES "role"("id"),
 			  "user_id" INT REFERENCES "user"("id"),
 			  "department_id" INT REFERENCES "department"("id"),
 			  "phone_id" INT REFERENCES "phone"("id")

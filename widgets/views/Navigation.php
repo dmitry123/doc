@@ -1,6 +1,7 @@
 <?php
 /**
- * @var View $this - View instance
+ * @var View $this
+ * @var bool $admin
  */
 use yii\web\View;
 ?>
@@ -13,6 +14,9 @@ use yii\web\View;
 	<form class="navbar-form navbar-left">
 	</form>
 	<ul class="nav navbar-nav navbar-right">
+		<? if ($admin): ?>
+		<li><a href="#">Администратор&nbsp;<span class="caret"><span class="sr-only"></span></a></li>
+		<? endif; ?>
 		<li class="dropdown">
 			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
 				<span class="glyphicon glyphicon-user"></span>
@@ -30,6 +34,6 @@ use yii\web\View;
 	</ul>
 </div>
 </nav>
-<div class="user-panel-wrapper col-xs-12 navbar-default">
-	<?= \app\widgets\UserPanel::widget(); ?>
-</div>
+<!--<div class="user-panel-wrapper">-->
+<!--	--><?//= \app\widgets\UserPanel::widget(); ?>
+<!--</div>-->

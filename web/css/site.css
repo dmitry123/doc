@@ -79,8 +79,26 @@ a.desc:after {
     background-color: lightcoral;
 }
 
-.user-panel-wrapper .user-info-header .glyphicon-user {
+.glyphicon-45 {
+    font-size: 45px;
+}
+.glyphicon-50 {
     font-size: 50px;
+}
+
+/* User panel stylization */
+.user-info-header {
+    height: 100px;
+}
+.user-info-body {
+    /* 200 = 100 (header) + 50 (footer) + 50 (navigation) */
+    height: calc(100% - 200px);
+}
+.user-info-footer {
+    height: 50px;
+}
+.user-info-footer .glyphicon {
+    color: #333;
 }
 
 .hint-block {

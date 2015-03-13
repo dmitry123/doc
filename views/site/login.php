@@ -4,23 +4,6 @@
  */
 use yii\web\View;
 
-print \app\widgets\Modal::widget([
-	"title" => "Регистрация",
-	"body" => \app\widgets\Form::widget([
-		"model" => new \app\forms\UserForm("register"),
-		"id" => "user-register-form",
-		"url" => \yii\helpers\Url::toRoute("user/register")
-	]),
-	"id" => "user-register-modal",
-	"buttons" => [
-		"register" => [
-			"text" => "Регистрация",
-			"class" => "btn btn-primary",
-			"type" => "submit"
-		]
-	]
-]);
-
 $form = \yii\widgets\ActiveForm::begin([
 	"fieldClass" => "\\app\\core\\ActiveField",
 	"id" => "user-login-form",
