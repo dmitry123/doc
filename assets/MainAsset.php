@@ -4,7 +4,7 @@ namespace app\assets;
 
 use yii\web\AssetBundle;
 
-class CoreAsset extends AssetBundle {
+class MainAsset extends AssetBundle {
 
     public $basePath = '@webroot';
     public $baseUrl = '@web';
@@ -12,7 +12,8 @@ class CoreAsset extends AssetBundle {
     public $css = [
         "css/site.css",
 		"css/multiple.css",
-		"css/sidenav.css"
+		"css/sidenav.css",
+		"css/fileinput.css"
     ];
 
     public $js = [
@@ -21,7 +22,8 @@ class CoreAsset extends AssetBundle {
 		"js/form.js",
 		"js/multiple.js",
 		"js/sidenav.js",
-		"js/site.js"
+		"js/fileinput.js",
+		"js/site.js",
     ];
 
 	public $depends = [

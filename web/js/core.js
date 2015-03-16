@@ -164,27 +164,77 @@ var Doc = Doc || {};
 	 * @static
 	 */
 	Doc.createPlugin = function(func) {
-		return function(options) {
-			return this.each(function(it, me) {
-				me = $(me);
-				if (options !== void 0 && typeof options == "string") {
-					var c = me.data("doc");
-					if (!c) {
+		var register = function(me, options, args, ret) {
+			var r;
+			var a = [];
+			for (var i in args) {
+				if (i > 0) {
+					a.push(args[i]);
+				}
+			}
+			if (options !== void 0 && typeof options == "string") {
+				var c = me.data("doc");
+				if (!c) {
+					if (!(c = register(me, {}, [], true))) {
 						throw new Error("Component hasn't been initialized, create it first");
 					}
-					c[options].apply(c, arguments.splice(0, 1));
-				} else {
-					if ($(me.parents(".multiple")[0]).data("doc")) {
-						return ;
-					}
-					if (typeof me != "function") {
-						Doc[func](me[0], options);
-					} else {
-						Doc[func](options);
-					}
+					me.data("doc", c);
 				}
-			});
+				if ((r = c[options].apply(c, a)) !== void 0) {
+					return r;
+				}
+			} else {
+				if (me.data("doc") != void 0) {
+					return void 0;
+				}
+				if (typeof me != "function") {
+					r = Doc[func](me[0], options);
+				} else {
+					r = Doc[func](options);
+				}
+				if (ret) {
+					return r;
+				}
+			}
+			return void 0;
 		};
+		return function(options) {
+			var t;
+			var args = arguments || [];
+			if (this.length > 1) {
+				var r = [];
+				this.each(function(it, me) {
+					if ((t = register($(me), options, args)) !== void 0) {
+						r.push(t);
+					}
+				});
+				if (r.length > 0) {
+					return r;
+				}
+			} else {
+				if ((t = register($(this), options, args)) !== void 0) {
+					return t;
+				}
+			}
+			return this;
+		};
+	};
+
+	/**
+	 * Create callback on ready event, which will be invoked
+	 * after DOM load and any success ajax request
+	 * @param func {Function} - Function to execute
+	 */
+	Doc.ready = function(func) {
+		$(document).ready(func);
+		$(document).bind("ajaxSuccess", func);
+	};
+
+	window.url = function(url) {
+		if (!url.startsWith("/")) {
+			url = "/" + url;
+		}
+		return doc["url"] + url;
 	};
 
 	/**
@@ -201,7 +251,7 @@ var Doc = Doc || {};
 	 * @param prefix {string} - String prefix
 	 * @returns {boolean} - True if string has prefix
 	 */
-	String.prototype.startsWidth = function(prefix) {
+	String.prototype.startsWith = function(prefix) {
 		return this.indexOf(prefix, 0) !== -1;
 	};
 

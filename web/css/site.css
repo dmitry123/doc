@@ -114,3 +114,7 @@ a.desc:after {
     padding: 10px 20px;
     margin: 0 0 15px 0;
 }
+
+#document-file .file-drop-zone-title {
+    padding: 200px 10px;
+}

@@ -11,8 +11,6 @@ use yii\web\View;
 	<div class="navbar-header">
 		<a class="navbar-brand" href="#">Документооборот</a>
 	</div>
-	<form class="navbar-form navbar-left">
-	</form>
 	<ul class="nav navbar-nav navbar-right">
 		<? if ($admin): ?>
 		<li><a href="#">Администратор&nbsp;<span class="caret"><span class="sr-only"></span></a></li>

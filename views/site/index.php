@@ -3,17 +3,6 @@
  * @var $this yii\web\View - Render instance
  */
 
-echo \app\widgets\Modal::widget([
-	"id" => "register-modal",
-	"title" => "Регистрация",
-	"body" => \app\widgets\Form::widget([
-		"model" => new \app\forms\UserForm("register")
-	]),
-	"buttons" => [
-		"register-button" => [
-			"class" => "btn btn-primary",
-			"text" => "Сохранить",
-			"type" => "submit"
-		]
-	]
-]);
+?>
+
+<input id="documents-file" name="files" type="file" multiple=true class="file-loading">
