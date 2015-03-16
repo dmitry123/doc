@@ -14,6 +14,11 @@ app\assets\BlockAsset::register($this);
 	<?= yii\helpers\Html::csrfMetaTags() ?>
 	<title><?= yii\helpers\Html::encode($this->title) ?></title>
 	<?php $this->head() ?>
+	<script type="text/javascript">
+		var doc = {
+			url: <?= "\"".Yii::$app->getRequest()->getBaseUrl()."\"\n" ?>
+		};
+	</script>
 </head>
 <body>
 <?php $this->beginBody() ?>

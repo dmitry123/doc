@@ -3,7 +3,7 @@
  * @var $this \yii\web\View
  * @var $content string
  */
-app\assets\MainAsset::register($this);
+app\assets\SiteAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -35,11 +35,10 @@ app\assets\MainAsset::register($this);
 <div id="page-content">
 	<?= \app\widgets\Navigation::widget(); ?>
 	<div class="col-xs-12">
-		<div class="col-xs-10" id="page-content">
+		<div class="col-xs-9" id="page-content">
 			<?= $content ?>
 		</div>
-		<div class="col-xs-2">
-			
+		<div class="col-xs-3">
 		</div>
 	</div>
 </div>

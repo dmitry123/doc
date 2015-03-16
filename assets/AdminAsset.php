@@ -16,5 +16,6 @@ class AdminAsset extends AssetBundle {
 	];
 
 	public $depends = [
+		"app\\assets\\CoreAsset"
 	];
 }

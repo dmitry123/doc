@@ -6,7 +6,6 @@ use app\core\ActiveRecord;
 use app\core\Controller;
 use app\core\FormModel;
 use app\models\User;
-use yii\helpers\Url;
 
 class UserController extends Controller {
 
@@ -64,13 +63,6 @@ class UserController extends Controller {
 	public function actionLogin() {
 		try {
 			$form = $this->getFormModel("model", "post", "login");
-			if (!$form->validate()) {
-				if ($form->hasErrors()) {
-					$this->postValidationErrors($form);
-				} else {
-					$this->error("Произошла неизвестная ошибка при валидации формы");
-				}
-			}
 			/** @var User $user */
 			$user = User::model()->find()->where("lower(login) = :login", [
 				":login" => strtolower($form->{"login"})

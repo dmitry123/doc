@@ -9,7 +9,7 @@ use yii\web\View;
 <nav id="navigation" class="navbar navbar-default navbar-fixed-top">
 <div class="container-fluid">
 	<div class="navbar-header">
-		<a class="navbar-brand" href="#">Документооборот</a>
+		<a class="navbar-brand" href="<?= Yii::$app->getHomeUrl() ?>">Документооборот</a>
 	</div>
 	<ul class="nav navbar-nav navbar-right">
 		<? if ($admin): ?>

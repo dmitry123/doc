@@ -18,6 +18,6 @@ class BlockAsset extends AssetBundle {
 	];
 
 	public $depends = [
-		"app\\assets\\MainAsset"
+		"app\\assets\\CoreAsset"
 	];
 }

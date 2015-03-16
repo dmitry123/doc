@@ -2,10 +2,20 @@
 
 namespace app\models;
 
-use app\core\ActiveRecord;
+use app\core\FormModel;
+use app\core\TableProvider;
+use app\forms\UserForm;
 use yii\web\IdentityInterface;
 
-class User extends ActiveRecord implements IdentityInterface {
+class User extends TableProvider implements IdentityInterface {
+
+	/**
+	 * Get table name for current class
+	 * @return string - Name of current table
+	 */
+	public static function tableName() {
+		return "user";
+	}
 
 	/**
 	 * Find model by it's name
@@ -68,13 +78,13 @@ class User extends ActiveRecord implements IdentityInterface {
 	 * @param int $login - User's identification number
 	 * @return array|null - Array with user's information
 	 */
-	public function findById($login) {
+	public function findByLogin($login) {
 		$row = static::find()
 			->select("*")
 			->from("user")
-			->where("login = :id")
+			->where("login = :login")
 			->addParams([
-				":id" => $login
+				":login" => $login
 			])->one();
 		if ($row !== false) {
 			return $row;
@@ -91,7 +101,7 @@ class User extends ActiveRecord implements IdentityInterface {
 	 * or the identity is not in an active state (disabled, deleted, etc.)
 	 */
 	public static function findIdentity($id) {
-		return User::model()->findById($id);
+		return User::model()->findByLogin($id);
 	}
 
 	/**
@@ -141,5 +151,17 @@ class User extends ActiveRecord implements IdentityInterface {
 	 */
 	public function validateAuthKey($authKey) {
 		return null;
+	}
+
+	/**
+	 * Override that method to return form model for
+	 * current class with configuration, form model
+	 * must be an instance of app\core\FormModel and
+	 * implements [config] method
+	 * @return FormModel - Instance of form model
+	 * @see FormModel::config
+	 */
+	public function getFormModel() {
+		return new UserForm("table");
 	}
 }

@@ -38,7 +38,7 @@ abstract class FormModel extends Model {
 	 * Override that method to return config. Config should return array associated with
 	 * model's variables. Every field must contains 3 parameters:
 	 *  + label - Variable's label, will be displayed in the form
-	 *  + type - Input type (@see _LFormInternalRender#render())
+	 *  + type - Input type (@see Form::renderField())
 	 *  + rules - Basic form's Yii rules, such as 'required' or 'numeric' etc
 	 * @return Array - Model's config
 	 */
@@ -54,6 +54,7 @@ abstract class FormModel extends Model {
 	public function getConfig($key = null) {
 		if ($this->_config == null) {
 			$this->_config = $this->config();
+			$this->buildConfig();
 		}
 		if ($key != null) {
 			if (!isset($this->_config[$key])) {
@@ -142,26 +143,17 @@ abstract class FormModel extends Model {
 	 * @param array|null $config - Array with model's configuration
 	 */
 	private function buildConfig($config = null) {
-
-		// If we have rules and labels then skip it
 		if ($this->_rules && $this->_labels && $this->_types) {
 			return;
 		}
-
-		// Get model's configuration
 		if ($config == null) {
 			$config = $this->getConfig();
 		}
-
-		// Reset rules and labels arrays
 		$this->_rules = [];
 		$this->_labels = [];
 		$this->_types = [];
 		$this->_strong = [];
-
 		foreach ($config as $key => &$field) {
-
-			// Assign labels and rules arrays
 			if (isset($field["label"])) {
 				$this->_labels[$key] = $field["label"];
 			} else {
@@ -175,25 +167,29 @@ abstract class FormModel extends Model {
 			} else {
 				$this->_types[$key] = "";
 			}
-
-			// Dynamically declare empty variable
 			if (isset($field["value"])) {
 				$this->$key = $field["value"];
 			} else {
 				$this->$key = null;
 			}
 		}
+		$this->buildBackward();
+	}
 
+	/**
+	 * Build backward configuration
+	 */
+	public function buildBackward() {
 		$this->_backward = $this->backward();
-
 		foreach ($this->_backward as $i => &$b) {
 			if (isset($b[1]) && $b[1] == "hide") {
-				if (is_array($b[0]) && $this->checkScenario($b["on"])) {
-					foreach ($b[0] as $r) {
+				$key = $b[0];
+				if (is_array($key) && $this->checkScenario($b["on"])) {
+					foreach ($key as $r) {
 						$this->_config[$r]["type"] = "hidden";
 					}
-				} else if ($this->checkScenario($b["on"])) {
-					$this->_config[$b[0]]["type"] = "hidden";
+				} else if ($this->checkScenario($b["on"]) && is_string($key)) {
+					$this->_config[$key]["type"] = "hidden";
 				}
 				array_splice($this->_backward, $i, 1);
 			}

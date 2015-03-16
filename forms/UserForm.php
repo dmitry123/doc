@@ -36,9 +36,11 @@ class UserForm extends FormModel {
 	 */
 	public function backward() {
 		return User::getRules([
-			[ [ "id", "password2", "email" ], "hide", "on" => "login" ],
-			[ "id", "hide", "on" => "register" ],
-			[ [ "id", "login" ], "hide", "on" => "update" ]
+			[ [ "id", "password2", "email", "access_token" ], "hide", "on" => "login" ],
+			[ [ "id", "access_token" ], "hide", "on" => "register" ],
+			[ [ "id", "login", "access_token" ], "hide", "on" => "update" ],
+			[ [ "register_date" ], "hide", "on" => "register" ],
+			[ [ "password", "password2" ], "hide", "on" => "table" ]
 		]);
 	}
 
@@ -54,8 +56,7 @@ class UserForm extends FormModel {
 		return [
 			"id" => [
 				"label" => "Идентификатор",
-				"type" => "hidden",
-				"rules" => "safe"
+				"type" => "number"
 			],
 			"login" => [
 				"label" => "Логин",
@@ -76,6 +77,11 @@ class UserForm extends FormModel {
 				"label" => "Почтовый ящик",
 				"type" => "email",
 				"rules" => "email"
+			],
+			"register_date" => [
+				"label" => "Дата регистрации",
+				"type" => "text",
+				"rules" => "safe"
 			]
 		];
 	}
