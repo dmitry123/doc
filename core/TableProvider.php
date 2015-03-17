@@ -2,6 +2,8 @@
 
 namespace app\core;
 
+use yii\db\Query;
+
 abstract class TableProvider extends ActiveRecord {
 
 	/**
@@ -19,8 +21,9 @@ abstract class TableProvider extends ActiveRecord {
 	 * @return int - Count of rows
 	 */
 	public function getCount() {
-		$r = $this->find()->select("count(1) as count")
-			->from($this->tableName())
+		$r = (new Query())
+			->select("count(1) as count")
+			->from($this->getTableName())
 			->all();
 		if (!$r) {
 			return 0;
@@ -33,8 +36,9 @@ abstract class TableProvider extends ActiveRecord {
 	 * @return \yii\db\ActiveRecord[] - Array with records
 	 */
 	public function getRows() {
-		$rows = $this->find()->select("*")
-			->from($this->tableName())
+		$rows = (new Query())
+			->select("*")
+			->from($this->getTableName())
 			->all();
 		return $rows;
 	}

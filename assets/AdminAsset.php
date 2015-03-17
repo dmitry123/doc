@@ -10,9 +10,11 @@ class AdminAsset extends AssetBundle {
 	public $baseUrl = '@web';
 
 	public $css = [
+		"css/admin.css"
 	];
 
 	public $js = [
+		"js/admin.js"
 	];
 
 	public $depends = [

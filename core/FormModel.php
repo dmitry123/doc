@@ -45,6 +45,24 @@ abstract class FormModel extends Model {
 	public abstract function config();
 
 	/**
+	 * Create filter for specific scenario to set fields
+	 * without hidden property
+	 * @param string $scenario - Name of scenario
+	 * @param array $allowed - Array with visible fields
+	 * @return array - Row for backward method
+	 * @see LFormModel::backward
+	 */
+	public function createFilter($scenario, $allowed) {
+		$locked = [];
+		foreach (array_keys($this->getConfig()) as $key) {
+			if (!in_array($key, $allowed)) {
+				$locked[] = $key;
+			}
+		}
+		return [ $locked, "hide", "on" => $scenario ];
+	}
+
+	/**
 	 * Get form model configuration or configuration for one key, if key is null
 	 * then it will return configuration for all model
 	 * @param string|null $key - Get configuration for some field by it's key

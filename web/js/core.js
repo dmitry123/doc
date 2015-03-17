@@ -231,7 +231,7 @@ var Doc = Doc || {};
 	};
 
 	window.url = function(url) {
-		if (!url.startsWith("/")) {
+		if (url.charAt(0) != "/") {
 			url = "/" + url;
 		}
 		return doc["url"] + url;

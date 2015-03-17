@@ -445,18 +445,17 @@ abstract class Controller extends \yii\web\Controller {
 	 */
 	public function exception(\Exception $exception) {
 		$method = $exception->getTrace()[0];
-		if (\Yii::$app->getRequest()->getIsAjax() && false) {
-			$this->leave([
-				"message" => basename($method["file"])."[".$method["line"]."] ".$method["class"]."::".$method["function"]."(): \"".$exception->getMessage()."\"",
-				"file" => basename($method["file"]),
-				"method" => $method["class"]."::".$method["function"]."()",
-				"line" => $method["line"],
-				"status" => false,
-				"trace" => $exception->getTrace()
-			]);
-		} else {
+		if (!\Yii::$app->getRequest()->getIsAjax()) {
 			throw $exception;
 		}
+		$this->leave([
+			"message" => basename($method["file"])."[".$method["line"]."] ".$method["class"]."::".$method["function"]."(): \"".$exception->getMessage()."\"",
+			"file" => basename($method["file"]),
+			"method" => $method["class"]."::".$method["function"]."()",
+			"line" => $method["line"],
+			"status" => false,
+			"trace" => $exception->getTrace()
+		]);
 	}
 
 	private $session = null;

@@ -115,22 +115,24 @@ class Table extends Widget {
 			}
 			if ($this->orderBy !== false && $this->orderBy == $key) {
 				if ($this->desc) {
-					$class = "glyphicon glyphicon-chevron-up";
+					$class = "glyphicon glyphicon-sort-by-alphabet";
 				} else {
-					$class = "glyphicon glyphicon-chevron-down";
+					$class = "glyphicon glyphicon-sort-by-alphabet-alt";
 				}
 				$label .= "&nbsp;" . Html::tag("span", "", [
-					"style" => "color: gray",
+					"style" => "color: gray; vertical-align: middle",
 					"class" => $class
 				]);
 			}
 			print Html::tag("td", $label, $options + [
-					"style" => "vertical-align: middle"
+					"style" => "vertical-align: middle",
+					"class" => "text-center"
 				]);
 		}
 		if ($this->controls != null && count($this->controls) > 0) {
 			print Html::tag("td", "Управление", [
-				"width" => "auto"
+				"width" => "auto",
+				"class" => "text-center"
 			]);
 		}
 		print Html::endTag("tr");
@@ -150,7 +152,9 @@ class Table extends Widget {
 						"width" => $column["width"]
 					];
 				}
-				print Html::tag("td", $row[$key], $options);
+				print Html::tag("td", $row[$key], $options + [
+						"align" => "middle"
+					]);
 			}
 			if ($this->controls != null && count($this->controls) > 0) {
 				print Html::beginTag("td", [

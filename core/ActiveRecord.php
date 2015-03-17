@@ -4,6 +4,7 @@ namespace app\core;
 
 use yii\base\ErrorException;
 use yii\db\Query;
+use yii\helpers\Inflector;
 
 abstract class ActiveRecord extends \yii\db\ActiveRecord {
 
@@ -19,6 +20,14 @@ abstract class ActiveRecord extends \yii\db\ActiveRecord {
 				$this->setAttribute($key, $value);
 			}
 		}
+	}
+
+	/**
+	 * Get table name from class path with namespace
+	 * @return string - Name of table from class's name
+	 */
+	public static function tableName() {
+		return Inflector::camel2id(preg_replace("/^.*\\\\/", "", get_called_class()));
 	}
 
 	/**
@@ -96,6 +105,14 @@ abstract class ActiveRecord extends \yii\db\ActiveRecord {
 		$pk = $keys[0];
 		$this->$pk = $id;
 		return $this->delete();
+	}
+
+	/**
+	 * Helper method to get table's name for dynamic context
+	 * @return string - Name of table
+	 */
+	public function getTableName() {
+		return static::tableName();
 	}
 
 	/**
