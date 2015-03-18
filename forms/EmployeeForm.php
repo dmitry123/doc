@@ -10,7 +10,6 @@ class EmployeeForm extends FormModel {
 	public $surname;
 	public $name;
 	public $patronymic;
-	public $birthday;
 	public $role_id;
 	public $user_id;
 	public $department_id;
@@ -55,11 +54,6 @@ class EmployeeForm extends FormModel {
 			"patronymic" => [
 				"label" => "Отчество",
 				"type" => "text",
-				"rules" => "required"
-			],
-			"birthday" => [
-				"label" => "Дата рождения",
-				"type" => "date",
 				"rules" => "required"
 			],
 			"role_id" => [

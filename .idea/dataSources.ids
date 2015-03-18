@@ -877,7 +877,6 @@
       <column name="surname" sqlType="varchar" precision="100" scale="0" nullable="false" jdbcType="12"/>
       <column name="name" sqlType="varchar" precision="50" scale="0" nullable="false" jdbcType="12"/>
       <column name="patronymic" sqlType="varchar" precision="100" scale="0" nullable="false" jdbcType="12"/>
-      <column name="birthday" sqlType="date" precision="13" scale="0" nullable="false" jdbcType="91"/>
       <column name="role_id" sqlType="varchar" precision="20" scale="0" nullable="true" jdbcType="12"/>
       <column name="user_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="department_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>

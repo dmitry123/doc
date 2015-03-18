@@ -6,7 +6,7 @@ class m150305_142956_database_entry extends Migration {
 
 	public function safeUp() {
 
-		$sql = <<< HERE
+		$sql = <<< SQL
 
 			CREATE TABLE "user" (
 			  "id" SERIAL PRIMARY KEY,
@@ -105,7 +105,7 @@ class m150305_142956_database_entry extends Migration {
 			  "position" INT,
 			  "node" TEXT
 			);
-HERE;
+SQL;
 
 		foreach (explode(";", $sql) as $s) {
 			$this->execute($s);
@@ -114,7 +114,7 @@ HERE;
 
 	public function safeDown() {
 
-		$sql = <<< HERE
+		$sql = <<< SQL
 
 			DROP TABLE "template_element" CASCADE;
 			DROP TABLE "template" CASCADE;
@@ -129,7 +129,7 @@ HERE;
 			DROP TABLE "privilege" CASCADE;
 			DROP TABLE "role" CASCADE;
 			DROP TABLE "user" CASCADE;
-HERE;
+SQL;
 
 		foreach (explode(";", $sql) as $s) {
 			$this->execute($s);

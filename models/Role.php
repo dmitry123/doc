@@ -39,12 +39,18 @@ class Role extends ActiveRecord {
 	 * @return array - Array with roles
 	 */
 	public static function fetchByEmployee($employeeId) {
-		return static::find()
+		$roles = static::find()
 			->select("r.*")
 			->from("role as r")
-			->innerJoin("role_to_employee as re", "er.role_id = r.id")
-			->where("er.employee_id = :employee_id", [
+			->innerJoin("role_to_employee as r_e", "r_e.role_id = r.id")
+			->where("r_e.employee_id = :employee_id", [
 				":employee_id" => $employeeId
-			])->all();
+			])->createCommand()
+			->queryAll();
+		$result = [];
+		foreach ($roles as &$role) {
+			$result[] = $role["id"];
+		}
+		return $result;
 	}
 }

@@ -10,13 +10,21 @@ abstract class ActiveRecord extends \yii\db\ActiveRecord {
 
 	/**
 	 * Construct active record with another model and configuration
-	 * @param FormModel $model - Another model to clone
+	 * @param FormModel|array $model - Another model to clone
 	 * @param array $config - Configuration
+	 * @throws ErrorException
 	 */
 	public function __construct($model = null, $config = []) {
 		parent::__construct($config);
 		if ($model != null) {
-			foreach ($model->getAttributes() as $key => $value) {
+			if ($model instanceof FormModel) {
+				$attributes = $model->getAttributes();
+			} else if (is_array($model)) {
+				$attributes = $model;
+			} else {
+				throw new ErrorException("Invalid model type, requires FormModel class instance or array");
+			}
+			foreach ($attributes as $key => $value) {
 				$this->setAttribute($key, $value);
 			}
 		}
@@ -27,7 +35,7 @@ abstract class ActiveRecord extends \yii\db\ActiveRecord {
 	 * @return string - Name of table from class's name
 	 */
 	public static function tableName() {
-		return Inflector::camel2id(preg_replace("/^.*\\\\/", "", get_called_class()));
+		return Inflector::camel2id(preg_replace("/^.*\\\\/", "", get_called_class()), "_");
 	}
 
 	/**
