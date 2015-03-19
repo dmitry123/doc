@@ -4,11 +4,7 @@ namespace app\fields;
 
 use app\core\DropDown;
 
-class SexField extends DropDown {
-
-	public function isBoolean() {
-		return true;
-	}
+class LogActionField extends DropDown {
 
 	/**
 	 * Override that method to return associative array
@@ -17,8 +13,9 @@ class SexField extends DropDown {
 	 */
 	public function data() {
 		return [
-			0 => "Мужской",
-			1 => "Женский"
+			1 => "Добавление документа",
+			2 => "Редактирование документа",
+			3 => "Удаление документа"
 		];
 	}
 
@@ -27,7 +24,7 @@ class SexField extends DropDown {
 	 * @return String - Key
 	 */
 	public function key() {
-		return "Sex";
+		return "LogAction";
 	}
 
 	/**
@@ -35,6 +32,6 @@ class SexField extends DropDown {
 	 * @return String - Label
 	 */
 	public function name() {
-		return "Пол";
+		return "Действие";
 	}
 }

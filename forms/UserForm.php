@@ -7,14 +7,6 @@ use app\models\User;
 
 class UserForm extends FormModel {
 
-	public $id;
-	public $login;
-	public $password;
-	public $password2;
-	public $email;
-	public $register_date;
-	public $access_token;
-
 	/**
 	 * Returns attribute values.
 	 * @param array $names list of attributes whose value needs to be returned.
@@ -85,4 +77,12 @@ class UserForm extends FormModel {
 			]
 		];
 	}
+
+	public $id;
+	public $login;
+	public $password;
+	public $password2;
+	public $email;
+	public $register_date;
+	public $access_token;
 }

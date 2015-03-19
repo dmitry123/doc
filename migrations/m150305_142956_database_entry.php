@@ -5,10 +5,11 @@ use yii\db\Migration;
 class m150305_142956_database_entry extends Migration {
 
 	public function safeUp() {
-
 		$sql = <<< SQL
 
-			CREATE TABLE "user" (
+			CREATE SCHEMA core;
+
+			CREATE TABLE "core"."user" (
 			  "id" SERIAL PRIMARY KEY,
 			  "login" VARCHAR(50) NOT NULL,
 			  "password" VARCHAR(123) NOT NULL,
@@ -16,121 +17,119 @@ class m150305_142956_database_entry extends Migration {
 			  "register_date" TIMESTAMP DEFAULT now()
 			);
 
-			CREATE TABLE "role" (
+			CREATE TABLE "core"."role" (
 			  "id" VARCHAR(20) PRIMARY KEY,
 			  "name" VARCHAR(100),
 			  "description" TEXT
 			);
 
-			CREATE TABLE "privilege" (
+			CREATE TABLE "core"."privilege" (
 			  "id" VARCHAR(10) PRIMARY KEY,
 			  "name" VARCHAR(100) NOT NULL,
 			  "description" TEXT
 			);
 
-			CREATE TABLE "privilege_to_role" (
+			CREATE TABLE "core"."privilege_to_role" (
 			  "id" SERIAL PRIMARY KEY,
-			  "privilege_id" VARCHAR(10) REFERENCES "privilege"("id"),
-			  "role_id" VARCHAR(20) REFERENCES "role"("id")
+			  "privilege_id" VARCHAR(10) REFERENCES "core"."privilege"("id"),
+			  "role_id" VARCHAR(20) REFERENCES "core"."role"("id")
 			);
 
-			CREATE TABLE "institute" (
+			CREATE TABLE "core"."institute" (
 			  "id" SERIAL PRIMARY KEY,
 			  "name" VARCHAR(100),
 			  "director_id" INT DEFAULT NULL
 			);
 
-			CREATE TABLE "department" (
+			CREATE TABLE "core"."department" (
 			  "id" SERIAL PRIMARY KEY,
 			  "name" VARCHAR(100) NOT NULL,
-			  "institute_id" INT REFERENCES "institute"("id"),
+			  "institute_id" INT REFERENCES "core"."institute"("id"),
 			  "manager_id" INT DEFAULT NULL
 			);
 
-			CREATE TABLE "phone" (
+			CREATE TABLE "core"."phone" (
 			  "id" SERIAL PRIMARY KEY,
 			  "phone" VARCHAR(30),
 			  "type" INT DEFAULT 1
 			);
 
-			CREATE TABLE "employee" (
+			CREATE TABLE "core"."employee" (
 			  "id" SERIAL PRIMARY KEY,
 			  "surname" VARCHAR(100) NOT NULL,
 			  "name" VARCHAR(50) NOT NULL,
 			  "patronymic" VARCHAR(100) NOT NULL,
 			  "birthday" DATE NOT NULL,
-			  "role_id" VARCHAR(20) REFERENCES "role"("id"),
-			  "user_id" INT REFERENCES "user"("id"),
-			  "department_id" INT REFERENCES "department"("id"),
-			  "phone_id" INT REFERENCES "phone"("id")
+			  "role_id" VARCHAR(20) REFERENCES "core"."role"("id"),
+			  "user_id" INT REFERENCES "core"."user"("id"),
+			  "department_id" INT REFERENCES "core"."department"("id"),
+			  "phone_id" INT REFERENCES "core"."phone"("id")
 			);
 
-			CREATE TABLE "document" (
+			CREATE SCHEMA doc;
+
+			CREATE TABLE "doc"."document" (
 			  "id" SERIAL PRIMARY KEY,
 			  "name" TEXT NOT NULL,
 			  "path" TEXT NOT NULL,
-			  "employee_id" INT REFERENCES "employee"("id"),
+			  "employee_id" INT REFERENCES "core"."employee"("id"),
 			  "upload_date" TIMESTAMP DEFAULT now(),
 			  "parent_id" INT DEFAULT NULL,
 			  "type" INT,
 			  "status" INT
 			);
 
-			CREATE TABLE "history" (
+			CREATE TABLE "doc"."history" (
 			  "id" SERIAL PRIMARY KEY,
-			  "original_id" INT REFERENCES "document"("id"),
-			  "current_id" INT REFERENCES "document"("id"),
-			  "employee_id" INT REFERENCES "employee"("id"),
+			  "original_id" INT REFERENCES "doc"."document"("id"),
+			  "current_id" INT REFERENCES "doc"."document"("id"),
+			  "employee_id" INT REFERENCES "core"."employee"("id"),
 			  "date" TIMESTAMP DEFAULT now()
 			);
 
-			CREATE TABLE "log" (
+			CREATE TABLE "doc"."log" (
 			  "id" SERIAL PRIMARY KEY,
-			  "user_id" INT REFERENCES "user"("id"),
+			  "user_id" INT REFERENCES "core"."user"("id"),
 			  "date" TIMESTAMP DEFAULT now(),
 			  "elapsed_time" INT,
 			  "type" INT
 			);
 
-			CREATE TABLE "template" (
+			CREATE TABLE "doc"."template" (
 			  "id" SERIAL PRIMARY KEY,
 			  "name" VARCHAR(50) NOT NULL,
-			  "document_id" INT REFERENCES "document"("id")
+			  "document_id" INT REFERENCES "doc"."document"("id")
 			);
 
-			CREATE TABLE "template_element" (
+			CREATE TABLE "doc"."template_element" (
 			  "id" SERIAL PRIMARY KEY,
 			  "type" VARCHAR(10),
-			  "template_id" INT REFERENCES "template"("id"),
+			  "template_id" INT REFERENCES "doc"."template"("id"),
 			  "position" INT,
 			  "node" TEXT
 			);
 SQL;
-
 		foreach (explode(";", $sql) as $s) {
 			$this->execute($s);
 		}
 	}
 
 	public function safeDown() {
-
 		$sql = <<< SQL
-
-			DROP TABLE "template_element" CASCADE;
-			DROP TABLE "template" CASCADE;
-			DROP TABLE "log" CASCADE;
-			DROP TABLE "history" CASCADE;
-			DROP TABLE "document" CASCADE;
-			DROP TABLE "employee" CASCADE;
-			DROP TABLE "phone" CASCADE;
-			DROP TABLE "department" CASCADE;
-			DROP TABLE "institute" CASCADE;
-			DROP TABLE "privilege_to_role" CASCADE;
-			DROP TABLE "privilege" CASCADE;
-			DROP TABLE "role" CASCADE;
-			DROP TABLE "user" CASCADE;
+			DROP TABLE "doc"."template_element" CASCADE;
+			DROP TABLE "doc"."template" CASCADE;
+			DROP TABLE "doc"."log" CASCADE;
+			DROP TABLE "doc"."history" CASCADE;
+			DROP TABLE "doc"."document" CASCADE;
+			DROP TABLE "core"."employee" CASCADE;
+			DROP TABLE "core"."phone" CASCADE;
+			DROP TABLE "core"."department" CASCADE;
+			DROP TABLE "core"."institute" CASCADE;
+			DROP TABLE "core"."privilege_to_role" CASCADE;
+			DROP TABLE "core"."privilege" CASCADE;
+			DROP TABLE "core"."role" CASCADE;
+			DROP TABLE "core"."user" CASCADE;
 SQL;
-
 		foreach (explode(";", $sql) as $s) {
 			$this->execute($s);
 		}

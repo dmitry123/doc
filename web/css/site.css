@@ -118,3 +118,7 @@ a.desc:after {
 #document-file .file-drop-zone-title {
     padding: 200px 10px;
 }
+
+.pointer {
+    cursor: pointer;
+}

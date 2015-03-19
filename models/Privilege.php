@@ -15,8 +15,7 @@ class Privilege extends ActiveRecord {
 		return static::find()
 			->select("p.*")
 			->from("privilege as p")
-			->innerJoin("privilege_to_role as pr", "pr.privilege_id = p.id")
-			->where("pr.role_id = :role_id", [
+			->where("p.role_id = :role_id", [
 				":role_id" => $roleId
 			])->all();
 	}
@@ -30,9 +29,9 @@ class Privilege extends ActiveRecord {
 		return static::find()
 			->select("p.*")
 			->from("privilege as p")
-			->innerJoin("privilege_to_role as pr", "pr.privilege_id = p.id")
-			->innerJoin("role_to_employee as re", "re.role_id = pr.role_id")
-			->where("re.employee_id = :employee_id", [
+			->innerJoin("role as r", "p.role_id = r.id")
+			->innerJoin("employee as e", "e.role_id = r.id")
+			->where("e.id = :employee:id", [
 				":employee_id" => $employeeId
 			])->all();
 	}

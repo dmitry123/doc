@@ -2,22 +2,38 @@
 
 namespace app\widgets;
 
-use app\forms\UserForm;
-use yii\bootstrap\Modal;
-
 class ConfirmModal extends Modal {
 
+	/**
+	 * @var string - Default delete title
+	 */
+	public $title = "Подтвердить удаление?";
+
+	/**
+	 * @var array - Default delete buttons
+	 */
+	public $buttons = [
+		"delete" => [
+			"text" => "Удалить",
+			"class" => "btn btn-danger",
+			"type" => "submit"
+		]
+	];
+
+	/**
+	 * @var string - Default id for delete action
+	 */
+	public $id = "confirm-delete-modal";
+
+	/**
+	 * @var string - Modal window size class
+	 */
+	public $size = self::SIZE_SMALL;
+
+	/**
+	 * Run widget
+	 */
 	public function run() {
-		return Modal::widget([
-			"title" => "Подтвердить удаление?",
-			"body" => new UserForm("delete"),
-			"buttons" => [
-				"delete" => [
-					"text" => "Удалить",
-					"class" => "btn btn-danger",
-					"type" => "submit"
-				]
-			]
-		]);
+		return parent::run();
 	}
 }

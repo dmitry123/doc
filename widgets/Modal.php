@@ -2,6 +2,7 @@
 
 namespace app\widgets;
 
+use app\core\UniqueGenerator;
 use yii\helpers\Html;
 
 class Modal extends \yii\bootstrap\Modal {
@@ -32,6 +33,11 @@ class Modal extends \yii\bootstrap\Modal {
 	public $cancel = true;
 
 	/**
+	 * @var string - Modal window identification number
+	 */
+	public $id = null;
+
+	/**
 	 * Initializes the widget. This method will register the bootstrap asset
 	 * bundle. If you override this method, make sure you call the parent implementation first.
 	 */
@@ -57,6 +63,11 @@ class Modal extends \yii\bootstrap\Modal {
 					"type" => isset($button["type"]) ? $button["type"] : "button"
 				]);
 			}
+		}
+		if ($this->id == null || $this->id == "") {
+			$this->options["id"] = UniqueGenerator::generate("modal");
+		} else {
+			$this->options["id"] = $this->id;
 		}
 		parent::init();
 	}

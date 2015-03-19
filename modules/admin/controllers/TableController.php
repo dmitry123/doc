@@ -7,11 +7,14 @@ use app\core\Controller;
 use app\core\FormModel;
 use app\core\TableProviderAdapter;
 use app\modules\admin\widgets\Table;
-use yii\base\ErrorException;
 use yii\helpers\Inflector;
 
 class TableController extends Controller {
 
+	/**
+	 * Default view action
+	 * @throws \Exception
+	 */
 	public function actionIndex() {
 		try {
 			print $this->render("index", [
@@ -22,14 +25,18 @@ class TableController extends Controller {
 		}
 	}
 
+	/**
+	 * Load component with table for admin panel
+	 * @throws \Exception
+	 */
 	public function actionLoad() {
 		try {
-			$table = Inflector::camel2id($this->get("table"));
+			$table = Inflector::id2camel($this->get("table"), "_");
 			$model = "app\\models\\$table";
 			if (!class_exists($model)) {
 				$this->error("Can't resolve table class \"$model\"");
 			}
-			$form = "app\\forms\\{$table}form";
+			$form = "app\\forms\\{$table}Form";
 			if (!class_exists($form)) {
 				$this->error("Can't resolve form model class \"$form\"");
 			}

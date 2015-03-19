@@ -24,18 +24,6 @@ class m150318_072311_user_admin extends Migration {
 		if (!$phone->save(true)) {
 			throw new \yii\base\ErrorException("Can't register phone for administrator in database");
 		}
-		$employee = new \app\models\Employee([
-			"surname" => Yii::$app->params["adminSurname"],
-			"name" => Yii::$app->params["adminName"],
-			"patronymic" => Yii::$app->params["adminPatronymic"],
-			"role_id" => null,
-			"user_id" => $user->{"id"},
-			"department_id" => null,
-			"phone_id" => $phone->{"id"}
-		]);
-		if (!$employee->save(true)) {
-			throw new \yii\base\ErrorException("Can't register employee for administrator in database");
-		}
 		$role = new \app\models\Role([
 			"id" => "admin",
 			"description" => "Может администрировать систему",
@@ -44,12 +32,17 @@ class m150318_072311_user_admin extends Migration {
 		if (!$role->save(true)) {
 			throw new \yii\base\ErrorException("Can't register administrator role");
 		}
-		$role2employee = new \app\models\RoleToEmployee([
-			"employee_id" => $employee->{"id"},
-			"role_id" => $role->{"id"}
+		$employee = new \app\models\Employee([
+			"surname" => Yii::$app->params["adminSurname"],
+			"name" => Yii::$app->params["adminName"],
+			"patronymic" => Yii::$app->params["adminPatronymic"],
+			"role_id" => $role->{"id"},
+			"user_id" => $user->{"id"},
+			"department_id" => null,
+			"phone_id" => $phone->{"id"}
 		]);
-		if (!$role2employee->save(true)) {
-			throw new \yii\base\ErrorException("Can't set reference between administrator and role");
+		if (!$employee->save(true)) {
+			throw new \yii\base\ErrorException("Can't register employee for administrator in database");
 		}
 	}
 
@@ -77,6 +70,9 @@ class m150318_072311_user_admin extends Migration {
 		}
 		\app\models\User::deleteAll([
 			"id" => $user->{"id"}
+		]);
+		\app\models\Role::deleteAll([
+			"id" => $employee->{"role_id"}
 		]);
 	}
 }

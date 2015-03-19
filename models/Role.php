@@ -42,8 +42,8 @@ class Role extends ActiveRecord {
 		$roles = static::find()
 			->select("r.*")
 			->from("role as r")
-			->innerJoin("role_to_employee as r_e", "r_e.role_id = r.id")
-			->where("r_e.employee_id = :employee_id", [
+			->innerJoin("employee as e", "e.role_id = r.id")
+			->where("e.id = :employee_id", [
 				":employee_id" => $employeeId
 			])->createCommand()
 			->queryAll();

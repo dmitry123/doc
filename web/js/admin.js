@@ -22,10 +22,30 @@ var TableViewer = {
 var TableList = {
 	ready: function() {
 		var me = this;
-		$(".table-panel-wrapper li a").click(function() {
-			TableViewer.load($(this).parent().data("table"));
+		$(".table-panel-wrapper li[data-table] a").click(function() {
+            var table = $(this).parent().data("table");
+            if (!table) {
+                return void 0;
+            }
+			TableViewer.load(table);
 			me.toggle($(this).parent().children(".table-column-list"));
+            window.location.hash = "#" + table;
 		});
+        if (window.location.hash != "") {
+            var h = window.location.hash.substr(1).split("/");
+            $("li[data-table='" + h[0] + "'] a").trigger("click");
+            if (h.length > 1) {
+                $("li[data-column='" + h[1] + "']").trigger("click");
+            }
+        } else {
+            $("li[data-table='user']").trigger("click");
+        }
+        $(".table-column-list li[data-column]").click(function() {
+            var column = $(this).data("column");
+            // ignore
+            window.location.hash = window.location.hash.split("/")[0]
+                + "/" + column;
+        });
 	},
 	toggle: function(menu) {
 		if (menu.css("display") != "none") {

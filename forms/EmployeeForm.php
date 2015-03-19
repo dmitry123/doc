@@ -3,17 +3,9 @@
 namespace app\forms;
 
 use app\core\FormModel;
+use app\models\Employee;
 
 class EmployeeForm extends FormModel {
-
-	public $id;
-	public $surname;
-	public $name;
-	public $patronymic;
-	public $role_id;
-	public $user_id;
-	public $department_id;
-	public $phone_id;
 
 	/**
 	 * Override that method to return additional rule configuration, like
@@ -21,9 +13,9 @@ class EmployeeForm extends FormModel {
 	 * @return array - Array with rule configuration
 	 */
 	public function backward() {
-		return [
-			[ "user_id", "default", "value" => \Yii::$app->getUser()->{"id"} ]
-		];
+		return Employee::getRules([
+			[ "user_id", "default", "value" => \Yii::$app->getUser()->getIdentity()->{"id"} ]
+		]);
 	}
 
 	/**
@@ -88,4 +80,13 @@ class EmployeeForm extends FormModel {
 			]
 		];
 	}
+
+	public $id;
+	public $surname;
+	public $name;
+	public $patronymic;
+	public $role_id;
+	public $user_id;
+	public $department_id;
+	public $phone_id;
 }

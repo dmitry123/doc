@@ -33443,3 +33443,1375 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1426665174.62
     'REQUEST_TIME' => 1426665174
 ]
+2015-03-18 06:36:55 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[08006] [7] could not connect to server: Connection refused
+	Is the server running on host "127.0.0.1" and accepting
+	TCP/IP connections on port 5432?' in /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Connection.php:579
+Stack trace:
+#0 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Connection.php(579): PDO->__construct('pgsql:host=127....', 'postgres', '12345', NULL)
+#1 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#3 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Schema.php(383): yii\db\Connection->getSlavePdo()
+#5 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Connection.php(732): yii\db\Schema->quoteValue('migration')
+#6 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/pgsql/Schema.php(319): yii\db\Connection->quoteValue('migration')
+#7 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/pgsql/Schema.php(160): yii\db\pgsql\Schema->findColumns(Object(yii\db\TableSchema))
+#8 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Schema.php(140): yii\db\pgsql\Schema->loadTableSchema('migration')
+#9 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/console/controllers/MigrateController.php(121): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#14 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#15 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#16 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#17 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate', Array)
+#18 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate', Array)
+#19 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /Volumes/Storage/code/PHP/doc/yii(23): yii\base\Application->run()
+#21 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[08006] [7] could not connect to server: Connection refused
+	Is the server running on host "127.0.0.1" and accepting
+	TCP/IP connections on port 5432?' in /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Connection.php:534
+Stack trace:
+#0 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#1 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Schema.php(383): yii\db\Connection->getSlavePdo()
+#3 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Connection.php(732): yii\db\Schema->quoteValue('migration')
+#4 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/pgsql/Schema.php(319): yii\db\Connection->quoteValue('migration')
+#5 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/pgsql/Schema.php(160): yii\db\pgsql\Schema->findColumns(Object(yii\db\TableSchema))
+#6 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Schema.php(140): yii\db\pgsql\Schema->loadTableSchema('migration')
+#7 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/console/controllers/MigrateController.php(121): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#8 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#9 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#10 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#11 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#12 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#13 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#14 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#15 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate', Array)
+#16 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate', Array)
+#17 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#18 /Volumes/Storage/code/PHP/doc/yii(23): yii\base\Application->run()
+#19 {main}
+Additional Information:
+
+2015-03-18 06:36:55 [-][-][-][info][application] $_SERVER = [
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/r7/1r2px7ws4_98__gwbj4cy2100000gn/T/'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.vXReSiwMZ3/Render'
+    'EnvAgent_vars' => 'PATH'
+    'USER' => 'dmitry'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.2MjlmQgtxD/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x7:0x31'
+    'PATH' => '/Users/dmitry/Library/Application Support/GoodSync:/opt/local/bin:/opt/local/sbin:/Library/PostgreSQL/9.3/bin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'PWD' => '/Volumes/Storage/code/PHP/doc'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '1'
+    'HOME' => '/Users/dmitry'
+    'LOGNAME' => 'dmitry'
+    'LC_CTYPE' => 'ru_RU.UTF-8'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1426657015.07
+    'REQUEST_TIME' => 1426657015
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2015-03-18 06:40:09 [-][-][-][error][yii\base\ErrorException:64] exception 'yii\base\ErrorException' with message 'yii\console\controllers\MigrateController::createMigration(): Failed opening required '/Volumes/Storage/code/PHP/doc/migrations/m150305_142956_entry.php' (include_path='.:/Applications/MAMP/bin/php/php5.4.33/lib/php')' in /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/console/controllers/MigrateController.php:111
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-18 06:40:06 [-][-][-][info][application] $_SERVER = [
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/r7/1r2px7ws4_98__gwbj4cy2100000gn/T/'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.vXReSiwMZ3/Render'
+    'EnvAgent_vars' => 'PATH'
+    'USER' => 'dmitry'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.2MjlmQgtxD/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x7:0x31'
+    'PATH' => '/Users/dmitry/Library/Application Support/GoodSync:/opt/local/bin:/opt/local/sbin:/Library/PostgreSQL/9.3/bin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'PWD' => '/Volumes/Storage/code/PHP/doc'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '1'
+    'HOME' => '/Users/dmitry'
+    'LOGNAME' => 'dmitry'
+    'LC_CTYPE' => 'ru_RU.UTF-8'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1426657206.85
+    'REQUEST_TIME' => 1426657206
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate/down'
+        2 => '10'
+    ]
+    'argc' => 3
+]
+2015-03-19 08:33:31 [::1][admin][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Setting unknown property: app\forms\HistoryForm::id' in /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Component.php:197
+Stack trace:
+#0 /Volumes/Storage/code/PHP/doc/core/FormModel.php(191): yii\base\Component->__set('id', NULL)
+#1 /Volumes/Storage/code/PHP/doc/core/FormModel.php(75): app\core\FormModel->buildConfig()
+#2 /Volumes/Storage/code/PHP/doc/modules/admin/widgets/TableView.php(76): app\core\FormModel->getConfig()
+#3 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Widget.php(96): app\modules\admin\widgets\TableView->run()
+#4 /Volumes/Storage/code/PHP/doc/modules/admin/views/table/index.php(24): yii\base\Widget::widget()
+#5 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(325): require('/Volumes/Storag...')
+#6 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/Volumes/Storag...', Array)
+#7 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/Volumes/Storag...', Array, Object(app\modules\admin\controllers\TableController))
+#8 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(367): yii\base\View->render('index', Array, Object(app\modules\admin\controllers\TableController))
+#9 /Volumes/Storage/code/PHP/doc/modules/admin/controllers/TableController.php(19): yii\base\Controller->render('index', Array)
+#10 [internal function]: app\modules\admin\controllers\TableController->actionIndex()
+#11 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#12 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#13 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('', Array)
+#14 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('admin/table', Array)
+#15 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 /Volumes/Storage/code/PHP/doc/web/index.php(12): yii\base\Application->run()
+#17 {main}
+2015-03-19 08:33:30 [::1][admin][-][info][application] $_COOKIE = [
+    'PPA_ID' => 'c04cdd2cd7ac176d6a25976c7ffe3aaf'
+    'webfx-tree-cookie-persistence' => 'wfxt-6 wfxt-4 wfxt-16 wfxt-18'
+    '_identity' => '[\"100\",\"test100key\",2592000]'
+    'PHPSESSID' => '98ad40f8dec7fd4e756aa954c308ae11'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 'admin'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8888/doc/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PPA_ID=c04cdd2cd7ac176d6a25976c7ffe3aaf; webfx-tree-cookie-persistence=wfxt-6+wfxt-4+wfxt-16+wfxt-18; _identity=%5B%22100%22%2C%22test100key%22%2C2592000%5D; PHPSESSID=98ad40f8dec7fd4e756aa954c308ae11'
+    'PATH' => '/Library/PostgreSQL/9.3/bin/'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.5.17 mod_ssl/2.2.29 OpenSSL/0.9.8zc DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Volumes/Storage/code/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Volumes/Storage/code/PHP/doc/web/index.php'
+    'REMOTE_PORT' => '49515'
+    'REDIRECT_URL' => '/doc/web/admin/table'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/admin/table'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1426750410.99
+    'REQUEST_TIME' => 1426750410
+    'argv' => []
+    'argc' => 0
+]
+2015-03-19 08:58:38 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: file' in /Volumes/Storage/code/PHP/doc/core/Controller.php:452
+Stack trace:
+#0 /Volumes/Storage/code/PHP/doc/core/Controller.php(452): yii\base\ErrorHandler->handleError(8, 'Undefined index...', '/Volumes/Storag...', 452, Array)
+#1 /Volumes/Storage/code/PHP/doc/modules/admin/controllers/TableController.php(44): app\core\Controller->exception(Object(yii\base\ErrorException))
+#2 [internal function]: app\modules\admin\controllers\TableController->actionLoad()
+#3 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#4 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#5 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('load', Array)
+#6 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('admin/table/loa...', Array)
+#7 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /Volumes/Storage/code/PHP/doc/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2015-03-19 08:58:38 [::1][-][-][info][application] $_GET = [
+    'table' => 'document_category'
+]
+
+$_COOKIE = [
+    'PPA_ID' => 'c04cdd2cd7ac176d6a25976c7ffe3aaf'
+    'webfx-tree-cookie-persistence' => 'wfxt-6 wfxt-4 wfxt-16 wfxt-18'
+    '_identity' => '[\"100\",\"test100key\",2592000]'
+    'PHPSESSID' => '98ad40f8dec7fd4e756aa954c308ae11'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8888/doc/web/admin/table'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PPA_ID=c04cdd2cd7ac176d6a25976c7ffe3aaf; webfx-tree-cookie-persistence=wfxt-6+wfxt-4+wfxt-16+wfxt-18; _identity=%5B%22100%22%2C%22test100key%22%2C2592000%5D; PHPSESSID=98ad40f8dec7fd4e756aa954c308ae11'
+    'PATH' => '/Library/PostgreSQL/9.3/bin/'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.5.17 mod_ssl/2.2.29 OpenSSL/0.9.8zc DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Volumes/Storage/code/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Volumes/Storage/code/PHP/doc/web/index.php'
+    'REMOTE_PORT' => '49591'
+    'REDIRECT_QUERY_STRING' => 'table=document_category'
+    'REDIRECT_URL' => '/doc/web/admin/table/load'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'table=document_category'
+    'REQUEST_URI' => '/doc/web/admin/table/load?table=document_category'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1426751918.33
+    'REQUEST_TIME' => 1426751918
+    'argv' => [
+        0 => 'table=document_category'
+    ]
+    'argc' => 1
+]
+2015-03-19 08:58:39 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: file' in /Volumes/Storage/code/PHP/doc/core/Controller.php:452
+Stack trace:
+#0 /Volumes/Storage/code/PHP/doc/core/Controller.php(452): yii\base\ErrorHandler->handleError(8, 'Undefined index...', '/Volumes/Storag...', 452, Array)
+#1 /Volumes/Storage/code/PHP/doc/modules/admin/controllers/TableController.php(44): app\core\Controller->exception(Object(yii\base\ErrorException))
+#2 [internal function]: app\modules\admin\controllers\TableController->actionLoad()
+#3 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#4 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#5 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('load', Array)
+#6 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('admin/table/loa...', Array)
+#7 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /Volumes/Storage/code/PHP/doc/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2015-03-19 08:58:39 [::1][-][-][info][application] $_GET = [
+    'table' => 'department'
+]
+
+$_COOKIE = [
+    'PPA_ID' => 'c04cdd2cd7ac176d6a25976c7ffe3aaf'
+    'webfx-tree-cookie-persistence' => 'wfxt-6 wfxt-4 wfxt-16 wfxt-18'
+    '_identity' => '[\"100\",\"test100key\",2592000]'
+    'PHPSESSID' => '98ad40f8dec7fd4e756aa954c308ae11'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8888/doc/web/admin/table'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PPA_ID=c04cdd2cd7ac176d6a25976c7ffe3aaf; webfx-tree-cookie-persistence=wfxt-6+wfxt-4+wfxt-16+wfxt-18; _identity=%5B%22100%22%2C%22test100key%22%2C2592000%5D; PHPSESSID=98ad40f8dec7fd4e756aa954c308ae11'
+    'PATH' => '/Library/PostgreSQL/9.3/bin/'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.5.17 mod_ssl/2.2.29 OpenSSL/0.9.8zc DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Volumes/Storage/code/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Volumes/Storage/code/PHP/doc/web/index.php'
+    'REMOTE_PORT' => '49590'
+    'REDIRECT_QUERY_STRING' => 'table=department'
+    'REDIRECT_URL' => '/doc/web/admin/table/load'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'table=department'
+    'REQUEST_URI' => '/doc/web/admin/table/load?table=department'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1426751919.76
+    'REQUEST_TIME' => 1426751919
+    'argv' => [
+        0 => 'table=department'
+    ]
+    'argc' => 1
+]
+2015-03-19 08:58:43 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: file' in /Volumes/Storage/code/PHP/doc/core/Controller.php:452
+Stack trace:
+#0 /Volumes/Storage/code/PHP/doc/core/Controller.php(452): yii\base\ErrorHandler->handleError(8, 'Undefined index...', '/Volumes/Storag...', 452, Array)
+#1 /Volumes/Storage/code/PHP/doc/modules/admin/controllers/TableController.php(44): app\core\Controller->exception(Object(yii\base\ErrorException))
+#2 [internal function]: app\modules\admin\controllers\TableController->actionLoad()
+#3 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#4 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#5 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('load', Array)
+#6 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('admin/table/loa...', Array)
+#7 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /Volumes/Storage/code/PHP/doc/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2015-03-19 08:58:43 [::1][-][-][info][application] $_GET = [
+    'table' => 'document_category'
+]
+
+$_COOKIE = [
+    'PPA_ID' => 'c04cdd2cd7ac176d6a25976c7ffe3aaf'
+    'webfx-tree-cookie-persistence' => 'wfxt-6 wfxt-4 wfxt-16 wfxt-18'
+    '_identity' => '[\"100\",\"test100key\",2592000]'
+    'PHPSESSID' => '98ad40f8dec7fd4e756aa954c308ae11'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8888/doc/web/admin/table'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PPA_ID=c04cdd2cd7ac176d6a25976c7ffe3aaf; webfx-tree-cookie-persistence=wfxt-6+wfxt-4+wfxt-16+wfxt-18; _identity=%5B%22100%22%2C%22test100key%22%2C2592000%5D; PHPSESSID=98ad40f8dec7fd4e756aa954c308ae11'
+    'PATH' => '/Library/PostgreSQL/9.3/bin/'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.5.17 mod_ssl/2.2.29 OpenSSL/0.9.8zc DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Volumes/Storage/code/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Volumes/Storage/code/PHP/doc/web/index.php'
+    'REMOTE_PORT' => '49595'
+    'REDIRECT_QUERY_STRING' => 'table=document_category'
+    'REDIRECT_URL' => '/doc/web/admin/table/load'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'table=document_category'
+    'REQUEST_URI' => '/doc/web/admin/table/load?table=document_category'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1426751923.29
+    'REQUEST_TIME' => 1426751923
+    'argv' => [
+        0 => 'table=document_category'
+    ]
+    'argc' => 1
+]
+2015-03-19 08:58:44 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: file' in /Volumes/Storage/code/PHP/doc/core/Controller.php:452
+Stack trace:
+#0 /Volumes/Storage/code/PHP/doc/core/Controller.php(452): yii\base\ErrorHandler->handleError(8, 'Undefined index...', '/Volumes/Storag...', 452, Array)
+#1 /Volumes/Storage/code/PHP/doc/modules/admin/controllers/TableController.php(44): app\core\Controller->exception(Object(yii\base\ErrorException))
+#2 [internal function]: app\modules\admin\controllers\TableController->actionLoad()
+#3 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#4 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#5 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('load', Array)
+#6 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('admin/table/loa...', Array)
+#7 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /Volumes/Storage/code/PHP/doc/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2015-03-19 08:58:44 [::1][-][-][info][application] $_GET = [
+    'table' => 'history'
+]
+
+$_COOKIE = [
+    'PPA_ID' => 'c04cdd2cd7ac176d6a25976c7ffe3aaf'
+    'webfx-tree-cookie-persistence' => 'wfxt-6 wfxt-4 wfxt-16 wfxt-18'
+    '_identity' => '[\"100\",\"test100key\",2592000]'
+    'PHPSESSID' => '98ad40f8dec7fd4e756aa954c308ae11'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8888/doc/web/admin/table'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PPA_ID=c04cdd2cd7ac176d6a25976c7ffe3aaf; webfx-tree-cookie-persistence=wfxt-6+wfxt-4+wfxt-16+wfxt-18; _identity=%5B%22100%22%2C%22test100key%22%2C2592000%5D; PHPSESSID=98ad40f8dec7fd4e756aa954c308ae11'
+    'PATH' => '/Library/PostgreSQL/9.3/bin/'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.5.17 mod_ssl/2.2.29 OpenSSL/0.9.8zc DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Volumes/Storage/code/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Volumes/Storage/code/PHP/doc/web/index.php'
+    'REMOTE_PORT' => '49597'
+    'REDIRECT_QUERY_STRING' => 'table=history'
+    'REDIRECT_URL' => '/doc/web/admin/table/load'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'table=history'
+    'REQUEST_URI' => '/doc/web/admin/table/load?table=history'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1426751924.7
+    'REQUEST_TIME' => 1426751924
+    'argv' => [
+        0 => 'table=history'
+    ]
+    'argc' => 1
+]
+2015-03-19 08:58:55 [::1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'explode(): Empty delimiter' in /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/helpers/BaseInflector.php:358
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'explode(): Empt...', '/Volumes/Storag...', 358, Array)
+#1 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/helpers/BaseInflector.php(358): explode('', 'document_catego...')
+#2 /Volumes/Storage/code/PHP/doc/modules/admin/controllers/TableController.php(27): yii\helpers\BaseInflector::id2camel('document_catego...', '')
+#3 [internal function]: app\modules\admin\controllers\TableController->actionLoad()
+#4 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('load', Array)
+#7 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('admin/table/loa...', Array)
+#8 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /Volumes/Storage/code/PHP/doc/web/index.php(12): yii\base\Application->run()
+#10 {main}
+2015-03-19 08:58:55 [::1][-][-][info][application] $_GET = [
+    'table' => 'document_category'
+]
+
+$_COOKIE = [
+    'PPA_ID' => 'c04cdd2cd7ac176d6a25976c7ffe3aaf'
+    'webfx-tree-cookie-persistence' => 'wfxt-6 wfxt-4 wfxt-16 wfxt-18'
+    '_identity' => '[\"100\",\"test100key\",2592000]'
+    'PHPSESSID' => '98ad40f8dec7fd4e756aa954c308ae11'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PPA_ID=c04cdd2cd7ac176d6a25976c7ffe3aaf; webfx-tree-cookie-persistence=wfxt-6+wfxt-4+wfxt-16+wfxt-18; _identity=%5B%22100%22%2C%22test100key%22%2C2592000%5D; PHPSESSID=98ad40f8dec7fd4e756aa954c308ae11'
+    'PATH' => '/Library/PostgreSQL/9.3/bin/'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.5.17 mod_ssl/2.2.29 OpenSSL/0.9.8zc DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Volumes/Storage/code/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Volumes/Storage/code/PHP/doc/web/index.php'
+    'REMOTE_PORT' => '49599'
+    'REDIRECT_QUERY_STRING' => 'table=document_category'
+    'REDIRECT_URL' => '/doc/web/admin/table/load'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'table=document_category'
+    'REQUEST_URI' => '/doc/web/admin/table/load?table=document_category'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1426751935.31
+    'REQUEST_TIME' => 1426751935
+    'argv' => [
+        0 => 'table=document_category'
+    ]
+    'argc' => 1
+]
+2015-03-19 09:03:52 [::1][admin][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: admin/table/user' in /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php:122
+Stack trace:
+#0 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('user', Array)
+#1 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('admin/table/use...', Array)
+#2 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /Volumes/Storage/code/PHP/doc/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/web/Application.php:95
+Stack trace:
+#0 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Volumes/Storage/code/PHP/doc/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2015-03-19 09:03:52 [::1][admin][-][info][application] $_COOKIE = [
+    'PPA_ID' => 'c04cdd2cd7ac176d6a25976c7ffe3aaf'
+    'webfx-tree-cookie-persistence' => 'wfxt-6 wfxt-4 wfxt-16 wfxt-18'
+    '_identity' => '[\"100\",\"test100key\",2592000]'
+    'PHPSESSID' => '98ad40f8dec7fd4e756aa954c308ae11'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 'admin'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PPA_ID=c04cdd2cd7ac176d6a25976c7ffe3aaf; webfx-tree-cookie-persistence=wfxt-6+wfxt-4+wfxt-16+wfxt-18; _identity=%5B%22100%22%2C%22test100key%22%2C2592000%5D; PHPSESSID=98ad40f8dec7fd4e756aa954c308ae11'
+    'PATH' => '/Library/PostgreSQL/9.3/bin/'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.5.17 mod_ssl/2.2.29 OpenSSL/0.9.8zc DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Volumes/Storage/code/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Volumes/Storage/code/PHP/doc/web/index.php'
+    'REMOTE_PORT' => '49641'
+    'REDIRECT_URL' => '/doc/web/admin/table/user'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/admin/table/user'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1426752232.9
+    'REQUEST_TIME' => 1426752232
+    'argv' => []
+    'argc' => 0
+]
+2015-03-19 09:06:41 [::1][admin][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "role_to_employee" does not exist
+LINE 1: SELECT "r".* FROM "role" "r" INNER JOIN "role_to_employee" "...
+                                                ^' in /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php:822
+Stack trace:
+#0 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php(822): PDOStatement->execute()
+#1 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /Volumes/Storage/code/PHP/doc/models/Role.php(49): yii\db\Command->queryAll()
+#3 /Volumes/Storage/code/PHP/doc/models/Role.php(24): app\models\Role::fetchByEmployee(1)
+#4 /Volumes/Storage/code/PHP/doc/widgets/Navigation.php(17): app\models\Role::checkEmployeeRoles(1, 'admin')
+#5 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Widget.php(96): app\widgets\Navigation->run()
+#6 /Volumes/Storage/code/PHP/doc/modules/admin/views/layouts/main.php(37): yii\base\Widget::widget()
+#7 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(325): require('/Volumes/Storag...')
+#8 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/Volumes/Storag...', Array)
+#9 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(382): yii\base\View->renderFile('/Volumes/Storag...', Array, Object(app\modules\admin\controllers\TableController))
+#10 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(368): yii\base\Controller->renderContent('\n<div id="w0" c...')
+#11 /Volumes/Storage/code/PHP/doc/modules/admin/controllers/TableController.php(19): yii\base\Controller->render('index', Array)
+#12 [internal function]: app\modules\admin\controllers\TableController->actionIndex()
+#13 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#14 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#15 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('', Array)
+#16 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('admin/table', Array)
+#17 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 /Volumes/Storage/code/PHP/doc/web/index.php(12): yii\base\Application->run()
+#19 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "role_to_employee" does not exist
+LINE 1: SELECT "r".* FROM "role" "r" INNER JOIN "role_to_employee" "...
+                                                ^
+The SQL being executed was: SELECT "r".* FROM "role" "r" INNER JOIN "role_to_employee" "r_e" ON r_e.role_id = r.id WHERE r_e.employee_id = 1' in /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Schema.php:534
+Stack trace:
+#0 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php(837): yii\db\Schema->convertException(Object(PDOException), 'SELECT "r".* FR...')
+#1 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /Volumes/Storage/code/PHP/doc/models/Role.php(49): yii\db\Command->queryAll()
+#3 /Volumes/Storage/code/PHP/doc/models/Role.php(24): app\models\Role::fetchByEmployee(1)
+#4 /Volumes/Storage/code/PHP/doc/widgets/Navigation.php(17): app\models\Role::checkEmployeeRoles(1, 'admin')
+#5 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Widget.php(96): app\widgets\Navigation->run()
+#6 /Volumes/Storage/code/PHP/doc/modules/admin/views/layouts/main.php(37): yii\base\Widget::widget()
+#7 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(325): require('/Volumes/Storag...')
+#8 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/Volumes/Storag...', Array)
+#9 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(382): yii\base\View->renderFile('/Volumes/Storag...', Array, Object(app\modules\admin\controllers\TableController))
+#10 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(368): yii\base\Controller->renderContent('\n<div id="w0" c...')
+#11 /Volumes/Storage/code/PHP/doc/modules/admin/controllers/TableController.php(19): yii\base\Controller->render('index', Array)
+#12 [internal function]: app\modules\admin\controllers\TableController->actionIndex()
+#13 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#14 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#15 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('', Array)
+#16 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('admin/table', Array)
+#17 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 /Volumes/Storage/code/PHP/doc/web/index.php(12): yii\base\Application->run()
+#19 {main}
+Additional Information:
+Array
+(
+    [0] => 42P01
+    [1] => 7
+    [2] => ERROR:  relation "role_to_employee" does not exist
+LINE 1: SELECT "r".* FROM "role" "r" INNER JOIN "role_to_employee" "...
+                                                ^
+)
+
+2015-03-19 09:06:41 [::1][admin][-][info][application] $_COOKIE = [
+    'PPA_ID' => 'c04cdd2cd7ac176d6a25976c7ffe3aaf'
+    'webfx-tree-cookie-persistence' => 'wfxt-6 wfxt-4 wfxt-16 wfxt-18'
+    '_identity' => '[\"100\",\"test100key\",2592000]'
+    'PHPSESSID' => '98ad40f8dec7fd4e756aa954c308ae11'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 'admin'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PPA_ID=c04cdd2cd7ac176d6a25976c7ffe3aaf; webfx-tree-cookie-persistence=wfxt-6+wfxt-4+wfxt-16+wfxt-18; _identity=%5B%22100%22%2C%22test100key%22%2C2592000%5D; PHPSESSID=98ad40f8dec7fd4e756aa954c308ae11'
+    'PATH' => '/Library/PostgreSQL/9.3/bin/'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.5.17 mod_ssl/2.2.29 OpenSSL/0.9.8zc DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Volumes/Storage/code/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Volumes/Storage/code/PHP/doc/web/index.php'
+    'REMOTE_PORT' => '49687'
+    'REDIRECT_URL' => '/doc/web/admin/table'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/admin/table'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1426752401.61
+    'REQUEST_TIME' => 1426752401
+    'argv' => []
+    'argc' => 0
+]
+2015-03-19 09:09:09 [::1][admin][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "role_to_employee" does not exist
+LINE 1: SELECT "r".* FROM "role" "r" INNER JOIN "role_to_employee" "...
+                                                ^' in /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php:822
+Stack trace:
+#0 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php(822): PDOStatement->execute()
+#1 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /Volumes/Storage/code/PHP/doc/models/Role.php(49): yii\db\Command->queryAll()
+#3 /Volumes/Storage/code/PHP/doc/models/Role.php(24): app\models\Role::fetchByEmployee(1)
+#4 /Volumes/Storage/code/PHP/doc/widgets/Navigation.php(17): app\models\Role::checkEmployeeRoles(1, 'admin')
+#5 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Widget.php(96): app\widgets\Navigation->run()
+#6 /Volumes/Storage/code/PHP/doc/modules/admin/views/layouts/main.php(37): yii\base\Widget::widget()
+#7 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(325): require('/Volumes/Storag...')
+#8 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/Volumes/Storag...', Array)
+#9 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(382): yii\base\View->renderFile('/Volumes/Storag...', Array, Object(app\modules\admin\controllers\TableController))
+#10 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(368): yii\base\Controller->renderContent('\n<div id="w0" c...')
+#11 /Volumes/Storage/code/PHP/doc/modules/admin/controllers/TableController.php(19): yii\base\Controller->render('index', Array)
+#12 [internal function]: app\modules\admin\controllers\TableController->actionIndex()
+#13 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#14 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#15 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('', Array)
+#16 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('admin/table', Array)
+#17 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 /Volumes/Storage/code/PHP/doc/web/index.php(12): yii\base\Application->run()
+#19 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "role_to_employee" does not exist
+LINE 1: SELECT "r".* FROM "role" "r" INNER JOIN "role_to_employee" "...
+                                                ^
+The SQL being executed was: SELECT "r".* FROM "role" "r" INNER JOIN "role_to_employee" "r_e" ON r_e.role_id = r.id WHERE r_e.employee_id = 1' in /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Schema.php:534
+Stack trace:
+#0 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php(837): yii\db\Schema->convertException(Object(PDOException), 'SELECT "r".* FR...')
+#1 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /Volumes/Storage/code/PHP/doc/models/Role.php(49): yii\db\Command->queryAll()
+#3 /Volumes/Storage/code/PHP/doc/models/Role.php(24): app\models\Role::fetchByEmployee(1)
+#4 /Volumes/Storage/code/PHP/doc/widgets/Navigation.php(17): app\models\Role::checkEmployeeRoles(1, 'admin')
+#5 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Widget.php(96): app\widgets\Navigation->run()
+#6 /Volumes/Storage/code/PHP/doc/modules/admin/views/layouts/main.php(37): yii\base\Widget::widget()
+#7 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(325): require('/Volumes/Storag...')
+#8 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/Volumes/Storag...', Array)
+#9 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(382): yii\base\View->renderFile('/Volumes/Storag...', Array, Object(app\modules\admin\controllers\TableController))
+#10 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(368): yii\base\Controller->renderContent('\n<div id="w0" c...')
+#11 /Volumes/Storage/code/PHP/doc/modules/admin/controllers/TableController.php(19): yii\base\Controller->render('index', Array)
+#12 [internal function]: app\modules\admin\controllers\TableController->actionIndex()
+#13 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#14 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#15 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('', Array)
+#16 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('admin/table', Array)
+#17 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 /Volumes/Storage/code/PHP/doc/web/index.php(12): yii\base\Application->run()
+#19 {main}
+Additional Information:
+Array
+(
+    [0] => 42P01
+    [1] => 7
+    [2] => ERROR:  relation "role_to_employee" does not exist
+LINE 1: SELECT "r".* FROM "role" "r" INNER JOIN "role_to_employee" "...
+                                                ^
+)
+
+2015-03-19 09:09:09 [::1][admin][-][info][application] $_COOKIE = [
+    'PPA_ID' => 'c04cdd2cd7ac176d6a25976c7ffe3aaf'
+    'webfx-tree-cookie-persistence' => 'wfxt-6 wfxt-4 wfxt-16 wfxt-18'
+    '_identity' => '[\"100\",\"test100key\",2592000]'
+    'PHPSESSID' => '98ad40f8dec7fd4e756aa954c308ae11'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 'admin'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PPA_ID=c04cdd2cd7ac176d6a25976c7ffe3aaf; webfx-tree-cookie-persistence=wfxt-6+wfxt-4+wfxt-16+wfxt-18; _identity=%5B%22100%22%2C%22test100key%22%2C2592000%5D; PHPSESSID=98ad40f8dec7fd4e756aa954c308ae11'
+    'PATH' => '/Library/PostgreSQL/9.3/bin/'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.5.17 mod_ssl/2.2.29 OpenSSL/0.9.8zc DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Volumes/Storage/code/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Volumes/Storage/code/PHP/doc/web/index.php'
+    'REMOTE_PORT' => '49695'
+    'REDIRECT_URL' => '/doc/web/admin/table'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/admin/table'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1426752549.54
+    'REQUEST_TIME' => 1426752549
+    'argv' => []
+    'argc' => 0
+]
+2015-03-19 09:59:38 [::1][admin][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: :employee_id' in /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php:271
+Stack trace:
+#0 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php(271): PDOStatement->bindValue(':employee_id', 1, 1)
+#1 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php(215): yii\db\Command->bindPendingParams()
+#2 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php(816): yii\db\Command->prepare(true)
+#3 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#4 /Volumes/Storage/code/PHP/doc/models/Role.php(49): yii\db\Command->queryAll()
+#5 /Volumes/Storage/code/PHP/doc/models/Role.php(24): app\models\Role::fetchByEmployee(1)
+#6 /Volumes/Storage/code/PHP/doc/widgets/Navigation.php(17): app\models\Role::checkEmployeeRoles(1, 'admin')
+#7 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Widget.php(96): app\widgets\Navigation->run()
+#8 /Volumes/Storage/code/PHP/doc/modules/admin/views/layouts/main.php(37): yii\base\Widget::widget()
+#9 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(325): require('/Volumes/Storag...')
+#10 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/Volumes/Storag...', Array)
+#11 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(382): yii\base\View->renderFile('/Volumes/Storag...', Array, Object(app\modules\admin\controllers\TableController))
+#12 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(368): yii\base\Controller->renderContent('\n<div id="w0" c...')
+#13 /Volumes/Storage/code/PHP/doc/modules/admin/controllers/TableController.php(19): yii\base\Controller->render('index', Array)
+#14 [internal function]: app\modules\admin\controllers\TableController->actionIndex()
+#15 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#16 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#17 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('', Array)
+#18 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('admin/table', Array)
+#19 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 /Volumes/Storage/code/PHP/doc/web/index.php(12): yii\base\Application->run()
+#21 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY093]: Invalid parameter number: :employee_id
+Failed to prepare SQL: SELECT "r".* FROM "role" "r" employee as e "e"."role_id =" "r"."id" WHERE e.id = :employee:id' in /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php:219
+Stack trace:
+#0 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php(816): yii\db\Command->prepare(true)
+#1 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /Volumes/Storage/code/PHP/doc/models/Role.php(49): yii\db\Command->queryAll()
+#3 /Volumes/Storage/code/PHP/doc/models/Role.php(24): app\models\Role::fetchByEmployee(1)
+#4 /Volumes/Storage/code/PHP/doc/widgets/Navigation.php(17): app\models\Role::checkEmployeeRoles(1, 'admin')
+#5 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Widget.php(96): app\widgets\Navigation->run()
+#6 /Volumes/Storage/code/PHP/doc/modules/admin/views/layouts/main.php(37): yii\base\Widget::widget()
+#7 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(325): require('/Volumes/Storag...')
+#8 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/Volumes/Storag...', Array)
+#9 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(382): yii\base\View->renderFile('/Volumes/Storag...', Array, Object(app\modules\admin\controllers\TableController))
+#10 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(368): yii\base\Controller->renderContent('\n<div id="w0" c...')
+#11 /Volumes/Storage/code/PHP/doc/modules/admin/controllers/TableController.php(19): yii\base\Controller->render('index', Array)
+#12 [internal function]: app\modules\admin\controllers\TableController->actionIndex()
+#13 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#14 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#15 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('', Array)
+#16 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('admin/table', Array)
+#17 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 /Volumes/Storage/code/PHP/doc/web/index.php(12): yii\base\Application->run()
+#19 {main}
+Additional Information:
+Array
+(
+    [0] => HY093
+    [1] => 0
+)
+
+2015-03-19 09:59:37 [::1][admin][-][info][application] $_COOKIE = [
+    'PPA_ID' => 'c04cdd2cd7ac176d6a25976c7ffe3aaf'
+    'webfx-tree-cookie-persistence' => 'wfxt-6 wfxt-4 wfxt-16 wfxt-18'
+    '_identity' => '[\"100\",\"test100key\",2592000]'
+    'PHPSESSID' => '98ad40f8dec7fd4e756aa954c308ae11'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 'admin'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PPA_ID=c04cdd2cd7ac176d6a25976c7ffe3aaf; webfx-tree-cookie-persistence=wfxt-6+wfxt-4+wfxt-16+wfxt-18; _identity=%5B%22100%22%2C%22test100key%22%2C2592000%5D; PHPSESSID=98ad40f8dec7fd4e756aa954c308ae11'
+    'PATH' => '/Library/PostgreSQL/9.3/bin/'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.5.17 mod_ssl/2.2.29 OpenSSL/0.9.8zc DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Volumes/Storage/code/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Volumes/Storage/code/PHP/doc/web/index.php'
+    'REMOTE_PORT' => '49708'
+    'REDIRECT_URL' => '/doc/web/admin/table'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/admin/table'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1426755577.81
+    'REQUEST_TIME' => 1426755577
+    'argv' => []
+    'argc' => 0
+]
+2015-03-19 09:59:46 [::1][admin][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42601]: Syntax error: 7 ERROR:  syntax error at or near "employee"
+LINE 1: SELECT "r".* FROM "role" "r" employee as e "e"."role_id =" "...
+                                     ^' in /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php:822
+Stack trace:
+#0 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php(822): PDOStatement->execute()
+#1 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /Volumes/Storage/code/PHP/doc/models/Role.php(49): yii\db\Command->queryAll()
+#3 /Volumes/Storage/code/PHP/doc/models/Role.php(24): app\models\Role::fetchByEmployee(1)
+#4 /Volumes/Storage/code/PHP/doc/widgets/Navigation.php(17): app\models\Role::checkEmployeeRoles(1, 'admin')
+#5 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Widget.php(96): app\widgets\Navigation->run()
+#6 /Volumes/Storage/code/PHP/doc/modules/admin/views/layouts/main.php(37): yii\base\Widget::widget()
+#7 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(325): require('/Volumes/Storag...')
+#8 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/Volumes/Storag...', Array)
+#9 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(382): yii\base\View->renderFile('/Volumes/Storag...', Array, Object(app\modules\admin\controllers\TableController))
+#10 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(368): yii\base\Controller->renderContent('\n<div id="w0" c...')
+#11 /Volumes/Storage/code/PHP/doc/modules/admin/controllers/TableController.php(19): yii\base\Controller->render('index', Array)
+#12 [internal function]: app\modules\admin\controllers\TableController->actionIndex()
+#13 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#14 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#15 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('', Array)
+#16 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('admin/table', Array)
+#17 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 /Volumes/Storage/code/PHP/doc/web/index.php(12): yii\base\Application->run()
+#19 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42601]: Syntax error: 7 ERROR:  syntax error at or near "employee"
+LINE 1: SELECT "r".* FROM "role" "r" employee as e "e"."role_id =" "...
+                                     ^
+The SQL being executed was: SELECT "r".* FROM "role" "r" employee as e "e"."role_id =" "r"."id" WHERE e.id = 1' in /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Schema.php:534
+Stack trace:
+#0 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php(837): yii\db\Schema->convertException(Object(PDOException), 'SELECT "r".* FR...')
+#1 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /Volumes/Storage/code/PHP/doc/models/Role.php(49): yii\db\Command->queryAll()
+#3 /Volumes/Storage/code/PHP/doc/models/Role.php(24): app\models\Role::fetchByEmployee(1)
+#4 /Volumes/Storage/code/PHP/doc/widgets/Navigation.php(17): app\models\Role::checkEmployeeRoles(1, 'admin')
+#5 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Widget.php(96): app\widgets\Navigation->run()
+#6 /Volumes/Storage/code/PHP/doc/modules/admin/views/layouts/main.php(37): yii\base\Widget::widget()
+#7 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(325): require('/Volumes/Storag...')
+#8 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/Volumes/Storag...', Array)
+#9 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(382): yii\base\View->renderFile('/Volumes/Storag...', Array, Object(app\modules\admin\controllers\TableController))
+#10 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(368): yii\base\Controller->renderContent('\n<div id="w0" c...')
+#11 /Volumes/Storage/code/PHP/doc/modules/admin/controllers/TableController.php(19): yii\base\Controller->render('index', Array)
+#12 [internal function]: app\modules\admin\controllers\TableController->actionIndex()
+#13 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#14 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#15 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('', Array)
+#16 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('admin/table', Array)
+#17 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 /Volumes/Storage/code/PHP/doc/web/index.php(12): yii\base\Application->run()
+#19 {main}
+Additional Information:
+Array
+(
+    [0] => 42601
+    [1] => 7
+    [2] => ERROR:  syntax error at or near "employee"
+LINE 1: SELECT "r".* FROM "role" "r" employee as e "e"."role_id =" "...
+                                     ^
+)
+
+2015-03-19 09:59:46 [::1][admin][-][info][application] $_COOKIE = [
+    'PPA_ID' => 'c04cdd2cd7ac176d6a25976c7ffe3aaf'
+    'webfx-tree-cookie-persistence' => 'wfxt-6 wfxt-4 wfxt-16 wfxt-18'
+    '_identity' => '[\"100\",\"test100key\",2592000]'
+    'PHPSESSID' => '98ad40f8dec7fd4e756aa954c308ae11'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 'admin'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PPA_ID=c04cdd2cd7ac176d6a25976c7ffe3aaf; webfx-tree-cookie-persistence=wfxt-6+wfxt-4+wfxt-16+wfxt-18; _identity=%5B%22100%22%2C%22test100key%22%2C2592000%5D; PHPSESSID=98ad40f8dec7fd4e756aa954c308ae11'
+    'PATH' => '/Library/PostgreSQL/9.3/bin/'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.5.17 mod_ssl/2.2.29 OpenSSL/0.9.8zc DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Volumes/Storage/code/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Volumes/Storage/code/PHP/doc/web/index.php'
+    'REMOTE_PORT' => '49719'
+    'REDIRECT_URL' => '/doc/web/admin/table'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/admin/table'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1426755586.62
+    'REQUEST_TIME' => 1426755586
+    'argv' => []
+    'argc' => 0
+]
+2015-03-19 10:00:04 [::1][admin][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42601]: Syntax error: 7 ERROR:  syntax error at or near "employee"
+LINE 1: SELECT "r".* FROM "role" "r" employee as e "e"."role_id =" "...
+                                     ^' in /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php:822
+Stack trace:
+#0 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php(822): PDOStatement->execute()
+#1 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /Volumes/Storage/code/PHP/doc/models/Role.php(49): yii\db\Command->queryAll()
+#3 /Volumes/Storage/code/PHP/doc/models/Role.php(24): app\models\Role::fetchByEmployee(1)
+#4 /Volumes/Storage/code/PHP/doc/widgets/Navigation.php(17): app\models\Role::checkEmployeeRoles(1, 'admin')
+#5 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Widget.php(96): app\widgets\Navigation->run()
+#6 /Volumes/Storage/code/PHP/doc/modules/admin/views/layouts/main.php(37): yii\base\Widget::widget()
+#7 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(325): require('/Volumes/Storag...')
+#8 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/Volumes/Storag...', Array)
+#9 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(382): yii\base\View->renderFile('/Volumes/Storag...', Array, Object(app\modules\admin\controllers\TableController))
+#10 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(368): yii\base\Controller->renderContent('\n<div id="w0" c...')
+#11 /Volumes/Storage/code/PHP/doc/modules/admin/controllers/TableController.php(19): yii\base\Controller->render('index', Array)
+#12 [internal function]: app\modules\admin\controllers\TableController->actionIndex()
+#13 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#14 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#15 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('', Array)
+#16 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('admin/table', Array)
+#17 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 /Volumes/Storage/code/PHP/doc/web/index.php(12): yii\base\Application->run()
+#19 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42601]: Syntax error: 7 ERROR:  syntax error at or near "employee"
+LINE 1: SELECT "r".* FROM "role" "r" employee as e "e"."role_id =" "...
+                                     ^
+The SQL being executed was: SELECT "r".* FROM "role" "r" employee as e "e"."role_id =" "r"."id" WHERE e.id = 1' in /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Schema.php:534
+Stack trace:
+#0 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php(837): yii\db\Schema->convertException(Object(PDOException), 'SELECT "r".* FR...')
+#1 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /Volumes/Storage/code/PHP/doc/models/Role.php(49): yii\db\Command->queryAll()
+#3 /Volumes/Storage/code/PHP/doc/models/Role.php(24): app\models\Role::fetchByEmployee(1)
+#4 /Volumes/Storage/code/PHP/doc/widgets/Navigation.php(17): app\models\Role::checkEmployeeRoles(1, 'admin')
+#5 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Widget.php(96): app\widgets\Navigation->run()
+#6 /Volumes/Storage/code/PHP/doc/modules/admin/views/layouts/main.php(37): yii\base\Widget::widget()
+#7 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(325): require('/Volumes/Storag...')
+#8 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/Volumes/Storag...', Array)
+#9 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(382): yii\base\View->renderFile('/Volumes/Storag...', Array, Object(app\modules\admin\controllers\TableController))
+#10 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(368): yii\base\Controller->renderContent('\n<div id="w0" c...')
+#11 /Volumes/Storage/code/PHP/doc/modules/admin/controllers/TableController.php(19): yii\base\Controller->render('index', Array)
+#12 [internal function]: app\modules\admin\controllers\TableController->actionIndex()
+#13 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#14 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#15 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('', Array)
+#16 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('admin/table', Array)
+#17 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 /Volumes/Storage/code/PHP/doc/web/index.php(12): yii\base\Application->run()
+#19 {main}
+Additional Information:
+Array
+(
+    [0] => 42601
+    [1] => 7
+    [2] => ERROR:  syntax error at or near "employee"
+LINE 1: SELECT "r".* FROM "role" "r" employee as e "e"."role_id =" "...
+                                     ^
+)
+
+2015-03-19 10:00:03 [::1][admin][-][info][application] $_COOKIE = [
+    'PPA_ID' => 'c04cdd2cd7ac176d6a25976c7ffe3aaf'
+    'webfx-tree-cookie-persistence' => 'wfxt-6 wfxt-4 wfxt-16 wfxt-18'
+    '_identity' => '[\"100\",\"test100key\",2592000]'
+    'PHPSESSID' => '98ad40f8dec7fd4e756aa954c308ae11'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 'admin'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PPA_ID=c04cdd2cd7ac176d6a25976c7ffe3aaf; webfx-tree-cookie-persistence=wfxt-6+wfxt-4+wfxt-16+wfxt-18; _identity=%5B%22100%22%2C%22test100key%22%2C2592000%5D; PHPSESSID=98ad40f8dec7fd4e756aa954c308ae11'
+    'PATH' => '/Library/PostgreSQL/9.3/bin/'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.5.17 mod_ssl/2.2.29 OpenSSL/0.9.8zc DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Volumes/Storage/code/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Volumes/Storage/code/PHP/doc/web/index.php'
+    'REMOTE_PORT' => '49730'
+    'REDIRECT_URL' => '/doc/web/admin/table'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/admin/table'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1426755603.79
+    'REQUEST_TIME' => 1426755603
+    'argv' => []
+    'argc' => 0
+]
+2015-03-19 10:02:14 [-][-][-][error][yii\console\Exception] exception 'yii\console\Exception' with message 'The step argument must be greater than 0.' in /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php:162
+Stack trace:
+#0 [internal function]: yii\console\controllers\BaseMigrateController->actionDown('m150318_072311')
+#1 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#2 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#3 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('down', Array)
+#4 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('down', Array)
+#5 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate/down', Array)
+#6 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate/down', Array)
+#7 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#8 /Volumes/Storage/code/PHP/doc/yii(23): yii\base\Application->run()
+#9 {main}
+2015-03-19 10:02:14 [-][-][-][info][application] $_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/r7/1r2px7ws4_98__gwbj4cy2100000gn/T/'
+    'EnvAgent_vars' => 'PATH'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.BhxsSzFAUo/Render'
+    'TERM_PROGRAM_VERSION' => '343.6'
+    'OLDPWD' => '/Users/dmitry'
+    'TERM_SESSION_ID' => '9F92EEE0-B816-44EE-9F4D-6A9F067146BC'
+    'USER' => 'dmitry'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.4MU9Fj7u2M/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x7:0x31'
+    'PATH' => '/Users/dmitry/Library/Application Support/GoodSync:/opt/local/bin:/opt/local/sbin:/Library/PostgreSQL/9.3/bin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'PWD' => '/volumes/storage/code/php/doc'
+    'LANG' => 'ru_RU.UTF-8'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '1'
+    'HOME' => '/Users/dmitry'
+    'LOGNAME' => 'dmitry'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1426755734.43
+    'REQUEST_TIME' => 1426755734
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate/down'
+        2 => 'm150318_072311'
+    ]
+    'argc' => 3
+]
+2015-03-19 10:07:47 [::1][admin][98ad40f8dec7fd4e756aa954c308ae11][error][yii\base\ErrorException:64] exception 'yii\base\ErrorException' with message 'Cannot use yii\bootstrap\Modal as Modal because the name is already in use' in /Volumes/Storage/code/PHP/doc/widgets/ConfirmModal.php:6
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-19 10:07:47 [::1][admin][98ad40f8dec7fd4e756aa954c308ae11][info][application] $_COOKIE = [
+    'PPA_ID' => 'c04cdd2cd7ac176d6a25976c7ffe3aaf'
+    'webfx-tree-cookie-persistence' => 'wfxt-6 wfxt-4 wfxt-16 wfxt-18'
+    '_identity' => '[\"100\",\"test100key\",2592000]'
+    'PHPSESSID' => '98ad40f8dec7fd4e756aa954c308ae11'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 'admin'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8888/doc/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PPA_ID=c04cdd2cd7ac176d6a25976c7ffe3aaf; webfx-tree-cookie-persistence=wfxt-6+wfxt-4+wfxt-16+wfxt-18; _identity=%5B%22100%22%2C%22test100key%22%2C2592000%5D; PHPSESSID=98ad40f8dec7fd4e756aa954c308ae11'
+    'PATH' => '/Library/PostgreSQL/9.3/bin/'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.5.17 mod_ssl/2.2.29 OpenSSL/0.9.8zc DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Volumes/Storage/code/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Volumes/Storage/code/PHP/doc/web/index.php'
+    'REMOTE_PORT' => '49847'
+    'REDIRECT_URL' => '/doc/web/admin/table'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/admin/table'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1426756067.46
+    'REQUEST_TIME' => 1426756067
+    'argv' => []
+    'argc' => 0
+]
+2015-03-19 10:08:18 [::1][admin][-][error][yii\base\ErrorException:4096] exception 'yii\base\ErrorException' with message 'Object of class app\forms\UserForm could not be converted to string' in /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/helpers/BaseHtml.php:142
+Stack trace:
+#0 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/helpers/BaseHtml.php(142): yii\base\ErrorHandler->handleError(4096, 'Object of class...', '/Volumes/Storag...', 142, Array)
+#1 /Volumes/Storage/code/PHP/doc/widgets/Modal.php(75): yii\helpers\BaseHtml::tag('div', Object(app\forms\UserForm), Array)
+#2 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Widget.php(96): app\widgets\Modal->run()
+#3 /Volumes/Storage/code/PHP/doc/widgets/ConfirmModal.php(21): yii\base\Widget::widget(Array)
+#4 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Widget.php(96): app\widgets\ConfirmModal->run()
+#5 /Volumes/Storage/code/PHP/doc/modules/admin/views/layouts/main.php(10): yii\base\Widget::widget(Array)
+#6 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(325): require('/Volumes/Storag...')
+#7 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/Volumes/Storag...', Array)
+#8 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(382): yii\base\View->renderFile('/Volumes/Storag...', Array, Object(app\modules\admin\controllers\TableController))
+#9 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(368): yii\base\Controller->renderContent('\n<div id="w0" c...')
+#10 /Volumes/Storage/code/PHP/doc/modules/admin/controllers/TableController.php(19): yii\base\Controller->render('index', Array)
+#11 [internal function]: app\modules\admin\controllers\TableController->actionIndex()
+#12 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#13 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#14 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('', Array)
+#15 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('admin/table', Array)
+#16 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 /Volumes/Storage/code/PHP/doc/web/index.php(12): yii\base\Application->run()
+#18 {main}
+2015-03-19 10:08:18 [::1][admin][-][info][application] $_COOKIE = [
+    'PPA_ID' => 'c04cdd2cd7ac176d6a25976c7ffe3aaf'
+    'webfx-tree-cookie-persistence' => 'wfxt-6 wfxt-4 wfxt-16 wfxt-18'
+    '_identity' => '[\"100\",\"test100key\",2592000]'
+    'PHPSESSID' => '98ad40f8dec7fd4e756aa954c308ae11'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 'admin'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8888/doc/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PPA_ID=c04cdd2cd7ac176d6a25976c7ffe3aaf; webfx-tree-cookie-persistence=wfxt-6+wfxt-4+wfxt-16+wfxt-18; _identity=%5B%22100%22%2C%22test100key%22%2C2592000%5D; PHPSESSID=98ad40f8dec7fd4e756aa954c308ae11'
+    'PATH' => '/Library/PostgreSQL/9.3/bin/'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.5.17 mod_ssl/2.2.29 OpenSSL/0.9.8zc DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Volumes/Storage/code/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Volumes/Storage/code/PHP/doc/web/index.php'
+    'REMOTE_PORT' => '49849'
+    'REDIRECT_URL' => '/doc/web/admin/table'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/admin/table'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1426756098.47
+    'REQUEST_TIME' => 1426756098
+    'argv' => []
+    'argc' => 0
+]
+2015-03-19 10:08:38 [::1][admin][-][error][yii\base\ErrorException:4096] exception 'yii\base\ErrorException' with message 'Object of class app\forms\UserForm could not be converted to string' in /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/helpers/BaseHtml.php:142
+Stack trace:
+#0 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/helpers/BaseHtml.php(142): yii\base\ErrorHandler->handleError(4096, 'Object of class...', '/Volumes/Storag...', 142, Array)
+#1 /Volumes/Storage/code/PHP/doc/widgets/Modal.php(75): yii\helpers\BaseHtml::tag('div', Object(app\forms\UserForm), Array)
+#2 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Widget.php(96): app\widgets\Modal->run()
+#3 /Volumes/Storage/code/PHP/doc/widgets/ConfirmModal.php(21): yii\base\Widget::widget(Array)
+#4 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Widget.php(96): app\widgets\ConfirmModal->run()
+#5 /Volumes/Storage/code/PHP/doc/modules/admin/views/layouts/main.php(10): yii\base\Widget::widget(Array)
+#6 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(325): require('/Volumes/Storag...')
+#7 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/Volumes/Storag...', Array)
+#8 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(382): yii\base\View->renderFile('/Volumes/Storag...', Array, Object(app\modules\admin\controllers\TableController))
+#9 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(368): yii\base\Controller->renderContent('\n<div id="w0" c...')
+#10 /Volumes/Storage/code/PHP/doc/modules/admin/controllers/TableController.php(19): yii\base\Controller->render('index', Array)
+#11 [internal function]: app\modules\admin\controllers\TableController->actionIndex()
+#12 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#13 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#14 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('', Array)
+#15 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('admin/table', Array)
+#16 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 /Volumes/Storage/code/PHP/doc/web/index.php(12): yii\base\Application->run()
+#18 {main}
+2015-03-19 10:08:38 [::1][admin][-][info][application] $_COOKIE = [
+    'PPA_ID' => 'c04cdd2cd7ac176d6a25976c7ffe3aaf'
+    'webfx-tree-cookie-persistence' => 'wfxt-6 wfxt-4 wfxt-16 wfxt-18'
+    '_identity' => '[\"100\",\"test100key\",2592000]'
+    'PHPSESSID' => '98ad40f8dec7fd4e756aa954c308ae11'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 'admin'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8888/doc/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PPA_ID=c04cdd2cd7ac176d6a25976c7ffe3aaf; webfx-tree-cookie-persistence=wfxt-6+wfxt-4+wfxt-16+wfxt-18; _identity=%5B%22100%22%2C%22test100key%22%2C2592000%5D; PHPSESSID=98ad40f8dec7fd4e756aa954c308ae11'
+    'PATH' => '/Library/PostgreSQL/9.3/bin/'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.5.17 mod_ssl/2.2.29 OpenSSL/0.9.8zc DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Volumes/Storage/code/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Volumes/Storage/code/PHP/doc/web/index.php'
+    'REMOTE_PORT' => '49851'
+    'REDIRECT_URL' => '/doc/web/admin/table'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/admin/table'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1426756118.13
+    'REQUEST_TIME' => 1426756118
+    'argv' => []
+    'argc' => 0
+]
+2015-03-19 10:48:38 [::1][admin][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "admin/statistic".' in /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Module.php:461
+Stack trace:
+#0 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('admin/statistic', Array)
+#1 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Volumes/Storage/code/PHP/doc/web/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/web/Application.php:95
+Stack trace:
+#0 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Volumes/Storage/code/PHP/doc/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2015-03-19 10:48:38 [::1][admin][-][info][application] $_COOKIE = [
+    'PPA_ID' => 'c04cdd2cd7ac176d6a25976c7ffe3aaf'
+    'webfx-tree-cookie-persistence' => 'wfxt-6 wfxt-4 wfxt-16 wfxt-18'
+    '_identity' => '[\"100\",\"test100key\",2592000]'
+    'PHPSESSID' => '98ad40f8dec7fd4e756aa954c308ae11'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 'admin'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8888/doc/web/admin/table'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PPA_ID=c04cdd2cd7ac176d6a25976c7ffe3aaf; webfx-tree-cookie-persistence=wfxt-6+wfxt-4+wfxt-16+wfxt-18; _identity=%5B%22100%22%2C%22test100key%22%2C2592000%5D; PHPSESSID=98ad40f8dec7fd4e756aa954c308ae11'
+    'PATH' => '/Library/PostgreSQL/9.3/bin/'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.5.17 mod_ssl/2.2.29 OpenSSL/0.9.8zc DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Volumes/Storage/code/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Volumes/Storage/code/PHP/doc/web/index.php'
+    'REMOTE_PORT' => '50802'
+    'REDIRECT_URL' => '/doc/web/admin/statistic'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/admin/statistic'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1426758518.07
+    'REQUEST_TIME' => 1426758518
+    'argv' => []
+    'argc' => 0
+]

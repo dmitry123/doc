@@ -3,9 +3,9 @@
 namespace app\forms;
 
 use app\core\FormModel;
-use app\models\Document;
+use app\models\History;
 
-class DocumentForm extends FormModel {
+class HistoryForm extends FormModel {
 
 	/**
 	 * Override that method to return additional rule configuration, like
@@ -13,7 +13,7 @@ class DocumentForm extends FormModel {
 	 * @return array - Array with rule configuration
 	 */
 	public function backward() {
-		return Document::getRules([]);
+		return History::getRules([]);
 	}
 
 	/**
@@ -30,64 +30,60 @@ class DocumentForm extends FormModel {
 				"label" => "Идентификатор",
 				"type" => "number"
 			],
-			"name" => [
-				"label" => "Название",
-				"type" => "text",
+			"original_id" => [
+				"label" => "Оригинал документа",
+				"type" => "DropDown",
+				"table" => [
+					"name" => "document",
+					"key" => "id",
+					"value" => "name"
+				],
+				"options" => [
+					"disabled" => "true"
+				],
 				"rules" => "required"
 			],
-			"path" => [
-				"label" => "Путь",
-				"type" => "text"
+			"current_id" => [
+				"label" => "Текущий документ",
+				"type" => "DropDown",
+				"table" => [
+					"name" => "document",
+					"key" => "id",
+					"value" => "name"
+				],
+				"options" => [
+					"disabled" => "true"
+				],
+				"rules" => "required"
 			],
 			"employee_id" => [
 				"label" => "Сотрудник",
 				"type" => "text",
-				"rules" => "required",
+				"options" => [
+					"disabled" => "true"
+				],
 				"table" => [
 					"name" => "employee",
 					"format" => "%{surname} %{name} %{patronymic}",
 					"key" => "id",
 					"value" => "surname, name, patronymic"
-				]
-			],
-			"upload_date" => [
-				"label" => "Дата загрузки",
-				"type" => "text"
-			],
-			"parent_id" => [
-				"label" => "Родитель",
-				"type" => "number"
-			],
-			"type" => [
-				"label" => "Тип",
-				"type" => "DocumentType",
+				],
 				"rules" => "required"
 			],
-			"status" => [
-				"label" => "Статус документа",
-				"type" => "DocumentStatus",
+			"date" => [
+				"label" => "Дата изменения",
+				"type" => "date",
+				"options" => [
+					"disabled" => "true"
+				],
 				"rules" => "required"
-			],
-			"category_id" => [
-				"label" => "Категория",
-				"type" => "DropDown",
-				"rules" => "required",
-				"table" => [
-					"name" => "document_category",
-					"key" => "id",
-					"value" => "name"
-				]
 			]
 		];
 	}
 
 	public $id;
-	public $name;
-	public $path;
+	public $original_id;
+	public $current_id;
 	public $employee_id;
-	public $upload_date;
-	public $parent_id;
-	public $type;
-	public $status;
-	public $category_id;
+	public $date;
 }

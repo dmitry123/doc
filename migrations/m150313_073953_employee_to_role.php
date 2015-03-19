@@ -7,10 +7,10 @@ class m150313_073953_employee_to_role extends Migration {
 	public function safeUp() {
 
 		$sql = <<< SQL
-			CREATE TABLE "role_to_employee" (
+			CREATE TABLE "core"."role_to_employee" (
 			  "id" SERIAL PRIMARY KEY,
-			  "employee_id" INT REFERENCES "employee"("id"),
-			  "role_id" VARCHAR(20) REFERENCES "role"("id")
+			  "employee_id" INT REFERENCES "core"."employee"("id"),
+			  "role_id" VARCHAR(20) REFERENCES "core"."role"("id")
 			);
 SQL;
 
@@ -22,7 +22,7 @@ SQL;
 	public function safeDown() {
 
 		$sql = <<< SQL
-			DROP TABLE "role_to_employee" CASCADE;
+			DROP TABLE "core"."role_to_employee" CASCADE;
 SQL;
 
 		foreach (explode(";", $sql) as $query) {
