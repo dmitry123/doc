@@ -34815,3 +34815,109 @@ $_SERVER = [
     'argv' => []
     'argc' => 0
 ]
+2015-03-19 12:27:10 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "user" does not exist
+LINE 1: SELECT * FROM "user"
+                      ^' in /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php:822
+Stack trace:
+#0 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php(822): PDOStatement->execute()
+#1 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Query.php(206): yii\db\Command->queryAll()
+#3 /Volumes/Storage/code/PHP/doc/core/TableProvider.php(42): yii\db\Query->all()
+#4 /Volumes/Storage/code/PHP/doc/widgets/Table.php(81): app\core\TableProvider->getRows()
+#5 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Widget.php(96): app\widgets\Table->run()
+#6 /Volumes/Storage/code/PHP/doc/modules/admin/widgets/Table.php(52): yii\base\Widget::widget(Array)
+#7 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Widget.php(96): app\modules\admin\widgets\Table->run()
+#8 /Volumes/Storage/code/PHP/doc/modules/admin/views/table/index.php(19): yii\base\Widget::widget(Array)
+#9 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(325): require('/Volumes/Storag...')
+#10 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/Volumes/Storag...', Array)
+#11 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/Volumes/Storag...', Array, Object(app\modules\admin\controllers\TableController))
+#12 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(367): yii\base\View->render('index', Array, Object(app\modules\admin\controllers\TableController))
+#13 /Volumes/Storage/code/PHP/doc/modules/admin/controllers/TableController.php(22): yii\base\Controller->render('index', Array)
+#14 [internal function]: app\modules\admin\controllers\TableController->actionIndex()
+#15 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#16 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#17 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('', Array)
+#18 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('admin/table', Array)
+#19 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 /Volumes/Storage/code/PHP/doc/web/index.php(12): yii\base\Application->run()
+#21 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "user" does not exist
+LINE 1: SELECT * FROM "user"
+                      ^
+The SQL being executed was: SELECT * FROM "user"' in /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Schema.php:534
+Stack trace:
+#0 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php(837): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM "...')
+#1 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Query.php(206): yii\db\Command->queryAll()
+#3 /Volumes/Storage/code/PHP/doc/core/TableProvider.php(42): yii\db\Query->all()
+#4 /Volumes/Storage/code/PHP/doc/widgets/Table.php(81): app\core\TableProvider->getRows()
+#5 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Widget.php(96): app\widgets\Table->run()
+#6 /Volumes/Storage/code/PHP/doc/modules/admin/widgets/Table.php(52): yii\base\Widget::widget(Array)
+#7 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Widget.php(96): app\modules\admin\widgets\Table->run()
+#8 /Volumes/Storage/code/PHP/doc/modules/admin/views/table/index.php(19): yii\base\Widget::widget(Array)
+#9 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(325): require('/Volumes/Storag...')
+#10 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/Volumes/Storag...', Array)
+#11 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/Volumes/Storag...', Array, Object(app\modules\admin\controllers\TableController))
+#12 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(367): yii\base\View->render('index', Array, Object(app\modules\admin\controllers\TableController))
+#13 /Volumes/Storage/code/PHP/doc/modules/admin/controllers/TableController.php(22): yii\base\Controller->render('index', Array)
+#14 [internal function]: app\modules\admin\controllers\TableController->actionIndex()
+#15 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#16 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#17 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('', Array)
+#18 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('admin/table', Array)
+#19 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 /Volumes/Storage/code/PHP/doc/web/index.php(12): yii\base\Application->run()
+#21 {main}
+Additional Information:
+Array
+(
+    [0] => 42P01
+    [1] => 7
+    [2] => ERROR:  relation "user" does not exist
+LINE 1: SELECT * FROM "user"
+                      ^
+)
+
+2015-03-19 12:27:09 [::1][-][-][info][application] $_COOKIE = [
+    'PPA_ID' => 'c04cdd2cd7ac176d6a25976c7ffe3aaf'
+    'webfx-tree-cookie-persistence' => 'wfxt-6 wfxt-4 wfxt-16 wfxt-18'
+    '_identity' => '[\"100\",\"test100key\",2592000]'
+    'PHPSESSID' => '8f600616031a6900effa31169ab84930'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8888/doc/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PPA_ID=c04cdd2cd7ac176d6a25976c7ffe3aaf; webfx-tree-cookie-persistence=wfxt-6+wfxt-4+wfxt-16+wfxt-18; _identity=%5B%22100%22%2C%22test100key%22%2C2592000%5D; PHPSESSID=8f600616031a6900effa31169ab84930'
+    'PATH' => '/Library/PostgreSQL/9.3/bin/'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.5.17 mod_ssl/2.2.29 OpenSSL/0.9.8zc DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Volumes/Storage/code/PHP'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Volumes/Storage/code/PHP/doc/web/index.php'
+    'REMOTE_PORT' => '51125'
+    'REDIRECT_URL' => '/doc/web/admin/table'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/admin/table'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1426764429.94
+    'REQUEST_TIME' => 1426764429
+    'argv' => []
+    'argc' => 0
+]

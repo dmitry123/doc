@@ -6,6 +6,10 @@ use app\core\ActiveRecord;
 
 class Role extends ActiveRecord {
 
+	public static function tableName() {
+		return "core.role";
+	}
+
 	/**
 	 * @param null $class
 	 * @return Role

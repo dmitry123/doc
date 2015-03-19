@@ -9,12 +9,8 @@ use yii\web\IdentityInterface;
 
 class User extends TableProvider implements IdentityInterface {
 
-	/**
-	 * Get table name for current class
-	 * @return string - Name of current table
-	 */
 	public static function tableName() {
-		return "user";
+		return "core.user";
 	}
 
 	/**

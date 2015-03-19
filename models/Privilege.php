@@ -6,6 +6,10 @@ use app\core\ActiveRecord;
 
 class Privilege extends ActiveRecord {
 
+	public static function tableName() {
+		return "core.privilege";
+	}
+
 	/**
 	 * Fetch all privileges for one role
 	 * @param int $roleId - Role identification number
