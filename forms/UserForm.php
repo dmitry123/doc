@@ -4,6 +4,7 @@ namespace app\forms;
 
 use app\core\FormModel;
 use app\models\User;
+use yii\helpers\ArrayHelper;
 
 class UserForm extends FormModel {
 
@@ -16,9 +17,9 @@ class UserForm extends FormModel {
 	 * @return array attribute values (name => value).
 	 */
 	public function getAttributes($names = null, $except = []) {
-		return parent::getAttributes($names, [
+		return parent::getAttributes($names, ArrayHelper::merge($except, [
 			"password2", "register_date", "access_token"
-		]);
+		]));
 	}
 
 	/**
@@ -74,6 +75,10 @@ class UserForm extends FormModel {
 				"label" => "Дата регистрации",
 				"type" => "text",
 				"rules" => "safe"
+			],
+			"access_token" => [
+				"label" => "Ключ доступа",
+				"type" => "hidden"
 			]
 		];
 	}

@@ -14,8 +14,7 @@ class Postgres extends Object {
 	 * @return array|\yii\db\ActiveRecord[]
 	 */
 	public static function findColumnNamesAndTypes($tableName, $tableSchema = "public") {
-		$rows = (new Query())
-			->select("column_name as name, data_type as type")
+		$rows = (new Query())->select("column_name as name, data_type as type")
 			->from("information_schema.columns")
 			->where("table_schema = :table_schema AND table_name = :table_name", [
 				":table_schema" => $tableSchema,

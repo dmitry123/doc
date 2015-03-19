@@ -55,11 +55,11 @@ class User extends TableProvider implements IdentityInterface {
 	public function findByLoginAndPassword($login, $password) {
 		$row = static::find()
 			->select("*")
-			->from("user")
-			->where("lower(login) = :login")
-			->andWhere("password = :password")
-			->addParams([
-				":login" => strtolower($login),
+			->from("core.user")
+			->where("lower(login) = :login", [
+				":login" => strtolower($login)
+			])
+			->andWhere("password = :password", [
 				":password" => $password
 			])->one();
 		if ($row !== false) {
@@ -77,7 +77,7 @@ class User extends TableProvider implements IdentityInterface {
 	public function findByLogin($login) {
 		$row = static::find()
 			->select("*")
-			->from("user")
+			->from("core.user")
 			->where("login = :login")
 			->addParams([
 				":login" => $login

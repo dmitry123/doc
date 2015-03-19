@@ -7,7 +7,7 @@ class m150305_142956_database_entry extends Migration {
 	public function safeUp() {
 		$sql = <<< SQL
 
-			CREATE SCHEMA core;
+			CREATE SCHEMA core
 
 			CREATE TABLE "core"."user" (
 			  "id" SERIAL PRIMARY KEY,
@@ -121,6 +121,7 @@ SQL;
 			DROP TABLE "doc"."log" CASCADE;
 			DROP TABLE "doc"."history" CASCADE;
 			DROP TABLE "doc"."document" CASCADE;
+			DROP SCHEMA "doc";
 			DROP TABLE "core"."employee" CASCADE;
 			DROP TABLE "core"."phone" CASCADE;
 			DROP TABLE "core"."department" CASCADE;
@@ -129,6 +130,7 @@ SQL;
 			DROP TABLE "core"."privilege" CASCADE;
 			DROP TABLE "core"."role" CASCADE;
 			DROP TABLE "core"."user" CASCADE;
+			DROP SCHEMA "core";
 SQL;
 		foreach (explode(";", $sql) as $s) {
 			$this->execute($s);

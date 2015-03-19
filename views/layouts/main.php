@@ -42,6 +42,19 @@ app\assets\SiteAsset::register($this);
 		</div>
 	</div>
 </div>
+<?= \app\widgets\ConfirmModal::widget([
+	"id" => "confirm-modal",
+	"buttons" => [
+		"confirm-button" => [
+			"text" => "Подтвердить"
+		]
+	],
+	"body" => \yii\helpers\Html::tag("div", "", [
+		"class" => "confirm-modal-content"
+	]),
+	"title" => "Подтвердить действие?"
+]); ?>
+<?= \app\widgets\ConfirmModal::widget(); ?>
 <?php $this->endBody() ?>
 </body>
 </html>

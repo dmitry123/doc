@@ -12,7 +12,7 @@ use yii\web\View;
 	<div class="panel-body">
 		<ul class="nav nav-pills nav-stacked table-list">
 			<? foreach ($self->list as $key => $table): ?>
-				<li role="presentation" data-table="<?= $key ?>">
+				<li role="presentation" data-table="<?= $table["table"] ?>">
 					<a href="javascript:void(0)">
 						<span class="glyphicon glyphicon-unchecked"></span>
 						<span>&nbsp;&nbsp;<?= $table["name"] ?></span>

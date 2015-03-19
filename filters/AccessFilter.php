@@ -12,11 +12,6 @@ class AccessFilter extends ActionFilter {
 
 	/**
 	 * @var array - Array with actions rules, where every action can contains next keys:
-	 *  + 'on' - Array with allowed modes (default - full access denied):
-	 *  + + 'guest' - Only for guests
-	 *  + + 'user' - Only for users
-	 *  + + 'employee' - Only for employees
-	 *  + + 'full' - Full access for every class
 	 *  + 'privileges' - Array with necessary employee's privileges (require 'employee' mode)
 	 *  + 'roles' - Array with necessary employee's roles (require 'employee' mode)
 	 */
@@ -26,7 +21,7 @@ class AccessFilter extends ActionFilter {
 	 * @var bool - That flag will be returned if you havn't declared rule for action, by
 	 * 	default everything is allowed
 	 */
-	public $deny = true;
+	public $deny = false;
 
 	/**
 	 * This method is invoked right before an action is to be executed (after all possible filters), you may override
@@ -35,10 +30,11 @@ class AccessFilter extends ActionFilter {
 	 * @return boolean - Whether the action should continue to be executed.
 	 */
 	public function beforeAction($action) {
-		if (!isset($this->rules[$action->id])) {
-			return $this->deny;
+		if (isset($this->rules[$action->id])) {
+			$rule = $this->rules[$action->id];
+		} else {
+			$rule = $this->rules;
 		}
-		$rule = $this->rules[$action->id];
 		if (!\Yii::$app->getUser()->getIsGuest()) {
 			$user = \Yii::$app->getUser()->getIdentity();
 		} else {
@@ -48,49 +44,38 @@ class AccessFilter extends ActionFilter {
 			$employee = Employee::model()->findOne([
 				"user_id" => \Yii::$app->getUser()->getIdentity()->{"id"}
 			]);
-			if ($employee != null) {
-				$roles = Role::fetchByEmployee($employee->{"id"});
-			}
 		} else {
 			$employee = null;
 		}
-		if (!isset($roles)) {
-			$roles = [];
+		if ($employee == null && isset($rule["roles"])) {
+			return $this->accessDenied(false);
 		}
-		if ($employee != null) {
-			$privileges = Privilege::fetchByEmployee($employee->{"id"});
-		} else {
-			$privileges = [];
-		}
-		if (isset($rule["on"])) {
-			$mode = $rule["on"];
-			$r = false;
-			if (in_array("employee", $mode)) {
-				$r = $employee != null;
-			} else if (in_array("user", $mode)) {
-				$r = $user != null;
-			} else if (in_array("guest", $mode)) {
-				$r = true;
-			}
-			if (!$r) {
-				return false;
+		if (isset($rule["roles"])) {
+			if (!Role::checkEmployeeAccess($employee->{"id"}, $rule["roles"])) {
+				return $this->accessDenied(false);
 			}
 		}
-		foreach ($rule["roles"] as $role) {
-			foreach ($roles as $r) {
-				if ($r["id"] != $role) {
-					return false;
-				}
-			}
+		if ($employee == null && isset($rule["privileges"])) {
+			return $this->accessDenied(false);
 		}
-		foreach ($rule["privileges"] as $privilege) {
-			foreach ($privileges as $p) {
-				if ($p["id"] != $privilege) {
-					return false;
-				}
+		if (isset($rule["privileges"])) {
+			if (!Privilege::checkEmployeeAccess($employee->{"id"}, $rule["privileges"])) {
+				return $this->accessDenied(false);
 			}
 		}
 		return true;
+	}
+
+	/**
+	 * Redirect user to home if access denied
+	 * @param bool $result - Filter access result
+	 * @return bool - False on access denied
+	 */
+	private function accessDenied($result) {
+		if (!$result) {
+			\Yii::$app->controller->goHome();
+		}
+		return $result;
 	}
 
 	/**

@@ -2,11 +2,9 @@
 
 namespace app\modules\admin\widgets;
 
-use app\core\ActiveRecord;
 use app\core\FormModel;
 use app\core\Postgres;
 use app\core\Widget;
-use yii\helpers\Html;
 use yii\helpers\Inflector;
 
 class TableView extends Widget {
@@ -20,43 +18,43 @@ class TableView extends Widget {
 	 * @var array - List with tables to display
 	 */
 	public $list = [
-		"department" => [
+		"core.department" => [
 			"name" => "Кафедры"
 		],
-		"document" => [
+		"doc.document" => [
 			"name" => "Документы"
 		],
-		"document_category" => [
+		"doc.document_category" => [
 			"name" => "Категории"
 		],
-		"employee" => [
+		"core.employee" => [
 			"name" => "Сотрудники"
 		],
-		"history" => [
+		"doc.history" => [
 			"name" => "История"
 		],
-		"institute" => [
+		"core.institute" => [
 			"name" => "Институты"
 		],
-		"log" => [
+		"doc.log" => [
 			"name" => "Логи"
 		],
-		"phone" => [
+		"core.phone" => [
 			"name" => "Телефоны"
 		],
-		"privilege" => [
+		"core.privilege" => [
 			"name" => "Привилегии"
 		],
-		"role" => [
+		"core.role" => [
 			"name" => "Роли"
 		],
-		"template" => [
+		"doc.template" => [
 			"name" => "Шаблоны"
 		],
-		"template_element" => [
+		"doc.template_element" => [
 			"name" => "Элементы"
 		],
-		"user" => [
+		"core.user" => [
 			"name" => "Пользователи"
 		]
 	];
@@ -66,8 +64,10 @@ class TableView extends Widget {
 	 */
 	public function run() {
 		foreach ($this->list as $key => &$table) {
-			$table["info"] = Postgres::findColumnNamesAndTypes($key);
-			$class = "app\\forms\\".Inflector::id2camel($key)."form";
+			$this->parseKey($key, $t, $s);
+			$table["info"] = Postgres::findColumnNamesAndTypes($t, $s);
+			$table["table"] = $t;
+			$class = "app\\forms\\".Inflector::id2camel($t, "_")."form";
 			if (!class_exists($class)) {
 				continue;
 			}
@@ -87,5 +87,22 @@ class TableView extends Widget {
 		return $this->render("TableView", [
 			"self" => $this
 		]);
+	}
+
+	/**
+	 * Parse table name to fetch table and schema from key
+	 * @param string $key - Original key name
+	 * @param string $table - Name of table
+	 * @param string $schema - Name of schema
+	 */
+	public function parseKey($key, &$table, &$schema) {
+		$s = explode(".", $key);
+		if (count($s) > 1) {
+			$table = $s[1];
+			$schema = $s[0];
+		} else {
+			$table = $s[0];
+			$schema = "public";
+		}
 	}
 }

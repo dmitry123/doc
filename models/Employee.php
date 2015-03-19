@@ -9,4 +9,5 @@ class Employee extends ActiveRecord {
 	public static function tableName() {
 		return "core.employee";
 	}
+	
 }
