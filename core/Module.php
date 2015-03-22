@@ -18,4 +18,9 @@ class Module extends \yii\base\Module {
 	 * @var array - Allowed roles for that module
 	 */
 	public $roles = null;
+
+	/**
+	 * @var string - Module entry url (relative path without web)
+	 */
+	public $url = null;
 }

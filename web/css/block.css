@@ -20,7 +20,7 @@ html, body {
 
 /* Construct centered main block for that layout */
 .page-block {
-    width: 625px;
+    width: 650px;
     margin: auto;
     background-color: #f5f5f5;
     border-radius: 7px;
@@ -101,6 +101,10 @@ button:active, button .active {
 /* Default color on icon hover */
 .module-cell:hover .module-icon {
     color: #146fab;
+}
+
+.module-cell:hover .module-icon-wrapper[data-error='not-implemented'] .module-icon {
+    color: #d8534f;
 }
 
 /* Hr fixes for employee info */

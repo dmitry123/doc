@@ -53,7 +53,7 @@ class EmployeeForm extends FormModel {
 				"type" => "DropDown",
 				"rules" => "required",
 				"table" => [
-					"name" => "role",
+					"name" => "core.role",
 					"key" => "id",
 					"value" => "name"
 				]
@@ -68,7 +68,7 @@ class EmployeeForm extends FormModel {
 				"type" => "DropDown",
 				"rules" => "required",
 				"table" => [
-					"name" => "department",
+					"name" => "core.department",
 					"key" => "id",
 					"value" => "name"
 				]

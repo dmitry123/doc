@@ -37831,3 +37831,630 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1427021186.483
     'REQUEST_TIME' => 1427021186
 ]
+2015-03-23 01:31:25 [127.0.0.1][system][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: options' in D:\hosts\doc\views\site\module.php:12
+Stack trace:
+#0 D:\hosts\doc\views\site\module.php(12): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\hosts\doc\vi...', 12, Array)
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\hosts\doc\vi...')
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\hosts\doc\vi...', Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\hosts\doc\vi...', Array, Object(app\controllers\SiteController))
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('module', Array, Object(app\controllers\SiteController))
+#5 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render('module', Array)
+#6 D:\hosts\doc\controllers\SiteController.php(28): app\core\Controller->render2('block', 'module', Array)
+#7 [internal function]: app\controllers\SiteController->actionIndex()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-03-23 01:31:25 [127.0.0.1][system][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'lbpqas7emd7h2c5b5rd0df5k74'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 'system'
+    'USER_ID' => 1
+    'USER_LOGIN' => 'system'
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=lbpqas7emd7h2c5b5rd0df5k74'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/'
+    'SERVER_ADMIN' => 'dmitry123@inbox.com'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '60281'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1427059885.801
+    'REQUEST_TIME' => 1427059885
+]
+2015-03-23 01:31:39 [127.0.0.1][system][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: url' in D:\hosts\doc\views\site\module.php:13
+Stack trace:
+#0 D:\hosts\doc\views\site\module.php(13): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\hosts\doc\vi...', 13, Array)
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\hosts\doc\vi...')
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\hosts\doc\vi...', Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\hosts\doc\vi...', Array, Object(app\controllers\SiteController))
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('module', Array, Object(app\controllers\SiteController))
+#5 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render('module', Array)
+#6 D:\hosts\doc\controllers\SiteController.php(28): app\core\Controller->render2('block', 'module', Array)
+#7 [internal function]: app\controllers\SiteController->actionIndex()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-03-23 01:31:39 [127.0.0.1][system][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'lbpqas7emd7h2c5b5rd0df5k74'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 'system'
+    'USER_ID' => 1
+    'USER_LOGIN' => 'system'
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=lbpqas7emd7h2c5b5rd0df5k74'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/'
+    'SERVER_ADMIN' => 'dmitry123@inbox.com'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '60284'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1427059899.509
+    'REQUEST_TIME' => 1427059899
+]
+2015-03-23 01:31:44 [127.0.0.1][system][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: url' in D:\hosts\doc\views\site\module.php:13
+Stack trace:
+#0 D:\hosts\doc\views\site\module.php(13): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\hosts\doc\vi...', 13, Array)
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\hosts\doc\vi...')
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\hosts\doc\vi...', Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\hosts\doc\vi...', Array, Object(app\controllers\SiteController))
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('module', Array, Object(app\controllers\SiteController))
+#5 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render('module', Array)
+#6 D:\hosts\doc\controllers\SiteController.php(28): app\core\Controller->render2('block', 'module', Array)
+#7 [internal function]: app\controllers\SiteController->actionIndex()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-03-23 01:31:44 [127.0.0.1][system][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'lbpqas7emd7h2c5b5rd0df5k74'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 'system'
+    'USER_ID' => 1
+    'USER_LOGIN' => 'system'
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=lbpqas7emd7h2c5b5rd0df5k74'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/'
+    'SERVER_ADMIN' => 'dmitry123@inbox.com'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '60285'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1427059904.9
+    'REQUEST_TIME' => 1427059904
+]
+2015-03-23 01:32:03 [127.0.0.1][system][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: url' in D:\hosts\doc\views\site\module.php:13
+Stack trace:
+#0 D:\hosts\doc\views\site\module.php(13): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\hosts\doc\vi...', 13, Array)
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\hosts\doc\vi...')
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\hosts\doc\vi...', Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\hosts\doc\vi...', Array, Object(app\controllers\SiteController))
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('module', Array, Object(app\controllers\SiteController))
+#5 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render('module', Array)
+#6 D:\hosts\doc\controllers\SiteController.php(28): app\core\Controller->render2('block', 'module', Array)
+#7 [internal function]: app\controllers\SiteController->actionIndex()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-03-23 01:32:03 [127.0.0.1][system][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'lbpqas7emd7h2c5b5rd0df5k74'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 'system'
+    'USER_ID' => 1
+    'USER_LOGIN' => 'system'
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=lbpqas7emd7h2c5b5rd0df5k74'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/'
+    'SERVER_ADMIN' => 'dmitry123@inbox.com'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '60304'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1427059923.279
+    'REQUEST_TIME' => 1427059923
+]
+2015-03-23 01:34:26 [127.0.0.1][system][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: url' in D:\hosts\doc\views\site\module.php:13
+Stack trace:
+#0 D:\hosts\doc\views\site\module.php(13): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\hosts\doc\vi...', 13, Array)
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\hosts\doc\vi...')
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\hosts\doc\vi...', Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\hosts\doc\vi...', Array, Object(app\controllers\SiteController))
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('module', Array, Object(app\controllers\SiteController))
+#5 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render('module', Array)
+#6 D:\hosts\doc\controllers\SiteController.php(28): app\core\Controller->render2('block', 'module', Array)
+#7 [internal function]: app\controllers\SiteController->actionIndex()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-03-23 01:34:26 [127.0.0.1][system][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'lbpqas7emd7h2c5b5rd0df5k74'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 'system'
+    'USER_ID' => 1
+    'USER_LOGIN' => 'system'
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=lbpqas7emd7h2c5b5rd0df5k74'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/'
+    'SERVER_ADMIN' => 'dmitry123@inbox.com'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '60342'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1427060066.808
+    'REQUEST_TIME' => 1427060066
+]
+2015-03-23 01:49:48 [127.0.0.1][system][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "admin/statistic".' in D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('admin/statistic', Array)
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-03-23 01:49:48 [127.0.0.1][system][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'prt0lvqeb5fiutnscbeqht1325'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 'system'
+    'USER_ID' => 1
+    'USER_LOGIN' => 'system'
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:81/doc/web/admin/table'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=prt0lvqeb5fiutnscbeqht1325'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/'
+    'SERVER_ADMIN' => 'dmitry123@inbox.com'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '60683'
+    'REDIRECT_URL' => '/doc/web/admin/statistic'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/admin/statistic'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1427060988.186
+    'REQUEST_TIME' => 1427060988
+]
+2015-03-23 02:01:42 [127.0.0.1][system][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42P01]: Undefined table: 7 ОШИБКА:  отношение "role" не существует
+LINE 1: SELECT "id", "name" FROM "role"
+                                 ^' in D:\hosts\doc\vendor\yiisoft\yii2\db\Command.php:822
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\db\Command.php(822): PDOStatement->execute()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\db\Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 D:\hosts\doc\vendor\yiisoft\yii2\db\Query.php(206): yii\db\Command->queryAll()
+#3 D:\hosts\doc\widgets\Form.php(140): yii\db\Query->all()
+#4 D:\hosts\doc\widgets\Form.php(183): app\widgets\Form->fetch(Array)
+#5 D:\hosts\doc\widgets\views\Form.php(41): app\widgets\Form->prepare('role_id')
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\hosts\doc\wi...')
+#7 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\hosts\doc\wi...', Array)
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\hosts\doc\wi...', Array, Object(app\widgets\Form))
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php(182): yii\base\View->render('Form', Array, Object(app\widgets\Form))
+#10 D:\hosts\doc\widgets\Form.php(74): yii\base\Widget->render('Form', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php(96): app\widgets\Form->run()
+#12 D:\hosts\doc\views\site\settings.php(10): yii\base\Widget::widget(Array)
+#13 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\hosts\doc\vi...')
+#14 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\hosts\doc\vi...', Array)
+#15 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\hosts\doc\vi...', Array, Object(app\controllers\SiteController))
+#16 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('settings', Array, Object(app\controllers\SiteController))
+#17 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render('settings', Array)
+#18 D:\hosts\doc\controllers\SiteController.php(40): app\core\Controller->render2('block', 'settings')
+#19 [internal function]: app\controllers\SiteController->actionSettings()
+#20 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#21 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#22 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('settings', Array)
+#23 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('site/settings', Array)
+#24 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#25 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#26 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42P01]: Undefined table: 7 ОШИБКА:  отношение "role" не существует
+LINE 1: SELECT "id", "name" FROM "role"
+                                 ^
+The SQL being executed was: SELECT "id", "name" FROM "role"' in D:\hosts\doc\vendor\yiisoft\yii2\db\Schema.php:534
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\db\Command.php(837): yii\db\Schema->convertException(Object(PDOException), 'SELECT "id", "n...')
+#1 D:\hosts\doc\vendor\yiisoft\yii2\db\Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 D:\hosts\doc\vendor\yiisoft\yii2\db\Query.php(206): yii\db\Command->queryAll()
+#3 D:\hosts\doc\widgets\Form.php(140): yii\db\Query->all()
+#4 D:\hosts\doc\widgets\Form.php(183): app\widgets\Form->fetch(Array)
+#5 D:\hosts\doc\widgets\views\Form.php(41): app\widgets\Form->prepare('role_id')
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\hosts\doc\wi...')
+#7 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\hosts\doc\wi...', Array)
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\hosts\doc\wi...', Array, Object(app\widgets\Form))
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php(182): yii\base\View->render('Form', Array, Object(app\widgets\Form))
+#10 D:\hosts\doc\widgets\Form.php(74): yii\base\Widget->render('Form', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php(96): app\widgets\Form->run()
+#12 D:\hosts\doc\views\site\settings.php(10): yii\base\Widget::widget(Array)
+#13 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\hosts\doc\vi...')
+#14 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\hosts\doc\vi...', Array)
+#15 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\hosts\doc\vi...', Array, Object(app\controllers\SiteController))
+#16 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('settings', Array, Object(app\controllers\SiteController))
+#17 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render('settings', Array)
+#18 D:\hosts\doc\controllers\SiteController.php(40): app\core\Controller->render2('block', 'settings')
+#19 [internal function]: app\controllers\SiteController->actionSettings()
+#20 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#21 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#22 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('settings', Array)
+#23 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('site/settings', Array)
+#24 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#25 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#26 {main}
+Additional Information:
+Array
+(
+    [0] => 42P01
+    [1] => 7
+    [2] => ОШИБКА:  отношение "role" не существует
+LINE 1: SELECT "id", "name" FROM "role"
+                                 ^
+)
+
+2015-03-23 02:01:41 [127.0.0.1][system][-][info][application] $_COOKIE = [
+    'PHPSESSID' => '2j8l4ram3h3jqna4mm7j0ilkg6'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 'system'
+    'USER_ID' => 1
+    'USER_LOGIN' => 'system'
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:81/doc/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=2j8l4ram3h3jqna4mm7j0ilkg6'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/'
+    'SERVER_ADMIN' => 'dmitry123@inbox.com'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '60949'
+    'REDIRECT_URL' => '/doc/web/site/settings'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/site/settings'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1427061701.908
+    'REQUEST_TIME' => 1427061701
+]
+2015-03-23 02:02:15 [127.0.0.1][system][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42P01]: Undefined table: 7 ОШИБКА:  отношение "department" не существует
+LINE 1: SELECT "id", "name" FROM "department"
+                                 ^' in D:\hosts\doc\vendor\yiisoft\yii2\db\Command.php:822
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\db\Command.php(822): PDOStatement->execute()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\db\Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 D:\hosts\doc\vendor\yiisoft\yii2\db\Query.php(206): yii\db\Command->queryAll()
+#3 D:\hosts\doc\widgets\Form.php(140): yii\db\Query->all()
+#4 D:\hosts\doc\widgets\Form.php(183): app\widgets\Form->fetch(Array)
+#5 D:\hosts\doc\widgets\views\Form.php(41): app\widgets\Form->prepare('department_id')
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\hosts\doc\wi...')
+#7 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\hosts\doc\wi...', Array)
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\hosts\doc\wi...', Array, Object(app\widgets\Form))
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php(182): yii\base\View->render('Form', Array, Object(app\widgets\Form))
+#10 D:\hosts\doc\widgets\Form.php(74): yii\base\Widget->render('Form', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php(96): app\widgets\Form->run()
+#12 D:\hosts\doc\views\site\settings.php(10): yii\base\Widget::widget(Array)
+#13 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\hosts\doc\vi...')
+#14 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\hosts\doc\vi...', Array)
+#15 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\hosts\doc\vi...', Array, Object(app\controllers\SiteController))
+#16 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('settings', Array, Object(app\controllers\SiteController))
+#17 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render('settings', Array)
+#18 D:\hosts\doc\controllers\SiteController.php(40): app\core\Controller->render2('block', 'settings')
+#19 [internal function]: app\controllers\SiteController->actionSettings()
+#20 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#21 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#22 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('settings', Array)
+#23 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('site/settings', Array)
+#24 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#25 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#26 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42P01]: Undefined table: 7 ОШИБКА:  отношение "department" не существует
+LINE 1: SELECT "id", "name" FROM "department"
+                                 ^
+The SQL being executed was: SELECT "id", "name" FROM "department"' in D:\hosts\doc\vendor\yiisoft\yii2\db\Schema.php:534
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\db\Command.php(837): yii\db\Schema->convertException(Object(PDOException), 'SELECT "id", "n...')
+#1 D:\hosts\doc\vendor\yiisoft\yii2\db\Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 D:\hosts\doc\vendor\yiisoft\yii2\db\Query.php(206): yii\db\Command->queryAll()
+#3 D:\hosts\doc\widgets\Form.php(140): yii\db\Query->all()
+#4 D:\hosts\doc\widgets\Form.php(183): app\widgets\Form->fetch(Array)
+#5 D:\hosts\doc\widgets\views\Form.php(41): app\widgets\Form->prepare('department_id')
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\hosts\doc\wi...')
+#7 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\hosts\doc\wi...', Array)
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\hosts\doc\wi...', Array, Object(app\widgets\Form))
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php(182): yii\base\View->render('Form', Array, Object(app\widgets\Form))
+#10 D:\hosts\doc\widgets\Form.php(74): yii\base\Widget->render('Form', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php(96): app\widgets\Form->run()
+#12 D:\hosts\doc\views\site\settings.php(10): yii\base\Widget::widget(Array)
+#13 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\hosts\doc\vi...')
+#14 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\hosts\doc\vi...', Array)
+#15 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\hosts\doc\vi...', Array, Object(app\controllers\SiteController))
+#16 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('settings', Array, Object(app\controllers\SiteController))
+#17 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render('settings', Array)
+#18 D:\hosts\doc\controllers\SiteController.php(40): app\core\Controller->render2('block', 'settings')
+#19 [internal function]: app\controllers\SiteController->actionSettings()
+#20 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#21 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#22 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('settings', Array)
+#23 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('site/settings', Array)
+#24 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#25 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#26 {main}
+Additional Information:
+Array
+(
+    [0] => 42P01
+    [1] => 7
+    [2] => ОШИБКА:  отношение "department" не существует
+LINE 1: SELECT "id", "name" FROM "department"
+                                 ^
+)
+
+2015-03-23 02:02:15 [127.0.0.1][system][-][info][application] $_COOKIE = [
+    'PHPSESSID' => '2j8l4ram3h3jqna4mm7j0ilkg6'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 'system'
+    'USER_ID' => 1
+    'USER_LOGIN' => 'system'
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:81/doc/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=2j8l4ram3h3jqna4mm7j0ilkg6'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/'
+    'SERVER_ADMIN' => 'dmitry123@inbox.com'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '60966'
+    'REDIRECT_URL' => '/doc/web/site/settings'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/site/settings'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1427061735
+    'REQUEST_TIME' => 1427061735
+]

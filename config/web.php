@@ -53,6 +53,18 @@ $config = [
 				"super",
 			]
 		],
+		"schedule" => [
+			"class" => "app\\modules\\schedule\\ScheduleModule",
+			"name" => "Расписание",
+			"icon" => "glyphicon glyphicon-calendar",
+			"roles" => [
+				"director",
+				"manager",
+				"student",
+				"teacher",
+				"super",
+			]
+		],
 		"doc" => [
 			"class" => "app\\modules\\doc\\DocModule",
 			"name" => "Документы",
@@ -92,7 +104,8 @@ $config = [
 			"roles" => [
 				"admin",
 				"super",
-			]
+			],
+			"url" => "admin/table"
 		],
 	],
     'params' => $params,

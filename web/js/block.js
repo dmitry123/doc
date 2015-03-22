@@ -45,7 +45,7 @@ var PageReload = {
 			"height": page.height() + 80,
 			"width": page.width() + 80
 		}).append(
-			$("<img>", {
+			image = $("<img>", {
 				src: "img/ajax-loader.gif",
 				css: {
 					"width": "100px",
@@ -78,8 +78,23 @@ var ModuleForm = {
 			$.post(url("user/logout"), [], function(json) {
 				setTimeout(function() {
 					PageReload.reload(json["url"]);
-				}, 250);
+				}, 100);
 			}, "json");
+		});
+		$(document).on("click", ".settings-button", function() {
+			PageReload.before();
+			PageReload.reload(url("site/settings"));
+		});
+		$(document).on("click", ".modules-button", function() {
+			PageReload.before();
+			PageReload.reload(url("site/index"));
+		});
+		$(document).on("click", ".module-icon-wrapper", function() {
+			var url;
+			if ((url = $(this).data("url")) == void 0) {
+				return void 0;
+			}
+			window.location.href = url;
 		});
 	}
 };
