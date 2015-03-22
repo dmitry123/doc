@@ -52,7 +52,7 @@ class User extends TableProvider implements IdentityInterface {
 	 * @return array|null - Array with user's row or
 	 * 		null if user has not been found
 	 */
-	public function findByLoginAndPassword($login, $password) {
+	public static function findByLoginAndPassword($login, $password) {
 		$row = static::find()
 			->select("*")
 			->from("core.user")
@@ -74,14 +74,10 @@ class User extends TableProvider implements IdentityInterface {
 	 * @param int $login - User's identification number
 	 * @return array|null - Array with user's information
 	 */
-	public function findByLogin($login) {
-		$row = static::find()
-			->select("*")
-			->from("core.user")
-			->where("login = :login")
-			->addParams([
-				":login" => $login
-			])->one();
+	public static function findByLogin($login) {
+		$row = static::find()->select("*")->from("core.user")->where("login = :login", [
+			":login" => strtolower($login)
+		])->one();
 		if ($row !== false) {
 			return $row;
 		} else {

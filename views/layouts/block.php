@@ -2,6 +2,7 @@
 /**
  * @var $this \yii\web\View
  * @var $content string
+ * @var $logo bool
  */
 app\assets\BlockAsset::register($this);
 ?>
@@ -22,21 +23,34 @@ app\assets\BlockAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
-<div id="page-content" class="page-block">
-	<table align="center">
-		<tr>
-			<td valign="middle" width="150px">
-				<?= \yii\helpers\Html::img("img/logo-big.png", [
-					"width" => "100%"
-				]) ?>
-			</td>
-			<td valign="middle" style="width: 50px">
-			</td>
-			<td valign="middle">
-				<?= $content ?>
-			</td>
-		</tr>
-	</table>
+<div id="page-content">
+	<div class="page-block">
+		<table align="center" class="page-content">
+			<tr>
+				<td valign="middle" width="150px">
+					<?= \yii\helpers\Html::img("img/logo-big.png", [
+						"width" => "100%"
+					]) ?>
+					<? if (!Yii::$app->getUser()->getIsGuest()): ?>
+						<div class="col-xs-12 block-user-info">
+							<hr>
+							<div>
+								<b><?= \app\core\EmployeeManager::getIdentity(1) ?></b><br>
+								<?= \app\core\EmployeeManager::getInfo()["role_name"] ?>
+							</div>
+							<hr>
+							<button class="btn btn-danger btn-block block-logout">Выйти</button>
+						</div>
+					<? endif ?>
+				</td>
+				<td valign="middle" style="width: 50px">
+				</td>
+				<td valign="middle">
+					<?= $content ?>
+				</td>
+			</tr>
+		</table>
+	</div>
 </div>
 <!-- TODO - "Remove that modal from layout, can't put it in view, cuz it will crash animation" -->
 <?= \app\widgets\Modal::widget([

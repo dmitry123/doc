@@ -18,7 +18,13 @@ class SiteController extends Controller {
 		if (Yii::$app->getUser()->getIsGuest()) {
 			return $this->render2("block", "login");
 		} else {
-			return $this->render2("main", "index");
+			if (!Yii::$app->getSession()->get("ACTIVE_MODULE")) {
+				return $this->render2("block", "module", [
+					"modules" => Yii::$app->getModules(false)
+				]);
+			} else {
+				return $this->render2("main", "index");
+			}
 		}
     }
 

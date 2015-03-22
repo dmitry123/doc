@@ -13,6 +13,6 @@ class UniqueGenerator extends Object {
 	 * @return string - Generated unique key
 	 */
 	public static function generate($prefix, $length = 10) {
-		return $prefix ."-". \Yii::$app->getSecurity()->generateRandomString($length);
+		return $prefix ."-". bin2hex(\Yii::$app->getSecurity()->generateRandomKey($length / 2));
 	}
 }

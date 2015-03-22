@@ -34,6 +34,12 @@ class UserController extends Controller {
 				}
 			}
 			$model = $this->getModel($form);
+			$row = User::findOne([
+				"email" => $model->{"email"}
+			]);
+			if ($row != null) {
+				$this->error("Пользователь с таким почтовым ящиком уже зарегистрирован \"{$model->{"email"}}\"");
+			}
 			$model->{"password"} = \Yii::$app->getSecurity()->generatePasswordHash(
 				$model->{"password"}
 			);
@@ -84,6 +90,14 @@ class UserController extends Controller {
 			if (!\Yii::$app->getUser()->login($user)) {
 				$this->error("Произошла ошибка при входе в систему");
 			}
+			$params = [
+				"USER_ID" => \Yii::$app->getUser()->getIdentity()->{"id"},
+				"USER_LOGIN" => \Yii::$app->getUser()->getIdentity()->{"login"},
+				"USER_EMAIL" => \Yii::$app->getUser()->getIdentity()->{"email"}
+			];
+			foreach ($params as $key => $value) {
+				\Yii::$app->getSession()->set($key, $value);
+			}
 			$this->leave([
 				"message" => "Пользователь успешно вошел в систему",
 				"redirect" => \Yii::$app->getHomeUrl()
@@ -93,12 +107,22 @@ class UserController extends Controller {
 		}
 	}
 
+	/**
+	 * That action will logout user
+	 * @throws \Exception
+	 */
 	public function actionLogout() {
 		try {
 			if (!\Yii::$app->getUser()->getIsGuest()) {
 				\Yii::$app->getUser()->logout(true);
 			}
-			$this->goHome();
+			if (\Yii::$app->getRequest()->getIsAjax()) {
+				$this->leave([
+					"url" => \Yii::$app->getHomeUrl()
+				]);
+			} else {
+				$this->goHome();
+			}
 		} catch (\Exception $e) {
 			$this->exception($e);
 		}

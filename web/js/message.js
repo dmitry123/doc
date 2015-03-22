@@ -159,6 +159,16 @@ var Doc = Doc || {};
 					top: parseInt(move[i].selector().css("top")) - component.selector().height() - 37
 				});
 			}
+			component.selector().promise(component.selector()).done(function() {
+				component.selector().remove();
+			});
+		},
+		last: function() {
+			if (this._components.length > 0) {
+				return this._components[this._components.length - 1];
+			} else {
+				return null;
+			}
 		},
 		_components: []
 	};

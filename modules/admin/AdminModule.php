@@ -2,7 +2,7 @@
 
 namespace app\modules\admin;
 
-use yii\base\Module;
+use app\core\Module;
 
 class AdminModule extends Module {
 
@@ -15,8 +15,10 @@ class AdminModule extends Module {
 			"access" => [
 				"class" => "app\\filters\\AccessFilter",
 				"rules" => [
-					"roles" => [ "admin" ],
-					"on" => [ "employee" ]
+					"roles" => [
+						"admin",
+						"super"
+					]
 				],
 			]
 		];

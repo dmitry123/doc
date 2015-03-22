@@ -131,7 +131,7 @@ var Doc = Doc || {};
         }, function(json) {
 			me.after();
 			if (!json["status"]) {
-				after && after(me, false);
+				after && after(me, false, json);
 				var html = $("<ul>");
 				for (var i in json["errors"] || []) {
 					$($("#" + i).parents(".form-group")[0]).addClass("has-error");
@@ -149,7 +149,7 @@ var Doc = Doc || {};
 				if (me.property("success")) {
 					me.property("success").call(me, json);
 				}
-				after && after(me, true);
+				after && after(me, true, json);
 			}
 			if (json["message"]) {
 				Doc.createMessage({
@@ -158,9 +158,9 @@ var Doc = Doc || {};
 					message: json["message"]
 				});
 			}
-            if (json["redirect"]) {
+            /* if (json["redirect"]) {
                 window.location.href = json["redirect"];
-            }
+            } */
 			$("#" + me.selector().attr("id")).trigger("success", json);
 		}, "json").fail(function() {
 			after && after(me, false, arguments[2]);

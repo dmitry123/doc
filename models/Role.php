@@ -27,14 +27,16 @@ class Role extends ActiveRecord {
 	public static function checkEmployeeRoles($employeeId, $roles) {
 		$fetched = self::fetchByEmployee($employeeId);
 		if (!is_array($roles)) {
-			return in_array($roles, $fetched);
+			$roles = [ $roles, "super" ];
+		} else {
+			$roles[] = "super";
 		}
 		foreach ($roles as $r) {
-			if (!in_array($r, $fetched)) {
-				return false;
+			if (in_array($r, $fetched)) {
+				return true;
 			}
 		}
-		return true;
+		return false;
 	}
 
 	/**

@@ -41,9 +41,21 @@ $config = [
         'db' => require(__DIR__ . '/db.php'),
     ],
 	'modules' => [
+		"matrix" => [
+			"class" => "app\\modules\\matrix\\MatrixModule",
+			"name" => "Матрица",
+			"icon" => "glyphicon glyphicon-list-alt"
+		],
+		"doc" => [
+			"class" => "app\\modules\\doc\\DocModule",
+			"name" => "Документы",
+			"icon" => "glyphicon glyphicon-book"
+		],
 		"admin" => [
-			"class" => "app\\modules\\admin\\AdminModule"
-		]
+			"class" => "app\\modules\\admin\\AdminModule",
+			"name" => "Управление",
+			"icon" => "glyphicon glyphicon-cog"
+		],
 	],
     'params' => $params,
 ];

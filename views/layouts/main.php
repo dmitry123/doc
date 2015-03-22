@@ -17,8 +17,9 @@ app\assets\SiteAsset::register($this);
 	<script type="text/javascript">
 		var doc = {
 			user: {
-				id: <?= "\"".Yii::$app->getUser()->getIdentity()->{"id"}."\"" ?>,
-				login: <?= "\"".Yii::$app->getUser()->getIdentity()->{"login"}."\"\n" ?>
+				login: <?= "\"".Yii::$app->getSession()->get("USER_LOGIN")."\"\n" ?>,
+				id: <?= "\"".Yii::$app->getSession()->get("USER_ID")."\"" ?>,
+				email: <?= "\"".Yii::$app->getSession()->get("USER_EMAIL")."\"\n" ?>
 			},
 			employee: {
 				id: <?= "\"".Yii::$app->getSession()->get("EMPLOYEE_ID", "")."\"" ?>,
@@ -35,7 +36,7 @@ app\assets\SiteAsset::register($this);
 <div id="page-content">
 	<?= \app\widgets\Navigation::widget(); ?>
 	<div class="col-xs-12">
-		<div class="col-xs-9" id="page-content">
+		<div class="col-xs-12" id="page-content">
 			<?= $content ?>
 		</div>
 		<div class="col-xs-3">

@@ -2,21 +2,26 @@
 html, body {
     margin-top: 0;
     background-color: #5e6771;
+    height: 100%;
+    display: table;
+    vertical-align: middle;
+    width: 100%;
+}
+
+#page-content {
+    display: table-cell;
+    vertical-align: middle;
 }
 
 /* Construct centered main block for that layout */
 .page-block {
-    position: absolute;
-    max-height: 260px;
     width: 625px;
     margin: auto;
-    top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     background-color: #f5f5f5;
     border-radius: 7px;
-    vertical-align: middle;
     padding: 40px;
 }
 
@@ -52,4 +57,43 @@ button:active, button .active {
 .login-button-group button:hover {
     outline: 0 !important;
     -webkit-appearance: none;
+}
+
+.module-icon-wrapper {
+    background-color: lightgrey;
+    border-radius: 7px;
+    text-align: center;
+    padding: 17px 17px 10px;
+}
+.module-icon {
+    font-size: 75px;
+}
+.module-title {
+    font-size: 17px;
+}
+.module-cell {
+    cursor: pointer;
+}
+.module-cell:not(:last-child) {
+    margin-bottom: 20px;
+}
+.module-cell .module-icon {
+    transition: all 0.3s ease 0s;
+}
+.module-cell:hover .module-icon {
+    color: #146fab;
+}
+
+.block-user-info hr {
+    margin: 5px;
+}
+.block-user-info hr:first-child {
+    margin-top: 15px;
+}
+.block-user-info hr:not(:first-child) {
+    margin-bottom: 15px;
+}
+.block-user-info div {
+    width: 100%;
+    text-align: center;
 }

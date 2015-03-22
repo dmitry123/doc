@@ -9,7 +9,7 @@ use yii\web\View;
 <nav id="navigation" class="navbar navbar-default navbar-fixed-top">
 <div class="container-fluid">
 	<div class="navbar-header">
-		<a class="navbar-brand" href="<?= Yii::$app->getHomeUrl() ?>">Документооборот</a>
+		<a class="navbar-brand" href="<?= Yii::$app->getHomeUrl() ?>">МГУП</a>
 	</div>
 	<ul class="nav navbar-nav navbar-right">
 		<? if ($admin): ?>
@@ -39,6 +39,3 @@ use yii\web\View;
 	</ul>
 </div>
 </nav>
-<!--<div class="user-panel-wrapper">-->
-<!--	--><?//= \app\widgets\UserPanel::widget(); ?>
-<!--</div>-->

@@ -96,12 +96,12 @@ abstract class Controller extends \yii\web\Controller {
 	 * Render some view with specific layout
 	 * @param string $layout - Default view's layout
 	 * @param string $view - Page to render
-	 * @param array $content - View content
+	 * @param array $parameters - View parameters
 	 * @return string - Just rendered content
 	 */
-	public function render2($layout, $view, $content = []) {
+	public function render2($layout, $view, $parameters = []) {
 		$this->layout = $layout;
-		return $this->render($view, $content);
+		return $this->render($view, $parameters);
 	}
 
 	/**
@@ -453,8 +453,7 @@ abstract class Controller extends \yii\web\Controller {
 			"file" => basename($method["file"]),
 			"method" => $method["class"]."::".$method["function"]."()",
 			"line" => $method["line"],
-			"status" => false,
-			"trace" => $exception->getTrace()
+			"status" => false
 		]);
 	}
 

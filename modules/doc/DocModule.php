@@ -2,7 +2,7 @@
 
 namespace app\modules\doc;
 
-use yii\base\Module;
+use app\core\Module;
 
 class DocModule extends Module {
 
@@ -15,8 +15,12 @@ class DocModule extends Module {
 			"access" => [
 				"class" => "app\\filters\\AccessFilter",
 				"rules" => [
-					"roles" => [ "employee" ],
-					"on" => [ "employee" ]
+					"roles" => [
+						"teacher",
+						"director",
+						"manager",
+						"super",
+					]
 				],
 			]
 		];
