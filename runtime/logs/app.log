@@ -37092,3 +37092,625 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1427011611.315
     'REQUEST_TIME' => 1427011611
 ]
+2015-03-22 13:40:05 [127.0.0.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'Invalid argument supplied for foreach()' in D:\hosts\doc\vendor\yiisoft\yii2\BaseYii.php:517
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\BaseYii.php(517): yii\base\ErrorHandler->handleError(2, 'Invalid argumen...', 'D:\hosts\doc\ve...', 517, Array)
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(app\modules\admin\AdminModule), 'admin')
+#2 [internal function]: yii\base\Object->__construct('admin', Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\di\Container.php(372): ReflectionClass->newInstanceArgs(Array)
+#4 D:\hosts\doc\vendor\yiisoft\yii2\di\Container.php(151): yii\di\Container->build('app\modules\adm...', Array, Array)
+#5 D:\hosts\doc\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('app\modules\adm...', Array, Array)
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(354): yii\BaseYii::createObject(Array, Array)
+#7 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(511): yii\base\Module->getModule('admin')
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(449): yii\base\Module->createController('admin/table')
+#9 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('admin/table', Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#12 {main}
+2015-03-22 13:40:05 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => '004ojn6580v15aj9rc4hheu2q3'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=004ojn6580v15aj9rc4hheu2q3'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/'
+    'SERVER_ADMIN' => 'dmitry123@inbox.com'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '55873'
+    'REDIRECT_URL' => '/doc/web/admin/table'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/admin/table'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1427017205.128
+    'REQUEST_TIME' => 1427017205
+]
+2015-03-22 13:41:35 [127.0.0.1][system][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: icon' in D:\hosts\doc\views\site\module.php:13
+Stack trace:
+#0 D:\hosts\doc\views\site\module.php(13): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\hosts\doc\vi...', 13, Array)
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\hosts\doc\vi...')
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\hosts\doc\vi...', Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\hosts\doc\vi...', Array, Object(app\controllers\SiteController))
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('module', Array, Object(app\controllers\SiteController))
+#5 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render('module', Array)
+#6 D:\hosts\doc\controllers\SiteController.php(24): app\core\Controller->render2('block', 'module', Array)
+#7 [internal function]: app\controllers\SiteController->actionIndex()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-03-22 13:41:35 [127.0.0.1][system][-][info][application] $_COOKIE = [
+    'PHPSESSID' => '004ojn6580v15aj9rc4hheu2q3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 'system'
+    'USER_ID' => 1
+    'USER_LOGIN' => 'system'
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:81/doc/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=004ojn6580v15aj9rc4hheu2q3'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/'
+    'SERVER_ADMIN' => 'dmitry123@inbox.com'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '55903'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1427017295.144
+    'REQUEST_TIME' => 1427017295
+]
+2015-03-22 13:41:43 [127.0.0.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'Invalid argument supplied for foreach()' in D:\hosts\doc\vendor\yiisoft\yii2\BaseYii.php:517
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\BaseYii.php(517): yii\base\ErrorHandler->handleError(2, 'Invalid argumen...', 'D:\hosts\doc\ve...', 517, Array)
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(app\modules\admin\AdminModule), 'admin')
+#2 [internal function]: yii\base\Object->__construct('admin', Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\di\Container.php(372): ReflectionClass->newInstanceArgs(Array)
+#4 D:\hosts\doc\vendor\yiisoft\yii2\di\Container.php(151): yii\di\Container->build('app\modules\adm...', Array, Array)
+#5 D:\hosts\doc\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('app\modules\adm...', Array, Array)
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(354): yii\BaseYii::createObject(Array, Array)
+#7 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(511): yii\base\Module->getModule('admin')
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(449): yii\base\Module->createController('admin/table')
+#9 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('admin/table', Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#12 {main}
+2015-03-22 13:41:43 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => '004ojn6580v15aj9rc4hheu2q3'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=004ojn6580v15aj9rc4hheu2q3'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/'
+    'SERVER_ADMIN' => 'dmitry123@inbox.com'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '55904'
+    'REDIRECT_URL' => '/doc/web/admin/table'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/admin/table'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1427017303.773
+    'REQUEST_TIME' => 1427017303
+]
+2015-03-22 13:42:39 [127.0.0.1][system][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "admin/table".' in D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('admin/table', Array)
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-03-22 13:42:39 [127.0.0.1][system][-][info][application] $_COOKIE = [
+    'PHPSESSID' => '004ojn6580v15aj9rc4hheu2q3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 'system'
+    'USER_ID' => 1
+    'USER_LOGIN' => 'system'
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=004ojn6580v15aj9rc4hheu2q3'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/'
+    'SERVER_ADMIN' => 'dmitry123@inbox.com'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '55919'
+    'REDIRECT_URL' => '/doc/web/admin/table'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/admin/table'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1427017359.824
+    'REQUEST_TIME' => 1427017359
+]
+2015-03-22 13:42:50 [127.0.0.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'Invalid argument supplied for foreach()' in D:\hosts\doc\vendor\yiisoft\yii2\BaseYii.php:517
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\BaseYii.php(517): yii\base\ErrorHandler->handleError(2, 'Invalid argumen...', 'D:\hosts\doc\ve...', 517, Array)
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(app\modules\admin\AdminModule), 'admin')
+#2 [internal function]: yii\base\Object->__construct('admin', Object(yii\web\Application))
+#3 D:\hosts\doc\vendor\yiisoft\yii2\di\Container.php(366): ReflectionClass->newInstanceArgs(Array)
+#4 D:\hosts\doc\vendor\yiisoft\yii2\di\Container.php(151): yii\di\Container->build('app\modules\adm...', Array, Array)
+#5 D:\hosts\doc\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('app\modules\adm...', Array, Array)
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(354): yii\BaseYii::createObject(Array, Array)
+#7 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(511): yii\base\Module->getModule('admin')
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(449): yii\base\Module->createController('admin/table')
+#9 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('admin/table', Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#12 {main}
+2015-03-22 13:42:50 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => '004ojn6580v15aj9rc4hheu2q3'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=004ojn6580v15aj9rc4hheu2q3'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/'
+    'SERVER_ADMIN' => 'dmitry123@inbox.com'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '55926'
+    'REDIRECT_URL' => '/doc/web/admin/table'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/admin/table'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1427017370.131
+    'REQUEST_TIME' => 1427017370
+]
+2015-03-22 13:42:55 [127.0.0.1][system][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "admin/table".' in D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('admin/table', Array)
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-03-22 13:42:55 [127.0.0.1][system][-][info][application] $_COOKIE = [
+    'PHPSESSID' => '004ojn6580v15aj9rc4hheu2q3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 'system'
+    'USER_ID' => 1
+    'USER_LOGIN' => 'system'
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=004ojn6580v15aj9rc4hheu2q3'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/'
+    'SERVER_ADMIN' => 'dmitry123@inbox.com'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '55927'
+    'REDIRECT_URL' => '/doc/web/admin/table'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/admin/table'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1427017375.044
+    'REQUEST_TIME' => 1427017375
+]
+2015-03-22 13:42:58 [127.0.0.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'Invalid argument supplied for foreach()' in D:\hosts\doc\vendor\yiisoft\yii2\BaseYii.php:517
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\BaseYii.php(517): yii\base\ErrorHandler->handleError(2, 'Invalid argumen...', 'D:\hosts\doc\ve...', 517, Array)
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(app\modules\admin\AdminModule), 'admin')
+#2 [internal function]: yii\base\Object->__construct('admin', Object(yii\web\Application))
+#3 D:\hosts\doc\vendor\yiisoft\yii2\di\Container.php(366): ReflectionClass->newInstanceArgs(Array)
+#4 D:\hosts\doc\vendor\yiisoft\yii2\di\Container.php(151): yii\di\Container->build('app\modules\adm...', Array, Array)
+#5 D:\hosts\doc\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('app\modules\adm...', Array, Array)
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(354): yii\BaseYii::createObject(Array, Array)
+#7 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(511): yii\base\Module->getModule('admin')
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(449): yii\base\Module->createController('admin/table')
+#9 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('admin/table', Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#12 {main}
+2015-03-22 13:42:58 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => '004ojn6580v15aj9rc4hheu2q3'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=004ojn6580v15aj9rc4hheu2q3'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/'
+    'SERVER_ADMIN' => 'dmitry123@inbox.com'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '55935'
+    'REDIRECT_URL' => '/doc/web/admin/table'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/admin/table'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1427017378.459
+    'REQUEST_TIME' => 1427017378
+]
+2015-03-22 13:43:17 [127.0.0.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'Invalid argument supplied for foreach()' in D:\hosts\doc\vendor\yiisoft\yii2\BaseYii.php:517
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\BaseYii.php(517): yii\base\ErrorHandler->handleError(2, 'Invalid argumen...', 'D:\hosts\doc\ve...', 517, Array)
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(app\modules\admin\AdminModule), 'admin')
+#2 [internal function]: yii\base\Object->__construct('admin', Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\di\Container.php(372): ReflectionClass->newInstanceArgs(Array)
+#4 D:\hosts\doc\vendor\yiisoft\yii2\di\Container.php(151): yii\di\Container->build('app\modules\adm...', Array, Array)
+#5 D:\hosts\doc\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('app\modules\adm...', Array, Array)
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(354): yii\BaseYii::createObject(Array, Array)
+#7 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(511): yii\base\Module->getModule('admin')
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(449): yii\base\Module->createController('admin/table')
+#9 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('admin/table', Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#12 {main}
+2015-03-22 13:43:17 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => '004ojn6580v15aj9rc4hheu2q3'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=004ojn6580v15aj9rc4hheu2q3'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/'
+    'SERVER_ADMIN' => 'dmitry123@inbox.com'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '55945'
+    'REDIRECT_URL' => '/doc/web/admin/table'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/admin/table'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1427017397.978
+    'REQUEST_TIME' => 1427017397
+]
+2015-03-22 13:43:22 [127.0.0.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'Invalid argument supplied for foreach()' in D:\hosts\doc\vendor\yiisoft\yii2\BaseYii.php:517
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\BaseYii.php(517): yii\base\ErrorHandler->handleError(2, 'Invalid argumen...', 'D:\hosts\doc\ve...', 517, Array)
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(app\modules\admin\AdminModule), 'admin')
+#2 [internal function]: yii\base\Object->__construct('admin', Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\di\Container.php(372): ReflectionClass->newInstanceArgs(Array)
+#4 D:\hosts\doc\vendor\yiisoft\yii2\di\Container.php(151): yii\di\Container->build('app\modules\adm...', Array, Array)
+#5 D:\hosts\doc\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('app\modules\adm...', Array, Array)
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(354): yii\BaseYii::createObject(Array, Array)
+#7 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(511): yii\base\Module->getModule('admin')
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(449): yii\base\Module->createController('admin/table')
+#9 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('admin/table', Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#12 {main}
+2015-03-22 13:43:22 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => '004ojn6580v15aj9rc4hheu2q3'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=004ojn6580v15aj9rc4hheu2q3'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/'
+    'SERVER_ADMIN' => 'dmitry123@inbox.com'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '55946'
+    'REDIRECT_URL' => '/doc/web/admin/table'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/admin/table'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1427017402.523
+    'REQUEST_TIME' => 1427017402
+]
+2015-03-22 13:44:44 [127.0.0.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'Invalid argument supplied for foreach()' in D:\hosts\doc\vendor\yiisoft\yii2\BaseYii.php:517
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\BaseYii.php(517): yii\base\ErrorHandler->handleError(2, 'Invalid argumen...', 'D:\hosts\doc\ve...', 517, Array)
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(app\modules\admin\AdminModule), 'admin')
+#2 [internal function]: yii\base\Object->__construct('admin', Object(yii\web\Application))
+#3 D:\hosts\doc\vendor\yiisoft\yii2\di\Container.php(366): ReflectionClass->newInstanceArgs(Array)
+#4 D:\hosts\doc\vendor\yiisoft\yii2\di\Container.php(151): yii\di\Container->build('app\modules\adm...', Array, Array)
+#5 D:\hosts\doc\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('app\modules\adm...', Array, Array)
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(354): yii\BaseYii::createObject(Array, Array)
+#7 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(511): yii\base\Module->getModule('admin')
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(449): yii\base\Module->createController('admin/table')
+#9 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('admin/table', Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#12 {main}
+2015-03-22 13:44:44 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => '004ojn6580v15aj9rc4hheu2q3'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=004ojn6580v15aj9rc4hheu2q3'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/'
+    'SERVER_ADMIN' => 'dmitry123@inbox.com'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '55967'
+    'REDIRECT_URL' => '/doc/web/admin/table'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/admin/table'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1427017484.623
+    'REQUEST_TIME' => 1427017484
+]
+2015-03-22 13:44:54 [127.0.0.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'Invalid argument supplied for foreach()' in D:\hosts\doc\vendor\yiisoft\yii2\BaseYii.php:517
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\BaseYii.php(517): yii\base\ErrorHandler->handleError(2, 'Invalid argumen...', 'D:\hosts\doc\ve...', 517, Array)
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(app\modules\admin\AdminModule), 'admin')
+#2 [internal function]: yii\base\Object->__construct('admin', Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\di\Container.php(372): ReflectionClass->newInstanceArgs(Array)
+#4 D:\hosts\doc\vendor\yiisoft\yii2\di\Container.php(151): yii\di\Container->build('app\modules\adm...', Array, Array)
+#5 D:\hosts\doc\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('app\modules\adm...', Array, Array)
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(354): yii\BaseYii::createObject(Array, Array)
+#7 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(511): yii\base\Module->getModule('admin')
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(449): yii\base\Module->createController('admin/table')
+#9 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('admin/table', Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#12 {main}
+2015-03-22 13:44:54 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => '004ojn6580v15aj9rc4hheu2q3'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=004ojn6580v15aj9rc4hheu2q3'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/'
+    'SERVER_ADMIN' => 'dmitry123@inbox.com'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '55969'
+    'REDIRECT_URL' => '/doc/web/admin/table'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/admin/table'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1427017494.77
+    'REQUEST_TIME' => 1427017494
+]

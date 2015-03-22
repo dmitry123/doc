@@ -49,7 +49,17 @@ $config = [
 		"doc" => [
 			"class" => "app\\modules\\doc\\DocModule",
 			"name" => "Документы",
-			"icon" => "glyphicon glyphicon-book"
+			"icon" => "glyphicon glyphicon-duplicate"
+		],
+		"chat" => [
+			"class" => "app\\modules\\chat\\ChatModule",
+			"name" => "Чат",
+			"icon" => "glyphicon glyphicon-send"
+		],
+		"distance" => [
+			"class" => "app\\modules\\chat\\DistanceModule",
+			"name" => "Обучение",
+			"icon" => "glyphicon glyphicon-education"
 		],
 		"admin" => [
 			"class" => "app\\modules\\admin\\AdminModule",
