@@ -25,7 +25,7 @@ app\assets\BlockAsset::register($this);
 <?php $this->beginBody() ?>
 <div id="page-content">
 	<div class="page-block">
-		<table align="center" class="page-content">
+		<table class="page-content">
 			<tr>
 				<td valign="middle" width="150px">
 					<?= \yii\helpers\Html::img("img/logo-big.png", [

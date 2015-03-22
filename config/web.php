@@ -44,27 +44,55 @@ $config = [
 		"matrix" => [
 			"class" => "app\\modules\\matrix\\MatrixModule",
 			"name" => "Матрица",
-			"icon" => "glyphicon glyphicon-list-alt"
+			"icon" => "glyphicon glyphicon-list-alt",
+			"roles" => [
+				"director",
+				"manager",
+				"student",
+				"teacher",
+				"super",
+			]
 		],
 		"doc" => [
 			"class" => "app\\modules\\doc\\DocModule",
 			"name" => "Документы",
-			"icon" => "glyphicon glyphicon-duplicate"
+			"icon" => "glyphicon glyphicon-duplicate",
+			"roles" => [
+				"director",
+				"manager",
+				"teacher",
+				"super",
+			]
 		],
 		"chat" => [
 			"class" => "app\\modules\\chat\\ChatModule",
 			"name" => "Чат",
-			"icon" => "glyphicon glyphicon-send"
+			"icon" => "glyphicon glyphicon-send",
+			"roles" => [
+				"admin",
+				"director",
+				"manager",
+				"teacher",
+				"super",
+			]
 		],
 		"distance" => [
 			"class" => "app\\modules\\chat\\DistanceModule",
 			"name" => "Обучение",
-			"icon" => "glyphicon glyphicon-education"
+			"icon" => "glyphicon glyphicon-education",
+			"roles" => [
+				"student",
+				"super",
+			]
 		],
 		"admin" => [
 			"class" => "app\\modules\\admin\\AdminModule",
 			"name" => "Управление",
-			"icon" => "glyphicon glyphicon-cog"
+			"icon" => "glyphicon glyphicon-cog",
+			"roles" => [
+				"admin",
+				"super",
+			]
 		],
 	],
     'params' => $params,

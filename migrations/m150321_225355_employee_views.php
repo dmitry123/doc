@@ -18,7 +18,10 @@ class m150321_225355_employee_views extends Migration {
 				JOIN "core"."role" AS "r" ON "r"."id" = "e"."role_id";
 
 			CREATE VIEW "core"."teacher" AS
-			  SELECT * FROM "core"."employee_info" WHERE "role_id" = 'teacher';
+			  SELECT * FROM "core"."employee_info" WHERE
+			  	"role_id" = 'teacher' OR
+			  	"role_id" = 'director' OR
+			  	"role_id" = 'manager';
 
 			CREATE VIEW "core"."student" AS
 			  SELECT * FROM "core"."employee_info" WHERE "role_id" = 'student';

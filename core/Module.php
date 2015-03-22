@@ -13,4 +13,9 @@ class Module extends \yii\base\Module {
 	 * @var string - Glyphicon class
 	 */
 	public $icon;
+
+	/**
+	 * @var array - Allowed roles for that module
+	 */
+	public $roles = null;
 }
