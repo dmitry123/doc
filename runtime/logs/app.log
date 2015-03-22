@@ -54538,3 +54538,91 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1427086465.519
     'REQUEST_TIME' => 1427086465
 ]
+2015-03-22 20:42:52 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[08006] [7] could not connect to server: Connection refused
+	Is the server running on host "127.0.0.1" and accepting
+	TCP/IP connections on port 5432?' in /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Connection.php:579
+Stack trace:
+#0 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Connection.php(579): PDO->__construct('pgsql:host=127....', 'postgres', '12345', NULL)
+#1 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#3 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Schema.php(383): yii\db\Connection->getSlavePdo()
+#5 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Connection.php(732): yii\db\Schema->quoteValue('migration')
+#6 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/pgsql/Schema.php(319): yii\db\Connection->quoteValue('migration')
+#7 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/pgsql/Schema.php(160): yii\db\pgsql\Schema->findColumns(Object(yii\db\TableSchema))
+#8 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Schema.php(140): yii\db\pgsql\Schema->loadTableSchema('migration')
+#9 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/console/controllers/MigrateController.php(121): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#14 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#15 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#16 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#17 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate', Array)
+#18 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate', Array)
+#19 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /Volumes/Storage/code/PHP/doc/yii(23): yii\base\Application->run()
+#21 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[08006] [7] could not connect to server: Connection refused
+	Is the server running on host "127.0.0.1" and accepting
+	TCP/IP connections on port 5432?' in /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Connection.php:534
+Stack trace:
+#0 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#1 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Schema.php(383): yii\db\Connection->getSlavePdo()
+#3 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Connection.php(732): yii\db\Schema->quoteValue('migration')
+#4 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/pgsql/Schema.php(319): yii\db\Connection->quoteValue('migration')
+#5 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/pgsql/Schema.php(160): yii\db\pgsql\Schema->findColumns(Object(yii\db\TableSchema))
+#6 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/db/Schema.php(140): yii\db\pgsql\Schema->loadTableSchema('migration')
+#7 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/console/controllers/MigrateController.php(121): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#8 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#9 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#10 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#11 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#12 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#13 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#14 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#15 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate', Array)
+#16 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate', Array)
+#17 /Volumes/Storage/code/PHP/doc/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#18 /Volumes/Storage/code/PHP/doc/yii(23): yii\base\Application->run()
+#19 {main}
+Additional Information:
+
+2015-03-22 20:42:52 [-][-][-][info][application] $_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/r7/1r2px7ws4_98__gwbj4cy2100000gn/T/'
+    'EnvAgent_vars' => 'PATH'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.QeZW6uBJHC/Render'
+    'TERM_PROGRAM_VERSION' => '343.6'
+    'OLDPWD' => '/volumes/storage/code/php'
+    'TERM_SESSION_ID' => '8ED10D74-F902-4515-991A-AF96E9F58B49'
+    'USER' => 'dmitry'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.9X1ktuKpqc/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x7:0x31'
+    'PATH' => '/Users/dmitry/Library/Application Support/GoodSync:/opt/local/bin:/opt/local/sbin:/Library/PostgreSQL/9.3/bin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    'PWD' => '/volumes/storage/code/php/doc'
+    'LANG' => 'ru_RU.UTF-8'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '1'
+    'HOME' => '/Users/dmitry'
+    'LOGNAME' => 'dmitry'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1427053372.87
+    'REQUEST_TIME' => 1427053372
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
