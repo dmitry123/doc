@@ -20,6 +20,8 @@ var UserForm = {
 
 var PageReload = {
 	reload: function(link) {
+		var me = this;
+		this.padding = parseInt($(".page-block").css("padding")) * 2;
 		$.get(link || url(""), {}, function(html) {
 			var native = $(".page-block");
 			var page = $(html).find(".page-block");
@@ -28,8 +30,8 @@ var PageReload = {
 				c = page.clone().hide()
 			);
 			native.animate({
-				height: c.height() + 80,
-				width: c.width() + 80
+				height: c.height() + me.padding,
+				width: c.width() + me.padding
 			}, "fast", function() {
 				native.replaceWith(c.show());
 				c.children(".page-content").hide().fadeIn("fast");
@@ -40,12 +42,12 @@ var PageReload = {
 		});
 	},
 	before: function() {
-		var page = $(".page-block");
-		page.css({
-			"height": page.height() + 80,
-			"width": page.width() + 80
+		var content = $(".page-block");
+		content.css({
+			"height": content.height() + this.padding,
+			"width": content.width() + this.padding
 		}).append(
-			image = $("<img>", {
+			$("<img>", {
 				src: "img/ajax-loader.gif",
 				css: {
 					"width": "100px",
