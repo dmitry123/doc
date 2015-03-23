@@ -32,7 +32,7 @@ class EmployeeManager extends Object {
 		$result = $employee["surname"];
 		switch ($fio) {
 			case self::NORMAL:
-				$name = $employee["name"];
+				$name = " ".$employee["name"];
 				break;
 			case self::SHORT:
 				$name = " ".strtoupper(substr($employee["name"], 0, 2)).".";

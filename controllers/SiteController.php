@@ -4,7 +4,7 @@ namespace app\controllers;
 
 use app\core\ActiveRecord;
 use app\core\Controller;
-use app\core\EmployeeManager;
+use app\core\Module;
 use Yii;
 use yii\base\Model;
 
@@ -16,16 +16,16 @@ class SiteController extends Controller {
 	 * @return string - Rendered content
 	 */
     public function actionIndex() {
-		if (Yii::$app->getUser()->getIsGuest()) {
-			return $this->render2("block", "login");
-		} else {
+		if (!Yii::$app->getUser()->getIsGuest()) {
 			if (!Yii::$app->getSession()->get("ACTIVE_MODULE")) {
 				return $this->render2("block", "modules", [
-					"modules" => $this->getAllowedModules()
+					"modules" => Module::getAllowedModules()
 				]);
 			} else {
 				return $this->render2("main", "index");
 			}
+		} else {
+			return $this->render2("block", "login");
 		}
     }
 
@@ -39,37 +39,6 @@ class SiteController extends Controller {
 		} else {
 			return $this->render2("block", "settings");
 		}
-	}
-
-	/**
-	 * Get array with allowed modules for current employee
-	 * @return array - Array with modules for current employee
-	 */
-	public function getAllowedModules() {
-		$modules = Yii::$app->getModules(false);
-		$allowed = [];
-		foreach ($modules as $module) {
-			if (!isset($module["options"])) {
-				$module["options"] = [];
-			}
-			if (!isset($module["url"]) || empty($module["url"])) {
-				$module["options"] += [
-					"data-error" => "not-implemented"
-				];
-			} else {
-				$module["options"] += [
-					"data-url" => $module["url"]
-				];
-			}
-			if (isset($module["roles"])) {
-				if (in_array(EmployeeManager::getInfo()["role_id"], $module["roles"])) {
-					$allowed[] = $module;
-				}
-			} else {
-				$allowed[] = $module;
-			}
-		}
-		return $allowed;
 	}
 
 	/**

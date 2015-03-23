@@ -5,6 +5,6 @@
  */
 use yii\web\View;
 
-print \app\widgets\Form::widget([
-	"model" => new \app\forms\RoleForm()
+print \yii\helpers\Html::tag("div", "", [
+	"style" => "width: 350px"
 ]);

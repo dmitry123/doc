@@ -26,9 +26,11 @@ var PageReload = {
 			var native = $(".page-block");
 			var page = $(html).find(".page-block");
 			var c;
-			$(document.body).append(
-				c = page.clone().hide()
-			);
+			$(document.body).append(c = page.hide());
+			c.find("[data-load='block']").each(function(i, b) {
+				console.log(b);
+				$(document.body).append(b);
+			});
 			native.animate({
 				height: c.height() + me.padding,
 				width: c.width() + me.padding

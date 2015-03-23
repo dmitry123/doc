@@ -10,12 +10,11 @@ class SiteAsset extends AssetBundle {
     public $baseUrl = '@web';
 
     public $css = [
-		"css/sidenav.css",
+		"css/site.css",
 		"css/fileinput.css"
     ];
 
     public $js = [
-		"js/sidenav.js",
 		"js/fileinput.js",
 		"js/site.js",
     ];

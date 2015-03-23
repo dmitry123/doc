@@ -2,7 +2,7 @@
 /**
  * @var $this \yii\web\View
  * @var $content string
- * @var $logo bool
+ * @var $test string
  */
 app\assets\BlockAsset::register($this);
 ?>
@@ -28,7 +28,7 @@ app\assets\BlockAsset::register($this);
 <table class="page-content">
 <tr>
 <td valign="middle" width="150px">
-	<?= \yii\helpers\Html::img("img/logo-big.png", [
+	<?= \yii\helpers\Html::img("@web/img/logo-big.png", [
 		"width" => "100%"
 	]) ?>
 	<? if (!Yii::$app->getUser()->getIsGuest()): ?>
@@ -58,7 +58,6 @@ app\assets\BlockAsset::register($this);
 </table>
 </div>
 </div>
-<!-- TODO - "Remove that modal from layout, can't put it in view, cuz it will crash animation" -->
 <?= \app\widgets\Modal::widget([
 	"title" => "Регистрация",
 	"body" => \app\widgets\Form::widget([
