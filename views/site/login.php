@@ -23,4 +23,4 @@ $form = \yii\widgets\ActiveForm::begin([
 	<button class="btn btn-danger btn-lg" type="button" data-toggle="modal" data-target="#user-register-modal">Регистрация</button>
 </div>
 
-<? \yii\widgets\ActiveForm::end() ?>
+<?php \yii\widgets\ActiveForm::end() ?>

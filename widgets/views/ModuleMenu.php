@@ -18,11 +18,11 @@ use yii\web\View;
 			<span class="glyphicon glyphicon-home">&nbsp;</span>
 			<span>Домой</span>
 		</li>
-		<? foreach ($modules as $module): ?>
+		<?php foreach ($modules as $module): ?>
 			<li role="presentation" <?= \yii\helpers\Html::renderTagAttributes($module["options"]) ?>>
 				<span class="<?= $module["icon"] ?>">&nbsp;</span>
 				<span><?= $module["name"] ?></span>
 			</li>
-		<? endforeach; ?>
+		<?php endforeach; ?>
 	</ul>
 </div>

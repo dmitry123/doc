@@ -96,6 +96,8 @@
       <column name="phone_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="email" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
       <column name="login" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="role_name" sqlType="varchar" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="role_description" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
     </table>
     <table name="institute" schema="core" catalog="mgup" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnY29yZS5pbnN0aXR1dGVfaWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
@@ -206,6 +208,8 @@
       <column name="phone_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="email" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
       <column name="login" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="role_name" sqlType="varchar" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="role_description" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
     </table>
     <table name="user" schema="core" catalog="mgup" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnY29yZS51c2VyX2lkX3NlcSc6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>

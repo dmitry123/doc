@@ -16,7 +16,7 @@ use yii\web\View;
 	<ul class="nav navbar-nav navbar-left">
 	</ul>
 	<ul class="nav navbar-nav navbar-right">
-		<? if ($admin): ?>
+		<?php if ($admin): ?>
 		<li>
 			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
 				Администратор&nbsp;<span class="caret"><span class="sr-only"></span>
@@ -26,7 +26,7 @@ use yii\web\View;
 				<li><a href="<?= \yii\helpers\Url::to("@web/admin/table") ?>">Таблицы</a></li>
 			</ul>
 		</li>
-		<? endif; ?>
+		<?php endif; ?>
 		<li class="dropdown">
 			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
 				<span class="glyphicon glyphicon-user"></span>

@@ -54538,3 +54538,2163 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1427086465.519
     'REQUEST_TIME' => 1427086465
 ]
+2015-03-24 05:51:00 [127.0.0.1][-][2gg5hdeugdd3rnd1khl92aiog1][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to undefined function yii\i18n\mb_strpos()' in D:\hosts\doc\vendor\yiisoft\yii2\i18n\MessageFormatter.php:280
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-24 05:51:00 [127.0.0.1][-][2gg5hdeugdd3rnd1khl92aiog1][info][application] $_COOKIE = [
+    'PHPSESSID' => '2gg5hdeugdd3rnd1khl92aiog1'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=2gg5hdeugdd3rnd1khl92aiog1'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '54493'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427161860.886
+    'REQUEST_TIME' => 1427161860
+]
+2015-03-24 05:52:56 [127.0.0.1][-][2gg5hdeugdd3rnd1khl92aiog1][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to undefined function yii\i18n\mb_strpos()' in D:\hosts\doc\vendor\yiisoft\yii2\i18n\MessageFormatter.php:280
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-24 05:52:56 [127.0.0.1][-][2gg5hdeugdd3rnd1khl92aiog1][info][application] $_COOKIE = [
+    'PHPSESSID' => '2gg5hdeugdd3rnd1khl92aiog1'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=2gg5hdeugdd3rnd1khl92aiog1'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '54550'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427161976.115
+    'REQUEST_TIME' => 1427161976
+]
+2015-03-24 05:52:57 [127.0.0.1][-][2gg5hdeugdd3rnd1khl92aiog1][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to undefined function yii\i18n\mb_strpos()' in D:\hosts\doc\vendor\yiisoft\yii2\i18n\MessageFormatter.php:280
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-03-24 05:52:57 [127.0.0.1][-][2gg5hdeugdd3rnd1khl92aiog1][info][application] $_COOKIE = [
+    'PHPSESSID' => '2gg5hdeugdd3rnd1khl92aiog1'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=2gg5hdeugdd3rnd1khl92aiog1'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.17 (Win32) PHP/5.4.9'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '54551'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427161977.778
+    'REQUEST_TIME' => 1427161977
+]
+2015-03-24 03:44:42 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in D:\hosts\doc\core\EmployeeManager.php:16
+Stack trace:
+#0 D:\hosts\doc\views\layouts\block.php(38): app\core\EmployeeManager::getIdentity()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(382): yii\base\View->renderFile()
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(368): yii\base\Controller->renderContent()
+#5 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render()
+#6 D:\hosts\doc\controllers\SiteController.php(28): app\core\Controller->render2()
+#7 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): app\controllers\SiteController->actionIndex()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams()
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction()
+#11 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction()
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#13 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-03-24 03:44:42 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => '2gg5hdeugdd3rnd1khl92aiog1'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=2gg5hdeugdd3rnd1khl92aiog1'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.6.7'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '57574'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427168682.228
+    'REQUEST_TIME' => 1427168682
+]
+2015-03-24 03:51:04 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in D:\hosts\doc\core\EmployeeManager.php:16
+Stack trace:
+#0 D:\hosts\doc\views\layouts\block.php(38): app\core\EmployeeManager::getIdentity()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(382): yii\base\View->renderFile()
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(368): yii\base\Controller->renderContent()
+#5 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render()
+#6 D:\hosts\doc\controllers\SiteController.php(28): app\core\Controller->render2()
+#7 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): app\controllers\SiteController->actionIndex()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams()
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction()
+#11 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction()
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#13 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-03-24 03:51:04 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => '2gg5hdeugdd3rnd1khl92aiog1'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=2gg5hdeugdd3rnd1khl92aiog1'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.6.7'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '57666'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427169064.336
+    'REQUEST_TIME' => 1427169064
+]
+2015-03-24 03:51:17 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in D:\hosts\doc\core\EmployeeManager.php:16
+Stack trace:
+#0 D:\hosts\doc\views\layouts\block.php(38): app\core\EmployeeManager::getIdentity()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(382): yii\base\View->renderFile()
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(368): yii\base\Controller->renderContent()
+#5 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render()
+#6 D:\hosts\doc\controllers\SiteController.php(28): app\core\Controller->render2()
+#7 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): app\controllers\SiteController->actionIndex()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams()
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction()
+#11 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction()
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#13 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-03-24 03:51:17 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.6.7'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '57667'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427169077.953
+    'REQUEST_TIME' => 1427169077
+]
+2015-03-24 03:52:04 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in D:\hosts\doc\core\EmployeeManager.php:16
+Stack trace:
+#0 D:\hosts\doc\views\layouts\block.php(38): app\core\EmployeeManager::getIdentity()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(382): yii\base\View->renderFile()
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(368): yii\base\Controller->renderContent()
+#5 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render()
+#6 D:\hosts\doc\controllers\SiteController.php(28): app\core\Controller->render2()
+#7 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): app\controllers\SiteController->actionIndex()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams()
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction()
+#11 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction()
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#13 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-03-24 03:52:04 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.6.7'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '57690'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427169124.491
+    'REQUEST_TIME' => 1427169124
+]
+2015-03-24 03:52:31 [127.0.0.1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected end of file' in D:\hosts\doc\widgets\views\Form.php:65
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php(182): yii\base\View->render()
+#2 D:\hosts\doc\widgets\Form.php(74): yii\base\Widget->render()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php(96): app\widgets\Form->run()
+#4 D:\hosts\doc\views\layouts\block.php(67): yii\base\Widget::widget()
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#7 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(382): yii\base\View->renderFile()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(368): yii\base\Controller->renderContent()
+#9 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render()
+#10 D:\hosts\doc\controllers\SiteController.php(28): app\core\Controller->render2()
+#11 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): app\controllers\SiteController->actionIndex()
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#13 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams()
+#14 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction()
+#15 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction()
+#16 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#17 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#18 {main}
+2015-03-24 03:52:31 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.6.7'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '57694'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427169151.24
+    'REQUEST_TIME' => 1427169151
+]
+2015-03-24 03:53:02 [127.0.0.1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected end of file' in D:\hosts\doc\widgets\views\Form.php:65
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php(182): yii\base\View->render()
+#2 D:\hosts\doc\widgets\Form.php(74): yii\base\Widget->render()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php(96): app\widgets\Form->run()
+#4 D:\hosts\doc\views\layouts\block.php(67): yii\base\Widget::widget()
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#7 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(382): yii\base\View->renderFile()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(368): yii\base\Controller->renderContent()
+#9 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render()
+#10 D:\hosts\doc\controllers\SiteController.php(28): app\core\Controller->render2()
+#11 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): app\controllers\SiteController->actionIndex()
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#13 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams()
+#14 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction()
+#15 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction()
+#16 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#17 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#18 {main}
+2015-03-24 03:53:02 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.6.7'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '57695'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427169182.728
+    'REQUEST_TIME' => 1427169182
+]
+2015-03-24 03:53:52 [127.0.0.1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected end of file' in D:\hosts\doc\widgets\views\Form.php:65
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php(182): yii\base\View->render()
+#2 D:\hosts\doc\widgets\Form.php(74): yii\base\Widget->render()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php(96): app\widgets\Form->run()
+#4 D:\hosts\doc\views\layouts\block.php(67): yii\base\Widget::widget()
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#7 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(382): yii\base\View->renderFile()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(368): yii\base\Controller->renderContent()
+#9 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render()
+#10 D:\hosts\doc\controllers\SiteController.php(28): app\core\Controller->render2()
+#11 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): app\controllers\SiteController->actionIndex()
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#13 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams()
+#14 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction()
+#15 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction()
+#16 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#17 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#18 {main}
+2015-03-24 03:53:52 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.6.7'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '57798'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427169232.478
+    'REQUEST_TIME' => 1427169232
+]
+2015-03-24 03:54:00 [127.0.0.1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected end of file' in D:\hosts\doc\widgets\views\Form.php:65
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php(182): yii\base\View->render()
+#2 D:\hosts\doc\widgets\Form.php(74): yii\base\Widget->render()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php(96): app\widgets\Form->run()
+#4 D:\hosts\doc\views\layouts\block.php(67): yii\base\Widget::widget()
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#7 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(382): yii\base\View->renderFile()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(368): yii\base\Controller->renderContent()
+#9 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render()
+#10 D:\hosts\doc\controllers\SiteController.php(28): app\core\Controller->render2()
+#11 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): app\controllers\SiteController->actionIndex()
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#13 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams()
+#14 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction()
+#15 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction()
+#16 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#17 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#18 {main}
+2015-03-24 03:54:00 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.6.7'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '57799'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427169240.102
+    'REQUEST_TIME' => 1427169240
+]
+2015-03-24 03:54:04 [127.0.0.1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected end of file' in D:\hosts\doc\widgets\views\Form.php:65
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php(182): yii\base\View->render()
+#2 D:\hosts\doc\widgets\Form.php(74): yii\base\Widget->render()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php(96): app\widgets\Form->run()
+#4 D:\hosts\doc\views\layouts\block.php(67): yii\base\Widget::widget()
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#7 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(382): yii\base\View->renderFile()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(368): yii\base\Controller->renderContent()
+#9 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render()
+#10 D:\hosts\doc\controllers\SiteController.php(28): app\core\Controller->render2()
+#11 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): app\controllers\SiteController->actionIndex()
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#13 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams()
+#14 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction()
+#15 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction()
+#16 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#17 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#18 {main}
+2015-03-24 03:54:04 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.6.7'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '57800'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427169244.903
+    'REQUEST_TIME' => 1427169244
+]
+2015-03-24 03:54:25 [127.0.0.1][-][-][error][yii\base\InvalidCallException] exception 'yii\base\InvalidCallException' with message 'Unexpected yii\widgets\ActiveForm::end() call. A matching begin() is not found.' in D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php:79
+Stack trace:
+#0 D:\hosts\doc\views\site\login.php(26): yii\base\Widget::end()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\\hosts\\doc\\vi...')
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\\hosts\\doc\\vi...', Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\\hosts\\doc\\vi...', Array, Object(app\controllers\SiteController))
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('login', Array, Object(app\controllers\SiteController))
+#5 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render('login', Array)
+#6 D:\hosts\doc\controllers\SiteController.php(28): app\core\Controller->render2('block', 'login')
+#7 [internal function]: app\controllers\SiteController->actionIndex()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-03-24 03:54:25 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to undefined function yii\web\mb_strlen()' in D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php:389
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(283): yii\web\ErrorHandler->renderFile()
+#4 D:\hosts\doc\vendor\yiisoft\yii2\views\errorHandler\exception.php(373): yii\web\ErrorHandler->renderCallStackItem()
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#7 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(99): yii\web\ErrorHandler->renderFile()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException()
+#10 {main}
+2015-03-24 03:54:25 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.6.7'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '57802'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427169265.783
+    'REQUEST_TIME' => 1427169265
+]
+2015-03-24 03:54:49 [127.0.0.1][-][-][error][yii\base\InvalidCallException] exception 'yii\base\InvalidCallException' with message 'Unexpected yii\widgets\ActiveForm::end() call. A matching begin() is not found.' in D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php:79
+Stack trace:
+#0 D:\hosts\doc\views\site\login.php(26): yii\base\Widget::end()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\\hosts\\doc\\vi...')
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\\hosts\\doc\\vi...', Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\\hosts\\doc\\vi...', Array, Object(app\controllers\SiteController))
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('login', Array, Object(app\controllers\SiteController))
+#5 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render('login', Array)
+#6 D:\hosts\doc\controllers\SiteController.php(28): app\core\Controller->render2('block', 'login')
+#7 [internal function]: app\controllers\SiteController->actionIndex()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-03-24 03:54:49 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to undefined function yii\web\mb_strlen()' in D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php:389
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(283): yii\web\ErrorHandler->renderFile()
+#4 D:\hosts\doc\vendor\yiisoft\yii2\views\errorHandler\exception.php(373): yii\web\ErrorHandler->renderCallStackItem()
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#7 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(99): yii\web\ErrorHandler->renderFile()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException()
+#10 {main}
+2015-03-24 03:54:49 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.6.7'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '57803'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427169289.749
+    'REQUEST_TIME' => 1427169289
+]
+2015-03-24 03:55:02 [127.0.0.1][-][-][error][yii\base\InvalidCallException] exception 'yii\base\InvalidCallException' with message 'Unexpected yii\widgets\ActiveForm::end() call. A matching begin() is not found.' in D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php:79
+Stack trace:
+#0 D:\hosts\doc\views\site\login.php(26): yii\base\Widget::end()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\\hosts\\doc\\vi...')
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\\hosts\\doc\\vi...', Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\\hosts\\doc\\vi...', Array, Object(app\controllers\SiteController))
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('login', Array, Object(app\controllers\SiteController))
+#5 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render('login', Array)
+#6 D:\hosts\doc\controllers\SiteController.php(28): app\core\Controller->render2('block', 'login')
+#7 [internal function]: app\controllers\SiteController->actionIndex()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-03-24 03:55:02 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to undefined function yii\web\mb_strlen()' in D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php:389
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(283): yii\web\ErrorHandler->renderFile()
+#4 D:\hosts\doc\vendor\yiisoft\yii2\views\errorHandler\exception.php(373): yii\web\ErrorHandler->renderCallStackItem()
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#7 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(99): yii\web\ErrorHandler->renderFile()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException()
+#10 {main}
+2015-03-24 03:55:02 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.6.7'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '57807'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427169302.422
+    'REQUEST_TIME' => 1427169302
+]
+2015-03-24 03:55:04 [127.0.0.1][-][-][error][yii\base\InvalidCallException] exception 'yii\base\InvalidCallException' with message 'Unexpected yii\widgets\ActiveForm::end() call. A matching begin() is not found.' in D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php:79
+Stack trace:
+#0 D:\hosts\doc\views\site\login.php(26): yii\base\Widget::end()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\\hosts\\doc\\vi...')
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\\hosts\\doc\\vi...', Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\\hosts\\doc\\vi...', Array, Object(app\controllers\SiteController))
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('login', Array, Object(app\controllers\SiteController))
+#5 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render('login', Array)
+#6 D:\hosts\doc\controllers\SiteController.php(28): app\core\Controller->render2('block', 'login')
+#7 [internal function]: app\controllers\SiteController->actionIndex()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-03-24 03:55:04 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to undefined function yii\web\mb_strlen()' in D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php:389
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(283): yii\web\ErrorHandler->renderFile()
+#4 D:\hosts\doc\vendor\yiisoft\yii2\views\errorHandler\exception.php(373): yii\web\ErrorHandler->renderCallStackItem()
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#7 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(99): yii\web\ErrorHandler->renderFile()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException()
+#10 {main}
+2015-03-24 03:55:04 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.6.7'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '57808'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427169304.921
+    'REQUEST_TIME' => 1427169304
+]
+2015-03-24 03:55:32 [127.0.0.1][-][-][error][yii\base\InvalidCallException] exception 'yii\base\InvalidCallException' with message 'Unexpected yii\widgets\ActiveForm::end() call. A matching begin() is not found.' in D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php:79
+Stack trace:
+#0 D:\hosts\doc\views\site\login.php(26): yii\base\Widget::end()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\\hosts\\doc\\vi...')
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\\hosts\\doc\\vi...', Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\\hosts\\doc\\vi...', Array, Object(app\controllers\SiteController))
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('login', Array, Object(app\controllers\SiteController))
+#5 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render('login', Array)
+#6 D:\hosts\doc\controllers\SiteController.php(28): app\core\Controller->render2('block', 'login')
+#7 [internal function]: app\controllers\SiteController->actionIndex()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-03-24 03:55:32 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to undefined function mb_strlen()' in D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php:389
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(283): yii\web\ErrorHandler->renderFile()
+#4 D:\hosts\doc\vendor\yiisoft\yii2\views\errorHandler\exception.php(373): yii\web\ErrorHandler->renderCallStackItem()
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#7 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(99): yii\web\ErrorHandler->renderFile()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException()
+#10 {main}
+2015-03-24 03:55:32 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.6.7'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '57811'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427169332.789
+    'REQUEST_TIME' => 1427169332
+]
+2015-03-24 03:55:51 [127.0.0.1][-][-][error][yii\base\InvalidCallException] exception 'yii\base\InvalidCallException' with message 'Unexpected yii\widgets\ActiveForm::end() call. A matching begin() is not found.' in D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php:79
+Stack trace:
+#0 D:\hosts\doc\views\site\login.php(26): yii\base\Widget::end()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\\hosts\\doc\\vi...')
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\\hosts\\doc\\vi...', Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\\hosts\\doc\\vi...', Array, Object(app\controllers\SiteController))
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('login', Array, Object(app\controllers\SiteController))
+#5 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render('login', Array)
+#6 D:\hosts\doc\controllers\SiteController.php(28): app\core\Controller->render2('block', 'login')
+#7 [internal function]: app\controllers\SiteController->actionIndex()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-03-24 03:55:51 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to undefined function yii\web\mb_strlen()' in D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php:389
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(283): yii\web\ErrorHandler->renderFile()
+#4 D:\hosts\doc\vendor\yiisoft\yii2\views\errorHandler\exception.php(373): yii\web\ErrorHandler->renderCallStackItem()
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#7 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(99): yii\web\ErrorHandler->renderFile()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException()
+#10 {main}
+2015-03-24 03:55:51 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.6.7'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '57813'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427169351.557
+    'REQUEST_TIME' => 1427169351
+]
+2015-03-24 03:57:31 [127.0.0.1][-][-][error][yii\base\InvalidCallException] exception 'yii\base\InvalidCallException' with message 'Unexpected yii\widgets\ActiveForm::end() call. A matching begin() is not found.' in D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php:79
+Stack trace:
+#0 D:\hosts\doc\views\site\login.php(26): yii\base\Widget::end()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\\hosts\\doc\\vi...')
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\\hosts\\doc\\vi...', Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\\hosts\\doc\\vi...', Array, Object(app\controllers\SiteController))
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('login', Array, Object(app\controllers\SiteController))
+#5 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render('login', Array)
+#6 D:\hosts\doc\controllers\SiteController.php(28): app\core\Controller->render2('block', 'login')
+#7 [internal function]: app\controllers\SiteController->actionIndex()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-03-24 03:57:31 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to undefined function yii\web\mb_strlen()' in D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php:389
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(283): yii\web\ErrorHandler->renderFile()
+#4 D:\hosts\doc\vendor\yiisoft\yii2\views\errorHandler\exception.php(373): yii\web\ErrorHandler->renderCallStackItem()
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#7 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(99): yii\web\ErrorHandler->renderFile()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException()
+#10 {main}
+2015-03-24 03:57:31 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.6.7'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '57906'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427169451.091
+    'REQUEST_TIME' => 1427169451
+]
+2015-03-24 03:58:12 [127.0.0.1][-][-][error][yii\base\InvalidCallException] exception 'yii\base\InvalidCallException' with message 'Unexpected yii\widgets\ActiveForm::end() call. A matching begin() is not found.' in D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php:79
+Stack trace:
+#0 D:\hosts\doc\views\site\login.php(26): yii\base\Widget::end()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\\hosts\\doc\\vi...')
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\\hosts\\doc\\vi...', Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\\hosts\\doc\\vi...', Array, Object(app\controllers\SiteController))
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('login', Array, Object(app\controllers\SiteController))
+#5 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render('login', Array)
+#6 D:\hosts\doc\controllers\SiteController.php(28): app\core\Controller->render2('block', 'login')
+#7 [internal function]: app\controllers\SiteController->actionIndex()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-03-24 03:58:12 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to undefined function yii\web\mb_strlen()' in D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php:389
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(283): yii\web\ErrorHandler->renderFile()
+#4 D:\hosts\doc\vendor\yiisoft\yii2\views\errorHandler\exception.php(373): yii\web\ErrorHandler->renderCallStackItem()
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#7 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(99): yii\web\ErrorHandler->renderFile()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException()
+#10 {main}
+2015-03-24 03:58:12 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.6.7'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '57908'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427169492.368
+    'REQUEST_TIME' => 1427169492
+]
+2015-03-24 03:58:13 [127.0.0.1][-][-][error][yii\base\InvalidCallException] exception 'yii\base\InvalidCallException' with message 'Unexpected yii\widgets\ActiveForm::end() call. A matching begin() is not found.' in D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php:79
+Stack trace:
+#0 D:\hosts\doc\views\site\login.php(26): yii\base\Widget::end()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\\hosts\\doc\\vi...')
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\\hosts\\doc\\vi...', Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\\hosts\\doc\\vi...', Array, Object(app\controllers\SiteController))
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('login', Array, Object(app\controllers\SiteController))
+#5 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render('login', Array)
+#6 D:\hosts\doc\controllers\SiteController.php(28): app\core\Controller->render2('block', 'login')
+#7 [internal function]: app\controllers\SiteController->actionIndex()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-03-24 03:58:13 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to undefined function yii\web\mb_strlen()' in D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php:389
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(283): yii\web\ErrorHandler->renderFile()
+#4 D:\hosts\doc\vendor\yiisoft\yii2\views\errorHandler\exception.php(373): yii\web\ErrorHandler->renderCallStackItem()
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#7 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(99): yii\web\ErrorHandler->renderFile()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException()
+#10 {main}
+2015-03-24 03:58:13 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.6.7'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '57909'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427169493.694
+    'REQUEST_TIME' => 1427169493
+]
+2015-03-24 03:58:23 [127.0.0.1][-][-][error][yii\base\InvalidCallException] exception 'yii\base\InvalidCallException' with message 'Unexpected yii\widgets\ActiveForm::end() call. A matching begin() is not found.' in D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php:79
+Stack trace:
+#0 D:\hosts\doc\views\site\login.php(26): yii\base\Widget::end()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\\hosts\\doc\\vi...')
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\\hosts\\doc\\vi...', Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\\hosts\\doc\\vi...', Array, Object(app\controllers\SiteController))
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('login', Array, Object(app\controllers\SiteController))
+#5 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render('login', Array)
+#6 D:\hosts\doc\controllers\SiteController.php(28): app\core\Controller->render2('block', 'login')
+#7 [internal function]: app\controllers\SiteController->actionIndex()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-03-24 03:58:23 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to undefined function yii\web\mb_strlen()' in D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php:389
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(283): yii\web\ErrorHandler->renderFile()
+#4 D:\hosts\doc\vendor\yiisoft\yii2\views\errorHandler\exception.php(373): yii\web\ErrorHandler->renderCallStackItem()
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#7 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(99): yii\web\ErrorHandler->renderFile()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException()
+#10 {main}
+2015-03-24 03:58:23 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.6.7'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '57910'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427169503.016
+    'REQUEST_TIME' => 1427169503
+]
+2015-03-24 03:59:07 [127.0.0.1][-][-][error][yii\base\InvalidCallException] exception 'yii\base\InvalidCallException' with message 'Unexpected yii\widgets\ActiveForm::end() call. A matching begin() is not found.' in D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php:79
+Stack trace:
+#0 D:\hosts\doc\views\site\login.php(26): yii\base\Widget::end()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\\hosts\\doc\\vi...')
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\\hosts\\doc\\vi...', Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\\hosts\\doc\\vi...', Array, Object(app\controllers\SiteController))
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('login', Array, Object(app\controllers\SiteController))
+#5 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render('login', Array)
+#6 D:\hosts\doc\controllers\SiteController.php(28): app\core\Controller->render2('block', 'login')
+#7 [internal function]: app\controllers\SiteController->actionIndex()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-03-24 03:59:07 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to undefined function yii\web\mb_strlen()' in D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php:389
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(283): yii\web\ErrorHandler->renderFile()
+#4 D:\hosts\doc\vendor\yiisoft\yii2\views\errorHandler\exception.php(373): yii\web\ErrorHandler->renderCallStackItem()
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#7 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(99): yii\web\ErrorHandler->renderFile()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException()
+#10 {main}
+2015-03-24 03:59:07 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.6.7'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '57911'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427169547.673
+    'REQUEST_TIME' => 1427169547
+]
+2015-03-24 04:00:18 [127.0.0.1][-][-][error][yii\base\InvalidCallException] exception 'yii\base\InvalidCallException' with message 'Unexpected yii\widgets\ActiveForm::end() call. A matching begin() is not found.' in D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php:79
+Stack trace:
+#0 D:\hosts\doc\views\site\login.php(26): yii\base\Widget::end()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\\hosts\\doc\\vi...')
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\\hosts\\doc\\vi...', Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\\hosts\\doc\\vi...', Array, Object(app\controllers\SiteController))
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('login', Array, Object(app\controllers\SiteController))
+#5 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render('login', Array)
+#6 D:\hosts\doc\controllers\SiteController.php(28): app\core\Controller->render2('block', 'login')
+#7 [internal function]: app\controllers\SiteController->actionIndex()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-03-24 04:00:18 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to undefined function yii\web\mb_strlen()' in D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php:389
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(283): yii\web\ErrorHandler->renderFile()
+#4 D:\hosts\doc\vendor\yiisoft\yii2\views\errorHandler\exception.php(373): yii\web\ErrorHandler->renderCallStackItem()
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#7 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(99): yii\web\ErrorHandler->renderFile()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException()
+#10 {main}
+2015-03-24 04:00:17 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.6.7'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '57912'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427169617.988
+    'REQUEST_TIME' => 1427169617
+]
+2015-03-24 04:01:57 [127.0.0.1][-][-][error][yii\base\InvalidCallException] exception 'yii\base\InvalidCallException' with message 'Unexpected yii\widgets\ActiveForm::end() call. A matching begin() is not found.' in D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php:79
+Stack trace:
+#0 D:\hosts\doc\views\site\login.php(26): yii\base\Widget::end()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\\hosts\\doc\\vi...')
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\\hosts\\doc\\vi...', Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\\hosts\\doc\\vi...', Array, Object(app\controllers\SiteController))
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('login', Array, Object(app\controllers\SiteController))
+#5 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render('login', Array)
+#6 D:\hosts\doc\controllers\SiteController.php(28): app\core\Controller->render2('block', 'login')
+#7 [internal function]: app\controllers\SiteController->actionIndex()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-03-24 04:01:57 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to undefined function yii\web\mb_strlen()' in D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php:389
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(283): yii\web\ErrorHandler->renderFile()
+#4 D:\hosts\doc\vendor\yiisoft\yii2\views\errorHandler\exception.php(373): yii\web\ErrorHandler->renderCallStackItem()
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#7 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(99): yii\web\ErrorHandler->renderFile()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException()
+#10 {main}
+2015-03-24 04:01:57 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.6.7'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '57921'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427169717.556
+    'REQUEST_TIME' => 1427169717
+]
+2015-03-24 04:02:03 [127.0.0.1][-][-][error][yii\base\InvalidCallException] exception 'yii\base\InvalidCallException' with message 'Unexpected yii\widgets\ActiveForm::end() call. A matching begin() is not found.' in D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php:79
+Stack trace:
+#0 D:\hosts\doc\views\site\login.php(26): yii\base\Widget::end()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\\hosts\\doc\\vi...')
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\\hosts\\doc\\vi...', Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\\hosts\\doc\\vi...', Array, Object(app\controllers\SiteController))
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('login', Array, Object(app\controllers\SiteController))
+#5 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render('login', Array)
+#6 D:\hosts\doc\controllers\SiteController.php(28): app\core\Controller->render2('block', 'login')
+#7 [internal function]: app\controllers\SiteController->actionIndex()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-03-24 04:02:03 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to undefined function yii\web\mb_strlen()' in D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php:389
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(283): yii\web\ErrorHandler->renderFile()
+#4 D:\hosts\doc\vendor\yiisoft\yii2\views\errorHandler\exception.php(373): yii\web\ErrorHandler->renderCallStackItem()
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#7 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(99): yii\web\ErrorHandler->renderFile()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException()
+#10 {main}
+2015-03-24 04:02:03 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.6.7'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '57922'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427169723.343
+    'REQUEST_TIME' => 1427169723
+]
+2015-03-24 04:03:52 [127.0.0.1][-][-][error][yii\base\InvalidCallException] exception 'yii\base\InvalidCallException' with message 'Unexpected yii\widgets\ActiveForm::end() call. A matching begin() is not found.' in D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php:79
+Stack trace:
+#0 D:\hosts\doc\views\site\login.php(26): yii\base\Widget::end()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\\hosts\\doc\\vi...')
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\\hosts\\doc\\vi...', Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\\hosts\\doc\\vi...', Array, Object(app\controllers\SiteController))
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('login', Array, Object(app\controllers\SiteController))
+#5 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render('login', Array)
+#6 D:\hosts\doc\controllers\SiteController.php(28): app\core\Controller->render2('block', 'login')
+#7 [internal function]: app\controllers\SiteController->actionIndex()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-03-24 04:03:52 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to undefined function yii\web\mb_strlen()' in D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php:389
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(283): yii\web\ErrorHandler->renderFile()
+#4 D:\hosts\doc\vendor\yiisoft\yii2\views\errorHandler\exception.php(373): yii\web\ErrorHandler->renderCallStackItem()
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#7 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(99): yii\web\ErrorHandler->renderFile()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException()
+#10 {main}
+2015-03-24 04:03:52 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.6.7'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '57982'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427169832.866
+    'REQUEST_TIME' => 1427169832
+]
+2015-03-24 04:04:03 [127.0.0.1][-][-][error][yii\base\InvalidCallException] exception 'yii\base\InvalidCallException' with message 'Unexpected yii\widgets\ActiveForm::end() call. A matching begin() is not found.' in D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php:79
+Stack trace:
+#0 D:\hosts\doc\views\site\login.php(26): yii\base\Widget::end()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\\hosts\\doc\\vi...')
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\\hosts\\doc\\vi...', Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\\hosts\\doc\\vi...', Array, Object(app\controllers\SiteController))
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('login', Array, Object(app\controllers\SiteController))
+#5 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render('login', Array)
+#6 D:\hosts\doc\controllers\SiteController.php(28): app\core\Controller->render2('block', 'login')
+#7 [internal function]: app\controllers\SiteController->actionIndex()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-03-24 04:04:03 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to undefined function yii\web\mb_strlen()' in D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php:389
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(283): yii\web\ErrorHandler->renderFile()
+#4 D:\hosts\doc\vendor\yiisoft\yii2\views\errorHandler\exception.php(373): yii\web\ErrorHandler->renderCallStackItem()
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#7 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(99): yii\web\ErrorHandler->renderFile()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException()
+#10 {main}
+2015-03-24 04:04:03 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.6.7'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '57983'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427169843.834
+    'REQUEST_TIME' => 1427169843
+]
+2015-03-24 04:28:33 [127.0.0.1][-][-][error][yii\base\InvalidCallException] exception 'yii\base\InvalidCallException' with message 'Unexpected yii\widgets\ActiveForm::end() call. A matching begin() is not found.' in D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php:79
+Stack trace:
+#0 D:\hosts\doc\views\site\login.php(26): yii\base\Widget::end()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\\hosts\\doc\\vi...')
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\\hosts\\doc\\vi...', Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\\hosts\\doc\\vi...', Array, Object(app\controllers\SiteController))
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('login', Array, Object(app\controllers\SiteController))
+#5 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render('login', Array)
+#6 D:\hosts\doc\controllers\SiteController.php(28): app\core\Controller->render2('block', 'login')
+#7 [internal function]: app\controllers\SiteController->actionIndex()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-03-24 04:28:33 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to undefined function yii\web\mb_strlen()' in D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php:389
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(283): yii\web\ErrorHandler->renderFile()
+#4 D:\hosts\doc\vendor\yiisoft\yii2\views\errorHandler\exception.php(373): yii\web\ErrorHandler->renderCallStackItem()
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#7 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(99): yii\web\ErrorHandler->renderFile()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException()
+#10 {main}
+2015-03-24 04:28:33 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.6.7'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '58093'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427171313.545
+    'REQUEST_TIME' => 1427171313
+]
+2015-03-24 04:42:14 [127.0.0.1][-][-][error][yii\base\InvalidCallException] exception 'yii\base\InvalidCallException' with message 'Unexpected yii\widgets\ActiveForm::end() call. A matching begin() is not found.' in D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php:79
+Stack trace:
+#0 D:\hosts\doc\views\site\login.php(26): yii\base\Widget::end()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\\hosts\\doc\\vi...')
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\\hosts\\doc\\vi...', Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\\hosts\\doc\\vi...', Array, Object(app\controllers\SiteController))
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('login', Array, Object(app\controllers\SiteController))
+#5 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render('login', Array)
+#6 D:\hosts\doc\controllers\SiteController.php(28): app\core\Controller->render2('block', 'login')
+#7 [internal function]: app\controllers\SiteController->actionIndex()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-03-24 04:42:14 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to undefined function yii\web\mb_strlen()' in D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php:389
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(283): yii\web\ErrorHandler->renderFile()
+#4 D:\hosts\doc\vendor\yiisoft\yii2\views\errorHandler\exception.php(373): yii\web\ErrorHandler->renderCallStackItem()
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#7 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(99): yii\web\ErrorHandler->renderFile()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException()
+#10 {main}
+2015-03-24 04:42:14 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.6.7'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '58122'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427172134.211
+    'REQUEST_TIME' => 1427172134
+]
+2015-03-24 04:42:22 [127.0.0.1][-][-][error][yii\base\InvalidCallException] exception 'yii\base\InvalidCallException' with message 'Unexpected yii\widgets\ActiveForm::end() call. A matching begin() is not found.' in D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php:79
+Stack trace:
+#0 D:\hosts\doc\views\site\login.php(26): yii\base\Widget::end()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\\hosts\\doc\\vi...')
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\\hosts\\doc\\vi...', Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\\hosts\\doc\\vi...', Array, Object(app\controllers\SiteController))
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('login', Array, Object(app\controllers\SiteController))
+#5 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render('login', Array)
+#6 D:\hosts\doc\controllers\SiteController.php(28): app\core\Controller->render2('block', 'login')
+#7 [internal function]: app\controllers\SiteController->actionIndex()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-03-24 04:42:22 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to undefined function yii\web\mb_strlen()' in D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php:389
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(283): yii\web\ErrorHandler->renderFile()
+#4 D:\hosts\doc\vendor\yiisoft\yii2\views\errorHandler\exception.php(373): yii\web\ErrorHandler->renderCallStackItem()
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#7 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(99): yii\web\ErrorHandler->renderFile()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException()
+#10 {main}
+2015-03-24 04:42:22 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.6.7'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '58128'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427172142.403
+    'REQUEST_TIME' => 1427172142
+]
+2015-03-24 04:42:23 [127.0.0.1][-][-][error][yii\base\InvalidCallException] exception 'yii\base\InvalidCallException' with message 'Unexpected yii\widgets\ActiveForm::end() call. A matching begin() is not found.' in D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php:79
+Stack trace:
+#0 D:\hosts\doc\views\site\login.php(26): yii\base\Widget::end()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\\hosts\\doc\\vi...')
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\\hosts\\doc\\vi...', Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\\hosts\\doc\\vi...', Array, Object(app\controllers\SiteController))
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('login', Array, Object(app\controllers\SiteController))
+#5 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render('login', Array)
+#6 D:\hosts\doc\controllers\SiteController.php(28): app\core\Controller->render2('block', 'login')
+#7 [internal function]: app\controllers\SiteController->actionIndex()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-03-24 04:42:23 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to undefined function yii\web\mb_strlen()' in D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php:389
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(283): yii\web\ErrorHandler->renderFile()
+#4 D:\hosts\doc\vendor\yiisoft\yii2\views\errorHandler\exception.php(373): yii\web\ErrorHandler->renderCallStackItem()
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#7 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(99): yii\web\ErrorHandler->renderFile()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException()
+#10 {main}
+2015-03-24 04:42:23 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.6.7'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '58126'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427172143.481
+    'REQUEST_TIME' => 1427172143
+]
+2015-03-24 04:50:10 [127.0.0.1][-][-][error][yii\base\InvalidCallException] exception 'yii\base\InvalidCallException' with message 'Unexpected yii\widgets\ActiveForm::end() call. A matching begin() is not found.' in D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php:79
+Stack trace:
+#0 D:\hosts\doc\views\site\login.php(26): yii\base\Widget::end()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\\hosts\\doc\\vi...')
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\\hosts\\doc\\vi...', Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\\hosts\\doc\\vi...', Array, Object(app\controllers\SiteController))
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('login', Array, Object(app\controllers\SiteController))
+#5 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render('login', Array)
+#6 D:\hosts\doc\controllers\SiteController.php(28): app\core\Controller->render2('block', 'login')
+#7 [internal function]: app\controllers\SiteController->actionIndex()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-03-24 04:50:10 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to undefined function yii\web\mb_strlen()' in D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php:389
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(283): yii\web\ErrorHandler->renderFile()
+#4 D:\hosts\doc\vendor\yiisoft\yii2\views\errorHandler\exception.php(373): yii\web\ErrorHandler->renderCallStackItem()
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#7 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(99): yii\web\ErrorHandler->renderFile()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException()
+#10 {main}
+2015-03-24 04:50:10 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.6.7'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '58745'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427172610.875
+    'REQUEST_TIME' => 1427172610
+]
+2015-03-24 04:55:43 [127.0.0.1][-][-][error][yii\base\InvalidCallException] exception 'yii\base\InvalidCallException' with message 'Unexpected yii\widgets\ActiveForm::end() call. A matching begin() is not found.' in D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php:79
+Stack trace:
+#0 D:\hosts\doc\views\site\login.php(26): yii\base\Widget::end()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\\hosts\\doc\\vi...')
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\\hosts\\doc\\vi...', Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\\hosts\\doc\\vi...', Array, Object(app\controllers\SiteController))
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('login', Array, Object(app\controllers\SiteController))
+#5 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render('login', Array)
+#6 D:\hosts\doc\controllers\SiteController.php(28): app\core\Controller->render2('block', 'login')
+#7 [internal function]: app\controllers\SiteController->actionIndex()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-03-24 04:55:43 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to undefined function yii\web\mb_strlen()' in D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php:389
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(283): yii\web\ErrorHandler->renderFile()
+#4 D:\hosts\doc\vendor\yiisoft\yii2\views\errorHandler\exception.php(373): yii\web\ErrorHandler->renderCallStackItem()
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): ::unknown()
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#7 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(228): yii\base\View->renderFile()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\web\ErrorHandler.php(99): yii\web\ErrorHandler->renderFile()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\ErrorHandler.php(95): yii\web\ErrorHandler->renderException()
+#10 {main}
+2015-03-24 04:55:42 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.6.7'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '49345'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427172941.698
+    'REQUEST_TIME' => 1427172941
+]
+2015-03-24 09:27:32 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'POST.model' in D:\hosts\doc\vendor\yiisoft\yii2\base\ErrorException.php:30
+Stack trace:
+#0 D:\hosts\doc\core\Controller.php(197): app\core\Controller->post('model')
+#1 D:\hosts\doc\controllers\UserController.php(71): app\core\Controller->getFormModel('model', 'post', 'login')
+#2 [internal function]: app\controllers\UserController->actionLogin()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('login', Array)
+#6 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('user/login', Array)
+#7 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#9 {main}
+2015-03-24 09:27:32 [::1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => '30fp9oj3n11i6qa84i827tll14'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=30fp9oj3n11i6qa84i827tll14'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/hosts'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '49958'
+    'REDIRECT_URL' => '/doc/web/user/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/web/user/login'
+    'SCRIPT_NAME' => '/doc/web/index.php'
+    'PHP_SELF' => '/doc/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1427174852.774
+    'REQUEST_TIME' => 1427174852
+]

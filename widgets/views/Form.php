@@ -27,39 +27,39 @@ $form = ActiveForm::begin([
 	"action" => $url
 ]); ?>
 
-<? foreach ($model->getConfig() as $key => $value): ?>
+<?php foreach ($model->getConfig() as $key => $value): ?>
     <div class="form-group <?= $self->isHidden($key) ? "hidden" : "" ?>">
         <?php if (!$self->checkType($key, "Hidden") && $self->labels) : ?>
 			<label class="col-xs-4 control-label" for="<?= $key ?>">
 				<?= $value["label"] ?>
-				<? if (!empty($value["label"])): ?>
+				<?php if (!empty($value["label"])): ?>
 					<span class="required">*</span>
-				<? endif ?>
+				<?php endif ?>
 			</label>
-        <? endif; ?>
+        <?php endif; ?>
         <div class="col-xs-7">
             <?= $field = $self->prepare($key)->render($form, $model)->label(false)->render() ?>
         </div>
-		<? if ($field instanceof \app\core\FormControl): ?>
-			<? foreach ($field->getControls() as $class => $control): ?>
+		<?php if ($field instanceof \app\core\FormControl): ?>
+			<?php foreach ($field->getControls() as $class => $control): ?>
 				<a href="javascript:void(0)">
-					<? $self->renderControl($class . " col-xs-1", $control); ?>
+					<?php $self->renderControl($class . " col-xs-1", $control); ?>
 				</a>
-			<? endforeach; ?>
-		<? endif; ?>
-        <? if ($self->checkType($key, "DropDown") && $self->getForm($key)): ?>
+			<?php endforeach; ?>
+		<?php endif; ?>
+        <?php if ($self->checkType($key, "DropDown") && $self->getForm($key)): ?>
             <a data-form="<?= $self->getForm($key) ?>" href="javascript:void(0)">
 				<span style="font-size: 15px; margin-left: -15px; margin-top: 5px" class="col-xs-1 glyphicon glyphicon-plus form-search-button"></span>
 			</a>
-        <? elseif ($self->checkType($key, "Multiple")): ?>
+        <?php elseif ($self->checkType($key, "Multiple")): ?>
             <a href="javascript:void(0)"><span style="font-size: 15px; margin-left: -15px; margin-top: 5px" class="col-xs-1 glyphicon glyphicon-arrow-up form-up-button"></span></a>
             <a href="javascript:void(0)"><span style="font-size: 15px; margin-left: -15px; margin-top: 5px" class="col-xs-1 glyphicon glyphicon-arrow-down form-down-button"></span></a>
-        <? endif; ?>
+        <?php endif; ?>
     </div>
-<? endforeach; ?>
+<?php endforeach; ?>
 
-<? if ($self->button != null): ?>
+<?php if ($self->button != null): ?>
 	<button class="<?= $self->button["class"] ?>" type="submit"><?= $self->button["text"] ?></button>
-<? endif; ?>
+<?php endif; ?>
 
-<? ActiveForm::end(); ?>
+<?php ActiveForm::end() ?>
