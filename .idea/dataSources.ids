@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
   <data-source name="PostgreSQL - mgup@localhost" uuid="4a1bea19-9630-4f7c-a585-745035fe4694">
-    <database-info product="PostgreSQL" version="9.3.0" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.3 JDBC4 (build 1100)">
+    <database-info product="PostgreSQL" version="9.3.5" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.3 JDBC4 (build 1100)">
       <identifier-quote-string>&quot;</identifier-quote-string>
     </database-info>
     <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact"/>
@@ -21,6 +21,8 @@
       <column name="phone_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="email" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
       <column name="login" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="role_name" sqlType="varchar" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="role_description" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
     </table>
     <table name="department" schema="core" catalog="mgup" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnY29yZS5kZXBhcnRtZW50X2lkX3NlcSc6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
@@ -54,6 +56,8 @@
       <column name="phone_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="email" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
       <column name="login" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="role_name" sqlType="varchar" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="role_description" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
     </table>
     <table name="employee" schema="core" catalog="mgup" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnY29yZS5lbXBsb3llZV9pZF9zZXEnOjpyZWdjbGFzcyk=" autoIncrement="true"/>
@@ -130,6 +134,8 @@
       <column name="phone_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="email" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
       <column name="login" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="role_name" sqlType="varchar" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="role_description" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
     </table>
     <table name="phone" schema="core" catalog="mgup" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnY29yZS5waG9uZV9pZF9zZXEnOjpyZWdjbGFzcyk=" autoIncrement="true"/>
@@ -196,6 +202,8 @@
       <column name="phone_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="email" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
       <column name="login" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="role_name" sqlType="varchar" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="role_description" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
     </table>
     <table name="teacher" schema="core" catalog="mgup" type="VIEW">
       <column name="id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
@@ -13164,7 +13172,7 @@
     <procedure name="pg_identify_object" schema="pg_catalog" catalog="mgup" type="2" remarks="Z2V0IG1hY2hpbmUtcGFyc2VhYmxlIGlkZW50aWZpY2F0aW9uIG9mIFNRTCBvYmplY3Q=">
       <prototype>
         <parameter name="classid" sqlType="oid" precision="0" scale="0" nullable="true" jdbcType="-5" type="1" index="1"/>
-        <parameter name="objid" sqlType="int4" precision="0" scale="0" nullable="true" jdbcType="4" type="1" index="2"/>
+        <parameter name="objid" sqlType="oid" precision="0" scale="0" nullable="true" jdbcType="-5" type="1" index="2"/>
         <parameter name="subobjid" sqlType="int4" precision="0" scale="0" nullable="true" jdbcType="4" type="1" index="3"/>
         <parameter name="type" sqlType="text" precision="0" scale="0" nullable="true" jdbcType="12" type="4" index="4"/>
         <parameter name="schema" sqlType="text" precision="0" scale="0" nullable="true" jdbcType="12" type="4" index="5"/>
@@ -13394,7 +13402,7 @@
     </procedure>
     <procedure name="pg_sequence_parameters" schema="pg_catalog" catalog="mgup" type="2" remarks="c2VxdWVuY2UgcGFyYW1ldGVycywgZm9yIHVzZSBieSBpbmZvcm1hdGlvbiBzY2hlbWE=">
       <prototype>
-        <parameter name="sequence_oid" sqlType="int4" precision="0" scale="0" nullable="true" jdbcType="4" type="1" index="1"/>
+        <parameter name="sequence_oid" sqlType="oid" precision="0" scale="0" nullable="true" jdbcType="-5" type="1" index="1"/>
         <parameter name="start_value" sqlType="int8" precision="0" scale="0" nullable="true" jdbcType="-5" type="4" index="2"/>
         <parameter name="minimum_value" sqlType="int8" precision="0" scale="0" nullable="true" jdbcType="-5" type="4" index="3"/>
         <parameter name="maximum_value" sqlType="int8" precision="0" scale="0" nullable="true" jdbcType="-5" type="4" index="4"/>
