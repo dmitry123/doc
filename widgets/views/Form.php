@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * @var Form $self - Self widget instance
  * @var View $this - Form widget instance

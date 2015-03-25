@@ -27,16 +27,12 @@ var PageReload = {
 			var page = $(html).find(".page-block");
 			var c;
 			$(document.body).append(c = page.hide());
-			c.find("[data-load='block']").each(function(i, b) {
-				console.log(b);
-				$(document.body).append(b);
-			});
 			native.animate({
 				height: c.height() + me.padding,
 				width: c.width() + me.padding
 			}, "fast", function() {
-				native.replaceWith(c.show());
-				c.children(".page-content").hide().fadeIn("fast");
+                native.replaceWith(c.show());
+                c.children(".page-content").hide().fadeIn("fast");
 			});
 			$(".loading-image").promise().done(function() {
 				$(this).fadeOut("fast");
@@ -44,12 +40,13 @@ var PageReload = {
 		});
 	},
 	before: function() {
-		var content = $(".page-block");
+		var content = $(".page-block"),
+            image;
 		content.css({
 			"height": content.height() + this.padding,
 			"width": content.width() + this.padding
 		}).append(
-			$("<img>", {
+			image = $("<img>", {
 				src: "img/ajax-loader.gif",
 				css: {
 					"width": "100px",
@@ -57,12 +54,12 @@ var PageReload = {
 					"position": "absolute",
 					"left": "calc(50% - 35px)",
 					"bottom": "calc(50% - 50px)",
-					"z-index": "2",
-					"capacity": "1"
+					"z-index": "2"
 				},
 				"class": "loading-image"
 			}).fadeIn("slow")
-		).find("*:not(.loading-image)").fadeOut("slow");
+		);
+        content.find("*:not(.loading-image)").fadeOut("slow");
 	},
 	after: function() {
 		var block = $(".page-block");
