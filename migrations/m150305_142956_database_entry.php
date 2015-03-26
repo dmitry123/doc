@@ -63,7 +63,8 @@ class m150305_142956_database_entry extends Migration {
 			  "role_id" VARCHAR(20) REFERENCES "core"."role"("id"),
 			  "user_id" INT REFERENCES "core"."user"("id"),
 			  "department_id" INT REFERENCES "core"."department"("id"),
-			  "phone_id" INT REFERENCES "core"."phone"("id")
+			  "phone_id" INT REFERENCES "core"."phone"("id"),
+			  "is_validated" INT DEFAULT 0
 			);
 
 			CREATE SCHEMA doc;
@@ -107,7 +108,7 @@ class m150305_142956_database_entry extends Migration {
 			  "template_id" INT REFERENCES "doc"."template"("id"),
 			  "position" INT,
 			  "node" TEXT
-			);
+			)
 SQL;
 		foreach (explode(";", $sql) as $s) {
 			$this->execute($s);
@@ -130,7 +131,7 @@ SQL;
 			DROP TABLE "core"."privilege" CASCADE;
 			DROP TABLE "core"."role" CASCADE;
 			DROP TABLE "core"."user" CASCADE;
-			DROP SCHEMA "core";
+			DROP SCHEMA "core"
 SQL;
 		foreach (explode(";", $sql) as $s) {
 			$this->execute($s);

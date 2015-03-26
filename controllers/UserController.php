@@ -5,6 +5,7 @@ namespace app\controllers;
 use app\core\ActiveRecord;
 use app\core\Controller;
 use app\core\FormModel;
+use app\models\Employee;
 use app\models\User;
 
 class UserController extends Controller {
@@ -95,6 +96,17 @@ class UserController extends Controller {
 				"USER_LOGIN" => \Yii::$app->getUser()->getIdentity()->{"login"},
 				"USER_EMAIL" => \Yii::$app->getUser()->getIdentity()->{"email"}
 			];
+			$employee = Employee::findOne([
+				"user_id" => $user->{"id"}
+			]);
+			if ($employee != null) {
+				$params += [
+					"EMPLOYEE_ID" => $employee->{"id"},
+					"EMPLOYEE_SURNAME" => $employee->{"surname"},
+					"EMPLOYEE_NAME" => $employee->{"name"},
+					"EMPLOYEE_PATRONYMIC" => $employee->{"patronymic"}
+				];
+			}
 			foreach ($params as $key => $value) {
 				\Yii::$app->getSession()->set($key, $value);
 			}

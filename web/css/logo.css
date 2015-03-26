@@ -1,0 +1,20 @@
+
+.logo-widget {
+}
+
+.logo-identity-wrapper hr {
+    margin: 5px;
+}
+
+.logo-identity-wrapper hr:not(:first-child) {
+    margin-bottom: 15px;
+}
+
+.logo-identity-wrapper hr:first-child {
+    margin-top: 15px;
+}
+
+.logo-identity-wrapper {
+    width: 100%;
+    text-align: center;
+}

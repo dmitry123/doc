@@ -6,6 +6,20 @@
 use yii\web\View;
 ?>
 
+<?php \app\widgets\Logo::begin([
+	"buttons" => [
+		"settings-button" => [
+			"text" => "Настройки",
+			"class" => "btn btn-primary btn-block",
+			"type" => "button"
+		],
+		"block-logout" => [
+			"text" => "Выйти",
+			"class" => "btn btn-danger btn-block",
+			"type" => "button"
+		]
+	]
+]); ?>
 <div class="col-xs-12">
 	<?php foreach ($modules as $module): ?>
 		<div class="col-xs-6 module-cell">
@@ -18,3 +32,4 @@ use yii\web\View;
 		</div>
 	<?php endforeach; ?>
 </div>
+<?php \app\widgets\Logo::end(); ?>

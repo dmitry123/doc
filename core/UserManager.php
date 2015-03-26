@@ -39,7 +39,8 @@ class UserManager extends Object {
 			"role_id" => $role->{"id"},
 			"user_id" => $user->{"id"},
 			"department_id" => null,
-			"phone_id" => $phone->{"id"}
+			"phone_id" => $phone->{"id"},
+			"is_validated" => true
 		]);
 		if (!$employee->save(true)) {
 			throw new \yii\base\ErrorException("Can't register employee for administrator in database");

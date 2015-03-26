@@ -6,6 +6,7 @@ use app\core\ActiveRecord;
 use app\core\Controller;
 use app\core\Module;
 use Yii;
+use yii\base\Exception;
 use yii\base\Model;
 
 class SiteController extends Controller {
@@ -14,20 +15,31 @@ class SiteController extends Controller {
 	 * Main site index view action, it will display
 	 * login form or main page with documents
 	 * @return string - Rendered content
+	 * @throws Exception
 	 */
     public function actionIndex() {
-		if (!Yii::$app->getUser()->getIsGuest()) {
-			if (!Yii::$app->getSession()->get("ACTIVE_MODULE")) {
-				return $this->render2("block", "modules", [
-					"modules" => Module::getAllowedModules()
-				]);
-			} else {
-				return $this->render2("main", "index");
-			}
-		} else {
+		if (Yii::$app->getUser()->getIsGuest()) {
 			return $this->render2("block", "login");
 		}
+		if (!Yii::$app->getSession()->has("EMPLOYEE_ID")) {
+			return $this->render2("block", "employee");
+		}
+		if (Yii::$app->getSession()->has("ACTIVE_MODULE")) {
+			$module = Module::getAllowedModules(Yii::$app->getSession()->get("ACTIVE_MODULE"));
+			if ($module != null) {
+				return $this->render("index");
+			}
+			Yii::$app->getSession()->remove("ACTIVE_MODULE");
+			return $this->actionIndex();
+		}
+		return $this->render2("block", "modules", [
+			"modules" => Module::getAllowedModules()
+		]);
     }
+
+	public function actionTest() {
+		return $this->render2("block", "test");
+	}
 
 	/**
 	 * Page for employee settings

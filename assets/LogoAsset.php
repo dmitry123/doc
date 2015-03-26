@@ -4,21 +4,18 @@ namespace app\assets;
 
 use yii\web\AssetBundle;
 
-class BlockAsset extends AssetBundle {
+class LogoAsset extends AssetBundle {
 
 	public $basePath = '@webroot';
 	public $baseUrl = '@web';
 
 	public $css = [
-		"css/block.css",
-		"css/site.css"
+		"css/logo.css"
 	];
 
 	public $js = [
-		"js/block.js"
 	];
 
 	public $depends = [
-		"app\\assets\\CoreAsset"
 	];
 }

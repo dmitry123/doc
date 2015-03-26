@@ -60,8 +60,8 @@ class EmployeeForm extends FormModel {
 			],
 			"user_id" => [
 				"label" => "Пользователь",
-				"type" => "number",
-				"rules" => "required"
+				"type" => "hidden",
+				"rules" => "required",
 			],
 			"department_id" => [
 				"label" => "Кафедра",
@@ -75,7 +75,7 @@ class EmployeeForm extends FormModel {
 			],
 			"phone_id" => [
 				"label" => "Телефон",
-				"type" => "number",
+				"type" => "text",
 				"rules" => "required"
 			]
 		];

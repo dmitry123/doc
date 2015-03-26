@@ -74,7 +74,8 @@ $config = [
 				"manager",
 				"teacher",
 				"super",
-			]
+			],
+			"url" => "doc/index"
 		],
 		"chat" => [
 			"class" => "app\\modules\\chat\\ChatModule",

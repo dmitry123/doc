@@ -25,6 +25,6 @@ class Widget extends \yii\base\Widget {
 	 * This method is called by {@link CBaseController::endWidget}.
 	 */
 	public function run() {
-		$this->render(__CLASS__, null, false);
+		$this->render(preg_replace("/[.*~\\/]$/", __CLASS__, ""), null, false);
 	}
 }

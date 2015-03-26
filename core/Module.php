@@ -20,7 +20,7 @@ class Module extends \yii\base\Module {
 	/**
 	 * @var array - Allowed roles for that module
 	 */
-	public $roles = null;
+	public $roles = [];
 
 	/**
 	 * @var string - Module entry url (relative path without web)
@@ -28,10 +28,26 @@ class Module extends \yii\base\Module {
 	public $url = null;
 
 	/**
+	 * Define behaviors for admin module
+	 * @return array - Array with configurations
+	 */
+	public function behaviors() {
+		return [
+			"access" => [
+				"class" => "app\\filters\\AccessFilter",
+				"rules" => [
+					"roles" => $this->roles
+				],
+			]
+		];
+	}
+
+	/**
 	 * Get array with allowed modules for current employee
+	 * @param string $module - Name of module to fetch config
 	 * @return array - Array with modules for current employee
 	 */
-	public static function getAllowedModules() {
+	public static function getAllowedModules($module = null) {
 		$modules = Yii::$app->getModules(false);
 		$allowed = [];
 		$array = [];
@@ -66,6 +82,9 @@ class Module extends \yii\base\Module {
 			} else {
 				$allowed[] = $module;
 			}
+		}
+		if ($module != null && is_string($module)) {
+			return isset($allowed[$module]) ? $allowed[$module] : null;
 		}
 		return $allowed;
 	}

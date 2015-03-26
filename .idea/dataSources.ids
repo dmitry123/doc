@@ -10,6 +10,21 @@
     <schema name="information_schema" catalog="mgup"/>
     <schema name="pg_catalog" catalog="mgup"/>
     <schema name="public" catalog="mgup"/>
+    <table name="admin" schema="core" catalog="mgup" type="VIEW">
+      <column name="id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="surname" sqlType="varchar" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="name" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="patronymic" sqlType="varchar" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="role_id" sqlType="varchar" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="user_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="department_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="phone_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="is_validated" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="email" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="login" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="role_name" sqlType="varchar" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="role_description" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+    </table>
     <table name="department" schema="core" catalog="mgup" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnY29yZS5kZXBhcnRtZW50X2lkX3NlcSc6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
       <column name="name" sqlType="varchar" precision="100" scale="0" nullable="false" jdbcType="12"/>
@@ -31,6 +46,21 @@
       <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
       <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
     </table>
+    <table name="director" schema="core" catalog="mgup" type="VIEW">
+      <column name="id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="surname" sqlType="varchar" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="name" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="patronymic" sqlType="varchar" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="role_id" sqlType="varchar" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="user_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="department_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="phone_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="is_validated" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="email" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="login" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="role_name" sqlType="varchar" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="role_description" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+    </table>
     <table name="employee" schema="core" catalog="mgup" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnY29yZS5lbXBsb3llZV9pZF9zZXEnOjpyZWdjbGFzcyk=" autoIncrement="true"/>
       <column name="surname" sqlType="varchar" precision="100" scale="0" nullable="false" jdbcType="12"/>
@@ -40,12 +70,13 @@
       <column name="user_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="department_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="phone_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="is_validated" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
       <primary-key name="employee_pkey" columns="id"/>
       <foreign-key name="employee_department_id_fkey" columns="department_id" ref-table="department" ref-schema="core" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="employee_phone_id_fkey" columns="phone_id" ref-table="phone" ref-schema="core" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="employee_role_id_fkey" columns="role_id" ref-table="role" ref-schema="core" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="employee_user_id_fkey" columns="user_id" ref-table="user" ref-schema="core" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <exported-key name="role_to_employee_employee_id_fkey" table="role_to_employee" schema="core" catalog="mgup" columns="employee_id"/>
+      <exported-key name="institute_director_id_fkey" table="institute" schema="core" catalog="mgup" columns="director_id"/>
       <exported-key name="document_employee_id_fkey" table="document" schema="doc" catalog="mgup" columns="employee_id"/>
       <exported-key name="history_employee_id_fkey" table="history" schema="doc" catalog="mgup" columns="employee_id"/>
     </table>
@@ -61,11 +92,27 @@
       <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
       <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
     </table>
+    <table name="employee_info" schema="core" catalog="mgup" type="VIEW">
+      <column name="id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="surname" sqlType="varchar" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="name" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="patronymic" sqlType="varchar" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="role_id" sqlType="varchar" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="user_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="department_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="phone_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="is_validated" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="email" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="login" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="role_name" sqlType="varchar" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="role_description" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+    </table>
     <table name="institute" schema="core" catalog="mgup" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnY29yZS5pbnN0aXR1dGVfaWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
       <column name="name" sqlType="varchar" precision="100" scale="0" nullable="true" jdbcType="12"/>
       <column name="director_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <primary-key name="institute_pkey" columns="id"/>
+      <foreign-key name="institute_director_id_fkey" columns="director_id" ref-table="employee" ref-schema="core" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <exported-key name="department_institute_id_fkey" table="department" schema="core" catalog="mgup" columns="institute_id"/>
     </table>
     <table name="institute_id_seq" schema="core" catalog="mgup" type="SEQUENCE">
@@ -79,6 +126,21 @@
       <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
       <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="manager" schema="core" catalog="mgup" type="VIEW">
+      <column name="id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="surname" sqlType="varchar" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="name" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="patronymic" sqlType="varchar" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="role_id" sqlType="varchar" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="user_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="department_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="phone_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="is_validated" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="email" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="login" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="role_name" sqlType="varchar" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="role_description" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
     </table>
     <table name="phone" schema="core" catalog="mgup" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnY29yZS5waG9uZV9pZF9zZXEnOjpyZWdjbGFzcyk=" autoIncrement="true"/>
@@ -133,27 +195,36 @@
       <primary-key name="role_pkey" columns="id"/>
       <exported-key name="employee_role_id_fkey" table="employee" schema="core" catalog="mgup" columns="role_id"/>
       <exported-key name="privilege_to_role_role_id_fkey" table="privilege_to_role" schema="core" catalog="mgup" columns="role_id"/>
-      <exported-key name="role_to_employee_role_id_fkey" table="role_to_employee" schema="core" catalog="mgup" columns="role_id"/>
     </table>
-    <table name="role_to_employee" schema="core" catalog="mgup" type="TABLE">
-      <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnY29yZS5yb2xlX3RvX2VtcGxveWVlX2lkX3NlcSc6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
-      <column name="employee_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+    <table name="student" schema="core" catalog="mgup" type="VIEW">
+      <column name="id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="surname" sqlType="varchar" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="name" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="patronymic" sqlType="varchar" precision="100" scale="0" nullable="true" jdbcType="12"/>
       <column name="role_id" sqlType="varchar" precision="20" scale="0" nullable="true" jdbcType="12"/>
-      <primary-key name="role_to_employee_pkey" columns="id"/>
-      <foreign-key name="role_to_employee_employee_id_fkey" columns="employee_id" ref-table="employee" ref-schema="core" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <foreign-key name="role_to_employee_role_id_fkey" columns="role_id" ref-table="role" ref-schema="core" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <column name="user_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="department_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="phone_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="is_validated" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="email" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="login" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="role_name" sqlType="varchar" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="role_description" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
     </table>
-    <table name="role_to_employee_id_seq" schema="core" catalog="mgup" type="SEQUENCE">
-      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
-      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
-      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    <table name="teacher" schema="core" catalog="mgup" type="VIEW">
+      <column name="id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="surname" sqlType="varchar" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="name" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="patronymic" sqlType="varchar" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="role_id" sqlType="varchar" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="user_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="department_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="phone_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="is_validated" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="email" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="login" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="role_name" sqlType="varchar" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="role_description" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
     </table>
     <table name="user" schema="core" catalog="mgup" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnY29yZS51c2VyX2lkX3NlcSc6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>

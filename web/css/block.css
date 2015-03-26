@@ -41,6 +41,7 @@ html, body {
 /* Padding fix for field */
 .block-field {
     padding-bottom: 10px;
+    margin-left: 0;
 }
 
 /* Login form button group */
@@ -105,21 +106,4 @@ button:active, button .active {
 
 .module-cell:hover .module-icon-wrapper[data-error='not-implemented'] .module-icon {
     color: #d8534f;
-}
-
-/* Hr fixes for employee info */
-.block-user-info hr {
-    margin: 5px;
-}
-.block-user-info hr:not(:first-child) {
-    margin-bottom: 15px;
-}
-.block-user-info hr:first-child {
-    margin-top: 15px;
-}
-
-/* Block with employee information */
-.block-user-info div {
-    width: 100%;
-    text-align: center;
 }

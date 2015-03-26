@@ -3,6 +3,9 @@ var ModuleMenu = {
 		$(".module-menu-heading .module-menu-title").click(function() {
 			$(this).parent().find(".module-menu-list").slideToggle("normal");
 		});
+        $(".module-menu-heading li[data-url]").click(function() {
+            window.location.href = url($(this).data("url"));
+        });
 	}
 };
 

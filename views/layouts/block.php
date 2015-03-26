@@ -24,39 +24,11 @@ app\assets\BlockAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 <div id="page-content">
-<div class="page-block">
-<table class="page-content">
-<tr>
-<td valign="middle" width="150px">
-	<?= \yii\helpers\Html::img("@web/img/logo-big.png", [
-		"width" => "100%"
-	]) ?>
-	<?php if (!Yii::$app->getUser()->getIsGuest()): ?>
-		<div class="col-xs-12 block-user-info">
-			<hr>
-			<div>
-				<b><?= \app\core\EmployeeManager::getIdentity(1) ?></b><br>
-				<?= \app\core\EmployeeManager::getInfo()["role_name"] ?>
-			</div>
-			<hr>
-			<?php if (Yii::$app->controller->route == "site/index"): ?>
-				<button class="btn btn-primary btn-block settings-button">Настройки</button>
-				<button class="btn btn-danger btn-block block-logout">Выйти</button>
-			<?php else: ?>
-				<button class="btn btn-primary btn-block modules-button">Сохранить</button>
-				<button class="btn btn-default btn-block modules-button">Отмена</button>
-			<?php endif ?>
+	<div class="page-block row">
+		<div class="page-content col-xs-12">
+			<?= $content ?>
 		</div>
-	<?php endif ?>
-</td>
-<td valign="middle" style="width: 50px">
-</td>
-<td valign="middle">
-	<?= $content ?>
-</td>
-</tr>
-</table>
-</div>
+	</div>
 </div>
 <?= \app\widgets\Modal::widget([
 	"title" => "Регистрация",

@@ -23,20 +23,21 @@ class Privilege extends ActiveRecord {
 					return false;
 				}
 			}
-		} else {
-			$row = static::find()
-				->select("count(1)")
-				->from("core.privilege as p")
-				->innerJoin("core.role as r", "p.role_id = p.id")
-				->innerJoin("core.employee as e", "e.role_id = r.id")
-				->where("e.id = :employee_id and p.id = :privilege_id", [
-					":employee_id" => $employeeId,
-					":privilege_id" => $privilege
-				])->createCommand()
-				->query();
-			if (!$row) {
-				return false;
-			}
+			return true;
+		}
+		$row = static::find()
+			->select("count(1)")
+			->from("core.privilege as p")
+			->innerJoin("core.privilege_to_role as p_r", "p_r.privilege_id = p.id")
+			->innerJoin("core.role as r", "p_r.role_id = r.id")
+			->innerJoin("core.employee as e", "e.role_id = r.id")
+			->where("e.id = :employee_id and p.id = :privilege_id", [
+				":employee_id" => $employeeId,
+				":privilege_id" => $privilege
+			])->createCommand()
+			->query();
+		if (!$row) {
+			return false;
 		}
 		return true;
 	}
