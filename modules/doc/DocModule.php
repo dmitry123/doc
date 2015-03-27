@@ -6,5 +6,4 @@ use app\core\Module;
 
 class DocModule extends Module {
 
-
 }

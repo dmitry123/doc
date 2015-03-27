@@ -41,6 +41,7 @@ html, body {
 /* Padding fix for field */
 .block-field {
     padding-bottom: 10px;
+    width: 100%;
     margin-left: 0;
 }
 
