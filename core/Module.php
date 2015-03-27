@@ -28,6 +28,11 @@ class Module extends \yii\base\Module {
 	public $url = null;
 
 	/**
+	 * @var string - Url to image icon
+	 */
+	public $image = null;
+
+	/**
 	 * Define behaviors for admin module
 	 * @return array - Array with configurations
 	 */

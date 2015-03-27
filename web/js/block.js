@@ -21,30 +21,35 @@ var UserForm = {
 var PageReload = {
 	reload: function(link) {
 		var me = this;
-		this.padding = parseInt($(".page-block").css("padding")) * 2;
+		var block = $(".page-block");
 		$.get(link || url(""), {}, function(html) {
 			var native = $(".page-block");
 			var page = $(html).find(".page-block");
 			var c;
+			native.css({
+				width: me.width,
+				height: me.height
+			});
 			$(document.body).append(c = page.hide());
 			native.animate({
-				height: c.height() + me.padding,
-				width: c.width() + me.padding
+				"height": c.height() + me.padding,
+				"width": c.width() + me.padding
 			}, "fast", function() {
                 native.replaceWith(c.show());
-                c.children(".page-content").hide().fadeIn("fast");
+                c.children().hide().fadeIn("fast");
 			});
-			$(".loading-image").promise().done(function() {
-				$(this).fadeOut("fast");
-			});
+			$(".loading-image").fadeOut("fast");
 		});
 	},
 	before: function() {
 		var content = $(".page-block"),
             image;
+		this.padding = parseInt(content.css("padding")) * 2;
+		this.width = +content.width() + this.padding;
+		this.height = +content.height() + this.padding;
 		content.css({
-			"height": content.height() + this.padding,
-			"width": content.width() + this.padding
+			"height": +content.height() + this.padding,
+			"width": +content.width() + this.padding
 		}).append(
 			image = $("<img>", {
 				src: "img/ajax-loader.gif",
@@ -52,14 +57,13 @@ var PageReload = {
 					"width": "100px",
 					"height": "100px",
 					"position": "absolute",
-					"left": "calc(50% - 35px)",
-					"bottom": "calc(50% - 50px)",
+					"left": "calc(50% - 50px)",
+					"bottom": "calc(50% - 75px)",
 					"z-index": "2"
 				},
 				"class": "loading-image"
 			}).fadeIn("slow")
-		);
-        content.find("*:not(.loading-image)").fadeOut("slow");
+		).find("*:not(.loading-image)").fadeOut("slow");
 	},
 	after: function() {
 		var block = $(".page-block");

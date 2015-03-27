@@ -57409,3 +57409,590 @@ Stack trace:
     ]
     'argc' => 1
 ]
+2015-03-27 10:44:18 [127.0.0.1][system][-][error][yii\base\ErrorException:4096] exception 'yii\base\ErrorException' with message 'Object of class app\widgets\Logo could not be converted to string' in D:\hosts\doc\views\site\settings.php:12
+Stack trace:
+#0 D:\hosts\doc\views\site\settings.php(12): yii\base\ErrorHandler->handleError(4096, 'Object of class...', 'D:\hosts\doc\vi...', 12, Array)
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\hosts\doc\vi...')
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\hosts\doc\vi...', Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\hosts\doc\vi...', Array, Object(app\controllers\SiteController))
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('settings', Array, Object(app\controllers\SiteController))
+#5 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render('settings', Array)
+#6 D:\hosts\doc\controllers\SiteController.php(52): app\core\Controller->render2('block', 'settings')
+#7 [internal function]: app\controllers\SiteController->actionSettings()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('settings', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('site/settings', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-03-27 10:44:18 [127.0.0.1][system][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'h0uhi24mmo6fpqs2rh89o1k9b3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 'system'
+    'USER_ID' => 1
+    'USER_LOGIN' => 'system'
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+    'EMPLOYEE_ID' => 1
+    'EMPLOYEE_SURNAME' => 'Савонин'
+    'EMPLOYEE_NAME' => 'Дмитрий'
+    'EMPLOYEE_PATRONYMIC' => 'Александрович'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=h0uhi24mmo6fpqs2rh89o1k9b3'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '57647'
+    'REDIRECT_URL' => '/site/settings'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/settings'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427438658.103
+    'REQUEST_TIME' => 1427438658
+]
+2015-03-27 10:45:15 [127.0.0.1][system][-][error][yii\base\ErrorException:4096] exception 'yii\base\ErrorException' with message 'Object of class app\widgets\Logo could not be converted to string' in D:\hosts\doc\views\site\settings.php:16
+Stack trace:
+#0 D:\hosts\doc\views\site\settings.php(16): yii\base\ErrorHandler->handleError(4096, 'Object of class...', 'D:\hosts\doc\vi...', 16, Array)
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\hosts\doc\vi...')
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\hosts\doc\vi...', Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\hosts\doc\vi...', Array, Object(app\controllers\SiteController))
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('settings', Array, Object(app\controllers\SiteController))
+#5 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render('settings', Array)
+#6 D:\hosts\doc\controllers\SiteController.php(52): app\core\Controller->render2('block', 'settings')
+#7 [internal function]: app\controllers\SiteController->actionSettings()
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('settings', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('site/settings', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-03-27 10:45:15 [127.0.0.1][system][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'h0uhi24mmo6fpqs2rh89o1k9b3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 'system'
+    'USER_ID' => 1
+    'USER_LOGIN' => 'system'
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+    'EMPLOYEE_ID' => 1
+    'EMPLOYEE_SURNAME' => 'Савонин'
+    'EMPLOYEE_NAME' => 'Дмитрий'
+    'EMPLOYEE_PATRONYMIC' => 'Александрович'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=h0uhi24mmo6fpqs2rh89o1k9b3'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '57668'
+    'REDIRECT_URL' => '/site/settings'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/settings'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427438715.445
+    'REQUEST_TIME' => 1427438715
+]
+2015-03-27 10:55:06 [127.0.0.1][system][-][error][yii\base\InvalidParamException] exception 'yii\base\InvalidParamException' with message 'Invalid path alias: @webimg/icons/matrix.png' in D:\hosts\doc\vendor\yiisoft\yii2\BaseYii.php:152
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\helpers\BaseUrl.php(205): yii\BaseYii::getAlias('@webimg/icons/m...')
+#1 D:\hosts\doc\vendor\yiisoft\yii2\helpers\BaseHtml.php(402): yii\helpers\BaseUrl::to('@webimg/icons/m...')
+#2 D:\hosts\doc\views\site\modules.php(30): yii\helpers\BaseHtml::img('@webimg/icons/m...', Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\hosts\doc\vi...')
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\hosts\doc\vi...', Array)
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\hosts\doc\vi...', Array, Object(app\controllers\SiteController))
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('modules', Array, Object(app\controllers\SiteController))
+#7 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render('modules', Array)
+#8 D:\hosts\doc\controllers\SiteController.php(37): app\core\Controller->render2('block', 'modules', Array)
+#9 [internal function]: app\controllers\SiteController->actionIndex()
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#13 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#14 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#16 {main}
+2015-03-27 10:55:06 [127.0.0.1][system][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'ao1belr12024p9snr7h28bkgv1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 'system'
+    'USER_ID' => 1
+    'USER_LOGIN' => 'system'
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+    'EMPLOYEE_ID' => 1
+    'EMPLOYEE_SURNAME' => 'Савонин'
+    'EMPLOYEE_NAME' => 'Дмитрий'
+    'EMPLOYEE_PATRONYMIC' => 'Александрович'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=ao1belr12024p9snr7h28bkgv1'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '59892'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427439306.113
+    'REQUEST_TIME' => 1427439306
+]
+2015-03-27 11:08:36 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Setting unknown property: app\modules\doc\DocModule::image' in D:\hosts\doc\vendor\yiisoft\yii2\base\Component.php:197
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\BaseYii.php(518): yii\base\Component->__set('image', 'img/icons/doc.p...')
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(app\modules\doc\DocModule), Array)
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(138): yii\base\Object->__construct(Array)
+#3 [internal function]: yii\base\Module->__construct('doc', Object(yii\web\Application), Array)
+#4 D:\hosts\doc\vendor\yiisoft\yii2\di\Container.php(372): ReflectionClass->newInstanceArgs(Array)
+#5 D:\hosts\doc\vendor\yiisoft\yii2\di\Container.php(151): yii\di\Container->build('app\modules\doc...', Array, Array)
+#6 D:\hosts\doc\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('app\modules\doc...', Array, Array)
+#7 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(354): yii\BaseYii::createObject(Array, Array)
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(511): yii\base\Module->getModule('doc')
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(449): yii\base\Module->createController('doc/index')
+#10 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('doc/index', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2015-03-27 11:08:36 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'ao1belr12024p9snr7h28bkgv1'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=ao1belr12024p9snr7h28bkgv1'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '60305'
+    'REDIRECT_URL' => '/doc/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/index'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427440116.583
+    'REQUEST_TIME' => 1427440116
+]
+2015-03-27 11:08:37 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Setting unknown property: app\modules\doc\DocModule::image' in D:\hosts\doc\vendor\yiisoft\yii2\base\Component.php:197
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\BaseYii.php(518): yii\base\Component->__set('image', 'img/icons/doc.p...')
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(app\modules\doc\DocModule), Array)
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(138): yii\base\Object->__construct(Array)
+#3 [internal function]: yii\base\Module->__construct('doc', Object(yii\web\Application), Array)
+#4 D:\hosts\doc\vendor\yiisoft\yii2\di\Container.php(372): ReflectionClass->newInstanceArgs(Array)
+#5 D:\hosts\doc\vendor\yiisoft\yii2\di\Container.php(151): yii\di\Container->build('app\modules\doc...', Array, Array)
+#6 D:\hosts\doc\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('app\modules\doc...', Array, Array)
+#7 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(354): yii\BaseYii::createObject(Array, Array)
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(511): yii\base\Module->getModule('doc')
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(449): yii\base\Module->createController('doc/index')
+#10 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('doc/index', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2015-03-27 11:08:37 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'ao1belr12024p9snr7h28bkgv1'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=ao1belr12024p9snr7h28bkgv1'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '60306'
+    'REDIRECT_URL' => '/doc/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/index'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427440117.898
+    'REQUEST_TIME' => 1427440117
+]
+2015-03-27 11:08:43 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Setting unknown property: app\modules\doc\DocModule::image' in D:\hosts\doc\vendor\yiisoft\yii2\base\Component.php:197
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\BaseYii.php(518): yii\base\Component->__set('image', 'img/icons/doc.p...')
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(app\modules\doc\DocModule), Array)
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(138): yii\base\Object->__construct(Array)
+#3 [internal function]: yii\base\Module->__construct('doc', Object(yii\web\Application), Array)
+#4 D:\hosts\doc\vendor\yiisoft\yii2\di\Container.php(372): ReflectionClass->newInstanceArgs(Array)
+#5 D:\hosts\doc\vendor\yiisoft\yii2\di\Container.php(151): yii\di\Container->build('app\modules\doc...', Array, Array)
+#6 D:\hosts\doc\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('app\modules\doc...', Array, Array)
+#7 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(354): yii\BaseYii::createObject(Array, Array)
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(511): yii\base\Module->getModule('doc')
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(449): yii\base\Module->createController('doc/index')
+#10 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('doc/index', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2015-03-27 11:08:43 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'ao1belr12024p9snr7h28bkgv1'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=ao1belr12024p9snr7h28bkgv1'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '60310'
+    'REDIRECT_URL' => '/doc/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/index'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427440123.572
+    'REQUEST_TIME' => 1427440123
+]
+2015-03-27 11:08:47 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Setting unknown property: app\modules\admin\AdminModule::image' in D:\hosts\doc\vendor\yiisoft\yii2\base\Component.php:197
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\BaseYii.php(518): yii\base\Component->__set('image', 'img/icons/admin...')
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(app\modules\admin\AdminModule), Array)
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(138): yii\base\Object->__construct(Array)
+#3 [internal function]: yii\base\Module->__construct('admin', Object(yii\web\Application), Array)
+#4 D:\hosts\doc\vendor\yiisoft\yii2\di\Container.php(372): ReflectionClass->newInstanceArgs(Array)
+#5 D:\hosts\doc\vendor\yiisoft\yii2\di\Container.php(151): yii\di\Container->build('app\modules\adm...', Array, Array)
+#6 D:\hosts\doc\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('app\modules\adm...', Array, Array)
+#7 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(354): yii\BaseYii::createObject(Array, Array)
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(511): yii\base\Module->getModule('admin')
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(449): yii\base\Module->createController('admin/table')
+#10 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('admin/table', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2015-03-27 11:08:47 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'ao1belr12024p9snr7h28bkgv1'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=ao1belr12024p9snr7h28bkgv1'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '60309'
+    'REDIRECT_URL' => '/admin/table'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/admin/table'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427440127.747
+    'REQUEST_TIME' => 1427440127
+]
+2015-03-27 11:19:23 [127.0.0.1][dmitry][-][error][yii\base\Exception] exception 'yii\base\Exception' with message 'Button must have text, found null' in D:\hosts\doc\widgets\Logo.php:62
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php(73): app\widgets\Logo->run()
+#1 D:\hosts\doc\views\site\employee.php(27): yii\base\Widget::end()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\hosts\doc\vi...')
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\hosts\doc\vi...', Array)
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\hosts\doc\vi...', Array, Object(app\controllers\SiteController))
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('employee', Array, Object(app\controllers\SiteController))
+#6 D:\hosts\doc\core\Controller.php(104): yii\base\Controller->render('employee', Array)
+#7 D:\hosts\doc\controllers\SiteController.php(25): app\core\Controller->render2('block', 'employee')
+#8 [internal function]: app\controllers\SiteController->actionIndex()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#13 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#15 {main}
+2015-03-27 11:19:23 [127.0.0.1][dmitry][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'i3ihvclngpov3tbigtc1t2th91'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 'dmitry'
+    'USER_ID' => 3
+    'USER_LOGIN' => 'dmitry'
+    'USER_EMAIL' => 'dmitry@dmitry.dmitry'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=i3ihvclngpov3tbigtc1t2th91'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '60500'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427440763.119
+    'REQUEST_TIME' => 1427440763
+]
+2015-03-27 11:20:54 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Setting unknown property: app\modules\doc\DocModule::image' in D:\hosts\doc\vendor\yiisoft\yii2\base\Component.php:197
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\BaseYii.php(518): yii\base\Component->__set('image', 'img/icons/doc.p...')
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(app\modules\doc\DocModule), Array)
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(138): yii\base\Object->__construct(Array)
+#3 [internal function]: yii\base\Module->__construct('doc', Object(yii\web\Application), Array)
+#4 D:\hosts\doc\vendor\yiisoft\yii2\di\Container.php(372): ReflectionClass->newInstanceArgs(Array)
+#5 D:\hosts\doc\vendor\yiisoft\yii2\di\Container.php(151): yii\di\Container->build('app\modules\doc...', Array, Array)
+#6 D:\hosts\doc\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('app\modules\doc...', Array, Array)
+#7 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(354): yii\BaseYii::createObject(Array, Array)
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(511): yii\base\Module->getModule('doc')
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(449): yii\base\Module->createController('doc/index')
+#10 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('doc/index', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2015-03-27 11:20:54 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => '94h4ncipjtol5etq98i7dhrfo5'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=94h4ncipjtol5etq98i7dhrfo5'
+    'PATH' => 'D:\\oracle\\dmitry\\product\\12.1.0\\dbhome_1\\bin;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win32;C:\\Program Files (x86)\\Visual Leak Detector\\bin\\Win64;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '60542'
+    'REDIRECT_URL' => '/doc/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/index'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1427440854.964
+    'REQUEST_TIME' => 1427440854
+]

@@ -45,6 +45,7 @@ $config = [
 			"class" => "app\\modules\\matrix\\MatrixModule",
 			"name" => "Матрица",
 			"icon" => "glyphicon glyphicon-list-alt",
+			"image" => "img/icons/matrix.png",
 			"roles" => [
 				"director",
 				"manager",
@@ -57,6 +58,7 @@ $config = [
 			"class" => "app\\modules\\schedule\\ScheduleModule",
 			"name" => "Расписание",
 			"icon" => "glyphicon glyphicon-calendar",
+			"image" => "img/icons/schedule.png",
 			"roles" => [
 				"director",
 				"manager",
@@ -69,6 +71,7 @@ $config = [
 			"class" => "app\\modules\\doc\\DocModule",
 			"name" => "Документы",
 			"icon" => "glyphicon glyphicon-duplicate",
+			"image" => "img/icons/doc.png",
 			"roles" => [
 				"director",
 				"manager",
@@ -81,6 +84,7 @@ $config = [
 			"class" => "app\\modules\\chat\\ChatModule",
 			"name" => "Чат",
 			"icon" => "glyphicon glyphicon-send",
+			"image" => "img/icons/chat.png",
 			"roles" => [
 				"admin",
 				"director",
@@ -93,8 +97,18 @@ $config = [
 			"class" => "app\\modules\\chat\\DistanceModule",
 			"name" => "Обучение",
 			"icon" => "glyphicon glyphicon-education",
+			"image" => "img/icons/education.png",
 			"roles" => [
 				"student",
+				"super",
+			]
+		],
+		"plantation" => [
+			"class" => "app\\modules\\admin\\PlantationModule",
+			"name" => "Внедрение",
+			"icon" => "glyphicon glyphicon-globe",
+			"roles" => [
+				"admin",
 				"super",
 			]
 		],
@@ -102,6 +116,7 @@ $config = [
 			"class" => "app\\modules\\admin\\AdminModule",
 			"name" => "Управление",
 			"icon" => "glyphicon glyphicon-cog",
+			"image" => "img/icons/admin.png",
 			"roles" => [
 				"admin",
 				"super",

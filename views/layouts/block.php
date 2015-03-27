@@ -24,9 +24,11 @@ app\assets\BlockAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 <div id="page-content">
-	<div class="page-block row">
-		<div class="page-content col-xs-12">
-			<?= $content ?>
+	<div class="page-block">
+		<div class="row">
+			<div class="page-content col-xs-12">
+				<?= $content ?>
+			</div>
 		</div>
 	</div>
 </div>

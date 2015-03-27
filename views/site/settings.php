@@ -5,6 +5,23 @@
  */
 use yii\web\View;
 
-print \yii\helpers\Html::tag("div", "", [
-	"style" => "width: 350px"
+\app\widgets\Logo::begin([
+	"buttons" => [
+		"settings-save" => [
+			"text" => "Сохранить",
+			"class" => "btn btn-primary btn-block",
+			"type" => "button"
+		],
+		"modules-button" => [
+			"text" => "Отмена",
+			"class" => "btn btn-default btn-block",
+			"type" => "button"
+		]
+	]
 ]);
+
+print \app\widgets\Form::widget([
+	"model" => new \app\forms\EmployeeForm()
+]);
+
+\app\widgets\Logo::end();

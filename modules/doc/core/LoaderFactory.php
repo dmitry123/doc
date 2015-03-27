@@ -5,7 +5,7 @@ namespace app\modules\doc\core;
 class LoaderFactory {
 
 	/**
-	 * @var array - Array with factory loaders
+	 * @var array - Array with supported loaders
 	 */
 	protected $loaders = [
 		"OfficeOpenXml" => [

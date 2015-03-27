@@ -20,7 +20,7 @@ use yii\web\View;
 		]
 	]
 ]); ?>
-<div class="col-xs-12">
+<div class="col-xs-12 module-cell-wrapper">
 	<?php foreach ($modules as $module): ?>
 		<div class="col-xs-6 module-cell">
 			<div class="module-icon-wrapper" <?= \yii\helpers\Html::renderTagAttributes($module["options"]) ?>>
