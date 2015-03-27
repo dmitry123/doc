@@ -2,13 +2,23 @@
 
 namespace app\modules\doc\core;
 
-class ExtAdapter extends DocumentLoader {
+class Document extends Loader {
+
+	/**
+	 * Read content from file
+	 * @param string $filename - Path to file
+	 * @return string - Document's content
+	 * @throws \Exception
+	 */
+	public static function read($filename) {
+		return (new static($filename))->getContent();
+	}
 
 	/**
 	 * Override that method to open document and store
 	 * it's handle in self class for next actions
 	 * @param string $filename - Name of document to load
-	 * @return DocumentLoader - Self instance
+	 * @return Loader - Self instance
 	 * @throws \Exception
 	 */
 	public function open($filename) {
@@ -35,7 +45,7 @@ class ExtAdapter extends DocumentLoader {
 
 	/**
 	 * Override that file to close session with local file
-	 * @return DocumentLoader - Self instance
+	 * @return Loader - Self instance
 	 * @throws \Exception
 	 */
 	public function close() {
@@ -47,7 +57,7 @@ class ExtAdapter extends DocumentLoader {
 	}
 
 	/**
-	 * @var DocumentLoader - Loader instance
+	 * @var Loader - Loader instance
 	 */
 	private $loader = null;
 }

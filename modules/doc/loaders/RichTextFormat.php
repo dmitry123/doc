@@ -2,9 +2,9 @@
 
 namespace app\modules\doc\loaders;
 
-use app\modules\doc\core\DocumentLoader;
+use app\modules\doc\core\Loader;
 
-class RichTextFormat extends DocumentLoader {
+class RichTextFormat extends Loader {
 
 	/**
 	 * @var string - File extension without dot, like
@@ -16,7 +16,7 @@ class RichTextFormat extends DocumentLoader {
 	 * Override that method to open document and store
 	 * it's handle in self class for next actions
 	 * @param string $filename - Name of document to load
-	 * @return DocumentLoader - Self instance
+	 * @return Loader - Self instance
 	 * @throws \Exception
 	 */
 	public function open($filename) {
@@ -28,7 +28,7 @@ class RichTextFormat extends DocumentLoader {
 
 	/**
 	 * Override that file to close session with local file
-	 * @return DocumentLoader - Self instance
+	 * @return Loader - Self instance
 	 */
 	public function close() {
 		return $this;

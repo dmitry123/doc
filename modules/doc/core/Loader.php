@@ -2,7 +2,7 @@
 
 namespace app\modules\doc\core;
 
-abstract class DocumentLoader {
+abstract class Loader {
 
 	/**
 	 * Construct document with filename, it will load document
@@ -19,7 +19,7 @@ abstract class DocumentLoader {
 	 * Override that method to open document and store
 	 * it's handle in self class for next actions
 	 * @param string $filename - Name of document to load
-	 * @return DocumentLoader - Self instance
+	 * @return Loader - Self instance
 	 */
 	public abstract function open($filename);
 
@@ -32,7 +32,7 @@ abstract class DocumentLoader {
 
 	/**
 	 * Override that file to close session with local file
-	 * @return DocumentLoader - Self instance
+	 * @return Loader - Self instance
 	 */
 	public abstract function close();
 }

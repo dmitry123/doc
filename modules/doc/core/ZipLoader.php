@@ -2,7 +2,7 @@
 
 namespace app\modules\doc\core;
 
-abstract class ZipDocumentLoader extends DocumentLoader {
+abstract class ZipLoader extends Loader {
 
 	/**
 	 * @var string - Name of file with XML content in
@@ -17,7 +17,7 @@ abstract class ZipDocumentLoader extends DocumentLoader {
 	 * Override that method to open document and store
 	 * it's handle in self class for next actions
 	 * @param string $filename - Name of document to load
-	 * @return ZipDocumentLoader
+	 * @return ZipLoader
 	 * @throws \Exception
 	 */
 	public function open($filename) {
@@ -48,7 +48,7 @@ abstract class ZipDocumentLoader extends DocumentLoader {
 
 	/**
 	 * Override that file to close session with local file
-	 * @return ZipDocumentLoader - Self instance
+	 * @return ZipLoader - Self instance
 	 * @throws \Exception
 	 */
 	public function close() {

@@ -2,9 +2,9 @@
 
 namespace app\modules\doc\loaders;
 
-use app\modules\doc\core\ZipDocumentLoader;
+use app\modules\doc\core\ZipLoader;
 
-class OpenDocumentText extends ZipDocumentLoader {
+class OpenDocumentText extends ZipLoader {
 
 	/**
 	 * @var string - Name of file with XML content in

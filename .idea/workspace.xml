@@ -2,22 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c7867d1-dabe-479e-927f-a32ef258089e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/Hello.docx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/Hello.odt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/Hello.rtf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/doc/core/DocumentLoader.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/doc/core/ExtAdapter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/doc/core/LoaderFactory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/doc/loaders/OpenDocumentText.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/doc/loaders/RichTextFormat.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/doc/core/ZipLoader.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/DocModule.php" afterPath="$PROJECT_DIR$/modules/doc/DocModule.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/Savonin.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Savonin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/logs/app.log" afterPath="$PROJECT_DIR$/runtime/logs/app.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/block.css" afterPath="$PROJECT_DIR$/web/css/block.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/core/LoaderFactory.php" afterPath="$PROJECT_DIR$/modules/doc/core/LoaderFactory.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/loaders/OpenDocumentText.php" afterPath="$PROJECT_DIR$/modules/doc/loaders/OpenDocumentText.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/loaders/RichTextFormat.php" afterPath="$PROJECT_DIR$/modules/doc/loaders/RichTextFormat.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/core/ZipLoader.php" afterPath="$PROJECT_DIR$/modules/doc/core/ZipLoader.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\hosts\doc\modules\doc\core\DocumentLoader.php" afterPath="$PROJECT_DIR$/modules/doc/core/Loader.php" />
+      <change type="MOVED" beforePath="D:\hosts\doc\modules\doc\core\ExtAdapter.php" afterPath="$PROJECT_DIR$/modules/doc/core/Document.php" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -70,11 +61,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DocModule.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/modules/doc/DocModule.php">
+      <file leaf-file-name="Document.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/modules/doc/core/Document.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20698577" vertical-offset="0" max-vertical-offset="773">
-              <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.41397154" vertical-offset="0" max-vertical-offset="1360">
+              <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -91,7 +82,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/modules/doc/controllers/IndexController.php" />
         <option value="$PROJECT_DIR$/models/Privilege.php" />
         <option value="$PROJECT_DIR$/assets/BlockAsset.php" />
         <option value="$PROJECT_DIR$/controllers/UserController.php" />
@@ -132,7 +122,6 @@
         <option value="$PROJECT_DIR$/modules/doc/loaders/OfficeOpenXml.php" />
         <option value="$PROJECT_DIR$/modules/doc/core/DocumentLoaderFactory.php" />
         <option value="$PROJECT_DIR$/modules/doc/core/ZipLoader.php" />
-        <option value="$PROJECT_DIR$/modules/doc/core/Loader.php" />
         <option value="$PROJECT_DIR$/modules/doc/core/DocumentAdapter.php" />
         <option value="$PROJECT_DIR$/modules/doc/core/ExtensionAdapter.php" />
         <option value="$PROJECT_DIR$/modules/doc/core/ExtAdapter.php" />
@@ -142,6 +131,8 @@
         <option value="$PROJECT_DIR$/modules/doc/loaders/RichTextFormat.php" />
         <option value="$PROJECT_DIR$/modules/doc/core/LoaderFactory.php" />
         <option value="$PROJECT_DIR$/modules/doc/DocModule.php" />
+        <option value="$PROJECT_DIR$/modules/doc/core/Loader.php" />
+        <option value="$PROJECT_DIR$/modules/doc/core/Document.php" />
       </list>
     </option>
   </component>
@@ -274,7 +265,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="loaders" />
+              <option name="myItemId" value="core" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -410,7 +401,13 @@
       <option name="project" value="LOCAL" />
       <updated>1427306050394</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Basic document loaders">
+      <created>1427436472477</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1427436472477</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -475,13 +472,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/migrations/m150319_073803_institute_constraint.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45394737" vertical-offset="97" max-vertical-offset="608">
-          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/migrations/m150305_142956_database_entry.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5" vertical-offset="2280" max-vertical-offset="2755">
@@ -797,14 +787,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/doc/core/DocumentLoader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.103492886" vertical-offset="0" max-vertical-offset="860">
-          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_5.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34605262" vertical-offset="20617" max-vertical-offset="23020">
@@ -817,22 +799,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.28460544" vertical-offset="60" max-vertical-offset="5100">
           <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/doc/core/LoaderFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.103448" vertical-offset="0" max-vertical-offset="1420">
-          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/doc/core/ExtAdapter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.103492886" vertical-offset="0" max-vertical-offset="1160">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -853,6 +819,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/modules/distance/DistanceModule.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="802">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/doc/DocModule.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18111254" vertical-offset="0" max-vertical-offset="773">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/modules/doc/loaders/OfficeOpenXml.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15523933" vertical-offset="0" max-vertical-offset="773">
@@ -861,10 +843,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/doc/DocModule.php">
+    <entry file="file://$PROJECT_DIR$/modules/doc/core/LoaderFactory.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20698577" vertical-offset="0" max-vertical-offset="773">
-          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.534282" vertical-offset="647" max-vertical-offset="1420">
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/doc/core/Loader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.103492886" vertical-offset="0" max-vertical-offset="860">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/doc/core/Document.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41397154" vertical-offset="0" max-vertical-offset="1360">
+          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
           <folding />
         </state>
       </provider>

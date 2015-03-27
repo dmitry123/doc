@@ -22,7 +22,7 @@ class LoaderFactory {
 	/**
 	 * Create document loader with it's extension
 	 * @param string $extension - Document's extension or filename
-	 * @return DocumentLoader - Loader instance
+	 * @return Loader - Loader instance
 	 */
 	public function createWithExtension($extension) {
 		$extension = preg_replace("/^.*\\./", "", $extension);
