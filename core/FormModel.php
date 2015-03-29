@@ -35,6 +35,18 @@ abstract class FormModel extends Model {
 	}
 
 	/**
+	 * Clone form model and return new instance with
+	 * new scenario
+	 * @param string $scenario - Scenario
+	 * @return FormModel - New form model instance
+	 */
+	public function getClone($scenario = "") {
+		$clone = clone $this;
+		$clone->setScenario($scenario);
+		return $clone;
+	}
+
+	/**
 	 * Override that method to return config. Config should return array associated with
 	 * model's variables. Every field must contains 3 parameters:
 	 *  + label - Variable's label, will be displayed in the form

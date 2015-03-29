@@ -159,3 +159,27 @@ a.desc:after {
 .table-widget {
     margin-right: -1px;
 }
+
+.panel .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.panel-heading .col-xs-12, .panel-heading .col-xs-12 div {
+    padding: 0;
+}
+
+.loading-image {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: calc(50% - 30px);
+    bottom: calc(50% - 30px);
+    z-index: 2;
+    background: url('../img/ajax-loader.gif') no-repeat;
+    background-size: 60px;
+}
+
+.loading-image + * {
+    transition: all 0.5s ease 0s;
+}

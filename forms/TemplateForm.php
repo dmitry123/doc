@@ -42,7 +42,7 @@ class TemplateForm extends FormModel {
 				"label" => "Документ",
 				"type" => "DropDown",
 				"table" => [
-					"name" => "document",
+					"name" => "doc.document",
 					"key" => "id",
 					"value" => "name"
 				],

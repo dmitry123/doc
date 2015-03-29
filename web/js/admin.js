@@ -1,6 +1,9 @@
 
-var TableViewer = {
+var TablePanel = {
 	ready: function() {
+        $(".admin-table-panel-wrapper").on("click", "#table-save-button", function() {
+            $("#table-save-modal").modal();
+        });
 	},
 	load: function(table) {
 		$.get(url("admin/table/load"), {
@@ -11,7 +14,7 @@ var TableViewer = {
 					message: json["message"]
 				});
 			} else {
-				$(".table-widget").empty().append(
+				$(".admin-table-panel-wrapper").empty().append(
 					json["component"]
 				);
 			}
@@ -19,7 +22,7 @@ var TableViewer = {
 	}
 };
 
-var TableList = {
+var TableView = {
 	ready: function() {
 		var me = this;
 		$(".table-panel-wrapper li[data-table] a").click(function() {
@@ -27,7 +30,7 @@ var TableList = {
             if (!table) {
                 return void 0;
             }
-			TableViewer.load(table);
+			TablePanel.load(table);
 			me.toggle($(this).parent().children(".table-column-list"));
             window.location.hash = "#" + table;
 		});
@@ -45,6 +48,14 @@ var TableList = {
             // ignore
             window.location.hash = window.location.hash.split("/")[0]
                 + "/" + column;
+        });
+        $(".table-widget").on("click", ".edit", function() {
+            var id = $(this).parents("tr[data-id]").data("id");
+            console.log(id);
+        });
+        $(document).on("click", ".table-widget .delete", function() {
+            var id = $(this).parents("tr[data-id]").data("id");
+            console.log(id);
         });
 	},
 	toggle: function(menu) {
@@ -89,6 +100,6 @@ var TableList = {
 };
 
 $(document).ready(function() {
-	TableViewer.ready();
-	TableList.ready();
+	TablePanel.ready();
+	TableView.ready();
 });

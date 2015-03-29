@@ -34,7 +34,7 @@ class LogForm extends FormModel {
 				"label" => "Пользователь",
 				"type" => "DropDown",
 				"table" => [
-					"name" => "user",
+					"name" => "core.user",
 					"key" => "id",
 					"value" => "login"
 				],

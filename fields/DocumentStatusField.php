@@ -4,7 +4,7 @@ namespace app\fields;
 
 use app\core\DropDown;
 
-class DocumentTypeField extends DropDown {
+class DocumentStatusField extends DropDown {
 
 	/**
 	 * Override that method to return associative array
@@ -13,6 +13,10 @@ class DocumentTypeField extends DropDown {
 	 */
 	public function data() {
 		return [
+			1 => "Новый",
+			2 => "Старый",
+			3 => "Актуальный",
+			4 => "Удаленный"
 		];
 	}
 
@@ -21,7 +25,7 @@ class DocumentTypeField extends DropDown {
 	 * @return String - Key
 	 */
 	public function key() {
-		return "DocumentType";
+		return "DocumentStatus";
 	}
 
 	/**
@@ -29,6 +33,6 @@ class DocumentTypeField extends DropDown {
 	 * @return String - Label
 	 */
 	public function name() {
-		return "Тип документа";
+		return "Статус документа";
 	}
 }

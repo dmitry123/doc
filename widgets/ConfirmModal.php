@@ -13,9 +13,12 @@ class ConfirmModal extends Modal {
 	 * @var array - Default delete buttons
 	 */
 	public $buttons = [
-		"delete" => [
+		"confirm-delete-button" => [
 			"text" => "Удалить",
 			"class" => "btn btn-danger",
+			"options" => [
+				"data-dismiss" => "modal"
+			],
 			"type" => "submit"
 		]
 	];
@@ -28,12 +31,19 @@ class ConfirmModal extends Modal {
 	/**
 	 * @var string - Modal window size class
 	 */
-	public $size = self::SIZE_SMALL;
+	public $size = "modal-sm";
 
 	/**
-	 * Run widget
+	 * @var string - Body content
 	 */
-	public function run() {
-		return parent::run();
+	public $body = "Результат выполнения этого действия нельзя будет отменить. Вы точно уверены?";
+
+	/**
+	 * Initialize modal window, but remove
+	 * fade effect from this modal type
+	 */
+	public function init() {
+		$this->options["class"] = "";
+		parent::init();
 	}
 }

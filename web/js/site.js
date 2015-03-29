@@ -1,16 +1,22 @@
 var ConfirmDeleteModal = {
+    confirm: function(e) {
+        if (!this.lock) {
+            this.item = $(e.target);
+        } else {
+            return void 0;
+        }
+        $("#confirm-delete-modal").modal();
+        e.stopImmediatePropagation();
+        return false;
+    },
     ready: function() {
         var me = this;
         $(document).on("click", ".confirm-delete", function(e) {
-            if (me.lock) {
-                return void 0;
-            }
-            me.item = $(e.target);
-            $("#confirm-delete-modal").modal();
-            e.stopImmediatePropagation();
-            return false;
+            me.confirm(e);
+        }).find(".confirm-delete").click(function(e) {
+            me.confirm(e);
         });
-        $("#confirm-delete-button").click(function() {
+        $("#confirm-delete-modal button[type='submit']").click(function() {
             me.lock = true;
             if (me.item != null) {
                 me.item.trigger("click");

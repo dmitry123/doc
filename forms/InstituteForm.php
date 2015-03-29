@@ -39,13 +39,13 @@ class InstituteForm extends FormModel {
 				"rules" => "required"
 			],
 			"director_id" => [
-				"label" => "Идентификатор",
+				"label" => "Директор",
 				"type" => "DropDown",
 				"table" => [
-					"name" => "employee",
-					"format" => "%{surname} %{name} %{patronymic}",
+					"name" => "core.employee_info",
+					"format" => "%{surname} %{name} %{patronymic} (%{role_name})",
 					"key" => "id",
-					"value" => "surname, name, patronymic"
+					"value" => "surname, name, patronymic, role_name"
 				],
 				"rules"
 			]

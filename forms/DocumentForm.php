@@ -44,7 +44,7 @@ class DocumentForm extends FormModel {
 				"type" => "text",
 				"rules" => "required",
 				"table" => [
-					"name" => "employee",
+					"name" => "core.employee",
 					"format" => "%{surname} %{name} %{patronymic}",
 					"key" => "id",
 					"value" => "surname, name, patronymic"
@@ -73,7 +73,7 @@ class DocumentForm extends FormModel {
 				"type" => "DropDown",
 				"rules" => "required",
 				"table" => [
-					"name" => "document_category",
+					"name" => "doc.document_category",
 					"key" => "id",
 					"value" => "name"
 				]

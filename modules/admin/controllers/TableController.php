@@ -6,6 +6,7 @@ use app\core\ActiveRecord;
 use app\core\Controller;
 use app\core\FormModel;
 use app\core\TableProviderAdapter;
+use app\modules\admin\widgets\TablePanel;
 use app\widgets\AutoTable;
 use yii\helpers\Inflector;
 
@@ -41,10 +42,9 @@ class TableController extends Controller {
 				$this->error("Can't resolve form model class \"$form\"");
 			}
 			$this->leave([
-				"component" => AutoTable::widget([
-					"provider" => TableProviderAdapter::createProvider(
-						new $model(), new $form("table")
-					)
+				"component" => TablePanel::widget([
+					"model" => new $model(),
+					"form" => new $form("table")
 				])
 			]);
 		} catch (\Exception $e) {

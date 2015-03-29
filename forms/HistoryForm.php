@@ -34,7 +34,7 @@ class HistoryForm extends FormModel {
 				"label" => "Оригинал документа",
 				"type" => "DropDown",
 				"table" => [
-					"name" => "document",
+					"name" => "doc.document",
 					"key" => "id",
 					"value" => "name"
 				],
@@ -47,7 +47,7 @@ class HistoryForm extends FormModel {
 				"label" => "Текущий документ",
 				"type" => "DropDown",
 				"table" => [
-					"name" => "document",
+					"name" => "doc.document",
 					"key" => "id",
 					"value" => "name"
 				],
@@ -63,7 +63,7 @@ class HistoryForm extends FormModel {
 					"disabled" => "true"
 				],
 				"table" => [
-					"name" => "employee",
+					"name" => "core.employee",
 					"format" => "%{surname} %{name} %{patronymic}",
 					"key" => "id",
 					"value" => "surname, name, patronymic"

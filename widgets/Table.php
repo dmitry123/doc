@@ -140,7 +140,9 @@ class Table extends Widget {
 
 	protected function renderBody() {
 		foreach ($this->data as $row) {
-			print Html::beginTag("tr");
+			print Html::beginTag("tr", [
+				"data-id" => $row["id"]
+			]);
 			foreach ($this->columns as $key => $column) {
 				if (isset($column["options"])) {
 					$options = $column["options"];
@@ -165,6 +167,11 @@ class Table extends Widget {
 					$tag = isset($control["tag"]) ? $control["tag"] : "span";
 					$options = isset($control["options"]) ? $control["options"] : [];
 					$label = isset($control["label"]) ? $control["label"] : "";
+					if (isset($options["class"])) {
+						$options["class"] .= " ".$key;
+					} else {
+						$options["class"] = $key;
+					}
 					print Html::tag($tag, $label, $options);
 				}
 				print Html::endTag("td");

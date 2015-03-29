@@ -63,7 +63,7 @@ class Modal extends \yii\bootstrap\Modal {
 				$this->footer = "";
 			}
 			foreach ($this->buttons as $class => $button) {
-				$this->footer .= Html::tag("button", $button["text"], isset($button["options"]) ? $button["options"] : [] + [
+				$this->footer .= Html::tag("button", $button["text"], (isset($button["options"]) ? $button["options"] : []) + [
 					"class" => isset($button["class"]) ? $button["class"] : "btn btn-default",
 					"type" => isset($button["type"]) ? $button["type"] : "button"
 				]);

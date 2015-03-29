@@ -49,7 +49,7 @@ class DepartmentForm extends FormModel {
 				"label" => "Заведующий",
 				"type" => "DropDown",
 				"table" => [
-					"name" => "employee",
+					"name" => "core.employee",
 					"format" => "%{surname} %{name} %{patronymic}",
 					"key" => "id",
 					"value" => "surname, name, patronymic"

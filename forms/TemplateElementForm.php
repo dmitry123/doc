@@ -42,7 +42,7 @@ class TemplateElementForm extends FormModel {
 				"label" => "Шаблон",
 				"type" => "DropDown",
 				"table" => [
-					"name" => "template",
+					"name" => "doc.template",
 					"key" => "id",
 					"value" => "name"
 				],
