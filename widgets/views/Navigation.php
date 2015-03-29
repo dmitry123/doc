@@ -2,7 +2,10 @@
 /**
  * @var View $this
  * @var bool $admin
+ * @var array $menu
+ * @var Navigation $self
  */
+use app\widgets\Navigation;
 use yii\web\View;
 ?>
 
@@ -16,10 +19,11 @@ use yii\web\View;
 	<ul class="nav navbar-nav navbar-left">
 	</ul>
 	<ul class="nav navbar-nav navbar-right">
+		<?php $self->renderItem($menu) ?>
 		<?php if ($admin): ?>
 		<li>
 			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-				Администратор&nbsp;<span class="caret"><span class="sr-only"></span>
+				Администратор&nbsp;<span class="caret"><span class="sr-only"></span></span>
 			</a>
 			<ul class="dropdown-menu" role="menu">
 				<li><a href="<?= \yii\helpers\Url::to("@web/admin/statistic") ?>">Статистика</a></li>

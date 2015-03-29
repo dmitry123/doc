@@ -33,6 +33,16 @@ class Module extends \yii\base\Module {
 	public $image = null;
 
 	/**
+	 * @var array - Array with menu lists with next structure (value's is is HTML id):
+	 *  + label - Displayable item's name
+	 *  + [url] - Item's url to go
+	 *  + [items] - Element's children for dropdown lists
+	 *  + [options] - Array with HTML options
+	 *  + [icon] - Glyphicon
+	 */
+	public $menu = [];
+
+	/**
 	 * Define behaviors for admin module
 	 * @return array - Array with configurations
 	 */

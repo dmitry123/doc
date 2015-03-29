@@ -2,6 +2,7 @@
 
 namespace app\widgets;
 
+use app\core\Module;
 use app\core\Widget;
 use app\models\Employee;
 use app\models\Role;
@@ -20,12 +21,6 @@ class Navigation extends Widget {
 		]
 	];
 
-	public function renderItem($item) {
-		print Html::beginTag("li");
-
-		print Html::endTag("li");
-	}
-
 	/**
 	 * Run widget
 	 * @return string - Rendered content
@@ -35,14 +30,72 @@ class Navigation extends Widget {
 		$this->employee = Employee::findOne([
 			"user_id" => $identity->{"id"}
 		]);
-		if ($this->employee != null) {
-			$admin = Role::checkEmployeeRoles($this->employee->{"id"}, "admin");
+		$module = \Yii::$app->controller->module;
+		if ($module instanceof Module) {
+			$menu = $module->menu;
 		} else {
-			$admin = false;
+			$menu = [];
 		}
 		return $this->render("Navigation", [
-			"admin" => $admin
+			"admin" => $this->checkAccess("admin"),
+			"menu" => $menu,
+			"self" => $this
 		]);
+	}
+
+	/**
+	 * Render menu with items and sub-items, like in [Module::$menu]
+	 * @param array $menu - Array with menu items
+	 * @see app\core\Module::$menu
+	 */
+	public function renderItem($menu) {
+		foreach ($menu as $key => $item) {
+			if (isset($item["options"])) {
+				$item["options"]["id"] = $key;
+			} else {
+				$item["options"] = [ "id" => $key ];
+			}
+			if (!isset($item["url"])) {
+				$item["url"] = "javascript:void(0)";
+			}
+			if (isset($item["icon"])) {
+				$item["label"] = Html::tag("span", "&#8196;", [
+						"class" => $item["icon"]
+					]) . $item["label"];
+			}
+			if (isset($item["items"])) {
+				$item["options"] += [
+					"class" => "dropdown-toggle",
+					"data-toggle" => "dropdown",
+					"role" => "button",
+					"aria-expanded" => "false"
+				];
+				$item["label"] = $item["label"] ."&nbsp;". Html::tag("span", Html::tag("span", "", [
+						"class" => "sr-only"
+					]), [
+						"class" => "caret"
+					]);
+			} else {
+				$item["items"] = [];
+			}
+			$c = [];
+			if (isset($item["items"]) && count($item["items"]) > 0) {
+				$c["class"] = "dropdown";
+			}
+			print Html::beginTag("li", $c);
+			print \yii\helpers\Html::tag("a", $item["label"], $item["options"] + [
+					"href" => $item["url"]
+				]);
+			if (isset($item["items"]) && count($item["items"]) > 0) {
+				print Html::beginTag("ul", [
+					"class" => "dropdown-menu",
+					"role" => "menu"
+				]);
+				$this->renderItem($item["items"]);
+				print Html::endTag("ul");
+			}
+			print Html::endTag("li");
+		}
 	}
 
 	/**
