@@ -172,7 +172,7 @@ class QueryBuilder extends \yii\db\QueryBuilder
         }
         $table = $this->db->quoteTableName($table);
         if ($this->db->getTableSchema($table) === null) {
-            throw new InvalidParamException("Table not found: $table");
+            throw new InvalidParamException("AutoTable not found: $table");
         }
         $enable = $check ? 'CHECK' : 'NOCHECK';
 

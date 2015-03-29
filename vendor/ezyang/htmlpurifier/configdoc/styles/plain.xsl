@@ -33,7 +33,7 @@
                     <div id="library"><xsl:value-of select="/configdoc/title" /></div>
                     <h1><xsl:value-of select="$title" /></h1>
                     <div id="tocContainer">
-                        <h2>Table of Contents</h2>
+                        <h2>AutoTable of Contents</h2>
                         <ul id="toc">
                             <xsl:apply-templates mode="toc">
                                 <xsl:with-param name="overflowNumber" select="round(count(/configdoc/namespace) div 2) + $maxNumberAdjust" />

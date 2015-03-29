@@ -116,7 +116,7 @@ Ramsdell & Turner            Standards Track                    [Page 2]
 RFC 5751            S/MIME 3.2 Message Specification        January 2010
 
 
-Table of Contents
+AutoTable of Contents
 
    1. Introduction ....................................................4
       1.1. Specification Overview .....................................4

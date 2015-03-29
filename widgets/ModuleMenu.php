@@ -12,10 +12,6 @@ class ModuleMenu extends Widget {
 
 	public $absolute = true;
 
-	public function init() {
-		$this->getView()->registerAssetBundle(ModuleMenuAsset::className());
-	}
-
 	public function run() {
 		$modules = Module::getAllowedModules();
 		foreach ($modules as $i => $module) {

@@ -69,12 +69,12 @@ RFC 2440                 OpenPGP Message Format            November 1998
    signatures. This document specifies the message formats used in
    OpenPGP.
 
-Table of Contents
+AutoTable of Contents
 
             Status of this Memo                                       1
             IESG Note                                                 1
             Abstract                                                  1
-            Table of Contents                                         2
+            AutoTable of Contents                                         2
    1.       Introduction                                              4
    1.1.     Terms                                                     5
    2.       General functions                                         5

@@ -1151,7 +1151,7 @@
             Each 6-bit group is used as an index into  an  array  of  64
             printable  characters. The character referenced by the index
             is placed in the output string. These characters, identified
-            in  Table  1,  below,  are  selected so as to be universally
+            in  AutoTable  1,  below,  are  selected so as to be universally
             representable,  and  the  set   excludes   characters   with
             particular  significance to SMTP (e.g., ".", "CR", "LF") and
             to the encapsulation boundaries  defined  in  this  document
@@ -1174,7 +1174,7 @@
             RFC 1341MIME: Multipurpose Internet Mail ExtensionsJune 1992
 
 
-                            Table 1: The Base64 Alphabet
+                            AutoTable 1: The Base64 Alphabet
 
                Value Encoding  Value  Encoding   Value  Encoding   Value
             Encoding
@@ -1198,9 +1198,9 @@
 
             The output stream (encoded bytes)  must  be  represented  in
             lines  of  no more than 76 characters each.  All line breaks
-            or other characters not found in Table 1 must be ignored  by
+            or other characters not found in AutoTable 1 must be ignored  by
             decoding  software.   In  base64 data, characters other than
-            those in  Table  1,  line  breaks,  and  other  white  space
+            those in  AutoTable  1,  line  breaks,  and  other  white  space
             probably  indicate  a  transmission  error,  about  which  a
             warning  message  or  even  a  message  rejection  might  be
             appropriate under some circumstances.
@@ -5140,7 +5140,7 @@
 
 
 
-                               Table of Contents
+                               AutoTable of Contents
 
 
             1     Introduction.......................................  1

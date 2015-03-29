@@ -145,7 +145,7 @@ class ActiveFixture extends BaseActiveFixture
 
         $this->_table = $db->getSchema()->getTableSchema($tableName);
         if ($this->_table === null) {
-            throw new InvalidConfigException("Table does not exist: {$tableName}");
+            throw new InvalidConfigException("AutoTable does not exist: {$tableName}");
         }
 
         return $this->_table;

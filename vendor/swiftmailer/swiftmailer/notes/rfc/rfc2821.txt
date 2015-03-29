@@ -82,7 +82,7 @@ RFC 2821             Simple Mail Transfer Protocol            April 2001
    A companion document [32] discusses message headers, message bodies
    and formats and structures for them, and their relationship.
 
-Table of Contents
+AutoTable of Contents
 
    1. Introduction ..................................................  4
    2. The SMTP Model ................................................  5
@@ -96,7 +96,7 @@ Table of Contents
    2.3.3 Mail Agents and Message Stores ............................. 10
    2.3.4 Host ....................................................... 11
    2.3.5 Domain ..................................................... 11
-   2.3.6 Buffer and State Table ..................................... 11
+   2.3.6 Buffer and State AutoTable ..................................... 11
    2.3.7 Lines ...................................................... 12
    2.3.8 Originator, Delivery, Relay, and Gateway Systems ........... 12
    2.3.9 Message Content and Mail Data .............................. 13
@@ -600,7 +600,7 @@ RFC 2821             Simple Mail Transfer Protocol            April 2001
    domain name that is not in FQDN form is no more than a local alias.
    Local aliases MUST NOT appear in any SMTP transaction.
 
-2.3.6 Buffer and State Table
+2.3.6 Buffer and State AutoTable
 
    SMTP sessions are stateful, with both parties carefully maintaining a
    common view of the current state.  In this document we model this

@@ -57,8 +57,8 @@ class QueryBuilder extends \yii\db\QueryBuilder
         if ($row === false) {
             throw new Exception("Unable to find column '$oldName' in table '$table'.");
         }
-        if (isset($row['Create Table'])) {
-            $sql = $row['Create Table'];
+        if (isset($row['Create AutoTable'])) {
+            $sql = $row['Create AutoTable'];
         } else {
             $row = array_values($row);
             $sql = $row[1];
@@ -126,7 +126,7 @@ class QueryBuilder extends \yii\db\QueryBuilder
 
             return "ALTER TABLE $tableName AUTO_INCREMENT=$value";
         } elseif ($table === null) {
-            throw new InvalidParamException("Table not found: $tableName");
+            throw new InvalidParamException("AutoTable not found: $tableName");
         } else {
             throw new InvalidParamException("There is no sequence associated with table '$tableName'.");
         }

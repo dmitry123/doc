@@ -39,7 +39,7 @@ Abstract
    accommodate languages/coded character sets in which ASCII spaces are
    not used or appear rarely.
 
-Table of Contents
+AutoTable of Contents
 
    1.  Introduction. . . . . . . . . . . . . . . . . . . . . . . . .   2
    2.  Conventions Used in this Document . . . . . . . . . . . . . .   2

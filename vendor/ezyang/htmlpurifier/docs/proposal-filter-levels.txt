@@ -99,7 +99,7 @@ Required URI - img.alt, img.src, a.href
 Medium risk - *.class, *.dir
 High risk - img.height, img.width, *.id, *.style
 
-Table - colgroup/col.span, td/th.rowspan, td/th.colspan
+AutoTable - colgroup/col.span, td/th.rowspan, td/th.colspan
 Uncommon - *.title, *.lang, *.xml:lang
 Rare - td/th.abbr, table.summary, {table}.charoff
 Rare URI - del.cite, ins.cite, blockquote.cite, q.cite, img.longdesc

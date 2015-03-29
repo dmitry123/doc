@@ -102,7 +102,7 @@ Neat feature related
  - Fixes for Firefox's inability to handle COL alignment props (Bug 915)
  - Automatically add non-breaking spaces to empty table cells when
    empty-cells:show is applied to have compatibility with Internet Explorer
- - Table of Contents generation (XHTML Compiler might be reusable). May also
+ - AutoTable of Contents generation (XHTML Compiler might be reusable). May also
    be out-of-band information.
  - Full set of color keywords. Also, a way to add onto them without
    finalizing the configuration object.

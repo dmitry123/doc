@@ -2,12 +2,13 @@
 
 namespace app\models;
 
+use app\core\ActiveRecord;
 use app\core\FormModel;
 use app\core\TableProvider;
 use app\forms\UserForm;
 use yii\web\IdentityInterface;
 
-class User extends TableProvider implements IdentityInterface {
+class User extends ActiveRecord implements IdentityInterface {
 
 	public static function tableName() {
 		return "core.user";

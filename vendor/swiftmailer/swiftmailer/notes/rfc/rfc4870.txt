@@ -59,7 +59,7 @@ Delany                          Historic                        [Page 1]
 RFC 4870                       DomainKeys                       May 2007
 
 
-Table of Contents
+AutoTable of Contents
 
    1. Introduction ....................................................3
       1.1. Lack of Authentication Is Damaging Internet Email ..........3

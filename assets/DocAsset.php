@@ -4,20 +4,20 @@ namespace app\assets;
 
 use yii\web\AssetBundle;
 
-class ModuleMenuAsset extends AssetBundle {
+class DocAsset extends AssetBundle {
 
 	public $basePath = '@webroot';
 	public $baseUrl = '@web';
 
 	public $css = [
-		"css/module-menu.css"
+		"css/doc.css"
 	];
 
 	public $js = [
-		"js/module-menu.js"
+		"js/doc.js"
 	];
 
 	public $depends = [
-		"app\\assets\\CoreAsset"
+		"app\\assets\\SiteAsset"
 	];
 }

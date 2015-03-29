@@ -311,7 +311,7 @@ very little! Besides, SHE'S she, and I'm I, and--oh dear, how puzzling
 it all is! I'll try if I know all the things I used to know. Let me
 see: four times five is twelve, and four times six is thirteen, and
 four times seven is--oh dear! I shall never get to twenty at that rate!
-However, the Multiplication Table doesn't signify: let's try Geography.
+However, the Multiplication AutoTable doesn't signify: let's try Geography.
 London is the capital of Paris, and Paris is the capital of Rome, and
 Rome--no, THAT'S all wrong, I'm certain! I must have been changed for
 Mabel! I'll try and say "How doth the little--"' and she crossed her

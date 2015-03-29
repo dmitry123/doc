@@ -15,7 +15,7 @@ are managed by HTMLModuleManager.
 
 Modules that we don't support but could support are:
 
-    * 5.6. Table Modules
+    * 5.6. AutoTable Modules
           o 5.6.1. Basic Tables Module [?]
     * 5.8. Client-side Image Map Module [?]
     * 5.9. Server-side Image Map Module [?]

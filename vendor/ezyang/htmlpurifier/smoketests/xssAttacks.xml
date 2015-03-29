@@ -408,7 +408,7 @@ xss:&amp;#101;x&amp;#x2F;*XSS*//*/*/pression(alert(&quot;XSS&quot;))&apos;&gt;</
 	<attack>
 		<name>TABLE</name>
 		<code>&lt;TABLE BACKGROUND=&quot;javascript:alert(&apos;XSS&apos;)&quot;&gt;&lt;/TABLE&gt;</code>
-		<desc>Table background (who would have thought tables were XSS targets... except me, of course).</desc>
+		<desc>AutoTable background (who would have thought tables were XSS targets... except me, of course).</desc>
 
 		<label>HTML Element Attacks</label>
 		<browser>Browser support: [&lt;span class=&quot;s&quot;&gt;IE6.0&lt;/span&gt;|&lt;span class=&quot;s&quot;&gt;NS8.1-IE&lt;/span&gt;] [&lt;span class=&quot;ns&quot;&gt;NS8.1-G&lt;/span&gt;|&lt;span class=&quot;ns&quot;&gt;FF1.5&lt;/span&gt;] [&lt;span class=&quot;s&quot;&gt;O8.54&lt;/span&gt;]</browser>

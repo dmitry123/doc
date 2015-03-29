@@ -127,7 +127,7 @@ class Form extends Widget {
      */
     private function fetch($table) {
         if (!isset($table["name"]) && !isset($table["value"])) {
-            throw new ErrorException("Table configuration requires key, value and name");
+            throw new ErrorException("AutoTable configuration requires key, value and name");
         }
         if (!isset($table["key"])) {
             $table["key"] = "id";

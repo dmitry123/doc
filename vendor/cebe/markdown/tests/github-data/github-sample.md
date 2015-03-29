@@ -133,7 +133,7 @@ Or perhaps someone a little less eloquent:
 > just put me under the spot here, and maybe I'm not as quick on my feet
 > as I should be in coming up with one.
 
-Table for two
+AutoTable for two
 -------------
 
 <table>

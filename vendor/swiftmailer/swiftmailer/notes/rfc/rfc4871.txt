@@ -59,7 +59,7 @@ Allman, et al.              Standards Track                     [Page 1]
 RFC 4871                    DKIM Signatures                     May 2007
 
 
-Table of Contents
+AutoTable of Contents
 
    1.  Introduction . . . . . . . . . . . . . . . . . . . . . . . . .  4
      1.1.  Signing Identity . . . . . . . . . . . . . . . . . . . . .  5

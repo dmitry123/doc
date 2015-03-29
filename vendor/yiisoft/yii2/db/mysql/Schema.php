@@ -227,8 +227,8 @@ class Schema extends \yii\db\Schema
     protected function getCreateTableSql($table)
     {
         $row = $this->db->createCommand('SHOW CREATE TABLE ' . $this->quoteTableName($table->fullName))->queryOne();
-        if (isset($row['Create Table'])) {
-            $sql = $row['Create Table'];
+        if (isset($row['Create AutoTable'])) {
+            $sql = $row['Create AutoTable'];
         } else {
             $row = array_values($row);
             $sql = $row[1];

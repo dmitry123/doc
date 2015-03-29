@@ -14,8 +14,10 @@ print \app\widgets\Modal::widget([
 			Список текущих значений
 		</div>
 		<div class="panel-body table-widget">
-			<?= \app\modules\admin\widgets\Table::widget([
-				"provider" => new \app\models\User()
+			<?= \app\widgets\AutoTable::widget([
+				"provider" => \app\core\TableProviderAdapter::createProvider(
+					new \app\models\User(), new \app\forms\UserForm("table")
+				)
 			]) ?>
 		</div>
 	</div>

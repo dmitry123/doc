@@ -82,7 +82,7 @@ class Generator extends \yii\gii\Generator
         return array_merge(parent::attributeLabels(), [
             'ns' => 'Namespace',
             'db' => 'Database Connection ID',
-            'tableName' => 'Table Name',
+            'tableName' => 'AutoTable Name',
             'modelClass' => 'Model Class',
             'baseClass' => 'Base Class',
             'generateRelations' => 'Generate Relations',
@@ -107,7 +107,7 @@ class Generator extends \yii\gii\Generator
                 class.',
             'modelClass' => 'This is the name of the ActiveRecord class to be generated. The class name should not contain
                 the namespace part as it is specified in "Namespace". You do not need to specify the class name
-                if "Table Name" ends with asterisk, in which case multiple ActiveRecord classes will be generated.',
+                if "AutoTable Name" ends with asterisk, in which case multiple ActiveRecord classes will be generated.',
             'baseClass' => 'This is the base class of the new ActiveRecord class. It should be a fully qualified namespaced class name.',
             'generateRelations' => 'This indicates whether the generator should generate relations based on
                 foreign key constraints it detects in the database. Note that if your database contains too many tables,
@@ -497,12 +497,12 @@ class Generator extends \yii\gii\Generator
         }
         $tables = $this->getTableNames();
         if (empty($tables)) {
-            $this->addError('tableName', "Table '{$this->tableName}' does not exist.");
+            $this->addError('tableName', "AutoTable '{$this->tableName}' does not exist.");
         } else {
             foreach ($tables as $table) {
                 $class = $this->generateClassName($table);
                 if ($this->isReservedKeyword($class)) {
-                    $this->addError('tableName', "Table '$table' will generate a class which is a reserved PHP keyword.");
+                    $this->addError('tableName', "AutoTable '$table' will generate a class which is a reserved PHP keyword.");
                     break;
                 }
             }

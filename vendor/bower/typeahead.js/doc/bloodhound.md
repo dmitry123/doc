@@ -5,7 +5,7 @@ Bloodhound is the typeahead.js suggestion engine. Bloodhound is robust,
 flexible, and offers advanced functionalities such as prefetching, intelligent
 caching, fast lookups, and backfilling with remote data.
 
-Table of Contents
+AutoTable of Contents
 -----------------
 
 * [Features](#features)

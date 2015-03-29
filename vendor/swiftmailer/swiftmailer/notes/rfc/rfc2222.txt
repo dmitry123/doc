@@ -23,7 +23,7 @@ Copyright Notice
 
    Copyright (C) The Internet Society (1997).  All Rights Reserved.
 
-Table of Contents
+AutoTable of Contents
 
    1.    Abstract ..............................................    2
    2.    Organization of this Document .........................    2

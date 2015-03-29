@@ -1,11 +1,11 @@
 <?php
 
-namespace app\modules\admin\widgets;
+namespace app\widgets;
 
 use app\core\TableProvider;
 use app\core\Widget;
 
-class Table extends Widget {
+class AutoTable extends Widget {
 
 	/**
 	 * @var TableProvider - Instance of model, which extends

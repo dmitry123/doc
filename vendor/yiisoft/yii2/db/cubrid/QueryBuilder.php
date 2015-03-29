@@ -65,7 +65,7 @@ class QueryBuilder extends \yii\db\QueryBuilder
 
             return "ALTER TABLE " . $this->db->schema->quoteTableName($tableName) . " AUTO_INCREMENT=$value;";
         } elseif ($table === null) {
-            throw new InvalidParamException("Table not found: $tableName");
+            throw new InvalidParamException("AutoTable not found: $tableName");
         } else {
             throw new InvalidParamException("There is not sequence associated with table '$tableName'.");
         }

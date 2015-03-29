@@ -1049,7 +1049,7 @@ NEWS ( CHANGELOG and HISTORY )                                     HTMLPurifier
 - Made URI validator more forgiving: will ignore leading and trailing
   quotes, apostrophes and less than or greater than signs.
 - Enforce alphanumeric namespace and directive names for configuration.
-- Table child definition made more flexible, will fix up poorly ordered elements
+- AutoTable child definition made more flexible, will fix up poorly ordered elements
 . Renamed ConfigDef to ConfigSchema
 
 1.0.1, released 2006-09-04
@@ -1062,7 +1062,7 @@ NEWS ( CHANGELOG and HISTORY )                                     HTMLPurifier
 1.0.0, released 2006-09-01
 ! Shorthand CSS properties implemented: font, border, background, list-style
 ! Basic color keywords translated into hexadecimal values
-! Table CSS properties implemented
+! AutoTable CSS properties implemented
 ! Support for charsets other than UTF-8 (defined by iconv)
 ! Malformed UTF-8 and non-SGML character detection and cleaning implemented
 - Fixed broken numeric entity conversion
@@ -1072,7 +1072,7 @@ NEWS ( CHANGELOG and HISTORY )                                     HTMLPurifier
 1.0.0beta, released 2006-08-16
 ! First public release, most functionality implemented. Notable omissions are:
   + Shorthand CSS properties
-  + Table CSS properties
+  + AutoTable CSS properties
   + Deprecated attribute transformations
 
     vim: et sw=4 sts=4

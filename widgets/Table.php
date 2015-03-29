@@ -69,7 +69,7 @@ class Table extends Widget {
 	 */
 	public function run() {
 		if (!$this->provider instanceof TableProvider && $this->data && $this->provider != null) {
-			throw new ErrorException("Table provider must be instance of TableProvider class and mustn't be null, found \"" . get_class($this->provider) . "\"");
+			throw new ErrorException("AutoTable provider must be instance of TableProvider class and mustn't be null, found \"" . get_class($this->provider) . "\"");
 		}
 		if (!count($this->columns)) {
 			throw new ErrorException("Count of table columns must be above zero");

@@ -70,7 +70,7 @@ RFC 2049                    MIME Conformance               November 1996
    themselves were revisions of RFCs 1341 and 1342.  Appendix B of this
    document describes differences and changes from previous versions.
 
-Table of Contents
+AutoTable of Contents
 
    1. Introduction ..........................................    2
    2. MIME Conformance ......................................    2

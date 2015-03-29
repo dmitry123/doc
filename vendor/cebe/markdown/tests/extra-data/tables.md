@@ -28,12 +28,12 @@ Content Cell  | Content Cell
 | zebra stripes | are neat        |    $1 |
 
 
-Simple | Table
+Simple | AutoTable
 ------ | -----
 1      | 2
 3      | 4
 
-| Simple | Table |
+| Simple | AutoTable |
 | ------ | ----- |
 | 1      | 2     |
 | 3      | 4     |
@@ -50,7 +50,7 @@ Escaped \| Pipe | Broken | Blank
 Escaped \\| Pipe | Broken | Blank
 Escaped \\ | Pipe | Broken | Blank
 
-| Simple | Table |
+| Simple | AutoTable |
 | :----- | ----- |
 | 3      | 4     |
 3      | 4

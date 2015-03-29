@@ -59,7 +59,7 @@ Callas, et al               Standards Track                     [Page 1]
 RFC 4880                 OpenPGP Message Format            November 2007
 
 
-Table of Contents
+AutoTable of Contents
 
    1. Introduction ....................................................5
       1.1. Terms ......................................................5
