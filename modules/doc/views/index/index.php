@@ -3,10 +3,17 @@
  * @var $this yii\web\View
  */
 print \app\widgets\Modal::widget([
-	"title" => "Hello",
-	"id" => "test-modal"
-]);
-?>
+	"title" => "Загрузка документов",
+	"body" => \yii\helpers\Html::input("file", "files[]", null, [
+		"id" => "document-file-upload",
+		"multiple" => "true",
+		"class" => "file-loading",
+		"name" => "files[]"
+	]),
+	"id" => "file-upload-modal",
+	"size" => "modal-lg",
+	"wrapper" => "col-xs-12"
+]); ?>
 
 <div class="col-xs-9">
 	<div class="panel panel-default table-view">
@@ -31,6 +38,17 @@ print \app\widgets\Modal::widget([
 	</div>
 </div>
 <div class="col-xs-3">
-	<?= \app\modules\doc\widgets\BasicActions::widget([]) ?>
-	<?= \app\modules\doc\widgets\AboutDocument::widget([]) ?>
+	<?= \app\widgets\Panel::widget([
+		"title" => "Информация о документе",
+		"body" => \app\modules\doc\widgets\AboutDocument::widget([]),
+		"align" => "text-center"
+	]) ?>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<span>История изменений документа</span>
+		</div>
+		<div class="panel-body text-center">
+			<?= \app\modules\doc\widgets\DocumentHistory::widget([]) ?>
+		</div>
+	</div>
 </div>

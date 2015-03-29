@@ -5,11 +5,4 @@
  */
 ?>
 
-<div class="panel panel-default">
-	<div class="panel-heading">
-		<span>Информация о документе</span>
-	</div>
-	<div class="panel-body">
-
-	</div>
-</div>
+<h4>Документ не выбран</h4>

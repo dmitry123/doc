@@ -38,6 +38,11 @@ class Modal extends \yii\bootstrap\Modal {
 	public $id = null;
 
 	/**
+	 * @var string - Body wrapper classes
+	 */
+	public $wrapper = "col-xs-11 col-xs-offset-1";
+
+	/**
 	 * Initializes the widget. This method will register the bootstrap asset
 	 * bundle. If you override this method, make sure you call the parent implementation first.
 	 */
@@ -49,7 +54,7 @@ class Modal extends \yii\bootstrap\Modal {
 		}
 		if (empty($this->footer)) {
 			if ($this->cancel == true) {
-				$this->footer = Html::tag("button", "Отмена", [
+				$this->footer = Html::tag("button", "Закрыть", [
 					"class" => "btn btn-default cancel-button",
 					"type" => "button",
 					"data-dismiss" => "modal"
@@ -82,7 +87,7 @@ class Modal extends \yii\bootstrap\Modal {
 				$this->body = call_user_func($this->body, $this);
 			}
 			print Html::tag("div", Html::tag("div", $this->body, [
-				"class" => "col-xs-11 col-xs-offset-1"
+				"class" => $this->wrapper
 			]), [
 				"class" => "row"
 			]);

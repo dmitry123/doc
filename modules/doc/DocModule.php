@@ -12,7 +12,7 @@ class DocModule extends Module {
 			"icon" => "glyphicon glyphicon-upload",
 			"options" => [
 				"data-toggle" => "modal",
-				"data-target" => "#test-modal"
+				"data-target" => "#file-upload-modal"
 			]
 		],
 		"menu-doc-find" => [
