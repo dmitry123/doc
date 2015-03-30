@@ -39,7 +39,7 @@ class DepartmentForm extends FormModel {
 				"label" => "Институт",
 				"type" => "DropDown",
 				"table" => [
-					"name" => "institute",
+					"name" => "core.institute",
 					"key" => "id",
 					"value" => "name"
 				],

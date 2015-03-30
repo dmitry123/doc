@@ -114,7 +114,7 @@ var Doc = Doc || {};
 	};
 
 	Doc.createMultiple = function(selector, properties) {
-		Doc.createObject(new Multiple(properties, $(selector)), selector, true);
+		return Doc.createObject(new Multiple(properties, $(selector)), selector, true);
 	};
 
 	$.fn.multiple = Doc.createPlugin(

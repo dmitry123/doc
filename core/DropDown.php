@@ -43,8 +43,8 @@ abstract class DropDown extends Field {
 	 */
 	public function getData() {
 		if ($this->data == null && ($this->data = $this->data()) != null) {
-			if (!$this->isBoolean() && !isset($this->data[-1])) {
-				$this->data[-1] = "Нет";
+			if (!$this->isBoolean() && !isset($this->data[0])) {
+				$this->data[0] = "Нет";
 			}
 		 } else if ($this->data() == null) {
 			$this->data = [];

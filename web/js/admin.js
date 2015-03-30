@@ -5,19 +5,18 @@ var TablePanel = {
             $("#table-save-modal").modal();
         });
 	},
-	load: function(table) {
+	load: function(table, after) {
 		$.get(url("admin/table/load"), {
 			table: table
 		}, function(json) {
 			if (!json["status"]) {
-				Doc.createMessage({
+				return Doc.createMessage({
 					message: json["message"]
 				});
-			} else {
-				$(".admin-table-panel-wrapper").empty().append(
-					json["component"]
-				);
 			}
+			$(".admin-table-panel-wrapper")
+				.empty().append(json["component"]);
+			after && after.call();
 		}, "json");
 	}
 };
@@ -26,12 +25,24 @@ var TableView = {
 	ready: function() {
 		var me = this;
 		$(".table-panel-wrapper li[data-table] a").click(function() {
+			var that = this;
             var table = $(this).parent().data("table");
             if (!table) {
                 return void 0;
             }
-			TablePanel.load(table);
-			me.toggle($(this).parent().children(".table-column-list"));
+			var image;
+			$(this).append(image = $("<img>", {
+				src: "../img/ajax-loader.gif",
+				css: {
+					"height": "20px"
+				}
+			}).fadeIn("fast"));
+			TablePanel.load(table, function() {
+				me.toggle($(that).parent().children(".table-column-list"));
+				image.fadeOut("fast", function() {
+					$(this).remove();
+				});
+			});
             window.location.hash = "#" + table;
 		});
         if (window.location.hash != "") {
