@@ -64,6 +64,21 @@ class Table extends Widget {
 	public $desc = false;
 
 	/**
+	 * @var bool - Shall table has header
+	 */
+	public $hasHeader = true;
+
+	/**
+	 * @var bool - Shall table has body
+	 */
+	public $hasBody = true;
+
+	/**
+	 * @var bool - Shall table has footer
+	 */
+	public $hasFooter = true;
+
+	/**
 	 * Run widget execution
 	 * @throws ErrorException on configuration errors
 	 */
@@ -188,34 +203,21 @@ class Table extends Widget {
 		print Html::beginTag("table", [
 			"class" => isset($this->classes["table"]) ? $this->classes["table"] : ""
 		]);
-		print Html::beginTag("thead");
-		$this->renderHeader();
-		print Html::endTag("thead");
-		print Html::beginTag("tbody");
-		$this->renderBody();
-		print Html::endTag("thead");
-		print Html::beginTag("tfoot");
-		$this->renderFooter();
-		print Html::endTag("thead");
+		if ($this->hasHeader) {
+			print Html::beginTag("thead");
+			$this->renderHeader();
+			print Html::endTag("thead");
+		}
+		if ($this->hasBody) {
+			print Html::beginTag("tbody");
+			$this->renderBody();
+			print Html::endTag("tbody");
+		}
+		if ($this->hasFooter) {
+			print Html::beginTag("tfoot");
+			$this->renderFooter();
+			print Html::endTag("tfoot");
+		}
 		print Html::endTag("table");
-	}
-
-	protected function getClass($key = null, $attributes = []) {
-		if ($key != null && isset($this->classes[$key]) && !empty($this->classes[$key])) {
-			$class = "class=\"{$this->classes[$key]} ";
-		} else {
-			$class = "";
-		}
-		if (count($attributes) > 0 && $class == "") {
-			$class = "class=\"";
-		}
-		foreach ($attributes as $value) {
-			$class .= $value . " ";
-		}
-		if (strlen($class) > 0) {
-			return $class . "\"";
-		} else {
-			return $class;
-		}
 	}
 }

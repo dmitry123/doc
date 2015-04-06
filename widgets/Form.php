@@ -49,6 +49,11 @@ class Form extends Widget {
 	 */
 	public $button = null;
 
+	/**
+	 * @var string - Default form class
+	 */
+	public $class = "col-xs-12";
+
     /**
      * Override that method to return just rendered component
      * @throws ErrorException

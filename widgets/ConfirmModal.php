@@ -39,6 +39,11 @@ class ConfirmModal extends Modal {
 	public $body = "Результат выполнения этого действия нельзя будет отменить. Вы точно уверены?";
 
 	/**
+	 * @var string - Body wrapper classes
+	 */
+	public $wrapper = "col-xs-12";
+
+	/**
 	 * Initialize modal window, but remove
 	 * fade effect from this modal type
 	 */

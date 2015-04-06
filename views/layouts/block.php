@@ -32,6 +32,7 @@ app\assets\BlockAsset::register($this);
 		</div>
 	</div>
 </div>
+
 <?= \app\widgets\Modal::widget([
 	"title" => "Регистрация",
 	"body" => \app\widgets\Form::widget([

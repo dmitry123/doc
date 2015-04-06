@@ -41,7 +41,7 @@ abstract class ActiveRecord extends \yii\db\ActiveRecord {
 	/**
 	 * Find model by it's name
 	 * @param string $class - Name of model class or null (default)
-	 * @return ActiveRecord - Active record class instance
+	 * @return static - Active record class instance
 	 */
 	public static function model($class = null) {
 		if ($class == null) {
@@ -129,5 +129,15 @@ abstract class ActiveRecord extends \yii\db\ActiveRecord {
 	 */
 	public function createQuery() {
 		return new Query();
+	}
+
+	/**
+	 * Insert element in database right now
+	 * @param array $model - Model fields
+	 * @return bool - True on success and false on failure
+	 * @throws \Exception
+	 */
+	public static function insertNow(array $model) {
+		return (new static($model))->insert();
 	}
 }

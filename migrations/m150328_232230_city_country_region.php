@@ -23,9 +23,9 @@ class m150328_232230_city_country_region extends Migration {
 	}
 
 	public function safeUp() {
-		$this->load("csv/country.csv", "core.country");
-		$this->load("csv/region.csv", "core.region");
-		$this->load("csv/city.csv", "core.city");
+		$this->load("doc/country.csv", "core.country");
+		$this->load("doc/region.csv", "core.region");
+		$this->load("doc/city.csv", "core.city");
 	}
 
 	public function safeDown() {

@@ -22,6 +22,10 @@ class IndexController extends Controller {
 		}
 	}
 
+	public function actionNastya() {
+		return $this->render("nastya");
+	}
+
 	/**
 	 * Override that method to return model for current controller instance or null
 	 * @param $model FormModel - Another model to clone

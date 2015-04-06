@@ -11,17 +11,34 @@ use app\modules\doc\core\FileUploader;
 class DocumentController extends Controller {
 
 	/**
-	 *
+	 * That action uploads files on server
+	 * @see DocumentController::getFiles
+	 * @see FileUploader::upload
 	 */
 	public function actionUpload() {
 		try {
 			if (!isset($_FILES["files"])) {
 				$this->error("Не был загружен ни один файл, выберите файлы для загрузки");
 			}
-			FileUploader::getUploader()->upload($this->getFiles($failed));
-			$this->leave([
-				"failed" => $failed
-			]);
+			$errors = [];
+			foreach ($this->getFiles($failed) as $file) {
+				try {
+					FileUploader::getUploader()->upload($file);
+				} catch (\Exception $e) {
+					$errors[$file["name"]] = $e->getMessage();
+				}
+			}
+			if (count($errors) > 0) {
+				$this->leave([
+					"message" => "Загрузка завершилась с ошибками",
+					"errors" => $errors
+				]);
+			} else {
+				$this->leave([
+					"message" => "Загрузка завершилась без ошибок",
+					"errors" => $errors
+				]);
+			}
 		} catch (\Exception $e) {
 			$this->exception($e);
 		}
@@ -49,7 +66,7 @@ class DocumentController extends Controller {
 			} else {
 				$result[] = [
 					"name" => $files["name"][$i],
-					"tmp_dir" => $files["tmp_name"][$i],
+					"tmp_name" => $files["tmp_name"][$i],
 					"type" => $files["type"][$i],
 					"error" => $files["error"][$i],
 					"size" => $files["size"][$i]

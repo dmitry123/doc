@@ -75,6 +75,12 @@ class Modal extends \yii\bootstrap\Modal {
 			$this->options["id"] = $this->id;
 		}
 		parent::init();
+		print Html::beginTag("div", [
+			"class" => "row"
+		]);
+		print Html::beginTag("div", [
+			"class" => $this->wrapper
+		]);
 	}
 
 	/**
@@ -86,12 +92,10 @@ class Modal extends \yii\bootstrap\Modal {
 			if (is_callable($this->body)) {
 				$this->body = call_user_func($this->body, $this);
 			}
-			print Html::tag("div", Html::tag("div", $this->body, [
-				"class" => $this->wrapper
-			]), [
-				"class" => "row"
-			]);
+			print $this->body;
 		}
+		print Html::endTag("div");
+		print Html::endTag("div");
 		return parent::run();
 	}
 }

@@ -8,7 +8,7 @@ var DocMenu = {
 			uploadUrl: url("doc/document/upload"),
 			uploadAsync: true,
 			uploadExtraData: {
-				userId: doc["user"]["id"]
+				form: $("file-upload-modal").find("form")
 			}
 		});
 	}

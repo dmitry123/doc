@@ -18,7 +18,7 @@ $form = ActiveForm::begin([
 	"enableAjaxValidation" => true,
 	"options" => $self->options + [
 		"id" => $id,
-		"class" => "form-horizontal col-xs-12",
+		"class" => "form-horizontal $self->class",
 		"role" => "form",
 		"data-form" => get_class($model),
 		"data-widget" => get_class($this),
@@ -47,14 +47,6 @@ $form = ActiveForm::begin([
 				</a>
 			<?php endforeach; ?>
 		<?php endif; ?>
-        <?php if ($self->checkType($key, "DropDown") && $self->getForm($key)): ?>
-            <a data-form="<?= $self->getForm($key) ?>" href="javascript:void(0)">
-				<span style="font-size: 15px; margin-left: -15px; margin-top: 5px" class="col-xs-1 glyphicon glyphicon-plus form-search-button"></span>
-			</a>
-        <?php elseif ($self->checkType($key, "Multiple")): ?>
-            <a href="javascript:void(0)"><span style="font-size: 15px; margin-left: -15px; margin-top: 5px" class="col-xs-1 glyphicon glyphicon-arrow-up form-up-button"></span></a>
-            <a href="javascript:void(0)"><span style="font-size: 15px; margin-left: -15px; margin-top: 5px" class="col-xs-1 glyphicon glyphicon-arrow-down form-down-button"></span></a>
-        <?php endif; ?>
     </div>
 <?php endforeach; ?>
 

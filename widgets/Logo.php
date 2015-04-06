@@ -10,7 +10,7 @@ use yii\base\Exception;
 class Logo extends Widget {
 
 	/**
-	 * @var string - Name of logo image (absolute)
+	 * @var string - Path to logo image (absolute)
 	 */
 	public $filename = "@web/img/logo-big.png";
 
@@ -43,10 +43,8 @@ class Logo extends Widget {
 	 */
 	public function run() {
 		$content = ob_get_clean();
-		if (EmployeeManager::getManager()->isValid()) {
-			$identity = EmployeeManager::getIdentity(
-				EmployeeManager::SHORT
-			);
+		if ($this->identity && EmployeeManager::getManager()->isValid()) {
+			$identity = EmployeeManager::getIdentity(EmployeeManager::SHORT);
 		} else {
 			$identity = null;
 		}

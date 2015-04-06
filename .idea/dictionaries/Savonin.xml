@@ -6,6 +6,7 @@
       <w>fileinput</w>
       <w>postgre</w>
       <w>sidenav</w>
+      <w>webroot</w>
     </words>
   </dictionary>
 </component>
