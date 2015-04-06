@@ -30,7 +30,8 @@ print \app\widgets\Modal::widget([
 			<?= \app\widgets\AutoTable::widget([
 				"provider" => \app\core\TableProviderAdapter::createProvider(
 					new \app\models\Document(), new \app\forms\DocumentForm("table"), [
-						"keys" => [ "name", "upload_time", "employee_id", "status" ]
+						"keys" => [ "name", "upload_time", "employee_id", "status" ],
+						"order" => "name"
 					]
 				), "controls" => false
 			]) ?>

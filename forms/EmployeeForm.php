@@ -30,8 +30,7 @@ class EmployeeForm extends FormModel {
 		return [
 			"id" => [
 				"label" => "Идентификатор",
-				"type" => "number",
-				"hidden" => "true"
+				"type" => "number"
 			],
 			"surname" => [
 				"label" => "Фамилия",
@@ -60,7 +59,12 @@ class EmployeeForm extends FormModel {
 			],
 			"user_id" => [
 				"label" => "Пользователь",
-				"type" => "hidden",
+				"type" => "DropDown",
+				"table" => [
+					"name" => "core.user",
+					"key" => "id",
+					"value" => "login"
+				],
 				"rules" => "required",
 			],
 			"department_id" => [
@@ -77,6 +81,11 @@ class EmployeeForm extends FormModel {
 				"label" => "Телефон",
 				"type" => "text",
 				"rules" => "required"
+			],
+			"is_validated" => [
+				"label" => "Подтвержден?",
+				"type" => "Boolean",
+				"rules" => "required"
 			]
 		];
 	}
@@ -89,4 +98,5 @@ class EmployeeForm extends FormModel {
 	public $user_id;
 	public $department_id;
 	public $phone_id;
+	public $is_validated;
 }

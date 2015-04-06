@@ -39,15 +39,19 @@ abstract class DropDown extends Field {
 
 	/**
 	 * Get cached array with drop down list data
+	 * @param mixed $value - Get by it's key
 	 * @return array - Array with drop down list
 	 */
-	public function getData() {
+	public function getData($value = null) {
 		if ($this->data == null && ($this->data = $this->data()) != null) {
 			if (!$this->isBoolean() && !isset($this->data[0])) {
 				$this->data[0] = "Нет";
 			}
 		 } else if ($this->data() == null) {
 			$this->data = [];
+		}
+		if ($value !== null) {
+			return isset($this->data[$value]) ? $this->data[$value] : null;
 		}
 		return $this->data;
 	}

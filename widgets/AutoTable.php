@@ -2,6 +2,8 @@
 
 namespace app\widgets;
 
+use app\core\DropDown;
+use app\core\FieldCollection;
 use app\core\TableProvider;
 use app\core\Widget;
 
@@ -47,13 +49,52 @@ class AutoTable extends Widget {
 			if (isset($config["hidden"]) && $config["hidden"] || isset($config["type"]) && $config["type"] == "hidden") {
 				continue;
 			} else if (in_array($key, $this->provider->keys) || in_array("*", $this->provider->keys)) {
-				$columns[$key] = [ "width" => ($key == "id" ? "150px" : "auto") ];
+				$columns[$key] = [
+					"label" => $config["label"],
+					"width" => ($key == "id" ? "150px" : "auto")
+				];
 			}
 		}
+		$data = $this->provider->getRows();
 		return \app\widgets\Table::widget([
 			"controls" => $this->controls,
+			"data" => $this->fetchExtraData($columns, $data),
 			"columns" => $columns,
-			"provider" => $this->provider
 		]);
+	}
+
+	public function fetchExtraData(array $columns, array& $data) {
+		$form = $this->provider->getFormModel();
+		foreach ($columns as $key => $column) {
+			try {
+				$config = $form->getConfig($key);
+			} catch (\Exception $ignored) {
+				continue;
+			}
+			if (strtolower($config["type"]) == "dropdown" && isset($config["table"])) {
+				$fetched = Form::fetch($config["table"]);
+				foreach ($data as &$row) {
+					if (($value = $row[$key]) != null && isset($fetched[$value])) {
+						$row[$key] = $fetched[$value];
+					} else {
+						$row[$key] = "Нет";
+					}
+				}
+			} else if (strtolower($config["type"]) == "multiple") {
+				/* TODO: Not-Implemented */
+			} else {
+				try {
+					$field = FieldCollection::getCollection()->find($config["type"]);
+				} catch (\Exception $ignored) {
+					continue;
+				}
+				if ($field instanceof DropDown) {
+					foreach ($data as &$row) {
+						$row[$key] = $field->getData($row[$key]);
+					}
+				}
+			}
+		}
+		return $data;
 	}
 }

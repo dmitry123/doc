@@ -3,7 +3,7 @@
 namespace app\modules\admin\widgets;
 
 use app\core\FormModel;
-use app\core\Postgres;
+use app\core\PostgreSQL;
 use app\core\Widget;
 use yii\helpers\Inflector;
 
@@ -53,7 +53,7 @@ class TableView extends Widget {
 	public function run() {
 		foreach ($this->list as $key => &$table) {
 			$this->parseKey($key, $t, $s);
-			$table["info"] = Postgres::findColumnNamesAndTypes($t, $s);
+			$table["info"] = PostgreSQL::findColumnNamesAndTypes($t, $s);
 			$table["table"] = $t;
 			$class = "app\\forms\\".Inflector::id2camel($t, "_")."form";
 			if (!class_exists($class)) {

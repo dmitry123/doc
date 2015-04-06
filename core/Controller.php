@@ -445,7 +445,7 @@ abstract class Controller extends \yii\web\Controller {
 	 */
 	public function exception(\Exception $exception) {
 		$method = $exception->getTrace()[0];
-		if (!\Yii::$app->getRequest()->getIsAjax()) {
+		if (!\Yii::$app->getRequest()->getIsAjax() || true) {
 			throw $exception;
 		}
 		$this->leave([

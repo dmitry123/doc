@@ -169,7 +169,14 @@ class Table extends Widget {
 						"width" => $column["width"]
 					];
 				}
-				print Html::tag("td", $row[$key], $options + [
+				if (isset($column["type"]) && is_array($column["type"])) {
+					$value = Html::tag($column["type"]["tag"], $row[$key],
+						isset($column["type"]["options"]) ? $column["type"]["options"] : []
+					);
+				} else {
+					$value = $row[$key];
+				}
+				print Html::tag("td", $value, $options + [
 						"align" => "middle"
 					]);
 			}

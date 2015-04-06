@@ -5,7 +5,7 @@ namespace app\core;
 use yii\base\Object;
 use yii\db\Query;
 
-class Postgres extends Object {
+class PostgreSQL extends Object {
 
 	/**
 	 * Fetch list with table column names and types

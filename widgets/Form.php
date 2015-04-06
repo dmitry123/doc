@@ -98,7 +98,7 @@ class Form extends Widget {
      * @param String $format - String with data format, for example ${id} or ${surname}
      * @param Array $data - Array with data to format
      */
-    private function format($format, array& $data) {
+	public static function format($format, array& $data) {
         foreach ($data as $i => &$value) {
 			if (is_object($value)) {
 				$model = clone $value;
@@ -130,7 +130,7 @@ class Form extends Widget {
      * @return array - Array with prepared data
      * @throws ErrorException
      */
-    private function fetch($table) {
+    public static function fetch($table) {
         if (!isset($table["name"]) && !isset($table["value"])) {
             throw new ErrorException("AutoTable configuration requires key, value and name");
         }
@@ -148,7 +148,7 @@ class Form extends Widget {
             foreach ($data as $row) {
                 $result[$row[$key]] = $row;
             }
-            $this->format($table["format"], $result);
+            self::format($table["format"], $result);
         } else {
             foreach ($data as $row) {
                 $result[$row[$key]] = $row[$value];
