@@ -29,7 +29,7 @@ print \app\widgets\Modal::widget([
 		<div class="panel-body table-widget">
 			<?= \app\widgets\AutoTable::widget([
 				"provider" => \app\core\TableProviderAdapter::createProvider(
-					new \app\models\Document(), new \app\forms\DocumentForm("table"), [
+					new \app\models\Document(), new \app\forms\FileForm("table"), [
 						"keys" => [ "name", "upload_time", "employee_id", "status" ],
 						"order" => "name"
 					]

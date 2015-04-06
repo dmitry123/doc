@@ -41,14 +41,14 @@ class FileForm extends FormModel {
 			],
 			"employee_id" => [
 				"label" => "Сотрудник",
-				"type" => "text",
-				"rules" => "required",
+				"type" => "DropDown",
 				"table" => [
 					"name" => "core.employee",
-					"format" => "%{surname} %{name} %{patronymic}",
+					"format" => "%{surname} %{name}",
 					"key" => "id",
-					"value" => "surname, name, patronymic"
-				]
+					"value" => "surname, name"
+				],
+				"rules" => "required",
 			],
 			"upload_time" => [
 				"label" => "Время загрузки",

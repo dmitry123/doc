@@ -86,12 +86,14 @@ class AutoTable extends Widget {
 				try {
 					$field = FieldCollection::getCollection()->find($config["type"]);
 				} catch (\Exception $ignored) {
+					throw $ignored;
 					continue;
 				}
-				if ($field instanceof DropDown) {
-					foreach ($data as &$row) {
-						$row[$key] = $field->getData($row[$key]);
-					}
+				if (!$field instanceof DropDown) {
+					continue;
+				}
+				foreach ($data as &$row) {
+					$row[$key] = $field->getData($row[$key]);
 				}
 			}
 		}

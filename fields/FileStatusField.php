@@ -37,6 +37,6 @@ class FileStatusField extends DropDown {
 	 * @return String - Label
 	 */
 	public function name() {
-		return "Статус документа";
+		return "Статус файла";
 	}
 }
