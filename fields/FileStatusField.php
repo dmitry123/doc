@@ -29,7 +29,7 @@ class FileStatusField extends DropDown {
 	 * @return String - Key
 	 */
 	public function key() {
-		return "DocumentStatus";
+		return "FileStatus";
 	}
 
 	/**

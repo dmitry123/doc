@@ -23,7 +23,7 @@ class FileTypeField extends DropDown {
 	 * @return String - Key
 	 */
 	public function key() {
-		return "DocumentType";
+		return "FileType";
 	}
 
 	/**

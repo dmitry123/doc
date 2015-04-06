@@ -60,7 +60,7 @@ class FileUploader {
 				"parent_id" => null,
 				"type" => $type,
 				"status" => 1,
-				"mime" => $mime->{"id"}
+				"mime_type_id" => $mime->{"id"}
 			]);
 			if (!$document->save()) {
 				throw new Exception("File hasn't been uploaded on server, can't save file info in database");

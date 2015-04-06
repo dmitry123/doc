@@ -3,9 +3,9 @@
 namespace app\forms;
 
 use app\core\FormModel;
-use app\models\Document;
+use app\models\File;
 
-class DocumentForm extends FormModel {
+class FileForm extends FormModel {
 
 	/**
 	 * Override that method to return additional rule configuration, like
@@ -13,7 +13,7 @@ class DocumentForm extends FormModel {
 	 * @return array - Array with rule configuration
 	 */
 	public function backward() {
-		return Document::getRules([]);
+		return File::getRules([]);
 	}
 
 	/**
@@ -87,7 +87,7 @@ class DocumentForm extends FormModel {
 	public $employee_id;
 	public $upload_time;
 	public $parent_id;
-	public $type;
 	public $status;
-	public $category_id;
+	public $type;
+	public $mime_type_id;
 }
