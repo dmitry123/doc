@@ -2,43 +2,18 @@
 /**
  * @var $this yii\web\View
  */
-\app\widgets\Modal::begin([
+print \app\widgets\Modal::widget([
 	"title" => "Загрузка документов",
+	"body" => \yii\helpers\Html::input("file", "files[]", null, [
+		"id" => "document-file-upload",
+		"multiple" => "true",
+		"class" => "file-loading",
+		"name" => "files[]"
+	]),
 	"id" => "file-upload-modal",
 	"size" => "modal-lg",
 	"wrapper" => "col-xs-12"
-]);
-
-print \yii\helpers\Html::tag("div", \app\widgets\Form::widget([
-	"model" => new \app\core\FormModelAdapter("default", [
-		"category" => [
-			"label" => "Категория",
-			"type" => "DropDown",
-			"table" => [
-				"name" => "doc.category",
-				"key" => "id",
-				"value" => "name"
-			]
-		],
-		"status" => [
-			"label" => "Статус",
-			"type" => "DocumentStatus"
-		]
-	])
-]), [
-	"class" => "row",
-	"style" => "margin-bottom: 10px"
-]);
-
-print \yii\helpers\Html::input("file", "files[]", null, [
-	"id" => "document-file-upload",
-	"multiple" => "true",
-	"class" => "file-loading",
-	"name" => "files[]"
-]);
-
-\app\widgets\Modal::end();
-?>
+]); ?>
 
 <div class="col-xs-9">
 	<div class="panel panel-default table-view">
@@ -55,7 +30,7 @@ print \yii\helpers\Html::input("file", "files[]", null, [
 			<?= \app\widgets\AutoTable::widget([
 				"provider" => \app\core\TableProviderAdapter::createProvider(
 					new \app\models\Document(), new \app\forms\DocumentForm("table"), [
-						"keys" => [ "name", "upload_date", "employee_id", "status" ]
+						"keys" => [ "name", "upload_time", "employee_id", "status" ]
 					]
 				), "controls" => false
 			]) ?>

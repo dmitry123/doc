@@ -23,7 +23,7 @@ class m150406_040937_access_rules extends Migration {
 		  "parent_id" INT REFERENCES "core"."file" ON DELETE SET DEFAULT NULL DEFAULT NULL,
 		  "status" INT DEFAULT 1,
 		  "type" INT DEFAULT 1,
-		  "mime" INT REFERENCES "core"."mime_type"("id")
+		  "mime_type_id" INT REFERENCES "core"."mime_type"("id")
 		);
 
 		CREATE TABLE "core"."access" (

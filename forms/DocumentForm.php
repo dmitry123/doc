@@ -50,8 +50,8 @@ class DocumentForm extends FormModel {
 					"value" => "surname, name, patronymic"
 				]
 			],
-			"upload_date" => [
-				"label" => "Дата загрузки",
+			"upload_time" => [
+				"label" => "Время загрузки",
 				"type" => "text"
 			],
 			"parent_id" => [
@@ -85,7 +85,7 @@ class DocumentForm extends FormModel {
 	public $name;
 	public $path;
 	public $employee_id;
-	public $upload_date;
+	public $upload_time;
 	public $parent_id;
 	public $type;
 	public $status;

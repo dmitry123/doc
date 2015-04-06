@@ -3,16 +3,11 @@
 namespace app\modules\doc\core;
 
 use app\core\EmployeeManager;
-use app\models\Document;
-use app\models\DocumentType;
+use app\models\MimeType;
+use app\models\File;
 use yii\base\Exception;
 
 class FileUploader {
-
-	/**
-	 * Path to files on server
-	 */
-	const DIRECTORY = "/../uploads/files/";
 
 	/**
 	 * Locked constructor
@@ -24,22 +19,24 @@ class FileUploader {
 	/**
 	 * That method uploads files on server
 	 * @param array $files - Multiple file's configurations
-	 * @throws Exception
+	 * @param int $type - Default file's type [\app\fields\FileTypeField]
+	 * @see \app\fields\FileTypeField
+	 * @throws \Exception
 	 */
-	public function uploadMultiple(array $files) {
+	public function uploadMultiple(array $files, $type = 1) {
 		foreach ($files as $file) {
-			$this->upload($file);
+			$this->upload($file, $type);
 		}
 	}
 
 	/**
 	 * That method uploads file on server
 	 * @param array $file - Single file's configuration
-	 * @throws Exception
+	 * @param int $type - Default file's type [\app\fields\FileTypeField]
+	 * @see \app\fields\FileTypeField
 	 * @throws \Exception
-	 * @throws \yii\db\Exception
 	 */
-	public function upload(array $file) {
+	public function upload(array $file, $type = 1) {
 		if (preg_match("/^(?P<name>.*)\\.(?P<ext>.*)$/i", $file["name"], $matches) === false) {
 			throw new Exception("Can't match file pattern to fetch it's filename and extension");
 		}
@@ -49,20 +46,21 @@ class FileUploader {
 		$path = \Yii::$app->getSecurity()->generateRandomString();
 		try {
 			\Yii::$app->getDb()->beginTransaction();
-			$type = new DocumentType([
+			$mime = new MimeType([
 				"mime" => $file["type"],
 				"ext" => $matches["ext"]
 			]);
-			if (!$type->save()) {
+			if (!$mime->save()) {
 				throw new Exception("File hasn't been uploaded on server, can't save file's extension in database");
 			}
-			$document = new Document([
+			$document = new File([
 				"name" => $matches["name"],
 				"path" => $path,
 				"employee_id" => $employee->{"id"},
 				"parent_id" => null,
-				"type" => $type->{"id"},
-				"status" => 1
+				"type" => $type,
+				"status" => 1,
+				"mime" => $mime->{"id"}
 			]);
 			if (!$document->save()) {
 				throw new Exception("File hasn't been uploaded on server, can't save file info in database");
@@ -84,7 +82,7 @@ class FileUploader {
 	 * @throws Exception
 	 */
 	public function getDirectory($file = null) {
-		if (!@file_exists($path = getcwd().self::DIRECTORY) && !@mkdir($path)) {
+		if (!@file_exists($path = getcwd().\Yii::$app->params["fileUploadDirectory"]) && !@mkdir($path)) {
 			throw new Exception("Can't create directory for uploaded files \"$path\"");
 		}
 		if ($file != null) {

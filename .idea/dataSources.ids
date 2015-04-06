@@ -128,6 +128,17 @@
       <column name="role_name" sqlType="varchar" precision="100" scale="0" nullable="true" jdbcType="12"/>
       <column name="role_description" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
     </table>
+    <table name="document" schema="core" catalog="mgup" type="VIEW">
+      <column name="id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="name" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="path" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="employee_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="upload_time" sqlType="timestamp" precision="29" scale="6" nullable="true" jdbcType="93"/>
+      <column name="parent_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="status" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="type" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="mime" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+    </table>
     <table name="employee" schema="core" catalog="mgup" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnY29yZS5lbXBsb3llZV9pZF9zZXEnOjpyZWdjbGFzcyk=" autoIncrement="true"/>
       <column name="surname" sqlType="varchar" precision="100" scale="0" nullable="false" jdbcType="12"/>

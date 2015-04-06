@@ -21,17 +21,11 @@ class TableView extends Widget {
 		"core.department" => [
 			"name" => "Кафедры"
 		],
-		"doc.document" => [
-			"name" => "Документы"
-		],
-		"doc.document_category" => [
-			"name" => "Категории"
+		"core.file" => [
+			"name" => "Файлы"
 		],
 		"core.employee" => [
 			"name" => "Сотрудники"
-		],
-		"doc.history" => [
-			"name" => "История"
 		],
 		"core.institute" => [
 			"name" => "Институты"
@@ -47,12 +41,6 @@ class TableView extends Widget {
 		],
 		"core.role" => [
 			"name" => "Роли"
-		],
-		"doc.template" => [
-			"name" => "Шаблоны"
-		],
-		"doc.template_element" => [
-			"name" => "Элементы"
 		],
 		"core.user" => [
 			"name" => "Пользователи"

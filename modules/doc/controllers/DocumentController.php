@@ -23,7 +23,7 @@ class DocumentController extends Controller {
 			$errors = [];
 			foreach ($this->getFiles($failed) as $file) {
 				try {
-					FileUploader::getUploader()->upload($file);
+					FileUploader::getUploader()->upload($file, 2);
 				} catch (\Exception $e) {
 					$errors[$file["name"]] = $e->getMessage();
 				}

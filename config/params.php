@@ -1,6 +1,7 @@
 <?php
 
 return [
+	"fileUploadDirectory" => "../uploads/files",
 	"defaultRoles" => [
 		"super" => [
 			"name" => "Супервайзер",
