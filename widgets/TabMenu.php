@@ -60,7 +60,7 @@ class TabMenu extends Widget {
 			$options = [
 				"role" => "presentation"
 			];
-			if (!strcasecmp(\Yii::$app->requestedRoute, substr($item["href"], 1))) {
+			if (!strcasecmp(\Yii::$app->requestedRoute, preg_replace("/^@web\\//", "", $item["href"]))) {
 				$options["class"] = "$class active";
 			} else {
 				$options["class"] = $class;
