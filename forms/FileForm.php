@@ -13,7 +13,10 @@ class FileForm extends FormModel {
 	 * @return array - Array with rule configuration
 	 */
 	public function backward() {
-		return File::getRules([]);
+		return File::getRules([
+			[ "id", "hide", "on" => "admin.table.register" ],
+			[ "id", "hide", "on" => "admin.table.update" ]
+		]);
 	}
 
 	/**
@@ -40,7 +43,7 @@ class FileForm extends FormModel {
 				"type" => "text"
 			],
 			"employee_id" => [
-				"label" => "Сотрудник",
+				"label" => "Загрузил",
 				"type" => "DropDown",
 				"table" => [
 					"name" => "core.employee",

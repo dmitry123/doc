@@ -9,22 +9,7 @@ use yii\base\Exception;
 
 class IndexController extends Controller {
 
-	/**
-	 * Default index action
-	 * @throws \Exception
-	 */
-	public function actionIndex() {
-		try {
-			return $this->render("index", [
-			]);
-		} catch (Exception $e) {
-			$this->exception($e);
-		}
-	}
 
-	public function actionNastya() {
-		return $this->render("nastya");
-	}
 
 	/**
 	 * Override that method to return model for current controller instance or null

@@ -65,8 +65,6 @@ var Doc = Doc || {};
 		}
     };
 
-    $.fn.loading = Doc.createPlugin(
-        "createLoading"
-    );
+    $.fn.loading = Doc.createPlugin("createLoading");
 
 })(Doc);

@@ -137,7 +137,7 @@
       <column name="parent_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="status" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="type" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
-      <column name="mime" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="mime_type_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
     </table>
     <table name="employee" schema="core" catalog="mgup" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnY29yZS5lbXBsb3llZV9pZF9zZXEnOjpyZWdjbGFzcyk=" autoIncrement="true"/>
@@ -194,15 +194,48 @@
       <column name="parent_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="status" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4" def="MQ=="/>
       <column name="type" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4" def="MQ=="/>
-      <column name="mime" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="mime_type_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <primary-key name="file_pkey" columns="id"/>
       <foreign-key name="file_employee_id_fkey" columns="employee_id" ref-table="employee" ref-schema="core" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="file_parent_id_fkey" columns="parent_id" ref-table="file" ref-schema="core" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="4" deferrability="2"/>
-      <foreign-key name="file_mime_fkey" columns="mime" ref-table="mime_type" ref-schema="core" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="file_mime_type_id_fkey" columns="mime_type_id" ref-table="mime_type" ref-schema="core" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <exported-key name="access_file_id_fkey" table="access" schema="core" catalog="mgup" columns="file_id"/>
       <exported-key name="file_parent_id_fkey" table="file" schema="core" catalog="mgup" columns="parent_id"/>
+      <exported-key name="file_template_element_file_id_fkey" table="file_template_element" schema="core" catalog="mgup" columns="file_id"/>
     </table>
     <table name="file_id_seq" schema="core" catalog="mgup" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="file_template" schema="core" catalog="mgup" type="VIEW">
+      <column name="id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="name" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="path" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="employee_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="upload_time" sqlType="timestamp" precision="29" scale="6" nullable="true" jdbcType="93"/>
+      <column name="parent_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="status" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="type" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="mime_type_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+    </table>
+    <table name="file_template_element" schema="core" catalog="mgup" type="TABLE">
+      <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnY29yZS5maWxlX3RlbXBsYXRlX2VsZW1lbnRfaWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
+      <column name="type" sqlType="varchar" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="file_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="position" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="node" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="file_template_element_pkey" columns="id"/>
+      <foreign-key name="file_template_element_file_id_fkey" columns="file_id" ref-table="file" ref-schema="core" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+    </table>
+    <table name="file_template_element_id_seq" schema="core" catalog="mgup" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
       <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
@@ -255,7 +288,7 @@
       <column name="mime" sqlType="varchar" precision="100" scale="0" nullable="false" jdbcType="12"/>
       <column name="ext" sqlType="varchar" precision="200" scale="0" nullable="false" jdbcType="12"/>
       <primary-key name="mime_type_pkey" columns="id"/>
-      <exported-key name="file_mime_fkey" table="file" schema="core" catalog="mgup" columns="mime"/>
+      <exported-key name="file_mime_type_id_fkey" table="file" schema="core" catalog="mgup" columns="mime_type_id"/>
     </table>
     <table name="mime_type_id_seq" schema="core" catalog="mgup" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
@@ -447,46 +480,6 @@
       <foreign-key name="log_user_id_fkey" columns="user_id" ref-table="user" ref-schema="core" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
     </table>
     <table name="log_id_seq" schema="doc" catalog="mgup" type="SEQUENCE">
-      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
-      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
-      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
-    </table>
-    <table name="template" schema="doc" catalog="mgup" type="TABLE">
-      <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnZG9jLnRlbXBsYXRlX2lkX3NlcSc6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
-      <column name="name" sqlType="varchar" precision="50" scale="0" nullable="false" jdbcType="12"/>
-      <column name="document_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
-      <primary-key name="template_pkey" columns="id"/>
-      <exported-key name="template_element_template_id_fkey" table="template_element" schema="doc" catalog="mgup" columns="template_id"/>
-    </table>
-    <table name="template_element" schema="doc" catalog="mgup" type="TABLE">
-      <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnZG9jLnRlbXBsYXRlX2VsZW1lbnRfaWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
-      <column name="type" sqlType="varchar" precision="10" scale="0" nullable="true" jdbcType="12"/>
-      <column name="template_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
-      <column name="position" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
-      <column name="node" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <primary-key name="template_element_pkey" columns="id"/>
-      <foreign-key name="template_element_template_id_fkey" columns="template_id" ref-table="template" ref-schema="doc" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-    </table>
-    <table name="template_element_id_seq" schema="doc" catalog="mgup" type="SEQUENCE">
-      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
-      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
-      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
-    </table>
-    <table name="template_id_seq" schema="doc" catalog="mgup" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
       <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>

@@ -14,7 +14,8 @@ class FileTypeField extends DropDown {
 	public function data() {
 		return [
 			1 => "Неизвестно",
-			2 => "Документ"
+			2 => "Документ",
+			3 => "Шаблон"
 		];
 	}
 

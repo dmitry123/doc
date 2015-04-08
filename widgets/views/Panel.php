@@ -5,11 +5,18 @@
  * @var $self app\widgets\Panel
  */
 ?>
-<div class="panel panel-default">
-	<div class="panel-heading">
-		<span><?= $self->title ?></span>
+<div class="<?= $self->panelClass ?>">
+	<div class="<?= $self->headingClass ?>">
+		<div class="col-xs-10 text-left no-padding">
+			<?= $self->title ?>
+		</div>
+		<div class="col-xs-2 text-right no-padding">
+			<?php if ($self->update != false): ?>
+				<span class="glyphicon glyphicon-refresh doc-file-type-refresh-icon" onclick="$('this').panel('update')"></span>
+			<?php endif ?>
+		</div>
 	</div>
-	<div class="panel-body <?= $self->align ?>">
+	<div class="<?= $self->bodyClass ?>">
 		<?= $content ?>
 	</div>
 </div>

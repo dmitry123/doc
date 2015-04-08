@@ -430,17 +430,21 @@ abstract class Controller extends \yii\web\Controller {
 	/**
 	 * Leave script execution and print server's response
 	 * @param $parameters array - Array with parameters to return
+	 * @return null - Nothing
 	 */
 	public function leave(array $parameters) {
 		if (!isset($parameters["status"])) {
 			$parameters["status"] = true;
 		}
-		die(json_encode($parameters));
+		print json_encode($parameters);
+		\Yii::$app->end();
+		return null;
 	}
 
 	/**
 	 * Post error message and terminate script evaluation
 	 * @param $exception \Exception - Exception
+	 * @return null - Nothing
 	 * @throws \Exception
 	 */
 	public function exception(\Exception $exception) {
@@ -455,6 +459,7 @@ abstract class Controller extends \yii\web\Controller {
 			"line" => $method["line"],
 			"status" => false
 		]);
+		return null;
 	}
 
 	private $session = null;

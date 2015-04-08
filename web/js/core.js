@@ -1,6 +1,6 @@
 var Doc = Doc || {};
 
-(function(Doc) {
+(function(Core) {
 
 	"use strict";
 
@@ -10,7 +10,7 @@ var Doc = Doc || {};
 	 * @param parent {function} - Parent class
 	 * @returns {function} - Child class
 	 */
-	Doc.extend = function(child, parent) {
+	Core.extend = function(child, parent) {
 		var F = function() {};
 		F.prototype = parent.prototype;
 		child.prototype = new F();
@@ -68,8 +68,8 @@ var Doc = Doc || {};
 	 */
 	Component.prototype.selector = function(selector) {
 		if (arguments.length > 0) {
-			if (!selector.data("laboratory")) {
-				selector.data("laboratory", this);
+			if (!selector.data("doc")) {
+				selector.data("doc", this);
 			}
 			this._selector = selector;
 		}
@@ -94,7 +94,7 @@ var Doc = Doc || {};
 	 * it will simply remove selector
 	 */
 	Component.prototype.destroy = function() {
-		this.selector().remove();
+		throw new Error("That component doesn't support downgrade");
 	};
 
 	/**
@@ -111,8 +111,6 @@ var Doc = Doc || {};
 		this.activate();
 	};
 
-	Doc.Component = Component;
-
 	/**
 	 * Sub-Component class, use it to declare sub component, that instance
 	 * won't be rendered automatically, you shall manually invoke render method
@@ -120,14 +118,14 @@ var Doc = Doc || {};
 	 * @param [selector] {jQuery} - jQuery's selector or null
 	 * @constructor
 	 */
-	var Sub = function(component, selector) {
+	var SubComponent = function(component, selector) {
 		this.component = function() {
 			return component;
 		};
-		Doc.Component.call(this, {}, {}, selector || true);
+		Component.call(this, {}, {}, selector || true);
 	};
 
-	Doc.extend(Sub, Component);
+	Core.extend(SubComponent, Component);
 
 	/**
 	 * That method will fetch properties values from
@@ -135,8 +133,53 @@ var Doc = Doc || {};
 	 * @param key {String} - Property name
 	 * @param value {*} - Property value
 	 */
-	Sub.prototype.property = function(key, value) {
+	SubComponent.prototype.property = function(key, value) {
 		return this.component().property.apply(this.component(), arguments);
+	};
+
+	/**
+	 * Common class with static helper methods
+	 * @constructor
+	 */
+	var Common = function() {
+	};
+
+	/**
+	 * Cleanup component's value and all errors or warnings
+	 * @static
+	 * @param component
+	 */
+	Common.cleanup = function(component) {
+		$(component).find(".form-group").removeClass("has-error")
+			.removeClass("has-warning").removeClass("has-success");
+		$(component).find("select:not([multiple])").each(function(i, item) {
+			$(item).val($(item).find("option:eq(0)").val());
+		});
+		$(component).find("input, textarea, select[multiple]").val("");
+	};
+
+	Core.Component = Component;
+	Core.SubComponent = SubComponent;
+	Core.Common = Common;
+
+	/**
+	 * Create new component, which extends basic
+	 * Component class
+	 * @param component {Function} - New component class
+	 * @returns {Function} - Same component instance
+	 */
+	Core.createComponent = function(component) {
+		return Core.extend(component, Component);
+	};
+
+	/**
+	 * Create new sub-component, which extends basic
+	 * SubComponent class
+	 * @param component {Function} - New component class
+	 * @returns {Function} - Same component instance
+	 */
+	Core.createSubComponent = function(component) {
+		return Core.extend(component, SubComponent);
 	};
 
 	/**
@@ -146,7 +189,7 @@ var Doc = Doc || {};
 	 * @param [update] {Boolean} - Update component or not (default yes)
 	 * @static
 	 */
-	Doc.createObject = function(component, selector, update) {
+	Core.createObject = function(component, selector, update) {
 		$(selector).data("doc", component).append(
 			component.selector()
 		);
@@ -159,11 +202,11 @@ var Doc = Doc || {};
 	};
 
 	/**
-	 * Create plugin for component where
+	 * Create plugin for component
 	 * @param func {String} - Name of create function, for example 'createMessage'
 	 * @static
 	 */
-	Doc.createPlugin = function(func) {
+	Core.createPlugin = function(func) {
 		var register = function(me, options, args, ret) {
 			var r;
 			var a = [];
@@ -180,6 +223,9 @@ var Doc = Doc || {};
 					}
 					me.data("doc", c);
 				}
+				if (c[options] == void 0) {
+					throw new Error("That component don't resolve method \"" + options + "\"");
+				}
 				if ((r = c[options].apply(c, a)) !== void 0) {
 					return r;
 				}
@@ -188,9 +234,9 @@ var Doc = Doc || {};
 					return void 0;
 				}
 				if (typeof me != "function") {
-					r = Doc[func](me[0], options);
+					r = Core[func](me[0], options);
 				} else {
-					r = Doc[func](options);
+					r = Core[func](options);
 				}
 				if (ret) {
 					return r;
@@ -225,7 +271,7 @@ var Doc = Doc || {};
 	 * after DOM load and any success ajax request
 	 * @param func {Function} - Function to execute
 	 */
-	Doc.ready = function(func) {
+	Core.ready = function(func) {
 		$(document).ready(func);
 		$(document).bind("ajaxSuccess", func);
 	};
@@ -237,46 +283,4 @@ var Doc = Doc || {};
 		return doc["url"] + url;
 	};
 
-	/**
-	 * Is string ends with some suffix
-	 * @param suffix {string} - String suffix
-	 * @returns {boolean} - True if string has suffix
-	 */
-	String.prototype.endsWith = function(suffix) {
-		return this.indexOf(suffix, this.length - suffix.length) !== -1;
-	};
-
-	/**
-	 * Is string starts with some prefix
-	 * @param prefix {string} - String prefix
-	 * @returns {boolean} - True if string has prefix
-	 */
-	String.prototype.startsWith = function(prefix) {
-		return this.indexOf(prefix, 0) !== -1;
-	};
-
 })(Doc);
-
-$(document).ready(function() {
-	$("input[data-regexp][type='text']").each(function(i, item) {
-		var regexp = new RegExp($(item).data("regexp"));
-		$(item).keydown(function(e) {
-			console.log($(item).val());
-			console.log(regexp.test($(item).val()));
-		});
-	});
-});
-
-/*
- var isStrValid = function(str) {
- return ((str.match(/[^\d^.]/) === null)
- && (str.replace(/\d+\.?\d?\d?/, "") === ""));
- };
-
- var node = dojo.byId("txt");
- dojo.connect(node, "onkeyup", function() {
- if (!isStrValid(node.value)) {
- node.value = node.value.substring(0, node.value.length-1);
- }
- });
- * */

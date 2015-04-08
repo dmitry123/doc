@@ -2,6 +2,8 @@
 
 namespace app\core;
 
+use yii\helpers\ArrayHelper;
+
 class Widget extends \yii\base\Widget {
 
 	/**
@@ -21,10 +23,21 @@ class Widget extends \yii\base\Widget {
 	}
 
 	/**
-	 * Executes the widget.
-	 * This method is called by {@link CBaseController::endWidget}.
+	 * Create url for widget's update for current module and controller
+	 * @param array $query - Additional query GET parameters
+	 * @return string - Url for widget update
+	 */
+	public function createUrl($query = []) {
+		return preg_replace("/\\/[a-z0-9]*$/i", "/getWidget", \Yii::$app->getUrlManager()->createUrl(
+			ArrayHelper::merge([ \Yii::$app->requestedRoute ], $query)
+		));
+	}
+
+	/**
+	 * Run widget to return just rendered content
+	 * @return string - Just rendered content
 	 */
 	public function run() {
-		$this->render(preg_replace("/[.*~\\/]$/", __CLASS__, ""), null, false);
+		return $this->render(preg_replace("/[.*~\\/]$/", __CLASS__, ""), []);
 	}
 }

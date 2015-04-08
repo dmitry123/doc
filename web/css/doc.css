@@ -9,3 +9,11 @@
     padding-right: 0;
 }
 
+.file-type-menu-wrapper {
+    padding: 7px;
+}
+
+.doc-file-type-refresh-icon {
+    cursor: pointer;
+    font-size: 15px;
+}

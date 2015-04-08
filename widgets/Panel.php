@@ -20,13 +20,25 @@ class Panel extends Widget {
 	/**
 	 * @var string - Default panel style
 	 */
-	public $style = "panel panel-default";
+	public $panelClass = "panel panel-default";
 
 	/**
-	 * @var string - Extra align class, for example 'text-center', or
-	 * 	'text-right' or 'text-left'
+	 * @var string - Style of panel's heading, by
+	 * 	default it uses row, cuz it has hidden glyphicons
+	 * 	in [col-xs-12] classes, which needs fixes height
 	 */
-	public $align = "";
+	public $headingClass = "panel-heading row";
+
+	/**
+	 * @var string - Style of panel's body, you can
+	 * 	add [no-padding] style to remove panel's body padding
+	 */
+	public $bodyClass = "panel-body";
+
+	/**
+	 * @var bool - Shall panel has update button
+	 */
+	public $update = true;
 
 	/**
 	 * Initialize widget

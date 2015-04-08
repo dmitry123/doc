@@ -7,6 +7,13 @@ use app\core\Module;
 class DocModule extends Module {
 
 	public $menu = [
+		"menu-doc-file" => [
+			"label" => "Документы",
+			"icon" => "glyphicon glyphicon-file",
+			"options" => [
+				"href" => "file"
+			]
+		],
 		"menu-doc-upload" => [
 			"label" => "Загрузить",
 			"icon" => "glyphicon glyphicon-upload",
