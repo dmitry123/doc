@@ -5,7 +5,19 @@ use yii\db\Migration;
 
 class m150406_053142_new_cladr_tables extends Migration {
 
-    public function safeUp() {
+	public function execute($sql, $params = []) {
+		$sql = trim($sql);
+		try {
+			if (!empty($sql)) {
+				parent::execute($sql, $params);
+			}
+		} catch (\Exception $e) {
+			print "\"$sql\"";
+			throw $e;
+		}
+	}
+
+	public function safeUp() {
 		$sql = <<< SQL
 
 		DROP TABLE "core"."city" CASCADE;
