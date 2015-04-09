@@ -17,13 +17,12 @@ class DropDownField extends Field {
 	 */
 	public function render($form, $model) {
 		$data = $this->getData();
-		if (!isset($data[-1])) {
-			$data[-1] = "Нет";
+		if (!isset($data[0])) {
+			$data[0] = "Не выбрано";
 		}
 		return $form->field($model, $this->getKey())->dropDownList($data, $this->getOptions([
-			'onchange' => "DropDown && DropDown.change && DropDown.change.call(this)",
+			'options' => [ $this->getValue() => [ 'selected' => true ] ],
 			'class' => 'form-control',
-			'options' => [ $this->getValue() => [ 'selected' => true ] ]
 		]));
 	}
 

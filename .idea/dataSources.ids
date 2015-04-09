@@ -17,6 +17,7 @@
       <column name="department_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="institute_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="file_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="mode" sqlType="int2" precision="5" scale="0" nullable="true" jdbcType="5" def="KC0xKQ=="/>
       <primary-key name="access_pkey" columns="id"/>
       <foreign-key name="access_department_id_fkey" columns="department_id" ref-table="department" ref-schema="core" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="access_file_id_fkey" columns="file_id" ref-table="file" ref-schema="core" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
@@ -133,7 +134,8 @@
       <column name="name" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="path" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="employee_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
-      <column name="upload_time" sqlType="timestamp" precision="29" scale="6" nullable="true" jdbcType="93"/>
+      <column name="upload_time" sqlType="time" precision="15" scale="6" nullable="true" jdbcType="92"/>
+      <column name="upload_date" sqlType="date" precision="13" scale="0" nullable="true" jdbcType="91"/>
       <column name="parent_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="file_status_id" sqlType="varchar" precision="10" scale="0" nullable="true" jdbcType="12"/>
       <column name="file_type_id" sqlType="varchar" precision="10" scale="0" nullable="true" jdbcType="12"/>
@@ -190,7 +192,8 @@
       <column name="name" sqlType="text" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
       <column name="path" sqlType="text" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
       <column name="employee_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
-      <column name="upload_time" sqlType="timestamp" precision="29" scale="6" nullable="true" jdbcType="93" def="bm93KCk="/>
+      <column name="upload_time" sqlType="time" precision="15" scale="6" nullable="true" jdbcType="92" def="bm93KCk="/>
+      <column name="upload_date" sqlType="date" precision="13" scale="0" nullable="true" jdbcType="91" def="bm93KCk="/>
       <column name="parent_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="file_status_id" sqlType="varchar" precision="10" scale="0" nullable="true" jdbcType="12"/>
       <column name="file_type_id" sqlType="varchar" precision="10" scale="0" nullable="true" jdbcType="12"/>
@@ -228,7 +231,8 @@
       <column name="name" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="path" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="employee_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
-      <column name="upload_time" sqlType="timestamp" precision="29" scale="6" nullable="true" jdbcType="93"/>
+      <column name="upload_time" sqlType="time" precision="15" scale="6" nullable="true" jdbcType="92"/>
+      <column name="upload_date" sqlType="date" precision="13" scale="0" nullable="true" jdbcType="91"/>
       <column name="parent_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="file_status_id" sqlType="varchar" precision="10" scale="0" nullable="true" jdbcType="12"/>
       <column name="file_type_id" sqlType="varchar" precision="10" scale="0" nullable="true" jdbcType="12"/>

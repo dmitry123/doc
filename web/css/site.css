@@ -1,8 +1,7 @@
 /* Page height offset for fixed navigation bar */
 html,
 body {
-    margin-top: 30px;
-    height: calc(100% - 30px);
+    padding-top: 30px;
 }
 
 .no-padding {
@@ -18,6 +17,12 @@ body {
     margin: 0;
 }
 
+/* Styles for required */
+.required {
+    white-space: nowrap;
+    color: red;
+}
+
 /* Add that class to non selectable element */
 .disable-selection {
     -webkit-touch-callout: none;
@@ -26,12 +31,6 @@ body {
          -moz-user-select: none;
           -ms-user-select: none;
               user-select: none;
-}
-
-/* Styles for required */
-.required {
-    white-space: nowrap;
-    color: red;
 }
 
 /* Different fixes for navigation bar menu */

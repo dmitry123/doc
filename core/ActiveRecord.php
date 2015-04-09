@@ -39,6 +39,29 @@ abstract class ActiveRecord extends \yii\db\ActiveRecord {
 	}
 
 	/**
+	 * Override that method to return an array
+	 * with types's data, where array's key is
+	 * type name and value is array with fields
+	 * in format [key => value]
+	 *
+	 * @return array - Array with types keys and items
+	 */
+	public static function typeItems() {
+		return null;
+	}
+
+	/**
+	 * Override that method to return array
+	 * with types labels, it uses for different
+	 * localization models, where format is [key => label]
+	 *
+	 * @return array - Array with types localizations
+	 */
+	public static function typeLabels() {
+		return null;
+	}
+
+	/**
 	 * Find model by it's name
 	 * @param string $class - Name of model class or null (default)
 	 * @return static - Active record class instance

@@ -1,11 +1,23 @@
 /* Remove all parameters, fix top offset and set background color */
-html, body {
+html,
+body {
     margin-top: 0;
     background-color: #5e6771;
     height: 100%;
     display: table;
     vertical-align: middle;
     width: 100%;
+}
+
+/* Remove margin from all form group elements */
+.form-group {
+    margin: 0;
+}
+
+/* Styles for required */
+.required {
+    white-space: nowrap;
+    color: red;
 }
 
 #page-content {

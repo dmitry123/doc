@@ -7,8 +7,7 @@ use app\core\AssetBundle;
 class BlockAsset extends AssetBundle {
 
 	public $css = [
-		"css/block.css",
-		"css/site.css"
+		"css/block.css"
 	];
 
 	public $js = [

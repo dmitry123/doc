@@ -10,7 +10,7 @@ use yii\web\View;
 
 <div class="module-menu-heading" data-load="block">
 	<h2 class="module-menu-title text-center">
-		<span>МГУП<?= $name ?></span>
+		<span>МГУП<?= $name ?>&nbsp;<span class="caret"></span></span>
 	</h2>
 	<ul class="nav nav-pills nav-stacked module-menu-list">
 		<li role="presentation" data-url="/">

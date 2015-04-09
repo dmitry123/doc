@@ -23,8 +23,7 @@ SQL;
     public function safeDown() {
 
 		$sql = <<< SQL
-			ALTER TABLE "doc"."document" DROP "category_id";
-			DROP TABLE "doc"."document_category";
+			DROP TABLE "doc"."document_category" CASCADE;
 SQL;
 
 		foreach (explode(";", $sql) as $query) {

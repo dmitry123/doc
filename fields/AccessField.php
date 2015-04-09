@@ -26,7 +26,7 @@ class AccessField extends DropDown {
 	 * @return String - Key
 	 */
 	public function key() {
-		return "Field";
+		return "Access";
 	}
 
 	/**
