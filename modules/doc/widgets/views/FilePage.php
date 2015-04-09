@@ -13,7 +13,7 @@
 	<?= \app\widgets\AutoTable::widget([
 		"provider" => \app\core\TableProviderAdapter::createProvider(
 			$self->tableActiveRecord, new \app\forms\FileForm("table"), [
-				"keys" => [ "name", "upload_time", "employee_id", "status" ],
+				"keys" => [ "name", "upload_time", "employee_id", "file_status_id" ],
 				"order" => "upload_time desc"
 			]
 		), "controls" => false

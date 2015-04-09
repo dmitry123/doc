@@ -27,15 +27,15 @@ class m150406_040937_access_rules extends Migration {
 			('image', 'Изображение', 'Тип документа изображения');
 
 		CREATE TABLE "core"."file_status" (
-			"id" SERIAL PRIMARY KEY,
+			"id" VARCHAR(10) NOT NULL PRIMARY KEY,
 			"name" VARCHAR(50) NOT NULL
 		);
 
-		INSERT INTO "core"."file_status" (name) VALUES
-			('Новый'),
-			('Устаревший'),
-			('Актуальный'),
-			('Удаленный');
+		INSERT INTO "core"."file_status" (id, name) VALUES
+			('new', 'Новый'),
+			('previous', 'Устаревший'),
+			('current', 'Актуальный'),
+			('removed', 'Удаленный');
 
 		CREATE TABLE "core"."file" (
 		  "id" SERIAL PRIMARY KEY,
@@ -44,7 +44,7 @@ class m150406_040937_access_rules extends Migration {
 		  "employee_id" INT REFERENCES "core"."employee"("id"),
 		  "upload_time" TIMESTAMP DEFAULT now(),
 		  "parent_id" INT REFERENCES "core"."file" ON DELETE SET DEFAULT NULL DEFAULT NULL,
-		  "file_status_id" INT REFERENCES "core"."file_status"("id") ON DELETE SET NULL,
+		  "file_status_id" VARCHAR(10) REFERENCES "core"."file_status"("id") ON DELETE SET NULL,
 		  "file_type_id" VARCHAR(10) REFERENCES "core"."file_type"("id") ON DELETE SET NULL,
 		  "mime_type_id" INT REFERENCES "core"."mime_type"("id")
 		);

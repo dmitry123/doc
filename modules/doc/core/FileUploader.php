@@ -53,13 +53,14 @@ class FileUploader {
 			if (!$mime->save()) {
 				throw new Exception("File hasn't been uploaded on server, can't save file's extension in database");
 			}
+
 			$document = new File([
 				"name" => $matches["name"],
 				"path" => $path,
 				"employee_id" => $employee->{"id"},
 				"parent_id" => null,
-				"type" => $type,
-				"status" => 1,
+				"file_type_id" => $type,
+				"file_status_id" => 1,
 				"mime_type_id" => $mime->{"id"}
 			]);
 			if (!$document->save()) {

@@ -61,7 +61,7 @@ class FileForm extends FormModel {
 				"label" => "Предыдущая версия",
 				"type" => "number"
 			],
-			"status" => [
+			"file_status_id" => [
 				"label" => "Статус документа",
 				"type" => "DropDown",
 				"table" => [
@@ -71,7 +71,7 @@ class FileForm extends FormModel {
 				],
 				"rules" => "required"
 			],
-			"type" => [
+			"file_type_id" => [
 				"label" => "Тип",
 				"type" => "DropDown",
 				"table" => [
@@ -100,7 +100,7 @@ class FileForm extends FormModel {
 	public $employee_id;
 	public $upload_time;
 	public $parent_id;
-	public $status;
-	public $type;
+	public $file_status_id;
+	public $file_type_id;
 	public $mime_type_id;
 }

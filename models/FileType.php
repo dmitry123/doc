@@ -4,9 +4,9 @@ namespace app\models;
 
 use app\core\ActiveRecord;
 
-class Employee extends ActiveRecord {
+class FileType extends ActiveRecord {
 
 	public static function tableName() {
-		return "core.employee";
+		return "core.file_type";
 	}
 }
