@@ -3,6 +3,8 @@
 namespace app\modules\doc\core;
 
 use app\core\EmployeeManager;
+use app\models\FileStatus;
+use app\models\FileType;
 use app\models\MimeType;
 use app\models\File;
 use yii\base\Exception;
@@ -53,14 +55,19 @@ class FileUploader {
 			if (!$mime->save()) {
 				throw new Exception("File hasn't been uploaded on server, can't save file's extension in database");
 			}
-
+			if (!($fileType = FileType::findOne([ "id" => "document" ]))) {
+				throw new Exception("Can't resolve file's type \"document\" in database");
+			}
+			if (!($fileStatus = FileStatus::findOne([ "id" => "new" ]))) {
+				throw new Exception("Can't resolve file's status \new\" in database");
+			}
 			$document = new File([
 				"name" => $matches["name"],
 				"path" => $path,
 				"employee_id" => $employee->{"id"},
 				"parent_id" => null,
-				"file_type_id" => $type,
-				"file_status_id" => 1,
+				"file_type_id" => $fileType->{"id"},
+				"file_status_id" => $fileStatus->{"id"},
 				"mime_type_id" => $mime->{"id"}
 			]);
 			if (!$document->save()) {

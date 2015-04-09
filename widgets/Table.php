@@ -35,7 +35,7 @@ class Table extends Widget {
 	 * @var array
 	 */
 	public $classes = [
-		"table" => "table table-hover table-bordered table-condensed table-striped",
+		"table" => "table table-hover table-condensed table-striped",
 		"active" => "",
 		"row" => ""
 	];
@@ -121,7 +121,7 @@ class Table extends Widget {
 				$options["width"] = $column["width"];
 			}
 			if ($label == "#") {
-				$options["align"] = "middle";
+				$options["align"] = "left";
 			}
 			if ($this->order == "*" || in_array($key, $this->order)) {
 				$label = Html::tag("a", $label, [
@@ -141,7 +141,7 @@ class Table extends Widget {
 			}
 			print Html::tag("td", $label, $options + [
 					"style" => "vertical-align: middle",
-					"class" => "text-center"
+					"class" => "text-left"
 				]);
 		}
 		if ($this->controls != null && count($this->controls) > 0) {
@@ -177,12 +177,12 @@ class Table extends Widget {
 					$value = $row[$key];
 				}
 				print Html::tag("td", $value, $options + [
-						"align" => "middle"
+						"align" => "left"
 					]);
 			}
 			if ($this->controls != null && count($this->controls) > 0) {
 				print Html::beginTag("td", [
-					"align" => "middle",
+					"align" => "left",
 					"width" => "auto"
 				]);
 				foreach ($this->controls as $key => $control) {
