@@ -1,17 +1,33 @@
 
 var DocMenu = {
 	ready: function() {
+        var me = this;
 		$("#menu-doc-upload").click(function() {
 			$("#doc-file-upload-wrapper").slideToggle("normal");
 		});
 		$("#document-file-upload").fileinput({
-			uploadUrl: url("doc/document/upload"),
-			uploadAsync: true,
+			uploadUrl: url("doc/file/upload"),
+            uploadAsync: true,
+            ajaxSettings: {
+                success: me.afterUpload
+            },
 			uploadExtraData: {
 				form: $("file-upload-modal").find("form")
 			}
 		});
-	}
+	},
+    afterUpload: function(json) {
+        if (json["status"]) {
+            return void 0;
+        }
+        var errors = json["errors"];
+        for (var i in errors) {
+            Doc.createMessage({
+                message: i + ": " + errors[i],
+                delay: 7000
+            });
+        }
+    }
 };
 
 $(document).ready(function() {

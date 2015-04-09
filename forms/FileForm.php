@@ -63,12 +63,22 @@ class FileForm extends FormModel {
 			],
 			"status" => [
 				"label" => "Статус документа",
-				"type" => "FileStatus",
+				"type" => "DropDown",
+				"table" => [
+					"name" => "core.file_status",
+					"key" => "id",
+					"value" => "name"
+				],
 				"rules" => "required"
 			],
 			"type" => [
 				"label" => "Тип",
-				"type" => "FileType",
+				"type" => "DropDown",
+				"table" => [
+					"name" => "core.file_type",
+					"key" => "id",
+					"value" => "name"
+				],
 				"rules" => "required"
 			],
 			"mime_type_id" => [

@@ -111,7 +111,7 @@ class Form extends Widget {
                 $value = $format;
                 if (count($matches)) {
                     foreach ($matches[1] as $m) {
-                        $value = preg_replace("/%\\{([({$m})]+)\\}/", $model[$m], $value);
+						$value = preg_replace("/\\%{{$m}}/", $model[$m], $value);
                     }
                 }
             } else if (is_callable($format)) {

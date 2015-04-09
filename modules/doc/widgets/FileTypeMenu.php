@@ -18,6 +18,16 @@ class FileTypeMenu extends TabMenu {
 			"label" => "Шаблоны",
 			"href" => "@web/doc/template",
 			"icon" => "glyphicon glyphicon-list-alt"
-		]
+		],
+		"tables" => [
+			"label" => "Таблицы",
+			"href" => "#",
+			"icon" => "glyphicon glyphicon-list-alt"
+		],
+		"images" => [
+			"label" => "Изображения",
+			"href" => "#",
+			"icon" => "glyphicon glyphicon-camera"
+		],
 	];
 }

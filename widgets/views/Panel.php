@@ -5,7 +5,7 @@
  * @var $self app\widgets\Panel
  */
 ?>
-<div class="<?= $self->panelClass ?>">
+<div class="<?= $self->panelClass ?>" data-core="panel">
 	<div class="<?= $self->headingClass ?>">
 		<div class="col-xs-10 text-left no-padding">
 			<?= $self->title ?>
@@ -17,6 +17,10 @@
 		</div>
 	</div>
 	<div class="<?= $self->bodyClass ?>">
-		<?= $content ?>
+		<div class="row no-padding no-margin">
+			<div class="col-xs-12 no-padding no-margin panel-content">
+				<?= $content ?>
+			</div>
+		</div>
 	</div>
 </div>

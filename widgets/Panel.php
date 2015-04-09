@@ -36,6 +36,12 @@ class Panel extends Widget {
 	public $bodyClass = "panel-body";
 
 	/**
+	 * @var string - Classes for panel's content block, which
+	 * 	separated in body container {.panel-body > .row > .panel-content}
+	 */
+	public $contentClass = "col-xs-12 no-padding no-margin panel-content";
+
+	/**
 	 * @var bool - Shall panel has update button
 	 */
 	public $update = true;

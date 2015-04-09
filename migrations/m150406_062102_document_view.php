@@ -7,7 +7,7 @@ class m150406_062102_document_view extends Migration {
 
     public function safeUp() {
 		$sql = <<< SQL
-		CREATE OR REPLACE VIEW "core"."document" AS SELECT * FROM "core"."file" WHERE "type" = 2;
+		CREATE OR REPLACE VIEW "core"."document" AS SELECT * FROM "core"."file" WHERE "file_type_id" = 'document'
 SQL;
 		foreach (explode(";", $sql) as $query) {
 			$this->execute($query);

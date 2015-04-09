@@ -12,3 +12,5 @@ DocumentRoot "web"
 
     # ...other settings...
 </Directory>
+
+# sudo chown _www /Volumes/Storage/hosts/doc/uploads/files/

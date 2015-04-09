@@ -44,7 +44,8 @@ class FileController extends Controller {
 			if (count($errors) > 0) {
 				return $this->leave([
 					"message" => "Загрузка завершилась с ошибками",
-					"errors" => $errors
+					"errors" => $errors,
+					"status" => false,
 				]);
 			} else {
 				return $this->leave([

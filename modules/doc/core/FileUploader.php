@@ -65,7 +65,7 @@ class FileUploader {
 			if (!$document->save()) {
 				throw new Exception("File hasn't been uploaded on server, can't save file info in database");
 			}
-			if (!@move_uploaded_file($file["tmp_name"], $this->getDirectory($path))) {
+			if (!move_uploaded_file($file["tmp_name"], $this->getDirectory($path))) {
 				throw new Exception("File hasn't been uploaded on server: \"".error_get_last()["message"]."\"");
 			}
 			\Yii::$app->getDb()->getTransaction()->commit();
@@ -82,14 +82,20 @@ class FileUploader {
 	 * @throws Exception
 	 */
 	public function getDirectory($file = null) {
+		if ($this->_path != null) {
+			return $this->_path;
+		}
+		chdir("..");
 		if (!@file_exists($path = getcwd().\Yii::$app->params["fileUploadDirectory"]) && !@mkdir($path)) {
 			throw new Exception("Can't create directory for uploaded files \"$path\"");
 		}
 		if ($file != null) {
 			return $path.$file;
 		}
-		return $path;
+		return $this->_path = $path;
 	}
+
+	private $_path = null;
 
 	/**
 	 * Get single file uploader instance

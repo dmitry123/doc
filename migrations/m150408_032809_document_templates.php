@@ -12,7 +12,7 @@ class m150408_032809_document_templates extends Migration {
 		DROP TABLE "doc"."template" CASCADE;
 
 		CREATE VIEW "core"."file_template" AS
-			SELECT * FROM "core"."file" WHERE "type" = 3;
+			SELECT * FROM "core"."file" WHERE "file_type_id" = 'template';
 
 		CREATE TABLE "core"."file_template_element" (
 			"id" SERIAL PRIMARY KEY,
@@ -30,8 +30,8 @@ SQL;
 	public function safeDown() {
 		$sql = <<< SQL
 
-		DROP TABLE "doc"."template_element" CASCADE;
-		DROP TABLE "doc"."template" CASCADE;
+		DROP TABLE "core"."file_template_element" CASCADE;
+		DROP VIEW "core"."file_template";
 
 		CREATE TABLE "doc"."template" (
 		  "id" SERIAL PRIMARY KEY,
