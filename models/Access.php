@@ -27,7 +27,7 @@ class Access extends ActiveRecord {
 	 *
 	 * @return array - Array with types keys and items
 	 */
-	public static function typeItems() {
+	public static function listTypeItems() {
 		return [
 			"AccessMode" => [
 				Access::MODE_DENIED => "Закрыт",
@@ -45,7 +45,7 @@ class Access extends ActiveRecord {
 	 *
 	 * @return array - Array with types localizations
 	 */
-	public static function typeLabels() {
+	public static function listTypeLabels() {
 		return [
 			"AccessMode" => "Уровень доступа",
 		];

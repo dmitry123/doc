@@ -26,7 +26,7 @@ class Phone extends ActiveRecord {
 	 *
 	 * @return array - Array with types keys and items
 	 */
-	public static function typeItems() {
+	public static function listTypeItems() {
 		return [
 			"PhoneType" => [
 				Phone::TYPE_CITY => "Городской",
@@ -43,7 +43,7 @@ class Phone extends ActiveRecord {
 	 *
 	 * @return array - Array with types localizations
 	 */
-	public static function typeLabels() {
+	public static function listTypeLabels() {
 		return [
 			"PhoneType" => "Тип телефона"
 		];

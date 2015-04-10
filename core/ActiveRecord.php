@@ -46,7 +46,7 @@ abstract class ActiveRecord extends \yii\db\ActiveRecord {
 	 *
 	 * @return array - Array with types keys and items
 	 */
-	public static function typeItems() {
+	public static function listTypeItems() {
 		return null;
 	}
 
@@ -57,7 +57,7 @@ abstract class ActiveRecord extends \yii\db\ActiveRecord {
 	 *
 	 * @return array - Array with types localizations
 	 */
-	public static function typeLabels() {
+	public static function listTypeLabels() {
 		return null;
 	}
 
