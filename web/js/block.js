@@ -58,7 +58,7 @@ var PageReload = {
 					"height": "100px",
 					"position": "absolute",
 					"left": "calc(50% - 50px)",
-					"bottom": "calc(50% - 75px)",
+					"bottom": "calc(50% - 50px)",
 					"z-index": "2"
 				},
 				"class": "loading-image"

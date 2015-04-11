@@ -1,141 +1,133 @@
-var Doc = Doc || {};
+var Core = Core || {};
 
 (function(Core) {
 
-	"use strict";
+    "use strict";
 
-	/**
-	 * Extend child class with parent
-	 * @param child {function} - Child class
-	 * @param parent {function} - Parent class
-	 * @returns {function} - Child class
-	 */
-	Core.extend = function(child, parent) {
-		var F = function() {};
-		F.prototype = parent.prototype;
-		child.prototype = new F();
-		child.prototype.constructor = child;
-		child.superclass = parent.prototype;
-		return child;
-	};
+    /**
+     * Extend child class with parent
+     * @param child {function} - Child class
+     * @param parent {function} - Parent class
+     * @returns {function} - Child class
+     */
+    Core.extend = function(child, parent) {
+        var F = function() {};
+        F.prototype = parent.prototype;
+        child.prototype = new F();
+        child.prototype.constructor = child;
+        child.superclass = parent.prototype;
+        return child;
+    };
 
-	/**
-	 * Construct component
+    /**
+     * Construct component
 	 * @param properties {{}} - Object with properties
-	 * @param [defaults] {{}|null|undefined} - Default component's properties
-	 * @param [selector] {jQuery|null|undefined} - Component's selector or nothing
-	 * @constructor
-	 */
-	var Component = function(properties, defaults, selector) {
-		this._properties = $.extend(
-			defaults || {}, properties || {}
-		);
-		this._selector = selector || this.render();
-	};
+     * @param [defaults] {{}|null|undefined} - Default component's properties
+     * @param [selector] {jQuery|null|undefined} - Component's selector or nothing
+     * @constructor
+     */
+    var Component = function(properties, defaults, selector) {
+		if (typeof (this._name = properties["<plugin>"]) !== "string") {
+			throw new Error("Can't resolve component's plugin name as string, found \"" + typeof this._name + "\"");
+		}
+        this._properties = $.extend(
+            defaults || {}, properties || {}
+        );
+        this._selector = selector || this.render();
+    };
 
 	/**
-	 * Override that method to return jquery item
+	 * That method returns name of data attribute for
+	 * current component
+	 * @returns {string} - Attribute name
 	 */
-	Component.prototype.render = function() {
-		throw new Error("Component/render() : Not-Implemented");
+	Component.prototype.getDataAttribute = function() {
+		if (!this._name) {
+			throw new Error("Component hasn't been registered as jQuery plugin");
+		} else {
+			return this._name;
+		}
 	};
 
-	/**
-	 * Override that method to activate just created jquery item
-	 */
-	Component.prototype.activate = function() {
-		/* Ignored */
-	};
+    /**
+     * Override that method to return jquery item
+     */
+    Component.prototype.render = function() {
+        throw new Error("Component/render() : Not-Implemented");
+    };
 
-	/**
-	 * Override that method to provide some actions before update
-	 */
-	Component.prototype.before = function() {
-		/* Ignored */
-	};
+    /**
+     * Override that method to activate just created jQuery item
+     */
+    Component.prototype.activate = function() {
+        /* Ignored */
+    };
 
-	/**
-	 * Override that method to provide some actions after update
-	 */
-	Component.prototype.after = function() {
-		/* Ignored */
-	};
+    /**
+     * Override that method to provide some actions before update
+     */
+    Component.prototype.before = function() {
+        /* Ignored */
+    };
 
-	/**
-	 * Set/Get component's jquery selector
-	 * @param [selector] {jQuery} - New jquery to set
-	 * @returns {jQuery} - Component's jquery
-	 */
-	Component.prototype.selector = function(selector) {
-		if (arguments.length > 0) {
-			if (!selector.data("doc")) {
-				selector.data("doc", this);
+    /**
+     * Override that method to provide some actions after update
+     */
+    Component.prototype.after = function() {
+        /* Ignored */
+    };
+
+    /**
+     * Set/Get component's jquery selector
+     * @param [selector] {jQuery} - New jquery to set
+     * @returns {jQuery} - Component's jquery
+     */
+    Component.prototype.selector = function(selector) {
+        if (arguments.length > 0 && selector !== void 0) {
+			if (!(selector instanceof jQuery)) {
+				throw new Error("Selector must be an instance of jQuery object");
 			}
-			this._selector = selector;
-		}
-		return this._selector;
-	};
+            if (!selector.data(this.getDataAttribute())) {
+                selector.data(this.getDataAttribute(), this);
+            }
+            this._selector = selector;
+        }
+        return this._selector;
+    };
 
-	/**
-	 * Get/Set some property
-	 * @param key {string} - Property key
-	 * @param [value]  {*} - Property value
-	 * @returns {*} - New or old property's value
-	 */
-	Component.prototype.property = function(key, value) {
-		if (arguments.length > 1) {
-			this._properties[key] = value;
-		}
-		return this._properties[key];
-	};
+    /**
+     * Get/Set some property
+     * @param key {string} - Property key
+     * @param value  {*} - Property value
+     * @returns {*} - New or old property's value
+     */
+    Component.prototype.property = function(key, value) {
+        if (arguments.length > 1) {
+            this._properties[key] = value;
+        }
+        return this._properties[key];
+    };
 
-	/**
-	 * Override that method to destroy you component or
-	 * it will simply remove selector
-	 */
-	Component.prototype.destroy = function() {
-		throw new Error("That component doesn't support downgrade");
-	};
+    /**
+     * Override that method to destroy you component or
+     * it will simply remove selector
+     */
+    Component.prototype.destroy = function() {
+		$.removeData(this.selector(), this.getDataAttribute);
+    };
 
-	/**
-	 * Update method, will remove all selector, render
-	 * new, activate it and append to previous parent
-	 */
-	Component.prototype.update = function() {
-		this.before();
-		this.selector().replaceWith(
-			this.selector(this.render())
-		);
-		this.selector().data("doc", this);
-		this.after();
-		this.activate();
-	};
-
-	/**
-	 * Sub-Component class, use it to declare sub component, that instance
-	 * won't be rendered automatically, you shall manually invoke render method
-	 * @param component {Component} - Parent component
-	 * @param [selector] {jQuery} - jQuery's selector or null
-	 * @constructor
-	 */
-	var SubComponent = function(component, selector) {
-		this.component = function() {
-			return component;
-		};
-		Component.call(this, {}, {}, selector || true);
-	};
-
-	Core.extend(SubComponent, Component);
-
-	/**
-	 * That method will fetch properties values from
-	 * parent's component
-	 * @param key {String} - Property name
-	 * @param value {*} - Property value
-	 */
-	SubComponent.prototype.property = function(key, value) {
-		return this.component().property.apply(this.component(), arguments);
-	};
+    /**
+     * Update method, will remove all selector, render
+     * new, activate it and append to previous parent
+     */
+    Component.prototype.update = function() {
+        this.before();
+        this.selector().replaceWith(
+            this.selector(this.render())
+        );
+        this.after();
+        this.activate();
+    };
 
 	/**
 	 * Common class with static helper methods
@@ -150,16 +142,41 @@ var Doc = Doc || {};
 	 * @param component
 	 */
 	Common.cleanup = function(component) {
-		$(component).find(".form-group").removeClass("has-error")
-			.removeClass("has-warning").removeClass("has-success");
-		$(component).find("select:not([multiple])").each(function(i, item) {
+		$(component).find(".form-group")
+			.removeClass("has-error")
+			.removeClass("has-warning")
+			.removeClass("has-success");
+		$(component).find("select:not([multiple][data-cleanup!='false'])").each(function(i, item) {
 			$(item).val($(item).find("option:eq(0)").val());
 		});
-		$(component).find("input, textarea, select[multiple]").val("");
+		var list = [ "input", "textarea", "select[multiple]" ];
+		for (var i in list) {
+			list[i] += "[data-cleanup!='false']";
+		}
+		$(component).find(list.join(",")).val("");
+	};
+
+	Core.postFormErrors = function(where, json) {
+		var html = $("<ul>");
+		for (var i in json["errors"] || []) {
+			where.find("[id='" + i + "']").parents(".form-group").addClass("has-error");
+			for (var j in json["errors"][i]) {
+				$("<li>", {
+					text: json["errors"][i][j]
+				}).appendTo(html);
+			}
+		}
+		return Core.createMessage({
+			message: json["message"] + html.html(),
+			delay: 10000
+		});
+	};
+
+	Core.resetFormErrors = function(where) {
+		$(where).find(".form-group").removeClass("has-error");
 	};
 
 	Core.Component = Component;
-	Core.SubComponent = SubComponent;
 	Core.Common = Common;
 
 	/**
@@ -173,70 +190,86 @@ var Doc = Doc || {};
 	};
 
 	/**
-	 * Create new sub-component, which extends basic
-	 * SubComponent class
-	 * @param component {Function} - New component class
-	 * @returns {Function} - Same component instance
+	 * Create new component via simple interface, which
+	 * accepts only plugin name and properties
+	 * @param plugin {String} - Name of jQuery plugin
+	 * @param obj {{}} - Object with component's prototype
 	 */
-	Core.createSubComponent = function(component) {
-		return Core.extend(component, SubComponent);
+	Core.createClass = function(plugin, obj) {
+		var A = Core.createComponent(function(properties, selector) {
+			Core.Component.call(this, properties, obj["defaults"] || {}, selector);
+			$.extend(this.prototype, obj);
+			obj["construct"] && obj["construct"].call(this);
+		});
+		Core.createPlugin(plugin, function(selector, properties) {
+			return Core.createObject(new A(properties, $(selector)), selector, true);
+		});
 	};
 
-	/**
-	 * Create new component's instance and render to DOM
-	 * @param component {Component|Object} - Component's instance
-	 * @param selector {HTMLElement|string} - Parent's selector
-	 * @param [update] {Boolean} - Update component or not (default yes)
-	 * @static
-	 */
-	Core.createObject = function(component, selector, update) {
-		$(selector).data("doc", component).append(
-			component.selector()
-		);
-		if (update !== false) {
-			component.update();
-		} else {
-			component.activate();
-		}
-		return component;
-	};
+    /**
+     * Create new component's instance and render to DOM
+     * @param component {Component|Object} - Component's instance
+     * @param selector {HTMLElement|string} - Parent's selector
+     * @param [update] {Boolean} - Update component or not (default yes)
+     */
+    Core.createObject = function(component, selector, update) {
+        $(selector).data(component.getDataAttribute(), component).append(
+            component.selector()
+        );
+        if (update !== false) {
+            component.update();
+        } else {
+            component.activate();
+        }
+        return component;
+    };
 
 	/**
 	 * Create plugin for component
-	 * @param func {String} - Name of create function, for example 'createMessage'
+	 * @param plugin {String} - Name of jQuery plugin {@see Component#getDataAttribute}
+	 * @param func {Function} - Function that registers component
 	 * @static
 	 */
-	Core.createPlugin = function(func) {
+	Core.createPlugin = function(plugin, func) {
+		var attr = "core-" + plugin;
 		var register = function(me, options, args, ret) {
-			var r;
-			var a = [];
+			var r, a = [], s;
 			for (var i in args) {
 				if (i > 0) {
 					a.push(args[i]);
 				}
 			}
 			if (options !== void 0 && typeof options == "string") {
-				var c = me.data("doc");
+				var c = me.data(attr);
 				if (!c) {
 					if (!(c = register(me, {}, [], true))) {
 						throw new Error("Component hasn't been initialized, create it first");
 					}
-					me.data("doc", c);
+					me.data(attr, c);
 				}
 				if (c[options] == void 0) {
-					throw new Error("That component don't resolve method \"" + options + "\"");
+					throw new Error("That component doesn't implement method \"" + options + "\"");
 				}
 				if ((r = c[options].apply(c, a)) !== void 0) {
 					return r;
 				}
 			} else {
-				if (me.data("doc") != void 0) {
+				if (me.data(attr) != void 0) {
 					return void 0;
 				}
 				if (typeof me != "function") {
-					r = Core[func](me[0], options);
+					if (me.length) {
+						s = me[0];
+					} else {
+						s = me.selector;
+					}
+					r = func(s, $.extend(options, {
+						"<plugin>": attr
+					}));
 				} else {
-					r = Core[func](options);
+					r = func($.extend(options, {
+						"<plugin>": attr
+					}));
 				}
 				if (ret) {
 					return r;
@@ -244,7 +277,7 @@ var Doc = Doc || {};
 			}
 			return void 0;
 		};
-		return function(options) {
+		return $.fn[plugin] = function(options) {
 			var t;
 			var args = arguments || [];
 			if (this.length > 1) {
@@ -272,15 +305,82 @@ var Doc = Doc || {};
 	 * @param func {Function} - Function to execute
 	 */
 	Core.ready = function(func) {
-		$(document).ready(func);
-		$(document).bind("ajaxSuccess", func);
+		$(document).ready(func).bind("ajaxSuccess", func);
 	};
 
-	window.url = function(url) {
+    /**
+     * Generate url based on Yii's base url
+     * @param url {String} - Relative url
+     * @returns {String} - Absolute url
+     */
+    window.url = function(url) {
 		if (url.charAt(0) != "/") {
 			url = "/" + url;
 		}
-		return doc["url"] + url;
+        return window["doc"]["url"] + url;
+    };
+
+	$.fn.update = function() {
+		return this.each(function() {
+			var widget, params, me = this;
+			if (!(widget = $(this).attr("data-widget")) || !(params = $(this).attr("data-attributes"))) {
+				return void 0;
+			} else if (!window["globalVariables"]["getWidget"]) {
+				throw new Error("Layout hasn't declared [globalVariables::getWidget] field via [Widget::createUrl] method");
+			}
+			$(this).loading();
+			params = $.parseJSON(params);
+			$.get(window["globalVariables"]["getWidget"], $.extend(params, {
+				class: widget
+			}), function(json) {
+				if (json["status"]) {
+					$(me).fadeOut("fast", function() {
+						$(this).empty().append(json["component"]).hide().fadeIn("fast");
+					});
+				} else {
+					$(json["message"]).message();
+				}
+			}, "json").always(function() {
+				$(me).loading("reset");
+			});
+		});
 	};
 
-})(Doc);
+	$.fn.rotate = function(angle, duration, easing, deg, complete) {
+		var args = $.speed(duration, easing, deg, complete);
+		var step = args.step;
+		deg = deg || 0;
+		return this.each(function(i, e) {
+			args.complete = $.proxy(args.complete, e);
+			args.step = function(now) {
+				$.style(e, 'transform', 'rotate(' + now + 'deg)');
+				if (step) return step.apply(e, arguments);
+			};
+			$({deg: deg}).animate({deg: angle}, args);
+		});
+	};
+
+})(Core);
+
+/*
+$(document).ready(function() {
+$("input[data-regexp][type='text']").each(function(i, item) {
+	var regexp = new RegExp($(item).data("regexp"));
+	$(item).keydown(function(e) {
+		console.log($(item).val());
+		console.log(regexp.test($(item).val()));
+	});
+});
+});
+var isStrValid = function(str) {
+return ((str.match(/[^\d^.]/) === null)
+&& (str.replace(/\d+\.?\d?\d?/, "") === ""));
+};
+
+var node = dojo.byId("txt");
+dojo.connect(node, "onkeyup", function() {
+if (!isStrValid(node.value)) {
+node.value = node.value.substring(0, node.value.length-1);
+}
+});
+* */

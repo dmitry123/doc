@@ -1,4 +1,4 @@
-var Doc = Doc || {};
+var Core = Core || {};
 
 (function(Core) {
 
@@ -44,6 +44,7 @@ var Doc = Doc || {};
 		/* Клонируем старый элемент и сохраняем со всеми
 		 установленными данными и текщуими событиями */
 		this.native = selector.clone(true);
+		this.choosen = [];
 	});
 
 	/**
@@ -63,44 +64,44 @@ var Doc = Doc || {};
 	 * @returns {jQuery}
 	 */
 	Multiple.prototype.render = function() {
-		var s = this.selector().clone().data("doc", this)
-			.addClass("multiple-value").css({
-				"min-height": this.property("height")
-			}).addClass("form-control");
-		var g = $("<div>", {
-			class: "multiple-control",
-			role: "group",
-			style: {
-				width: this.selector().width()
-			}
-		}).append(
-			$("<button>", {
-				class: "btn btn-default multiple-collapse-button",
-				type: "button",
-				html: $("<span>", {
-					text: "Развернуть / Свернуть"
-				}),
+        var s = this.selector().clone().data(this.getDataAttribute(), this)
+            .addClass("multiple-value").css({
+                "min-height": this.property("height")
+            }).addClass("form-control");
+        var g = $("<div>", {
+            class: "multiple-control",
+            role: "group",
+            style: {
+                width: this.selector().width()
+            }
+        }).append(
+            $("<button>", {
+                class: "btn btn-default multiple-collapse-button",
+                type: "button",
+                html: $("<span>", {
+                    text: "Развернуть / Свернуть"
+                }),
 				style: "margin-right: 2px"
-			})
-		).append(
-			$("<button>", {
-				class: "btn btn-default multiple-down-button",
-				type: "button",
-				html: $("<span>", {
-					class: "glyphicon glyphicon-arrow-down"
-				}),
+            })
+        ).append(
+            $("<button>", {
+                class: "btn btn-default multiple-down-button",
+                type: "button",
+                html: $("<span>", {
+                    class: "glyphicon glyphicon-arrow-down"
+                }),
 				style: "margin-right: 2px"
-			})
-		).append(
-			$("<button>", {
-				class: "btn btn-default multiple-up-button",
-				type: "button",
-				html: $("<span>", {
-					class: "glyphicon glyphicon-arrow-up"
-				}),
+            })
+        ).append(
+            $("<button>", {
+                class: "btn btn-default multiple-up-button",
+                type: "button",
+                html: $("<span>", {
+                    class: "glyphicon glyphicon-arrow-up"
+                }),
 				style: "margin-right: 2px"
-			})
-		).append(
+            })
+        ).append(
 			$("<button>", {
 				class: "btn btn-default multiple-insert-button",
 				type: "button",
@@ -135,9 +136,9 @@ var Doc = Doc || {};
 	Multiple.prototype.activate = function() {
 		var me = this;
 		/* Обработка события на выбор элемента из списка
-		 элементов для выбора (select[multiple]). Для получения
-		 списка элементов используется нативный метод для
-		 обычного выпадающего списка */
+		элементов для выбора (select[multiple]). Для получения
+		списка элементов используется нативный метод для
+		обычного выпадающего списка */
 		this.selector().find("select.multiple-value").change(function() {
 			var value = $.valHooks["select"].get(this);
 			for (var i in value) {
@@ -146,45 +147,45 @@ var Doc = Doc || {};
 			me.choose(value, true);
 		});
 		/* Обработка события на нажатие клавиши "Развернуть/Свернуть", которая
-		 разворачивает или сворачивает список элементов через метод $.animate */
-		var collapsed = false;
-		this.selector().find(".multiple-collapse-button").click(function() {
-			var value = me.selector().find(".multiple-value");
-			value.animate({
-				"min-height": collapsed ? me.property("height") :
-				me.property("height") * me.property("multiplier")
-			}, "fast");
-			collapsed = !collapsed;
-		});
+		разворачивает или сворачивает список элементов через метод $.animate */
+        var collapsed = false;
+        this.selector().find(".multiple-collapse-button").click(function() {
+            var value = me.selector().find(".multiple-value");
+            value.animate({
+                "min-height": collapsed ? me.property("height") :
+                    me.property("height") * me.property("multiplier")
+            }, "fast");
+            collapsed = !collapsed;
+        });
 		/* Обработка события на выборо всех элементов из списка. Осуществляется
-		 обход всех видимых элементов и строится массив из значений полей */
-		this.selector().find(".multiple-down-button").click(function() {
+		обход всех видимых элементов и строится массив из значений полей */
+        this.selector().find(".multiple-down-button").click(function() {
 			var array = [];
-			me.selector().find("select.multiple-value").children("option:not(:hidden)").each(function(i, item) {
+            me.selector().find("select.multiple-value").children("option:not(:hidden)").each(function(i, item) {
 				array.push($(item).val());
-			});
+            });
 			me.choose(array);
 			/* Fix #13590 - 9 */
 			me.selector().find("select[multiple]").trigger("change");
-		});
+        });
 		/* Действие аналогично вышеописанному, но все элементы
-		 отмечаются как невыбранные */
-		this.selector().find(".multiple-up-button").click(function() {
+		отмечаются как невыбранные */
+        this.selector().find(".multiple-up-button").click(function() {
 			me.selector().find(".multiple-chosen").each(function(i, item) {
-				me.remove($(item).children("div"));
-			});
-		});
+                me.remove($(item).children("div"));
+            });
+        });
 		/* Достаточно кривой фикс для элемента с значением -3, потому что в приеме
-		 врача оно означает добавление нового элемента в справочник, поэтому, если
-		 мы встречаем этот элемент, то мы должны спрятать его (уже можно удалить) и
-		 делаем видимой клавишу для добавления элемента в справочник
+		врача оно означает добавление нового элемента в справочник, поэтому, если
+		мы встречаем этот элемент, то мы должны спрятать его (уже можно удалить) и
+		делаем видимой клавишу для добавления элемента в справочник
 		 */
 		this.selector().find(".multiple-value option[value='-3']").each(function(i, opt) {
 			$(opt).addClass("multiple-really-not-visible").parents(".multiple")
 				.find(".multiple-insert-button").show();
 		});
 		/* Событие обрабатывает действие при добавлении нового элемента в справочник,
-		 она находит опцию со значением -3 и вызывает событие для обработки
+		она находит опцию со значением -3 и вызывает событие для обработки
 		 */
 		this.selector().find(".multiple-control .multiple-insert-button:visible").click(function() {
 			var t; applyInsertForSelect.call(t = me.selector().find(".multiple-value").get(0), t);
@@ -225,13 +226,14 @@ var Doc = Doc || {};
 	 */
 	Multiple.prototype.remove = function(key) {
 		/* Заменяем старый элемент option на новый, потому что
-		 элемент уже является отмеченным и будет иметь флаг selected */
-		key.parents(".multiple").find("option[value='" + key.data("key") + "']").replaceWith(
-			$("<option>", {
-				value: key.data("key"),
-				text: key.text()
-			})
-		);
+		элемент уже является отмеченным и будет иметь флаг selected */
+        key.parents(".multiple").find("option[value='" + key.data("key") + "']").replaceWith(
+            $("<option>", {
+                value: key.data("key"),
+                text: key.text()
+            })
+        );
+		delete this.choosen[key.data("key")];
 		/* Удаляем элемент из списка выбранных */
 		key.parent(".multiple-chosen").remove();
 		/* Fix #13590 - 9 */
@@ -282,6 +284,11 @@ var Doc = Doc || {};
 			}
 			return void 0;
 		}
+		if (key in this.choosen) {
+			return void 0;
+		} else {
+			this.choosen[key] = true;
+		}
 		var value = multiple.find("select.multiple-value")
 			.find("option[value='" + key + "']");
 		if (slow) {
@@ -289,7 +296,7 @@ var Doc = Doc || {};
 		} else {
 			value.hide();
 		}
-		var name = value.text();
+        var name = value.text();
 		if (!name.length) {
 			return void 0;
 		}
@@ -336,7 +343,7 @@ var Doc = Doc || {};
 		 * 		установить или массив значений
 		 */
 		set: function(item, list) {
-			if ($(item).data("doc") == void 0) {
+			if ($(item).data("core-multiple") == void 0) {
 				return $.valHooks["select"].set(item, list);
 			}
 			var multiple = $(item).parents(".multiple");
@@ -345,13 +352,10 @@ var Doc = Doc || {};
 			} else if (list == null) {
 				list = "[]";
 			}
-			if (!list.length || list == "[]") {
-				multiple.find(".multiple-chosen div").each(function(i, div) {
-					$(item).multiple("remove", $(div));
-				});
-				$(item).multiple("choose", []);
-			} else {
+			if (list.length) {
 				$(item).multiple("choose", $.parseJSON(list));
+			} else {
+				$(item).multiple("clear");
 			}
 		},
 
@@ -364,7 +368,7 @@ var Doc = Doc || {};
 		 */
 		get: function(item) {
 			var list = [];
-			if ($(item).data("doc") == void 0) {
+			if ($(item).data("core-multiple") == void 0) {
 				return $.valHooks["select"].get(item);
 			}
 			this.container(item).find(".multiple-chosen div").each(function(i, c) {
@@ -374,57 +378,44 @@ var Doc = Doc || {};
 		}
 	};
 
-	/**
-	 * Базовый метод, который используется для всех компонентов
-	 * базового ядра системы. Создает сущность Multiple для
-	 * объект select[multiple], если такой еще не имеется
-	 *
-	 * @param {HTMLElement} selector - Объект с select[multiple]
-	 * @param {{}} properties - Атрибуты для создания компонента
-	 * @returns {Multiple} - Объект Multiple
-	 */
-	Core.createMultiple = function(selector, properties) {
+	Core.createPlugin("multiple", function(selector, properties) {
 		if (!$(selector).hasClass("multiple-value")) {
 			return Core.createObject(new Multiple(properties, $(selector)), selector, true);
 		} else {
 			return void 0;
 		}
-	};
+	});
 
-	$.fn.multiple = Core.createPlugin(
-		"createMultiple"
-	);
-
-	$(document).ready(function() {
+    $(document).ready(function() {
 		/* Создаем событие на обработку изменения стиля элемента
-		 select[multiple], которые потом парсим и применяем родительскому
-		 элементу с классом multiple */
+		select[multiple], которые потом парсим и применяем родительскому
+		элементу с классом multiple */
 		var f;
-		var m = $("select[multiple][data-ignore!='multiple']").multiple().on("style", f = function(e) {
+        $("select[multiple][data-ignore!='multiple']").multiple().on("style", f = function(e) {
 			if (e.target.tagName !== "SELECT") {
 				return void 0;
 			}
-			var filter = $(this).multiple("property", "filter");
+            var filter = $(this).multiple("property", "filter");
 			var style;
 			if ($(this).attr("style")) {
 				style = $(this).attr("style").split(";");
 			} else {
 				style = [];
 			}
-			var css = {};
-			for (var i in style) {
-				var link = style[i].trim().split(":");
-				if (link.length != 2) {
-					continue;
-				}
-				var key = link[0];
+            var css = {};
+            for (var i in style) {
+                var link = style[i].trim().split(":");
+                if (link.length != 2) {
+                    continue;
+                }
+                var key = link[0];
 				if ($.inArray(key, filter) !== -1) {
 					continue;
 				}
-				css[key] = link[1].trim();
-			}
-			$(this).parent(".multiple").css(css);
-		}).on("hide", function(e) {
+                css[key] = link[1].trim();
+            }
+            $(this).parent(".multiple").css(css);
+        }).on("hide", function(e) {
 			if (e.target.tagName === "SELECT") {
 				$(this).parents(".multiple").hide();
 			}
@@ -434,18 +425,18 @@ var Doc = Doc || {};
 			}
 		}).trigger("style");
 		/* Обходим все элементы, которые уже имеют установленные значения в
-		 атрибуте value, вытаскиваем их них значения (обычно - массив JSON) и
-		 добавляем в компонент, после чего удалем поле value */
-		$("select[multiple][data-ignore!='multiple'][value!='']").each(function() {
-			if ($(this).attr("value") != void 0) {
-				$(this).multiple("choose", $(this).attr("value"));
-			}
-			$(this).removeAttr("value");
-		});
+		атрибуте value, вытаскиваем их них значения (обычно - массив JSON) и
+		добавляем в компонент, после чего удалем поле value */
+        $("select[multiple][data-ignore!='multiple'][value!='']").each(function() {
+            if ($(this).attr("value") != void 0) {
+                $(this).multiple("choose", $(this).attr("value"));
+            }
+            $(this).removeAttr("value");
+        });
 		/* Обходим все элементы, которые имеют отмеченные поля через зажатую
-		 клавишу Ctrl, получаем их и добавляем в компонент, разумеется, учитываем,
-		 что если массив пустой, то все поля будут удалены */
-		m.each(function() {
+		клавишу Ctrl, получаем их и добавляем в компонент, разумеется, учитываем,
+		что если массив пустой, то все поля будут удалены */
+		$("select[multiple][data-ignore!='multiple']").each(function() {
 			var result = $(this).multiple("selected", true);
 			if (result.length > 0) {
 				$(this).multiple("choose", result);
@@ -468,10 +459,24 @@ var Doc = Doc || {};
 			};
 		});
 		/* Обходим все множественный списки со стилями и применяем их для
-		 нового родительского элемента */
+		нового родительского элемента */
 		$("select[multiple][data-ignore!='multiple'][style]").each(function() {
 			$(this).parents(".multiple").attr("style", $(this).attr("style"));
 		});
-	});
+    });
 
-})(Doc);
+})(Core);
+
+(function($) {
+	$.each(['show', 'hide'], function (i, ev) {
+		var el = $.fn[ev];
+		$.fn[ev] = function() {
+			for (var i = 0; i < this.length; i++) {
+				if (this[i].tagName == "SELECT") {
+					$(this[i]).trigger(ev);
+				}
+			}
+			return el.apply(this, arguments);
+		};
+	});
+})(jQuery);

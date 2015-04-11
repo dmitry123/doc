@@ -1,6 +1,6 @@
-var Doc = Doc || {};
+var Core = Core || {};
 
-(function(Doc) {
+(function(Core) {
 
 	"use strict";
 
@@ -17,31 +17,22 @@ var Doc = Doc || {};
 	 * @param properties {{}} - Properties
 	 * @constructor
 	 */
-	var Message = function(properties) {
-		Doc.Component.call(this, properties, {
+	var Message = Core.createComponent(function(properties) {
+		Core.Component.call(this, properties, {
 			type: "danger",
 			message: "Not-Initialized",
 			sign: "info",
 			delay: 5000
 		});
-	};
-
-	Doc.extend(Message, Doc.Component);
+	});
 
 	/**
 	 * Render message component
 	 * @returns {jQuery}
 	 */
 	Message.prototype.render = function() {
-		var c = $("<div></div>", {
-			class: "alert " + ("alert-" + this.property("type")),
-			css: {
-				"position": "fixed",
-				"left": "5px",
-				"top": "5px",
-				"z-index": "2000",
-				"max-width": "calc(100% - 10px)"
-			},
+		return $("<div></div>", {
+			class: "alert " + ("alert-" + this.property("type")) + " message-wrapper",
 			role: "alert"
 		}).append(
 			$("<span></span>", {
@@ -50,14 +41,10 @@ var Doc = Doc || {};
 			})
 		).append(
 			$("<span></span>", {
-				class: "jaw-message",
+				class: "message",
 				html: this.property("message")
 			})
 		);
-		c.find("li").css({
-			"margin-left": "10px"
-		});
-		return c;
 	};
 
 	/**
@@ -122,7 +109,7 @@ var Doc = Doc || {};
 	 */
 	Message.prototype.destroy = function() {
 		this.close(function(me) {
-			Doc.Component.prototype.destroy.call(me);
+			Core.Component.prototype.destroy.call(me);
 		});
 	};
 
@@ -134,7 +121,7 @@ var Doc = Doc || {};
 	var Collection = {
 		create: function(properties) {
 			var message = new Message(properties);
-			Doc.createObject(message, document.body, true);
+			Core.createObject(message, document.body);
 			message.selector().css("top", parseInt(message.selector().css("top")) + "px");
 			for (var i in this._components) {
 				this._components[i].selector().animate({
@@ -159,16 +146,9 @@ var Doc = Doc || {};
 					top: parseInt(move[i].selector().css("top")) - component.selector().height() - 37
 				});
 			}
-			component.selector().promise(component.selector()).done(function() {
-				component.selector().remove();
-			});
-		},
-		last: function() {
-			if (this._components.length > 0) {
-				return this._components[this._components.length - 1];
-			} else {
-				return null;
-			}
+            component.selector().promise(component.selector()).done(function() {
+                component.selector().remove();
+            });
 		},
 		_components: []
 	};
@@ -177,10 +157,16 @@ var Doc = Doc || {};
 	 * Create new message instance with some properties
 	 * @param properties {{}} - Message component's properties
 	 */
-	Doc.createMessage = function(properties) {
-		Collection.create(properties);
+	Core.createMessage = function(properties) {
+		Collection.create($.extend(properties, {
+			"<plugin>": "core-message"
+		}));
 	};
 
-	$.message = Doc.createPlugin("createMessage");
+	Core.createPlugin("message", function(selector, properties) {
+		Collection.create($.extend(properties, {
+			message: selector
+		}));
+	});
 
-})(Doc);
+})(Core);

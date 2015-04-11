@@ -1,4 +1,4 @@
-var Doc = Doc || {};
+var Core = Core || {};
 
 (function(Core) {
 
@@ -21,20 +21,26 @@ var Doc = Doc || {};
 		$.get(this.selector().data("url"), $.extend({
 			class: table.data("class"),
 			condition: table.data("condition"),
-			params: table.data("parameters"),
+			params: table.data("attributes"),
 			pageLimit: table.data("limit")
 		}, parameters), function(json) {
-			if (!json["status"]) {
-				return Core.createMessage({
-					message: json["message"]
-				});
+			if (!Message.display(json)) {
+				return void 0;
 			}
 			me.selector().replaceWith(
-				$(json["component"]).data("doc", me)
+				$(json["component"]).data(me.getDataAttribute(), me)
 			);
 		}, "json").always(function() {
 			me.after();
 		});
+	};
+
+	Table.prototype.before = function() {
+		//this.selector().loading();
+	};
+
+	Table.prototype.after = function() {
+		//this.selector().loading("reset");
 	};
 
 	Table.prototype.fetch = function(properties) {
@@ -65,9 +71,8 @@ var Doc = Doc || {};
 		} else {
 			order = key;
 		}
-		this.fetch({
-			order: order
-		});
+		this.property("order", this["lastOrderBy"] = order);
+		this.update();
 	};
 
 	Table.prototype.page = function(page) {
@@ -82,7 +87,7 @@ var Doc = Doc || {};
 		});
 	};
 
-	Core.createTable = function(selector, properties) {
+	Core.createPlugin("table", function(selector, properties) {
 		var t;
 		if ($(selector).get(0).tagName != "TABLE") {
 			if ((t = $(selector).parents("table")).length != 0) {
@@ -92,8 +97,6 @@ var Doc = Doc || {};
 			}
 		}
 		return Core.createObject(new Table(properties, $(selector)), selector, false);
-	};
+	});
 
-	$.fn.table = Core.createPlugin("createTable");
-
-})(Doc);
+})(Core);

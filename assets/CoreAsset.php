@@ -10,7 +10,10 @@ class CoreAsset extends AssetBundle {
 	public $baseUrl = '@web';
 
 	public $css = [
-		"css/multiple.css"
+		"css/multiple.css",
+		"css/message.css",
+		"css/panel.css",
+		"css/table.css"
 	];
 
 	public $js = [
