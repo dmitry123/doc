@@ -23,6 +23,19 @@ class Widget extends \yii\base\Widget {
 	}
 
 	/**
+	 * Initialize widget and generate it's own
+	 * unique identification number
+	 */
+	public function init() {
+		if (!empty($this->id)) {
+			return;
+		}
+		$this->id = UniqueGenerator::generate(
+			basename(get_called_class())
+		);
+	}
+
+	/**
 	 * Create url for widget's update for current module and controller
 	 * @param array $query - Additional query GET parameters
 	 * @return string - Url for widget update

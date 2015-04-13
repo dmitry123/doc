@@ -98,7 +98,7 @@ var Core = Core || {};
     /**
      * Get/Set some property
      * @param key {string} - Property key
-     * @param value  {*} - Property value
+     * @param [value] {*} - Property value
      * @returns {*} - New or old property's value
      */
     Component.prototype.property = function(key, value) {
@@ -198,9 +198,9 @@ var Core = Core || {};
 	Core.createClass = function(plugin, obj) {
 		var A = Core.createComponent(function(properties, selector) {
 			Core.Component.call(this, properties, obj["defaults"] || {}, selector);
-			$.extend(this.prototype, obj);
 			obj["construct"] && obj["construct"].call(this);
 		});
+		A.prototype = $.extend(A.prototype, obj);
 		Core.createPlugin(plugin, function(selector, properties) {
 			return Core.createObject(new A(properties, $(selector)), selector, true);
 		});

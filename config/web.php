@@ -93,16 +93,6 @@ $config = [
 				"super",
 			]
 		],
-		"distance" => [
-			"class" => "app\\modules\\chat\\DistanceModule",
-			"name" => "Обучение",
-			"icon" => "glyphicon glyphicon-education",
-			"image" => "img/icons/education.png",
-			"roles" => [
-				"student",
-				"super",
-			]
-		],
 		"plantation" => [
 			"class" => "app\\modules\\admin\\PlantationModule",
 			"name" => "Внедрение",

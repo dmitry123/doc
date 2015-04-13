@@ -4,6 +4,7 @@ namespace app\widgets;
 
 use app\core\DropDown;
 use app\core\FieldCollection;
+use app\core\FormModel;
 use app\core\TableProvider;
 use app\core\Widget;
 
@@ -39,23 +40,36 @@ class AutoTable extends Widget {
 	];
 
 	/**
+	 * @var FormModel - Table's form model instance with fields
+	 * 	configuration
+	 */
+	public $form = null;
+
+	/**
+	 * @var array - Array with provider's elements that should be
+	 * 	displayed, by default it uses all fields from [form]
+	 * @see form
+	 */
+	public $keys = null;
+
+	/**
 	 * Run widget
 	 * @return string - Rendered content
 	 * @throws \yii\base\ErrorException
 	 */
 	public function run() {
 		$columns = [];
-		foreach ($this->provider->getFormModel()->getConfig() as $key => $config) {
+		foreach ($this->form->getConfig() as $key => $config) {
 			if (isset($config["hidden"]) && $config["hidden"] || isset($config["type"]) && $config["type"] == "hidden") {
 				continue;
-			} else if (in_array($key, $this->provider->keys) || in_array("*", $this->provider->keys)) {
+			} else if (in_array($key, $this->keys) || in_array("*", $this->keys)) {
 				$columns[$key] = [
 					"label" => $config["label"],
 					"width" => ($key == "id" ? "150px" : "auto")
 				];
 			}
 		}
-		$data = $this->provider->getRows();
+		$data = $this->provider->fetchData();
 		return \app\widgets\Table::widget([
 			"controls" => $this->controls,
 			"data" => $this->fetchExtraData($columns, $data),
@@ -64,7 +78,7 @@ class AutoTable extends Widget {
 	}
 
 	public function fetchExtraData(array $columns, array& $data) {
-		$form = $this->provider->getFormModel();
+		$form = $this->form;
 		foreach ($columns as $key => $column) {
 			try {
 				$config = $form->getConfig($key);
@@ -84,12 +98,10 @@ class AutoTable extends Widget {
 				/* TODO: Not-Implemented */
 			} else {
 				try {
-					$field = FieldCollection::getCollection()->find($config["type"]);
+					if (!($field = FieldCollection::getCollection()->find($config["type"])) instanceof DropDown) {
+						continue;
+					}
 				} catch (\Exception $ignored) {
-					throw $ignored;
-					continue;
-				}
-				if (!$field instanceof DropDown) {
 					continue;
 				}
 				foreach ($data as &$row) {

@@ -13,6 +13,13 @@ class AboutFile extends Widget {
 	public $id = null;
 
 	/**
+	 * Prevent auto unique key generation
+	 * @see app\core\Widget::init
+	 */
+	public function init() {
+	}
+
+	/**
 	 * Run widget and return it's just rendered content
 	 * @return string - Rendered content
 	 */

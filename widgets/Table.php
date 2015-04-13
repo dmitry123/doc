@@ -3,228 +3,433 @@
 namespace app\widgets;
 
 use app\core\TableProvider;
+use app\core\UniqueGenerator;
 use app\core\Widget;
-use yii\base\ErrorException;
+use Exception;
+use yii\db\ActiveQuery;
 use yii\helpers\Html;
 
 class Table extends Widget {
 
 	/**
-	 * @var TableProvider - Instance of model, which extends
-	 * 	TableProvider class
+	 * @var ActiveQuery|string - Default table provider
+	 * 	search criteria, you can use it for search
+	 * @see MedcardController::actionSearch - Usage example
+	 */
+	public $criteria = null;
+
+	/**
+	 * @var string - CDbCriteria condition, is used for
+	 * 	table order or search
+	 * @internal
+	 */
+	public $condition = null;
+
+	/**
+	 * @var array - CDbCriteria parameters, is used for
+	 * 	table order or search
+	 * @internal
+	 */
+	public $params = null;
+
+	/**
+	 * @var TableProvider - Table provider adapter for
+	 * 	your table, which has all information about
+	 * 	queries and order rules
 	 */
 	public $provider = null;
 
 	/**
-	 * @var array - An array with table columns to display, where key is
-	 * 	name of column, which return TableProvider and value is:
-	 * +
-	 * +
-	 * +
+	 * @var array - An array with columns configuration, it
+	 * 	has the same structure as in FormModel configuration
+	 *
+	 * + label - Column label to display
+	 * + [style] - Style for current column, like width or color
+	 * + [type] - Column default type (for filters in future)
+	 * + [width] - Default column width
+	 *
+	 * @see FormModel::config
 	 */
-	public $columns = [];
+	public $header = null;
 
 	/**
-	 * @var array - An array with control buttons, where every control is
-	 * 	displayable control element, any class element which can be
-	 * 	casted to string
+	 * @var string - Default primary key for current table, it
+	 * 	uses to receive from data rows unique identification number
+	 * 	for tr's [data-id] field
 	 */
-	public $controls = null;
+    public $primaryKey = "id";
 
 	/**
-	 * @var array
+	 * @var int - Current page, that should be displayed, it uses
+	 * 	with TablePagination class
 	 */
-	public $classes = [
-		"table" => "table table-hover table-condensed table-striped",
-		"active" => "",
-		"row" => ""
-	];
+	public $currentPage = 1;
 
 	/**
-	 * @var array - Array with data to display, by default it loads provider
-	 * 	and fetches rows for provider's table
+	 * @var null|string - Default order by key, for null value
+	 * 	primary key is used
+	 */
+	public $orderBy = null;
+
+	/**
+	 * @var bool - Shall hide order arrows for tables, which doesn't
+	 * 	support ordering or its redundant
+	 */
+	public $hideOrderByIcon = false;
+
+	/**
+	 * @var array - Array with elements controls buttons, like edit
+	 * 	or remove. Array's key is class for [a] tag and value is
+	 * 	class for [span] tag like glyphicon or button
+	 * @see renderControls
+	 */
+	public $controls = [];
+
+	/**
+	 * @var string - String with search conditions, uses for
+	 * 	table order and search (simply more suitable method
+	 * 	for getWidget action)
+	 * @see LController::actionGetWidget
+	 * @internal
+	 */
+	public $conditions = "";
+
+	/**
+	 * @var array - Array with parameters for search conditions, uses for
+	 * 	table order and search (simply more suitable method for getWidget action)
+	 * @see LController::actionGetWidget
+	 * @internal
+	 */
+	public $parameters = [];
+
+	/**
+	 * @var string - Custom onClick action for table row, you have to
+	 * 	set only function or method name without any arguments, cuz it
+	 * 	converts it to next format [{$click}.call(this, id)], where
+	 * 	id is primary key value of your row from database
+	 * @see primaryKey
+	 */
+	public $click = null;
+
+	/**
+	 * @var bool - Should table be empty after first page load, set
+	 * 	it to true if your table contains big amount of rows and
+	 * 	it's initial render will slow down all render processes, also
+	 * 	it removes table footer, cuz it should contains search parameters
+	 * @see renderFooter
+	 */
+	public $emptyData = false;
+
+	/**
+	 * @var string - Default table class
+	 */
+	public $tableClass = "table table-striped table-bordered";
+
+	/**
+	 * @var array - Array with data to display, it can be used only
+	 * 	if table provider null
 	 */
 	public $data = null;
 
 	/**
-	 * @var array|string|bool - Array with fields that can be used to order table, by
-	 * 	default it can be ordered with every field, set it to false if you want to disable ordering
+	 * @var string - Unique identification value of current
+	 * 	table, by default it generates automatically with prefix
+	 * @see UniqueGenerator::generate
 	 */
-	public $order = "*";
+	public $id = null;
 
 	/**
-	 * @var string|bool - Current order parameters, it will be changed with ajax
-	 * 	update, or set it to false if you want to disable default order
+	 * @var int - How many rows should be displayed
+	 * 	per one page, default is table pagination's limit
+	 * @see TablePagination::pageLimit
 	 */
-	public $orderBy = "id";
+	public $pageLimit = null;
 
 	/**
-	 * @var bool - Order direction, default is false
+	 * @var array - An array with available table limits with
+	 * 	count of displayable rows per one page, set that value
+	 * 	to false to disable limits
+	 * @see renderFooter
 	 */
-	public $desc = false;
+	public $availableLimits = [
+		10, 25, 50, 75
+	];
 
 	/**
-	 * @var bool - Shall table has header
+	 * @var string - Text message for received empty array
+	 * 	with data
 	 */
-	public $hasHeader = true;
+	public $textNoData = "Нет данных";
 
 	/**
-	 * @var bool - Shall table has body
+	 * @var string - That message will be displayed if
+	 * 	field [emptyData] set to true
+	 * @see emptyData
 	 */
-	public $hasBody = true;
+	public $textEmptyData = "Не выбраны критерии поиска";
 
 	/**
-	 * @var bool - Shall table has footer
-	 */
-	public $hasFooter = true;
-
-	/**
-	 * Run widget execution
-	 * @throws ErrorException on configuration errors
+	 * Run widget and return just rendered content
+	 * @return string - Just rendered content
+	 * @throws Exception
 	 */
 	public function run() {
-		if (!$this->provider instanceof TableProvider && $this->data && $this->provider != null) {
-			throw new ErrorException("AutoTable provider must be instance of TableProvider class and mustn't be null, found \"" . get_class($this->provider) . "\"");
+		if (!$this->provider instanceof TableProvider && is_array($this->data)) {
+			throw new Exception("Table provider must be an instance of TableProvider and don't have to be null");
 		}
-		if (!count($this->columns)) {
-			throw new ErrorException("Count of table columns must be above zero");
+		if (is_string($this->params)) {
+			$this->params = unserialize(urldecode($this->params));
 		}
-		if ($this->provider != null) {
-			if ($this->data != null) {
-				$this->data = array_merge($this->provider->getRows(), $this->data);
-			} else {
-				$this->data = $this->provider->getRows();
+		if (empty($this->criteria)) {
+			$this->criteria = new ActiveQuery($this->provider->activeRecord);
+		}
+		if (is_string($this->condition) && !empty($this->condition) && is_array($this->parameters)) {
+			$this->criteria->on = $this->condition;
+			$this->criteria->params = $this->params;
+		}
+		if (empty($this->id)) {
+			$this->id = UniqueGenerator::generate("table");
+		}
+		foreach ($this->header as $key => &$value) {
+			if (!isset($value["id"])) {
+				$value["id"] = "";
+			}
+			if (!isset($value["class"])) {
+				$value["class"] = "";
+			}
+			if (!isset($value["style"])) {
+				$value["style"] = "";
 			}
 		}
-		$this->renderTable();
+		if (empty($this->orderBy)) {
+			$this->orderBy = $this->primaryKey;
+		}
+		return $this->render("application.widgets.views.Table");
 	}
 
-	protected function renderHeader() {
-		print Html::beginTag("tr");
-		foreach ($this->columns as $key => $column) {
-			if ($this->provider != null) {
-				$config = $this->provider->getFormModel()->getConfig($key);
-			} else {
-				$config = $column;
+	/**
+	 * Fetch array with data from table provider or something else
+	 * @return array - Array with provider's data
+	 */
+	public function fetchData() {
+		if ($this->emptyData !== false) {
+			if ($this->provider !== null) {
+				$this->provider->getPagination()->calculate(0);
 			}
-			if (!isset($column["label"])) {
-				if (isset($config["label"])) {
-					$label = $config["label"];
-				} else {
-					$label = "";
-				}
-			} else {
-				$label = $column["label"];
-			}
-			$options = [];
-			if (isset($column["width"])) {
-				$options["width"] = $column["width"];
-			}
-			if ($label == "#") {
-				$options["align"] = "left";
-			}
-			if ($this->order == "*" || in_array($key, $this->order)) {
-				$label = Html::tag("a", $label, [
-					"href" => "javascript:void(0)"
-				]);
-			}
-			if ($this->orderBy !== false && $this->orderBy == $key) {
-				if ($this->desc) {
-					$class = "glyphicon glyphicon-sort-by-alphabet";
-				} else {
-					$class = "glyphicon glyphicon-sort-by-alphabet-alt";
-				}
-				$label .= "&nbsp;" . Html::tag("span", "", [
-					"style" => "color: gray; vertical-align: middle",
-					"class" => $class
-				]);
-			}
-			print Html::tag("td", $label, $options + [
-					"style" => "vertical-align: middle",
-					"class" => "text-left"
-				]);
+			return [];
+		} else if ($this->provider == null && is_array($this->data)) {
+			return $this->data;
 		}
-		if ($this->controls != null && count($this->controls) > 0) {
-			print Html::tag("td", "Управление", [
-				"width" => "auto",
-				"class" => "text-center"
+		$this->provider->getPagination()->currentPage = $this->currentPage;
+		if ($this->pageLimit != null) {
+			$this->provider->getPagination()->pageLimit = $this->pageLimit;
+		}
+		if ($this->condition != null) {
+			$this->provider->getCriteria()->andOnCondition($this->controls);
+		}
+		if ($this->params != null) {
+			$this->provider->getCriteria()->params += $this->params;
+		}
+		if (is_object($this->criteria)) {
+			$this->provider->getCriteria()->andOnCondition($this->criteria->on);
+			$this->provider->getCriteria()->addOrderBy($this->criteria);
+		}
+		if (!empty($this->orderBy)) {
+			$this->provider->orderBy = $this->orderBy;
+		}
+		return $this->data = $this->provider->fetchData();
+	}
+
+	/**
+	 * Render extra information for table header with search
+	 * conditions and parameters, need for update requests
+	 */
+	public function renderExtra() {
+		$options = [
+			"data-class" => get_class($this),
+			"data-url" => $this->createUrl()
+		];
+		if (!empty($this->criteria->on)) {
+			$options["data-condition"] = $this->criteria->on;
+		}
+		if (!empty($this->provider->getPagination()->pageLimit)) {
+			if ($this->pageLimit !== null) {
+				$options["data-limit"] = $this->pageLimit;
+			} else {
+				$options["data-limit"] = $this->provider->getPagination()->pageLimit;
+			}
+		}
+		if (!empty($this->criteria->params)) {
+			$options["data-attributes"] = urlencode(serialize($this->criteria->params));
+		}
+		print Html::renderTagAttributes($options);
+	}
+
+	/**
+	 * Render table's body
+	 */
+	public function renderBody() {
+		foreach ($this->fetchData() as $key => $value) {
+			$options = [
+				"data-id" => $value[$this->primaryKey],
+				"class" => "core-table-row"
+			];
+			if (is_string($this->click)) {
+				$options["onclick"] = $this->click . "(this, '{$value[$this->primaryKey]}')";
+			}
+			print Html::beginTag("tr", $options);
+			foreach ($this->header as $k => $v) {
+				print Html::tag("td", isset($value[$k]) ? $value[$k] : "", [
+					"align" => "left",
+					"class" => "core-table-cell"
+				]);
+			}
+			$this->renderControls();
+			print Html::endTag("tr");
+		}
+		if (count($this->data) == 0) {
+			if ($this->emptyData) {
+				$text = $this->textEmptyData;
+			} else {
+				$text = $this->textNoData;
+			}
+			print Html::tag("tr", Html::tag("td", [
+				"colspan" => count($this->header) + 1
+			], "<b>$text</b>"));
+		}
+	}
+
+	/**
+	 * Render table header with information about
+	 * columns
+	 */
+	public function renderHeader() {
+		print Html::beginTag("tr", [
+			"class" => "core-table-row"
+		]);
+		foreach ($this->header as $key => $value) {
+			$options = [
+				"data-key" => $key,
+				"onclick" => "$(this).table('order', '$key')",
+				"align" => "left"
+			];
+			if (!empty($value["id"])) {
+				$options["id"] = $value["id"];
+			}
+			if (!empty($value["class"])) {
+				$options["class"] = $value["class"];
+			}
+			if (!empty($value["style"])) {
+				$options["style"] = $value["style"];
+			}
+			print Html::beginTag("td", $options);
+			print Html::tag("b", $this->header[$key]["label"]);
+			$this->renderChevron($key);
+			print Html::endTag("td");
+		}
+		if (count($this->controls) > 0) {
+			print Html::tag("td", "", [
+				"align" => "middle",
+				"style" => "width: 50px"
 			]);
 		}
 		print Html::endTag("tr");
 	}
 
-	protected function renderBody() {
-		foreach ($this->data as $row) {
-			print Html::beginTag("tr", [
-				"data-id" => $row["id"]
-			]);
-			foreach ($this->columns as $key => $column) {
-				if (isset($column["options"])) {
-					$options = $column["options"];
-				} else {
-					$options = [];
-				}
-				if (isset($column["width"])) {
-					$options += [
-						"width" => $column["width"]
-					];
-				}
-				if (isset($column["type"]) && is_array($column["type"])) {
-					$value = Html::tag($column["type"]["tag"], $row[$key],
-						isset($column["type"]["options"]) ? $column["type"]["options"] : []
-					);
-				} else {
-					$value = $row[$key];
-				}
-				print Html::tag("td", $value, $options + [
-						"align" => "left"
-					]);
-			}
-			if ($this->controls != null && count($this->controls) > 0) {
-				print Html::beginTag("td", [
-					"align" => "left",
-					"width" => "auto"
-				]);
-				foreach ($this->controls as $key => $control) {
-					$tag = isset($control["tag"]) ? $control["tag"] : "span";
-					$options = isset($control["options"]) ? $control["options"] : [];
-					$label = isset($control["label"]) ? $control["label"] : "";
-					if (isset($options["class"])) {
-						$options["class"] .= " ".$key;
-					} else {
-						$options["class"] = $key;
-					}
-					print Html::tag($tag, $label, $options);
-				}
-				print Html::endTag("td");
-			}
-			print Html::endTag("tr");
+	/**
+	 * Render chevron only for ordered column
+	 * @param string $key - Current key
+	 */
+	public function renderChevron($key) {
+		if (($p = strpos($this->orderBy, " ")) !== false) {
+			$orderBy = substr($this->orderBy, 0, $p);
+		} else {
+			$orderBy = $this->orderBy;
 		}
-	}
-
-	protected function renderFooter() {
-
-	}
-
-	protected function renderTable() {
-		print Html::beginTag("table", [
-			"class" => isset($this->classes["table"]) ? $this->classes["table"] : ""
+		if ($orderBy !== $key || $this->hideOrderByIcon !== false) {
+			return ;
+		}
+		if (strpos($this->orderBy, "desc") !== false) {
+			$class = "glyphicon glyphicon-chevron-up table-order table-order-desc";
+		} else {
+			$class = "glyphicon glyphicon-chevron-down table-order table-order-asc";
+		}
+		print Html::tag("span", "", [
+			"class" => $class
 		]);
-		if ($this->hasHeader) {
-			print Html::beginTag("thead");
-			$this->renderHeader();
-			print Html::endTag("thead");
+	}
+
+	/**
+	 * Render table controls for each row
+	 */
+	public function renderControls() {
+		if (!count($this->controls)) {
+			return ;
 		}
-		if ($this->hasBody) {
-			print Html::beginTag("tbody");
-			$this->renderBody();
-			print Html::endTag("tbody");
+		print Html::beginTag("td", [
+			"align" => "middle"
+		]);
+		foreach ($this->controls as $c => $class) {
+			print Html::tag("a", Html::tag("span", [
+				"class" => $class
+			]), [
+				"href" => "javascript:void(0)",
+				"class" => $c
+			]);
 		}
-		if ($this->hasFooter) {
-			print Html::beginTag("tfoot");
-			$this->renderFooter();
-			print Html::endTag("tfoot");
+		print Html::endTag("td");
+	}
+
+	/**
+	 * Render table footer with different
+	 * control elements, like pagination
+	 * or search
+	 */
+	public function renderFooter() {
+		if ($this->emptyData !== false) {
+			return ;
 		}
-		print Html::endTag("table");
+		print Html::beginTag("tr", [
+			"class" => "core-table-row"
+		]);
+		print Html::beginTag("td", [
+			"colspan" => count($this->header) - 1,
+			"align" => "left"
+		]);
+		if ($this->provider->pagination !== false) {
+			$this->widget("Pagination", [
+				"tablePagination" => $this->provider->getPagination(),
+				"clickAction" => function($page) {
+					return "$(this).table('page', {$page})";
+				}
+			]);
+		}
+		print Html::endTag("td");
+		print Html::beginTag("td", [
+			"align" => "right"
+		]);
+		if ($this->availableLimits !== false) {
+			$list = [];
+			foreach ($this->availableLimits as $value) {
+				$list[$value] = $value;
+			}
+			if ($this->provider->pagination != null) {
+				$limit = $this->provider->pagination->pageLimit;
+			} else {
+				$limit = $this->pageLimit;
+			}
+			if ($limit !== null && !isset($list[$limit])) {
+				$list[$limit] = $limit;
+			} else if ($limit === null) {
+				$limit = "";
+			}
+			print Html::dropDownList("availableLimits", $limit, $list, [
+				"class" => "form-control text-center",
+				"style" => "width: 75px",
+				"onchange" => "$(this).table('limit', $(this).val())"
+			]);
+		}
+		print Html::endTag("td");
+		print Html::endTag("tr");
 	}
 }

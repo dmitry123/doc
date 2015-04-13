@@ -20,14 +20,14 @@ class FilePage extends Widget {
 	public $textList = "Список файлов";
 
 	/**
-	 * @var string - Text with information about document
-	 */
-	public $textInfo = "Информация о документе";
-
-	/**
 	 * @var string - Text with file change history
 	 */
 	public $textHistory = "История изменений файла";
+
+	/**
+	 * @var string - Text with information about document
+	 */
+	public $textInfo = "Информация о документе";
 
 	/**
 	 * Run widget to return just rendered content

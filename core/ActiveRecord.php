@@ -122,6 +122,17 @@ abstract class ActiveRecord extends \yii\db\ActiveRecord {
 	}
 
 	/**
+	 * Get default instance of table provider with
+	 * default [fetchQuery] and [countQuery]
+	 * for [@see app\widgets\Table] widget
+	 * @see TableProvider::fetchQuery
+	 * @see TableProvider::countQuery
+	 */
+	public function getDefaultTableProvider() {
+		return new TableProvider($this);
+	}
+
+	/**
 	 * Moved from Yii 1.1 for backward compatibility
 	 * @param int|string $id - Primary key value
 	 * @return integer|false - The number of rows deleted, or false if the deletion is unsuccessful for some reason
@@ -129,13 +140,9 @@ abstract class ActiveRecord extends \yii\db\ActiveRecord {
 	 * @throws \Exception
 	 */
 	public function deleteByPk($id) {
-		$keys = $this->primaryKey();
-		if (!isset($keys[0])) {
-			throw new ErrorException("Unresolved table primary key");
-		}
-		$pk = $keys[0];
-		$this->$pk = $id;
-		return $this->delete();
+		return $this->deleteAll([
+			$this->getTableSchema()->primaryKey[0]=> $id
+		]);
 	}
 
 	/**

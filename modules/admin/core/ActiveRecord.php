@@ -3,7 +3,7 @@
 namespace app\modules\admin\core;
 
 use app\core\FormModel;
-use app\core\TableProviderAdapter;
+use app\core\TableProvider;
 
 abstract class ActiveRecord extends \app\core\ActiveRecord {
 
@@ -20,8 +20,6 @@ abstract class ActiveRecord extends \app\core\ActiveRecord {
 	 * current table model with it's form
 	 */
 	public function search() {
-		return new TableProviderAdapter($this, $this->getForm(), [
-			/* Extra Configuration */
-		]);
+		return new TableProvider($this);
 	}
 }

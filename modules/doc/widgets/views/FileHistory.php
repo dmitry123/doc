@@ -1,7 +1,7 @@
 <?php
 /**
  * @var $this yii\web\View
- * @var $self app\modules\doc\widgets\AboutFile
+ * @var $self app\modules\doc\widgets\FileHistory
  */
 ?>
 

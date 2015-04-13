@@ -4,8 +4,5 @@
  */
 
 print \app\modules\doc\widgets\FilePage::widget([
-	"tableActiveRecord" => new \app\models\FileTemplate(),
-	"textList" => "Список шаблонов",
-	"textHistory" => "История изменения шаблона",
-	"textInfo" => "Информация о шаблоне",
+	"tableActiveRecord" => new \app\models\FileTemplate()
 ]);
