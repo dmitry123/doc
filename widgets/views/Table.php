@@ -1,10 +1,10 @@
 <?php
 /**
  * @var \yii\web\View $this
- * @var Table $self
+ * @var app\widgets\Table $self
  */
 ?>
-<table class="<?= $self->tableClass ?> core-table" id="<?= $self->id ?>" <?php $self->renderExtra() ?>>
+<table class="<?= $self->tableClass ?> core-table" id="<?= $self->id ?>" <?php $self->renderExtra() ?> data-widget="<?= get_class($self) ?>" data-attributes="<?= $self->getSerializedAttributes() ?>">
 	<thead class="core-table-header">
 	<?php $self->renderHeader() ?>
 	</thead>

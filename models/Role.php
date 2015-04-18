@@ -11,14 +11,6 @@ class Role extends ActiveRecord {
 	}
 
 	/**
-	 * @param null $class
-	 * @return Role
-	 */
-	public static function model($class = null) {
-		return parent::model($class);
-	}
-
-	/**
 	 * Check whether employee has role
 	 * @param int $employeeId - Employee identification number
 	 * @param array|string $roles - Array with roles or simply one string

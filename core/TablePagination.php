@@ -1,5 +1,7 @@
 <?php
 
+namespace app\core;
+
 class TablePagination {
 
 	/**
@@ -16,6 +18,12 @@ class TablePagination {
 	 * @var int - Maximum page limit per page
 	 */
 	public $pageLimit = 10;
+
+	/**
+	 * @var bool - Shall table's pagination use
+	 * 	optimized display mode for high performance
+	 */
+	public $optimizedMode = false;
 
 	/**
 	 * Construct table pagination with count of rows

@@ -2,10 +2,15 @@
 
 namespace app\widgets;
 
+use app\core\ActiveRecord;
+use app\core\DropDown;
+use app\core\FieldCollection;
+use app\core\FormModel;
 use app\core\TableProvider;
 use app\core\UniqueGenerator;
 use app\core\Widget;
 use Exception;
+use yii\base\Model;
 use yii\db\ActiveQuery;
 use yii\helpers\Html;
 
@@ -84,6 +89,11 @@ class Table extends Widget {
 	 * @see renderControls
 	 */
 	public $controls = [];
+
+	/**
+	 * @var int - With of column with control actions
+	 */
+	public $controlsWidth = 50;
 
 	/**
 	 * @var string - String with search conditions, uses for
@@ -169,11 +179,50 @@ class Table extends Widget {
 	public $textEmptyData = "Не выбраны критерии поиска";
 
 	/**
+	 * @var string - Default placement for bootstrap tooltip
+	 * 	component [left, right, top, bottom]
+	 */
+	public $tooltipDefaultPlacement = "left";
+
+	/**
+	 * @var string - Default search criteria for table, it uses
+	 * 	to store compiled criteria
+	 */
+	public $searchCriteria = "";
+
+	/**
+	 * @var bool - Shall use optimized pagination for
+	 *	higher performance
+	 */
+	public $optimizedPagination = false;
+
+	/**
+	 * @var string|null - Name of active record model
+	 * 	with default table provider, you can't it
+	 * 	use with [@see provider] field and it has
+	 * 	lower precedence... Btw its only for internal
+	 * 	usage, fuck off
+	 * @internal
+	 */
+	public $modelName = null;
+
+	/**
 	 * Run widget and return just rendered content
 	 * @return string - Just rendered content
 	 * @throws Exception
 	 */
 	public function run() {
+		if (!empty($this->modelName)) {
+			$this->provider = \Yii::createObject([ "class" => $this->modelName ])
+				->{"getDefaultTableProvider"}();
+		} else if (is_string($this->provider)) {
+			$object = new $this->provider();
+			if (!$object instanceof ActiveRecord) {
+				throw new \yii\base\Exception("Provider as [string] must be an instance of [ActiveRecord] class");
+			}
+			$this->modelName = $this->provider;
+			$this->provider = $object->getDefaultTableProvider();
+		}
 		if (!$this->provider instanceof TableProvider && is_array($this->data)) {
 			throw new Exception("Table provider must be an instance of TableProvider and don't have to be null");
 		}
@@ -181,7 +230,7 @@ class Table extends Widget {
 			$this->params = unserialize(urldecode($this->params));
 		}
 		if (empty($this->criteria)) {
-			$this->criteria = new ActiveQuery($this->provider->activeRecord);
+			$this->criteria = new ActiveQuery($this->provider);
 		}
 		if (is_string($this->condition) && !empty($this->condition) && is_array($this->parameters)) {
 			$this->criteria->on = $this->condition;
@@ -204,7 +253,23 @@ class Table extends Widget {
 		if (empty($this->orderBy)) {
 			$this->orderBy = $this->primaryKey;
 		}
-		return $this->render("application.widgets.views.Table");
+		$this->data = $this->fetchData();
+		$this->searchCriteria = $this->getSearchCriteria();
+		return $this->render("Table", [
+			"self" => $this
+		]);
+	}
+
+	/**
+	 * Get search criteria for current table provider
+	 * @return string - SQL statement for criteria
+	 */
+	public function getSearchCriteria() {
+		$params = $this->provider->getCriteria()->params;
+		foreach ($params as $key => &$param) {
+			$param = "'$param'";
+		}
+		return strtr($this->provider->getCriteria()->on, $params);
 	}
 
 	/**
@@ -220,24 +285,66 @@ class Table extends Widget {
 		} else if ($this->provider == null && is_array($this->data)) {
 			return $this->data;
 		}
+		$this->provider->getPagination()->optimizedMode = $this->optimizedPagination;
 		$this->provider->getPagination()->currentPage = $this->currentPage;
 		if ($this->pageLimit != null) {
 			$this->provider->getPagination()->pageLimit = $this->pageLimit;
 		}
 		if ($this->condition != null) {
-			$this->provider->getCriteria()->andOnCondition($this->controls);
+			$this->provider->getCriteria()->andOnCondition($this->condition);
 		}
 		if ($this->params != null) {
 			$this->provider->getCriteria()->params += $this->params;
 		}
 		if (is_object($this->criteria)) {
+			$this->provider->getCriteria()->addOrderBy($this->criteria->orderBy);
 			$this->provider->getCriteria()->andOnCondition($this->criteria->on);
-			$this->provider->getCriteria()->addOrderBy($this->criteria);
 		}
 		if (!empty($this->orderBy)) {
 			$this->provider->orderBy = $this->orderBy;
 		}
-		return $this->data = $this->provider->fetchData();
+		if (!empty($this->searchCriteria)) {
+			$this->provider->fetchQuery->where($this->searchCriteria);
+			$this->provider->countQuery->where($this->searchCriteria);
+		}
+		$form = preg_replace('/(^\d*)|(\d*$)/', "", get_class($this->provider->activeRecord))."Form";
+		if (!class_exists($form)) {
+			return $this->data = $this->provider->fetchData();
+		} else {
+			$this->data = $this->provider->fetchData();
+		}
+		$model = new $form($this->provider->activeRecord->getScenario());
+		if (!$model instanceof FormModel) {
+			return $this->data;
+		}
+		foreach ($this->data as &$row) {
+			$this->fetchExtraData($model, $row);
+		}
+		return $this->data;
+	}
+
+	/**
+	 * Fetch extra data from rows and database by model's form
+	 * @param FormModel $form - Database table's form model instance
+	 * @param mixed $row - Array with fetched data
+	 * @throws Exception
+	 */
+	public static function fetchExtraData($form, &$row) {
+		foreach ($form->getConfig() as $key => $config) {
+			if ($config["type"] != "DropDown" || !isset($config["table"])) {
+				$field = FieldCollection::getCollection()->find($config["type"], false);
+				if ($field != null && $field instanceof DropDown) {
+					$row[$key] = $field->getData($row[$key]);
+				}
+			} else {
+				$data = Form::fetch($config["table"]);
+				if (($value = $row[$key]) != null && isset($data[$value])) {
+					$row[$key] = $data[$value];
+				} else {
+					$row[$key] = "Нет";
+				}
+			}
+		}
 	}
 
 	/**
@@ -245,24 +352,28 @@ class Table extends Widget {
 	 * conditions and parameters, need for update requests
 	 */
 	public function renderExtra() {
-		$options = [
+		print Html::renderTagAttributes($options = [
 			"data-class" => get_class($this),
+			"data-widget" => get_class($this),
 			"data-url" => $this->createUrl()
-		];
-		if (!empty($this->criteria->on)) {
-			$options["data-condition"] = $this->criteria->on;
-		}
-		if (!empty($this->provider->getPagination()->pageLimit)) {
-			if ($this->pageLimit !== null) {
-				$options["data-limit"] = $this->pageLimit;
-			} else {
-				$options["data-limit"] = $this->provider->getPagination()->pageLimit;
+		]);
+	}
+
+	/**
+	 * Format data row's cell
+	 * @param string $format - Format string
+	 * @param array $cell - Array with cell data
+	 * @return string - Formatted result
+	 */
+	private function format($format, $cell) {
+		preg_match_all("/%\\{([a-zA-Z_0-9]+)\\}/", $format, $matches);
+		$value = $format;
+		if (count($matches)) {
+			foreach ($matches[1] as $m) {
+				$value = preg_replace("/\\%{{$m}}/", $cell[$m], $value);
 			}
 		}
-		if (!empty($this->criteria->params)) {
-			$options["data-attributes"] = urlencode(serialize($this->criteria->params));
-		}
-		print Html::renderTagAttributes($options);
+		return $value;
 	}
 
 	/**
@@ -279,7 +390,12 @@ class Table extends Widget {
 			}
 			print Html::beginTag("tr", $options);
 			foreach ($this->header as $k => $v) {
-				print Html::tag("td", isset($value[$k]) ? $value[$k] : "", [
+				if (isset($v["format"])) {
+					$val = $this->format($v["format"], $value);
+				} else {
+					$val = isset($value[$k]) ? $value[$k] : "";
+				}
+				print Html::tag("td", $val, [
 					"align" => "left",
 					"class" => "core-table-cell"
 				]);
@@ -293,9 +409,9 @@ class Table extends Widget {
 			} else {
 				$text = $this->textNoData;
 			}
-			print Html::tag("tr", Html::tag("td", [
+			print Html::tag("tr", Html::tag("td", "<b>$text</b>", [
 				"colspan" => count($this->header) + 1
-			], "<b>$text</b>"));
+			]));
 		}
 	}
 
@@ -330,7 +446,7 @@ class Table extends Widget {
 		if (count($this->controls) > 0) {
 			print Html::tag("td", "", [
 				"align" => "middle",
-				"style" => "width: 50px"
+				"style" => "width: {$this->controlsWidth}px"
 			]);
 		}
 		print Html::endTag("tr");
@@ -363,16 +479,37 @@ class Table extends Widget {
 	 * Render table controls for each row
 	 */
 	public function renderControls() {
-		if (!count($this->controls)) {
+		if (!is_array($this->controls) || !count($this->controls)) {
 			return ;
 		}
 		print Html::beginTag("td", [
 			"align" => "middle"
 		]);
-		foreach ($this->controls as $c => $class) {
-			print Html::tag("a", Html::tag("span", [
-				"class" => $class
-			]), [
+		foreach ($this->controls as $c => $attributes) {
+			$options = [];
+			if (is_array($attributes)) {
+				$options["class"] = $attributes["class"];
+				if (isset($attributes["tooltip"])) {
+					$options["onmouseenter"] = "$(this).tooltip('show')";
+					if (is_array($attributes["tooltip"])) {
+						$options["title"] = $attributes["tooltip"]["label"];
+						if (isset($attributes["tooltip"]["placement"])) {
+							$options["data-placement"] = $attributes["tooltip"]["placement"];
+						} else {
+							$options["data-placement"] = $this->tooltipDefaultPlacement;
+						}
+					} else {
+						$options["title"] = $attributes["tooltip"];
+						$options["data-placement"] = $this->tooltipDefaultPlacement;
+					}
+				}
+				if (isset($attributes["options"])) {
+					$options += $attributes["options"];
+				}
+			} else {
+				$options["class"] = $attributes;
+			}
+			print Html::tag("a", Html::tag("span", "", $options), [
 				"href" => "javascript:void(0)",
 				"class" => $c
 			]);
@@ -393,11 +530,11 @@ class Table extends Widget {
 			"class" => "core-table-row"
 		]);
 		print Html::beginTag("td", [
-			"colspan" => count($this->header) - 1,
+			"colspan" => count($this->header) + (!empty($this->controls) ? 0 : -1),
 			"align" => "left"
 		]);
 		if ($this->provider->pagination !== false) {
-			$this->widget("Pagination", [
+			print Pagination::widget([
 				"tablePagination" => $this->provider->getPagination(),
 				"clickAction" => function($page) {
 					return "$(this).table('page', {$page})";
@@ -431,5 +568,43 @@ class Table extends Widget {
 		}
 		print Html::endTag("td");
 		print Html::endTag("tr");
+	}
+
+	/**
+	 * Serialize widget's attributes by all scalar attributes and
+	 * arrays or set your own array with attribute names
+	 *
+	 * Agreement: I hope that you will put serialized attributes
+	 *    in root widget's HTML tag named [data-attributes]
+	 *
+	 * @param array|null $attributes - Array with attributes, which have
+	 *    to be serialized, by default it serializes all scalar attributes
+	 *
+	 * @param array|null $excepts - Array with attributes, that should
+	 * 	be excepted
+	 *
+	 * @return string - Serialized and URL encoded attributes
+	 */
+	public function getSerializedAttributes($attributes = null, $excepts = null) {
+		return parent::getSerializedAttributes($attributes, [
+			/*
+			 * Don't let widget to serialize array
+			 * with data, pff :D
+			 */
+			"data",
+			/*
+			 * Allow this fields only if you want to
+			 * didn't declare custom widget for ur table
+			 */
+			"availableLimits",
+			"tooltipDefaultPlacement",
+			"textNoData",
+			"textEmptyData",
+			/*
+			 * We can't allow widget to set [emptyData] attribute for actions
+			 * like search or update, cuz it will always return empty data
+			 */
+			"emptyData"
+		]);
 	}
 }

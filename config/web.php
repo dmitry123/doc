@@ -78,7 +78,7 @@ $config = [
 				"teacher",
 				"super",
 			],
-			"url" => "doc/file"
+			"url" => "doc/file/view"
 		],
 		"chat" => [
 			"class" => "app\\modules\\chat\\ChatModule",
@@ -111,7 +111,7 @@ $config = [
 				"admin",
 				"super",
 			],
-			"url" => "admin/table"
+			"url" => "admin/table/view"
 		],
 	],
     'params' => $params,

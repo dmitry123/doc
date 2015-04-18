@@ -6,36 +6,58 @@
 ?>
 
 <div class="col-xs-9">
-	<?php \app\widgets\Panel::begin([
+	<?= \app\widgets\Panel::widget([
 		"title" => $self->textList,
+		"body" =>\app\widgets\Table::create([
+			"provider" => get_class($self->tableActiveRecord),
+			"header" => [
+				"file_type_id" => [
+					"label" => "Тип файла",
+					"style" => "width: 125px"
+				],
+				"name" => [
+					"label" => "Наименование"
+				],
+				"upload_date" => [
+					"label" => "Дата загрузки"
+				]
+			],
+			"controls" => [
+				"template-create-icon" => [
+					"class" => "glyphicon glyphicon-list-alt",
+					"tooltip" => "Создать шаблон"
+				],
+				"file-configure-icon" => [
+					"class" => "glyphicon glyphicon-cog",
+					"tooltip" => "Настроить файл"
+				],
+				"file-lock-icon" => [
+					"class" => "glyphicon glyphicon-lock",
+					"tooltip" => "Заблокировать файл"
+				]
+			],
+			"orderBy" => "upload_date",
+			"controlsWidth" => 150
+		]),
 		"bodyClass" => "panel-body text-center no-padding table-widget",
 	]) ?>
-	<?= \app\widgets\AutoTable::widget([
-		"provider" => \app\core\TableProviderAdapter::createProvider(
-			$self->tableActiveRecord, new \app\forms\FileForm("table"), [
-				"keys" => [ "name", "upload_time", "employee_id", "file_status_id" ],
-				"order" => "upload_time desc"
-			]
-		), "controls" => false
-	]) ?>
-	<?php \app\widgets\Panel::end() ?>
 </div>
 <div class="col-xs-3">
 	<?= \app\widgets\Panel::widget([
 		"title" => "Тип файла",
 		"bodyClass" => "panel-body text-center file-type-menu-wrapper",
-		"body" => \app\modules\doc\widgets\FileTypeMenu::widget()
+		"body" => \app\modules\doc\widgets\FileTypeMenu::create([]),
 	]) ?>
 	<?= \app\widgets\Panel::widget([
 		"title" => $self->textInfo,
-		"body" => \app\modules\doc\widgets\AboutFile::widget([])
+		"body" => \app\modules\doc\widgets\AboutFile::create([
+			"id" => null
+		])
 	]) ?>
-	<div class="panel panel-default">
-		<div class="panel-heading">
-			<span><?= $self->textHistory ?></span>
-		</div>
-		<div class="panel-body text-center">
-			<?= \app\modules\doc\widgets\FileHistory::widget([]) ?>
-		</div>
-	</div>
+	<?= \app\widgets\Panel::widget([
+		"title" => $self->textHistory,
+		"body" => \app\modules\doc\widgets\FileHistory::create([
+			"id" => null
+		])
+	]) ?>
 </div>

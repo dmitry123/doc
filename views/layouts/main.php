@@ -17,7 +17,7 @@ app\assets\SiteAsset::register($this);
 	<script type="text/javascript">
 		var doc = {
 			user: {
-				login: <?= "\"".Yii::$app->getSession()->get("USER_LOGIN")."\"\n" ?>,
+				login: <?= "\"".Yii::$app->getSession()->get("USER_LOGIN")."\"" ?>,
 				id: <?= "\"".Yii::$app->getSession()->get("USER_ID")."\"" ?>,
 				email: <?= "\"".Yii::$app->getSession()->get("USER_EMAIL")."\"\n" ?>
 			},
@@ -27,7 +27,8 @@ app\assets\SiteAsset::register($this);
 				name: <?= "\"".Yii::$app->getSession()->get("EMPLOYEE_NAME", "")."\"" ?>,
 				patronymic: <?= "\"".Yii::$app->getSession()->get("EMPLOYEE_PATRONYMIC", "")."\"\n" ?>
 			},
-			url: <?= "\"".Yii::$app->getRequest()->getBaseUrl()."\"\n" ?>
+			url: <?= "\"".Yii::$app->getRequest()->getBaseUrl()."\"" ?>,
+			widget: <?= "\"".\app\core\Widget::createUrl()."\"\n" ?>
 		};
 	</script>
 </head>

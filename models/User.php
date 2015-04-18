@@ -15,15 +15,6 @@ class User extends ActiveRecord implements IdentityInterface {
 	}
 
 	/**
-	 * Find model by it's name
-	 * @param string $class - Name of model class or null (default)
-	 * @return User - Active record class instance
-	 */
-	public static function model($class = null) {
-		return parent::model(__CLASS__);
-	}
-
-	/**
 	 * Get user validation rules
 	 * @return array - Array with validation rules
 	 */

@@ -16,9 +16,9 @@ class TableController extends Controller {
 	 * Default view action
 	 * @throws \Exception
 	 */
-	public function actionIndex() {
+	public function actionView() {
 		try {
-			print $this->render("index", [
+			print $this->render("view", [
 				"self" => $this
 			]);
 		} catch (\Exception $e) {

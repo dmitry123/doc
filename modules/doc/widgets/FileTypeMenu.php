@@ -11,12 +11,12 @@ class FileTypeMenu extends TabMenu {
 	public $items = [
 		"documents" => [
 			"label" => "Документы",
-			"href" => "@web/doc/file",
+			"href" => "@web/doc/file/view",
 			"icon" => "glyphicon glyphicon-book"
 		],
 		"templates" => [
 			"label" => "Шаблоны",
-			"href" => "@web/doc/template",
+			"href" => "@web/doc/template/view",
 			"icon" => "glyphicon glyphicon-list-alt"
 		],
 		"tables" => [

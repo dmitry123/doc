@@ -37,9 +37,11 @@ var Core = Core || {};
 	Panel.prototype.before = function() {
 		this.selector().loading("render").find(".panel-update-button")
 			.rotate(360, 500, "swing");
+		this.selector().trigger("panel.update");
 	};
 
 	Panel.prototype.after = function() {
+		this.selector().trigger("panel.updated");
 		this.selector().loading("destroy");
 	};
 
@@ -47,12 +49,15 @@ var Core = Core || {};
 		var widget, me = this;
 		if (!(widget = this.selector().attr("data-widget"))) {
 			return void 0;
-		} else if (!window["globalVariables"]["getWidget"]) {
-			throw new Error("Layout hasn't declared [globalVariables::getWidget] field via [Widget::createUrl] method");
+		} else if (!Core.Common.getWidget()) {
+			throw new Error("Layout hasn't declared [doc::widget] field via [Widget::createUrl] method");
 		}
 		this.before();
 		var params = $.parseJSON(this.selector().attr("data-attributes"));
-		$.get(window["globalVariables"]["getWidget"], $.extend(params, {
+		if (!params.length) {
+			params = {};
+		}
+		$.get(Core.Common.getWidget(), $.extend(params, {
 			class: this.selector().attr("data-widget")
 		}), function(json) {
 			if (json["status"]) {
@@ -67,7 +72,7 @@ var Core = Core || {};
 		});
 	};
 
-	Core.createPlugin("panel", function(selector, properties) {
+	$.fn.panel = Core.createPlugin("panel", function(selector, properties) {
 		var t;
 		if (!$(selector).hasClass("panel")) {
 			if ((t = $(selector).parents(".panel:eq(0)")).length != 0) {

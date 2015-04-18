@@ -12,7 +12,7 @@ class FilePage extends Widget {
 	 * @var ActiveRecord - Table active record instance for
 	 * 	table provider to display table with files
 	 */
-	public $tableActiveRecord = null;
+	public 	$tableActiveRecord = null;
 
 	/**
 	 * @var string - Text with list of files

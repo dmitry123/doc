@@ -98,7 +98,7 @@ var Core = Core || {};
     /**
      * Get/Set some property
      * @param key {string} - Property key
-     * @param [value] {*} - Property value
+     * @param value  {*} - Property value
      * @returns {*} - New or old property's value
      */
     Component.prototype.property = function(key, value) {
@@ -113,7 +113,7 @@ var Core = Core || {};
      * it will simply remove selector
      */
     Component.prototype.destroy = function() {
-		$.removeData(this.selector(), this.getDataAttribute);
+		$.removeData(this.selector(), this.getDataAttribute());
     };
 
     /**
@@ -127,6 +127,32 @@ var Core = Core || {};
         );
         this.after();
         this.activate();
+    };
+
+    /**
+     * Sub-Component class, use it to declare sub component, that instance
+     * won't be rendered automatically, you shall manually invoke render method
+     * @param component {Component} - Parent component
+     * @param [selector] {jQuery} - jQuery's selector or null
+     * @constructor
+     */
+    var SubComponent = function(component, selector) {
+        this.component = function() {
+            return component;
+        };
+        Component.call(this, {}, {}, selector || true);
+    };
+
+    Core.extend(SubComponent, Component);
+
+    /**
+     * That method will fetch properties values from
+     * parent's component
+     * @param key {String} - Property name
+     * @param value {*} - Property value
+     */
+    SubComponent.prototype.property = function(key, value) {
+        return this.component().property.apply(this.component(), arguments);
     };
 
 	/**
@@ -156,6 +182,15 @@ var Core = Core || {};
 		$(component).find(list.join(",")).val("");
 	};
 
+	/**
+	 * Get url to get widget component
+	 * @returns {String} - Path to widget action
+	 * @static
+	 */
+	Common.getWidget = function() {
+		return window["doc"]["widget"];
+	};
+
 	Core.postFormErrors = function(where, json) {
 		var html = $("<ul>");
 		for (var i in json["errors"] || []) {
@@ -177,6 +212,7 @@ var Core = Core || {};
 	};
 
 	Core.Component = Component;
+	Core.SubComponent = SubComponent;
 	Core.Common = Common;
 
 	/**
@@ -190,20 +226,13 @@ var Core = Core || {};
 	};
 
 	/**
-	 * Create new component via simple interface, which
-	 * accepts only plugin name and properties
-	 * @param plugin {String} - Name of jQuery plugin
-	 * @param obj {{}} - Object with component's prototype
+	 * Create new sub-component, which extends basic
+	 * SubComponent class
+	 * @param component {Function} - New component class
+	 * @returns {Function} - Same component instance
 	 */
-	Core.createClass = function(plugin, obj) {
-		var A = Core.createComponent(function(properties, selector) {
-			Core.Component.call(this, properties, obj["defaults"] || {}, selector);
-			obj["construct"] && obj["construct"].call(this);
-		});
-		A.prototype = $.extend(A.prototype, obj);
-		Core.createPlugin(plugin, function(selector, properties) {
-			return Core.createObject(new A(properties, $(selector)), selector, true);
-		});
+	Core.createSubComponent = function(component) {
+		return Core.extend(component, SubComponent);
 	};
 
     /**
@@ -305,7 +334,8 @@ var Core = Core || {};
 	 * @param func {Function} - Function to execute
 	 */
 	Core.ready = function(func) {
-		$(document).ready(func).bind("ajaxSuccess", func);
+		$(document).ready(func);
+		$(document).bind("ajaxSuccess", func);
 	};
 
     /**
@@ -319,6 +349,19 @@ var Core = Core || {};
 		}
         return window["doc"]["url"] + url;
     };
+
+	window.serialize = function(obj, prefix) {
+		var str = [];
+		for(var p in obj) {
+			if (obj.hasOwnProperty(p)) {
+				var k = prefix ? prefix + "[" + p + "]" : p, v = obj[p];
+				str.push(typeof v == "object" ?
+					serialize(v, k) :
+				encodeURIComponent(k) + "=" + encodeURIComponent(v));
+			}
+		}
+		return str.join("&");
+	};
 
 	$.fn.update = function() {
 		return this.each(function() {

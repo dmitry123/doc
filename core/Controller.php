@@ -217,7 +217,7 @@ abstract class Controller extends \yii\web\Controller {
 	 * new just rendered component. Override that method
 	 * to check necessary privileges and invoke super method
 	 */
-	public function actionGetWidget() {
+	public function actionWidget() {
 		try {
 			// Get widget's class component and unique identification number and method
 			$class = $this->getAndUnset("class");
@@ -285,12 +285,6 @@ abstract class Controller extends \yii\web\Controller {
 	 * @throws ErrorException
 	 */
 	public function createWidget($class, $parameters = []) {
-		if (strpos($class, "/") != 1) {
-			$class = "/app/";
-			foreach ($this->getModules() as $module) {
-				$class .= get_class($module);
-			}
-		}
 		if (!class_exists($class)) {
 			throw new ErrorException("Unresolved widget module or path \"$class\"");
 		}
@@ -449,7 +443,7 @@ abstract class Controller extends \yii\web\Controller {
 	 */
 	public function exception(\Exception $exception) {
 		$method = $exception->getTrace()[0];
-		if (!\Yii::$app->getRequest()->getIsAjax()) {
+		if (!\Yii::$app->getRequest()->getIsAjax() || true) {
 			throw $exception;
 		}
 		$this->leave([

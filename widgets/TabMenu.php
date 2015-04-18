@@ -35,7 +35,9 @@ class TabMenu extends Widget {
 	 * @return string - Just rendered content
 	 */
 	public function run() {
+		ob_start();
 		$this->renderItems($this->items);
+		return ob_get_clean();
 	}
 
 	/**

@@ -1,24 +1,24 @@
 <?php
 /**
- * @var $this yii\web\View
- * @var $content string
  * @var $self app\widgets\Panel
+ * @var $content string
+ * @var $widget string
+ * @var $parameters string
  */
 ?>
-<div class="<?= $self->panelClass ?>" data-core="panel">
-	<div class="<?= $self->headingClass ?>">
-		<div class="col-xs-10 text-left no-padding">
-			<?= $self->title ?>
+
+<div class="<?= $self->panelClass ?>" id="<?= $self->id ?>" <?= !empty($widget) ? "data-widget=\"$widget\"" : "" ?> <?= !empty($parameters) ? "data-attributes=\"$parameters\"" : "" ?>>
+    <div class="<?= $self->headingClass ?>">
+		<div class="<?= $self->titleWrapperClass ?>">
+			<span class="<?= $self->titleClass ?>"><?= $self->title ?></span>
 		</div>
-		<div class="col-xs-2 text-right no-padding">
-			<?php if ($self->update != false): ?>
-				<span class="glyphicon glyphicon-refresh doc-file-type-refresh-icon" onclick="$('this').panel('update')"></span>
-			<?php endif ?>
+		<div class="<?= $self->controlsWrapperClass ?>">
+			<?php $self->renderControls() ?>
 		</div>
-	</div>
-	<div class="<?= $self->bodyClass ?>">
+    </div>
+    <div class="<?= $self->bodyClass ?>">
 		<div class="row no-padding no-margin">
-			<div class="col-xs-12 no-padding no-margin panel-content">
+			<div class="<?= $self->contentClass ?>">
 				<?= $content ?>
 			</div>
 		</div>

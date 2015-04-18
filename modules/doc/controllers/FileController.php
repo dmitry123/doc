@@ -14,9 +14,9 @@ class FileController extends Controller {
 	 * Default index action
 	 * @throws \Exception
 	 */
-	public function actionIndex() {
+	public function actionView() {
 		try {
-			return $this->render("index", [
+			return $this->render("view", [
 			]);
 		} catch (\Exception $e) {
 			return $this->exception($e);

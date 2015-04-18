@@ -6,10 +6,10 @@ var Core = Core || {};
 
 	var Loading = Core.createComponent(function(properties, selector) {
 		Core.Component.call(this, properties, {
-			image: url("/img/ajax-loader.gif"),
+			image: url("/img/ajax-loader2.gif"),
 			depth: 1000,
-			width: 50,
-			height: 50,
+			width: 150,
+			height: 25,
 			velocity: "fast",
 			color: "lightgray"
 		}, selector);
@@ -77,7 +77,7 @@ var Core = Core || {};
 		});
     };
 
-    Core.createPlugin("loading", function(selector, properties) {
+	$.fn.loading = Core.createPlugin("loading", function(selector, properties) {
 		if (!$(selector).data("core-loading") || !$(selector).data("core-loading").image) {
 			return Core.createObject(new Loading(properties, $(selector)), selector, true);
 		} else {

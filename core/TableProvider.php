@@ -3,9 +3,9 @@
 namespace app\core;
 
 use Exception;
-use TablePagination;
 use yii\db\ActiveQuery;
 use yii\db\Connection;
+use yii\db\Query;
 
 class TableProvider {
 
@@ -41,15 +41,15 @@ class TableProvider {
 	/**
 	 * Construct table provider with [tableName] check
 	 * @param ActiveRecord|string $activeRecord - Active record instance
-	 *    or class name
+	 *  or class name
 	 * @param ActiveQuery $fetchQuery - Query to fetch rows from
-	 *    database's table
-	 * @param ActiveQuery $countQuery - Query to count rows from
-	 *    database's table
+	 *  database's table
+	 * @param array|null $config - Array with classes table provider
+	 * 	configuration
 	 * @throws Exception
 	 * @see activeRecord
 	 */
-	public function __construct($activeRecord = null, $fetchQuery = null, $countQuery = null) {
+	public function __construct($activeRecord = null, $fetchQuery = null, $config = null) {
 		if (($this->activeRecord = $activeRecord) == null) {
 			throw new Exception("Table provider can't resolve [null] active record instance");
 		}
@@ -61,13 +61,15 @@ class TableProvider {
 		} else {
 			$this->fetchQuery = $fetchQuery;
 		}
-		if ($countQuery == null) {
-			$this->countQuery = $this->getCountQuery();
-		} else {
-			$this->countQuery = $countQuery;
-		}
+		$this->countQuery = clone $this->fetchQuery;
+		$this->countQuery->select("count(1) as count");
 		if ($this->pagination !== false) {
 			$this->pagination = $this->getPagination();
+		}
+		if ($config !== null) {
+			foreach ($config as $key => $value) {
+				$this->$key = $value;
+			}
 		}
 	}
 
@@ -81,19 +83,7 @@ class TableProvider {
 			return $this->fetchQuery;
 		}
 		return $this->activeRecord->find()->select("*")
-			->from($this->activeRecord->tableName());
-	}
-
-	/**
-	 * Override that method to return count of rows in table
-	 * @return ActiveQuery - Command to get count of rows
-	 */
-	public function getCountQuery() {
-		if ($this->countQuery !== null) {
-			return $this->countQuery;
-		}
-		return $this->activeRecord->find()->select("count(1)")
-			->from($this->activeRecord->tableName());
+			->from($this->activeRecord->getTableName());
 	}
 
 	/**
@@ -101,8 +91,21 @@ class TableProvider {
 	 * @return array - Array with fetched data
 	 */
 	public function fetchData() {
-		$this->applyCriteria($this->getCriteria());
-		if (($row = $this->countQuery->createCommand()->query()) != null) {
+		$this->fetchQuery = (new Query())->select("*")
+			->from("(". $this->fetchQuery->createCommand()->getRawSql() .") as _");
+		$this->countQuery = (new Query())->select("*")
+			->from("(". $this->countQuery->createCommand()->getRawSql() .") as _");
+		if ($this->getPagination()->optimizedMode) {
+			$this->applyCriteria($this->getCriteria(), function($query) {
+				/** @var $query ActiveQuery */
+				$query->limit($this->getPagination()->pageLimit + 1,
+					$this->getPagination()->pageLimit * $this->getPagination()->currentPage
+				);
+			});
+		} else {
+			$this->applyCriteria($this->getCriteria());
+		}
+		if (($row = $this->countQuery->one()) != null) {
 			$count = $row["count"];
 		} else {
 			$count = 0;
@@ -111,42 +114,45 @@ class TableProvider {
 		$this->fetchQuery->limit($this->getPagination()->getLimit(),
 			$this->getPagination()->getOffset()
 		);
-		return $this->fetchQuery->createCommand()
-			->queryAll();
+		return $this->fetchQuery->all();
 	}
 
 	/**
 	 * Apply criteria to provider's query
 	 * @param ActiveQuery $criteria - Database criteria
+	 * @param callable $custom - Custom function for count query
 	 * @return ActiveQuery - Same criteria instance
 	 */
-	public function applyCriteria($criteria) {
-		$queries = [
-			$this->countQuery,
-			$this->fetchQuery
-		];
+	public function applyCriteria($criteria, $custom = null) {
+		if ($custom == null) {
+			$queries = [
+				$this->countQuery,
+				$this->fetchQuery
+			];
+		} else {
+			$queries = [
+				$this->fetchQuery
+			];
+			$custom($this->countQuery);
+		}
 		foreach ($queries as $query) {
 			/** @var $query ActiveQuery */
 			$query->where($criteria->on, $criteria->params);
 		}
-		if (!empty($criteria->orderBy)) {
-			$this->fetchQuery->addOrderBy($criteria->orderBy);
-		}
-		if (!empty($this->orderBy)) {
-			$this->fetchQuery->addOrderBy($this->orderBy);
-		}
+		$this->fetchQuery->orderBy($criteria->orderBy)
+			->orderBy($this->orderBy);
 		return $criteria;
 	}
 
 	/**
-	 * Get criteria for current provider
+	 * Get criteria ActiveQuery current provider
 	 * @return ActiveQuery|null - Database criteria
 	 */
 	public function getCriteria() {
 		if ($this->_criteria == null) {
-			return $this->_criteria = $this->activeRecord->find()->orderBy(
-				$this->activeRecord->getTableSchema()->primaryKey
-			);
+			$this->_criteria = new ActiveQuery($this->activeRecord);
+			$this->_criteria->orderBy($this->activeRecord->getTableSchema()->primaryKey);
+			return $this->_criteria;
 		} else {
 			return $this->_criteria;
 		}
@@ -169,7 +175,7 @@ class TableProvider {
 	 * @return Connection - Database connection
 	 */
 	public function getDbConnection() {
-		return \Yii::$app->db;
+		return \Yii::$app->getDb();
 	}
 
 	private $_criteria = null;
