@@ -22,7 +22,7 @@ var DocMenu = {
         }
         var errors = json["errors"];
         for (var i in errors) {
-            Doc.createMessage({
+            Core.createMessage({
                 message: i + ": " + errors[i],
                 delay: 7000
             });
