@@ -35,8 +35,12 @@ var Core = Core || {};
 	};
 
 	Panel.prototype.before = function() {
-		this.selector().loading("render").find(".panel-update-button")
-			.rotate(360, 500, "swing");
+		var refresh = this.selector().loading("render").find(".panel-update-button");
+		if (refresh[0].tagName != "SPAN") {
+			refresh.children(".glyphicon").rotate(360, 500, "swing");
+		} else {
+			refresh.rotate(360, 500, "swing");
+		}
 		this.selector().trigger("panel.update");
 	};
 

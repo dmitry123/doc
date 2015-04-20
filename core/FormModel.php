@@ -40,7 +40,7 @@ abstract class FormModel extends Model {
 	 * @param string $scenario - Scenario
 	 * @return FormModel - New form model instance
 	 */
-	public function getClone($scenario = "") {
+	public function copyOf($scenario = "") {
 		$clone = clone $this;
 		$clone->setScenario($scenario);
 		return $clone;

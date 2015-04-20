@@ -30,4 +30,10 @@ class FileTypeMenu extends TabMenu {
 			"icon" => "glyphicon glyphicon-camera"
 		],
 	];
+
+	public $id = "file-type-menu";
+
+	public function init() {
+
+	}
 }

@@ -54,13 +54,13 @@ class Panel extends Widget {
 	 * @var string - Classes for heading's title
 	 * 	div container
 	 */
-	public $titleWrapperClass = "col-xs-10 text-left no-padding";
+	public $titleWrapperClass = "col-xs-9 text-left no-padding";
 
 	/**
 	 * @var string - Classes for control container which
 	 * 	separated after title container
 	 */
-	public $controlsWrapperClass = "col-xs-2 text-right no-padding";
+	public $controlsWrapperClass = "col-xs-3 text-right no-padding";
 
 	/**
 	 * @var string - Classes for panel's title, which separated
@@ -152,6 +152,11 @@ class Panel extends Widget {
 	 */
 	public function renderControls() {
 		foreach ($this->controls as $class => $options) {
+			if (isset($options["label"])) {
+				$tag = "button";
+			} else {
+				$tag = "span";
+			}
 			if (!isset($options["class"])) {
 				$options["class"] = "panel-control-button $class";
 			} else {
@@ -164,7 +169,7 @@ class Panel extends Widget {
 					"data-placement" => "left"
 				];
 			}
-			print Html::tag("span", "", $options);
+			print Html::tag($tag, isset($options["label"]) ? $options["label"] : "", $options);
 		}
 	}
 

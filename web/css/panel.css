@@ -9,8 +9,15 @@
     padding-right: 10px;
 }
 
-.panel-control-button:hover {
+.panel-control-button:hover:not(button) {
     color: #337ab6;
+}
+
+.panel-control-button:not(:first-child) {
+    margin-left: 2px;
+}
+.panel-control-button:not(:last-child) {
+    margin-right: 2px;
 }
 
 .panel-content > *:first-child {

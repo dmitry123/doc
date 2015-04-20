@@ -378,7 +378,7 @@ var Core = Core || {};
 		}
 	};
 
-	Core.createPlugin("multiple", function(selector, properties) {
+	$.fn.multiple = Core.createPlugin("multiple", function(selector, properties) {
 		if (!$(selector).hasClass("multiple-value")) {
 			return Core.createObject(new Multiple(properties, $(selector)), selector, true);
 		} else {

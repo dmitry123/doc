@@ -103,7 +103,7 @@ class Widget extends \yii\base\Widget {
 	 */
 	public function init() {
 		if (!empty($this->id)) {
-			return;
+			return ;
 		}
 		$this->id = UniqueGenerator::generate(
 			strtolower(basename(get_called_class()))

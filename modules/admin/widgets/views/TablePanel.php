@@ -1,13 +1,18 @@
 <?php
-use app\modules\admin\widgets\TablePanel;
 /**
  * @var $this yii\web\View
- * @var $self TablePanel
+ * @var $self app\modules\admin\widgets\TablePanel
  */
+if (empty($self->form)) {
+
+} else {
+
+}
+
 print \app\widgets\Modal::widget([
 	"title" => "Добавить значение",
 	"body" => \app\widgets\Form::widget([
-		"model" => $self->form->getClone("admin.table.register"),
+		"model" => $self->form->copyOf("admin.table.register"),
 		"id" => "table-save-form"
 	]),
 	"buttons" => [
@@ -22,7 +27,7 @@ print \app\widgets\Modal::widget([
 print \app\widgets\Modal::widget([
 	"title" => "Редактировать значение",
 	"body" => \app\widgets\Form::widget([
-		"model" => $self->form->getClone("admin.table.update"),
+		"model" => $self->form->copyOf("admin.table.update"),
 		"id" => "table-update-form"
 	]),
 	"buttons" => [
@@ -35,7 +40,6 @@ print \app\widgets\Modal::widget([
 	"id" => "table-update-modal"
 ]); ?>
 
-<span class="loading-image"></span>
 <div class="panel panel-default table-view">
 	<div class="panel-heading row">
 		<div class="col-xs-12">
@@ -48,10 +52,10 @@ print \app\widgets\Modal::widget([
 		</div>
 	</div>
 	<div class="panel-body table-widget">
-		<?= \app\widgets\AutoTable::widget([
-			"provider" => \app\core\TableProviderAdapter::createProvider(
-				$self->model, $self->form
-			)
-		]) ?>
+		<?php if (!empty($self->form)): ?>
+			<?= \app\widgets\AutoTable::widget([
+				"form" => $self->form
+			]) ?>
+		<?php endif ?>
 	</div>
 </div>

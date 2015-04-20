@@ -10,7 +10,7 @@ var TablePanel = {
 			table: table
 		}, function(json) {
 			if (!json["status"]) {
-				return Doc.createMessage({
+				return Core.createMessage({
 					message: json["message"]
 				});
 			}
@@ -21,18 +21,18 @@ var TablePanel = {
 	}
 };
 
-var TableView = {
+var TableMenu = {
 	ready: function() {
 		var me = this;
-		$(".table-panel-wrapper li[data-table] a").click(function() {
+		$("#admin-table-menu").on("click", "li[data-table] a", function() {
 			var that = this;
-            var table = $(this).parent().data("table");
-            if (!table) {
-                return void 0;
-            }
+			var table = $(this).parent().data("table");
+			if (!table) {
+				return void 0;
+			}
 			var image;
 			$(this).append(image = $("<img>", {
-				src: "../img/ajax-loader.gif",
+				src: url("img/ajax-loader.gif"),
 				css: {
 					"height": "20px"
 				}
@@ -43,7 +43,7 @@ var TableView = {
 					$(this).remove();
 				});
 			});
-            window.location.hash = "#" + table;
+			window.location.hash = "#" + table;
 		});
         if (window.location.hash != "") {
             var h = window.location.hash.substr(1).split("/");
@@ -112,5 +112,5 @@ var TableView = {
 
 $(document).ready(function() {
 	TablePanel.ready();
-	TableView.ready();
+	TableMenu.ready();
 });

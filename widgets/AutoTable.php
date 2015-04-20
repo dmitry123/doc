@@ -7,20 +7,14 @@ use app\core\FieldCollection;
 use app\core\FormModel;
 use app\core\TableProvider;
 use app\core\Widget;
+use yii\base\Exception;
 
-class AutoTable extends Widget {
-
-	/**
-	 * @var TableProvider - Instance of model, which extends
-	 * 	TableProvider class
-	 * @see app\widgets\Table::provider
-	 */
-	public $provider = null;
+class AutoTable extends Table {
 
 	/**
 	 * @var array - Array with control configuration, same
 	 * 	as [Table::controls]
-	 * @see app\widgets\Table::$controls
+	 * @see app\widgets\Table::controls
 	 */
 	public $controls = [
 		"edit" => [
@@ -50,15 +44,19 @@ class AutoTable extends Widget {
 	 * 	displayed, by default it uses all fields from [form]
 	 * @see form
 	 */
-	public $keys = null;
+	public $keys = [ "*" ];
 
 	/**
 	 * Run widget
 	 * @return string - Rendered content
+	 * @throws Exception
 	 * @throws \yii\base\ErrorException
 	 */
-	public function run() {
+	public function init() {
 		$columns = [];
+		if (!$this->form instanceof FormModel) {
+			throw new Exception("Form must be an instance of FormModel class");
+		}
 		foreach ($this->form->getConfig() as $key => $config) {
 			if (isset($config["hidden"]) && $config["hidden"] || isset($config["type"]) && $config["type"] == "hidden") {
 				continue;
@@ -69,15 +67,12 @@ class AutoTable extends Widget {
 				];
 			}
 		}
-		$data = $this->provider->fetchData();
-		return \app\widgets\Table::widget([
-			"controls" => $this->controls,
-			"data" => $this->fetchExtraData($columns, $data),
-			"columns" => $columns,
-		]);
+		$this->provider = $this->
+		$this->header = $columns;
+		parent::init();
 	}
 
-	public function fetchExtraData(array $columns, array& $data) {
+	public function fetchExtraDataEx(array $columns, array& $data) {
 		$form = $this->form;
 		foreach ($columns as $key => $column) {
 			try {

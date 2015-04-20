@@ -1,27 +1,31 @@
 <?php
 /**
- * @var $this View
+ * @var $this yii\web\View
  */
-use yii\web\View;
-
-print \app\widgets\Modal::widget([
-	"title" => "Редактирование \"<span></span>\"",
-	"buttons" => [
-		"table-save-button" => [
-			"text" => " Сохранить",
-			"class" => "btn btn-primary",
-			"type" => "submit"
-		]
-	],
-	"id" => "table-edit-modal"
-]); ?>
+?>
 
 <div class="col-xs-9 admin-table-panel-wrapper">
-	<?= \app\modules\admin\widgets\TablePanel::widget([
-		"model" => new \app\models\User(),
-		"form" => new \app\forms\UserForm("table")
+	<?= \app\widgets\Panel::widget([
+		"title" => "Список текущих значений",
+		"body" => \app\modules\admin\widgets\TablePanel::create(),
+		"controls" => [
+			"panel-update-button" => [
+				"class" => "btn btn-default btn-sm",
+				"label" => "<span class=\"glyphicon glyphicon-refresh\"></span>&nbsp;&nbsp;Обновить",
+				"onclick" => "$(this).panel('update')",
+			],
+			"panel-insert-button" => [
+				"class" => "btn btn-primary btn-sm",
+				"label" => "<span class=\"glyphicon glyphicon-plus\"></span>&nbsp;&nbsp;Добавить",
+				"onclick" => "$('#table-save-modal').modal('show')",
+			]
+		]
 	]) ?>
 </div>
 <div class="col-xs-3">
-	<?= \app\modules\admin\widgets\TableView::widget() ?>
+	<?= \app\widgets\Panel::widget([
+		"title" => "Таблицы",
+		"body" => \app\modules\admin\widgets\TableMenu::create(),
+		"id" => "admin-table-menu"
+	]) ?>
 </div>

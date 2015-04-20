@@ -23,8 +23,14 @@ class TablePanel extends Widget {
 	 * @return string - Just rendered content
 	 */
 	public function run() {
-		return $this->render("TablePanel", [
-			"self" => $this
-		]);
+		if (!empty($this->form)) {
+			return $this->render("TablePanel", [
+				"self" => $this
+			]);
+		} else {
+			return \yii\helpers\Html::tag("h4", "Таблица не выбрана", [
+				"class" => "text-center"
+			]);
+		}
 	}
 }

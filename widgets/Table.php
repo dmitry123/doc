@@ -86,7 +86,7 @@ class Table extends Widget {
 	 * @var array - Array with elements controls buttons, like edit
 	 * 	or remove. Array's key is class for [a] tag and value is
 	 * 	class for [span] tag like glyphicon or button
-	 * @see renderControls
+	 * @see Table::renderControls
 	 */
 	public $controls = [];
 

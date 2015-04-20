@@ -57,6 +57,10 @@ class FileForm extends FormModel {
 				"label" => "Время загрузки",
 				"type" => "text"
 			],
+			"upload_date" => [
+				"label" => "Дата загрузки",
+				"type" => "text"
+			],
 			"parent_id" => [
 				"label" => "Предыдущая версия",
 				"type" => "number"
@@ -99,6 +103,7 @@ class FileForm extends FormModel {
 	public $path;
 	public $employee_id;
 	public $upload_time;
+	public $upload_date;
 	public $parent_id;
 	public $file_status_id;
 	public $file_type_id;
