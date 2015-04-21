@@ -13,33 +13,51 @@ class TableMenu extends Widget {
 	 * @var array - List with tables to display
 	 */
 	public $list = [
-		"core.department" => [
-			"name" => "Кафедры"
+		"core.access" => [
+			"label" => "Уровни доступа"
 		],
-		"core.file" => [
-			"name" => "Файлы"
+		"core.city" => [
+			"label" => "Города"
+		],
+		"core.country" => [
+			"label" => "Страны"
+		],
+		"core.department" => [
+			"label" => "Кафедры"
 		],
 		"core.employee" => [
-			"name" => "Сотрудники"
+			"label" => "Сотрудники"
+		],
+		"core.file" => [
+			"label" => "Файлы"
+		],
+		"core.file_status" => [
+			"label" => "Статусы файлов"
+		],
+		"core.file_type" => [
+			"label" => "Типы файлов"
 		],
 		"core.institute" => [
-			"name" => "Институты"
+			"label" => "Институты"
 		],
-		"doc.log" => [
-			"name" => "Логи"
+		"core.mime_type" => [
+			"label" => "Расширения файлов"
 		],
 		"core.phone" => [
-			"name" => "Телефоны"
+			"label" => "Телефоны"
 		],
 		"core.privilege" => [
-			"name" => "Привилегии"
+			"label" => "Привилегии"
+		],
+		"core.region" => [
+			"label" => "Регионы"
 		],
 		"core.role" => [
-			"name" => "Роли"
+			"label" => "Роли"
 		],
 		"core.user" => [
-			"name" => "Пользователи"
-		]
+			"label" => "Пользователи"
+		],
 	];
 
 	/**
@@ -49,13 +67,15 @@ class TableMenu extends Widget {
 		foreach ($this->list as $key => &$table) {
 			$this->parseKey($key, $t, $s);
 			$table["info"] = PostgreSQL::findColumnNamesAndTypes($t, $s);
+			$table["schema"] = $s;
 			$table["table"] = $t;
-			$class = "app\\forms\\".Inflector::id2camel($t, "_")."form";
+			$class = $table["form"] = "app\\forms\\".Inflector::id2camel($t, "_")."form";
+			$table["model"] = "app\\models\\".Inflector::id2camel($t, "_");
 			if (!class_exists($class)) {
 				continue;
 			}
 			/** @var FormModel $i */
-			$i = new $class("table");
+			$i = new $class();
 			$config = $i->getConfig();
 			foreach ($table["info"] as &$info) {
 				if (!isset($config[$info["name"]])) {
@@ -65,7 +85,7 @@ class TableMenu extends Widget {
 			}
 		}
 		uasort($this->list, function($left, $right) {
-			return strcasecmp($left["name"], $right["name"]);
+			return strcasecmp($left["label"], $right["label"]);
 		});
 		return $this->render("TableMenu", [
 			"self" => $this

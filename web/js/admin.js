@@ -5,7 +5,7 @@ var TablePanel = {
             $("#table-save-modal").modal();
         });
 	},
-	load: function(table, after) {
+	load: function(table, success) {
 		$.get(url("admin/table/load"), {
 			table: table
 		}, function(json) {
@@ -14,9 +14,9 @@ var TablePanel = {
 					message: json["message"]
 				});
 			}
-			$(".admin-table-panel-wrapper")
+			$("#admin-table-view-panel .panel-body")
 				.empty().append(json["component"]);
-			after && after.call();
+			success && success.call();
 		}, "json");
 	}
 };
@@ -24,13 +24,21 @@ var TablePanel = {
 var TableMenu = {
 	ready: function() {
 		var me = this;
-		$("#admin-table-menu").on("click", "li[data-table] a", function() {
-			var that = this;
-			var table = $(this).parent().data("table");
-			if (!table) {
-				return void 0;
-			}
+		$("#admin-table-menu").on("click", "li > a", function() {
+			var that = this,
+				table = $(this).parent().attr("data-table"),
+				form = $(this).parent().attr("data-form"),
+				model = $(this).parent().attr("data-model");
 			var image;
+			if (!table || !form || !model) {
+				return Core.createMessage({
+					message: "Не реализовано"
+				});
+			}
+			$("#admin-table-view-panel").attr("data-attributes", JSON.stringify({
+				model: model,
+				form: form
+			}));
 			$(this).append(image = $("<img>", {
 				src: url("img/ajax-loader.gif"),
 				css: {
@@ -47,7 +55,7 @@ var TableMenu = {
 		});
         if (window.location.hash != "") {
             var h = window.location.hash.substr(1).split("/");
-            $("li[data-table='" + h[0] + "'] a").trigger("click");
+            $("li[data-table='" + h[0] + "'] > a").trigger("click");
             if (h.length > 1) {
                 $("li[data-column='" + h[1] + "']").trigger("click");
             }

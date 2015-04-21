@@ -43,8 +43,8 @@ class TableController extends Controller {
 			}
 			$this->leave([
 				"component" => TablePanel::widget([
-					"model" => new $model(),
-					"form" => new $form("table")
+					"model" => $model,
+					"form" => $form
 				])
 			]);
 		} catch (\Exception $e) {

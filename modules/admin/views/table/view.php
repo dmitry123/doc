@@ -7,6 +7,7 @@
 <div class="col-xs-9 admin-table-panel-wrapper">
 	<?= \app\widgets\Panel::widget([
 		"title" => "Список текущих значений",
+		"id" => "admin-table-view-panel",
 		"body" => \app\modules\admin\widgets\TablePanel::create(),
 		"controls" => [
 			"panel-update-button" => [
@@ -19,7 +20,8 @@
 				"label" => "<span class=\"glyphicon glyphicon-plus\"></span>&nbsp;&nbsp;Добавить",
 				"onclick" => "$('#table-save-modal').modal('show')",
 			]
-		]
+		],
+		"bodyClass" => "panel-body no-margin no-padding"
 	]) ?>
 </div>
 <div class="col-xs-3">

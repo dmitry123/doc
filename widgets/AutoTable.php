@@ -2,12 +2,14 @@
 
 namespace app\widgets;
 
+use app\core\ActiveRecord;
 use app\core\DropDown;
 use app\core\FieldCollection;
 use app\core\FormModel;
 use app\core\TableProvider;
 use app\core\Widget;
 use yii\base\Exception;
+use yii\web\ConflictHttpException;
 
 class AutoTable extends Table {
 
@@ -19,19 +21,21 @@ class AutoTable extends Table {
 	public $controls = [
 		"edit" => [
 			"tag" => "span",
-			"options" => [
-				"class" => "glyphicon glyphicon-pencil pointer",
-				"style" => "margin-left: 5px; margin-right: 5px"
-			]
+			"class" => "glyphicon glyphicon-pencil pointer",
+			"style" => "margin-left: 5px; margin-right: 5px"
 		],
 		"delete" => [
 			"tag" => "span",
-			"options" => [
-				"class" => "glyphicon glyphicon-remove confirm-delete pointer",
-				"style" => "margin-left: 5px; margin-right: 5px; color: #7b1010"
-			]
+			"class" => "glyphicon glyphicon-remove confirm-delete pointer",
+			"style" => "margin-left: 5px; margin-right: 5px; color: #7b1010"
 		]
 	];
+
+	/**
+	 * @var ActiveRecord - Instance of active record instance
+	 * 	for current table
+	 */
+	public $model = null;
 
 	/**
 	 * @var FormModel - Table's form model instance with fields
@@ -54,6 +58,9 @@ class AutoTable extends Table {
 	 */
 	public function init() {
 		$columns = [];
+		if (!$this->model instanceof ActiveRecord) {
+			throw new Exception("Model must be an instance of ActiveRecord class");
+		}
 		if (!$this->form instanceof FormModel) {
 			throw new Exception("Form must be an instance of FormModel class");
 		}
@@ -67,8 +74,8 @@ class AutoTable extends Table {
 				];
 			}
 		}
-		$this->provider = $this->
 		$this->header = $columns;
+		$this->provider = $this->model->getDefaultTableProvider();
 		parent::init();
 	}
 
