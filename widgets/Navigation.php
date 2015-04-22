@@ -2,6 +2,7 @@
 
 namespace app\widgets;
 
+use app\core\EmployeeManager;
 use app\core\Module;
 use app\core\Widget;
 use app\models\Employee;
@@ -9,17 +10,6 @@ use app\models\Role;
 use yii\helpers\Html;
 
 class Navigation extends Widget {
-
-	public $menu = [
-		"admin" => [
-			"label" => "Администратор",
-			"items" => [
-				"admin/tables" => "Таблица",
-				"admin/statistics" => "Статистика"
-			],
-			"roles" => [ "admin" ]
-		]
-	];
 
 	/**
 	 * Run widget
@@ -55,6 +45,10 @@ class Navigation extends Widget {
 			} else {
 				$item["options"] = [ "id" => $key ];
 			}
+			if (isset($item["options"]["href"])) {
+				$item["options"]["href"] = \Yii::$app->getUrlManager()
+					->createUrl($item["options"]["href"]);
+			}
 			if (!isset($item["url"])) {
 				$item["url"] = "javascript:void(0)";
 			}
@@ -84,7 +78,7 @@ class Navigation extends Widget {
 			}
 			print Html::beginTag("li", $c);
 			print \yii\helpers\Html::tag("a", $item["label"], $item["options"] + [
-					"href" => $item["url"]
+					"href" => \Yii::$app->getUrlManager()->createUrl($item["url"])
 				]);
 			if (isset($item["items"]) && count($item["items"]) > 0) {
 				print Html::beginTag("ul", [

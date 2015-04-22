@@ -21,6 +21,7 @@ class Widget extends \yii\base\Widget {
 		} else {
 			print $this->run();
 		}
+		return false;
 	}
 
 	/**
@@ -38,7 +39,6 @@ class Widget extends \yii\base\Widget {
 			throw new Exception("Widget must be an instance of app\\core\\Widget class");
 		}
 		$w->_config = $config;
-		$w->init();
 		return $w;
 	}
 

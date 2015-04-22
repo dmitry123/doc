@@ -60,7 +60,7 @@ class TabMenu extends Widget {
 			$options = [
 				"role" => "presentation"
 			];
-			if (!strcasecmp(\Yii::$app->requestedRoute, preg_replace("/^@web\\//", "", $item["href"]))) {
+			if (!strcasecmp(\Yii::$app->requestedRoute, preg_replace("/^@web\\//", "", $href))) {
 				$options["class"] = "$class active";
 			} else {
 				$options["class"] = $class;
@@ -68,8 +68,14 @@ class TabMenu extends Widget {
 			if (isset($item["items"]) && count($item["items"]) > 0) {
 				$options["class"] .= " dropdown";
 			}
+			if (isset($item["label"])) {
+				$label = $item["label"];
+			} else {
+				$label = "";
+			}
+			unset($item["label"]);
 			print Html::beginTag("li", $options);
-			print Html::a($item["label"], $href);
+			print Html::a($label, $href, $item);
 			if (isset($item["items"]) && count($item["items"]) > 0) {
 				$this->renderItems($item["items"], false);
 			}

@@ -21,7 +21,7 @@
 				"onclick" => "$('#table-save-modal').modal('show')",
 			]
 		],
-		"bodyClass" => "panel-body no-margin no-padding"
+		"bodyClass" => "panel-body no-padding panel-body-fix"
 	]) ?>
 </div>
 <div class="col-xs-3">

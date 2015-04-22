@@ -39,13 +39,13 @@
 		"orderBy" => "upload_date",
 		"controlsWidth" => 150
 	]),
-	"bodyClass" => "panel-body text-center no-padding table-widget",
+	"bodyClass" => "panel-body text-center no-padding table-widget panel-body-fix",
 ]) ?>
 </div>
 <div class="col-xs-3">
 <?= \app\widgets\Panel::widget([
 	"title" => "Тип файла",
-	"bodyClass" => "panel-body text-center file-type-menu-wrapper",
+	"bodyClass" => "panel-body text-center file-type-menu-wrapper panel-body-fix",
 	"body" => \app\modules\doc\widgets\FileTypeMenu::create([]),
 ]) ?>
 <hr>

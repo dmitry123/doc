@@ -20,17 +20,6 @@ use yii\web\View;
 	</ul>
 	<ul class="nav navbar-nav navbar-right">
 		<?php $self->renderItem($menu) ?>
-		<?php if ($admin): ?>
-		<li>
-			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-				Администратор&nbsp;<span class="caret"><span class="sr-only"></span></span>
-			</a>
-			<ul class="dropdown-menu" role="menu">
-				<li><a href="<?= \yii\helpers\Url::to("@web/admin/statistic") ?>">Статистика</a></li>
-				<li><a href="<?= \yii\helpers\Url::to("@web/admin/table") ?>">Таблицы</a></li>
-			</ul>
-		</li>
-		<?php endif; ?>
 		<li class="dropdown">
 			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
 				<span class="glyphicon glyphicon-user"></span>

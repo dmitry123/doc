@@ -42,7 +42,7 @@ class Panel extends Widget {
 	 * @var string - Style of panel's body, you can
 	 * 	add [no-padding] style to remove panel's body padding
 	 */
-	public $bodyClass = "panel-body";
+	public $bodyClass = "panel-body panel-body-fix";
 
 	/**
 	 * @var string - Classes for panel's content block, which

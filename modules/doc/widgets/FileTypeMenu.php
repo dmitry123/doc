@@ -2,38 +2,22 @@
 
 namespace app\modules\doc\widgets;
 
+use app\models\FileType;
 use app\widgets\TabMenu;
 
 class FileTypeMenu extends TabMenu {
 
 	public $style = self::STYLE_PILLS_STACKED;
-
-	public $items = [
-		"documents" => [
-			"label" => "Документы",
-			"href" => "@web/doc/file/view",
-			"icon" => "glyphicon glyphicon-book"
-		],
-		"templates" => [
-			"label" => "Шаблоны",
-			"href" => "@web/doc/template/view",
-			"icon" => "glyphicon glyphicon-list-alt"
-		],
-		"tables" => [
-			"label" => "Таблицы",
-			"href" => "#",
-			"icon" => "glyphicon glyphicon-list-alt"
-		],
-		"images" => [
-			"label" => "Изображения",
-			"href" => "#",
-			"icon" => "glyphicon glyphicon-camera"
-		],
-	];
-
 	public $id = "file-type-menu";
 
 	public function init() {
-
+		$types = FileType::findNotUnknown(["unknown"]);
+		foreach ($types as $type) {
+			$this->items[] = [
+				"label" => $type->name,
+				"data-id" => $type->id
+			];
+		}
+		parent::init();
 	}
 }

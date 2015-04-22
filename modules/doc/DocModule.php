@@ -8,10 +8,10 @@ class DocModule extends Module {
 
 	public $menu = [
 		"menu-doc-file" => [
-			"label" => "Документы",
+			"label" => "Главная",
 			"icon" => "glyphicon glyphicon-file",
 			"options" => [
-				"href" => "file"
+				"href" => "doc/file/view"
 			]
 		],
 		"menu-doc-upload" => [
@@ -24,7 +24,11 @@ class DocModule extends Module {
 		],
 		"menu-doc-find" => [
 			"label" => "Найти",
-			"icon" => "glyphicon glyphicon-search"
+			"icon" => "glyphicon glyphicon-search",
+			"options" => [
+				"data-toggle" => "modal",
+				"data-target" => "#file-search-modal"
+			]
 		]
 	];
 
