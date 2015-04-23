@@ -2,23 +2,104 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c7867d1-dabe-479e-927f-a32ef258089e" name="Default" comment="Type manager">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/admin/controllers/MasterController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/admin/views/master/modules.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/DocModule.php" afterPath="$PROJECT_DIR$/modules/doc/DocModule.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/widgets/views/FilePage.php" afterPath="$PROJECT_DIR$/modules/doc/widgets/views/FilePage.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/FileType.php" afterPath="$PROJECT_DIR$/models/FileType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/widgets/FileTypeMenu.php" afterPath="$PROJECT_DIR$/modules/doc/widgets/FileTypeMenu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widgets/Navigation.php" afterPath="$PROJECT_DIR$/widgets/Navigation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widgets/views/Navigation.php" afterPath="$PROJECT_DIR$/widgets/views/Navigation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widgets/Panel.php" afterPath="$PROJECT_DIR$/widgets/Panel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widgets/TabMenu.php" afterPath="$PROJECT_DIR$/widgets/TabMenu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/Widget.php" afterPath="$PROJECT_DIR$/core/Widget.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/admin.css" afterPath="$PROJECT_DIR$/web/css/admin.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/fonts/glyphicons-filetypes-regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/fonts/glyphicons-filetypes-regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/fonts/glyphicons-filetypes-regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/fonts/glyphicons-halflings-regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/fonts/glyphicons-halflings-regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/fonts/glyphicons-regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/fonts/glyphicons-regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/fonts/glyphicons-regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/fonts/glyphicons-social-regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/fonts/glyphicons-social-regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/fonts/glyphicons-social-regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/fonts/glyphicons-filetypes-regular.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/glyphicons-filetypes.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/fonts/glyphicons-halflings-regular.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/glyphicons-halflings.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/fonts/glyphicons-regular.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/fonts/glyphicons-social-regular.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/glyphicons-social.css" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\4417410\bg.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\4417410\main.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\4417410\toolbar.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\4417410\toolbar.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\67e3073c\css\bootstrap-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\67e3073c\css\bootstrap-theme.css.map" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\67e3073c\css\bootstrap-theme.min.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\67e3073c\css\bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\67e3073c\css\bootstrap.css.map" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\67e3073c\css\bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\67e3073c\fonts\glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\67e3073c\fonts\glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\67e3073c\fonts\glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\67e3073c\fonts\glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\67e3073c\fonts\glyphicons-halflings-regular.woff2" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\67e3073c\js\bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\67e3073c\js\bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\67e3073c\js\npm.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\9c993877\yii.activeForm.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\9c993877\yii.captcha.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\9c993877\yii.gridView.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\9c993877\yii.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\9c993877\yii.validation.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\a16ed8a7\jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\a16ed8a7\jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\a16ed8a7\jquery.min.map" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\bb4134e0\jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\bb4134e0\jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\bb4134e0\jquery.min.map" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\f43ce2ed\bg.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\f43ce2ed\main.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\f43ce2ed\toolbar.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\f43ce2ed\toolbar.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\f4de2765\css\bootstrap-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\f4de2765\css\bootstrap-theme.css.map" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\f4de2765\css\bootstrap-theme.min.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\f4de2765\css\bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\f4de2765\css\bootstrap.css.map" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\f4de2765\css\bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\f4de2765\fonts\glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\f4de2765\fonts\glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\f4de2765\fonts\glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\f4de2765\fonts\glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\f4de2765\fonts\glyphicons-halflings-regular.woff2" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\f4de2765\js\bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\f4de2765\js\bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\f4de2765\js\npm.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\f8e1be57\yii.activeForm.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\f8e1be57\yii.captcha.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\f8e1be57\yii.gridView.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\f8e1be57\yii.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\f8e1be57\yii.validation.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/CoreAsset.php" afterPath="$PROJECT_DIR$/assets/CoreAsset.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widgets/Form.php" afterPath="$PROJECT_DIR$/widgets/Form.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/logs/app.log" afterPath="$PROJECT_DIR$/runtime/logs/app.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/site.css" afterPath="$PROJECT_DIR$/web/css/site.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/admin/views/table/view.php" afterPath="$PROJECT_DIR$/modules/admin/views/table/view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/web.php" afterPath="$PROJECT_DIR$/config/web.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\hosts\doc\core\FormModelAdapter.php" afterPath="$PROJECT_DIR$/core/InlineFormModel.php" />
+      <change type="MOVED" beforePath="D:\hosts\doc\web\assets\319bd42e\css\bootstrap-theme.css" afterPath="$PROJECT_DIR$/web/assets/3a378fa5/css/bootstrap-theme.css" />
+      <change type="MOVED" beforePath="D:\hosts\doc\web\assets\319bd42e\css\bootstrap-theme.css.map" afterPath="$PROJECT_DIR$/web/assets/3a378fa5/css/bootstrap-theme.css.map" />
+      <change type="MOVED" beforePath="D:\hosts\doc\web\assets\319bd42e\css\bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/web/assets/3a378fa5/css/bootstrap-theme.min.css" />
+      <change type="MOVED" beforePath="D:\hosts\doc\web\assets\319bd42e\css\bootstrap.css" afterPath="$PROJECT_DIR$/web/assets/3a378fa5/css/bootstrap.css" />
+      <change type="MOVED" beforePath="D:\hosts\doc\web\assets\319bd42e\css\bootstrap.css.map" afterPath="$PROJECT_DIR$/web/assets/3a378fa5/css/bootstrap.css.map" />
+      <change type="MOVED" beforePath="D:\hosts\doc\web\assets\319bd42e\css\bootstrap.min.css" afterPath="$PROJECT_DIR$/web/assets/3a378fa5/css/bootstrap.min.css" />
+      <change type="MOVED" beforePath="D:\hosts\doc\web\assets\319bd42e\fonts\glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/web/assets/3a378fa5/fonts/glyphicons-halflings-regular.eot" />
+      <change type="MOVED" beforePath="D:\hosts\doc\web\assets\319bd42e\fonts\glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/web/assets/3a378fa5/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MOVED" beforePath="D:\hosts\doc\web\assets\319bd42e\fonts\glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/web/assets/3a378fa5/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="MOVED" beforePath="D:\hosts\doc\web\assets\319bd42e\fonts\glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/web/assets/3a378fa5/fonts/glyphicons-halflings-regular.woff" />
+      <change type="MOVED" beforePath="D:\hosts\doc\web\assets\319bd42e\fonts\glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/web/assets/3a378fa5/fonts/glyphicons-halflings-regular.woff2" />
+      <change type="MOVED" beforePath="D:\hosts\doc\web\assets\319bd42e\js\bootstrap.js" afterPath="$PROJECT_DIR$/web/assets/3a378fa5/js/bootstrap.js" />
+      <change type="MOVED" beforePath="D:\hosts\doc\web\assets\319bd42e\js\bootstrap.min.js" afterPath="$PROJECT_DIR$/web/assets/3a378fa5/js/bootstrap.min.js" />
+      <change type="MOVED" beforePath="D:\hosts\doc\web\assets\319bd42e\js\npm.js" afterPath="$PROJECT_DIR$/web/assets/3a378fa5/js/npm.js" />
+      <change type="MOVED" beforePath="D:\hosts\doc\web\assets\38176f50\yii.activeForm.js" afterPath="$PROJECT_DIR$/web/assets/22ac1108/yii.activeForm.js" />
+      <change type="MOVED" beforePath="D:\hosts\doc\web\assets\38176f50\yii.captcha.js" afterPath="$PROJECT_DIR$/web/assets/22ac1108/yii.captcha.js" />
+      <change type="MOVED" beforePath="D:\hosts\doc\web\assets\38176f50\yii.gridView.js" afterPath="$PROJECT_DIR$/web/assets/22ac1108/yii.gridView.js" />
+      <change type="MOVED" beforePath="D:\hosts\doc\web\assets\38176f50\yii.js" afterPath="$PROJECT_DIR$/web/assets/22ac1108/yii.js" />
+      <change type="MOVED" beforePath="D:\hosts\doc\web\assets\38176f50\yii.validation.js" afterPath="$PROJECT_DIR$/web/assets/22ac1108/yii.validation.js" />
+      <change type="MOVED" beforePath="D:\hosts\doc\web\assets\774d397b\jquery.js" afterPath="$PROJECT_DIR$/web/assets/8d6f3813/jquery.js" />
+      <change type="MOVED" beforePath="D:\hosts\doc\web\assets\774d397b\jquery.min.js" afterPath="$PROJECT_DIR$/web/assets/8d6f3813/jquery.min.js" />
+      <change type="MOVED" beforePath="D:\hosts\doc\web\assets\774d397b\jquery.min.map" afterPath="$PROJECT_DIR$/web/assets/8d6f3813/jquery.min.map" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -88,84 +169,7 @@
     <favorites_list name="doc" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="FileTypeMenu.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/doc/widgets/FileTypeMenu.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.821428" vertical-offset="0" max-vertical-offset="532">
-              <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-              <folding>
-                <element signature="e#43#67#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FilePage.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/doc/widgets/views/FilePage.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.5" vertical-offset="561" max-vertical-offset="1273">
-              <caret line="48" column="56" selection-start-line="48" selection-start-column="56" selection-end-line="48" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Widget.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/Widget.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.142858" vertical-offset="115" max-vertical-offset="2660">
-              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MasterController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/admin/controllers/MasterController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.821428" vertical-offset="0" max-vertical-offset="532">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding>
-                <element signature="e#49#75#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config/web.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7641379" vertical-offset="1669" max-vertical-offset="2394">
-              <caret line="117" column="2" selection-start-line="117" selection-start-column="2" selection-end-line="117" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="modules.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/admin/views/master/modules.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.071429" vertical-offset="0" max-vertical-offset="228">
-              <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-              <folding>
-                <element signature="e#6#101#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PostgreSQL - mgup@localhost" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://db-console:/d445fcdb/4a1bea19-9630-4f7c-a585-745035fe4694/">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="114">
-              <caret line="0" column="15" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="UPDATE_TYPE" value="MERGE" />
@@ -177,11 +181,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/migrations/m150305_142956_database_entry.php" />
-        <option value="$PROJECT_DIR$/migrations/m150406_053142_new_cladr_tables.php" />
-        <option value="$PROJECT_DIR$/modules/doc/controllers/FileController.php" />
-        <option value="$PROJECT_DIR$/web/js/doc.js" />
-        <option value="$PROJECT_DIR$/widgets/views/Panel.php" />
         <option value="$PROJECT_DIR$/config/params.php" />
         <option value="$PROJECT_DIR$/web/index.php" />
         <option value="$PROJECT_DIR$/doc/apache.txt" />
@@ -228,6 +227,11 @@
         <option value="$PROJECT_DIR$/modules/admin/views/master/modules.php" />
         <option value="$PROJECT_DIR$/modules/admin/controllers/MasterController.php" />
         <option value="$PROJECT_DIR$/config/web.php" />
+        <option value="$PROJECT_DIR$/core/InlineFormModel.php" />
+        <option value="$PROJECT_DIR$/assets/CoreAsset.php" />
+        <option value="$PROJECT_DIR$/web/css/glyphicons-filetypes.css" />
+        <option value="$PROJECT_DIR$/web/css/glyphicons-halflings.css" />
+        <option value="$PROJECT_DIR$/web/css/glyphicons-social.css" />
       </list>
     </option>
   </component>
@@ -236,9 +240,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 5.5" />
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="873" />
+    <option name="x" value="809" />
+    <option name="y" value="27" />
+    <option name="width" value="1684" />
+    <option name="height" value="1019" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -292,6 +297,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="widgets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -447,7 +466,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -496,20 +515,17 @@
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
     <configuration default="true" type="com.intellij.database.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
       <option name="VM_PARAMETERS" value="" />
       <option name="USER_CFG_CLASS" />
       <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
-    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
-      <BehatRunner />
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
@@ -519,6 +535,9 @@
       <arguments />
       <pass-parent-envs>true</pass-parent-envs>
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="1">
@@ -665,31 +684,31 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="873" extended-state="6" />
-    <editor active="true" />
+    <frame x="809" y="27" width="1684" height="1019" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277849" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277849" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32522407" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2067239" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="680" y="439" width="269" height="202" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32522407" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963648" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2067239" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="680" y="439" width="269" height="202" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2495379" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23819743" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963648" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2413793" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277849" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32522407" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277849" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.59411013" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.59411013" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -739,41 +758,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/fields/EmailField.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49793103" vertical-offset="0" max-vertical-offset="798">
-          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fields/FileField.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5241379" vertical-offset="0" max-vertical-offset="798">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fields/HiddenField.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5503448" vertical-offset="0" max-vertical-offset="798">
-          <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fields/DropDownField.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07862069" vertical-offset="0" max-vertical-offset="931">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fields/NumberField.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5241379" vertical-offset="0" max-vertical-offset="798">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fields/PhoneTypeField.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.28827587" vertical-offset="209" max-vertical-offset="950">
@@ -806,18 +790,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5241379" vertical-offset="0" max-vertical-offset="798">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/d445fcdb/4a1bea19-9630-4f7c-a585-745035fe4694/mgup.core.file">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="114">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -864,19 +836,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/CoreAsset.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31448275" vertical-offset="0" max-vertical-offset="725">
-          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/AdminAsset.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="755">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -884,7 +847,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="361" max-vertical-offset="1653">
           <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -892,7 +854,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.08275862" vertical-offset="130" max-vertical-offset="855">
           <caret line="17" column="52" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -908,7 +869,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.52827585" vertical-offset="415" max-vertical-offset="2090">
           <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -916,9 +876,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4522472" vertical-offset="58" max-vertical-offset="798">
           <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
-          <folding>
-            <element signature="e#6#97#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -926,7 +883,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3462069" vertical-offset="91" max-vertical-offset="1672">
           <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -934,9 +890,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.46629214" vertical-offset="770" max-vertical-offset="2166">
           <caret line="58" column="13" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
-          <folding>
-            <element signature="e#31#60#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -944,7 +897,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334" vertical-offset="72988" max-vertical-offset="124868">
           <caret line="3850" column="2" selection-start-line="3850" selection-start-column="2" selection-end-line="3850" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -952,7 +904,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7715431" vertical-offset="356" max-vertical-offset="855">
           <caret line="39" column="1" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -960,7 +911,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8476954" vertical-offset="2693" max-vertical-offset="3268">
           <caret line="164" column="17" selection-start-line="164" selection-start-column="17" selection-end-line="164" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -968,7 +918,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5241379" vertical-offset="418" max-vertical-offset="3420">
           <caret line="44" column="52" selection-start-line="44" selection-start-column="52" selection-end-line="44" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -976,7 +925,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.76" vertical-offset="0" max-vertical-offset="779">
           <caret line="29" column="53" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -984,7 +932,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5603933" vertical-offset="0" max-vertical-offset="712">
           <caret line="23" column="57" selection-start-line="23" selection-start-column="57" selection-end-line="23" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -992,20 +939,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.10482758" vertical-offset="0" max-vertical-offset="725">
           <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/d445fcdb/4a1bea19-9630-4f7c-a585-745035fe4694/mgup.core.file_type">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="114">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1021,7 +954,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5196629" vertical-offset="4038" max-vertical-offset="7220">
           <caret line="236" column="14" selection-start-line="236" selection-start-column="14" selection-end-line="236" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1029,7 +961,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.32022473" vertical-offset="0" max-vertical-offset="4066">
           <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1057,37 +988,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://db-console:/d445fcdb/4a1bea19-9630-4f7c-a585-745035fe4694/">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="114">
-          <caret line="0" column="15" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/doc/widgets/views/FilePage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.5" vertical-offset="561" max-vertical-offset="1273">
-          <caret line="48" column="56" selection-start-line="48" selection-start-column="56" selection-end-line="48" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/widgets/TabMenu.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.26544943" vertical-offset="96" max-vertical-offset="1710">
           <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/doc/widgets/FileTypeMenu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.821428" vertical-offset="0" max-vertical-offset="532">
-          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-          <folding>
-            <element signature="e#43#67#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1095,7 +999,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3735955" vertical-offset="0" max-vertical-offset="712">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1103,7 +1006,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.29353932" vertical-offset="0" max-vertical-offset="712">
           <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1111,21 +1013,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.42696628" vertical-offset="0" max-vertical-offset="1178">
           <caret line="22" column="15" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/module-menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="860">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/Widget.php">
+    <entry file="file://$PROJECT_DIR$/modules/doc/widgets/FileTypeMenu.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.142858" vertical-offset="115" max-vertical-offset="2660">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.6111111" vertical-offset="0" max-vertical-offset="828">
+          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+          <folding>
+            <element signature="e#43#67#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/doc/widgets/views/FilePage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3888889" vertical-offset="713" max-vertical-offset="1541">
+          <caret line="48" column="56" selection-start-line="48" selection-start-column="56" selection-end-line="48" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3611111" vertical-offset="2070" max-vertical-offset="2898">
+          <caret line="103" column="10" selection-start-line="103" selection-start-column="10" selection-end-line="103" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/admin/views/master/modules.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.071429" vertical-offset="0" max-vertical-offset="228">
+        <state vertical-scroll-proportion="0.16666667" vertical-offset="0" max-vertical-offset="828">
           <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
           <folding>
             <element signature="e#6#101#0#PHP" expanded="true" />
@@ -1135,7 +1062,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/admin/controllers/MasterController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.821428" vertical-offset="0" max-vertical-offset="532">
+        <state vertical-scroll-proportion="0.3611111" vertical-offset="0" max-vertical-offset="828">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
             <element signature="e#49#75#0#PHP" expanded="true" />
@@ -1143,10 +1070,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/web.php">
+    <entry file="file://$PROJECT_DIR$/core/Widget.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7641379" vertical-offset="1669" max-vertical-offset="2394">
-          <caret line="117" column="2" selection-start-line="117" selection-start-column="2" selection-end-line="117" selection-end-column="2" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="483" max-vertical-offset="3220">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/InlineFormModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5833333" vertical-offset="0" max-vertical-offset="1449">
+          <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/table.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.8988372" vertical-offset="1863" max-vertical-offset="2783">
+          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/message.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.0731995" vertical-offset="3224" max-vertical-offset="4071">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/loading.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.0593023" vertical-offset="1279" max-vertical-offset="2139">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/CoreAsset.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9166667" vertical-offset="0" max-vertical-offset="943">
+          <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/glyphicons-filetypes.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46162927" vertical-offset="0" max-vertical-offset="6900">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/glyphicons-halflings.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48878396" vertical-offset="0" max-vertical-offset="10143">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/glyphicons-social.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35301062" vertical-offset="0" max-vertical-offset="3243">
+          <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
           <folding />
         </state>
       </provider>

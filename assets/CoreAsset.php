@@ -13,7 +13,10 @@ class CoreAsset extends AssetBundle {
 		"css/multiple.css",
 		"css/message.css",
 		"css/panel.css",
-		"css/table.css"
+		"css/table.css",
+		"css/glyphicons-filetypes.css",
+		"css/glyphicons-halflings.css",
+		"css/glyphicons-social.css",
 	];
 
 	public $js = [
@@ -27,7 +30,7 @@ class CoreAsset extends AssetBundle {
 	];
 
 	public $depends = [
-		"yii\\web\\YiiAsset",
-		"yii\\bootstrap\\BootstrapAsset",
+		'yii\web\YiiAsset',
+		'yii\bootstrap\BootstrapAsset',
 	];
 }
