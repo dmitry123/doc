@@ -11,7 +11,7 @@ class FileTypeMenu extends TabMenu {
 	public $id = "file-type-menu";
 
 	public function init() {
-		$types = FileType::findNotUnknown(["unknown"]);
+		$types = FileType::findNotUnknown();
 		foreach ($types as $type) {
 			$this->items[] = [
 				"label" => $type->name,

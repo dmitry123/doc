@@ -58,7 +58,7 @@ var Core = Core || {};
 		}
 		this.before();
 		var params = $.parseJSON(this.selector().attr("data-attributes"));
-		if (!params.length) {
+		if (params.length !== void 0 && !params.length) {
 			params = {};
 		}
 		$.get(Core.Common.getWidget(), $.extend(params, {
