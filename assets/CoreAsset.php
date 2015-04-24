@@ -26,7 +26,8 @@ class CoreAsset extends AssetBundle {
 		"js/multiple.js",
 		"js/loading.js",
 		"js/table.js",
-		"js/panel.js"
+		"js/panel.js",
+		"js/object.js"
 	];
 
 	public $depends = [
