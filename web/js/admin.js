@@ -91,7 +91,7 @@ var TableMenu = {
 		} else {
 			return false;
 		}
-		$(".table-panel-wrapper li .table-column-list").each(function(i, m) {
+		$(".table-list li .table-column-list").each(function(i, m) {
 			if (m != menu[0]) {
 				me.collapse($(m));
 			}

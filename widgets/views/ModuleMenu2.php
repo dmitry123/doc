@@ -8,7 +8,7 @@
 
 <div class="col-xs-12 module-menu-block">
 	<div class="col-xs-1 module-menu-block-cell no-padding text-center">
-		<div class="module-menu-block-icon-wrapper">
+		<div class="module-menu-block-icon-wrapper" data-url="<?= Yii::$app->getHomeUrl() ?>">
 			<span class="glyphicon glyphicon-home module-menu-block-icon" data-placement="bottom" data-original-title="Домой" onmouseenter="$(this).tooltip('show')"></span>
 		</div>
 	</div>

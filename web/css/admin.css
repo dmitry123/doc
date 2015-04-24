@@ -38,3 +38,7 @@
 .table-list a {
     cursor: pointer;
 }
+
+.admin-table-panel-wrapper .panel-body {
+    margin-right: -1px;
+}

@@ -42,7 +42,7 @@ class FileTable extends Table {
 	];
 
 	public $tableClass = "table table-striped table-hover";
-	public $orderBy = "upload_date";
+	public $orderBy = "upload_date desc";
 	public $controlsWidth = 150;
 
 	public function init() {
