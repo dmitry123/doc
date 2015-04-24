@@ -42,7 +42,7 @@ class TableProvider {
 	 * Construct table provider with [tableName] check
 	 * @param ActiveRecord|string $activeRecord - Active record instance
 	 *  or class name
-	 * @param ActiveQuery $fetchQuery - Query to fetch rows from
+	 * @param Query $fetchQuery - Query to fetch rows from
 	 *  database's table
 	 * @param array|null $config - Array with classes table provider
 	 * 	configuration

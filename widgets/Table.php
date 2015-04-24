@@ -255,7 +255,7 @@ class Table extends Widget {
 		}
 		$this->data = $this->fetchData();
 		$this->searchCriteria = $this->getSearchCriteria();
-		return $this->render("Table", [
+		return $this->render("@app/widgets/views/Table", [
 			"self" => $this
 		]);
 	}

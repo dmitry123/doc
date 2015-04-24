@@ -163,5 +163,9 @@ a.desc:after {
 }
 
 .panel-body-fix {
-    margin-right: -1px;
+    /*margin-right: -1px;*/
+}
+
+.panel-title {
+    font-size: 15px;
 }

@@ -44,7 +44,7 @@ var Core = Core || {};
 	Table.prototype.before = function() {
 		var me = this;
 		setTimeout(function() {
-			me.selector().loading();
+			me.selector().loading("render");
 		}, this.property("updateDelay"));
 		this.selector().trigger("table.update");
 	};

@@ -4,6 +4,7 @@ namespace app\modules\doc\widgets;
 
 use app\core\ActiveRecord;
 use app\core\Widget;
+use app\forms\FileForm;
 use app\models\File;
 
 class FilePage extends Widget {
@@ -12,7 +13,13 @@ class FilePage extends Widget {
 	 * @var ActiveRecord - Table active record instance for
 	 * 	table provider to display table with files
 	 */
-	public 	$tableActiveRecord = null;
+	public $tableActiveRecord = null;
+
+	/**
+	 * @var string - Default type of file, which documents
+	 * 	should be displayed
+	 */
+	public $fileType = "document";
 
 	/**
 	 * @var string - Text with list of files
@@ -34,9 +41,6 @@ class FilePage extends Widget {
 	 * @return string - Just rendered content
 	 */
 	public function run() {
-		if (empty($this->tableActiveRecord)) {
-			$this->tableActiveRecord = new File();
-		}
 		return $this->render("FilePage", [
 			"self" => $this
 		]);

@@ -3,6 +3,7 @@
 namespace app\core;
 
 use yii\base\ErrorException;
+use yii\db\ActiveQuery;
 use yii\db\Query;
 use yii\helpers\Inflector;
 
@@ -119,6 +120,15 @@ abstract class ActiveRecord extends \yii\db\ActiveRecord {
 			}
 		}
 		return $values;
+	}
+
+	/**
+	 * @param Query $fetchQuery - Query to fetch rows from
+	 *  database's table
+	 * @return TableProvider - Instance of table provider class
+	 */
+	public function createTableProvider($fetchQuery) {
+		return new TableProvider($this, $fetchQuery);
 	}
 
 	/**

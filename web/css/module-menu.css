@@ -10,10 +10,9 @@
     position: fixed;
     cursor: pointer;
     padding: 10px;
-    margin-top: 5px;
-    min-width: 150px;
-    border-radius: 0 0 7px 0;
+    margin-top: 2px;
     transition: all 0.3s ease 0ms;
+    min-width: 150px;
 }
 
 .module-menu-heading h2 {
@@ -28,21 +27,24 @@
     transition: all 0.3s ease 0s;
     margin: 0;
     font-size: 18px;
+    color: white;
 }
 
 .module-menu-heading .module-menu-title:hover {
-    color: #146fab;
+    color: #008bb9;
 }
 
 .module-menu-list {
-    background-color: #f5f5f5;
-    box-shadow: 0 0 10px gray;
+    background-color: #333333;
+    box-shadow: 0 0 10px #333333;
     border-bottom-left-radius: 5px;
     padding-left: 5px;
     max-height: 0;
     overflow: hidden;
     transition: all 0.35s linear 0s;
     height: auto;
+    color: white;
+    margin-top: 5px;
 }
 
 .module-menu-heading:hover .module-menu-list {

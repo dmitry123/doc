@@ -11,6 +11,7 @@ use yii\web\Application;
 class ModuleMenu extends Widget {
 
 	public $absolute = true;
+	public $stacked = false;
 
 	public function run() {
 		$modules = Module::getAllowedModules();

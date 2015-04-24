@@ -405,6 +405,20 @@ var Core = Core || {};
 
 })(Core);
 
+$(document).ready(function() {
+	$(document).on('show.bs.modal', '.modal', function(e) {
+		if (!$(e.target).hasClass("modal")) {
+			return void 0;
+		}
+		var depth = 1142 + (10 * $('.modal:visible').length);
+		console.log(depth);
+		$(this).find(".modal-dialog").css('z-index', depth);
+		setTimeout(function() {
+			$('.modal-backdrop').not('.modal-stack').css('z-index', depth - 1).addClass('modal-stack');
+		}, 0);
+	});
+});
+
 /*
 $(document).ready(function() {
 $("input[data-regexp][type='text']").each(function(i, item) {

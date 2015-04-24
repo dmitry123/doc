@@ -62,8 +62,10 @@ body {
     width: 100%;
     margin-top: 10px;
 }
-.login-button-group button {
-    width: 50%;
+
+.login-button-group > button,
+.login-button-group > button:hover {
+    min-width: 50%;
 }
 
 /* Remove blue border */
