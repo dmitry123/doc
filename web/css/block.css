@@ -117,7 +117,7 @@ button:active, button .active {
 
 /* Default color on icon hover */
 .module-cell:hover .module-icon {
-    color: #146fab;
+    color: #008bb9;
 }
 
 .module-cell:hover .module-icon-wrapper[data-error='not-implemented'] .module-icon {

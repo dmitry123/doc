@@ -38,6 +38,7 @@ print \app\widgets\Modal::widget([
 <?php if (!empty($self->form) && !empty($self->model)): ?>
 	<?= \app\widgets\AutoTable::widget([
 		"model" => $self->model,
-		"form" => $self->form
+		"form" => $self->form,
+		"modelName" => $self->model->className()
 	]) ?>
 <?php endif ?>

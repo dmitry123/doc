@@ -4,6 +4,7 @@ namespace app\modules\doc\widgets;
 
 use app\models\FileType;
 use app\widgets\TabMenu;
+use yii\helpers\Html;
 
 class FileTypeMenu extends TabMenu {
 
@@ -14,7 +15,7 @@ class FileTypeMenu extends TabMenu {
 		$types = FileType::findNotUnknown();
 		foreach ($types as $type) {
 			$this->items[] = [
-				"label" => $type->name,
+				"label" => Html::tag("b", $type->name),
 				"data-id" => $type->id
 			];
 		}

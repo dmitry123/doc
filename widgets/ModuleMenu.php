@@ -25,25 +25,9 @@ class ModuleMenu extends Widget {
 			array_splice($module, $i, 1);
 			break;
 		}
-		return $this->render("ModuleMenu", [
+		return $this->render("ModuleMenu2", [
 			"modules" => $modules,
-			"name" => $this->getModuleName(),
+			"name" => Module::getModuleName(),
 		]);
-	}
-
-	public function getModuleName() {
-		if (($module = Yii::$app->controller->module) instanceof Application) {
-			return "";
-		}
-		if ($module instanceof Module) {
-			$name = $module->name;
-		} else {
-			$name = $module->id;
-		}
-		if ($name != "basic" && !empty($name)) {
-			return ".".$name ;
-		} else {
-			return "";
-		}
 	}
 }

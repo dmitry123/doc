@@ -202,7 +202,6 @@ class Table extends Widget {
 	 * 	use with [@see provider] field and it has
 	 * 	lower precedence... Btw its only for internal
 	 * 	usage, fuck off
-	 * @internal
 	 */
 	public $modelName = null;
 

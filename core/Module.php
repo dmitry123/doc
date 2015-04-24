@@ -3,6 +3,7 @@
 namespace app\core;
 
 use Yii;
+use yii\base\Application;
 use yii\helpers\Url;
 
 class Module extends \yii\base\Module {
@@ -55,6 +56,26 @@ class Module extends \yii\base\Module {
 				],
 			]
 		];
+	}
+
+	/**
+	 * Get name of current module
+	 * @return string - Name of module
+	 */
+	public static function getModuleName() {
+		if (($module = Yii::$app->controller->module) instanceof Application) {
+			return "";
+		}
+		if ($module instanceof Module) {
+			$name = $module->name;
+		} else {
+			$name = $module->id;
+		}
+		if ($name != "basic" && !empty($name)) {
+			return ".".$name ;
+		} else {
+			return "";
+		}
 	}
 
 	/**

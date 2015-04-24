@@ -1,11 +1,9 @@
 <?php
 /**
- * @var $this View
+ * @var $this yii\web\View
  * @var $modules array
  * @var $name string
  */
-use yii\web\View;
-
 ?>
 
 <div class="module-menu-heading" data-load="block">

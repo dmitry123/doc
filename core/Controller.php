@@ -288,11 +288,7 @@ abstract class Controller extends \yii\web\Controller {
 		if (!class_exists($class)) {
 			throw new ErrorException("Unresolved widget module or path \"$class\"");
 		}
-		$widget = new $class();
-		foreach ($parameters as $key => $value) {
-			$widget->$key = $value;
-		}
-		return $widget;
+		return new $class($parameters);
 	}
 
 	/**

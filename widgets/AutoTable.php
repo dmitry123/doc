@@ -58,11 +58,21 @@ class AutoTable extends Table {
 	 */
 	public function init() {
 		$columns = [];
+		if (!empty($this->modelName)) {
+			$name = strtolower($this->modelName);
+			if (($p = strrpos($name, "\\")) !== false) {
+				$name = substr($name, $p + 1);
+			}
+			$class = "app\\models\\".$name;
+			$this->model = new $class();
+			$class = "app\\forms\\".$name."Form";
+			$this->form = new $class();
+		}
 		if (!$this->model instanceof ActiveRecord) {
-			throw new Exception("Model must be an instance of ActiveRecord class");
+			throw new Exception("Model must be an instance of ActiveRecord class, found \"". gettype($this->model) ."\"");
 		}
 		if (!$this->form instanceof FormModel) {
-			throw new Exception("Form must be an instance of FormModel class");
+			throw new Exception("Form must be an instance of FormModel class, found \"". gettype($this->model) ."\"");
 		}
 		foreach ($this->form->getConfig() as $key => $config) {
 			if (isset($config["hidden"]) && $config["hidden"] || isset($config["type"]) && $config["type"] == "hidden") {

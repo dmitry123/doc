@@ -169,3 +169,12 @@ a.desc:after {
 .panel-title {
     font-size: 15px;
 }
+
+#confirm-delete-modal .modal-content {
+    top: 200px;
+}
+
+.pagination > li > a {
+    color: black;
+    text-decoration-style: solid;
+}

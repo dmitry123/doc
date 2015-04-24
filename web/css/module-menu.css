@@ -23,14 +23,14 @@
     padding: 0;
 }
 
-.module-menu-heading .module-menu-title {
+.module-menu-title {
     transition: all 0.3s ease 0s;
     margin: 0;
     font-size: 18px;
     color: white;
 }
 
-.module-menu-heading .module-menu-title:hover {
+.module-menu-title:hover {
     color: #008bb9;
 }
 
@@ -48,7 +48,7 @@
 }
 
 .module-menu-heading:hover .module-menu-list {
-    max-height: 275px;
+    max-height: 500px;
 }
 
 .module-menu-list li {
@@ -57,7 +57,7 @@
 }
 
 .module-menu-list li:hover {
-    color: #146fab;
+    color: #008bb9;
 }
 
 .module-menu-list li[data-error='not-implemented']:hover {
@@ -70,4 +70,45 @@
 
 .module-menu-list hr {
     margin: 0;
+}
+
+/* ModuleMenu2 */
+
+.module-menu-block {
+    position: absolute;
+    transition: all 0.25s ease 0s;
+    opacity: 0;
+    overflow: hidden;
+    left: 190px;
+    top: 0;
+    padding-top: 10px;
+    text-align: center;
+    width: auto;
+}
+
+.module-menu-block-icon-wrapper > .tooltip {
+    z-index: 3000;
+    left: 100px !important;
+}
+
+.module-menu-title:hover .module-menu-block {
+    opacity: 1;
+}
+
+.module-menu-block-cell {
+    margin-right: 8px;
+    margin-left: 8px;
+}
+
+.module-menu-block-icon-wrapper > .module-menu-block-icon {
+    font-size: 25px;
+    color: #f5f5f5;
+    transition: all 0.2s ease 0s;
+}
+
+.module-menu-block-icon-wrapper:hover > .module-menu-block-icon {
+    color: #008bb9;
+}
+.module-menu-block-icon-wrapper[data-error]:hover > .module-menu-block-icon:after {
+    color: indianred;
 }
