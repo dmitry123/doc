@@ -1,11 +1,11 @@
 /* GLYPHICONS FILETYPES 1.8 */
 @font-face {
     font-family: "Glyphicons Filetypes";
-    src: url("/fonts/glyphicons-filetypes-regular.eot");
-    src: url("/fonts/glyphicons-filetypes-regular.eot?#iefix") format("embedded-opentype"),
-    url("/fonts/glyphicons-filetypes-regular.woff") format("woff"),
-    url("/fonts/glyphicons-filetypes-regular.ttf") format("truetype"),
-    url("/fonts/glyphicons-filetypes-regular.svg#glyphicons_filetypesregular") format("svg"); }
+    src: url("../fonts/glyphicons-filetypes-regular.eot");
+    src: url("../fonts/glyphicons-filetypes-regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/glyphicons-filetypes-regular.woff") format("woff"),
+    url("../fonts/glyphicons-filetypes-regular.ttf") format("truetype"),
+    url("../fonts/glyphicons-filetypes-regular.svg#glyphicons_filetypesregular") format("svg"); }
 
 [class*="filetype-"] {
     display: inline-block;

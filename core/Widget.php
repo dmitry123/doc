@@ -90,7 +90,7 @@ class Widget extends \yii\base\Widget {
 				} else if (is_scalar($value)) {
 					$params[$key] = (string) $value;
 				} else {
-					throw new Exception("Unknown type, that can't be converted to string \"". gettype($value) ."\"");
+					throw new Exception("Unknown type can't be converted to string \"". gettype($value) ."\"");
 				}
 			}
 		}
@@ -105,9 +105,11 @@ class Widget extends \yii\base\Widget {
 		if (!empty($this->id)) {
 			return ;
 		}
-		$this->id = UniqueGenerator::generate(
-			strtolower(basename(get_called_class()))
-		);
+		$class = strtolower(get_called_class());
+		if (($p = strrpos($class, "\\")) !== false) {
+			$class = substr($class, $p + 1);
+		}
+		$this->id = UniqueGenerator::generate($class);
 	}
 
 	/**
@@ -116,17 +118,16 @@ class Widget extends \yii\base\Widget {
 	 * @return string - Url for widget update
 	 */
 	public static function createUrl($query = []) {
-		$controller = \Yii::$app->controller;
-		$link = "";
-		$module = $controller->module;
-		while ($module != null && $module->module != null) {
-			$link .= preg_replace("/module$/i", "/", strtolower(basename($module->className())));
-			$module = $module->module;
-		}
-		$link .= preg_replace("/controller/i", "/", strtolower(basename($controller->className())));
-		return \Yii::$app->getUrlManager()->createUrl(
-			ArrayHelper::merge([ $link."widget" ], $query)
+		$url = preg_replace("/\\/[a-z0-9]*$/i", "/widget",
+			preg_replace("/\\?.*$/", "", \Yii::$app->getRequest()->getUrl())
 		);
+		if (!empty($query)) {
+			$url .= "?";
+		}
+		foreach ($query as $key => $value) {
+			$url .= urlencode($key."=".$value."&");
+		}
+		return preg_replace("/&\\s$/", "", $url);
 	}
 
 	/**
