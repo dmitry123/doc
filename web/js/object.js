@@ -111,6 +111,19 @@ var Core = Core || {};
 	};
 
 	/**
+	 * That method returns name of data attribute for
+	 * current component
+	 * @returns {string} - Attribute name
+	 */
+	Component.prototype.getDataAttribute = function() {
+		if (!this._name) {
+			throw new Error("Component hasn't been registered as jQuery plugin");
+		} else {
+			return this._name;
+		}
+	};
+
+	/**
 	 * Override that method to return just rendered jQuery
 	 * element which will appended to parent node
 	 *
@@ -186,11 +199,11 @@ var Core = Core || {};
 			if (!(element instanceof jQuery)) {
 				throw new Error("Selector must be an instance of jQuery object");
 			} else {
+				if (!element.data(this.getDataAttribute())) {
+					element.data(this.getDataAttribute(), this);
+				}
 				return this._element = element;
 			}
-			//if (!element.data(this.getDataAttribute())) {
-			//	element.data(this.getDataAttribute(), this);
-			//}
 		}
 		return this._element;
 	};
@@ -310,6 +323,45 @@ var Core = Core || {};
 		}
 	};
 
+	Component.assign = Object.assign || function(target, firstSource) {
+		if (target === undefined || target === null) {
+			throw new Error('Cannot convert first argument to object');
+		} else {
+			var to = Object(target),
+				src;
+		}
+		for (var i = 1; i < arguments.length; i++) {
+			if ((src = arguments[i]) === undefined || src === null) {
+				continue;
+			}
+			var keys = Object.keys(Object(src)),
+				key;
+			for (var index = 0, len = keys.length; index < len; index++) {
+				var desc = Object.getOwnPropertyDescriptor(src, key = keys[index]);
+				if (desc !== undefined && desc.enumerable) {
+					to[key] = src[key];
+				}
+			}
+		}
+		return to;
+	};
+
+	Component.create = Object.create || function() {
+		var Temp = function() {};
+		return function (prototype) {
+			if (arguments.length > 1) {
+				throw Error('Second argument not supported');
+			}
+			if (typeof prototype != 'object') {
+				throw Error('Argument must be an object');
+			}
+			Temp.prototype = prototype;
+			var result = new Temp();
+			Temp.prototype = null;
+			return result;
+		};
+	};
+
 	/**
 	 * Create and register core component as jQuery plugin
 	 *
@@ -413,28 +465,5 @@ var Core = Core || {};
 	});
 
 	Component.implement(ComponentProtocol);
-
-	var Test = Component.extend(null, {
-		color: "red"
-	}, {
-		render: function() {
-			return $("<div>", {
-				"text": "Hello, World"
-			}).css({
-				"color": this.prop("color")
-			});
-		}
-	});
-
-	$.fn.test = PluginFactory.create("test", function(element, props) {
-		return new Test(element, props);
-	});
-
-	$(document).ready(function() {
-		var test = new Test({
-			color: "blue"
-		});
-		$(document.body).append(test.element());
-	});
 
 })(Core);
