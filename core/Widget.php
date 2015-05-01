@@ -36,7 +36,7 @@ class Widget extends \yii\base\Widget {
 				"class" => get_called_class()
 			]);
 		if (!$w instanceof Widget) {
-			throw new Exception("Widget must be an instance of app\\core\\Widget class");
+			throw new Exception("Widget must be an instance of [app\\core\\Widget] class");
 		}
 		$w->_config = $config;
 		return $w;

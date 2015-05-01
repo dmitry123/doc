@@ -6,7 +6,7 @@ var Core = Core || {};
 
 	/**
 	 * Create configuration for constant variable
-	 * for {@see Object#defineProperty} method
+	 * for {@see Component#defineProperty} method
 	 *
 	 * @param {*} [value] any value, that should be default, elsewhere
 	 * 	null is used
@@ -30,7 +30,7 @@ var Core = Core || {};
 
 	/**
 	 * Create configuration for normal variable
-	 * for {@see Object#defineProperty} method
+	 * for {@see Component#defineProperty} method
 	 *
 	 * @param {*} [value] any value, that should be default, elsewhere
 	 * 	null is used
@@ -52,6 +52,18 @@ var Core = Core || {};
 		};
 	};
 
+    /**
+     * Basic protocol of object class with
+     * interface methods that should be implemented
+     *
+     * @type {{
+     *  prop: Function
+     * }}
+     */
+    var ObjectProtocol = {
+        prop: function(key, value) {}
+    };
+
 	/**
 	 * Basic protocol of component class with
 	 * interface methods that should be implemented
@@ -67,28 +79,134 @@ var Core = Core || {};
 	 * }}
 	 */
 	var ComponentProtocol = {
-		render: function() {
-			return "ComponentProtocol::render()";
-		},
-		update: function() {
-			return "ComponentProtocol::update()";
-		},
-		activate: function() {
-			return "ComponentProtocol::activate()";
-		},
-		before: function() {
-			return "ComponentProtocol::before()";
-		},
-		after: function() {
-			return "ComponentProtocol::after()";
-		},
-		element: function(value) {
-			return "ComponentProtocol::element([value:jQuery])";
-		},
-		prop: function(key, value) {
-			return "ComponentProtocol::prop(key:String, [value:*])";
-		}
+		render: function() {},
+		update: function() {},
+		activate: function() {},
+		before: function() {},
+		after: function() {},
+		element: function(value) {}
 	};
+
+    /**
+     * Basic protocol of plugin class with
+     * interface methods that should be implemented
+     *
+     * @type {{
+     *  name: Function
+     * }}
+     */
+    var PluginProtocol = {
+        name: function() {}
+    };
+
+    /**
+     * @param {{}} [fields] object with class's
+     * 	fields and it's default values
+     *
+     * @param {{}} [props] object with component's
+     * 	properties, that sets to object's model
+     */
+    var Basic = Core.Object = function(fields, props) {
+        Object.defineProperties(this, $.extend({
+            '_model': _var(props)
+        }, fields || {}));
+    };
+
+    /**
+     * Extend basic class object to produce new
+     * sub component class element
+     *
+     * @param {{}} [fields] object with class's
+     * 	fields and it's default values
+     *
+     * @param {Function} [extend] object's extend
+     *  method, which overrides current
+     *
+     * @param {{}} [proto] object's default prototype
+     * 	that will extends current
+     *
+     * @static
+     */
+    Basic.extend = function(fields, extend, proto) {
+        var me = this;
+        var f = function(props) {
+            me.apply(this, [ fields, props || {} ]);
+        };
+        f.prototype = Object.create($.extend(
+            this.prototype, proto || {}
+        ));
+        f.prototype.super = this;
+        f.extend = extend ||Basic.extend;
+        return f;
+    };
+
+    /**
+     * Use that method to set class's methods
+     * that it must implement from protocol
+     *
+     * @param {{}} protocol object with methods have
+     * 	to be implemented, it can return extra information
+     * 	about error as string
+     *
+     * @static
+     */
+    Basic.implement = function(protocol) {
+        var p = this.prototype, i, m;
+        if (Array.isArray(protocol)) {
+            for (i in protocol) {
+                Basic.implement(protocol[i]);
+            }
+            return void 0;
+        }
+        for (i in protocol) {
+            if (i in p && p.can(i)) {
+                continue;
+            }
+            if (typeof protocol[i] == "function") {
+                m = protocol[i].call() || i;
+            } else {
+                m = i;
+            }
+            throw new Error("Class must implements method ["+ m +"]");
+        }
+    };
+
+    /**
+     * Use that method to manipulate with component's model,
+     * if it passed only one argument, then it works as getter
+     * else it works as setter
+     *
+     * @param {String} key name of property that
+     * 	associated with value you want set or get
+     *
+     * @param {*} [value] any value associated
+     * 	with property that bind to current component
+     */
+    Basic.prototype.prop = function(key, value) {
+        if (!this._model) {
+            this._model = {};
+        }
+        if (arguments.length > 1) {
+            return this._model[key] = value;
+        } else {
+            return this._model[key];
+        }
+    };
+
+    /**
+     * Backward compatibility {@see Core.Object#prop}
+     *
+     * @param {String} key name of property that
+     * 	associated with value you want set or get
+     *
+     * @param {*} [value] any value associated
+     * 	with property that bind to current component
+     *
+     * @see Core.Object#prop
+     */
+    Basic.prototype.property = function(key, value) {
+        this.prototype.prop.apply(this, arguments);
+    };
 
 	/**
 	 * @param {{}} [fields] object with class's
@@ -100,28 +218,19 @@ var Core = Core || {};
 	 * @param {jQuery|HTMLElement|String} [element] element
 	 * 	associated with component, not required
 	 */
-	var Component = Core.Object = function(fields, props, element) {
-		Object.defineProperties(this, $.extend({
-			'_element': _var(element),
-			'_model': _var(props)
-		}, fields || {}));
-		if (!this.element()) {
-			this.element(this.render());
-		}
-	};
-
-	/**
-	 * That method returns name of data attribute for
-	 * current component
-	 * @returns {string} - Attribute name
-	 */
-	Component.prototype.getDataAttribute = function() {
-		if (!this._name) {
-			throw new Error("Component hasn't been registered as jQuery plugin");
-		} else {
-			return this._name;
-		}
-	};
+    var Component = Core.Component = Basic.extend({
+        "_element": _var(null)
+    }, function(element, fields, extend, proto) {
+        var f = function(props) {
+            this.super.apply(this, [ element, fields, props || {} ]);
+        };
+        f.prototype = Object.create($.extend(
+            this.prototype, proto || {}
+        ));
+        f.prototype.super = this;
+        f.extend = extend ||Basic.extend;
+        return f;
+    }, ComponentProtocol);
 
 	/**
 	 * Override that method to return just rendered jQuery
@@ -129,9 +238,7 @@ var Core = Core || {};
 	 *
 	 * @return jQuery element for HTML node tree
 	 */
-	Component.prototype.render = function() {
-		return void 0;
-	};
+	Component.prototype.render = function() {};
 
 	/**
 	 * Override that method to update your jQuery
@@ -142,9 +249,7 @@ var Core = Core || {};
 	 * @see Core.Object#after
 	 * @see Core.Object#before
 	 */
-	Component.prototype.update = function() {
-		return void 0;
-	};
+	Component.prototype.update = function() {};
 
 	/**
 	 * Override that method to active your just
@@ -154,9 +259,7 @@ var Core = Core || {};
 	 *
 	 * @see Core.Object#render
 	 */
-	Component.prototype.activate = function() {
-		return void 0;
-	};
+	Component.prototype.activate = function() {};
 
 	/**
 	 * Override that method to provider some actions
@@ -165,9 +268,7 @@ var Core = Core || {};
 	 *
 	 * @see Core.Object#update
 	 */
-	Component.prototype.before = function() {
-		return void 0;
-	};
+	Component.prototype.before = function() {};
 
 	/**
 	 * Override that method to provider some actions
@@ -176,9 +277,7 @@ var Core = Core || {};
 	 *
 	 * @see Core.Object#update
 	 */
-	Component.prototype.after = function() {
-		return void 0;
-	};
+	Component.prototype.after = function() {};
 
 	/**
 	 * That method returns current jQuery element
@@ -223,121 +322,47 @@ var Core = Core || {};
 		return this.prototype.element.apply(this, arguments);
 	};
 
-	/**
-	 * Use that method to manipulate with component's model,
-	 * if it passed only one argument, then it works as getter
-	 * else it works as setter
-	 *
-	 * @param {String} key name of property that
-	 * 	associated with value you want set or get
-	 *
-	 * @param {*} [value] any value associated
-	 * 	with property that bind to current component
-	 */
-	Component.prototype.prop = function(key, value) {
-		if (!this._model) {
-			this._model = {};
-		}
-		if (arguments.length > 1) {
-			return this._model[key] = value;
-		} else {
-			return this._model[key];
-		}
-	};
+    /**
+     * Plugin class, which extends basic component
+     * to register it as jQuery plugin
+     *
+     * @param {String} name - Name of jQuery plugin
+     * @constructor
+     */
+    var Plugin = function(name) {
+        Object.defineProperties(this, {
+            "_name": _let(name)
+        });
+    };
 
-	/**
-	 * Backward compatibility {@see Core.Object#prop}
-	 *
-	 * @param {String} key name of property that
-	 * 	associated with value you want set or get
-	 *
-	 * @param {*} [value] any value associated
-	 * 	with property that bind to current component
-	 *
-	 * @see Core.Object#prop
-	 */
-	Component.prototype.property = function(key, value) {
-		this.prototype.prop.apply(this, arguments);
-	};
+    /**
+     * That method returns name of data attribute for
+     * current component
+     * @returns {string} - Attribute name
+     */
+    Plugin.prototype.name = function() {
+        if (!this._name) {
+            throw new Error("Object hasn't been registered as jQuery plugin");
+        } else {
+            return this._name;
+        }
+    };
 
-	/**
-	 * @param {...*} args - Argument list for parent
-	 * 	constructor
-	 */
-	Component.prototype.parent = function(args) {
-		this.super.apply(this, arguments);
-	};
-
-	/**
-	 * @param {{}} [fields] object with class's
-	 * 	fields and it's default values
-	 *
-	 * @param {{}} [defaults] object with component's
-	 * 	default properties, that sets to object's model
-	 *
-	 * @param {{}} [proto] object's default prototype
-	 * 	that will extends current
-	 *
-	 * @static
-	 */
-	Component.extend = function(fields, defaults, proto) {
-		var f = function(props, element) {
-			this.parent(fields, $.extend(defaults || {}, props || {}), element);
-		};
-		f.prototype = Object.create($.extend(
-			this.prototype, proto || {}
-		));
-		f.prototype.super = this;
-		f.extend = Component.extend;
-		return f;
-	};
-
-	/**
-	 * Use that method to set class's methods
-	 * that it must implement from protocol
-	 *
-	 * @param {{}} protocol object with methods have
-	 * 	to be implemented, it can return extra information
-	 * 	about error as string
-	 *
-	 * @static
-	 */
-	Component.implement = function(protocol) {
-		var p = this.prototype, i, m;
-		if (Array.isArray(protocol)) {
-			for (i in protocol) {
-				Component.implement(protocol[i]);
-			}
-			return void 0;
-		}
-		for (i in protocol) {
-			if (i in p && p.can(i)) {
-				continue;
-			}
-			if (typeof protocol[i] == "function") {
-				m = protocol[i].call() || i;
-			} else {
-				m = i;
-			}
-			throw new Error("Class must implements method ["+ m +"]");
-		}
-	};
-
-	Component.assign = Object.assign || function(target, firstSource) {
+	Component.assign = Component.assign || function(target, firstSource) {
 		if (target === undefined || target === null) {
 			throw new Error('Cannot convert first argument to object');
 		} else {
-			var to = Object(target),
+			var to = Component(target),
 				src;
 		}
 		for (var i = 1; i < arguments.length; i++) {
 			if ((src = arguments[i]) === undefined || src === null) {
 				continue;
 			}
-			var keys = Object.keys(Object(src)),
+			var keys = Component.keys(Component(src)),
 				key;
 			for (var index = 0, len = keys.length; index < len; index++) {
-				var desc = Object.getOwnPropertyDescriptor(src, key = keys[index]);
+				var desc = Component.getOwnPropertyDescriptor(src, key = keys[index]);
 				if (desc !== undefined && desc.enumerable) {
 					to[key] = src[key];
 				}
@@ -346,7 +371,7 @@ var Core = Core || {};
 		return to;
 	};
 
-	Component.create = Object.create || function() {
+	Component.create = Component.create || function() {
 		var Temp = function() {};
 		return function (prototype) {
 			if (arguments.length > 1) {
@@ -458,12 +483,10 @@ var Core = Core || {};
 		plugins: {}
 	};
 
-	Object.defineProperty(Object.prototype, "can", {
+	Object.defineProperty(Component.prototype, "can", {
 		enumerable: false, value: function(method) {
 			return typeof this[method] === "function";
 		}
 	});
-
-	Component.implement(ComponentProtocol);
 
 })(Core);
