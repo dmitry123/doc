@@ -4,14 +4,16 @@
  */
 
 \app\widgets\Logo::begin([
-	"buttons" => [
-		"send-button" => [
-			"text" => "Отправить",
+	"controls" => [
+		"employee-send-button" => [
+			"label" => "Отправить",
+			"icon" => "glyphicon glyphicon-send",
 			"class" => "btn btn-primary btn-block",
 			"type" => "button"
 		],
-		"block-logout" => [
-			"text" => "Выйти",
+		"employee-logout-button" => [
+			"label" => "Выйти",
+			"icon" => "glyphicon glyphicon-log-out",
 			"class" => "btn btn-danger btn-block",
 			"type" => "button"
 		]

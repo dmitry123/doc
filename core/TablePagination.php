@@ -2,6 +2,8 @@
 
 namespace app\core;
 
+use Exception;
+
 class TablePagination {
 
 	/**

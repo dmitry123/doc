@@ -28,10 +28,14 @@ abstract class FormModel extends Model {
 	 * Construct form model instance with scenario
 	 * @param string $scenario name of the scenario that this model is used in.
 	 * See {@link CModel::scenario} on how scenario is used by models.
+	 * @param array $model array with model fields
 	 * @see getScenario
 	 */
-	public function __construct($scenario = "") {
+	public function __construct($scenario = "", $model = []) {
 		$this->setScenario($scenario);
+		foreach ($model as $key => $value) {
+			$this->$key = $value;
+		}
 	}
 
 	/**

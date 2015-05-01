@@ -173,7 +173,7 @@ abstract class ActiveRecord extends \yii\db\ActiveRecord {
 
 	/**
 	 * Insert element in database right now
-	 * @param array $model - Model fields
+	 * @param array|FormModel $model - Model fields
 	 * @return bool - True on success and false on failure
 	 * @throws \Exception
 	 */

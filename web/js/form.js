@@ -95,44 +95,33 @@ var Core = Core || {};
         });
     };
 
-    Form.prototype.send = function(after) {
+    Form.prototype.send = function(success) {
 		if (this.property("disabled")) {
 			return false;
 		}
         this.selector().find(".form-group").removeClass("has-error");
         var form = this.selector();
-        if (!this.property("url")) {
-            return Core.createMessage({
-                message: "Missed 'url' property for AutoForm component"
-            });
-        }
+		if (!this.property("url") && !this.property("url", this.selector().attr("action"))) {
+			return Core.createMessage({
+				message: "Missed 'url' property for AutoForm component"
+			});
+		}
         var me = this;
-        $.post(this.property("url"), {
-            model: form.serialize()
-        }, function(json) {
-            me.after();
-            if (!json["status"]) {
-                after && after(me, false);
+        return Core.sendAjax(form.attr("method") || "post", this.property("url"), form.serialize(), null, "json").always(function(json) {
+			me.after();
+			if (!json["status"]) {
+				if (me.property("fail")) {
+					me.property("fail").call(me, json);
+				}
 				return Core.postFormErrors(me.selector(), json);
-            } else {
-                if (me.property("success")) {
-                    me.property("success").call(me, json);
-                }
-                after && after(me, true);
-            }
-            if (json["message"]) {
-                Core.createMessage({
-                    type: "success",
-                    sign: "ok",
-                    message: json["message"]
-                });
-            }
-            $("#" + me.selector().attr("id")).trigger("success", json);
-        }, "json").fail(function() {
-			after && after(me, false, arguments[2]);
+			} else {
+				if (me.property("success")) {
+					me.property("success").call(me, json);
+				}
+			}
+			$("#" + me.selector().attr("id")).trigger("success", json);
+			success && success.call(this, json);
 		});
-        form.serialize();
-        return true;
     };
 
 	Core.createPlugin("form", function(selector, properties) {
@@ -147,24 +136,17 @@ $(document).ready(function() {
 			return void 0;
 		}
 		var f = $(item).find("form:eq(0)").form({
-			url: $(item).find("form").attr("action"),
 			parent: $(item)
 		});
 		$(item).find("button.btn[type='submit']").click(function() {
-			var btn = this;
-			var c = function(me, status, msg) {
-				$(btn).button("reset");
-				if (status) {
-					$(item).modal("hide");
-				} else if (msg) {
-					Core.createMessage({
-						message: "Произошла ошибка при отправке запроса. Обратитесь к администратору"
-					});
-				}
-			};
-			if (f.form("send", c)) {
-				$(this).data("loading-text", "Загрузка ...").button("loading");
-			}
+			var btn = $(this);
+			btn.data("loading-text", "Загрузка ...").button("loading");
+			f.form("send", function() {
+				$(item).modal("hide");
+			}).always(function() {
+				btn.button("reset");
+			});
+			return false;
 		});
 	});
 });

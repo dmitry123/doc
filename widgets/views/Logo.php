@@ -4,7 +4,6 @@
  * @var $self app\widgets\Logo
  * @var $identity string
  * @var $role string
- * @var $buttons array
  * @var $content string
  */
 ?>
@@ -26,15 +25,17 @@
 				<?= $role ?>
 				<hr>
 			<?php else: ?>
-				<?php if (count($buttons) > 0): ?>
+				<?php if (count($self->controls) > 0): ?>
 					<hr>
 				<?php endif ?>
 			<?php endif ?>
 		</div>
 		<div class="logo-button-wrapper">
-			<?php foreach ($buttons as $button): ?>
-				<?= \yii\helpers\Html::button($button["text"], $button["options"]) ?>
-			<?php endforeach; ?>
+			<?= \app\widgets\ControlMenu::widget([
+				"controls" => $self->controls,
+				"mode" => \app\widgets\ControlMenu::MODE_BUTTON,
+				"specialClass" => "logo-control-button"
+			]) ?>
 		</div>
 	</div>
 </td>

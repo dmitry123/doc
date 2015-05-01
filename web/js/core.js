@@ -191,6 +191,37 @@ var Core = Core || {};
 		return window["doc"]["widget"];
 	};
 
+	Core.sendAjax = function(method, href, data, success) {
+		return $[method.toLowerCase()](url(href), data, function(json) {
+			if (!json["status"]) {
+				if (json["error"] !== "form") {
+					return Core.createMessage({
+						message: json["message"]
+					});
+				}
+			} else if (json["message"]) {
+				Core.createMessage({
+					message: json["message"],
+					type: "success",
+					sign: "ok"
+				});
+			}
+			success && success(json);
+		}, "json").fail(function() {
+			return Core.createMessage({
+				message: "Произошла ошибка при обработке запроса. Обратитесь к администратору"
+			});
+		});
+	};
+
+	Core.sendQuery = function(href, data, success) {
+		return Core.sendAjax("get", href, data, success);
+	};
+
+	Core.sendPost = function(href, data, success) {
+		return Core.sendAjax("post", href, data, success);
+	};
+
 	Core.postFormErrors = function(where, json) {
 		var html = $("<ul>");
 		for (var i in json["errors"] || []) {
@@ -344,6 +375,7 @@ var Core = Core || {};
      * @returns {String} - Absolute url
      */
     window.url = function(url) {
+		url = url || "";
 		if (url.charAt(0) != "/") {
 			url = "/" + url;
 		}

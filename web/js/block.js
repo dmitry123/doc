@@ -1,28 +1,12 @@
 
-var UserForm = {
-    ready: function() {
-		$(document).on("click", "#login-button", function() {
-			var f = $("#user-login-form");
-			f.form({
-				url: f.attr("action"),
-				locked: true
-			}).form("send", function(f, s, j) {
-				if (s == true) {
-					PageReload.reload();
-				} else {
-					PageReload.after();
-				}
-			});
-			PageReload.before();
-		});
-    }
-};
-
-var PageReload = {
-	reload: function(link) {
+var BlockPageManager = {
+	reload: function(link, auto) {
 		var me = this;
 		var block = $(".page-block");
-		$.get(link || url(""), {}, function(html) {
+		if (auto === void 0 || auto === true) {
+			this.before();
+		}
+		$.get(url(link) || url(""), {}, function(html) {
 			var native = $(".page-block");
 			var page = $(html).find(".page-block");
 			var c;
@@ -76,35 +60,49 @@ var PageReload = {
 	}
 };
 
-var ModuleForm = {
-	ready: function() {
-		$(document).on("click", ".block-logout", function() {
-			PageReload.before();
-			$.post(url("user/logout"), [], function(json) {
-				setTimeout(function() {
-					PageReload.reload(json["url"]);
-				}, 100);
-			}, "json");
-		});
-		$(document).on("click", ".settings-button", function() {
-			PageReload.before();
-			PageReload.reload(url("site/settings"));
-		});
-		$(document).on("click", ".modules-button", function() {
-			PageReload.before();
-			PageReload.reload(url("site/index"));
-		});
-		$(document).on("click", ".module-icon-wrapper", function() {
-			var url;
-			if ((url = $(this).data("url")) == void 0) {
-				return void 0;
-			}
-			window.location.href = url;
-		});
-	}
-};
-
 $(document).ready(function() {
-    UserForm.ready();
-	ModuleForm.ready();
+
+	$(document).on("click", "#login-button", function() {
+		BlockPageManager.before();
+		$("#user-login-form").form({
+			success: function(response) {
+				BlockPageManager.reload(response["redirect"], false);
+			},
+			fail: function() {
+				BlockPageManager.after();
+			}
+		}).form("send");
+	}).on("click", "#register-button", function() {
+		BlockPageManager.reload("site/register");
+	});
+
+	$(document).on("click", ".register-save-button", function() {
+		BlockPageManager.before();
+		$("#user-register-form").form({
+			success: function() {
+				BlockPageManager.reload("site/index", false);
+			},
+			fail: function() {
+				BlockPageManager.after();
+			}
+		}).form("send");
+	}).on("click", ".register-cancel-button", function() {
+		BlockPageManager.reload();
+	});
+
+	$(document).on("click", ".modules-logout-button, .employee-logout-button", function() {
+		Core.sendPost("user/logout", null, function() {
+			BlockPageManager.reload();
+		});
+	}).on("click", ".modules-settings-button", function() {
+		BlockPageManager.reload("site/settings");
+	}).on("click", ".settings-back-button", function() {
+		BlockPageManager.reload("site/index");
+	}).on("click", ".error-main-button", function() {
+		BlockPageManager.reload("site/index");
+	}).on("click", ".module-icon-wrapper", function() {
+		if ($(this).data("url") !== void 0) {
+			window.location.href = $(this).data("url");
+		}
+	});
 });

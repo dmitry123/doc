@@ -26,7 +26,9 @@ class UserController extends Controller {
 	 */
 	public function actionRegister() {
 		try {
-			$form = $this->getFormModel("model", "post", "register");
+			$form = $this->requireModel("UserForm", [
+				"login", "password", "password2", "email"
+			], "register");
 			if (!$form->validate()) {
 				if ($form->hasErrors()) {
 					$this->postValidationErrors($form);
@@ -69,7 +71,9 @@ class UserController extends Controller {
 	 */
 	public function actionLogin() {
 		try {
-			$form = $this->getFormModel("model", "post", "login");
+			$form = $this->requireModel("UserForm", [
+				"login", "password"
+			], "login");
 			/** @var User $user */
 			$user = User::model()->find()->where("lower(login) = :login", [
 				":login" => strtolower($form->{"login"})

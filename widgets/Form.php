@@ -5,7 +5,7 @@ namespace app\widgets;
 use app\core\FormModel;
 use app\core\Widget;
 use app\core\FieldCollection;
-use app\core\InlineFormModel;
+use app\core\FormModelEx;
 use Yii;
 use yii\base\ErrorException;
 use yii\db\Query;
@@ -67,7 +67,7 @@ class Form extends Widget {
                     $config += $model->getConfig();
                 }
             }
-            $this->model = new InlineFormModel($config);
+            $this->model = new FormModelEx($config);
         } else {
             $this->test($this->model);
         }

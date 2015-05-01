@@ -7,41 +7,19 @@ use yii\base\Object;
 
 class EmployeeManager {
 
-	const NORMAL = 0;
-	const SHORT = 1;
-	const FULL = 2;
-
-	private function __construct() {
-		if (!\Yii::$app->getUser()->getIsGuest()) {
-			$this->employee = Employee::findOne([
-				"user_id" => \Yii::$app->getUser()->getIdentity()->{"id"}
-			]);
-		} else {
-			$this->employee = null;
-		}
-	}
+	const IDENTITY_NORMAL = 0;
+	const IDENTITY_SHORT = 1;
+	const IDENTITY_FULL = 2;
 
 	public static function getManager() {
-		if (self::$manager == null) {
-			return self::$manager = new EmployeeManager();
+		if (self::$_manager == null) {
+			return self::$_manager = new EmployeeManager();
 		} else {
-			return self::$manager;
+			return self::$_manager;
 		}
 	}
 
-	public static $manager = null;
-
-	public function getEmployee() {
-		return $this->employee;
-	}
-
-	public function isValid() {
-		return $this->employee != null;
-	}
-
-	private $employee;
-
-	public static function getInfo($userId = null) {
+	public function getInfo($userId = null) {
 		if ($userId == null) {
 			if (\Yii::$app->getUser()->getIdentity() == null) {
 				return null;
@@ -60,20 +38,20 @@ class EmployeeManager {
 		return self::$_cached[$userId] = $employee;
 	}
 
-	public static function getIdentity($fio = self::NORMAL) {
-		if (($employee = self::getInfo()) == null) {
+	public function getIdentity($fio = self::IDENTITY_NORMAL) {
+		if (($employee = $this->getInfo()) == null) {
 			return "";
 		}
 		$result = $employee["surname"];
 		switch ($fio) {
-			case self::NORMAL:
+			case self::IDENTITY_NORMAL:
 				$name = " ".$employee["name"];
 				break;
-			case self::SHORT:
+			case self::IDENTITY_SHORT:
 				$name = " ".strtoupper(substr($employee["name"], 0, 2)).".";
 				$patronymic = strtolower(substr($employee["patronymic"], 0, 2));
 				break;
-			case self::FULL:
+			case self::IDENTITY_FULL:
 				$name = " ".$employee["name"];
 				$patronymic = " ".$employee["patronymic"];
 				break;
@@ -89,5 +67,26 @@ class EmployeeManager {
 		return $result;
 	}
 
+	public function getEmployee() {
+		return $this->employee;
+	}
+
+	public function isValid() {
+		return $this->employee != null;
+	}
+
+	private function __construct() {
+		if (!\Yii::$app->getUser()->getIsGuest()) {
+			$this->employee = Employee::findOne([
+				"user_id" => \Yii::$app->getUser()->getIdentity()->{"id"}
+			]);
+		} else {
+			$this->employee = null;
+		}
+	}
+
+	private $employee;
+
+	private static $_manager = null;
 	private static $_cached = [];
 }

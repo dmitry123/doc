@@ -2,8 +2,6 @@
 
 namespace app\models;
 
-use app\core\TableProvider;
-
 class File extends \app\core\ActiveRecord {
 
 	public static function tableName() {

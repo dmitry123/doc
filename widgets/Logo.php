@@ -28,7 +28,7 @@ class Logo extends Widget {
 	 *  + text - button label
 	 *  + [type] - button type, default ('button')
 	 */
-	public $buttons = [];
+	public $controls = [];
 
 	/**
 	 * Initialize widget
@@ -44,41 +44,19 @@ class Logo extends Widget {
 	public function run() {
 		$content = ob_get_clean();
 		if ($this->identity && EmployeeManager::getManager()->isValid()) {
-			$identity = EmployeeManager::getIdentity(EmployeeManager::SHORT);
+			$identity = EmployeeManager::getManager()->getIdentity(EmployeeManager::IDENTITY_SHORT);
 		} else {
 			$identity = null;
 		}
-		if (($info = EmployeeManager::getInfo()) != null && isset($info["role_name"])) {
+		if (($info = EmployeeManager::getManager()->getInfo()) != null && isset($info["role_name"])) {
 			$role = $info["role_name"];
 		} else {
 			$role = null;
-		}
-		$buttons = [];
-		foreach ($this->buttons as $key => &$button) {
-			$options = [];
-			if (!isset($button["text"])) {
-				throw new Exception("Button must have text, found null");
-			}
-			if (isset($button["class"])) {
-				$options["class"] = $button["class"]." $key";
-			} else {
-				$options["class"] = "btn btn-default $key";
-			}
-			if (isset($button["type"])) {
-				$options["type"] = $button["type"];
-			} else {
-				$options["type"] = "button";
-			}
-			$buttons[] = [
-				"options" => $options,
-				"text" => $button["text"]
-			];
 		}
 		return $this->render("Logo", [
 			"self" => $this,
 			"identity" => $identity,
 			"role" => $role,
-			"buttons" => $buttons,
 			"content" => $content
 		]);
 	}

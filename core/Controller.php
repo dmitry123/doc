@@ -6,44 +6,18 @@ use app\widgets\Form;
 use yii\base\ErrorException;
 use yii\base\Model;
 use yii\base\Widget;
+use yii\helpers\ArrayHelper;
 use yii\web\Session;
 
 abstract class Controller extends \yii\web\Controller {
 
-	/**
-	 * Declares external actions for the controller.
-	 * This method is meant to be overwritten to declare external actions for the controller.
-	 * It should return an array, with array keys being action IDs, and array values the corresponding
-	 * action class names or action configuration arrays. For example,
-	 *
-	 * ~~~
-	 * return [
-	 *     'action1' => 'app\components\Action1',
-	 *     'action2' => [
-	 *         'class' => 'app\components\Action2',
-	 *         'property1' => 'value1',
-	 *         'property2' => 'value2',
-	 *     ],
-	 * ];
-	 * ~~~
-	 *
-	 * [[\Yii::createObject()]] will be used later to create the requested action
-	 * using the configuration provided here.
-	 */
 	public function actions() {
 		return [
 			'error' => [
-				'class' => 'yii\web\ErrorAction',
+				'class' => 'app\core\ErrorAction',
 			]
 		];
 	}
-
-	/**
-	 * Override that method to return model for current controller instance or null
-	 * @param $model FormModel - Another model to clone
-	 * @return ActiveRecord - Active record instance or null
-	 */
-	public abstract function getModel($model);
 
 	/**
 	 * That method will help to remove row from an array. Why do you need it? For example you
@@ -160,11 +134,7 @@ abstract class Controller extends \yii\web\Controller {
 		}
 		if (!$form->validate()) {
 			if ($error) {
-				$this->leave([
-					"message" => "Произошли ошибки во время валидации формы",
-					"errors" => $form->getErrors(),
-					"status" => false
-				]);
+				$this->postValidationErrors($form);
 			} else {
 				$this->errors += $form->getErrors();
 			}
@@ -176,10 +146,16 @@ abstract class Controller extends \yii\web\Controller {
 	 * Post validation errors and return as JSON response
 	 * @param Model $model - Model with errors
 	 */
-	public function postValidationErrors($model) {
+	public function postValidationErrors($model = null) {
+		if ($model != null) {
+			$errors = $model->getErrors();
+		} else {
+			$errors = $this->errors;
+		}
 		$this->leave([
 			"message" => "Произошли ошибки во время валидации формы",
-			"errors" => $model->getErrors(),
+			"errors" => $errors,
+			"error" => "form",
 			"status" => false
 		]);
 	}
@@ -203,11 +179,7 @@ abstract class Controller extends \yii\web\Controller {
 			$array[] = $this->getUrlForm($f, false, $scenario);
 		}
 		if (count($this->errors) > 0) {
-			$this->leave([
-				"message" => "Произошли ошибки во время валидации формы",
-				"errors" => $this->errors,
-				"status" => false
-			]);
+			$this->postValidationErrors();
 		}
 		return $array;
 	}
@@ -353,6 +325,43 @@ abstract class Controller extends \yii\web\Controller {
 		} catch (ErrorException $e) {
 			$this->exception($e);
 		}
+	}
+
+	/**
+	 * Check for model existence and return it
+	 *
+	 * @param string $class - Name of model's form class instance, it
+	 *    loads loads and validates with [attributes] parameters
+	 * @param array|null|string $regexp - Some forms may contains prefixes or postfixes, so
+	 *    use that field to cleanup form's class name
+	 * @param array|null $attributes - Attributes to validate
+	 * @param string $scenario - Model's scenario usage
+	 * @return FormModel - An form model instance
+	 * @throws \Exception
+	 */
+	public function requireModel($class, $attributes = null, $scenario = "default", $regexp = null) {
+		$name = $class;
+		if (!\Yii::$app->request->bodyParams) {
+			throw new \Exception("Can't resolve \"{$class}\" form model");
+		}
+		if (empty($scenario)) {
+			$scenario = "default";
+		}
+		if ($regexp !== null) {
+			$class = preg_replace($regexp, "", $class);
+		}
+		$class = "app\\forms\\".$class;
+		/** @var $form FormModel */
+		$form = new $class($scenario);
+		$form->load(\Yii::$app->request->bodyParams);
+		if (!$form->validate($attributes)) {
+			$errors = [];
+			foreach ($form->errors as $key => $e) {
+				$errors[$name."[$key]"] = $e;
+			}
+			$this->errors = ArrayHelper::merge($this->errors, $errors);
+		}
+		return $form;
 	}
 
 	/**

@@ -1,27 +1,25 @@
 <?php
 /**
- * @var $this View
+ * @var $this yii\web\View
  * @var $modules array
  */
-use yii\web\View;
-
 \app\widgets\Logo::begin([
-	"buttons" => [
-		"settings-save" => [
-			"text" => "Сохранить",
+	"controls" => [
+		"settings-save-button" => [
+			"label" => "Сохранить",
+			"icon" => "glyphicon glyphicon-save",
 			"class" => "btn btn-primary btn-block",
 			"type" => "button"
 		],
-		"modules-button" => [
-			"text" => "Отмена",
+		"settings-back-button" => [
+			"label" => "Отмена",
+			"icon" => "glyphicon glyphicon-remove",
 			"class" => "btn btn-default btn-block",
 			"type" => "button"
 		]
 	]
 ]);
-
 print \app\widgets\Form::widget([
 	"model" => new \app\forms\EmployeeForm()
 ]);
-
 \app\widgets\Logo::end();
