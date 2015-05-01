@@ -12,6 +12,7 @@ use app\core\Widget;
 use Exception;
 use yii\base\Model;
 use yii\db\ActiveQuery;
+use yii\db\Query;
 use yii\helpers\Html;
 
 class Table extends Widget {
@@ -62,7 +63,7 @@ class Table extends Widget {
 	 * 	uses to receive from data rows unique identification number
 	 * 	for tr's [data-id] field
 	 */
-    public $primaryKey = "id";
+	public $primaryKey = "id";
 
 	/**
 	 * @var int - Current page, that should be displayed, it uses
@@ -83,17 +84,19 @@ class Table extends Widget {
 	public $hideOrderByIcon = false;
 
 	/**
-	 * @var array - Array with elements controls buttons, like edit
-	 * 	or remove. Array's key is class for [a] tag and value is
-	 * 	class for [span] tag like glyphicon or button
-	 * @see Table::renderControls
+	 * @var array - Array with control elements, it's attributes depends on
+	 * 	control display mode. You should always use [icon] and [label] attributes
+	 * 	cuz every control mode must support that attributes. Control parameters
+	 * 	is HTML attributes that moves to it's tag (tag name depends on control display mode).
+	 * @see controlMode
 	 */
 	public $controls = [];
 
 	/**
-	 * @var int - With of column with control actions
+	 * @var int - How to display control elements, set it
+	 * 	to CONTROL_MODE_NONE to disable control elements
 	 */
-	public $controlsWidth = 50;
+	public $controlMode = ControlMenu::MODE_ICON;
 
 	/**
 	 * @var string - String with search conditions, uses for
@@ -197,39 +200,22 @@ class Table extends Widget {
 	public $optimizedPagination = false;
 
 	/**
-	 * @var string|null - Name of active record model
-	 * 	with default table provider, you can't it
-	 * 	use with [@see provider] field and it has
-	 * 	lower precedence... Btw its only for internal
-	 * 	usage, fuck off
-	 */
-	public $modelName = null;
-
-	/**
 	 * Run widget and return just rendered content
 	 * @return string - Just rendered content
 	 * @throws Exception
 	 */
 	public function run() {
-		if (!empty($this->modelName)) {
-			$this->provider = \Yii::createObject([ "class" => $this->modelName ])
-				->{"getDefaultTableProvider"}();
-		} else if (is_string($this->provider)) {
-			$object = new $this->provider();
-			if (!$object instanceof ActiveRecord) {
-				throw new \yii\base\Exception("Provider as [string] must be an instance of [ActiveRecord] class");
-			}
-			$this->modelName = $this->provider;
-			$this->provider = $object->getDefaultTableProvider();
+		if (is_string($this->provider)) {
+			$this->provider = ActiveRecord::model($this->provider)->getDefaultTableProvider();
 		}
 		if (!$this->provider instanceof TableProvider && is_array($this->data)) {
-			throw new Exception("Table provider must be an instance of TableProvider and don't have to be null");
+			throw new \Exception("Table provider must be an instance of TableProvider and don't have to be null");
 		}
 		if (is_string($this->params)) {
 			$this->params = unserialize(urldecode($this->params));
 		}
 		if (empty($this->criteria)) {
-			$this->criteria = new ActiveQuery($this->provider);
+			$this->criteria = new ActiveQuery($this->provider->activeRecord->className());
 		}
 		if (is_string($this->condition) && !empty($this->condition) && is_array($this->parameters)) {
 			$this->criteria->on = $this->condition;
@@ -399,7 +385,10 @@ class Table extends Widget {
 					"class" => "core-table-cell"
 				]);
 			}
-			$this->renderControls();
+			print ControlMenu::widget([
+				"controls" => $this->controls,
+				"mode" => $this->controlMode
+			]);
 			print Html::endTag("tr");
 		}
 		if (count($this->data) == 0) {
@@ -472,48 +461,6 @@ class Table extends Widget {
 		print Html::tag("span", "", [
 			"class" => $class
 		]);
-	}
-
-	/**
-	 * Render table controls for each row
-	 */
-	public function renderControls() {
-		if (!is_array($this->controls) || !count($this->controls)) {
-			return ;
-		}
-		print Html::beginTag("td", [
-			"align" => "middle"
-		]);
-		foreach ($this->controls as $c => $attributes) {
-			$options = [];
-			if (is_array($attributes)) {
-				$options["class"] = $attributes["class"];
-				if (isset($attributes["tooltip"])) {
-					$options["onmouseenter"] = "$(this).tooltip('show')";
-					if (is_array($attributes["tooltip"])) {
-						$options["title"] = $attributes["tooltip"]["label"];
-						if (isset($attributes["tooltip"]["placement"])) {
-							$options["data-placement"] = $attributes["tooltip"]["placement"];
-						} else {
-							$options["data-placement"] = $this->tooltipDefaultPlacement;
-						}
-					} else {
-						$options["title"] = $attributes["tooltip"];
-						$options["data-placement"] = $this->tooltipDefaultPlacement;
-					}
-				}
-				if (isset($attributes["options"])) {
-					$options += $attributes["options"];
-				}
-			} else {
-				$options["class"] = $attributes;
-			}
-			print Html::tag("a", Html::tag("span", "", $options), [
-				"href" => "javascript:void(0)",
-				"class" => $c
-			]);
-		}
-		print Html::endTag("td");
 	}
 
 	/**

@@ -28,16 +28,16 @@ class FileTable extends Table {
 
 	public $controls =  [
 		"file-configure-icon" => [
-			"class" => "glyphicon glyphicon-cog",
-			"tooltip" => "Настроить файл"
+			"label" => "Настроить файл",
+			"icon" => "glyphicon glyphicon-cog",
 		],
 		"template-create-icon" => [
-			"class" => "glyphicon glyphicon-list-alt",
-			"tooltip" => "Создать шаблон"
+			"label" => "Создать шаблон",
+			"icon" => "glyphicon glyphicon-list-alt",
 		],
 		"file-lock-icon" => [
-			"class" => "glyphicon glyphicon-lock",
-			"tooltip" => "Заблокировать файл"
+			"label" => "Заблокировать файл",
+			"icon" => "glyphicon glyphicon-lock",
 		]
 	];
 

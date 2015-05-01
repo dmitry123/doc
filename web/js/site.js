@@ -16,7 +16,7 @@ var ConfirmDeleteModal = {
         }).find(".confirm-delete").click(function(e) {
             me.confirm(e);
         });
-        $("#confirm-delete-modal button[type='submit']").click(function() {
+        $("#confirm-delete-modal").find("button[type='submit']").click(function() {
             me.lock = true;
             if (me.item != null) {
                 me.item.trigger("click");
@@ -31,8 +31,6 @@ var ConfirmDeleteModal = {
 };
 
 $(document).ready(function() {
-
 	$('[data-toggle="tooltip"]').tooltip();
-
     ConfirmDeleteModal.ready();
 });
