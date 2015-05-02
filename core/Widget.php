@@ -98,18 +98,20 @@ class Widget extends \yii\base\Widget {
 	}
 
 	/**
-	 * Initialize widget and generate it's own
-	 * unique identification number
+	 * Returns the ID of the widget.
+	 * @param boolean $autoGenerate - Whether to generate an ID if it is not set previously
+	 * @return string - ID of the widget.
 	 */
-	public function init() {
-		if (!empty($this->id)) {
-			return ;
+	public function getId($autoGenerate = true) {
+		if ($autoGenerate && $this->id === null) {
+			$class = strtolower(get_called_class());
+			if (($p = strrpos($class, "\\")) !== false) {
+				$class = substr($class, $p + 1);
+			}
+			return $this->id = UniqueGenerator::generate($class);
+		} else {
+			return $this->id;
 		}
-		$class = strtolower(get_called_class());
-		if (($p = strrpos($class, "\\")) !== false) {
-			$class = substr($class, $p + 1);
-		}
-		$this->id = UniqueGenerator::generate($class);
 	}
 
 	/**

@@ -85,7 +85,9 @@ class User extends ActiveRecord implements IdentityInterface {
 	 * or the identity is not in an active state (disabled, deleted, etc.)
 	 */
 	public static function findIdentity($id) {
-		return User::model()->findByLogin($id);
+		return static::findOne([
+			"id" => $id
+		]);
 	}
 
 	/**
@@ -98,7 +100,9 @@ class User extends ActiveRecord implements IdentityInterface {
 	 * or the identity is not in an active state (disabled, deleted, etc.)
 	 */
 	public static function findIdentityByAccessToken($token, $type = null) {
-		return null;
+		return static::findOne([
+			"access_token" => $token
+		]);
 	}
 
 	/**
@@ -106,7 +110,7 @@ class User extends ActiveRecord implements IdentityInterface {
 	 * @return string|integer an ID that uniquely identifies a user identity.
 	 */
 	public function getId() {
-		return $this->{"login"};
+		return $this->{"id"};
 	}
 
 	/**
@@ -146,6 +150,6 @@ class User extends ActiveRecord implements IdentityInterface {
 	 * @see FormModel::config
 	 */
 	public function getFormModel() {
-		return new UserForm("table");
+		return new UserForm();
 	}
 }

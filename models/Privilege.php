@@ -16,17 +16,17 @@ class Privilege extends ActiveRecord {
 	 * @param string|array $privilege - Privilege key (id) or array with keys
 	 * @return bool - False on access denied
 	 */
-	public static function checkEmployeeAccess($employeeId, $privilege) {
+	public static function checkAccess($employeeId, $privilege) {
 		if (is_array($privilege)) {
 			foreach ($privilege as $p) {
-				if (!self::checkEmployeeAccess($employeeId, $p)) {
-					return false;
+				if (self::checkAccess($employeeId, $p)) {
+					return true;
 				}
 			}
-			return true;
+			return false;
 		}
 		$row = static::find()
-			->select("count(1)")
+			->select("p.id")
 			->from("core.privilege as p")
 			->innerJoin("core.privilege_to_role as p_r", "p_r.privilege_id = p.id")
 			->innerJoin("core.role as r", "p_r.role_id = r.id")
@@ -36,10 +36,7 @@ class Privilege extends ActiveRecord {
 				":privilege_id" => $privilege
 			])->createCommand()
 			->query();
-		if (!$row) {
-			return false;
-		}
-		return true;
+		return $row != null;
 	}
 
 	/**

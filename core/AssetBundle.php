@@ -23,10 +23,4 @@ class AssetBundle extends \yii\web\AssetBundle {
 	 * You can use either a URL or an alias of the URL.
 	 */
 	public $baseUrl = '@web';
-
-	/**
-	 * @var array - Array with modal widget's configuration
-	 * @see Modal
-	 */
-	public $modals = [];
 }

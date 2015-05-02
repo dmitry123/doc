@@ -36,26 +36,12 @@ app\assets\SiteAsset::register($this);
 <?php $this->beginBody() ?>
 <div id="page-content">
 	<?= \app\widgets\Navigation::widget(); ?>
-	<div class="col-xs-12">
+	<div class="row no-margin no-padding">
 		<div class="col-xs-12" id="page-content">
 			<?= $content ?>
 		</div>
-		<div class="col-xs-3">
-		</div>
 	</div>
 </div>
-<?= \app\widgets\ConfirmModal::widget([
-	"id" => "confirm-modal",
-	"buttons" => [
-		"confirm-button" => [
-			"text" => "Подтвердить"
-		]
-	],
-	"body" => \yii\helpers\Html::tag("div", "", [
-		"class" => "confirm-modal-content"
-	]),
-	"title" => "Подтвердить действие?"
-]); ?>
 <?= \app\widgets\ConfirmModal::widget(); ?>
 <?php $this->endBody() ?>
 </body>

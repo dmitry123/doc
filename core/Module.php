@@ -19,6 +19,11 @@ class Module extends \yii\base\Module {
 	public $icon;
 
 	/**
+	 * @var array - Allowed privileges for that module
+	 */
+	public $privileges = [];
+
+	/**
 	 * @var array - Allowed roles for that module
 	 */
 	public $roles = [];
@@ -51,9 +56,8 @@ class Module extends \yii\base\Module {
 		return [
 			"access" => [
 				"class" => "app\\filters\\AccessFilter",
-				"rules" => [
-					"roles" => $this->roles
-				],
+				"roles" => $this->roles,
+				"privileges" => $this->privileges
 			]
 		];
 	}

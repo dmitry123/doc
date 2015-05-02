@@ -10,21 +10,6 @@ use yii\base\Exception;
 
 class EmployeeController extends Controller {
 
-	public function behaviors() {
-		return [
-			"access" => [
-				"class" => "app\\filters\\AccessFilter",
-				"rules" => [
-					"index" => [
-						"on" => [ "user" ],
-						"privileges" => [ "1", "2", "3" ],
-						"roles" => [ "admin", "super" ]
-					]
-				]
-			]
-		];
-	}
-
 	/**
 	 * Display default employee page to register. If current user is
 	 * guest or it already has employee, then it will be redirected

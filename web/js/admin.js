@@ -1,5 +1,5 @@
 
-var TablePanel = {
+var Admin_Table_TablePanel = {
 	ready: function() {
         $(".admin-table-panel-wrapper").on("click", "#table-save-button", function() {
             $("#table-save-modal").modal();
@@ -21,7 +21,7 @@ var TablePanel = {
 	}
 };
 
-var TableMenu = {
+var Admin_Table_TableMenu = {
 	ready: function() {
 		var me = this;
 		$("#admin-table-menu").on("click", "li > a", function() {
@@ -45,7 +45,7 @@ var TableMenu = {
 					"height": "20px"
 				}
 			}).fadeIn("fast"));
-			TablePanel.load(table, function() {
+			Admin_Table_TablePanel.load(table, function() {
 				me.toggle($(that).parent().children(".table-column-list"));
 				image.fadeOut("fast", function() {
 					$(this).remove();
@@ -119,6 +119,6 @@ var TableMenu = {
 };
 
 $(document).ready(function() {
-	TablePanel.ready();
-	TableMenu.ready();
+	Admin_Table_TablePanel.ready();
+	Admin_Table_TableMenu.ready();
 });

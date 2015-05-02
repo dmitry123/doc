@@ -10,18 +10,9 @@ use yii\base\ActionFilter;
 
 class AccessFilter extends ActionFilter {
 
-	/**
-	 * @var array - Array with actions rules, where every action can contains next keys:
-	 *  + 'privileges' - Array with necessary employee's privileges (require 'employee' mode)
-	 *  + 'roles' - Array with necessary employee's roles (require 'employee' mode)
-	 */
-	public $rules = [];
-
-	/**
-	 * @var bool - That flag will be returned if you havn't declared rule for action, by
-	 * 	default everything is allowed
-	 */
-	public $deny = false;
+	public $actions = [];
+	public $roles = [];
+	public $privileges = [];
 
 	/**
 	 * This method is invoked right before an action is to be executed (after all possible filters), you may override
@@ -30,40 +21,64 @@ class AccessFilter extends ActionFilter {
 	 * @return boolean - Whether the action should continue to be executed.
 	 */
 	public function beforeAction($action) {
-		if (isset($this->rules[$action->id])) {
-			$rule = $this->rules[$action->id];
-		} else {
-			$rule = $this->rules;
+		if (empty($this->actions) && empty($this->roles) && empty($this->privileges)) {
+			return true;
 		}
 		if (!\Yii::$app->getUser()->getIsGuest()) {
-			$user = \Yii::$app->getUser()->getIdentity();
+			$this->_user = \Yii::$app->getUser()->getIdentity();
 		} else {
-			$user = null;
-		}
-		if ($user != null) {
-			$employee = Employee::model()->findOne([
-				"user_id" => \Yii::$app->getUser()->getIdentity()->{"id"}
-			]);
-		} else {
-			$employee = null;
-		}
-		if ($employee == null && isset($rule["roles"])) {
 			return $this->accessDenied(false);
 		}
-		if (isset($rule["roles"])) {
-			if (!Role::checkEmployeeAccess($employee->{"id"}, $rule["roles"])) {
-				return $this->accessDenied(false);
-			}
-		}
-		if ($employee == null && isset($rule["privileges"])) {
+		$this->_employee = Employee::model()->findOne([
+			"user_id" => $this->_user->getId(),
+			"is_validated" => 1
+		]);
+		if (!$this->_employee) {
 			return $this->accessDenied(false);
 		}
-		if (isset($rule["privileges"])) {
-			if (!Privilege::checkEmployeeAccess($employee->{"id"}, $rule["privileges"])) {
-				return $this->accessDenied(false);
-			}
+		$result = $this->validateAction($action->id) && $this->validateRoles($this->roles) &&
+			$this->validatePrivileges($this->privileges);
+		return $this->accessDenied($result);
+	}
+
+	protected function validateAction($id) {
+		if (!isset($this->actions[$id]) || $this->actions[$id]) {
+			return true;
+		} else {
+			$action = $this->actions[$id];
 		}
-		return true;
+		if (isset($action["roles"])) {
+			$roles = $action["roles"];
+		} else {
+			$roles = null;
+		}
+		if (isset($action["privileges"])) {
+			$privileges = $action["privileges"];
+		} else {
+			$privileges = null;
+		}
+		if (empty($roles) && empty($privileges)) {
+			return true;
+		} else {
+			return $this->validateRoles($roles) &&
+				$this->validatePrivileges($privileges);
+		}
+	}
+
+	protected function validateRoles($roles) {
+		if (empty($roles)) {
+			return true;
+		} else {
+			return Role::checkAccess($this->_employee->id, $roles);
+		}
+	}
+
+	protected function validatePrivileges($privileges) {
+		if (empty($privileges)) {
+			return true;
+		} else {
+			return Privilege::checkAccess($this->_employee->id, $privileges);
+		}
 	}
 
 	/**
@@ -88,4 +103,7 @@ class AccessFilter extends ActionFilter {
 	public function afterAction($action, $result) {
 		return $result;
 	}
+
+	private $_employee;
+	private $_user;
 }

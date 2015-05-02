@@ -15,6 +15,6 @@ class DocumentController extends Controller {
 	 * @return ActiveRecord - Active record instance or null
 	 */
 	public function getModel($model) {
-		return new Document();
+		return new Document($model);
 	}
 }

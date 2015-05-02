@@ -33,31 +33,27 @@ class Role extends ActiveRecord {
 
 	/**
 	 * Check employee access roles
-	 * @param int $employeeId - Employee identification number
+	 * @param int $id - Employee identification number
 	 * @param string|array $role - Role name (id) or array with roles
 	 * @return bool - False is access denied
 	 */
-	public static function checkEmployeeAccess($employeeId, $role) {
+	public static function checkAccess($id, $role) {
 		if (is_array($role)) {
 			foreach ($role as $r) {
-				if (!self::checkEmployeeAccess($employeeId, $r)) {
-					return false;
+				if (self::checkAccess($id, $r)) {
+					return true;
 				}
 			}
+			return false;
 		} else {
-			$row = static::find()
-				->select("count(1)")
-				->from("core.role as r")
-				->innerJoin("core.employee as e", "e.role_id = r.id")
-				->where("e.id = :employee_id and r.id = :role_id", [
-					":employee_id" => $employeeId,
-					":role_id" => $role
-				])->createCommand()->query();
-			if ($row == null) {
-				return false;
-			}
+			$row = static::find()->select("id")
+				->from("core.employee")
+				->where("role_id = :role_id and id = :employee_id", [
+					":role_id" => $role,
+					":employee_id" => $id,
+				])->createCommand()->queryOne(\PDO::FETCH_ASSOC);
+			return $row != null;
 		}
-		return true;
 	}
 
 	/**

@@ -200,6 +200,11 @@ class Table extends Widget {
 	public $optimizedPagination = false;
 
 	/**
+	 * @var int - Width of control element column
+	 */
+	public $controlsWidth = 150;
+
+	/**
 	 * Run widget and return just rendered content
 	 * @return string - Just rendered content
 	 * @throws Exception
@@ -385,10 +390,7 @@ class Table extends Widget {
 					"class" => "core-table-cell"
 				]);
 			}
-			print ControlMenu::widget([
-				"controls" => $this->controls,
-				"mode" => $this->controlMode
-			]);
+			$this->renderControls();
 			print Html::endTag("tr");
 		}
 		if (count($this->data) == 0) {
@@ -438,6 +440,23 @@ class Table extends Widget {
 			]);
 		}
 		print Html::endTag("tr");
+	}
+
+	/**
+	 * Render table controls for each row
+	 */
+	public function renderControls() {
+		if (!is_array($this->controls) || !count($this->controls)) {
+			return ;
+		}
+		print Html::beginTag("td", [
+			"align" => "middle"
+		]);
+		print ControlMenu::widget([
+			"controls" => $this->controls,
+			"mode" => $this->controlMode
+		]);
+		print Html::endTag("td");
 	}
 
 	/**
