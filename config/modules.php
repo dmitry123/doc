@@ -72,4 +72,13 @@
 		],
 		"url" => "admin/master/view"
 	],
+	"security" => [
+		"class" => "app\\modules\\security\\SecurityModule",
+		"name" => "Безопасность",
+		"icon" => "glyphicon glyphicon-lock",
+		"roles" => [
+			"admin",
+			"super",
+		]
+	]
 ];

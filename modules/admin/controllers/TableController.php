@@ -32,7 +32,7 @@ class TableController extends Controller {
 	 */
 	public function actionLoad() {
 		try {
-			$table = Inflector::id2camel($this->get("table"), "_");
+			$table = Inflector::id2camel($this->requireQuery("table"), "_");
 			$model = "app\\models\\$table";
 			if (!class_exists($model)) {
 				$this->error("Can't resolve table class \"$model\"");

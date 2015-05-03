@@ -4,5 +4,6 @@
  * @var $self app\modules\plantation\controllers\MasterController
  */
 print \app\widgets\MasterMenu::widget([
-	"id" => "plantation-master-menu"
+	"id" => "plantation-master-menu",
+	"ext" => "plantation"
 ]);

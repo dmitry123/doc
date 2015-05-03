@@ -75,11 +75,11 @@ class UserController extends Controller {
 				"login", "password"
 			], "login");
 			/** @var User $user */
-			$user = User::model()->find()->where("lower(login) = :login", [
+			$user = User::find()->where("lower(login) = :login", [
 				":login" => strtolower($form->{"login"})
 			])->one();
 			if (!$user) {
-				$user = User::model()->find()->where("lower(email) = :email", [
+				$user = User::find()->where("lower(email) = :email", [
 					":email" => strtolower($form->{"login"})
 				])->one();
 			}
@@ -92,13 +92,13 @@ class UserController extends Controller {
 			if (!$r) {
 				$this->error("Неверный логин/email или пароль");
 			}
-			if (!\Yii::$app->getUser()->login($user)) {
+			if (!\Yii::$app->user->login($user)) {
 				$this->error("Произошла ошибка при входе в систему");
 			}
 			$params = [
-				"USER_ID" => \Yii::$app->getUser()->getIdentity()->{"id"},
-				"USER_LOGIN" => \Yii::$app->getUser()->getIdentity()->{"login"},
-				"USER_EMAIL" => \Yii::$app->getUser()->getIdentity()->{"email"}
+				"USER_LOGIN" => \Yii::$app->user->identity->{"login"},
+				"USER_ID" => \Yii::$app->user->identity->{"id"},
+				"USER_EMAIL" => \Yii::$app->user->identity->{"email"}
 			];
 			$employee = Employee::findOne([
 				"user_id" => $user->{"id"}

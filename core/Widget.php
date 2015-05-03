@@ -72,7 +72,7 @@ class Widget extends \yii\base\Widget {
 	 * @return string - Serialized and URL encoded attributes
 	 * @throws Exception
 	 */
-	public function getSerializedAttributes($attributes = null, $excepts = null, $string = null) {
+	public function getSerializedAttributes($attributes = null, $excepts = [], $string = null) {
 		$params = [];
 		if ($attributes === null) {
 			$attributes = $this;

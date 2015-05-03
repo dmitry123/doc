@@ -8,6 +8,8 @@ use yii\helpers\Url;
 
 class Module extends \yii\base\Module {
 
+	use ClassTrait;
+
 	/**
 	 * @var string - Module name in russian
 	 */
@@ -116,7 +118,7 @@ class Module extends \yii\base\Module {
 				];
 			}
 			if (isset($module["roles"])) {
-				if (in_array(EmployeeManager::getInfo()["role_id"], $module["roles"])) {
+				if (in_array(EmployeeManager::getManager()->getInfo()["role_id"], $module["roles"])) {
 					$allowed[] = $module;
 				}
 			} else {

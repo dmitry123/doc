@@ -37,7 +37,6 @@ class EmployeeController extends Controller {
 	 */
 	public function actionRegister() {
 		try {
-
 		} catch (Exception $e) {
 			$this->exception($e);
 		}

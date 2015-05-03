@@ -13,4 +13,8 @@ class PlantationAsset extends AssetBundle {
 	public $css = [
 		"css/plantation.css"
 	];
+
+	public $depends = [
+		'app\assets\CoreAsset'
+	];
 }

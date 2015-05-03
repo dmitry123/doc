@@ -11,6 +11,8 @@ use yii\web\Session;
 
 abstract class Controller extends \yii\web\Controller {
 
+	use ClassTrait;
+
 	public function actions() {
 		return [
 			'error' => [
@@ -192,20 +194,20 @@ abstract class Controller extends \yii\web\Controller {
 	public function actionWidget() {
 		try {
 			// Get widget's class component and unique identification number and method
-			$class = $this->getAndUnset("class");
+			$class = $this->requireQueryOnce("class");
 
 			if (isset($_GET["model"])) {
-				$model = $this->getAndUnset("model");
+				$model = $this->requireQueryOnce("model");
 			} else {
 				$model = null;
 			}
 			if (isset($_GET["method"])) {
-				$method = $this->getAndUnset("method");
+				$method = $this->requireQueryOnce("method");
 			} else {
 				$method = "GET";
 			}
 			if (isset($_GET["form"])) {
-				$form = $this->getAndUnset("form");
+				$form = $this->requireQueryOnce("form");
 				if (is_string($form)) {
 					$form = $this->decode($form);
 				}
@@ -264,70 +266,6 @@ abstract class Controller extends \yii\web\Controller {
 	}
 
 	/**
-	 * Register some form's values in database, it will automatically
-	 * fetch model from $_POST["model"], decode it, build it's LFormModel
-	 * object and save into database. But you must override
-	 * LController::getModel and return instance of controller's model else
-	 * it will throw an exception
-	 *
-	 * @in (POST):
-	 *  + model - String with serialized client form via $("form").serialize(), if you're
-	 * 		using LModal or LPanel widgets that it will automatically find button with
-	 * 		submit type and send ajax request
-	 * @out (JSON):
-	 *  + message - Message with status
-	 *  + status - True if everything ok
-	 *
-	 * @see LController::getModel
-	 * @see LModal
-	 * @see LPanel
-	 */
-	protected function actionRegister() {
-		try {
-			$model = $this->getFormModel("model", "post", "register");
-			if (is_array($model)) {
-				throw new ErrorException("Forms to register mustn't be array");
-			}
-			if (($table = $this->getModel(null)) == null) {
-				throw new ErrorException("Your controller must override LController::getModel method");
-			}
-			foreach ($model->attributes as $key => $value) {
-				$table->__set($key, $value);
-			}
-			$table->__unset("id");
-			$table->save();
-			$this->leave([
-				"message" => "Данные успешно сохранены"
-			]);
-		} catch (\Exception $e) {
-			$this->exception($e);
-		}
-	}
-
-	/**
-	 * Override that method to remove element from model, by default
-	 * it will try to find controller's model and remove it
-	 *
-	 * @in (POST):
-	 *  + id - Element's identification number
-	 * @out (JSON):
-	 *  + message - Response message
-	 *  + status - True if everything ok
-	 */
-	protected function actionDelete() {
-		try {
-			$this->getModel(null)->deleteByPk($this->post("id"), "id = :id", [
-				":id" => $this->post("id")
-			]);
-			$this->leave([
-				"message" => "Элемент был успешно удален"
-			]);
-		} catch (ErrorException $e) {
-			$this->exception($e);
-		}
-	}
-
-	/**
 	 * Check for model existence and return it
 	 *
 	 * @param string $class - Name of model's form class instance, it
@@ -365,28 +303,26 @@ abstract class Controller extends \yii\web\Controller {
 	}
 
 	/**
-	 * Get session instance with current session
-	 * @return Session - Yii http session
-	 */
-	public function getSession() {
-		if ($this->session == null) {
-			$this->session = new Session();
-		}
-		return $this->session;
-	}
-
-	/**
 	 * Try to get received data via GET method or throw an exception
 	 * with error message
 	 * @param $name string - Name of parameter to get
 	 * @return mixed - Some received stuff
-	 * @throws ErrorException - If parameter hasn't been declared in _GET array
+	 * @throws \Exception - If parameter hasn't been declared in _GET array
 	 */
-	public function get($name) {
-		if (!isset($_GET[$name])) {
-			throw new ErrorException("GET.$name");
+	public function requireQuery($name) {
+		if (!isset(\Yii::$app->request->queryParams[$name])) {
+			throw new \Exception("That action requires query parameter \"$name\"");
+		} else {
+			return \Yii::$app->request->queryParams[$name];
 		}
-		return $_GET[$name];
+	}
+
+	public function getQuery($name, $default = null) {
+		if (isset(\Yii::$app->request->queryParams[$name])) {
+			return \Yii::$app->request->queryParams[$name];
+		} else {
+			return $default;
+		}
 	}
 
 	/**
@@ -395,9 +331,15 @@ abstract class Controller extends \yii\web\Controller {
 	 * @return Mixed - Some received value
 	 * @throws ErrorException - If parameter hasn't been declared in _GET array
 	 */
-	public function getAndUnset($name) {
-		$value = $this->get($name);
+	public function requireQueryOnce($name) {
+		$value = $this->requireQuery($name);
 		unset($_GET[$name]);
+		return $value;
+	}
+
+	public function getQueryOnce($name, $default = null) {
+		$value = $this->getQuery($name, $default);
+		unset($_POST[$name]);
 		return $value;
 	}
 
@@ -406,13 +348,22 @@ abstract class Controller extends \yii\web\Controller {
 	 * with error message
 	 * @param $name string - Name of parameter to get
 	 * @return mixed - Some received stuff
-	 * @throws ErrorException - If parameter hasn't been declared in _POST array
+	 * @throws \Exception - If parameter hasn't been declared in _POST array
 	 */
-	public function post($name) {
-		if (!isset($_POST[$name])) {
-			throw new ErrorException("POST.$name");
+	public function requirePost($name) {
+		if (!isset(\Yii::$app->request->bodyParams[$name])) {
+			throw new \Exception("That action requires body parameter \"$name\"");
+		} else {
+			return \Yii::$app->request->bodyParams[$name];
 		}
-		return $_POST[$name];
+	}
+
+	public function getPost($name, $default = null) {
+		if (isset(\Yii::$app->request->bodyParams[$name])) {
+			return \Yii::$app->request->bodyParams[$name];
+		} else {
+			return $default;
+		}
 	}
 
 	/**
@@ -461,6 +412,5 @@ abstract class Controller extends \yii\web\Controller {
 		return null;
 	}
 
-	private $session = null;
 	private $errors = [];
 } 

@@ -129,32 +129,6 @@ var Core = Core || {};
         this.activate();
     };
 
-    /**
-     * Sub-Component class, use it to declare sub component, that instance
-     * won't be rendered automatically, you shall manually invoke render method
-     * @param component {Component} - Parent component
-     * @param [selector] {jQuery} - jQuery's selector or null
-     * @constructor
-     */
-    var SubComponent = function(component, selector) {
-        this.component = function() {
-            return component;
-        };
-        Component.call(this, {}, {}, selector || true);
-    };
-
-    Core.extend(SubComponent, Component);
-
-    /**
-     * That method will fetch properties values from
-     * parent's component
-     * @param key {String} - Property name
-     * @param value {*} - Property value
-     */
-    SubComponent.prototype.property = function(key, value) {
-        return this.component().property.apply(this.component(), arguments);
-    };
-
 	/**
 	 * Common class with static helper methods
 	 * @constructor
@@ -238,12 +212,18 @@ var Core = Core || {};
 		});
 	};
 
+	Core.loadExt = function(module, ext, success) {
+		return Core.sendQuery(url("ext/load"), {
+			module: module,
+			ext: ext
+		}, success);
+	};
+
 	Core.resetFormErrors = function(where) {
 		$(where).find(".form-group").removeClass("has-error");
 	};
 
 	Core.Component = Component;
-	Core.SubComponent = SubComponent;
 	Core.Common = Common;
 
 	/**

@@ -10,9 +10,8 @@ use app\core\TableProvider;
 use app\core\UniqueGenerator;
 use app\core\Widget;
 use Exception;
-use yii\base\Model;
 use yii\db\ActiveQuery;
-use yii\db\Query;
+use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 
 class Table extends Widget {
@@ -97,6 +96,13 @@ class Table extends Widget {
 	 * 	to CONTROL_MODE_NONE to disable control elements
 	 */
 	public $controlMode = ControlMenu::MODE_ICON;
+
+	/**
+	 * @var string - Special class for each
+	 * 	control element
+	 * @see ContorlMenu::special
+	 */
+	public $controlSpecial = "table-control-button";
 
 	/**
 	 * @var string - String with search conditions, uses for
@@ -454,7 +460,8 @@ class Table extends Widget {
 		]);
 		print ControlMenu::widget([
 			"controls" => $this->controls,
-			"mode" => $this->controlMode
+			"mode" => $this->controlMode,
+			"special" => $this->controlSpecial,
 		]);
 		print Html::endTag("td");
 	}
@@ -550,8 +557,8 @@ class Table extends Widget {
 	 *
 	 * @return string - Serialized and URL encoded attributes
 	 */
-	public function getSerializedAttributes($attributes = null, $excepts = null) {
-		return parent::getSerializedAttributes($attributes, [
+	public function getSerializedAttributes($attributes = null, $excepts = []) {
+		return parent::getSerializedAttributes($attributes, ArrayHelper::merge($excepts, [
 			/*
 			 * Don't let widget to serialize array
 			 * with data, pff :D
@@ -570,6 +577,6 @@ class Table extends Widget {
 			 * like search or update, cuz it will always return empty data
 			 */
 			"emptyData"
-		]);
+		]));
 	}
 }

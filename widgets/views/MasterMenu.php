@@ -2,9 +2,11 @@
 /**
  * @var $items array
  * @var $id string
+ * @var $ext string
  */
 ?>
-<div class="col-xs-3">
+<div class="master-menu-wrapper" data-ext="<?= $ext ?>">
+	<div class="col-xs-3 master-menu-list">
 	<?= \app\widgets\Panel::widget([
 		"title" => "Выберите модуль",
 		"body" => \app\widgets\TabMenu::widget([
@@ -14,21 +16,26 @@
 		"controls" => [
 			"master-list-icon" => [
 				"label" => "Список",
-				"icon" => "glyphicon glyphicon-list"
+				"icon" => "glyphicon glyphicon-list",
+				"parent" => [
+					"class" => "active"
+				]
 			],
 			"master-normal-icon" => [
 				"label" => "Матрица",
-				"icon" => "glyphicon glyphicon-th"
+				"icon" => "glyphicon glyphicon-th",
 			],
 			"mater-large-icon" => [
 				"label" => "Иконки",
-				"icon" => "glyphicon glyphicon-th-large"
+				"icon" => "glyphicon glyphicon-th-large",
 			]
 		],
+		"bodyClass" => "panel-body no-padding",
 		"controlMode" => \app\widgets\ControlMenu::MODE_MENU,
 		"id" => $id
 	]); ?>
-</div>
-<div class="col-xs-9">
-	<h1 class="text-center">Модуль не выбран</h1>
+	</div>
+	<div class="col-xs-9 master-menu-body">
+		<h1 class="text-center">Модуль не выбран</h1>
+	</div>
 </div>

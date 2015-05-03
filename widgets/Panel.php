@@ -179,7 +179,8 @@ class Panel extends Widget {
 	public function renderControls() {
 		print ControlMenu::widget([
 			"controls" => $this->controls,
-			"mode" => $this->controlMode
+			"mode" => $this->controlMode,
+			"special" => "panel-control-button"
 		]);
 	}
 

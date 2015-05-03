@@ -13,14 +13,16 @@ var Core = Core || {};
 	Table.prototype.update = function(parameters) {
 		var me = this, table = this.selector();
 		this.before();
-		var data = $.extend({
-			class: table.attr("data-widget"),
+		parameters = $.extend({
 			currentPage: this.property("currentPage"),
 			orderBy: this.property("orderBy"),
 			pageLimit: this.property("pageLimit")
 		}, parameters || {});
-		var params = $.parseJSON(this.selector().attr("data-attributes"));
-		$.get(this.selector().data("url"), $.extend(params, data), function(json) {
+		parameters = $.extend($.parseJSON(this.selector().attr("data-attributes")), parameters);
+		$.get(this.selector().data("url"), {
+			class: table.attr("data-widget"),
+			attributes: parameters
+		}, function(json) {
 			if (!json["status"]) {
 				return Core.createMessage({
 					message: json["message"]

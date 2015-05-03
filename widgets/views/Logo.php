@@ -34,7 +34,7 @@
 			<?= \app\widgets\ControlMenu::widget([
 				"controls" => $self->controls,
 				"mode" => \app\widgets\ControlMenu::MODE_BUTTON,
-				"specialClass" => "logo-control-button"
+				"special" => "logo-control-button"
 			]) ?>
 		</div>
 	</div>

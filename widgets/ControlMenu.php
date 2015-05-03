@@ -47,10 +47,21 @@ class ControlMenu extends Widget {
 	/**
 	 * Control elements displays as dropdown list, attributes:
 	 *  + label - menu item label
+	 *  + [parent] - HTML attributes for parent node <li>
 	 *  + [icon] - glyphicon before item's text
 	 *  + ... - other HTML attributes
 	 */
-	const MODE_MENU   = 4;
+	const MODE_MENU = 4;
+
+	/**
+	 * Control elements displays as dropdown list, with sub-items:
+	 *  + label - menu items label
+	 *  + [items] - array with sub-items
+	 *  + [parent] - HTML attributes for parent node <ul>
+	 *  + [icon] - glyphicon before items' text
+	 *  + ... - other HTML attributes
+	 */
+	const MODE_LIST = 5;
 
 	/**
 	 * @var int - How to display control elements, set it
@@ -78,7 +89,7 @@ class ControlMenu extends Widget {
 	 * @var string - Name of special class which automatically
 	 * 	adds to every control element
 	 */
-	public $specialClass = "panel-control-button";
+	public $special = "control-menu-button";
 
 	/**
 	 * Run widget to render control elements
@@ -90,6 +101,11 @@ class ControlMenu extends Widget {
 	}
 
 	public function prepareControl($key, array& $attributes) {
+		if (!isset($attributes["class"])) {
+			$attributes["class"] = "$this->special $key";
+		} else {
+			$attributes["class"] .= " $this->special $key";
+		}
 		if (isset($attributes["label"])) {
 			$label = $attributes["label"];
 		} else {
@@ -100,16 +116,25 @@ class ControlMenu extends Widget {
 		} else {
 			$icon = null;
 		}
+		if (isset($attributes["parent"])) {
+			$parent = $attributes["parent"];
+		} else {
+			$parent = [];
+		}
+		if (isset($attributes["items"])) {
+			$items = $attributes["items"];
+		} else {
+			$items = [];
+		}
 		unset($attributes["label"]);
 		unset($attributes["icon"]);
-		if (!isset($attributes["class"])) {
-			$attributes["class"] = "$this->specialClass $key";
-		} else {
-			$attributes["class"] .= " $this->specialClass $key";
-		}
+		unset($attributes["parent"]);
+		unset($attributes["items"]);
 		return [
 			"label" => $label,
-			"icon" => $icon
+			"icon" => $icon,
+			"parent" => $parent,
+			"items" => $items
 		];
 	}
 
@@ -200,17 +225,53 @@ class ControlMenu extends Widget {
 					]) ."&nbsp;&nbsp;". $label;
 			}
 			$options["class"] = preg_replace($this->buttonRegexp, "", $options["class"]);
+			if (isset($required["parent"]["class"])) {
+				$required["parent"]["class"] .= " text-left";
+			} else {
+				$required["parent"]["class"] = "text-left";
+			}
 			print Html::tag("li", Html::tag("a", $label, [
 					"role" => "menuitem",
 					"tagindex" => "-1"
-				] + $options), [
-					"role" => "presentation",
-					"class" => "text-left"
+				] + $options), $required["parent"] + [
+					"role" => "presentation"
 				]
 			);
 		}
 		print Html::endTag("ul");
 		print Html::endTag("div");
+	}
+
+	public function renderListControls($items = null) {
+		print Html::beginTag("ul", [
+			"class" => "btn-group btn-group-justified",
+			"role" => "group"
+		]);
+		if ($items === null) {
+			$items = $this->controls;
+		}
+		foreach ($items as $class => $options) {
+			$required = $this->prepareControl($class, $options);
+			if (!empty($required["items"])) {
+				$options["class"] .= " dropdown";
+			}
+			if (isset($options["class"])) {
+				$options["class"] .= " btn btn-lg btn-default";
+			} else {
+				$options["class"] = "btn btn-lg btn-default";
+			}
+			if (isset($required["parent"]["class"])) {
+				$required["parent"]["class"] .= " btn-group";
+			} else {
+				$required["parent"]["class"] = " btn-group";
+			}
+			print Html::beginTag("li", $required["parent"]);
+			print Html::tag("button", $required["label"], $options + [
+				"type" => "button"
+			]);
+			print Html::endTag("li");
+		}
+		print Html::endTag("ul");
 	}
 
 	/**
@@ -229,6 +290,9 @@ class ControlMenu extends Widget {
 				break;
 			case self::MODE_MENU:
 				$this->renderMenuControls();
+				break;
+			case self::MODE_LIST:
+				$this->renderListControls();
 				break;
 		}
 	}

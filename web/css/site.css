@@ -178,3 +178,11 @@ a.desc:after {
     color: black;
     text-decoration-style: solid;
 }
+
+.font-red {
+    color: #a94442;
+}
+
+ul.btn-group {
+    padding: 0;
+}

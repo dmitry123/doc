@@ -29,12 +29,12 @@ class FilePage extends Widget {
 	/**
 	 * @var string - Text with file change history
 	 */
-	public $textHistory = "История изменений файла";
+	public $textHistory = "История";
 
 	/**
 	 * @var string - Text with information about document
 	 */
-	public $textInfo = "Информация о документе";
+	public $textInfo = "Информация";
 
 	/**
 	 * Run widget to return just rendered content

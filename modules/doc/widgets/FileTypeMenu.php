@@ -8,7 +8,7 @@ use yii\helpers\Html;
 
 class FileTypeMenu extends TabMenu {
 
-	public $style = self::STYLE_PILLS_STACKED;
+	public $style = self::STYLE_TABS_STACKED;
 	public $id = "file-type-menu";
 
 	public function init() {
