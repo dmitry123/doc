@@ -2,11 +2,9 @@
 
 namespace app\widgets;
 
-use app\assets\ModuleMenuAsset;
 use app\core\Module;
 use app\core\Widget;
 use Yii;
-use yii\web\Application;
 
 class ModuleMenu extends Widget {
 
@@ -25,7 +23,7 @@ class ModuleMenu extends Widget {
 			array_splice($module, $i, 1);
 			break;
 		}
-		return $this->render("ModuleMenu", [
+		return $this->render("ModuleMenu2", [
 			"modules" => $modules,
 			"name" => Module::getModuleName(),
 		]);

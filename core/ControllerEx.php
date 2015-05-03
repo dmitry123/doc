@@ -13,12 +13,6 @@ abstract class ControllerEx extends Controller {
 	public abstract function getModel();
 
 	/**
-	 * @return FormModel - Instance of form model class
-	 * 	for current controller's model
-	 */
-	public abstract function getForm();
-
-	/**
 	 * Register some form's values in database, it will automatically
 	 * fetch model from $_POST["model"], decode it, build it's LFormModel
 	 * object and save into database. But you must override

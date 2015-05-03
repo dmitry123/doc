@@ -5,8 +5,12 @@ namespace app\controllers;
 use app\core\ActiveRecord;
 use app\core\Controller;
 use app\core\FormModel;
-use app\models\Employee;
-use app\models\User;
+use app\forms\UserForm;
+use app\models\core\Employee;
+use app\models\core\User;
+use yii\base\DynamicModel;
+use yii\base\Exception;
+use yii\web\UploadedFile;
 
 class UserController extends Controller {
 
@@ -26,28 +30,27 @@ class UserController extends Controller {
 	 */
 	public function actionRegister() {
 		try {
-			$form = $this->requireModel("UserForm", [
-				"login", "password", "password2", "email"
-			], "register");
-			if (!$form->validate()) {
-				if ($form->hasErrors()) {
-					$this->postValidationErrors($form);
-				} else {
-					$this->error("Произошла неизвестная ошибка при валидации формы");
-				}
+			$model = UserForm::createWithScenario("register");
+			if (!$model->load(\Yii::$app->request->bodyParams)) {
+				throw new Exception("Can't load registration form");
 			}
-			$model = $this->getModel($form);
-			$row = User::findOne([
-				"email" => $model->{"email"}
-			]);
-			if ($row != null) {
+			if (!$model->validate()) {
+				$this->postValidationErrors($model);
+			}
+			if (User::findOne([ "email" => $model->{"email"} ]) != null) {
 				$this->error("Пользователь с таким почтовым ящиком уже зарегистрирован \"{$model->{"email"}}\"");
 			}
 			$model->{"password"} = \Yii::$app->getSecurity()->generatePasswordHash(
 				$model->{"password"}
 			);
-			if (!$model->save()) {
-				$this->error("Произошли ошибки во время сохранения данных");
+			print_r($model->getAttributes());
+			die;
+			if (!$model->getActiveRecord()->save()) {
+				if ($model->getActiveRecord()->hasErrors()) {
+					$this->postValidationErrors($model->getActiveRecord());
+				} else {
+					$this->error("Произошли ошибки во время сохранения данных");
+				}
 			}
 			$this->leave([
 				"message" => "Пользователь успешно зарегистрирован"
@@ -142,14 +145,5 @@ class UserController extends Controller {
 		} catch (\Exception $e) {
 			$this->exception($e);
 		}
-	}
-
-	/**
-	 * Override that method to return model for current controller instance or null
-	 * @param $model FormModel - Another model to clone
-	 * @return ActiveRecord - Active record instance or null
-	 */
-	public function getModel($model) {
-		return new User($model);
 	}
 }

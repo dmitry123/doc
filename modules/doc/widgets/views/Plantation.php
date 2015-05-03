@@ -52,7 +52,7 @@ print \app\widgets\Modal::widget([
 	<div class="tab-pane fade" id="<?= $fe ?>">
 	<?= \app\widgets\Panel::widget([
 		"title" => "Расширения файлов",
-		"body" => \app\modules\doc\widgets\MimeTypeTable::create(),
+		"body" => \app\modules\doc\widgets\FileExtTable::create(),
 		"controls" => [
 			"panel-insert-button" => [
 				"label" => "Добавить",

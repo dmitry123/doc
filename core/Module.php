@@ -4,7 +4,6 @@ namespace app\core;
 
 use Yii;
 use yii\base\Application;
-use yii\helpers\Url;
 
 class Module extends \yii\base\Module {
 
@@ -77,7 +76,7 @@ class Module extends \yii\base\Module {
 		} else {
 			$name = $module->id;
 		}
-		if ($name != "basic" && !empty($name)) {
+		if ($name != Yii::$app->id && !empty($name)) {
 			return ".".$name ;
 		} else {
 			return "";
@@ -118,7 +117,7 @@ class Module extends \yii\base\Module {
 				];
 			}
 			if (isset($module["roles"])) {
-				if (in_array(EmployeeManager::getManager()->getInfo()["role_id"], $module["roles"])) {
+				if (in_array(EmployeeHelper::getHelper()->getInfo()["role_id"], $module["roles"])) {
 					$allowed[] = $module;
 				}
 			} else {
@@ -129,5 +128,17 @@ class Module extends \yii\base\Module {
 			return isset($allowed[$module]) ? $allowed[$module] : null;
 		}
 		return $allowed;
+	}
+
+	public function getWidgetClass($class) {
+		return $this->getClassPath("widgets", $class);
+	}
+
+	private function getClassPath($scope, $class) {
+		if (($p = strrpos($this->className(), "\\")) !== false) {
+			return substr($this->className(), 0, $p) ."\\".$scope."\\".$class;
+		} else {
+			return "app\\".$scope."\\".$class;
+		}
 	}
 }

@@ -2,12 +2,9 @@
 
 namespace app\controllers;
 
-use app\core\ActiveRecord;
 use app\core\Controller;
 use app\core\Module;
 use Yii;
-use yii\base\Exception;
-use yii\base\Model;
 
 class SiteController extends Controller {
 

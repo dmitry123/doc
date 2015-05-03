@@ -166,7 +166,7 @@ var Core = Core || {};
 	};
 
 	Core.sendAjax = function(method, href, data, success) {
-		return $[method.toLowerCase()](url(href), data, function(json) {
+		return $[method.toLowerCase()](href, data, function(json) {
 			if (!json["status"]) {
 				if (json["error"] !== "form") {
 					return Core.createMessage({
@@ -189,11 +189,11 @@ var Core = Core || {};
 	};
 
 	Core.sendQuery = function(href, data, success) {
-		return Core.sendAjax("get", href, data, success);
+		return Core.sendAjax("get", url(href), data, success);
 	};
 
 	Core.sendPost = function(href, data, success) {
-		return Core.sendAjax("post", href, data, success);
+		return Core.sendAjax("post", url(href), data, success);
 	};
 
 	Core.postFormErrors = function(where, json) {
@@ -210,6 +210,13 @@ var Core = Core || {};
 			message: json["message"] + html.html(),
 			delay: 10000
 		});
+	};
+
+	Core.loadWidget = function(widget, attributes, success) {
+		return Core.sendQuery("ext/widget", $.extend(attributes, {
+			class: widget,
+			module: doc["module"]
+		}), success);
 	};
 
 	Core.loadExt = function(module, ext, success) {
@@ -356,10 +363,11 @@ var Core = Core || {};
      */
     window.url = function(url) {
 		url = url || "";
-		if (url.charAt(0) != "/") {
-			url = "/" + url;
+		if (url.charAt(0) !== "/") {
+			return window["doc"]["url"] + url;
+		} else {
+			return url;
 		}
-        return window["doc"]["url"] + url;
     };
 
 	window.serialize = function(obj, prefix) {

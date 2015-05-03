@@ -2,7 +2,7 @@
 
 namespace app\modules\doc\widgets;
 
-use app\models\File;
+use app\models\doc\File;
 use app\widgets\Table;
 
 class FileTable extends Table {
@@ -46,7 +46,7 @@ class FileTable extends Table {
 	public $controlsWidth = 150;
 
 	public function init() {
-		$this->provider = File::model()->getMainTableProvider($this->fileType);
+		$this->provider = File::getMainTableProvider($this->fileType);
 		parent::init();
 	}
 }

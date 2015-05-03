@@ -81,14 +81,19 @@
 
 .module-menu-block {
     position: absolute;
-    transition: all 0.25s ease 0s;
-    opacity: 0;
+    transition: all 0.3s ease 0.125s;
+    left: 0;
+    top: 45px;
     overflow: hidden;
-    left: 190px;
-    top: 0;
-    padding-top: 10px;
-    text-align: center;
-    width: auto;
+    width: 300px;
+    background-color: #333333;
+    border-top: 1px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-height: 0;
+}
+
+.module-menu-icon-text {
+    font-size: 12px;
 }
 
 .module-menu-block-icon-wrapper > .tooltip {
@@ -96,13 +101,18 @@
     left: 100px !important;
 }
 
-.module-menu-title:hover .module-menu-block {
-    opacity: 1;
+.module-menu-title > a:hover .module-menu-block, .module-menu-block:hover {
+    max-height: 250px;
+    padding-top: 10px;
+    padding-bottom: 15px;
 }
 
 .module-menu-block-cell {
-    margin-right: 8px;
-    margin-left: 8px;
+    margin: 10px;
+}
+
+.module-menu-block-icon-wrapper {
+    text-align: center;
 }
 
 .module-menu-block-icon-wrapper > .module-menu-block-icon {
@@ -114,6 +124,6 @@
 .module-menu-block-icon-wrapper:hover > .module-menu-block-icon {
     color: #008bb9;
 }
-.module-menu-block-icon-wrapper[data-error]:hover > .module-menu-block-icon:after {
+.module-menu-block-icon-wrapper[data-error]:hover > .module-menu-block-icon {
     color: indianred;
 }

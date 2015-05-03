@@ -2,12 +2,9 @@
 
 namespace app\assets;
 
-use yii\web\AssetBundle;
+use app\core\AssetBundle;
 
 class DocAsset extends AssetBundle {
-
-	public $basePath = '@webroot';
-	public $baseUrl = '@web';
 
 	public $css = [
 		"css/doc.css"

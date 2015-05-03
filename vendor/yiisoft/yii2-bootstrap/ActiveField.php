@@ -339,8 +339,8 @@ class ActiveField extends \yii\widgets\ActiveField
             $config['template'] = "{label}\n{beginWrapper}\n{input}\n{error}\n{endWrapper}\n{hint}";
             $cssClasses = [
                 'offset' => 'col-sm-offset-3',
-                'label' => 'col-sm-3',
-                'wrapper' => 'col-sm-6',
+                'label' => 'col-sm-3 col-xs-6',
+                'wrapper' => 'col-sm-6 col-xs-6',
                 'error' => '',
                 'hint' => 'col-sm-3',
             ];

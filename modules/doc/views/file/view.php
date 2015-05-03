@@ -4,5 +4,5 @@
  */
 
 print \app\modules\doc\widgets\FilePage::widget([
-	"tableActiveRecord" => new \app\models\Document()
+	"tableActiveRecord" => new \app\models\doc\Document()
 ]);

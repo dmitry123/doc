@@ -2,11 +2,10 @@
 
 namespace app\widgets;
 
-use app\core\EmployeeManager;
 use app\core\Module;
 use app\core\Widget;
-use app\models\Employee;
-use app\models\Role;
+use app\models\core\Employee;
+use app\models\core\Role;
 use yii\helpers\Html;
 
 class Navigation extends Widget {

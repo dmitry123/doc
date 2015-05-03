@@ -36,7 +36,7 @@ var BlockPageManager = {
 			"width": +content.width() + this.padding
 		}).append(
 			image = $("<img>", {
-				src: "img/ajax-loader.gif",
+				src: url("img/ajax-loader.gif"),
 				css: {
 					"width": "100px",
 					"height": "100px",
@@ -46,16 +46,16 @@ var BlockPageManager = {
 					"z-index": "2"
 				},
 				"class": "loading-image"
-			}).fadeIn("slow")
-		).find("*:not(.loading-image)").fadeOut("slow");
+			}).fadeIn("normal")
+		).find("*:not(.loading-image)").fadeOut("normal");
 	},
 	after: function() {
 		var block = $(".page-block");
 		block.find(".loading-image").promise().done(function() {
-			$(this).fadeOut("slow");
+			$(this).fadeOut("normal");
 		});
 		block.find("*:not(.loading-image)").promise().done(function() {
-			$(this).fadeIn("slow");
+			$(this).fadeIn("normal");
 		});
 	}
 };
@@ -79,8 +79,10 @@ $(document).ready(function() {
 	$(document).on("click", ".register-save-button", function() {
 		BlockPageManager.before();
 		$("#user-register-form").form({
-			success: function() {
-				BlockPageManager.reload("site/index", false);
+			success: function(response) {
+				if (response["status"]) {
+					BlockPageManager.reload("site/index", false);
+				}
 			},
 			fail: function() {
 				BlockPageManager.after();

@@ -61,9 +61,9 @@ var Core = Core || {};
 		if (params.length !== void 0 && !params.length) {
 			params = {};
 		}
-		$.get(Core.Common.getWidget(), $.extend(params, {
-			class: this.selector().attr("data-widget")
-		}), function(json) {
+		Core.loadWidget(this.selector().attr("data-widget"), {
+			attributes: params
+		}, function(json) {
 			if (json["status"]) {
 				me.selector().find(".panel-content").fadeOut("fast", function() {
 					$(this).empty().append(json["component"]).hide().fadeIn("fast");
@@ -71,7 +71,7 @@ var Core = Core || {};
 			} else {
 				$(json["message"]).message();
 			}
-		}, "json").always(function() {
+		}).always(function() {
 			me.after();
 		});
 	};

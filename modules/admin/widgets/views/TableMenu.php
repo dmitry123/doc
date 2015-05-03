@@ -7,7 +7,7 @@
 
 <ul class="nav nav-pills nav-stacked table-list">
 <?php foreach ($self->list as $key => $table): ?>
-	<li role="presentation" data-table="<?= $table["table"] ?>" data-model="<?= $table["model"] ?>" data-form="<?= $table["form"] ?>">
+	<li role="presentation" data-table="<?= $table["table"] ?>" data-model="<?= $table["model"] ?>">
 		<a href="javascript:void(0)">
 			<span class="glyphicon glyphicon-unchecked"></span>
 			<span>&nbsp;&nbsp;<?= $table["label"] ?></span>

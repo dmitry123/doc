@@ -3,9 +3,9 @@
 namespace app\filters;
 
 use app\core\Module;
-use app\models\Employee;
-use app\models\Privilege;
-use app\models\Role;
+use app\models\core\Employee;
+use app\models\core\Privilege;
+use app\models\core\Role;
 use yii\base\ActionFilter;
 use yii\base\Exception;
 
@@ -33,7 +33,7 @@ class AccessFilter extends ActionFilter {
 	}
 
 	public function getEmployee() {
-		$this->_employee = Employee::model()->findOne([
+		$this->_employee = Employee::findOne([
 			"user_id" => $this->getUser()->getId(),
 			"is_validated" => 1
 		]);

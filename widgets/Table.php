@@ -3,6 +3,7 @@
 namespace app\widgets;
 
 use app\core\ActiveRecord;
+use app\core\ClassTrait;
 use app\core\DropDown;
 use app\core\FieldCollection;
 use app\core\FormModel;
@@ -217,7 +218,7 @@ class Table extends Widget {
 	 */
 	public function run() {
 		if (is_string($this->provider)) {
-			$this->provider = ActiveRecord::model($this->provider)->getDefaultTableProvider();
+			$this->provider = ActiveRecord::search($this->provider);
 		}
 		if (!$this->provider instanceof TableProvider && is_array($this->data)) {
 			throw new \Exception("Table provider must be an instance of TableProvider and don't have to be null");
@@ -349,8 +350,8 @@ class Table extends Widget {
 	 */
 	public function renderExtra() {
 		print Html::renderTagAttributes($options = [
-			"data-class" => get_class($this),
-			"data-widget" => get_class($this),
+			"data-class" => ClassTrait::createID($this->className()),
+			"data-widget" => ClassTrait::createID($this->className()),
 			"data-url" => $this->createUrl()
 		]);
 	}
@@ -406,7 +407,8 @@ class Table extends Widget {
 				$text = $this->textNoData;
 			}
 			print Html::tag("tr", Html::tag("td", "<b>$text</b>", [
-				"colspan" => count($this->header) + 1
+				"colspan" => count($this->header) + 1,
+				"align" => "middle"
 			]));
 		}
 	}

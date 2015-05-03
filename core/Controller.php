@@ -150,7 +150,10 @@ abstract class Controller extends \yii\web\Controller {
 	 */
 	public function postValidationErrors($model = null) {
 		if ($model != null) {
-			$errors = $model->getErrors();
+			$errors = [];
+			foreach ($model->getErrors() as $key => $value) {
+				$errors[ClassTrait::createID($model->className())."-".$key] = $value;
+			}
 		} else {
 			$errors = $this->errors;
 		}
@@ -290,7 +293,8 @@ abstract class Controller extends \yii\web\Controller {
 		}
 		$class = "app\\forms\\".$class;
 		/** @var $form FormModel */
-		$form = new $class($scenario);
+		$form = new $class();
+		$form->setScenario($scenario);
 		$form->load(\Yii::$app->request->bodyParams);
 		if (!$form->validate($attributes)) {
 			$errors = [];

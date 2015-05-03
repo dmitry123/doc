@@ -2,8 +2,8 @@
 
 namespace app\core;
 
-use app\models\Employee;
-use app\models\Privilege;
+use app\models\core\Employee;
+use app\models\core\Privilege;
 
 class User extends \yii\web\User {
 

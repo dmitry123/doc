@@ -5,7 +5,15 @@
  */
 use yii\web\View;
 
-\app\widgets\Logo::begin([
+print \app\widgets\Logo::widget([
+	"body" => \app\widgets\AutoForm::widget([
+		"model" => \app\forms\UserForm::createWithScenario("register"),
+		"url" => "user/register",
+		"id" => "user-register-form",
+		"except" => [
+			"access_token"
+		]
+	]),
 	"controls" => [
 		"register-save-button" => [
 			"label" => "Регистрация",
@@ -21,9 +29,3 @@ use yii\web\View;
 		]
 	]
 ]);
-print \app\widgets\Form::widget([
-	"model" => new \app\forms\UserForm("register"),
-	"url" => "user/register",
-	"id" => "user-register-form"
-]);
-\app\widgets\Logo::end();

@@ -19,8 +19,7 @@ var Core = Core || {};
 			pageLimit: this.property("pageLimit")
 		}, parameters || {});
 		parameters = $.extend($.parseJSON(this.selector().attr("data-attributes")), parameters);
-		$.get(this.selector().data("url"), {
-			class: table.attr("data-widget"),
+		Core.loadWidget(table.attr("data-widget"), {
 			attributes: parameters
 		}, function(json) {
 			if (!json["status"]) {

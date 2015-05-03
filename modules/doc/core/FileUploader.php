@@ -2,61 +2,65 @@
 
 namespace app\modules\doc\core;
 
-use app\core\EmployeeManager;
-use app\models\FileStatus;
-use app\models\FileType;
-use app\models\MimeType;
-use app\models\File;
+use app\core\EmployeeHelper;
+use app\models\doc\File;
+use app\models\doc\FileExt;
+use app\models\doc\FileStatus;
 use yii\base\Exception;
 
 class FileUploader {
 
+	const PATH_LENGTH = 32;
+
 	/**
-	 * Locked constructor
+	 * Get single file uploader instance
+	 * @return FileUploader - Instance of file uploader
 	 */
-	private function __construct() {
-		/* Locked */
+	public static function getUploader() {
+		if (self::$uploader == null) {
+			return self::$uploader = new FileUploader();
+		} else {
+			return self::$uploader;
+		}
 	}
 
 	/**
 	 * That method uploads files on server
-	 * @param array $files - Multiple file's configurations
-	 * @param int $type - Default file's type [\app\fields\FileTypeField]
-	 * @see \app\fields\FileTypeField
+	 *
+	 * @param $files array with multiple file's configurations
+	 * @param $config array with file's table attributes
+	 *
 	 * @throws \Exception
 	 */
-	public function uploadMultiple(array $files, $type = 1) {
+	public function uploadMultiple(array $files, $config = []) {
 		foreach ($files as $file) {
-			$this->upload($file, $type);
+			$this->upload($file, $config);
 		}
 	}
 
 	/**
 	 * That method uploads file on server
-	 * @param array $file - Single file's configuration
-	 * @param int $type - Default file's type [\app\fields\FileTypeField]
-	 * @see \app\fields\FileTypeField
+	 *
+	 * @param $file array wth file's configuration
+	 * @param $config array with file's table attributes
+	 *
 	 * @throws \Exception
 	 */
-	public function upload(array $file, $type = 1) {
+	public function upload(array $file, $config = []) {
 		if (preg_match("/^(?P<name>.*)\\.(?P<ext>.*)$/i", $file["name"], $matches) === false) {
 			throw new Exception("Can't match file pattern to fetch it's filename and extension");
 		}
-		if (($employee = EmployeeManager::getManager()->getEmployee()) == null) {
+		if (($employee = EmployeeHelper::getHelper()->getEmployee()) == null) {
 			throw new Exception("Only employees can upload files on server");
 		}
-		$path = \Yii::$app->getSecurity()->generateRandomString();
+		$path = \Yii::$app->getSecurity()->generateRandomString(static::PATH_LENGTH);
 		try {
 			\Yii::$app->getDb()->beginTransaction();
-			$mime = new MimeType([
-				"mime" => $file["type"],
+			$ext = new FileExt([
 				"ext" => $matches["ext"]
 			]);
-			if (!$mime->save()) {
+			if (!$ext->save()) {
 				throw new Exception("File hasn't been uploaded on server, can't save file's extension in database");
-			}
-			if (!($fileType = FileType::findOne([ "id" => "document" ]))) {
-				throw new Exception("Can't resolve file's type \"document\" in database");
 			}
 			if (!($fileStatus = FileStatus::findOne([ "id" => "new" ]))) {
 				throw new Exception("Can't resolve file's status \new\" in database");
@@ -64,16 +68,18 @@ class FileUploader {
 			$document = new File([
 				"name" => $matches["name"],
 				"path" => $path,
+				"file_category_id" => null,
 				"employee_id" => $employee->{"id"},
+				"mime_type" => $file["type"],
 				"parent_id" => null,
-				"file_type_id" => $fileType->{"id"},
 				"file_status_id" => $fileStatus->{"id"},
-				"mime_type_id" => $mime->{"id"}
-			]);
+				"file_type_id" => "unknown",
+				"file_ext_id" => $ext->{"id"}
+			] + $config);
 			if (!$document->save()) {
 				throw new Exception("File hasn't been uploaded on server, can't save file info in database");
 			}
-			if (!move_uploaded_file($file["tmp_name"], $this->getDirectory($path))) {
+			if (!@move_uploaded_file($file["tmp_name"], $this->getDirectory($path))) {
 				throw new Exception("File hasn't been uploaded on server: \"".error_get_last()["message"]."\"");
 			}
 			\Yii::$app->getDb()->getTransaction()->commit();
@@ -106,15 +112,10 @@ class FileUploader {
 	private $_path = null;
 
 	/**
-	 * Get single file uploader instance
-	 * @return FileUploader - Instance of file uploader
+	 * Locked constructor
 	 */
-	public static function getUploader() {
-		if (self::$uploader == null) {
-			return self::$uploader = new FileUploader();
-		} else {
-			return self::$uploader;
-		}
+	private function __construct() {
+		/* Locked */
 	}
 
 	/**
