@@ -17,9 +17,13 @@ var DocMenu = {
 		}).on("filebatchselected", function() {
 			$(this).fileinput("upload");
 		});
+		$("#file-upload-modal").on("show.bs.modal", function() {
+			$("#document-file-upload").fileinput("clearFileInput");
+		});
 	},
     afterUpload: function(json) {
         if (json["status"]) {
+			$("#file-upload-modal").modal("hide");
             return void 0;
         }
         var errors = json["errors"];
