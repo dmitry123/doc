@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
   <data-source name="PostgreSQL - mgup@localhost" uuid="4a1bea19-9630-4f7c-a585-745035fe4694">
-    <database-info product="PostgreSQL" version="9.3.0" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.3 JDBC4 (build 1100)">
+    <database-info product="PostgreSQL" version="9.3.5" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.3 JDBC4 (build 1100)">
       <identifier-quote-string>&quot;</identifier-quote-string>
     </database-info>
     <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact"/>
@@ -451,9 +451,12 @@
     <table name="file_category" schema="doc" catalog="mgup" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnZG9jLmZpbGVfY2F0ZWdvcnlfaWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
       <column name="name" sqlType="varchar" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="parent_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <primary-key name="file_category_pkey" columns="id"/>
+      <foreign-key name="file_category_parent_id_fkey" columns="parent_id" ref-table="file_category" ref-schema="doc" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
       <exported-key name="file_file_category_id_fkey" table="file" schema="doc" catalog="mgup" columns="file_category_id"/>
       <exported-key name="file_access_file_category_id_fkey" table="file_access" schema="doc" catalog="mgup" columns="file_category_id"/>
+      <exported-key name="file_category_parent_id_fkey" table="file_category" schema="doc" catalog="mgup" columns="parent_id"/>
     </table>
     <table name="file_category_id_seq" schema="doc" catalog="mgup" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>

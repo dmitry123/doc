@@ -363,11 +363,19 @@ var Core = Core || {};
      */
     window.url = function(url) {
 		url = url || "";
-		if (url.charAt(0) !== "/") {
-			return window["doc"]["url"] + url;
-		} else {
-			return url;
-		}
+        if (window["doc"]["url"] == "/") {
+            if (url.charAt(0) !== "/") {
+                return window["doc"]["url"] + url;
+            } else {
+                return url;
+            }
+        } else {
+            if (url.charAt(0) != "/") {
+                return window["doc"]["url"] + "/" + url;
+            } else {
+                return url;
+            }
+        }
     };
 
 	window.serialize = function(obj, prefix) {
