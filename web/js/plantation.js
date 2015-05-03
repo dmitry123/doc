@@ -18,7 +18,7 @@ var Plantation_Master_ModuleMenu = {
 		}).css({
 			"margin-top": menu.height() / 2 - 80
 		}).append($("<img>", {
-			src: "/img/ajax-loader-2.gif",
+			src: url("img/ajax-loader-2.gif"),
 			height: "160px"
 		})).fadeIn("normal");
 		var body = menu.parents(".master-menu-wrapper:eq(0)").find(".master-menu-body:eq(0)")

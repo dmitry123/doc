@@ -23,7 +23,7 @@ use yii\web\View;
 ]);
 print \app\widgets\Form::widget([
 	"model" => new \app\forms\UserForm("register"),
-	"url" => Yii::$app->getUrlManager()->createUrl("user/register"),
+	"url" => "user/register",
 	"id" => "user-register-form"
 ]);
 \app\widgets\Logo::end();

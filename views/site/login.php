@@ -9,7 +9,7 @@ use yii\web\View;
 <?php $form = \yii\widgets\ActiveForm::begin([
 	"fieldClass" => "\\app\\core\\ActiveField",
 	"id" => "user-login-form",
-	"action" => \Yii::$app->getUrlManager()->createUrl("user/login")
+	"action" => "user/login"
 ]); ?>
 <div class="input-group input-group-lg block-field">
 	<span class="input-group-addon glyphicon glyphicon-user" id="addon-login"></span>

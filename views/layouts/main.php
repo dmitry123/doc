@@ -28,7 +28,7 @@ app\assets\SiteAsset::register($this);
 				patronymic: <?= "\"".Yii::$app->getSession()->get("EMPLOYEE_PATRONYMIC", "")."\"\n" ?>
 			},
 			url: <?= "\"".Yii::$app->getRequest()->getBaseUrl()."\"" ?>,
-			widget: <?= "\"".Yii::$app->getUrlManager()->createUrl("ext/widget")."\"\n" ?>
+			widget: <?= "\"ext/widget\"\n" ?>
 		};
 	</script>
 </head>

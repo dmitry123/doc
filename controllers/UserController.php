@@ -116,7 +116,7 @@ class UserController extends Controller {
 			}
 			$this->leave([
 				"message" => "Пользователь успешно вошел в систему",
-				"redirect" => \Yii::$app->getHomeUrl()
+				"redirect" => ""
 			]);
 		} catch (\Exception $e) {
 			$this->exception($e);
