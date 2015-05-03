@@ -14,6 +14,8 @@ var DocMenu = {
 			uploadExtraData: {
 				form: $("file-upload-modal").find("form")
 			}
+		}).on("filebatchselected", function() {
+			$(this).fileinput("upload");
 		});
 	},
     afterUpload: function(json) {
@@ -45,7 +47,6 @@ $(document).ready(function() {
 		msgValidationError: "<span class=\"text-danger\"><i class=\"glyphicon glyphicon-exclamation-sign\"></i>Ошибка при загрузке файла</span>",
 		browseLabel: "Выбрать &hellip;",
 		browseIcon: "<i class=\"glyphicon glyphicon-folder-open\"></i> &nbsp;",
-		//browseClass: "btn btn-primary",
 		removeLabel: "Удалить",
 		removeTitle: "Удалить выбранные элементы",
 		removeIcon: "<i class=\"glyphicon glyphicon-trash\"></i> ",
@@ -53,12 +54,15 @@ $(document).ready(function() {
 		cancelLabel: "Отмена",
 		cancelTitle: "Отменить загрузку файлов",
 		cancelIcon: "<i class=\"glyphicon glyphicon-ban-circle\"></i> ",
-		//cancelClass: "btn btn-default",
 		uploadLabel: "Загрузить",
 		uploadTitle: "Загрузить выбранные файлы",
 		uploadIcon: "<i class=\"glyphicon glyphicon-upload\"></i> ",
-		//uploadClass: "btn btn-success",
-		dropZoneTitle: "Перетащите файлы сюда &hellip;"
+		dropZoneTitle: "Перетащите файлы сюда &hellip;",
+		uploadAsync: false,
+		showUpload: false,
+		showRemove: false,
+		//showPreview: false,
+		dropZoneEnabled: true
 	});
 
 	DocMenu.ready();

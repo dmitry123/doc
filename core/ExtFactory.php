@@ -2,6 +2,7 @@
 
 namespace app\core;
 
+use app\filters\AccessFilter;
 use yii\base\Exception;
 
 class ExtFactory extends AbstractFactory {
@@ -26,6 +27,14 @@ class ExtFactory extends AbstractFactory {
 	public function create($module, $id, $params = []) {
 		if (!($class = $this->createID($module, $id)) || !class_exists($class)) {
 			return null;
+		} else if ($module = \Yii::$app->getModule($module)) {
+			if (!$access = $module->getBehavior("access")) {
+				throw new Exception("Can't load module's access behavior");
+			} else if (!$access instanceof AccessFilter) {
+				throw new Exception("Access behavior must be an instance of [AccessFilter] class");
+			} else if (!$access->validateModule($module)) {
+				return null;
+			}
 		}
 		if (!isset(static::$_cached[$class])) {
 			if (!($instance = \Yii::createObject([ "class" => $class ] + $params)) instanceof Ext) {

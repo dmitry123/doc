@@ -14,12 +14,12 @@ print \app\widgets\Modal::widget([
 		"plantation-file-type-button" => [
 			"label" => "Типы файлов",
 			"class" => "btn-success",
-			"onclick" => "$(this).parents('.btn-group').find('button').removeClass('btn-success'); $(this).tab('show').addClass('btn-success')",
+			"onclick" => "$(this).parents('.btn-group').find('.btn').removeClass('btn-success'); $(this).tab('show').addClass('btn-success')",
 			"data-target" => "#".$ft
 		],
 		"plantation-file-extension-button" => [
 			"label" => "Расширения файлов",
-			"onclick" => "$(this).parents('.btn-group').find('button').removeClass('btn-success'); $(this).tab('show').addClass('btn-success')",
+			"onclick" => "$(this).parents('.btn-group').find('.btn').removeClass('btn-success'); $(this).tab('show').addClass('btn-success')",
 			"data-target" => "#".$fe
 		]
 	],
@@ -49,9 +49,9 @@ print \app\widgets\Modal::widget([
 		"bodyClass" => "panel-body no-padding"
 	]) ?>
 	</div>
-	<div class="tab-pane" id="<?= $fe ?>">
+	<div class="tab-pane fade" id="<?= $fe ?>">
 	<?= \app\widgets\Panel::widget([
-		"title" => "Типы файлов",
+		"title" => "Расширения файлов",
 		"body" => \app\modules\doc\widgets\MimeTypeTable::create(),
 		"controls" => [
 			"panel-insert-button" => [

@@ -266,7 +266,7 @@ class ControlMenu extends Widget {
 				$required["parent"]["class"] = " btn-group";
 			}
 			print Html::beginTag("li", $required["parent"]);
-			print Html::tag("button", $required["label"], $options + [
+			print Html::tag("a", $required["label"], $options + [
 				"type" => "button"
 			]);
 			print Html::endTag("li");

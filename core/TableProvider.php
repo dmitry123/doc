@@ -111,9 +111,8 @@ class TableProvider {
 			$count = 0;
 		}
 		$this->getPagination()->calculate($count);
-		$this->fetchQuery->limit($this->getPagination()->getLimit(),
-			$this->getPagination()->getOffset()
-		);
+		$this->fetchQuery->limit($this->getPagination()->getLimit())
+			->offset($this->getPagination()->getOffset());
 		return $this->fetchQuery->all();
 	}
 

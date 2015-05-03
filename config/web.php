@@ -10,14 +10,15 @@ $config = [
             'enableCookieValidation' => false,
             'enableCsrfValidation' => false,
         ],
-		"urlManager" => [
-			"enablePrettyUrl" => true,
-			"showScriptName" => false
+		'urlManager' => [
+			'enablePrettyUrl' => true,
+			'showScriptName' => false
 		],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
         'user' => [
+			'class' => 'app\core\User',
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => false,
         ],

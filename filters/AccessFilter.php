@@ -2,11 +2,12 @@
 
 namespace app\filters;
 
+use app\core\Module;
 use app\models\Employee;
 use app\models\Privilege;
 use app\models\Role;
-use yii\base\Action;
 use yii\base\ActionFilter;
+use yii\base\Exception;
 
 class AccessFilter extends ActionFilter {
 
@@ -14,34 +15,47 @@ class AccessFilter extends ActionFilter {
 	public $roles = [];
 	public $privileges = [];
 
-	/**
-	 * This method is invoked right before an action is to be executed (after all possible filters), you may override
-	 * 	this method to do last-minute preparation for the action
-	 * @param Action $action - The action to be executed.
-	 * @return boolean - Whether the action should continue to be executed.
-	 */
 	public function beforeAction($action) {
 		if (empty($this->actions) && empty($this->roles) && empty($this->privileges)) {
 			return true;
-		}
-		if (!\Yii::$app->getUser()->getIsGuest()) {
-			$this->_user = \Yii::$app->getUser()->getIdentity();
-		} else {
-			return $this->accessDenied(false);
-		}
-		$this->_employee = Employee::model()->findOne([
-			"user_id" => $this->_user->getId(),
-			"is_validated" => 1
-		]);
-		if (!$this->_employee) {
-			return $this->accessDenied(false);
 		}
 		$result = $this->validateAction($action->id) && $this->validateRoles($this->roles) &&
 			$this->validatePrivileges($this->privileges);
 		return $this->accessDenied($result);
 	}
 
-	protected function validateAction($id) {
+	public function getUser() {
+		if (!\Yii::$app->getUser()->getIsGuest()) {
+			return $this->_user = \Yii::$app->getUser()->getIdentity();
+		} else {
+			return $this->accessDenied(false);
+		}
+	}
+
+	public function getEmployee() {
+		$this->_employee = Employee::model()->findOne([
+			"user_id" => $this->getUser()->getId(),
+			"is_validated" => 1
+		]);
+		if ($this->_employee) {
+			return $this->_employee;
+		} else {
+			return $this->accessDenied(false);
+		}
+	}
+
+	public function validateModule($module) {
+		if (is_string($module) && !$module = \Yii::$app->getModule($module)) {
+			return false;
+		}
+		if (!$module instanceof Module) {
+			throw new Exception("Module must be an instance of [app\\core\\Module] class");
+		}
+		return $this->validateRoles($module->roles) &&
+			$this->validatePrivileges($module->privileges);
+	}
+
+	public function validateAction($id) {
 		if (!isset($this->actions[$id]) || $this->actions[$id]) {
 			return true;
 		} else {
@@ -65,27 +79,22 @@ class AccessFilter extends ActionFilter {
 		}
 	}
 
-	protected function validateRoles($roles) {
+	public function validateRoles($roles) {
 		if (empty($roles)) {
 			return true;
 		} else {
-			return Role::checkAccess($this->_employee->id, $roles);
+			return Role::checkAccess($this->getEmployee()->{"id"}, $roles);
 		}
 	}
 
-	protected function validatePrivileges($privileges) {
+	public function validatePrivileges($privileges) {
 		if (empty($privileges)) {
 			return true;
 		} else {
-			return Privilege::checkAccess($this->_employee->id, $privileges);
+			return Privilege::checkAccess($this->getEmployee()->{"id"}, $privileges);
 		}
 	}
 
-	/**
-	 * Redirect user to home if access denied
-	 * @param bool $result - Filter access result
-	 * @return bool - False on access denied
-	 */
 	private function accessDenied($result) {
 		if (!$result) {
 			\Yii::$app->controller->goHome();
@@ -93,13 +102,6 @@ class AccessFilter extends ActionFilter {
 		return $result;
 	}
 
-	/**
-	 * This method is invoked right after an action is executed.
-	 * You may override this method to do some postprocessing for the action.
-	 * @param Action $action - The action just executed.
-	 * @param mixed $result - The action execution result
-	 * @return mixed - The processed action result.
-	 */
 	public function afterAction($action, $result) {
 		return $result;
 	}
