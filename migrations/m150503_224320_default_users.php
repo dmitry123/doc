@@ -12,7 +12,7 @@ class m150503_224320_default_users extends Migration
 			$roles = [];
 		}
 		foreach ($roles as $id => $role) {
-			(new \app\models\Role([
+			(new \app\models\core\Role([
 				"id" => $id,
 				"description" => $role["description"],
 				"name" => $role["name"]
@@ -43,7 +43,7 @@ class m150503_224320_default_users extends Migration
 			$roles = [];
 		}
 		foreach ($roles as $id => $role) {
-			\app\models\Role::deleteAll([
+			\app\models\core\Role::deleteAll([
 				"id" => $id
 			]);
 		}

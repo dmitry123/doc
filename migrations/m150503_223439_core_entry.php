@@ -123,7 +123,7 @@ SQL;
 		DROP VIEW "core"."about_employee";
 
 		ALTER TABLE "core"."institute" DROP CONSTRAINT IF EXISTS "institute_director_id_fkey";
-		ALTER TABLE "core"."institute" DROP CONSTRAINT IF EXISTS "department_director_id_fkey";
+		ALTER TABLE "core"."department" DROP CONSTRAINT IF EXISTS "department_director_id_fkey";
 
 		DROP TABLE "core"."employee";
 		DROP TABLE "core"."phone";
