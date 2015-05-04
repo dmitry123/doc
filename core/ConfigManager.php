@@ -45,13 +45,13 @@ class ConfigManager {
 					$this->attrs[$key] = $column["attributes"];
 				}
 				$this->labels[$key] = $column["label"];
-				$this->types[$key] = $column["types"];
+				$this->types[$key] = $column["type"];
 			}
 			if (isset($column["rules"])) {
 				$this->buildRule($key, $column["rules"]);
 			}
 			if (isset($column["table"])) {
-				$this->tables[$key] = $this->buildTable($column["tables"]);
+				$this->tables[$key] = $this->buildTable($column["table"]);
 			}
 		}
 		return $this->_config = $config;
@@ -112,7 +112,7 @@ class ConfigManager {
 		return isset($this->attrs[$key]) ? $this->attrs[$key] : null;
 	}
 
-	protected function buildRule($key, array $rules) {
+	protected function buildRule($key, $rules) {
 		if (!is_string($rules)) {
 			throw new Exception("Rule must be string value, use [rules] method for class Yii rules");
 		}

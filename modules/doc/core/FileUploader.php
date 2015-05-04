@@ -2,7 +2,7 @@
 
 namespace app\modules\doc\core;
 
-use app\core\EmployeeManager;
+use app\core\EmployeeHelper;
 use app\models\doc\File;
 use app\models\doc\FileExt;
 use app\models\doc\FileStatus;
@@ -50,7 +50,7 @@ class FileUploader {
 		if (preg_match("/^(?P<name>.*)\\.(?P<ext>.*)$/i", $file["name"], $matches) === false) {
 			throw new Exception("Can't match file pattern to fetch it's filename and extension");
 		}
-		if (($employee = EmployeeManager::getManager()->getEmployee()) == null) {
+		if (($employee = EmployeeHelper::getHelper()->getEmployee()) == null) {
 			throw new Exception("Only employees can upload files on server");
 		}
 		$path = \Yii::$app->getSecurity()->generateRandomString(static::PATH_LENGTH);

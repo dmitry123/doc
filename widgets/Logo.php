@@ -3,7 +3,7 @@
 namespace app\widgets;
 
 use app\assets\LogoAsset;
-use app\core\EmployeeManager;
+use app\core\EmployeeHelper;
 use app\core\Widget;
 use yii\base\Exception;
 
@@ -31,24 +31,36 @@ class Logo extends Widget {
 	public $controls = [];
 
 	/**
+	 * @var string|null content to render into
+	 * 	logo widget
+	 */
+	public $body = null;
+
+	/**
 	 * Initialize widget
 	 */
 	public function init() {
 		LogoAsset::register($this->getView());
-		ob_start();
+		if ($this->body !== null) {
+			ob_start();
+		}
 	}
 
 	/**
 	 * Run widget
 	 */
 	public function run() {
-		$content = ob_get_clean();
-		if ($this->identity && EmployeeManager::getManager()->isValid()) {
-			$identity = EmployeeManager::getManager()->getIdentity(EmployeeManager::IDENTITY_SHORT);
+		if ($this->body !== null) {
+			$content = $this->body;
+		} else {
+			$content = ob_get_clean();
+		}
+		if ($this->identity && EmployeeHelper::getHelper()->isValid()) {
+			$identity = EmployeeHelper::getHelper()->getIdentity(EmployeeHelper::IDENTITY_SHORT);
 		} else {
 			$identity = null;
 		}
-		if (($info = EmployeeManager::getManager()->getInfo()) != null && isset($info["role_name"])) {
+		if (($info = EmployeeHelper::getHelper()->getInfo()) != null && isset($info["role_name"])) {
 			$role = $info["role_name"];
 		} else {
 			$role = null;

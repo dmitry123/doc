@@ -81,7 +81,7 @@ abstract class ActiveRecord extends \yii\db\ActiveRecord {
 	 */
 	public function getConfig($key = null) {
 		if ($this->_config == null) {
-			$this->_config = $this->getManager()->build($this->configure());
+			$this->_config = $this->configure();
 		}
 		if ($key != null) {
 			return isset($this->_config[$key]) ? $this->_config[$key] : null;
@@ -104,7 +104,7 @@ abstract class ActiveRecord extends \yii\db\ActiveRecord {
 	 */
 	public function getManager() {
 		if ($this->_manager == null) {
-			return $this->_manager = ConfigManager::createManager($this, $this->configure());
+			return $this->_manager = ConfigManager::createManager($this->getConfig());
 		} else {
 			return $this->_manager;
 		}

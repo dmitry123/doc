@@ -14,8 +14,13 @@ body {
     margin: 0;
 }
 
+.required > label:after {
+    content: " *";
+    color: red;
+}
+
 /* Styles for required */
-.required {
+.required:after {
     white-space: nowrap;
     color: red;
 }

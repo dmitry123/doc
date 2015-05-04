@@ -2,7 +2,7 @@
 
 namespace app\widgets;
 
-use app\core\EmployeeManager;
+use app\core\EmployeeHelper;
 use app\core\Module;
 use app\core\Widget;
 use app\models\Employee;

@@ -3,7 +3,10 @@
  * @var $this yii\web\View
  * @var $modules array
  */
-\app\widgets\Logo::begin([
+print \app\widgets\Logo::widget([
+	"body" => \app\widgets\AutoForm::widget([
+		"model" => \app\forms\EmployeeForm::createWithScenario("setup")
+	]),
 	"controls" => [
 		"settings-save-button" => [
 			"label" => "Сохранить",
@@ -19,7 +22,3 @@
 		]
 	]
 ]);
-print \app\widgets\Form::widget([
-	"model" => new \app\forms\EmployeeForm()
-]);
-\app\widgets\Logo::end();

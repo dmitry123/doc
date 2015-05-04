@@ -117,7 +117,7 @@ class Module extends \yii\base\Module {
 				];
 			}
 			if (isset($module["roles"])) {
-				if (in_array(EmployeeManager::getManager()->getInfo()["role_id"], $module["roles"])) {
+				if (in_array(EmployeeHelper::getHelper()->getInfo()["role_id"], $module["roles"])) {
 					$allowed[] = $module;
 				}
 			} else {

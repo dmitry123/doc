@@ -166,7 +166,7 @@ var Core = Core || {};
 	};
 
 	Core.sendAjax = function(method, href, data, success) {
-		return $[method.toLowerCase()](url(href), data, function(json) {
+		return $[method.toLowerCase()](href, data, function(json) {
 			if (!json["status"]) {
 				if (json["error"] !== "form") {
 					return Core.createMessage({
@@ -189,11 +189,11 @@ var Core = Core || {};
 	};
 
 	Core.sendQuery = function(href, data, success) {
-		return Core.sendAjax("get", href, data, success);
+		return Core.sendAjax("get", url(href), data, success);
 	};
 
 	Core.sendPost = function(href, data, success) {
-		return Core.sendAjax("post", href, data, success);
+		return Core.sendAjax("post", url(href), data, success);
 	};
 
 	Core.postFormErrors = function(where, json) {
