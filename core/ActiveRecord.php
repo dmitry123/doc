@@ -12,6 +12,12 @@ use yii\helpers\Inflector;
 
 abstract class ActiveRecord extends \yii\db\ActiveRecord {
 
+	/**
+	 * Default schema, that used to be added before
+	 * table name in [tableName] method
+	 *
+	 * @see ActiveRecord::tableName
+	 */
 	const DEFAULT_SCHEMA = "core";
 
 	/**
@@ -62,6 +68,47 @@ abstract class ActiveRecord extends \yii\db\ActiveRecord {
 	 * @return array with model configuration
 	 */
 	public abstract function configure();
+
+	/**
+	 * Get configuration for current active record class for
+	 * all class or only one field
+	 *
+	 * @param $key null|string with name of database column
+	 * 	which configuration u'd like to get
+	 *
+	 * @return null|array with column or model
+	 * 	configuration
+	 */
+	public function getConfig($key = null) {
+		if ($this->_config == null) {
+			$this->_config = $this->getManager()->build($this->configure());
+		}
+		if ($key != null) {
+			return isset($this->_config[$key]) ? $this->_config[$key] : null;
+		} else {
+			return $this->_config;
+		}
+	}
+
+	/**
+	 * Get configuration manager for current instance of
+	 * active record class, it build columns config and
+	 * can return compiled array with Yii configurations via
+	 * finalize method
+	 *
+	 * @return ConfigManager instance of configuration manager
+	 * 	class with built attributes
+	 *
+	 * @see ConfigManager::build
+	 * @see ConfigManager::finalize
+	 */
+	public function getManager() {
+		if ($this->_manager == null) {
+			return $this->_manager = ConfigManager::createManager($this, $this->configure());
+		} else {
+			return $this->_manager;
+		}
+	}
 
 	/**
 	 * Get table name from class path with namespace, we think
@@ -125,9 +172,21 @@ abstract class ActiveRecord extends \yii\db\ActiveRecord {
 	 *
 	 * @return TableProvider
 	 */
-	public static function getDefaultTableProvider($model = null) {
-		$model = $model != null ? $model : get_called_class();
+	public static function search($model = null) {
+		if ($model == null) {
+			$model = get_called_class();
+		}
 		return new TableProvider(new $model());
+	}
+
+	/**
+	 * Get array with labels for every column
+	 * in current active record class
+	 *
+	 * @return array with column labels
+	 */
+	public function attributeLabels() {
+		return $this->getManager()->labels;
 	}
 
 	/**
@@ -149,4 +208,7 @@ abstract class ActiveRecord extends \yii\db\ActiveRecord {
 			$this->getTableSchema()->primaryKey[0] => $id
 		]);
 	}
+
+	private $_config = null;
+	private $_manager = null;
 }

@@ -15,7 +15,7 @@ class FileExtTable extends EditableTable {
 	];
 
 	public function init() {
-		$this->provider = FileExt::getDefaultTableProvider();
+		$this->provider = FileExt::search();
 	}
 
 	public function getSerializedAttributes($attributes = null, $excepts = []) {

@@ -28,7 +28,7 @@ class EmployeeManager {
 		if (isset(self::$_cached[$userId])) {
 			return self::$_cached[$userId];
 		}
-		$employee = Employee::find()->select("*")->from("core.employee_info")->where([
+		$employee = Employee::find()->select("*")->from("core.about_employee")->where([
 			"user_id" => $userId
 		])->createCommand()->queryOne();
 		if ($employee === false) {

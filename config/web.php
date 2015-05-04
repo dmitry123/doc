@@ -19,7 +19,7 @@ $config = [
         ],
         'user' => [
 			'class' => 'app\core\User',
-            'identityClass' => 'app\models\User',
+            'identityClass' => 'app\models\core\User',
             'enableAutoLogin' => false,
         ],
         'errorHandler' => [

@@ -14,7 +14,7 @@ class FileTypeTable extends EditableTable {
 	];
 
 	public function init() {
-		$this->provider = FileType::getDefaultTableProvider();
+		$this->provider = FileType::search();
 	}
 
 	public function getSerializedAttributes($attributes = null, $excepts = []) {

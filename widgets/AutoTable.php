@@ -85,7 +85,7 @@ class AutoTable extends Table {
 			}
 		}
 		$this->header = $columns;
-		$this->provider = $this->model->getDefaultTableProvider();
+		$this->provider = $this->model->search();
 		parent::init();
 	}
 
