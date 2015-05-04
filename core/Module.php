@@ -129,4 +129,16 @@ class Module extends \yii\base\Module {
 		}
 		return $allowed;
 	}
+
+	public function getWidgetClass($class) {
+		return $this->getClassPath("widgets", $class);
+	}
+
+	private function getClassPath($scope, $class) {
+		if (($p = strrpos($this->className(), "\\")) !== false) {
+			return substr($this->className(), 0, $p) ."\\".$scope."\\".$class;
+		} else {
+			return "app\\".$scope."\\".$class;
+		}
+	}
 }

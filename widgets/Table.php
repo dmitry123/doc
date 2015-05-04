@@ -3,6 +3,7 @@
 namespace app\widgets;
 
 use app\core\ActiveRecord;
+use app\core\ClassTrait;
 use app\core\DropDown;
 use app\core\FieldCollection;
 use app\core\FormModel;
@@ -349,8 +350,8 @@ class Table extends Widget {
 	 */
 	public function renderExtra() {
 		print Html::renderTagAttributes($options = [
-			"data-class" => get_class($this),
-			"data-widget" => get_class($this),
+			"data-class" => ClassTrait::createID($this->className()),
+			"data-widget" => ClassTrait::createID($this->className()),
 			"data-url" => $this->createUrl()
 		]);
 	}

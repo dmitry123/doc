@@ -214,7 +214,8 @@ var Core = Core || {};
 
 	Core.loadWidget = function(widget, attributes, success) {
 		return Core.sendQuery("ext/widget", $.extend(attributes, {
-			class: widget
+			class: widget,
+			module: doc["module"]
 		}), success);
 	};
 
@@ -362,10 +363,11 @@ var Core = Core || {};
      */
     window.url = function(url) {
 		url = url || "";
-		if (url.charAt(0) != "/") {
-			url = "/" + url;
+		if (url.charAt(0) !== "/") {
+			return window["doc"]["url"] + url;
+		} else {
+			return url;
 		}
-        return window["doc"]["url"] + url;
     };
 
 	window.serialize = function(obj, prefix) {

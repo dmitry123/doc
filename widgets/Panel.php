@@ -2,9 +2,9 @@
 
 namespace app\widgets;
 
+use app\core\ClassTrait;
 use app\core\UniqueGenerator;
 use app\core\Widget;
-use yii\helpers\Html;
 
 class Panel extends Widget {
 
@@ -63,13 +63,13 @@ class Panel extends Widget {
 	 * @var string - Classes for heading's title
 	 * 	div container
 	 */
-	public $titleWrapperClass = "col-xs-8 text-left no-padding";
+	public $titleWrapperClass = "col-xs-6 text-left no-padding";
 
 	/**
 	 * @var string - Classes for control container which
 	 * 	separated after title container
 	 */
-	public $controlsWrapperClass = "col-xs-4 text-right no-padding";
+	public $controlsWrapperClass = "col-xs-6 text-right no-padding";
 
 	/**
 	 * @var string - Classes for panel's title, which separated
@@ -136,7 +136,7 @@ class Panel extends Widget {
 	 */
     public function init() {
         if ($this->body instanceof Widget) {
-			$this->_widget = get_class($this->body);
+			$this->_widget = ClassTrait::createID($this->body->className());
 			$this->attributes = $this->body->getSerializedAttributes(
 				$this->body->getConfig()
 			);

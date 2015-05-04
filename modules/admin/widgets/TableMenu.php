@@ -3,7 +3,6 @@
 namespace app\modules\admin\widgets;
 
 use app\core\ActiveRecord;
-use app\core\FormModel;
 use app\core\PostgreSQL;
 use app\core\Widget;
 use yii\helpers\Inflector;
@@ -70,8 +69,8 @@ class TableMenu extends Widget {
 			$table["info"] = PostgreSQL::findColumnNamesAndTypes($t, $s);
 			$table["schema"] = $s;
 			$table["table"] = $t;
-			$class = "app\\forms\\".Inflector::id2camel($t, "_")."form";
-			$table["model"] = "app\\models\\".Inflector::id2camel($t, "_");
+			$class = "app\\models\\$s\\".Inflector::id2camel($t, "_");
+			$table["model"] = "app\\models\\s\\".Inflector::id2camel($t, "_");
 			if (!class_exists($class)) {
 				continue;
 			}

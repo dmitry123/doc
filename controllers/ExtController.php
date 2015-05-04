@@ -5,6 +5,7 @@ namespace app\controllers;
 use app\core\Controller;
 use app\core\Ext;
 use app\core\ExtFactory;
+use app\core\Module;
 use app\core\Widget;
 use yii\base\Exception;
 
@@ -35,6 +36,16 @@ class ExtController extends Controller {
 				throw new Exception("Widget action requires [class] parameter");
 			} else {
 				$params = \Yii::$app->request->getQueryParam("attributes");
+			}
+			if (!$module = \Yii::$app->request->getQueryParam("module")) {
+				$module = \Yii::$app->controller->module;
+			} else {
+				$module = \Yii::$app->getModule($module);
+			}
+			if ($module instanceof Module) {
+				$class = $module->getWidgetClass($class);
+			} else {
+				$class = "app\\widgets\\".$class;
 			}
 			$widget = $this->createWidget($class, $params);
 			if (!$widget instanceof Widget) {
