@@ -3,97 +3,76 @@
 namespace app\core;
 
 use yii\base\ErrorException;
+use yii\base\Exception;
+use yii\base\Model;
 use yii\db\ActiveQuery;
 use yii\db\Query;
+use yii\helpers\ArrayHelper;
 use yii\helpers\Inflector;
 
 abstract class ActiveRecord extends \yii\db\ActiveRecord {
 
+	const DEFAULT_SCHEMA = "core";
+
 	/**
-	 * Construct active record with another model and configuration
-	 * @param FormModel|array $model - Another model to clone
-	 * @param array $config - Configuration
-	 * @throws ErrorException
+	 * Create an active record instance with another model
+	 * class or array with attributes, it will create new
+	 * instance of static class and copy all model attributes
+	 * to it
+	 *
+	 * @param $model Model|array with attributes to copy, if type doesn't
+	 * 	match [Model] or [array], then exception will be thrown
+	 *
+	 * @return static instance of current active record class
+	 * @throws Exception if type doesn't matches array or Model object
 	 */
-	public function __construct($model = null, $config = []) {
-		parent::__construct($config);
-		if ($model != null) {
-			if ($model instanceof FormModel) {
-				$attributes = $model->getAttributes();
-			} else if (is_array($model)) {
-				$attributes = $model;
-			} else {
-				throw new ErrorException("Invalid model type, requires FormModel class instance or array");
-			}
-			foreach ($attributes as $key => $value) {
-				$this->setAttribute($key, $value);
-			}
+	public static function createWithModel($model) {
+		$var = new static();
+		if ($model instanceof Model) {
+			$attributes = $model->getAttributes();
+		} else if (is_array($model)) {
+			$attributes = $model;
+		} else {
+			throw new Exception("Invalid model type, requires FormModel class instance or array");
 		}
+		foreach ($attributes as $key => $value) {
+			$var->setAttribute($key, $value);
+		}
+		return $var;
 	}
 
 	/**
-	 * Get table name from class path with namespace
-	 * @return string - Name of table from class's name
+	 * Override that method to configure your active record model, it
+	 * should return configuration for every field associated with column
+	 * in database
+	 *
+	 * Model Configuration:
+	 *  + label - required parameter with column's label
+	 *  + type - element's type key [@see app\core\TypeManager::types]
+	 *  + [table] - table configuration associated with another FK table
+	 *  + [rules] - default validation rules separated with comma
+	 *  + [source] - name of method with list for dropdown element
+	 *
+	 * Table Configuration:
+	 *  + name - name of table in database with it's schema
+	 *  + key - name of table's column with primary key constraint
+	 *  + value - list with values to fetch (you can use comma to separate values)
+	 *  + [format] - special format for row, use %{<column>} pattern for column alias
+	 *
+	 * @return array with model configuration
+	 */
+	public abstract function configure();
+
+	/**
+	 * Get table name from class path with namespace, we think
+	 * that default table's schema is core. It reflects current
+	 * class and converts it's name from camel case to id case
+	 *
+	 * @return string name of table from class's name
 	 */
 	public static function tableName() {
-		return Inflector::camel2id(preg_replace("/^.*\\\\/", "", get_called_class()), "_");
+		return static::DEFAULT_SCHEMA.".".Inflector::camel2id(preg_replace("/^.*\\\\/", "", get_called_class()), "_");
 	}
-
-	/**
-	 * Override that method to return an array
-	 * with types's data, where array's key is
-	 * type name and value is array with fields
-	 * in format [key => value]
-	 *
-	 * @return array - Array with types keys and items
-	 */
-	public static function listTypeItems() {
-		return null;
-	}
-
-	/**
-	 * Override that method to return array
-	 * with types labels, it uses for different
-	 * localization models, where format is [key => label]
-	 *
-	 * @return array - Array with types localizations
-	 */
-	public static function listTypeLabels() {
-		return null;
-	}
-
-	/**
-	 * Find model by it's name
-	 * @param string $class - Name of model class or null (default)
-	 * @return static - Active record class instance
-	 */
-	public static function model($class = null) {
-		if ($class == null) {
-			$class = get_called_class();;
-		}
-		if (!isset(self::$models[$class])) {
-			return (self::$models[$class] = new $class());
-		} else {
-			return self::$models[$class];
-		}
-	}
-
-	private static $models = [];
-
-	/**
-	 * Get array with validation rules for current class
-	 * @param $extra array - Additional validation rules (for hidden fields)
-	 * @return array - Array with validation rules
-	 */
-	public static function getRules($extra = []) {
-		if (!self::$rules) {
-			return (self::$rules = array_merge(static::model()->rules(), $extra));
-		} else {
-			return self::$rules;
-		}
-	}
-
-	private static $rules = null;
 
 	/**
 	 * Returns attribute values.
@@ -123,61 +102,51 @@ abstract class ActiveRecord extends \yii\db\ActiveRecord {
 	}
 
 	/**
-	 * @param Query $fetchQuery - Query to fetch rows from
+	 * Create new instance of table provider class for
+	 * current active record class
+	 *
+	 * @param $fetchQuery Query to fetch rows from
 	 *  database's table
-	 * @return TableProvider - Instance of table provider class
+	 *
+	 * @return TableProvider instance of table provider class
 	 */
-	public function createTableProvider($fetchQuery) {
-		return new TableProvider($this, $fetchQuery);
+	public static function createTableProvider($fetchQuery) {
+		return new TableProvider(new static(), $fetchQuery);
 	}
 
 	/**
-	 * Get default instance of table provider with
-	 * default [fetchQuery] and [countQuery]
-	 * for [@see app\widgets\Table] widget
+	 * Create default instance of table provider with default [fetchQuery]
+	 * and [countQuery] queries for [@see app\widgets\Table] widget
+	 *
+	 * @param $model string|null name of active record class
+	 *
 	 * @see TableProvider::fetchQuery
 	 * @see TableProvider::countQuery
+	 *
+	 * @return TableProvider
 	 */
-	public function getDefaultTableProvider() {
-		return new TableProvider($this);
+	public static function getDefaultTableProvider($model = null) {
+		$model = $model != null ? $model : get_called_class();
+		return new TableProvider(new $model());
 	}
 
 	/**
-	 * Moved from Yii 1.1 for backward compatibility
-	 * @param int|string $id - Primary key value
-	 * @return integer|false - The number of rows deleted, or false if the deletion is unsuccessful for some reason
-	 * @throws ErrorException - Will be thrown, if table hasn't primary key
+	 * Moved from Yii 1.1 for backward compatibility with some
+	 * methods which has been moved from old projects
+	 *
+	 * @param $id int|string unique primary key value
+	 *
+	 * @return integer|false the number of rows deleted, or false
+	 * 	if the deletion is unsuccessful for some reason
+	 *
+	 * @throws ErrorException will be thrown, if table hasn't
+	 * 	primary key
+	 *
 	 * @throws \Exception
 	 */
 	public function deleteByPk($id) {
 		return $this->deleteAll([
-			$this->getTableSchema()->primaryKey[0]=> $id
+			$this->getTableSchema()->primaryKey[0] => $id
 		]);
-	}
-
-	/**
-	 * Helper method to get table's name for dynamic context
-	 * @return string - Name of table
-	 */
-	public function getTableName() {
-		return static::tableName();
-	}
-
-	/**
-	 * Get new query instance to build sql command
-	 * @return Query - Instance of query builder
-	 */
-	public function createQuery() {
-		return new Query();
-	}
-
-	/**
-	 * Insert element in database right now
-	 * @param array|FormModel $model - Model fields
-	 * @return bool - True on success and false on failure
-	 * @throws \Exception
-	 */
-	public static function insertNow(array $model) {
-		return (new static($model))->insert();
 	}
 }

@@ -83,7 +83,7 @@ class TableProvider {
 			return $this->fetchQuery;
 		}
 		return $this->activeRecord->find()->select("*")
-			->from($this->activeRecord->getTableName());
+			->from($this->activeRecord->tableName());
 	}
 
 	/**

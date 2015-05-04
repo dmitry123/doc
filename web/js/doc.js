@@ -22,17 +22,14 @@ var DocMenu = {
 		});
 	},
     afterUpload: function(json) {
-        if (json["status"]) {
+        if (!json["status"]) {
+			var errors = json["errors"];
+			for (var i in errors) {
+				Core.createMessage({ message: i + ": " + errors[i], delay: 7000 });
+			}
+        } else {
 			$("#file-upload-modal").modal("hide");
-            return void 0;
-        }
-        var errors = json["errors"];
-        for (var i in errors) {
-            Core.createMessage({
-                message: i + ": " + errors[i],
-                delay: 7000
-            });
-        }
+		}
     }
 };
 

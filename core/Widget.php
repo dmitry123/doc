@@ -2,11 +2,7 @@
 
 namespace app\core;
 
-use stdClass;
-use yii\base\Component;
 use yii\base\Exception;
-use yii\base\Object;
-use yii\helpers\ArrayHelper;
 
 class Widget extends \yii\base\Widget {
 
@@ -85,7 +81,7 @@ class Widget extends \yii\base\Widget {
 				$params[$key] = $value;
 			} else if ($string !== null && in_array($key, $string)) {
 				if (is_object($value)) {
-					/** @var stdClass $value */
+					/** @var \stdClass $value */
 					$params[$key] = get_class($value);
 				} else if (is_scalar($value)) {
 					$params[$key] = (string) $value;

@@ -2,7 +2,7 @@
 
 namespace app\modules\doc\widgets;
 
-use app\models\FileType;
+use app\models\doc\FileType;
 use app\widgets\EditableTable;
 use yii\helpers\ArrayHelper;
 
@@ -14,7 +14,7 @@ class FileTypeTable extends EditableTable {
 	];
 
 	public function init() {
-		$this->provider = FileType::model()->getDefaultTableProvider();
+		$this->provider = FileType::getDefaultTableProvider();
 	}
 
 	public function getSerializedAttributes($attributes = null, $excepts = []) {

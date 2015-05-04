@@ -4,7 +4,6 @@ namespace app\core;
 
 use Yii;
 use yii\base\Application;
-use yii\helpers\Url;
 
 class Module extends \yii\base\Module {
 
@@ -77,7 +76,7 @@ class Module extends \yii\base\Module {
 		} else {
 			$name = $module->id;
 		}
-		if ($name != "basic" && !empty($name)) {
+		if ($name != Yii::$app->params["id"] && !empty($name)) {
 			return ".".$name ;
 		} else {
 			return "";

@@ -2,7 +2,7 @@
 
 namespace app\modules\doc\widgets;
 
-use app\models\FileType;
+use app\models\doc\FileType;
 use app\widgets\TabMenu;
 use yii\helpers\Html;
 

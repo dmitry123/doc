@@ -2,12 +2,9 @@
 
 namespace app\assets;
 
-use yii\web\AssetBundle;
+use app\core\AssetBundle;
 
 class CoreAsset extends AssetBundle {
-
-	public $basePath = '@webroot';
-	public $baseUrl = '@web';
 
 	public $css = [
 		"css/multiple.css",
@@ -31,7 +28,7 @@ class CoreAsset extends AssetBundle {
 	];
 
 	public $depends = [
-		'yii\web\YiiAsset',
-		'yii\bootstrap\BootstrapAsset',
+		"yii\\web\\YiiAsset",
+		"yii\\bootstrap\\BootstrapAsset",
 	];
 }

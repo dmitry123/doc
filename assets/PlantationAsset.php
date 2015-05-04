@@ -15,6 +15,6 @@ class PlantationAsset extends AssetBundle {
 	];
 
 	public $depends = [
-		'app\assets\CoreAsset'
+		"app\\assets\\CoreAsset"
 	];
 }

@@ -2,8 +2,7 @@
 
 namespace app\core;
 
-use app\models\Employee;
-use yii\base\Object;
+use app\models\core\Employee;
 
 class EmployeeManager {
 

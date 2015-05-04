@@ -217,7 +217,7 @@ class Table extends Widget {
 	 */
 	public function run() {
 		if (is_string($this->provider)) {
-			$this->provider = ActiveRecord::model($this->provider)->getDefaultTableProvider();
+			$this->provider = ActiveRecord::getDefaultTableProvider($this->provider);
 		}
 		if (!$this->provider instanceof TableProvider && is_array($this->data)) {
 			throw new \Exception("Table provider must be an instance of TableProvider and don't have to be null");

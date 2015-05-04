@@ -20,6 +20,18 @@ class LoaderFactory {
 	];
 
 	/**
+	 * Get single factory instance
+	 * @return LoaderFactory - Factory instance
+	 */
+	public static function getFactory() {
+		if (self::$factory == null) {
+			return self::$factory = new LoaderFactory();
+		} else {
+			return self::$factory;
+		}
+	}
+
+	/**
 	 * Create document loader with it's extension
 	 * @param string $extension - Document's extension or filename
 	 * @return Loader - Loader instance
@@ -38,18 +50,6 @@ class LoaderFactory {
 			}
 		}
 		return null;
-	}
-
-	/**
-	 * Get single factory instance
-	 * @return LoaderFactory - Factory instance
-	 */
-	public static function getFactory() {
-		if (self::$factory == null) {
-			return self::$factory = new LoaderFactory();
-		} else {
-			return self::$factory;
-		}
 	}
 
 	/**

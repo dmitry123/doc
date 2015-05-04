@@ -5,8 +5,8 @@ namespace app\controllers;
 use app\core\ActiveRecord;
 use app\core\Controller;
 use app\core\FormModel;
-use app\models\Employee;
-use app\models\User;
+use app\models\core\Employee;
+use app\models\core\User;
 
 class UserController extends Controller {
 
@@ -142,14 +142,5 @@ class UserController extends Controller {
 		} catch (\Exception $e) {
 			$this->exception($e);
 		}
-	}
-
-	/**
-	 * Override that method to return model for current controller instance or null
-	 * @param $model FormModel - Another model to clone
-	 * @return ActiveRecord - Active record instance or null
-	 */
-	public function getModel($model) {
-		return new User($model);
 	}
 }
