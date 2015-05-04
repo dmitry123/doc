@@ -26,7 +26,13 @@ use yii\web\View;
 <?php foreach ($modules as $module): ?>
 	<div class="col-xs-6 module-cell">
 		<div class="module-icon-wrapper" <?= \yii\helpers\Html::renderTagAttributes($module["options"]) ?>>
-			<span class="<?= $module["icon"] ?> module-icon"></span>
+			<?php if (isset($module["image"])): ?>
+				<?= \yii\helpers\Html::img($module["image"], [
+					"width" => 80
+				]) ?>
+			<?php else: ?>
+				<span class="<?= $module["icon"] ?> module-icon"></span>
+			<?php endif ?>
 			<div class="module-title">
 				<?= $module["name"] ?>
 			</div>

@@ -81,7 +81,7 @@
 
 .module-menu-block {
     position: absolute;
-    transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0.125s;
     left: 0;
     top: 45px;
     overflow: hidden;
@@ -124,6 +124,6 @@
 .module-menu-block-icon-wrapper:hover > .module-menu-block-icon {
     color: #008bb9;
 }
-.module-menu-block-icon-wrapper[data-error]:hover > .module-menu-block-icon:after {
+.module-menu-block-icon-wrapper[data-error]:hover > .module-menu-block-icon {
     color: indianred;
 }
