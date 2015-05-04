@@ -40,7 +40,8 @@ class m150503_223647_doc_entry extends Migration
 
 		CREATE TABLE "doc"."file_category" (
 		  "id" SERIAL PRIMARY KEY, -- Первичный ключ
-		  "name" VARCHAR(100) -- Наименование категории
+		  "name" VARCHAR(100), -- Наименование категории
+		  "parent_id" INT REFERENCES "doc"."file_category" ON DELETE CASCADE DEFAULT NULL -- Родительская категория
 		);
 
 		CREATE TABLE "doc"."file" (
