@@ -406,7 +406,8 @@ class Table extends Widget {
 				$text = $this->textNoData;
 			}
 			print Html::tag("tr", Html::tag("td", "<b>$text</b>", [
-				"colspan" => count($this->header) + 1
+				"colspan" => count($this->header) + 1,
+				"align" => "middle"
 			]));
 		}
 	}

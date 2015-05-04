@@ -76,7 +76,7 @@ class Module extends \yii\base\Module {
 		} else {
 			$name = $module->id;
 		}
-		if ($name != Yii::$app->params["id"] && !empty($name)) {
+		if ($name != Yii::$app->id && !empty($name)) {
 			return ".".$name ;
 		} else {
 			return "";

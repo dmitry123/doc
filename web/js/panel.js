@@ -61,7 +61,7 @@ var Core = Core || {};
 		if (params.length !== void 0 && !params.length) {
 			params = {};
 		}
-		$.get(Core.Common.getWidget(), $.extend(params, {
+		Core.sendQuery(Core.Common.getWidget(), $.extend(params, {
 			class: this.selector().attr("data-widget")
 		}), function(json) {
 			if (json["status"]) {
@@ -71,7 +71,7 @@ var Core = Core || {};
 			} else {
 				$(json["message"]).message();
 			}
-		}, "json").always(function() {
+		}).always(function() {
 			me.after();
 		});
 	};

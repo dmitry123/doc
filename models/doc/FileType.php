@@ -38,7 +38,7 @@ class FileType extends ActiveRecord {
 
 	public static function findNotUnknown() {
 		return static::find()->select("*")
-			->from("core.file_type")
+			->from("doc.file_type")
 			->where("id <> 'unknown'")
 			->all();
 	}

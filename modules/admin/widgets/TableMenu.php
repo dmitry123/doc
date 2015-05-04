@@ -2,6 +2,7 @@
 
 namespace app\modules\admin\widgets;
 
+use app\core\ActiveRecord;
 use app\core\FormModel;
 use app\core\PostgreSQL;
 use app\core\Widget;
@@ -13,7 +14,7 @@ class TableMenu extends Widget {
 	 * @var array - List with tables to display
 	 */
 	public $list = [
-		"core.access" => [
+		"doc.file_access" => [
 			"label" => "Уровни доступа"
 		],
 		"core.city" => [
@@ -28,13 +29,13 @@ class TableMenu extends Widget {
 		"core.employee" => [
 			"label" => "Сотрудники"
 		],
-		"core.file" => [
+		"doc.file" => [
 			"label" => "Файлы"
 		],
-		"core.file_status" => [
+		"doc.file_status" => [
 			"label" => "Статусы файлов"
 		],
-		"core.file_type" => [
+		"doc.file_type" => [
 			"label" => "Типы файлов"
 		],
 		"core.institute" => [
@@ -69,12 +70,12 @@ class TableMenu extends Widget {
 			$table["info"] = PostgreSQL::findColumnNamesAndTypes($t, $s);
 			$table["schema"] = $s;
 			$table["table"] = $t;
-			$class = $table["form"] = "app\\forms\\".Inflector::id2camel($t, "_")."form";
+			$class = "app\\forms\\".Inflector::id2camel($t, "_")."form";
 			$table["model"] = "app\\models\\".Inflector::id2camel($t, "_");
 			if (!class_exists($class)) {
 				continue;
 			}
-			/** @var FormModel $i */
+			/** @var ActiveRecord $i */
 			$i = new $class();
 			$config = $i->getConfig();
 			foreach ($table["info"] as &$info) {
