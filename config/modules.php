@@ -38,19 +38,19 @@
 		],
 		"url" => "doc/file/view"
 	],
-	"chat" => [
-		"class" => "app\\modules\\chat\\ChatModule",
-		"name" => "Чат",
-		"icon" => "glyphicon glyphicon-send",
-//		"image" => "img/icons/chat.svg",
-		"roles" => [
-			"admin",
-			"director",
-			"manager",
-			"teacher",
-			"super",
-		]
-	],
+//	"chat" => [
+//		"class" => "app\\modules\\chat\\ChatModule",
+//		"name" => "Чат",
+//		"icon" => "glyphicon glyphicon-send",
+////		"image" => "img/icons/chat.svg",
+//		"roles" => [
+//			"admin",
+//			"director",
+//			"manager",
+//			"teacher",
+//			"super",
+//		]
+//	],
 	"plantation" => [
 		"class" => "app\\modules\\plantation\\PlantationModule",
 		"name" => "Внедрение",
@@ -72,13 +72,13 @@
 		],
 		"url" => "admin/master/view"
 	],
-	"security" => [
-		"class" => "app\\modules\\security\\SecurityModule",
-		"name" => "Безопасность",
-		"icon" => "glyphicon glyphicon-lock",
-		"roles" => [
-			"admin",
-			"super",
-		]
-	]
+//	"security" => [
+//		"class" => "app\\modules\\security\\SecurityModule",
+//		"name" => "Безопасность",
+//		"icon" => "glyphicon glyphicon-lock",
+//		"roles" => [
+//			"admin",
+//			"super",
+//		]
+//	]
 ];
