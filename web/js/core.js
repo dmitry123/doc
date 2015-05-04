@@ -213,7 +213,7 @@ var Core = Core || {};
 	};
 
 	Core.loadExt = function(module, ext, success) {
-		return Core.sendQuery(url("ext/load"), {
+		return Core.sendQuery("ext/load", {
 			module: module,
 			ext: ext
 		}, success);
