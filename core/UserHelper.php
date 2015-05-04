@@ -5,7 +5,7 @@ namespace app\core;
 use app\models\core\Employee;
 use app\models\core\Phone;
 use app\models\core\Role;
-use app\models\SecurityKey;
+use app\models\core\SecurityKey;
 use yii\base\Object;
 
 class UserHelper extends Object {

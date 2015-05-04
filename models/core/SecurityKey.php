@@ -1,6 +1,6 @@
 <?php
 
-namespace app\models;
+namespace app\models\core;
 
 use app\core\ActiveRecord;
 
@@ -23,7 +23,7 @@ class SecurityKey extends ActiveRecord {
 
 	public function rules() {
 		return [
-			[ "key", "string", "max" => 30 ]
+			[ "key", "string", "max" => 128 ]
 		];
 	}
 

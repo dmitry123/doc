@@ -82,7 +82,7 @@ class Phone extends ActiveRecord {
 			"region" => $matches[1],
 			"code" => $matches[2],
 			"phone" => preg_replace('/[^0-9]*/', "", $matches[3]),
-			"type" => \app\models\Phone::TYPE_MOBILE
+			"type" => static::TYPE_MOBILE
 		]);
 		if (!$phone->save(true)) {
 			return false;
