@@ -19,10 +19,10 @@ class UserForm extends FormModel {
 
 			[ [ "login", "password", "password2", "email" ], "required", "on" => "register" ],
 			[ "login", "unique", "targetClass" => 'app\models\core\User', "on" => "register" ],
-
 			[ [ "login", "password", "password2", "email" ], "required", "on" => "register" ],
+			[ "password2", "compare", "compareAttribute" => "password", "on" => "register" ],
+
 			[ [ "login", "password" ], "required", "on" => "login" ],
-			[ "password2", "compare", "compareAttribute" => "password", "on" => "register" ]
 		];
 	}
 

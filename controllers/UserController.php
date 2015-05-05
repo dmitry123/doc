@@ -2,15 +2,11 @@
 
 namespace app\controllers;
 
-use app\core\ActiveRecord;
 use app\core\Controller;
-use app\core\FormModel;
 use app\forms\UserForm;
 use app\models\core\Employee;
 use app\models\core\User;
-use yii\base\DynamicModel;
 use yii\base\Exception;
-use yii\web\UploadedFile;
 
 class UserController extends Controller {
 
@@ -43,11 +39,11 @@ class UserController extends Controller {
 			$model->{"password"} = \Yii::$app->getSecurity()->generatePasswordHash(
 				$model->{"password"}
 			);
-			print_r($model->getAttributes());
-			die;
-			if (!$model->getActiveRecord()->save()) {
-				if ($model->getActiveRecord()->hasErrors()) {
-					$this->postValidationErrors($model->getActiveRecord());
+			$ar = $model->getActiveRecord();
+			$ar->setAttributes($model->getAttributes());
+			if (!$ar->save()) {
+				if ($ar->hasErrors()) {
+					$this->postValidationErrors($ar);
 				} else {
 					$this->error("Произошли ошибки во время сохранения данных");
 				}

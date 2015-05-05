@@ -73,30 +73,6 @@ class User extends ActiveRecord implements IdentityInterface {
 	}
 
 	/**
-	 * Fetch user row from table by it's login and password
-	 * @param string $login - Original user name
-	 * @param string $password - Hashed password
-	 * @return array|null - Array with user's row or
-	 * 		null if user has not been found
-	 */
-	public static function findByLoginAndPassword($login, $password) {
-		$row = static::find()
-			->select("*")
-			->from("core.user")
-			->where("lower(login) = :login", [
-				":login" => strtolower($login)
-			])
-			->andWhere("password = :password", [
-				":password" => $password
-			])->one();
-		if ($row !== false) {
-			return $row;
-		} else {
-			return null;
-		}
-	}
-
-	/**
 	 * Find user in database by it's identification number
 	 * @param int $login - User's identification number
 	 * @return array|null - Array with user's information
@@ -161,7 +137,7 @@ class User extends ActiveRecord implements IdentityInterface {
 	 * @see validateAuthKey()
 	 */
 	public function getAuthKey() {
-		return null;
+		return $this->{"access_token"};
 	}
 
 	/**
@@ -173,6 +149,6 @@ class User extends ActiveRecord implements IdentityInterface {
 	 * @see getAuthKey()
 	 */
 	public function validateAuthKey($authKey) {
-		return null;
+		return $this->{"access_token"} === $authKey;
 	}
 }
