@@ -20,9 +20,9 @@ class EditableTable extends Table {
 	public $controlsWidth = 100;
 	public $pageLimit = 10;
 
-	public function getSerializedAttributes($attributes = null, $excepts = []) {
+	public function getSerializedAttributes($attributes = null, $excepts = [], $string = null) {
 		return parent::getSerializedAttributes($attributes, ArrayHelper::merge($excepts, [
 				"controls", "controlsWidth"
-			]));
+			]), $string);
 	}
 }

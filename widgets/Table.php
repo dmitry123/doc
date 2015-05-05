@@ -544,22 +544,7 @@ class Table extends Widget {
 		print Html::endTag("tr");
 	}
 
-	/**
-	 * Serialize widget's attributes by all scalar attributes and
-	 * arrays or set your own array with attribute names
-	 *
-	 * Agreement: I hope that you will put serialized attributes
-	 *    in root widget's HTML tag named [data-attributes]
-	 *
-	 * @param array|null $attributes - Array with attributes, which have
-	 *    to be serialized, by default it serializes all scalar attributes
-	 *
-	 * @param array|null $excepts - Array with attributes, that should
-	 * 	be excepted
-	 *
-	 * @return string - Serialized and URL encoded attributes
-	 */
-	public function getSerializedAttributes($attributes = null, $excepts = []) {
+	public function getSerializedAttributes($attributes = null, $excepts = [], $string = null) {
 		return parent::getSerializedAttributes($attributes, ArrayHelper::merge($excepts, [
 			/*
 			 * Don't let widget to serialize array
@@ -579,6 +564,6 @@ class Table extends Widget {
 			 * like search or update, cuz it will always return empty data
 			 */
 			"emptyData"
-		]));
+		]), $string);
 	}
 }

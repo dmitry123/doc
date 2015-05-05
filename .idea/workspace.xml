@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c7867d1-dabe-479e-927f-a32ef258089e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/core/User.php" afterPath="$PROJECT_DIR$/models/core/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/UserController.php" afterPath="$PROJECT_DIR$/controllers/UserController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forms/UserForm.php" afterPath="$PROJECT_DIR$/forms/UserForm.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/logs/app.log" afterPath="$PROJECT_DIR$/runtime/logs/app.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widgets/EditableTable.php" afterPath="$PROJECT_DIR$/widgets/EditableTable.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/widgets/FileExtTable.php" afterPath="$PROJECT_DIR$/modules/doc/widgets/FileExtTable.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/widgets/FileTypeTable.php" afterPath="$PROJECT_DIR$/modules/doc/widgets/FileTypeTable.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widgets/Table.php" afterPath="$PROJECT_DIR$/widgets/Table.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -77,14 +77,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UserForm.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserForm.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/forms/UserForm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5290557" vertical-offset="0" max-vertical-offset="943">
-              <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+            <state vertical-scroll-proportion="-11.5" vertical-offset="0" max-vertical-offset="943">
+              <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
               <folding>
                 <element signature="e#29#55#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Widget.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/Widget.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.34375" vertical-offset="1311" max-vertical-offset="3289">
+              <caret line="70" column="93" selection-start-line="70" selection-start-column="93" selection-end-line="70" selection-end-column="93" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Table.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/widgets/Table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.37761378" vertical-offset="11975" max-vertical-offset="12949">
+              <caret line="545" column="4" selection-start-line="545" selection-start-column="4" selection-end-line="545" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EditableTable.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/widgets/EditableTable.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.8125" vertical-offset="0" max-vertical-offset="759">
+              <caret line="22" column="93" selection-start-line="22" selection-start-column="93" selection-end-line="22" selection-end-column="93" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileTypeTable.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/doc/widgets/FileTypeTable.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.21875" vertical-offset="0" max-vertical-offset="644">
+              <caret line="19" column="93" selection-start-line="19" selection-start-column="93" selection-end-line="19" selection-end-column="93" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileExtTable.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/doc/widgets/FileExtTable.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.09375" vertical-offset="0" max-vertical-offset="667">
+              <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -111,9 +161,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/core/EmployeeHelper.php" />
-        <option value="$PROJECT_DIR$/widgets/Form2.php" />
-        <option value="$PROJECT_DIR$/core/FormModel.php" />
         <option value="$PROJECT_DIR$/core/ActiveRecord.php" />
         <option value="$PROJECT_DIR$/forms/UserRegisterForm.php" />
         <option value="$PROJECT_DIR$/vendor/yiisoft/yii2-bootstrap/ActiveField.php" />
@@ -139,7 +186,6 @@
         <option value="$PROJECT_DIR$/web/js/core.js" />
         <option value="$PROJECT_DIR$/controllers/ExtController.php" />
         <option value="$PROJECT_DIR$/core/Module.php" />
-        <option value="$PROJECT_DIR$/widgets/Table.php" />
         <option value="$PROJECT_DIR$/widgets/Panel.php" />
         <option value="$PROJECT_DIR$/views/layouts/main.php" />
         <option value="$PROJECT_DIR$/web/css/site.css" />
@@ -162,6 +208,10 @@
         <option value="$PROJECT_DIR$/vendor/yiisoft/yii2/web/User.php" />
         <option value="$PROJECT_DIR$/models/core/User.php" />
         <option value="$PROJECT_DIR$/views/site/login.php" />
+        <option value="$PROJECT_DIR$/modules/doc/widgets/FileExtTable.php" />
+        <option value="$PROJECT_DIR$/modules/doc/widgets/FileTypeTable.php" />
+        <option value="$PROJECT_DIR$/widgets/EditableTable.php" />
+        <option value="$PROJECT_DIR$/widgets/Table.php" />
       </list>
     </option>
   </component>
@@ -261,7 +311,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="User&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/web/User.php&#10;UserContr&#9;null&#9;null&#10;block.&#9;FILE&#9;file://D:/hosts/doc/views/layouts/block.php&#10;.module-menu-block&#9;null&#9;null&#10;site.cs&#9;FILE&#9;file://D:/hosts/doc/web/css/site.css&#10;main&#9;FILE&#9;file://D:/hosts/doc/views/layouts/main.php&#10;site.css&#9;FILE&#9;file://D:/hosts/doc/web/css/site.css&#10;Panel.&#9;FILE&#9;file://D:/hosts/doc/widgets/Panel.php&#10;panel.js&#9;FILE&#9;file://D:/hosts/doc/web/js/panel.js&#10;core.js&#9;FILE&#9;file://D:/hosts/doc/web/js/core.js&#10;main.php&#9;FILE&#9;file://D:/hosts/doc/views/layouts/main.php&#10;Panel&#9;null&#9;null&#10;ExtContr&#9;null&#9;null&#10;Table&#9;null&#9;null&#10;table.js&#9;FILE&#9;file://D:/hosts/doc/web/js/table.js&#10;Module&#9;null&#9;null&#10;Controller&#9;FILE&#9;file://D:/hosts/doc/core/Controller.php&#10;form.js&#9;FILE&#9;file://D:/hosts/doc/web/js/form.js&#10;block.js&#9;FILE&#9;file://D:/hosts/doc/web/js/block.js&#10;block.css&#9;FILE&#9;file://D:/hosts/doc/web/css/block.css&#10;UniqueValida&#9;null&#9;null&#10;CompareVa&#9;null&#9;null&#10;UserControl&#9;null&#9;null&#10;yii\bootstrap\ActiveField&#9;null&#9;null&#10;FormModel&#9;null&#9;null&#10;StringVa&#9;null&#9;null&#10;doc.js&#9;FILE&#9;file://D:/hosts/doc/web/js/doc.js&#10;site&#9;FILE&#9;file://D:/hosts/doc/web/css/site.css&#10;plan&#9;FILE&#9;file://D:/hosts/doc/web/js/plantation.js&#10;table.css&#9;FILE&#9;file://D:/hosts/doc/web/css/table.css&#10;loading&#9;FILE&#9;file://D:/hosts/doc/web/js/loading.js&#10;loadingh&#9;null&#9;null&#10;plantation.js&#9;FILE&#9;file://D:/hosts/doc/web/js/plantation.js&#10;Plantat&#9;null&#9;null&#10;loading.js&#9;FILE&#9;file://D:/hosts/doc/web/js/loading.js&#10;modules&#9;FILE&#9;file://D:/hosts/doc/config/modules.php&#10;Privi&#9;FILE&#9;file://D:/hosts/doc/models/Privilege.php&#10;Privilege&#9;FILE&#9;file://D:/hosts/doc/models/Privilege.php&#10;Modal&#9;null&#9;null&#10;panel&#9;FILE&#9;file://D:/hosts/doc/widgets/Panel.php&#10;ControlMenu&#9;FILE&#9;file://D:/hosts/doc/widgets/ControlMenu.php&#10;block.php&#9;FILE&#9;file://D:/hosts/doc/views/layouts/block.php&#10;site.js&#9;FILE&#9;file://D:/hosts/doc/web/js/site.js&#10;controller&#9;FILE&#9;file://D:/hosts/doc/core/Controller.php&#10;form&#9;FILE&#9;file://D:/hosts/doc/web/js/form.js&#10;form.j&#9;FILE&#9;file://D:/hosts/doc/web/js/form.js&#10;UserForm&#9;FILE&#9;file://D:/hosts/doc/forms/UserForm.php&#10;bootstrap.css&#9;FILE&#9;file://D:/hosts/doc/vendor/bower/bootstrap/dist/css/bootstrap.css&#10;mess&#9;FILE&#9;file://D:/hosts/doc/web/js/message.js&#10;panel.css&#9;FILE&#9;file://D:/hosts/doc/web/css/panel.css" />
+    <property name="SearchEverywhereHistoryKey" value="Widget&#9;null&#9;null&#10;User&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/web/User.php&#10;UserContr&#9;null&#9;null&#10;block.&#9;FILE&#9;file://D:/hosts/doc/views/layouts/block.php&#10;.module-menu-block&#9;null&#9;null&#10;site.cs&#9;FILE&#9;file://D:/hosts/doc/web/css/site.css&#10;main&#9;FILE&#9;file://D:/hosts/doc/views/layouts/main.php&#10;site.css&#9;FILE&#9;file://D:/hosts/doc/web/css/site.css&#10;Panel.&#9;FILE&#9;file://D:/hosts/doc/widgets/Panel.php&#10;panel.js&#9;FILE&#9;file://D:/hosts/doc/web/js/panel.js&#10;core.js&#9;FILE&#9;file://D:/hosts/doc/web/js/core.js&#10;main.php&#9;FILE&#9;file://D:/hosts/doc/views/layouts/main.php&#10;Panel&#9;null&#9;null&#10;ExtContr&#9;null&#9;null&#10;Table&#9;null&#9;null&#10;table.js&#9;FILE&#9;file://D:/hosts/doc/web/js/table.js&#10;Module&#9;null&#9;null&#10;Controller&#9;FILE&#9;file://D:/hosts/doc/core/Controller.php&#10;form.js&#9;FILE&#9;file://D:/hosts/doc/web/js/form.js&#10;block.js&#9;FILE&#9;file://D:/hosts/doc/web/js/block.js&#10;block.css&#9;FILE&#9;file://D:/hosts/doc/web/css/block.css&#10;UniqueValida&#9;null&#9;null&#10;CompareVa&#9;null&#9;null&#10;UserControl&#9;null&#9;null&#10;yii\bootstrap\ActiveField&#9;null&#9;null&#10;FormModel&#9;null&#9;null&#10;StringVa&#9;null&#9;null&#10;doc.js&#9;FILE&#9;file://D:/hosts/doc/web/js/doc.js&#10;site&#9;FILE&#9;file://D:/hosts/doc/web/css/site.css&#10;plan&#9;FILE&#9;file://D:/hosts/doc/web/js/plantation.js&#10;table.css&#9;FILE&#9;file://D:/hosts/doc/web/css/table.css&#10;loading&#9;FILE&#9;file://D:/hosts/doc/web/js/loading.js&#10;loadingh&#9;null&#9;null&#10;plantation.js&#9;FILE&#9;file://D:/hosts/doc/web/js/plantation.js&#10;Plantat&#9;null&#9;null&#10;loading.js&#9;FILE&#9;file://D:/hosts/doc/web/js/loading.js&#10;modules&#9;FILE&#9;file://D:/hosts/doc/config/modules.php&#10;Privi&#9;FILE&#9;file://D:/hosts/doc/models/Privilege.php&#10;Privilege&#9;FILE&#9;file://D:/hosts/doc/models/Privilege.php&#10;Modal&#9;null&#9;null&#10;panel&#9;FILE&#9;file://D:/hosts/doc/widgets/Panel.php&#10;ControlMenu&#9;FILE&#9;file://D:/hosts/doc/widgets/ControlMenu.php&#10;block.php&#9;FILE&#9;file://D:/hosts/doc/views/layouts/block.php&#10;site.js&#9;FILE&#9;file://D:/hosts/doc/web/js/site.js&#10;controller&#9;FILE&#9;file://D:/hosts/doc/core/Controller.php&#10;form&#9;FILE&#9;file://D:/hosts/doc/web/js/form.js&#10;form.j&#9;FILE&#9;file://D:/hosts/doc/web/js/form.js&#10;UserForm&#9;FILE&#9;file://D:/hosts/doc/forms/UserForm.php&#10;bootstrap.css&#9;FILE&#9;file://D:/hosts/doc/vendor/bower/bootstrap/dist/css/bootstrap.css&#10;mess&#9;FILE&#9;file://D:/hosts/doc/web/js/message.js" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="FullScreen" value="false" />
     <property name="recentsLimit" value="5" />
@@ -714,7 +764,13 @@
       <option name="project" value="LOCAL" />
       <updated>1430732168020</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Tiny changes">
+      <created>1430796864012</created>
+      <option name="number" value="00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1430796864012</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -763,7 +819,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Active records for file's type and status" />
     <MESSAGE value="Access rules + Access field" />
     <MESSAGE value="Type manager" />
     <MESSAGE value="Bootstrap fonts + Tiny refactor" />
@@ -788,7 +843,8 @@
     <MESSAGE value="Another migration fix" />
     <MESSAGE value="Another migration fixes" />
     <MESSAGE value="Uploaded file removed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Uploaded file removed" />
+    <MESSAGE value="Tiny changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tiny changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -797,50 +853,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/widgets/ModuleMenu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.9375" vertical-offset="0" max-vertical-offset="828">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding>
-            <element signature="e#31#51#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/widgets/views/ModuleMenu2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.0625" vertical-offset="0" max-vertical-offset="690">
-          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-          <folding>
-            <element signature="e#6#84#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/module-menu.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.2435896" vertical-offset="0" max-vertical-offset="3082">
-          <caret line="121" column="1" selection-start-line="121" selection-start-column="1" selection-end-line="121" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/img/icons/alarm27.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1679">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/img/icons/graduate20.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1334">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/img/icons/idea13.svg">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1656">
@@ -1363,11 +1375,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/forms/UserForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5290557" vertical-offset="0" max-vertical-offset="943">
-          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        <state vertical-scroll-proportion="-11.5" vertical-offset="0" max-vertical-offset="943">
+          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
           <folding>
             <element signature="e#29#55#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/doc/widgets/FileExtTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.09375" vertical-offset="0" max-vertical-offset="667">
+          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/doc/widgets/FileTypeTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.21875" vertical-offset="0" max-vertical-offset="644">
+          <caret line="19" column="93" selection-start-line="19" selection-start-column="93" selection-end-line="19" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/EditableTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.8125" vertical-offset="0" max-vertical-offset="759">
+          <caret line="22" column="93" selection-start-line="22" selection-start-column="93" selection-end-line="22" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Widget.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.34375" vertical-offset="1311" max-vertical-offset="3289">
+          <caret line="70" column="93" selection-start-line="70" selection-start-column="93" selection-end-line="70" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/Table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37761378" vertical-offset="11975" max-vertical-offset="12949">
+          <caret line="545" column="4" selection-start-line="545" selection-start-column="4" selection-end-line="545" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
