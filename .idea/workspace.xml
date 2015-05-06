@@ -2,7 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c7867d1-dabe-479e-927f-a32ef258089e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\hosts\doc\vendor\unoconv-0.3\AUTHORS" afterPath="$PROJECT_DIR$/vendor/unoconv/AUTHORS" />
+      <change type="MOVED" beforePath="D:\hosts\doc\vendor\unoconv-0.3\COPYING" afterPath="$PROJECT_DIR$/vendor/unoconv/COPYING" />
+      <change type="MOVED" beforePath="D:\hosts\doc\vendor\unoconv-0.3\ChangeLog" afterPath="$PROJECT_DIR$/vendor/unoconv/ChangeLog" />
+      <change type="MOVED" beforePath="D:\hosts\doc\vendor\unoconv-0.3\Makefile" afterPath="$PROJECT_DIR$/vendor/unoconv/Makefile" />
+      <change type="MOVED" beforePath="D:\hosts\doc\vendor\unoconv-0.3\README" afterPath="$PROJECT_DIR$/vendor/unoconv/README" />
+      <change type="MOVED" beforePath="D:\hosts\doc\vendor\unoconv-0.3\TODO" afterPath="$PROJECT_DIR$/vendor/unoconv/TODO" />
+      <change type="MOVED" beforePath="D:\hosts\doc\vendor\unoconv-0.3\Thumbs.db" afterPath="$PROJECT_DIR$/vendor/unoconv/Thumbs.db" />
+      <change type="MOVED" beforePath="D:\hosts\doc\vendor\unoconv-0.3\WISHLIST" afterPath="$PROJECT_DIR$/vendor/unoconv/WISHLIST" />
+      <change type="MOVED" beforePath="D:\hosts\doc\vendor\unoconv-0.3\docs\Makefile" afterPath="$PROJECT_DIR$/vendor/unoconv/docs/Makefile" />
+      <change type="MOVED" beforePath="D:\hosts\doc\vendor\unoconv-0.3\docs\formats.html" afterPath="$PROJECT_DIR$/vendor/unoconv/docs/formats.html" />
+      <change type="MOVED" beforePath="D:\hosts\doc\vendor\unoconv-0.3\docs\formats.txt" afterPath="$PROJECT_DIR$/vendor/unoconv/docs/formats.txt" />
+      <change type="MOVED" beforePath="D:\hosts\doc\vendor\unoconv-0.3\docs\links.html" afterPath="$PROJECT_DIR$/vendor/unoconv/docs/links.html" />
+      <change type="MOVED" beforePath="D:\hosts\doc\vendor\unoconv-0.3\docs\links.txt" afterPath="$PROJECT_DIR$/vendor/unoconv/docs/links.txt" />
+      <change type="MOVED" beforePath="D:\hosts\doc\vendor\unoconv-0.3\docs\unoconv.1" afterPath="$PROJECT_DIR$/vendor/unoconv/docs/unoconv.1" />
+      <change type="MOVED" beforePath="D:\hosts\doc\vendor\unoconv-0.3\docs\unoconv.1.html" afterPath="$PROJECT_DIR$/vendor/unoconv/docs/unoconv.1.html" />
+      <change type="MOVED" beforePath="D:\hosts\doc\vendor\unoconv-0.3\docs\unoconv.1.txt" afterPath="$PROJECT_DIR$/vendor/unoconv/docs/unoconv.1.txt" />
+      <change type="MOVED" beforePath="D:\hosts\doc\vendor\unoconv-0.3\docs\unoconv.1.xml" afterPath="$PROJECT_DIR$/vendor/unoconv/docs/unoconv.1.xml" />
+      <change type="MOVED" beforePath="D:\hosts\doc\vendor\unoconv-0.3\tests\Makefile" afterPath="$PROJECT_DIR$/vendor/unoconv/tests/Makefile" />
+      <change type="MOVED" beforePath="D:\hosts\doc\vendor\unoconv-0.3\tests\dag.gif" afterPath="$PROJECT_DIR$/vendor/unoconv/tests/dag.gif" />
+      <change type="MOVED" beforePath="D:\hosts\doc\vendor\unoconv-0.3\tests\document-example.odt" afterPath="$PROJECT_DIR$/vendor/unoconv/tests/document-example.odt" />
+      <change type="MOVED" beforePath="D:\hosts\doc\vendor\unoconv-0.3\tests\document-resume.odt" afterPath="$PROJECT_DIR$/vendor/unoconv/tests/document-resume.odt" />
+      <change type="MOVED" beforePath="D:\hosts\doc\vendor\unoconv-0.3\tests\example-spreadsheet.csv" afterPath="$PROJECT_DIR$/vendor/unoconv/tests/example-spreadsheet.csv" />
+      <change type="MOVED" beforePath="D:\hosts\doc\vendor\unoconv-0.3\tests\spreadsheet-example.csv" afterPath="$PROJECT_DIR$/vendor/unoconv/tests/spreadsheet-example.csv" />
+      <change type="MOVED" beforePath="D:\hosts\doc\vendor\unoconv-0.3\tests\spreadsheet-example.ods" afterPath="$PROJECT_DIR$/vendor/unoconv/tests/spreadsheet-example.ods" />
+      <change type="MOVED" beforePath="D:\hosts\doc\vendor\unoconv-0.3\tests\spreadsheet-example.xls" afterPath="$PROJECT_DIR$/vendor/unoconv/tests/spreadsheet-example.xls" />
+      <change type="MOVED" beforePath="D:\hosts\doc\vendor\unoconv-0.3\unoconv" afterPath="$PROJECT_DIR$/vendor/unoconv/unoconv" />
+      <change type="MOVED" beforePath="D:\hosts\doc\vendor\unoconv-0.3\unoconv.spec" afterPath="$PROJECT_DIR$/vendor/unoconv/unoconv.spec" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -201,6 +227,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="unoconv" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -572,7 +616,13 @@
       <option name="project" value="LOCAL" />
       <updated>1430878897529</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="PhpWord removed">
+      <created>1430880970350</created>
+      <option name="number" value="00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1430880970350</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -621,7 +671,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Bootstrap fonts + Tiny refactor" />
     <MESSAGE value="Merge with master" />
     <MESSAGE value="Object fixes" />
     <MESSAGE value="New bootstrap theme" />
@@ -646,7 +695,8 @@
     <MESSAGE value="Tiny changes" />
     <MESSAGE value="Widget class fixes" />
     <MESSAGE value="Added PHPWord and unoconv libraries" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added PHPWord and unoconv libraries" />
+    <MESSAGE value="PhpWord removed" />
+    <option name="LAST_COMMIT_MESSAGE" value="PhpWord removed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
