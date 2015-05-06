@@ -2,501 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c7867d1-dabe-479e-927f-a32ef258089e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/bootstrap/fonts/FontAwesome.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/_files/images/PhpWord.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/unoconv-0.3/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/_files/images/alexz-johnson.pcx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/_files/images/angela_merkel.tif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/_files/templates/blank.docx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/_files/templates/clone-delete-block.docx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/_files/templates/clone-merge.docx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/_files/templates/corrupted_main_document_part.docx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/unoconv-0.3/tests/dag.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/resources/doc.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/unoconv-0.3/tests/document-example.odt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/unoconv-0.3/tests/document-resume.odt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/_files/images/duke_nukem.bmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/_files/images/earth.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/_files/images/firefox.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/bootstrap/fonts/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/bootstrap/fonts/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/bootstrap/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/_files/templates/header-footer.docx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/_files/images/mario.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/_files/images/mars.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/_files/images/mars_noext_jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/docs/images/phpword.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/resources/ppt.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/_files/documents/reader.docx.zip" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/_files/documents/reader.docx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/_files/documents/reader.odt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/_files/documents/sheet.xls" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/unoconv-0.3/tests/spreadsheet-example.ods" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/unoconv-0.3/tests/spreadsheet-example.xls" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/_files/templates/with_table_macros.docx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/_files/documents/without_table_macros.docx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/resources/xls.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/.scrutinizer.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/.travis_shell_after_success.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/unoconv-0.3/AUTHORS" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Collection/AbstractCollection.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Element/AbstractContainer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Element/AbstractElement.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/HTML/Element/AbstractElement.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/ODText/Element/AbstractElement.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/RTF/Element/AbstractElement.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Element/AbstractElement.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Element/AbstractElementTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Reader/ODText/AbstractPart.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Reader/Word2007/AbstractPart.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/HTML/Part/AbstractPart.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/ODText/Part/AbstractPart.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/RTF/Part/AbstractPart.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Part/AbstractPart.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Writer/ODText/Part/AbstractPartTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Writer/Word2007/Part/AbstractPartTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Reader/AbstractReader.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/PDF/AbstractRenderer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Style/AbstractStyle.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/HTML/Style/AbstractStyle.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/ODText/Style/AbstractStyle.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/RTF/Style/AbstractStyle.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Style/AbstractStyle.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Style/AbstractStyleTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/AbstractWriter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Style/Alignment.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Style/Alignment.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Autoloader.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/AutoloaderTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/HTML/Part/Body.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Element/Bookmark.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Element/Bookmark.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Collection/Bookmarks.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Style/Border.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/RTF/Style/Border.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/CHANGELOG.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/CONTRIBUTING.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/COPYING.LESSER" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/COPYING" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/unoconv-0.3/COPYING" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Element/Cell.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Style/Cell.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Style/Cell.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Element/CellTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Style/CellTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/unoconv-0.3/ChangeLog" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Element/Chart.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Style/Chart.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Element/Chart.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Part/Chart.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Collection/Charts.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Element/CheckBox.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Element/CheckBox.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Element/CheckBoxTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Collection/CollectionTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Metadata/Compatibility.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/HTML/Element/Container.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/ODText/Element/Container.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/RTF/Element/Container.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Element/Container.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Reader/ODText/Content.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/ODText/Part/Content.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Writer/ODText/Part/ContentTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Part/ContentTypes.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Shared/Converter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Shared/ConverterTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Exception/CopyFileException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Exception/CopyFileExceptionTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Exception/CreateTemporaryFileException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Exception/CreateTemporaryFileExceptionTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Metadata/DocInfo.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Metadata/DocInfoTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Reader/Word2007/DocPropsApp.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Part/DocPropsApp.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Reader/Word2007/DocPropsCore.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Part/DocPropsCore.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Reader/Word2007/DocPropsCustom.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Part/DocPropsCustom.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Reader/RTF/Document.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Reader/Word2007/Document.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/RTF/Part/Document.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Part/Document.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Writer/Word2007/Part/DocumentTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/PDF/DomPDF.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Writer/PDF/DomPDFTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Shared/Drawing.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Writer/HTML/ElementTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Writer/ODText/ElementTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Writer/RTF/ElementTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Writer/Word2007/ElementTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Element/Endnote.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/HTML/Element/Endnote.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Element/Endnote.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Collection/Endnotes.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Reader/Word2007/Endnotes.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Part/Endnotes.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Exception/Exception.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Exception/ExceptionTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Style/Extrusion.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Style/Extrusion.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Element/Field.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Element/Field.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Element/FieldTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Style/Fill.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Style/Fill.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Shared/Font.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Style/Font.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/HTML/Style/Font.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/ODText/Style/Font.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/RTF/Style/Font.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Style/Font.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Part/FontTable.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Style/FontTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Writer/Word2007/Style/FontTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Element/Footer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Part/Footer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Element/FooterTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Writer/Word2007/Part/FooterTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Element/Footnote.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/HTML/Element/Footnote.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Element/Footnote.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Element/FootnoteTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Collection/Footnotes.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Reader/Word2007/Footnotes.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Part/Footnotes.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Writer/Word2007/Part/FootnotesTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Element/FormField.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Element/FormField.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Style/Frame.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Style/Frame.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/HTML/Style/Generic.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Reader/HTML.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/HTML.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Reader/HTMLTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Writer/HTMLTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/HTML/Part/Head.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Element/Header.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/RTF/Part/Header.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Part/Header.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Element/HeaderTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Writer/Word2007/Part/HeaderTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Shared/Html.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Shared/HtmlTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/IOFactory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/IOFactoryTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Element/Image.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Style/Image.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/HTML/Element/Image.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/HTML/Style/Image.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/ODText/Element/Image.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/ODText/Style/Image.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/RTF/Element/Image.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Element/Image.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Style/Image.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Element/ImageTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Style/ImageTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Style/Indentation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Style/Indentation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Style/IndentationTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Exception/InvalidImageException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Exception/InvalidImageExceptionTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Exception/InvalidObjectException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Exception/InvalidStyleException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Exception/InvalidStyleExceptionTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Element/Line.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Style/Line.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Element/Line.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Style/Line.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Style/LineNumbering.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Style/LineNumbering.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Style/LineNumberingTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Element/LineTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Style/LineTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Element/Link.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/HTML/Element/Link.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/ODText/Element/Link.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/RTF/Element/Link.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Element/Link.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Element/LinkTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Element/ListItem.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Style/ListItem.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/HTML/Element/ListItem.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/RTF/Element/ListItem.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Element/ListItem.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Element/ListItemRun.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Element/ListItemRun.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Element/ListItemRunTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Element/ListItemTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Style/ListItemTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/PDF/MPDF.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Writer/PDF/MPDFTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/docs/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/unoconv-0.3/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/unoconv-0.3/docs/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/unoconv-0.3/tests/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/ODText/Part/Manifest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Style/MarginBorder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Media.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/MediaTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Reader/ODText/Meta.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/ODText/Part/Meta.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/ODText/Part/Mimetype.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Reader/MsDoc.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Reader/Word2007/Numbering.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Style/Numbering.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Part/Numbering.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Style/NumberingLevel.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Style/NumberingLevelTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Style/NumberingTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Writer/Word2007/Part/NumberingTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Reader/ODText.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/ODText.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Reader/ODTextTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Writer/ODTextTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Shared/OLERead.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Element/Object.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Element/Object.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Element/ObjectTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Style/Outline.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Style/Outline.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/PDF.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Writer/PDFTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Element/PageBreak.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/HTML/Element/PageBreak.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/RTF/Element/PageBreak.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Element/PageBreak.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Element/PageBreakTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Style/Paper.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Style/Paragraph.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/HTML/Style/Paragraph.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/ODText/Style/Paragraph.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/RTF/Style/Paragraph.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Style/Paragraph.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Style/ParagraphTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Writer/HTML/PartTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Writer/Word2007/PartTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/PhpWord.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/PhpWordTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Element/PreserveText.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Element/PreserveText.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Element/PreserveTextTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Metadata/Protection.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/unoconv-0.3/README" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Reader/RTF.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/RTF.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Reader/RTFTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Writer/RTFTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Reader/ReaderInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Part/Rels.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Part/RelsDocument.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Part/RelsPart.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Element/Row.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Style/Row.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Style/Row.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Element/RowTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Style/RowTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Element/SDT.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Element/SDT.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Element/SDTTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/Sample_01_SimpleText.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/Sample_02_TabStops.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/Sample_03_Sections.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/Sample_04_Textrun.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/Sample_05_Multicolumn.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/Sample_06_Footnote.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/Sample_07_TemplateCloneRow.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/Sample_08_ParagraphPagination.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/Sample_09_Tables.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/Sample_10_EastAsianFontStyle.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/Sample_11_ReadWord2007.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/Sample_11_ReadWord97.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/Sample_12_HeaderFooter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/Sample_13_Images.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/Sample_14_ListItem.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/Sample_15_Link.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/Sample_16_Object.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/Sample_17_TitleTOC.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/Sample_18_Watermark.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/Sample_19_TextBreak.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/Sample_20_BGColor.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/Sample_21_TableRowRules.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/Sample_22_CheckBox.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/Sample_23_TemplateBlock.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/Sample_24_ReadODText.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/Sample_25_TextBox.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/Sample_26_Html.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/Sample_27_Field.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/Sample_28_ReadRTF.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/Sample_29_Line.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/Sample_30_ReadHTML.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/Sample_31_Shape.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/Sample_32_Chart.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/Sample_33_FormField.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/Sample_34_SDT.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/Sample_35_InternalLink.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/Sample_36_RTL.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/Sample_Footer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/Sample_Header.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Element/Section.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Style/Section.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/ODText/Style/Section.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/RTF/Style/Section.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Style/Section.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Element/SectionTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Style/SectionTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Settings.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Part/Settings.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/SettingsTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Writer/Word2007/Part/SettingsTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Style/Shading.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Style/Shading.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Style/ShadingTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Style/Shadow.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Style/Shadow.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Element/Shape.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Style/Shape.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Element/Shape.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Style/Shape.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Style/Spacing.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Style/Spacing.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Style/SpacingTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Shared/String.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Shared/StringTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Style.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/StyleTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Writer/HTML/StyleTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Writer/ODText/StyleTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Writer/RTF/StyleTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Writer/Word2007/StyleTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Reader/Word2007/Styles.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/ODText/Part/Styles.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Part/Styles.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Writer/Word2007/Part/StylesTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/PDF/TCPDF.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Writer/PDF/TCPDFTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Element/TOC.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Style/TOC.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Element/TOC.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Element/TOCTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Style/TOCTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/unoconv-0.3/TODO" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Style/Tab.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Style/Tab.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Style/TabTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Element/Table.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Style/Table.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/HTML/Element/Table.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/ODText/Element/Table.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/ODText/Style/Table.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/RTF/Element/Table.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Element/Table.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Style/Table.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Element/TableTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Style/TableTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Template.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/TemplateProcessor.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/TemplateProcessorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/_includes/TestHelperDOCX.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Element/Text.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/HTML/Element/Text.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/ODText/Element/Text.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/RTF/Element/Text.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Element/Text.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Element/TextBox.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Style/TextBox.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Element/TextBox.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Style/TextBox.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Element/TextBoxTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Style/TextBoxTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Element/TextBreak.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/HTML/Element/TextBreak.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/ODText/Element/TextBreak.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/RTF/Element/TextBreak.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Element/TextBreak.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Element/TextBreakTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Element/TextRun.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/HTML/Element/TextRun.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/ODText/Element/TextRun.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/RTF/Element/TextRun.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Element/TextRun.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Element/TextRunTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Element/TextTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Part/Theme.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Element/Title.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/HTML/Element/Title.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/ODText/Element/Title.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/RTF/Element/Title.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Element/Title.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Element/TitleTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Collection/Titles.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Exception/UnsupportedImageTypeException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Exception/UnsupportedImageTypeExceptionTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/VERSION" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/unoconv-0.3/WISHLIST" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007/Part/WebSettings.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Reader/Word2007.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/Word2007.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Reader/Word2007Test.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Writer/Word2007Test.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Writer/WriterInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Shared/XMLReader.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Shared/XMLReaderTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Shared/XMLWriter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Shared/XMLWriterTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/_includes/XmlDocument.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Shared/ZipArchive.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/Shared/ZipArchiveTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/bootstrap/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/bootstrap/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/bootstrap.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/docs/conf.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/docs/containers.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/docs/credits.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/docs/src/documentation.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/docs/elements.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/unoconv-0.3/tests/example-spreadsheet.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/docs/faq.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/bootstrap/css/font-awesome.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/bootstrap/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/unoconv-0.3/docs/formats.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/unoconv-0.3/docs/formats.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/docs/general.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/docs/index.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/docs/installing.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/docs/intro.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/bootstrap/js/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/unoconv-0.3/docs/links.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/unoconv-0.3/docs/links.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/_files/xsl/passthrough.xsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/src/PhpWord/Shared/PCLZip/pclzip.lib.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/phpmd.xml.dist" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/phpunit.xml.dist" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/samples/bootstrap/css/phpword.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/phpword.ini.dist" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/docs/images/phpword.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/_files/documents/reader.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/_files/documents/reader.rtf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/docs/recipes.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/docs/references.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/tests/PhpWord/Tests/_files/xsl/remove_tables_by_needle.xsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/unoconv-0.3/tests/spreadsheet-example.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/docs/styles.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/docs/templates-processing.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/unoconv-0.3/docs/unoconv.1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/unoconv-0.3/docs/unoconv.1.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/unoconv-0.3/docs/unoconv.1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/unoconv-0.3/docs/unoconv.1" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/unoconv-0.3/unoconv.spec" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/unoconv-0.3/unoconv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpword/docs/writersreaders.rst" />
-      <change type="DELETED" beforePath="D:\hosts\doc\modules\doc\loaders\RichTextFormat.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/core/LoaderFactory.php" afterPath="$PROJECT_DIR$/modules/doc/core/LoaderFactory.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -638,8 +143,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 5.5" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="304" />
-    <option name="y" value="3" />
+    <option name="x" value="185" />
+    <option name="y" value="6" />
     <option name="width" value="1802" />
     <option name="height" value="1018" />
   </component>
@@ -1061,13 +566,20 @@
       <option name="project" value="LOCAL" />
       <updated>1430796966580</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Added PHPWord and unoconv libraries">
+      <created>1430878897529</created>
+      <option name="number" value="00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1430878897529</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="304" y="3" width="1802" height="1018" extended-state="0" />
+    <frame x="185" y="6" width="1802" height="1018" extended-state="0" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277849" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277849" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38261852" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1085,7 +597,6 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32054177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277849" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1110,7 +621,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Type manager" />
     <MESSAGE value="Bootstrap fonts + Tiny refactor" />
     <MESSAGE value="Merge with master" />
     <MESSAGE value="Object fixes" />
@@ -1135,7 +645,8 @@
     <MESSAGE value="Uploaded file removed" />
     <MESSAGE value="Tiny changes" />
     <MESSAGE value="Widget class fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Widget class fixes" />
+    <MESSAGE value="Added PHPWord and unoconv libraries" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added PHPWord and unoconv libraries" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1467,6 +978,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13922518" vertical-offset="0" max-vertical-offset="1564">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
