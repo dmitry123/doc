@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN" "http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd">
+<refentry>
+<refmeta>
+<refentrytitle>unoconv</refentrytitle>
+<manvolnum>1</manvolnum>
+</refmeta>
+<refnamediv>
+    <refname>unoconv</refname>
+    <refpurpose>convert any document from and to any OpenOffice supported format</refpurpose>
+</refnamediv>
+<refsynopsisdiv>
+<simpara><emphasis>unoconv</emphasis> [options] file [file2 ..]</simpara>
+
+<simpara><emphasis>unoconv</emphasis> --listener [--server SRV] [--port PRT] [--connections CON]</simpara>
+
+</refsynopsisdiv>
+<refsect1>
+<title>DESCRIPTION</title>
+<simpara>unoconv is a command line utility that can convert any file format that
+OpenOffice can import, to any file format that OpenOffice is capable of
+exporting.</simpara>
+
+<simpara>unoconv uses the OpenOffice's UNO bindings for non-interactive conversion
+of documents and therefor needs an OpenOffice instance to communicate with.
+Therefore if it cannot find one, it will start its own instance for temporary
+usage. If desired, one can start a &#8220;listener&#8221; instance to use for subsequent
+connections or even for remote connections.</simpara>
+
+</refsect1>
+<refsect1>
+<title>OPTIONS</title>
+<variablelist>
+<varlistentry>
+<term>
+-c, --connection
+</term>
+<listitem>
+<simpara>
+    UNO connection string to be used by the client to connect to an
+    OpenOffice instance, or used by the listener to make OpenOffice
+    listen.
+</simpara>
+<literallayout class="monospaced">Default connection string is "socket,host=localhost,port=2002;urp;StarOffice.ComponentContext"</literallayout>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>
+-d, --doctype
+</term>
+<listitem>
+<simpara>
+    Specify the OpenOffice document type of the backend format. Possible
+    document types are: <emphasis>document</emphasis>, <emphasis>graphics</emphasis>, <emphasis>presentation</emphasis>,
+    <emphasis>spreadsheet</emphasis>.
+</simpara>
+<literallayout class="monospaced">Default document type is 'document'.</literallayout>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>
+-f, --format
+</term>
+<listitem>
+<simpara>
+    Specify the output format for the document. You can get a list of
+    possible output formats per document type by using the <literal>--list</literal> option.
+</simpara>
+<literallayout class="monospaced">Default document type is 'pdf'.</literallayout>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>
+-l, --listener
+</term>
+<listitem>
+<simpara>
+    Start unoconv as listener for unoconv clients to connect to.
+</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>
+-p, --port
+</term>
+<listitem>
+<simpara>
+    Port to listen on (as listener) or to connect to (as client).
+</simpara>
+<literallayout class="monospaced">Default port is '2002'.</literallayout>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>
+-s, --server
+</term>
+<listitem>
+<simpara>
+    Server (address) to listen on (as listener) or to connect to (as client).
+</simpara>
+<literallayout class="monospaced">Default server is 'localhost'.</literallayout>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>
+--show
+</term>
+<listitem>
+<simpara>
+    List the possible output formats to be used with <literal>-f</literal>.
+</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>
+--stdout
+</term>
+<listitem>
+<simpara>
+    Print converted output file to stdout.
+</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>
+-v, --verbose
+</term>
+<listitem>
+<simpara>
+    Be more and more and more verbose.
+</simpara>
+</listitem>
+</varlistentry>
+</variablelist>
+</refsect1>
+<refsect1>
+<title>ARGUMENTS</title>
+<simpara>You can provide one or more <emphasis role="strong">files</emphasis> as arguments to convert each of them to
+the specified <emphasis role="strong">output format</emphasis>.</simpara>
+
+</refsect1>
+<refsect1>
+<title>EXAMPLES</title>
+<simpara>You can use unoconv in standalone mode, this means that in absence of an
+OpenOffice listener, it will starts its own:</simpara>
+
+<literallayout class="monospaced">unoconv -f pdf some-document.odt</literallayout>
+<simpara>One can use unoconv as a listener (by default localhost:2002) to let other
+unoconv instances connect to it:</simpara>
+
+<literallayout class="monospaced">unoconv --listener &amp;
+unoconv -f pdf some-document.odt
+unoconv -f doc other-document.odt
+unoconv -f jpg some-image.png
+unoconv -f xsl some-spreadsheet.csv
+kill -15 %-</literallayout>
+<simpara>This also works on a remote host:</simpara>
+
+<literallayout class="monospaced">unoconv --listener --server 1.2.3.4 --port 4567</literallayout>
+<simpara>and then connect another system to convert documents:</simpara>
+
+<literallayout class="monospaced">unoconv --server 1.2.3.4 --port 4567</literallayout>
+</refsect1>
+<refsect1>
+<title>BUGS</title>
+<simpara>unoconv uses the UNO bindings to connect to OpenOffice, in absence of a usable
+socket, it will start its own OpenOffice instance with the correct parameters.
+However, OpenOffice requires a working <literal>DISPLAY</literal> (even with <literal>-headless</literal>
+option) and therefor you cannot run it in a true console, you need X.</simpara>
+
+<note><simpara>Please see the TODO file for known bugs and future plans.</simpara></note>
+</refsect1>
+<refsect1>
+<title>SEE ALSO</title>
+<literallayout class="monospaced">convert(1), file(1), odt2txt</literallayout>
+</refsect1>
+<refsect1>
+<title>REFERENCES</title>
+<simpara>unoconv is very useful together with the following tools:</simpara>
+
+<variablelist>
+<varlistentry>
+<term>
+Asciidoc
+</term>
+<listitem>
+<simpara>
+    http://www.methods.co.nz/asciidoc/
+</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>
+docbook2odf
+</term>
+<listitem>
+<simpara>
+    http://open.comsultia.com/docbook2odf/
+</simpara>
+</listitem>
+</varlistentry>
+</variablelist>
+</refsect1>
+<refsect1>
+<title>AUTHOR</title>
+<simpara>Written by Dag Wieers, &lt;<ulink url="mailto:dag@wieers.com">dag@wieers.com</ulink>&gt;</simpara>
+
+</refsect1>
+<refsect1>
+<title>RESOURCES</title>
+<simpara>Main web site: <ulink url="http://dag.wieers.com/home-made/unoconv/">http://dag.wieers.com/home-made/unoconv/</ulink></simpara>
+
+</refsect1>
+<refsect1>
+<title>COPYING</title>
+<simpara>Copyright (C) 2007 Dag Wieers. Free use of this software is granted under the
+terms of the GNU General Public License (GPL).</simpara>
+
+</refsect1>
+</refentry>

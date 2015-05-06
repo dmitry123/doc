@@ -13,9 +13,6 @@ class LoaderFactory {
 		],
 		"OpenDocumentText" => [
 			"ext" => "odt"
-		],
-		"RichTextFormat" => [
-			"ext" => "rtf"
 		]
 	];
 
