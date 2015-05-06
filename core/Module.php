@@ -63,6 +63,10 @@ class Module extends \yii\base\Module {
 		];
 	}
 
+	public static function currentModule() {
+		return Yii::$app->controller->module->id;
+	}
+
 	/**
 	 * Get name of current module
 	 * @return string - Name of module

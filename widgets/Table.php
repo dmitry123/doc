@@ -7,6 +7,7 @@ use app\core\ClassTrait;
 use app\core\DropDown;
 use app\core\FieldCollection;
 use app\core\FormModel;
+use app\core\Module;
 use app\core\TableProvider;
 use app\core\UniqueGenerator;
 use app\core\Widget;
@@ -212,6 +213,15 @@ class Table extends Widget {
 	public $controlsWidth = 150;
 
 	/**
+	 * @var string identification string of current
+	 * 	module, only for internal usage
+	 *
+	 * @internal changing that property may
+	 * 	crash widget or do nothing
+	 */
+	public $module = null;
+
+	/**
 	 * Run widget and return just rendered content
 	 * @return string - Just rendered content
 	 * @throws Exception
@@ -252,6 +262,9 @@ class Table extends Widget {
 		}
 		$this->data = $this->fetchData();
 		$this->searchCriteria = $this->getSearchCriteria();
+		if (!\Yii::$app->request->isAjax || empty($this->module)) {
+			$this->module = Module::currentModule();
+		}
 		return $this->render("@app/widgets/views/Table", [
 			"self" => $this
 		]);
@@ -327,7 +340,7 @@ class Table extends Widget {
 	 * @throws Exception
 	 */
 	public static function fetchExtraData($form, &$row) {
-		foreach ($form->getConfig() as $key => $config) {
+		foreach ($form->getActiveRecord()->getConfig() as $key => $config) {
 			if ($config["type"] != "DropDown" || !isset($config["table"])) {
 				$field = FieldCollection::getCollection()->find($config["type"], false);
 				if ($field != null && $field instanceof DropDown) {
@@ -350,7 +363,6 @@ class Table extends Widget {
 	 */
 	public function renderExtra() {
 		print Html::renderTagAttributes($options = [
-			"data-class" => ClassTrait::createID($this->className()),
 			"data-widget" => ClassTrait::createID($this->className()),
 			"data-url" => $this->createUrl()
 		]);

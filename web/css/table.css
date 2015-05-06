@@ -1,17 +1,21 @@
 
-.core-table td > a {
+.table {
+    border: 1px solid #d3d3d3;
+}
+
+.table td > a {
     margin: 7px;
 }
 
-.core-table-header td[data-key] {
+.table-header td[data-key] {
     cursor: pointer;
 }
 
-.core-table-header td[data-key]:hover {
+.table-header td[data-key]:hover {
     background-color: #f5f5f5;
 }
 
-.core-table-footer .pagination {
+.table-footer .pagination {
     margin: 0 0 -5px;
 }
 
@@ -19,4 +23,22 @@
     cursor: pointer;
     padding-left: 5px;
     padding-right: 5px;
+}
+
+.table-footer .pagination {
+    margin-top: 3px;
+}
+
+.table-search-icon {
+    cursor: pointer;
+    font-size: 25px;
+    margin-top: 8px;
+}
+
+.table-footer > tr > td > div {
+    padding: 0;
+}
+
+.table-footer > tr > td > div > * {
+
 }

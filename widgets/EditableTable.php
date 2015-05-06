@@ -22,7 +22,7 @@ class EditableTable extends Table {
 
 	public function getSerializedAttributes($attributes = null, $excepts = [], $string = null) {
 		return parent::getSerializedAttributes($attributes, ArrayHelper::merge($excepts, [
-				"controls", "controlsWidth"
+				"controls", "menuWidth"
 			]), $string);
 	}
 }

@@ -212,10 +212,15 @@ var Core = Core || {};
 		});
 	};
 
-	Core.loadWidget = function(widget, attributes, success) {
+	Core.loadWidget = function(widget, attributes, success, module) {
 		return Core.sendQuery("ext/widget", $.extend(attributes, {
-			class: widget,
-			module: doc["module"]
+			class: widget, module: module || doc["module"]
+		}), success);
+	};
+
+	Core.loadTable = function(table, attributes, success) {
+		return Core.sendQuery("ext/table", $.extend(attributes, {
+			class: table
 		}), success);
 	};
 
