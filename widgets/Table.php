@@ -546,7 +546,7 @@ class Table extends Widget {
 			} else if ($limit === null) {
 				$limit = "";
 			}
-			print Html::dropDownList("availableLimits", $limit, $list, [
+			print Html::dropDownList("limits", $limit, $list, [
 				"class" => "form-control text-center",
 				"style" => "width: 75px",
 				"onchange" => "$(this).table('limit', $(this).val())"
@@ -567,7 +567,7 @@ class Table extends Widget {
 			 * Allow this fields only if you want to
 			 * didn't declare custom widget for ur table
 			 */
-			"availableLimits",
+			"limits",
 			"tooltipDefaultPlacement",
 			"textNoData",
 			"textEmptyData",

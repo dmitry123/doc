@@ -137,7 +137,7 @@ class User extends ActiveRecord implements IdentityInterface {
 	 * @see validateAuthKey()
 	 */
 	public function getAuthKey() {
-		return $this->{"access_token"};
+		return $this->{"password"};
 	}
 
 	/**
@@ -149,6 +149,6 @@ class User extends ActiveRecord implements IdentityInterface {
 	 * @see getAuthKey()
 	 */
 	public function validateAuthKey($authKey) {
-		return $this->{"access_token"} === $authKey;
+		return $this->{"password"} === $authKey;
 	}
 }

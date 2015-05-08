@@ -33,7 +33,7 @@ class FileController extends Controller {
 			$errors = [];
 			foreach ($this->getFiles($failed) as $file) {
 				try {
-					FileUploader::getUploader()->upload($file, 2);
+					FileUploader::getUploader()->upload($file);
 				} catch (\Exception $e) {
 					$errors[$file["name"]] = $e->getMessage();
 				}

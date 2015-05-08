@@ -10,58 +10,52 @@ var Core = Core || {};
 		}, selector);
 	});
 
-	Table.prototype.update = function(parameters) {
-		var me = this, table = this.selector();
+	Table.prototype.update = function() {
+		var config, me = this, table = this.selector();
+		if (this.selector().trigger("table.update") === false) {
+			return void 0;
+		}
 		this.before();
-		parameters = $.extend({
-			currentPage: this.property("currentPage"),
-			orderBy: this.property("orderBy"),
-			pageLimit: this.property("pageLimit")
-		}, parameters || {});
-		parameters = $.extend($.parseJSON(this.selector().attr("data-attributes")), parameters);
-		Core.loadTable(table.attr("data-widget"), {
-			attributes: parameters
-		}, function(json) {
-			if (!json["status"]) {
-				return Core.createMessage({
-					message: json["message"]
-				});
-			} else if (json["message"]) {
-				Core.createMessage({
-					message: json["message"],
-					sign: "ok",
-					type: "success"
-				});
+		if (config = table.attr("data-config")) {
+			config = $.parseJSON(config);
+			for (var i in config) {
+				this.configure(i, config[i], false);
 			}
-			me.after();
-			me.selector().replaceWith(
-				$(json["component"]).data(me.getDataAttribute(), me)
-			);
-		}, "json").fail(function() {
+		}
+		config = this.property("config") || {};
+		Core.loadTable(table.attr("data-widget"), table.attr("data-provider"), config, function(response) {
+			me.after(function() {
+				me.selector().replaceWith($(response["component"]).data(me.getDataAttribute(), me));
+				me.selector().trigger("table.updated");
+			});
+		}).fail(function() {
 			me.after();
 		});
 	};
 
-	Table.prototype.before = function() {
-		var me = this;
-		setTimeout(function() {
-			me.selector().loading("render");
-		}, this.property("updateDelay"));
-		this.selector().trigger("table.update");
-	};
-
-	Table.prototype.after = function() {
-		if (this.selector().data("core-loading")) {
-			this.selector().loading("destroy");
+	Table.prototype.configure = function(attribute, properties, strong) {
+		var config = this.property("config") || {},
+			scope = config[attribute] || {};
+		if (strong === void 0) {
+			strong = true;
 		}
-		this.selector().trigger("table.updated");
-	};
-
-	Table.prototype.fetch = function(properties) {
 		for (var key in properties) {
-			this.property(key, properties[key]);
+			if (scope[key] && !strong) {
+				continue;
+			}
+			scope[key] = properties[key];
 		}
-		this.update();
+		config[attribute] = scope;
+		this.property("config", config);
+		return this;
+	};
+
+	Table.prototype.before = function(callback) {
+		this.selector().loading("render", callback);
+	};
+
+	Table.prototype.after = function(callback) {
+		this.selector().loading("destroy", callback);
 	};
 
 	Table.prototype.order = function(key) {
@@ -85,21 +79,21 @@ var Core = Core || {};
 		} else {
 			order = key;
 		}
-		this.fetch({
+		this.configure("sort", {
 			orderBy: order
-		});
+		}).update();
 	};
 
 	Table.prototype.page = function(page) {
-		this.fetch({
-			currentPage: +page
-		});
+		this.configure("pagination", {
+			page: page
+		}).update();
 	};
 
 	Table.prototype.limit = function(limit) {
-		this.fetch({
-			pageLimit: +limit
-		});
+		this.configure("pagination", {
+			pageSize: limit
+		}).update();
 	};
 
 	Core.createPlugin("table", function(selector, properties) {

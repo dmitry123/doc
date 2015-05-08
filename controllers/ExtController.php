@@ -6,6 +6,7 @@ use app\core\Controller;
 use app\core\Ext;
 use app\core\ExtFactory;
 use app\core\Module;
+use app\core\Table;
 use app\core\Widget;
 use yii\base\Exception;
 
@@ -63,15 +64,26 @@ class ExtController extends Controller {
 
 	public function actionTable() {
 		try {
-			if (!$class = \Yii::$app->request->getQueryParam("class")) {
-				throw new Exception("Widget action requires [class] parameter");
-			} else {
-				$params = \Yii::$app->request->getQueryParam("attributes");
+			$class = $this->requireQuery("provider");
+			$config = $this->getQuery("config", [
+				/* Default Table Configuration */
+			]);
+			$provider = new $class($config);
+			if (!$provider instanceof Table) {
+				throw new Exception("Table provider must be an instance of [app\\core\\Table] class");
 			}
-			$widget = $this->createWidget($class, $params);
+			$widget = $this->createWidget($this->requireQuery("widget"), [
+				"provider" => $provider,
+				"config" => $config
+			]);
 			if (!$widget instanceof Widget) {
 				throw new Exception("Loaded widget must be an instance of [app\\core\\Widget] class");
 			}
+			ob_start();
+			print $widget->run();
+			$this->leave([
+				"component" => ob_get_clean()
+			]);
 		} catch (\Exception $e) {
 			$this->exception($e);
 		}

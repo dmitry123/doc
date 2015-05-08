@@ -15,7 +15,7 @@ var DocMenu = {
 				form: $("file-upload-modal").find("form")
 			}
 		}).on("filebatchselected", function() {
-			$(this).fileinput("upload");
+			//$(this).fileinput("upload");
 		});
 		$("#file-upload-modal").on("show.bs.modal", function() {
 			$("#document-file-upload").fileinput("clearFileInput");
@@ -28,7 +28,7 @@ var DocMenu = {
 				Core.createMessage({ message: i + ": " + errors[i], delay: 7000 });
 			}
         } else {
-			$("#file-upload-modal").modal("hide");
+			//$("#file-upload-modal").modal("hide");
 		}
     }
 };
@@ -59,8 +59,8 @@ $(document).ready(function() {
 		uploadTitle: "Загрузить выбранные файлы",
 		uploadIcon: "<i class=\"glyphicon glyphicon-upload\"></i> ",
 		dropZoneTitle: "Перетащите файлы сюда &hellip;",
-		uploadAsync: false,
-		showUpload: false,
+		uploadAsync: true,
+		showUpload: true,
 		showRemove: false,
 		//showPreview: false,
 		dropZoneEnabled: true

@@ -218,10 +218,12 @@ var Core = Core || {};
 		}), success);
 	};
 
-	Core.loadTable = function(table, attributes, success) {
-		return Core.sendQuery("ext/table", $.extend(attributes, {
-			class: table
-		}), success);
+	Core.loadTable = function(widget, provider, config, success) {
+		return Core.sendQuery("ext/table", {
+			widget: widget,
+			provider: provider,
+			config: config
+		}, success);
 	};
 
 	Core.loadExt = function(module, ext, success) {

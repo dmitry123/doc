@@ -2,32 +2,12 @@
 
 namespace app\widgets;
 
-use app\core\ActiveDataProvider;
 use app\core\ObjectHelper;
+use app\core\Table;
 use app\core\Widget;
 use yii\helpers\Html;
 
 class Grid extends Widget {
-
-	/**
-	 * Default control menu display mode. To override it change
-	 * control menu provider's field [mode]
-	 *
-	 * @see ControlMenu::mode
-	 * @see createControlMenu
-	 * @see menu
-	 */
-	const CONTROL_MENU_MODE = ControlMenu::MODE_ICON;
-
-	/**
-	 * Default special class for control menu element. To override
-	 * it change control menu provider's field [special]
-	 *
-	 * @see ControlMenu::special
-	 * @see createControlMenu
-	 * @see menu
-	 */
-	const CONTROL_MENU_SPECIAL = "table-control-button";
 
 	/**
 	 * @var string - Unique identification value of current
@@ -38,152 +18,48 @@ class Grid extends Widget {
 	public $id = null;
 
 	/**
-	 * @var ActiveDataProvider class instance, which provides
+	 * @var \app\core\Table class instance, which provides
 	 * 	manipulations with ActiveRecord models
 	 */
 	public $provider = null;
 
 	/**
-	 * @var ControlMenu|array instance of ControlMenu class or array
-	 * 	with class configuration, which renders row's menu
+	 * @var array with extra table configuration, only
+	 * 	for internal usage
+	 * @internal
+	 */
+	public $config = [];
+
+	/**
+	 * Run widget to catch just rendered table's content
+	 * and return it as widget result
 	 *
-	 * @see ControlMenu
+	 * @return string with just rendered table
 	 */
-	public $menu = false;
-
-	/**
-	 * @var string control menu elements alignment
-	 */
-	public $menuAlignment = "middle";
-
-	/**
-	 * @var bool - Should table be empty after first page load, set
-	 * 	it to true if your table contains big amount of rows and
-	 * 	it's initial render will slow down all render processes, also
-	 * 	it removes table footer, cuz it should contains search parameters
-	 *
-	 * @see renderFooter
-	 */
-	public $emptyData = false;
-
-	/**
-	 * @var string default table class which wraps table's
-	 * 	header, body and footer
-	 */
-	public $tableClass = "table table-striped";
-
-	/**
-	 * @var string text message for received empty array
-	 * 	with data
-	 */
-	public $textNoData = "Нет данных";
-
-	/**
-	 * @var string message will be displayed if
-	 * 	field [emptyData] set to true
-	 *
-	 * @see emptyData
-	 */
-	public $textEmptyData = "Не выбраны критерии поиска";
-
-	/**
-	 * @var string default placement for bootstrap tooltip
-	 * 	component [left, right, top, bottom]
-	 */
-	public $tooltipDefaultPlacement = "left";
-
-	/**
-	 * @var string width of column with control elements
-	 */
-	public $menuWidth = "50px";
-
-	/**
-	 * @var string identification string of current
-	 * 	module, only for internal usage
-	 *
-	 * @internal changing that property may
-	 * 	crash widget or do nothing
-	 */
-	public $module = null;
-
-	/**
-	 * @var string with name of glyphicon class for
-	 * 	chevron order icon (DESC)
-	 */
-	public $chevronUpClass = "glyphicon glyphicon-chevron-up";
-
-	/**
-	 * @var string with name of glyphicon class for
-	 * 	chevron order icon (ASC)
-	 */
-	public $chevronDownClass = "glyphicon glyphicon-chevron-down";
-
-	/**
-	 * @var string with javascript code which provides actions on
-	 * 	row's click, you should set only function name, other method
-	 *	call binds automatically
-	 */
-	public $clickEvent = null;
-
-	/**
-	 * @var string|callable with javascript code which provides
-	 * 	actions on row's double click
-	 */
-	public $doubleClickEvent = null;
-
-	/**
-	 * Create control menu element with configuration
-	 * array, it will pull it with default values
-	 *
-	 * @param $menu array with control menu
-	 * 	configuration
-	 *
-	 * @return ControlMenu class instance
-	 */
-	public function createControlMenu(array& $menu) {
-		if (!isset($menu["mode"])) {
-			$menu["mode"] = static::CONTROL_MENU_MODE;
-		}
-		if (!isset($menu["special"])) {
-			$menu["special"] = static::CONTROL_MENU_SPECIAL;
-		}
-		return ObjectHelper::ensure($menu, ControlMenu::className());
-	}
-
 	public function run() {
 		ob_start();
 		$this->renderTable();
 		return ob_get_clean();
 	}
 
+	/**
+	 * Render basic table element, which starts
+	 * with <table> tag and ends with </table>, it
+	 * invokes sub-methods, which renders header,
+	 * body and footer elements
+	 */
 	public function renderTable() {
 		print Html::beginTag("table", [
-			"class" => $this->tableClass,
+			"class" => $this->provider->tableClass,
 			"id" => $this->id,
+			"data-provider" => $this->provider->className(),
 			"data-widget" => $this->className(),
-			"data-attributes" => json_encode($this)
+			"data-config" => json_encode($this->config)
 		]);
 		$this->renderHeader();
 		$this->renderBody();
 		$this->renderFooter();
 		print Html::endTag("table");
-	}
-
-	private function prepareHeader(&$attributes) {
-		if (!is_array($attributes)) {
-			$attributes = [
-				"label" => $attributes
-			];
-		}
-		if (isset($attributes["label"])) {
-			$label = $attributes["label"];
-		} else {
-			$label = "";
-		}
-		unset($attributes["label"]);
-		return [
-			"label" => $label
-		];
 	}
 
 	public function renderHeader() {
@@ -202,24 +78,24 @@ class Grid extends Widget {
 			$this->renderChevron($key);
 			print Html::endTag("td");
 		}
-		if (!empty($this->menu)) {
+		if ($this->provider->menu != false) {
 			print Html::tag("td", "", [
-				"width" => $this->menuWidth
+				"width" => $this->provider->menuWidth
 			]);
 		}
 		print Html::endTag("thead");
 	}
 
 	public function renderChevron($key) {
-		if (!is_string($key) || !isset($this->provider->sort->orders[$key])) {
+		if (!is_string($key) || !isset($this->provider->getSort()->orders[$key])) {
 			return ;
 		} else {
-			$direction = $this->provider->sort->orders[$key];
+			$direction = $this->provider->getSort()->orders[$key];
 		}
 		if ($direction == SORT_ASC) {
-			$class = "$this->chevronDownClass table-order table-order-asc";
+			$class = "{$this->provider->chevronDownClass} table-order table-order-asc";
 		} else {
-			$class = "$this->chevronUpClass table-order table-order-desc";
+			$class = "{$this->provider->chevronUpClass} table-order table-order-desc";
 		}
 		print "&nbsp;".Html::tag("span", "", [
 			"class" => $class
@@ -230,14 +106,14 @@ class Grid extends Widget {
 	 * Render table controls for each row
 	 */
 	public function renderMenu() {
-		if (empty($this->menu)) {
+		if ($this->provider->menu == false) {
 			return ;
 		}
 		print Html::beginTag("td", [
-			"align" => $this->menuAlignment,
-			"width" => $this->menuWidth
+			"align" => $this->provider->menuAlignment,
+			"width" => $this->provider->menuWidth
 		]);
-		$this->createControlMenu($this->menu)->run();
+
 		print Html::endTag("td");
 	}
 
@@ -250,11 +126,11 @@ class Grid extends Widget {
 				"data-id" => $model[$this->provider->primaryKey],
 				"class" => "table-row"
 			];
-			if ($this->clickEvent != null) {
-				$attributes["onclick"] = $this->clickEvent."(this, '{$model[$this->provider->primaryKey]}')";
+			if ($this->provider->clickEvent != null) {
+				$attributes["onclick"] = $this->provider->clickEvent."(this, '{$model[$this->provider->primaryKey]}')";
 			}
-			if ($this->doubleClickEvent != null) {
-				$attributes["ondblclick"] = $this->doubleClickEvent."(this, '{$model[$this->provider->primaryKey]}')";
+			if ($this->provider->doubleClickEvent != null) {
+				$attributes["ondblclick"] = $this->provider->doubleClickEvent."(this, '{$model[$this->provider->primaryKey]}')";
 			}
 			print Html::beginTag("tr", $attributes);
 			foreach ($this->provider->columns as $key => $attributes) {
@@ -277,15 +153,15 @@ class Grid extends Widget {
 		]);
 		print Html::beginTag("tr");
 		print Html::beginTag("td", [
-			"colspan" => count($this->provider->columns) + (empty($this->menu) ? 0 : 1),
+			"colspan" => count($this->provider->columns) + ($this->provider->menu != false ? 1 : 0),
 			"class" => "col-xs-12 no-padding"
 		]);
 		print Html::beginTag("div", [
-			"class" => "col-xs-10 text-left"
+			"class" => "col-xs-9 text-left"
 		]);
 		if ($this->provider->pagination != false) {
 			print LinkPager::widget([
-				"pagination" => $this->provider->pagination,
+				"pagination" => $this->provider->getPagination(),
 				"hideOnSinglePage" => false
 			]);
 		}
@@ -301,30 +177,60 @@ class Grid extends Widget {
 		]);
 		print Html::endTag("div");
 		print Html::beginTag("div", [
-			"class" => "col-xs-1 text-center"
+			"class" => "col-xs-2"
 		]);
-		if ($this->provider->availableLimits !== false) {
+		if ($this->provider->limits !== false) {
 			$list = [];
-			foreach ($this->provider->availableLimits as $value) {
+			foreach ($this->provider->limits as $value) {
 				$list[$value] = $value;
 			}
-			if ($this->provider->pagination != null) {
-				$limit = $this->provider->pagination->pageSize;
+			if ($this->provider->getPagination() != null) {
+				$limit = $this->provider->getPagination()->pageSize;
 			} else {
-				$limit = $this->provider->availableLimits[0];
+				$limit = $this->provider->limits[0];
 			}
 			if ($limit !== null && !isset($list[$limit])) {
 				$list = [ $limit => $limit ] + $list;
 			} else if ($limit === null) {
 				$limit = "";
 			}
-			print Html::dropDownList("availableLimits", $limit, $list, [
+			print Html::dropDownList("limits", $limit, $list, [
 				"class" => "form-control",
 				"onchange" => "$(this).table('limit', $(this).val())"
 			]);
 		}
 		print Html::endTag("div");
+		print Html::endTag("td");
 		print Html::endTag("tr");
 		print Html::endTag("tfoot");
+	}
+
+	/**
+	 * Prepare column's headers for usage, it fetch
+	 * useful information from attributes array and
+	 * returns it as required parameters
+	 *
+	 * @param $attributes array with column attributes
+	 * 	from provider's column array
+	 *
+	 * @see app\core\Table::columns
+	 *
+	 * @return array with required attributes
+	 */
+	private function prepareHeader(&$attributes) {
+		if (!is_array($attributes)) {
+			$attributes = [
+				"label" => $attributes
+			];
+		}
+		if (isset($attributes["label"])) {
+			$label = $attributes["label"];
+		} else {
+			$label = "";
+		}
+		unset($attributes["label"]);
+		return [
+			"label" => $label
+		];
 	}
 }

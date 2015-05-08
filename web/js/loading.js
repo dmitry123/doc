@@ -58,9 +58,10 @@ var Core = Core || {};
 		this.render();
 	};
 
-	Loading.prototype.destroy = function() {
+	Loading.prototype.destroy = function(callback) {
 		this.reset(function() {
 			Core.Component.prototype.destroy.call(this);
+			callback && callback();
 		});
 	};
 
