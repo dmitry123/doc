@@ -147,7 +147,7 @@ class Panel extends Widget {
 			} else {
 				$config = $this->body->getConfig();
 			}
-			$this->attributes = $this->body->getSerializedAttributes($config);
+			$this->attributes = $this->body->getAttributes($config);
             $this->body = $this->body->call();
         } else {
 			if ($this->upgradeable !== null) {

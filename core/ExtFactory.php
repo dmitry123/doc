@@ -24,7 +24,7 @@ class ExtFactory extends AbstractFactory {
 	 *
 	 * @throws Exception
 	 */
-	public function create($module, $id, $params = []) {
+	public function createWithModule($module, $id, $params = []) {
 		if (!($class = $this->createID($module, $id)) || !class_exists($class)) {
 			return null;
 		} else if ($module = \Yii::$app->getModule($module)) {
@@ -45,6 +45,22 @@ class ExtFactory extends AbstractFactory {
 		} else {
 			return static::$_cached[$class];
 		}
+	}
+
+	/**
+	 * Produce instance of some component via
+	 * your factory singleton instance
+	 *
+	 * @param $id int|string identification number
+	 *    of your object, which will be produced
+	 *
+	 * @param $params array with class parameters
+	 *    which copies to itself
+	 *
+	 * @return mixed instance of something
+	 */
+	public function create($id, $params = []) {
+		return $this->createWithModule(Module::currentModule(), $id, $params);
 	}
 
 	public static function createID($module, $id) {

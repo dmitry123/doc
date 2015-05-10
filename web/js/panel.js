@@ -37,7 +37,7 @@ var Core = Core || {};
 	Panel.prototype.before = function() {
 		var refresh = this.selector().loading("render").find(".panel-update-button");
 		if (refresh[0].tagName != "SPAN") {
-			refresh.children(".glyphicon").rotate(360, 500, "swing");
+			refresh.children("span").rotate(360, 500, "swing");
 		} else {
 			refresh.rotate(360, 500, "swing");
 		}

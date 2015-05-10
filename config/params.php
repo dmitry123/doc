@@ -2,6 +2,8 @@
 
 return [
 	"fileUploadDirectory" => "/uploads/files/",
+	"fileTemplateDirectory" => "/uploads/templates/",
+	"file" => "",
 	"defaultRoles" => [
 		"super" => [
 			"name" => "Супервайзер",

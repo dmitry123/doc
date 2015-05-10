@@ -8,9 +8,6 @@ interface Factory {
 	 * Produce instance of some component via
 	 * your factory singleton instance
 	 *
-	 * @param $module string name of module for
-	 *    current component
-	 *
 	 * @param $id int|string identification number
 	 *    of your object, which will be produced
 	 *
@@ -19,5 +16,5 @@ interface Factory {
 	 *
 	 * @return mixed instance of something
 	 */
-	public function create($module, $id, $params = []);
+	public function create($id, $params = []);
 }
