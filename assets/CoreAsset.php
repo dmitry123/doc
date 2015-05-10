@@ -14,6 +14,7 @@ class CoreAsset extends AssetBundle {
 		"css/glyphicons-filetypes.css",
 		"css/glyphicons-halflings.css",
 		"css/glyphicons-social.css",
+		"css/font-awesome.css"
 	];
 
 	public $js = [

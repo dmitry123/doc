@@ -4,8 +4,6 @@ namespace app\core;
 
 use app\widgets\ControlMenu;
 use app\widgets\GridFooter;
-use yii\base\InvalidParamException;
-use yii\db\ActiveQuery;
 
 abstract class Table extends ActiveDataProvider {
 
@@ -39,26 +37,6 @@ abstract class Table extends ActiveDataProvider {
 	 * @see app\widgets\ControlMenu
 	 */
 	public $menu = false;
-
-	/**
-	 * @var array|false with configuration for Pagination
-	 * object, see parent's definition for more
-	 * information
-	 *
-	 * @see Pagination
-	 */
-	public $pagination = [
-		"pageSize" => 10,
-		"page" => 0
-	];
-
-	/**
-	 * @var array|false with configuration for Search
-	 *  provider class
-	 *
-	 * @see Search
-	 */
-	public $search = false;
 
 	/**
 	 * @var string name of model's primary key which
@@ -177,138 +155,40 @@ abstract class Table extends ActiveDataProvider {
 	public $doubleClickEvent = null;
 
 	/**
-	 * Construct table configuration class for table
-	 * widget with default query object
-	 *
-	 * @param $config array with class configuration
-	 */
-	public function __construct($config = []) {
-		foreach ($config as $key => $value) {
-			if (is_array($this->$key)) {
-				$this->$key = $value + $this->$key;
-			} else {
-				$this->$key = $value;
-			}
-		}
-		parent::__construct([ "query" => $this->getQuery() ]);
-	}
-
-	/**
-	 * Override that method to return instance
-	 * of ActiveQuery class
-	 *
-	 * @return ActiveQuery
-	 */
-	public abstract function getQuery();
-
-	/**
-	 * Override that method to return custom
-	 * search query for Search provider
-	 *
-	 * @return ActiveQuery
-	 */
-	public function getSearchQuery() {
-		return $this->getQuery();
-	}
-
-	/**
-	 * Get control menu element, if it does not exist that it creates
-	 * automatically with default parameters. Use [@see menu] field to
-	 * check component existence
-	 *
-	 * @return ControlMenu class instance
+	 * @return ControlMenu instance of widget class, which
+	 * 	should renders control menu for current provider
 	 */
 	public function getMenu() {
-		if (!$this->_menu) {
-			return $this->setMenu([]);
+		if ($this->_menu == null) {
+			return $this->setMenu($this->menu);
 		} else {
 			return $this->_menu;
 		}
 	}
 
-	/**
-	 * Create control menu element with configuration
-	 * array, it will pull it with default values
-	 *
-	 * @param $menu ControlMenu|array with menu configuration or
-	 * 	instance of ControlMenu class
-	 *
-	 * @return ControlMenu class instance
-	 */
 	public function setMenu($menu) {
-		if (is_array($menu)) {
-			if (!isset($menu["mode"])) {
-				$menu["mode"] = static::CONTROL_MENU_MODE;
-			}
-			if (!isset($menu["special"])) {
-				$menu["special"] = static::CONTROL_MENU_SPECIAL;
-			}
-			$this->_menu = ObjectHelper::ensure($menu, ControlMenu::className());;
-		} else if ($menu instanceof ControlMenu) {
-			$this->_menu = $menu;
-		} else {
-			throw new InvalidParamException("Only instance of ControlMenu class, configuration array or false is allowed");
-		}
-		return $this->_menu;
+		return $this->_menu = ObjectHelper::ensure($menu, ControlMenu::className(), [
+			"special" => static::CONTROL_MENU_SPECIAL,
+			"mode" => static::CONTROL_MENU_MODE,
+		]);
 	}
 
 	/**
-	 * Get footer element for grid widget, with
-	 * displays extra control elements for grid footer
-	 *
-	 * @return ControlMenu class instance
+	 * @return GridFooter instance of widget class, which
+	 * 	should renders footer panel for current table
 	 */
 	public function getFooter() {
-		if (!$this->_footer) {
-			return $this->setFooter([]);
+		if ($this->_footer == null) {
+			return $this->setFooter($this->footer);
 		} else {
 			return $this->_footer;
 		}
 	}
 
-	/**
-	 * Create control menu element with configuration
-	 * array, it will pull it with default values
-	 *
-	 * @param $footer GridFooter|array with menu configuration or
-	 * 	instance of ControlMenu class
-	 *
-	 * @return ControlMenu class instance
-	 */
 	public function setFooter($footer) {
-		if (is_array($footer)) {
-			if (!isset($footer["provider"])) {
-				$footer["provider"] = $this;
-			}
-			$this->_footer = ObjectHelper::ensure($footer, GridFooter::className());;
-		} else if ($footer instanceof GridFooter) {
-			$this->_footer = $footer;
-		} else {
-			throw new InvalidParamException("Only instance of GridFooter class, configuration array or false is allowed");
-		}
-		return $this->_footer;
-	}
-
-	/**
-	 * Initialize table component, it ensures pagination,
-	 * sort classes and invokes parent's init method
-	 */
-	public function init() {
-		if ($this->pagination != false) {
-			$this->setPagination($this->pagination);
-		}
-		if ($this->sort != false) {
-			$this->setSort($this->sort);
-		}
-//		if ($this->orderBy != false) {
-//		}
-		if ($this->menu != false) {
-			$this->setMenu($this->menu);
-		}
-		if ($this->footer != false) {
-			$this->setFooter($this->footer);
-		}
-		parent::init();
+		return $this->_footer = ObjectHelper::ensure($footer, GridFooter::className(), [
+			"provider" => $this
+		]);
 	}
 
 	private $_footer = null;

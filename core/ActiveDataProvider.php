@@ -2,9 +2,10 @@
 
 namespace app\core;
 
-use yii\base\Exception;
+use yii\data\Pagination;
+use yii\db\ActiveQuery;
 
-class ActiveDataProvider extends \yii\data\ActiveDataProvider {
+abstract class ActiveDataProvider extends \yii\data\ActiveDataProvider {
 
 	/**
 	 * @var array|false with extra information about columns that should be
@@ -46,6 +47,65 @@ class ActiveDataProvider extends \yii\data\ActiveDataProvider {
 	public $fetcher = false;
 
 	/**
+	 * @var array|false with configuration for Pagination
+	 *  object, see parent's definition for more information
+	 *
+	 * @see Pagination
+	 */
+	public $pagination = [
+		"pageSize" => 10,
+		"page" => 0
+	];
+
+	/**
+	 * @var array|false with configuration for Sort
+	 *  object, see parent's definition for more information
+	 */
+	public $sort = [
+		"attributes" => [
+			"id"
+		],
+		"orderBy" => [
+			"id" => SORT_ASC
+		]
+	];
+
+	/**
+	 * @var array|false with configuration for Search
+	 *  provider class
+	 *
+	 * @see Search
+	 */
+	public $search = false;
+
+	/**
+	 * Initialize table component, it ensures pagination,
+	 * sort classes and invokes parent's init method
+	 */
+	public function init() {
+		parent::init();
+		$this->query = $this->getQuery();
+	}
+
+	/**
+	 * Override that method to return instance
+	 * of ActiveQuery class
+	 *
+	 * @return ActiveQuery
+	 */
+	public abstract function getQuery();
+
+	/**
+	 * Override that method to return custom
+	 * search query for Search provider
+	 *
+	 * @return ActiveQuery
+	 */
+	public function getSearchQuery() {
+		return $this->getQuery();
+	}
+
+	/**
 	 * That function fetch models from current ActiveQuery and
 	 * checks for fetcher, if last exists, then it fetches automatically
 	 * all extra information about all fields, likes dropdown
@@ -59,6 +119,36 @@ class ActiveDataProvider extends \yii\data\ActiveDataProvider {
 			$this->getFetcher()->fetch($models);
 		}
 		return $models;
+	}
+
+	/**
+	 * Get instance of sort class component for
+	 * current table provider
+	 *
+	 * @return Sort class instance
+	 */
+	public function getSort() {
+		if (!$this->_sort) {
+			return $this->setSort($this->sort);
+		} else {
+			return $this->_sort;
+		}
+	}
+
+	public function setSort($sort) {
+		return $this->_sort = ObjectHelper::ensure($sort, Sort::className());
+	}
+
+	public function getPagination() {
+		if ($this->_pagination == null) {
+			return $this->setPagination($this->pagination);
+		} else {
+			return $this->_pagination;
+		}
+	}
+
+	public function setPagination($pagination) {
+		return $this->_pagination = ObjectHelper::ensure($pagination, Pagination::className());
 	}
 
 	/**
@@ -78,5 +168,7 @@ class ActiveDataProvider extends \yii\data\ActiveDataProvider {
 		}
 	}
 
+	private $_pagination = null;
+	private $_sort = null;
 	private $_fetcher = null;
 }

@@ -6,6 +6,8 @@ use yii\base\Exception;
 
 class ObjectHelper {
 
+	const DEFAULT_CLASS = '\yii\base\Object';
+
 	/**
 	 * Create or don't create instance of class by it's
 	 * configuration via Object's constructor
@@ -14,13 +16,16 @@ class ObjectHelper {
 	 *  class configuration
 	 *
 	 * @param $class string name of class, which provider
-	 *    must implements
+	 *  must implements
+	 *
+	 * @param $defaults array with defaults parameters
+	 * 	only if provider has array type
 	 *
 	 * @return Object instance based on provider
 	 * @throws Exception
 	 */
-	public static function ensure($provider, $class = '\yii\base\Object') {
-		if ($provider == null) {
+	public static function ensure($provider, $class = self::DEFAULT_CLASS, $defaults = []) {
+		if ($provider === null || $provider === false) {
 			return $provider;
 		}
 		if (is_object($provider)) {
@@ -33,7 +38,7 @@ class ObjectHelper {
 			if (!isset($provider["class"]) || empty($provider["class"])) {
 				$provider["class"] = $class;
 			}
-			return \Yii::createObject($provider);
+			return \Yii::createObject($provider + $defaults);
 		} else {
 			throw new Exception("Unknown provider type, found \"". gettype($provider) ."\"");
 		}

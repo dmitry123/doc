@@ -4,6 +4,9 @@ var Core = Core || {};
 
 	"use strict";
 
+	const SORT_ASC  = 4;
+	const SORT_DESC = 3;
+
 	var Table = Core.createComponent(function(properties, selector) {
 		Core.Component.call(this, properties, {
 			updateDelay: 250
@@ -59,28 +62,14 @@ var Core = Core || {};
 	};
 
 	Table.prototype.order = function(key) {
-		var order, g, match;
-		if ((g = this.selector().find(".table-order")).length > 0) {
-			if (g.hasClass("table-order-desc")) {
-				order = g.parents("td").data("key") + " desc";
-			} else {
-				order = g.parents("td").data("key");
-			}
-			match = order.split(" ");
-			if (key == match[0]) {
-				if (match[1] == "desc") {
-					order = match[0];
-				} else {
-					order = match[0] + " desc";
-				}
-			} else {
-				order = key;
-			}
+		var params = {};
+		if (key.charAt(0) == '-') {
+			params[key.substr(1)] = SORT_DESC;
 		} else {
-			order = key;
+			params[key] = SORT_ASC;
 		}
 		this.configure("sort", {
-			orderBy: order
+			orderBy: params
 		}).update();
 	};
 

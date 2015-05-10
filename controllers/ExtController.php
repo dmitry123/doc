@@ -69,11 +69,19 @@ class ExtController extends Controller {
 				/* Default Table Configuration */
 			]);
 			foreach ($config as $key => &$value) {
-				foreach ([ "class", "widget" ] as $key) {
-					unset($value[$key]);
+				foreach ([ "class", "widget" ] as $k) {
+					unset($value[$k]);
 				}
 			}
-			$provider = new $class($config);
+			/** @var $class Table */
+			$provider = new $class();
+			foreach ($config as $key => &$value) {
+				if (is_array($provider->$key)) {
+					$provider->$key = $value + $provider->$key;
+				} else {
+					$provider->$key = $value;
+				}
+			}
 			if (!$provider instanceof Table) {
 				throw new Exception("Table provider must be an instance of [app\\core\\Table] class");
 			}

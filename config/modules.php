@@ -2,7 +2,7 @@
 	"matrix" => [
 		"class" => "app\\modules\\matrix\\MatrixModule",
 		"name" => "Матрица",
-		"icon" => "glyphicon glyphicon-list-alt",
+		"icon" => "fa fa-group",
 		"roles" => [
 			"director",
 			"manager",
@@ -14,7 +14,7 @@
 	"schedule" => [
 		"class" => "app\\modules\\schedule\\ScheduleModule",
 		"name" => "Расписание",
-		"icon" => "glyphicon glyphicon-calendar",
+		"icon" => "fa fa-calendar",
 		"roles" => [
 			"director",
 			"manager",
@@ -26,7 +26,7 @@
 	"doc" => [
 		"class" => "app\\modules\\doc\\DocModule",
 		"name" => "Документы",
-		"icon" => "glyphicon glyphicon-duplicate",
+		"icon" => "fa fa-file-text",
 		"roles" => [
 			"director",
 			"manager",
@@ -50,7 +50,7 @@
 	"plantation" => [
 		"class" => "app\\modules\\plantation\\PlantationModule",
 		"name" => "Внедрение",
-		"icon" => "glyphicon glyphicon-globe",
+		"icon" => "fa fa-user-secret",
 		"roles" => [
 			"admin",
 			"super",
@@ -60,7 +60,7 @@
 	"admin" => [
 		"class" => "app\\modules\\admin\\AdminModule",
 		"name" => "Управление",
-		"icon" => "glyphicon glyphicon-cog",
+		"icon" => "fa fa-wrench",
 		"roles" => [
 			"admin",
 			"super",

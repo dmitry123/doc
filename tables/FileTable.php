@@ -12,7 +12,7 @@ class FileTable extends Table {
 		"name" => "Название",
 		"file_ext_id" => "Расширение",
 		"upload_date" => "Дата загрузки",
-		"upload_time" => "Время загрузки",
+		"upload_time" => "Время загрузки"
 	];
 
 	public $menu = [
@@ -22,7 +22,7 @@ class FileTable extends Table {
 				"icon" => "glyphicon glyphicon-pencil"
 			],
 			"table-remove-icon" => [
-				"label" => "Редактировать",
+				"label" => "Удалить",
 				"icon" => "glyphicon glyphicon-remove"
 			]
 		],
@@ -36,9 +36,9 @@ class FileTable extends Table {
 
 	public $sort = [
 		"attributes" => [
-			"id", "name", "file_ext_id", "upload_date"
+			"id", "name", "file_ext_id", "upload_date", "upload_time"
 		],
-		"defaultOrder" => [
+		"orderBy" => [
 			"id" => SORT_ASC
 		]
 	];

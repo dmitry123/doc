@@ -42,7 +42,7 @@ class GridFooter extends Widget {
 		]);
 		print Html::beginTag("tr");
 		print Html::beginTag("td", [
-			"colspan" => count($this->provider->columns) + ($this->provider->menu != false ? 1 : 0),
+			"colspan" => count($this->provider->columns) + ($this->provider->getMenu() != false ? 1 : 0),
 			"class" => "col-xs-12 no-padding"
 		]);
 		print Html::beginTag("div", [

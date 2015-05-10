@@ -92,6 +92,12 @@ class ControlMenu extends Widget {
 	public $special = "control-menu-button";
 
 	/**
+	 * @var string with name of class for default menu icon, works
+	 * 	only for [MODE_MENU] renders mode
+	 */
+	public $menuIcon = "glyphicon glyphicon-list";
+
+	/**
 	 * Run widget to render control elements
 	 */
 	public function run() {
@@ -198,7 +204,7 @@ class ControlMenu extends Widget {
 			"class" => "dropdown"
 		]);
 		print Html::tag("div", Html::tag("span", "", [
-			"class" => "glyphicon glyphicon-list"
+			"class" => $this->menuIcon
 		]), [
 			"href" => "javascript:void(0)",
 			"class" => "dropdown-toggle",

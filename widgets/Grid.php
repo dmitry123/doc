@@ -60,7 +60,7 @@ class Grid extends Widget {
 			$this->renderHeader();
 		}
 		$this->renderBody();
-		if ($this->provider->footer !== false) {
+		if ($this->provider->getFooter() !== false) {
 			print $this->provider->getFooter()->run();
 		}
 		print Html::endTag("table");
@@ -72,10 +72,20 @@ class Grid extends Widget {
 		]);
 		foreach ($this->provider->columns as $key => $attributes) {
 			$prepared = $this->prepareHeader($attributes);
-			print Html::beginTag("td", [
-					"data-key" => $key,
-					"onclick" => "$(this).table('order', '$key')",
-				] + $attributes + [
+			$options = [
+				"data-key" => $key
+			];
+			if ($this->provider->sort !== false) {
+				if (isset($this->provider->getSort()->orderBy[$key]) && ($d = $this->provider->getSort()->orderBy[$key]) == SORT_ASC) {
+					$options["onclick"] = "$(this).table('order', '-$key')";
+				} else {
+					$options["onclick"] = "$(this).table('order', '$key')";
+				}
+				if (!in_array($key, array_keys($this->provider->getSort()->attributes))) {
+					unset($options["onclick"]);
+				}
+			}
+			print Html::beginTag("td", $options + $attributes + [
 					"align" => "left"
 				]);
 			print Html::tag("b", $prepared["label"]);
@@ -91,10 +101,10 @@ class Grid extends Widget {
 	}
 
 	public function renderChevron($key) {
-		if (!is_string($key) || !isset($this->provider->getSort()->orders[$key])) {
+		if (!is_string($key) || !isset($this->provider->getSort()->orderBy[$key])) {
 			return ;
 		} else {
-			$direction = $this->provider->getSort()->orders[$key];
+			$direction = $this->provider->getSort()->orderBy[$key];
 		}
 		if ($direction == SORT_ASC) {
 			$class = "{$this->provider->chevronDownClass} table-order table-order-asc";
@@ -117,7 +127,10 @@ class Grid extends Widget {
 			"align" => $this->provider->menuAlignment,
 			"width" => $this->provider->menuWidth
 		]);
-		print $this->provider->getMenu()->run();
+		/** @var $menu ControlMenu */
+		if ($this->provider->getMenu() !== false) {
+			print $this->provider->getMenu()->run();
+		}
 		print Html::endTag("td");
 	}
 
