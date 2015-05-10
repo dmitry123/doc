@@ -2,24 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c7867d1-dabe-479e-927f-a32ef258089e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/doc/widgets/Editor_AboutTemplate_Editor.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/doc/widgets/views/Editor_AboutTemplate_Editor.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/doc/widgets/Editor_TemplateElement_List.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/doc/core/ElementManager.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/doc/core/TemplateFactory.php" />
-      <change type="DELETED" beforePath="D:\hosts\doc\modules\doc\widgets\Editor_TemplateElement_Viewer.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/AbstractFactory.php" afterPath="$PROJECT_DIR$/core/AbstractFactory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/ExtFactory.php" afterPath="$PROJECT_DIR$/core/ExtFactory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/Factory.php" afterPath="$PROJECT_DIR$/core/Factory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widgets/Panel.php" afterPath="$PROJECT_DIR$/widgets/Panel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/Widget.php" afterPath="$PROJECT_DIR$/core/Widget.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/logs/app.log" afterPath="$PROJECT_DIR$/runtime/logs/app.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/doc.css" afterPath="$PROJECT_DIR$/web/css/doc.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/panel.js" afterPath="$PROJECT_DIR$/web/js/panel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/params.php" afterPath="$PROJECT_DIR$/config/params.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/views/editor/view.php" afterPath="$PROJECT_DIR$/modules/doc/views/editor/view.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/font-awesome.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/font-awesome.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\hosts\doc\modules\doc\widgets\views\Editor_TemplateElement_Viewer.php" afterPath="$PROJECT_DIR$/modules/doc/widgets/views/Editor_TemplateElement_List.php" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -113,8 +98,8 @@
       <file leaf-file-name="doc.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/css/doc.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4020979" vertical-offset="0" max-vertical-offset="858">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.5897436" vertical-offset="0" max-vertical-offset="858">
+              <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -148,16 +133,6 @@
               <folding>
                 <element signature="e#43#68#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TypeManager.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/TypeManager.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="18.6875" vertical-offset="690" max-vertical-offset="2070">
-              <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -309,6 +284,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="doc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -577,12 +584,6 @@
       <created>1426978033684</created>
       <option name="number" value="Default" />
       <updated>1426978033684</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Block interface fixes">
-      <created>1427072697828</created>
-      <option name="number" value="00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1427072697828</updated>
     </task>
     <task id="LOCAL-00006" summary="Navigation bar menu + Module menu + Asset fixes">
       <created>1427082800847</created>
@@ -872,7 +873,13 @@
       <option name="project" value="LOCAL" />
       <updated>1431295138869</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Tiny fixes">
+      <created>1431299222078</created>
+      <option name="number" value="00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1431299222078</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -955,14 +962,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/modules/doc/controllers/TemplateController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="858">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/doc/controllers/FileController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.1392251" vertical-offset="761" max-vertical-offset="2139">
@@ -1373,10 +1372,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/bower/bootstrap/dist/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33274338" vertical-offset="115065" max-vertical-offset="158516">
+          <caret line="5011" column="0" selection-start-line="5011" selection-start-column="0" selection-end-line="5011" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/css/doc.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4020979" vertical-offset="0" max-vertical-offset="858">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.5897436" vertical-offset="0" max-vertical-offset="858">
+          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
           <folding />
         </state>
       </provider>
