@@ -6,7 +6,6 @@ use app\core\ClassTrait;
 use app\core\Module;
 use app\core\Widget;
 use yii\base\Object;
-use yii\web\ConflictHttpException;
 
 class MasterMenu extends Widget {
 

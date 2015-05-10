@@ -79,8 +79,8 @@ abstract class Table extends ActiveDataProvider {
 	 */
 	public $footer = [
 		"withPagination" => true,
-		"withSearch" => true,
-		"withLimit" => true
+		"withLimit" => true,
+		"withSearch" => false,
 	];
 
 	/**

@@ -5,6 +5,7 @@ namespace app\widgets;
 use app\core\ObjectHelper;
 use app\core\Table;
 use app\core\Widget;
+use yii\base\Exception;
 use yii\helpers\Html;
 
 class Grid extends Widget {
@@ -35,11 +36,31 @@ class Grid extends Widget {
 	 * and return it as widget result
 	 *
 	 * @return string with just rendered table
+	 * @throws Exception
 	 */
 	public function run() {
+		if (is_string($this->provider)) {
+			$this->provider = new $this->provider();
+			if (!$this->provider instanceof Table) {
+				throw new Exception("Table provider must be an instance of [app\\core\\Table] class");
+			}
+		}
 		ob_start();
 		$this->renderTable();
 		return ob_get_clean();
+	}
+
+	/**
+	 * Get extra configuration for table element, it stores
+	 * information about widget and it's provider
+	 *
+	 * @return array with table configuration
+	 */
+	public function getExtraConfig() {
+		return [
+			"data-provider" => $this->provider->className(),
+			"data-widget" => $this->className(),
+		];
 	}
 
 	/**
@@ -49,11 +70,9 @@ class Grid extends Widget {
 	 * body and footer elements
 	 */
 	public function renderTable() {
-		print Html::beginTag("table", [
+		print Html::beginTag("table", $this->getExtraConfig() + [
 			"class" => $this->provider->tableClass,
-			"id" => $this->id,
-			"data-provider" => $this->provider->className(),
-			"data-widget" => $this->className(),
+			"id" => $this->getId(),
 			"data-config" => json_encode($this->config)
 		]);
 		if ($this->provider->hasHeader) {

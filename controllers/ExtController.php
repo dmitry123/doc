@@ -104,15 +104,15 @@ class ExtController extends Controller {
 
 	public function actionPanel() {
 		try {
-			if (!$class = \Yii::$app->request->getQueryParam("class")) {
-				throw new Exception("Widget action requires [class] parameter");
-			} else {
-				$params = \Yii::$app->request->getQueryParam("attributes");
-			}
-			$widget = $this->createWidget($class, $params);
+			$widget = $this->createWidget($this->requireQuery("widget"), $this->getQuery("config", []));
 			if (!$widget instanceof Widget) {
 				throw new Exception("Loaded widget must be an instance of [app\\core\\Widget] class");
 			}
+			ob_start();
+			print $widget->run();
+			$this->leave([
+				"component" => ob_get_clean()
+			]);
 		} catch (\Exception $e) {
 			$this->exception($e);
 		}

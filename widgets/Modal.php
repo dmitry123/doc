@@ -40,7 +40,7 @@ class Modal extends \yii\bootstrap\Modal {
 	/**
 	 * @var string - Body wrapper classes
 	 */
-	public $wrapper = "col-xs-11 col-xs-offset-1";
+	public $wrapper = "col-xs-12 col-xs-offset-0";
 
 	/**
 	 * Initializes the widget. This method will register the bootstrap asset

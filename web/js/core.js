@@ -218,6 +218,12 @@ var Core = Core || {};
 		}), success);
 	};
 
+	Core.loadPanel = function(widget, attributes, success) {
+		return Core.sendQuery("ext/panel", $.extend(attributes, {
+			widget: widget
+		}), success);
+	};
+
 	Core.loadTable = function(widget, provider, config, success) {
 		return Core.sendQuery("ext/table", {
 			widget: widget,
@@ -363,26 +369,29 @@ var Core = Core || {};
 		$(document).bind("ajaxSuccess", func);
 	};
 
-    /**
-     * Generate url based on Yii's base url
-     * @param url {String} - Relative url
-     * @returns {String} - Absolute url
-     */
-    window.url = function(url) {
+	/**
+	 * Generate url based on Yii's base url
+	 *
+	 * @param url {String} relative url
+	 * @param [params] object with url parameters
+	 *
+	 * @returns {String} absolute url
+	 */
+    window.url = function(url, params) {
 		url = url || "";
-        if (window["doc"]["url"] == "/") {
-            if (url.charAt(0) !== "/") {
-                return window["doc"]["url"] + url;
-            } else {
-                return url;
-            }
-        } else {
-            if (url.charAt(0) != "/") {
-                return window["doc"]["url"] + "/" + url;
-            } else {
-                return url;
-            }
+        if (window["doc"]["url"] == "/" && url.charAt(0) !== "/") {
+			url = window["doc"]["url"] + url;
+        } else if (url.charAt(0) != "/") {
+			url = window["doc"]["url"] + "/" + url;
         }
+		if (!params) {
+			return url;
+		}
+		url += "?";
+		for (var i in params) {
+			url += i + "=" + params[i] + "&";
+		}
+		return url.replace(/&$/, "");
     };
 
 	window.serialize = function(obj, prefix) {
@@ -396,32 +405,6 @@ var Core = Core || {};
 			}
 		}
 		return str.join("&");
-	};
-
-	$.fn.update = function() {
-		return this.each(function() {
-			var widget, params, me = this;
-			if (!(widget = $(this).attr("data-widget")) || !(params = $(this).attr("data-attributes"))) {
-				return void 0;
-			} else if (!window["globalVariables"]["getWidget"]) {
-				throw new Error("Layout hasn't declared [globalVariables::getWidget] field via [Widget::createUrl] method");
-			}
-			$(this).loading();
-			params = $.parseJSON(params);
-			$.get(window["globalVariables"]["getWidget"], $.extend(params, {
-				class: widget
-			}), function(json) {
-				if (json["status"]) {
-					$(me).fadeOut("fast", function() {
-						$(this).empty().append(json["component"]).hide().fadeIn("fast");
-					});
-				} else {
-					$(json["message"]).message();
-				}
-			}, "json").always(function() {
-				$(me).loading("reset");
-			});
-		});
 	};
 
 	$.fn.rotate = function(angle, duration, easing, deg, complete) {

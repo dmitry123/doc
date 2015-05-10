@@ -17,20 +17,30 @@ class FileTable extends Table {
 
 	public $menu = [
 		"controls" => [
-			"table-edit-icon" => [
+			"table-template-icon" => [
+				"label" => "Создать шаблон",
+				"icon" => "fa fa-copy"
+			],
+			/* "table-edit-icon" => [
 				"label" => "Редактировать",
 				"icon" => "glyphicon glyphicon-pencil"
 			],
 			"table-remove-icon" => [
 				"label" => "Удалить",
 				"icon" => "glyphicon glyphicon-remove"
-			]
+			] */
 		],
 		"mode" => \app\widgets\ControlMenu::MODE_ICON
 	];
 
+	public $footer = [
+		"withPagination" => true,
+		"withLimit" => true,
+		"withSearch" => false,
+	];
+
 	public $pagination = [
-		"pageSize" => 5,
+		"pageSize" => 100,
 		"page" => 0
 	];
 
@@ -39,7 +49,8 @@ class FileTable extends Table {
 			"id", "name", "file_ext_id", "upload_date", "upload_time"
 		],
 		"orderBy" => [
-			"id" => SORT_ASC
+			"upload_date" => SORT_DESC,
+			"upload_time" => SORT_DESC
 		]
 	];
 
@@ -47,6 +58,10 @@ class FileTable extends Table {
 		"attributes" => [
 			"name", "upload_date", "upload_time"
 		]
+	];
+
+	public $limits = [
+		100, 200, 300
 	];
 
 	public $fetcher = 'app\models\doc\File';

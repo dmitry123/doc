@@ -8,6 +8,11 @@ body {
     padding: 0;
 }
 
+.clear {
+    padding: 0;
+    margin: 0;
+}
+
 #page-content {
     padding: 3px 3px;
 }

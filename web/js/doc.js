@@ -1,5 +1,5 @@
 
-var DocMenu = {
+var Doc_Navigation_Menu = {
 	ready: function() {
         var me = this;
 		$("#menu-doc-upload").click(function() {
@@ -31,6 +31,16 @@ var DocMenu = {
 			//$("#file-upload-modal").modal("hide");
 		}
     }
+};
+
+var Doc_File_Table = {
+	ready: function() {
+		$("body").on("click", ".table-template-icon", function() {
+			window.location.href = url("doc/editor/view", {
+				file: $(this).parents("tr").attr("data-id")
+			});
+		});
+	}
 };
 
 $(document).ready(function() {
@@ -66,5 +76,6 @@ $(document).ready(function() {
 		dropZoneEnabled: true
 	});
 
-	DocMenu.ready();
+	Doc_Navigation_Menu.ready();
+	Doc_File_Table.ready();
 });

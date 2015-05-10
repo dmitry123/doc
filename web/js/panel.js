@@ -61,16 +61,12 @@ var Core = Core || {};
 		if (params.length !== void 0 && !params.length) {
 			params = {};
 		}
-		Core.loadWidget(this.selector().attr("data-widget"), {
-			attributes: params
-		}, function(json) {
-			if (json["status"]) {
-				me.selector().find(".panel-content").fadeOut("fast", function() {
-					$(this).empty().append(json["component"]).hide().fadeIn("fast");
-				});
-			} else {
-				$(json["message"]).message();
-			}
+		Core.loadPanel(this.selector().attr("data-widget"), {
+			config: params
+		}, function(response) {
+			me.selector().find(".panel-content").fadeOut("fast", function() {
+				$(this).empty().append(response["component"]).hide().fadeIn("fast");
+			});
 		}).always(function() {
 			me.after();
 		});
