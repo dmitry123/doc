@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c7867d1-dabe-479e-927f-a32ef258089e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/font-awesome.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/font-awesome.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/site/error.php" afterPath="$PROJECT_DIR$/views/site/error.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -95,11 +94,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="doc.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="doc.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/css/doc.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5897436" vertical-offset="0" max-vertical-offset="858">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="713">
               <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="site.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/css/site.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="3766" max-vertical-offset="4646">
+              <caret line="180" column="0" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="error.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/site/error.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.44552058" vertical-offset="0" max-vertical-offset="897">
+              <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="modules.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/site/modules.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.46875" vertical-offset="0" max-vertical-offset="1035">
+              <caret line="12" column="17" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/site/login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="690">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -137,38 +176,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ElementManager.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/doc/core/ElementManager.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.75" vertical-offset="0" max-vertical-offset="345">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TemplateFactory.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/doc/core/TemplateFactory.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.40625" vertical-offset="0" max-vertical-offset="1104">
-              <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
-              <folding>
-                <element signature="e#40#69#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Module.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/Module.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.625" vertical-offset="1324" max-vertical-offset="3496">
-              <caret line="65" column="27" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -181,7 +188,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/vendor/yiisoft/yii2/data/ActiveDataProvider.php" />
         <option value="$PROJECT_DIR$/core/Sort.php" />
         <option value="$PROJECT_DIR$/assets/CoreAsset.php" />
         <option value="$PROJECT_DIR$/modules/plantation/views/master/view.php" />
@@ -232,6 +238,7 @@
         <option value="$PROJECT_DIR$/modules/doc/views/editor/view.php" />
         <option value="$PROJECT_DIR$/modules/doc/widgets/views/Editor_TemplateElement_List.php" />
         <option value="$PROJECT_DIR$/web/css/doc.css" />
+        <option value="$PROJECT_DIR$/views/site/error.php" />
       </list>
     </option>
   </component>
@@ -297,7 +304,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -311,11 +322,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -505,7 +512,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="doc.css&#9;FILE&#9;file://D:/hosts/doc/web/css/doc.css&#10;panel.js&#9;FILE&#9;file://D:/hosts/doc/web/js/panel.js&#10;doc.js&#9;FILE&#9;file://D:/hosts/doc/web/js/doc.js&#10;table.js&#9;FILE&#9;file://D:/hosts/doc/web/js/table.js&#10;site.cs&#9;FILE&#9;file://D:/hosts/doc/web/css/site.css&#10;Panel&#9;null&#9;null&#10;Table&#9;FILE&#9;file://D:/hosts/doc/core/Table.php&#10;ControlMenu&#9;null&#9;null&#10;module-menu&#9;FILE&#9;file://D:/hosts/doc/web/css/module-menu.css&#10;modules.php&#9;FILE&#9;file://D:/hosts/doc/views/site/modules.php&#10;ActiveQuer&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/db/ActiveQuery.php&#10;GridFoo&#9;FILE&#9;file://D:/hosts/doc/widgets/GridFooter.php&#10;Query&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/db/Query.php&#10;Sort&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/data/Sort.php&#10;table.css&#9;FILE&#9;file://D:/hosts/doc/web/css/table.css&#10;FileUp&#9;FILE&#9;file://D:/hosts/doc/modules/doc/core/FileUploader.php&#10;site.css&#9;FILE&#9;file://D:/hosts/doc/web/css/site.css&#10;loading.js&#9;FILE&#9;file://D:/hosts/doc/web/js/loading.js&#10;LinkPager&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/widgets/LinkPager.php&#10;Pagi&#9;null&#9;null&#10;Paginat&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/data/Pagination.php&#10;gridview&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/grid/GridView.php&#10;ExtContr&#9;null&#9;null&#10;sit&#9;FILE&#9;file://D:/hosts/doc/web/css/site.css&#10;Pagina&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/data/Pagination.php&#10;UrlManager&#9;null&#9;null&#10;Paginatio&#9;null&#9;null&#10;ActiveData&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/data/ActiveDataProvider.php&#10;DataProvider&#9;null&#9;null&#10;Widget&#9;null&#9;null&#10;User&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/web/User.php&#10;UserContr&#9;null&#9;null&#10;block.&#9;FILE&#9;file://D:/hosts/doc/views/layouts/block.php&#10;.module-menu-block&#9;null&#9;null&#10;main&#9;FILE&#9;file://D:/hosts/doc/views/layouts/main.php&#10;Panel.&#9;FILE&#9;file://D:/hosts/doc/widgets/Panel.php&#10;core.js&#9;FILE&#9;file://D:/hosts/doc/web/js/core.js&#10;main.php&#9;FILE&#9;file://D:/hosts/doc/views/layouts/main.php&#10;Module&#9;null&#9;null&#10;Controller&#9;FILE&#9;file://D:/hosts/doc/core/Controller.php&#10;form.js&#9;FILE&#9;file://D:/hosts/doc/web/js/form.js&#10;block.js&#9;FILE&#9;file://D:/hosts/doc/web/js/block.js&#10;block.css&#9;FILE&#9;file://D:/hosts/doc/web/css/block.css&#10;UniqueValida&#9;null&#9;null&#10;CompareVa&#9;null&#9;null&#10;UserControl&#9;null&#9;null&#10;yii\bootstrap\ActiveField&#9;null&#9;null&#10;FormModel&#9;null&#9;null&#10;StringVa&#9;null&#9;null&#10;site&#9;FILE&#9;file://D:/hosts/doc/web/css/site.css" />
+    <property name="SearchEverywhereHistoryKey" value="site.css&#9;FILE&#9;file://D:/hosts/doc/web/css/site.css&#10;doc.css&#9;FILE&#9;file://D:/hosts/doc/web/css/doc.css&#10;panel.js&#9;FILE&#9;file://D:/hosts/doc/web/js/panel.js&#10;doc.js&#9;FILE&#9;file://D:/hosts/doc/web/js/doc.js&#10;table.js&#9;FILE&#9;file://D:/hosts/doc/web/js/table.js&#10;site.cs&#9;FILE&#9;file://D:/hosts/doc/web/css/site.css&#10;Panel&#9;null&#9;null&#10;Table&#9;FILE&#9;file://D:/hosts/doc/core/Table.php&#10;ControlMenu&#9;null&#9;null&#10;module-menu&#9;FILE&#9;file://D:/hosts/doc/web/css/module-menu.css&#10;modules.php&#9;FILE&#9;file://D:/hosts/doc/views/site/modules.php&#10;ActiveQuer&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/db/ActiveQuery.php&#10;GridFoo&#9;FILE&#9;file://D:/hosts/doc/widgets/GridFooter.php&#10;Query&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/db/Query.php&#10;Sort&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/data/Sort.php&#10;table.css&#9;FILE&#9;file://D:/hosts/doc/web/css/table.css&#10;FileUp&#9;FILE&#9;file://D:/hosts/doc/modules/doc/core/FileUploader.php&#10;loading.js&#9;FILE&#9;file://D:/hosts/doc/web/js/loading.js&#10;LinkPager&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/widgets/LinkPager.php&#10;Pagi&#9;null&#9;null&#10;Paginat&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/data/Pagination.php&#10;gridview&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/grid/GridView.php&#10;ExtContr&#9;null&#9;null&#10;sit&#9;FILE&#9;file://D:/hosts/doc/web/css/site.css&#10;Pagina&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/data/Pagination.php&#10;UrlManager&#9;null&#9;null&#10;Paginatio&#9;null&#9;null&#10;ActiveData&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/data/ActiveDataProvider.php&#10;DataProvider&#9;null&#9;null&#10;Widget&#9;null&#9;null&#10;User&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/web/User.php&#10;UserContr&#9;null&#9;null&#10;block.&#9;FILE&#9;file://D:/hosts/doc/views/layouts/block.php&#10;.module-menu-block&#9;null&#9;null&#10;main&#9;FILE&#9;file://D:/hosts/doc/views/layouts/main.php&#10;Panel.&#9;FILE&#9;file://D:/hosts/doc/widgets/Panel.php&#10;core.js&#9;FILE&#9;file://D:/hosts/doc/web/js/core.js&#10;main.php&#9;FILE&#9;file://D:/hosts/doc/views/layouts/main.php&#10;Module&#9;null&#9;null&#10;Controller&#9;FILE&#9;file://D:/hosts/doc/core/Controller.php&#10;form.js&#9;FILE&#9;file://D:/hosts/doc/web/js/form.js&#10;block.js&#9;FILE&#9;file://D:/hosts/doc/web/js/block.js&#10;block.css&#9;FILE&#9;file://D:/hosts/doc/web/css/block.css&#10;UniqueValida&#9;null&#9;null&#10;CompareVa&#9;null&#9;null&#10;UserControl&#9;null&#9;null&#10;yii\bootstrap\ActiveField&#9;null&#9;null&#10;FormModel&#9;null&#9;null&#10;StringVa&#9;null&#9;null&#10;site&#9;FILE&#9;file://D:/hosts/doc/web/css/site.css" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="FullScreen" value="false" />
     <property name="recentsLimit" value="5" />
@@ -584,12 +591,6 @@
       <created>1426978033684</created>
       <option name="number" value="Default" />
       <updated>1426978033684</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Navigation bar menu + Module menu + Asset fixes">
-      <created>1427082800847</created>
-      <option name="number" value="00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1427082800847</updated>
     </task>
     <task id="LOCAL-00007" summary="Runtime log + Idea config">
       <created>1427086862747</created>
@@ -879,7 +880,13 @@
       <option name="project" value="LOCAL" />
       <updated>1431299222078</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Awesome fonts added">
+      <created>1431299620987</created>
+      <option name="number" value="00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1431299620987</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -928,7 +935,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Access filter fix" />
     <MESSAGE value="Plantation module + Extensions + Tiny fixes" />
     <MESSAGE value="Fixes" />
     <MESSAGE value="Global refactor + New database architecture" />
@@ -953,7 +959,8 @@
     <MESSAGE value="Finished table sort and pagination" />
     <MESSAGE value="Tiny refactor + Template editor started" />
     <MESSAGE value="Tiny fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tiny fixes" />
+    <MESSAGE value="Awesome fonts added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Awesome fonts added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -962,30 +969,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/modules/doc/controllers/FileController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1392251" vertical-offset="761" max-vertical-offset="2139">
-          <caret line="75" column="18" selection-start-line="75" selection-start-column="18" selection-end-line="75" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/doc/core/DocLoader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10895884" vertical-offset="255" max-vertical-offset="1564">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/doc/core/ZipLoader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.86561745" vertical-offset="1037" max-vertical-offset="1863">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/doc/core/LoaderFactory.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4733656" vertical-offset="0" max-vertical-offset="1564">
@@ -1006,14 +989,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="858">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/site.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3216783" vertical-offset="0" max-vertical-offset="4646">
-          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -1382,8 +1357,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/css/doc.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5897436" vertical-offset="0" max-vertical-offset="858">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="713">
           <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/site.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3766" max-vertical-offset="4646">
+          <caret line="180" column="0" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/site/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="845">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/site/modules.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.46875" vertical-offset="0" max-vertical-offset="1035">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/site/error.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44552058" vertical-offset="0" max-vertical-offset="897">
+          <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
           <folding />
         </state>
       </provider>

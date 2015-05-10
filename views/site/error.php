@@ -12,7 +12,8 @@ $this->title = $name;
 <?php \app\widgets\Logo::begin([
 	"buttons" => [
 		"error-main-button" => [
-			"text" => "Главная",
+			"label" => "Главная",
+			"icon" => "glyphicon glyphicon-home",
 			"class" => "btn btn-primary btn-block",
 			"type" => "button"
 		]
