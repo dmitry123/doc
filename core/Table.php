@@ -3,6 +3,7 @@
 namespace app\core;
 
 use app\widgets\ControlMenu;
+use app\widgets\GridFooter;
 use yii\base\InvalidParamException;
 use yii\db\ActiveQuery;
 
@@ -52,6 +53,14 @@ abstract class Table extends ActiveDataProvider {
 	];
 
 	/**
+	 * @var array|false with configuration for Search
+	 *  provider class
+	 *
+	 * @see Search
+	 */
+	public $search = false;
+
+	/**
 	 * @var string name of model's primary key which
 	 * 	copies to every <tr> element
 	 */
@@ -71,7 +80,7 @@ abstract class Table extends ActiveDataProvider {
 	public $menuAlignment = "middle";
 
 	/**
-	 * @var bool - Should table be empty after first page load, set
+	 * @var bool should table be empty after first page load, set
 	 * 	it to true if your table contains big amount of rows and
 	 * 	it's initial render will slow down all render processes, also
 	 * 	it removes table footer, cuz it should contains search parameters
@@ -79,6 +88,28 @@ abstract class Table extends ActiveDataProvider {
 	 * @see renderFooter
 	 */
 	public $emptyData = false;
+
+	/**
+	 * @var bool should widget renders table header with
+	 * 	information columns names and order directions
+	 */
+	public $hasHeader = true;
+
+	/**
+	 * @var array|false with configuration for widget, that
+	 * 	renders
+	 */
+	public $footer = [
+		"withPagination" => true,
+		"withSearch" => true,
+		"withLimit" => true
+	];
+
+	/**
+	 * @var bool should widget renders table footer with
+	 * 	extra table control elements and count information
+	 */
+	public $hasFooter = true;
 
 	/**
 	 * @var string default table class which wraps table's
@@ -171,6 +202,16 @@ abstract class Table extends ActiveDataProvider {
 	public abstract function getQuery();
 
 	/**
+	 * Override that method to return custom
+	 * search query for Search provider
+	 *
+	 * @return ActiveQuery
+	 */
+	public function getSearchQuery() {
+		return $this->getQuery();
+	}
+
+	/**
 	 * Get control menu element, if it does not exist that it creates
 	 * automatically with default parameters. Use [@see menu] field to
 	 * check component existence
@@ -212,6 +253,43 @@ abstract class Table extends ActiveDataProvider {
 	}
 
 	/**
+	 * Get footer element for grid widget, with
+	 * displays extra control elements for grid footer
+	 *
+	 * @return ControlMenu class instance
+	 */
+	public function getFooter() {
+		if (!$this->_footer) {
+			return $this->setFooter([]);
+		} else {
+			return $this->_footer;
+		}
+	}
+
+	/**
+	 * Create control menu element with configuration
+	 * array, it will pull it with default values
+	 *
+	 * @param $footer GridFooter|array with menu configuration or
+	 * 	instance of ControlMenu class
+	 *
+	 * @return ControlMenu class instance
+	 */
+	public function setFooter($footer) {
+		if (is_array($footer)) {
+			if (!isset($footer["provider"])) {
+				$footer["provider"] = $this;
+			}
+			$this->_footer = ObjectHelper::ensure($footer, GridFooter::className());;
+		} else if ($footer instanceof GridFooter) {
+			$this->_footer = $footer;
+		} else {
+			throw new InvalidParamException("Only instance of GridFooter class, configuration array or false is allowed");
+		}
+		return $this->_footer;
+	}
+
+	/**
 	 * Initialize table component, it ensures pagination,
 	 * sort classes and invokes parent's init method
 	 */
@@ -219,9 +297,6 @@ abstract class Table extends ActiveDataProvider {
 		if ($this->pagination != false) {
 			$this->setPagination($this->pagination);
 		}
-//		if ($this->currentPage != false) {
-//			$this->getPagination()->setPage($this->currentPage);
-//		}
 		if ($this->sort != false) {
 			$this->setSort($this->sort);
 		}
@@ -230,8 +305,12 @@ abstract class Table extends ActiveDataProvider {
 		if ($this->menu != false) {
 			$this->setMenu($this->menu);
 		}
+		if ($this->footer != false) {
+			$this->setFooter($this->footer);
+		}
 		parent::init();
 	}
 
+	private $_footer = null;
 	private $_menu = null;
 }

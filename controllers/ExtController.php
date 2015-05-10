@@ -68,6 +68,11 @@ class ExtController extends Controller {
 			$config = $this->getQuery("config", [
 				/* Default Table Configuration */
 			]);
+			foreach ($config as $key => &$value) {
+				foreach ([ "class", "widget" ] as $key) {
+					unset($value[$key]);
+				}
+			}
 			$provider = new $class($config);
 			if (!$provider instanceof Table) {
 				throw new Exception("Table provider must be an instance of [app\\core\\Table] class");

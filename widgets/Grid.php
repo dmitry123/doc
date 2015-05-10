@@ -56,9 +56,13 @@ class Grid extends Widget {
 			"data-widget" => $this->className(),
 			"data-config" => json_encode($this->config)
 		]);
-		$this->renderHeader();
+		if ($this->provider->hasHeader) {
+			$this->renderHeader();
+		}
 		$this->renderBody();
-		$this->renderFooter();
+		if ($this->provider->footer !== false) {
+			print $this->provider->getFooter()->run();
+		}
 		print Html::endTag("table");
 	}
 
@@ -113,7 +117,7 @@ class Grid extends Widget {
 			"align" => $this->provider->menuAlignment,
 			"width" => $this->provider->menuWidth
 		]);
-
+		print $this->provider->getMenu()->run();
 		print Html::endTag("td");
 	}
 
@@ -144,65 +148,14 @@ class Grid extends Widget {
 			$this->renderMenu();
 			print Html::endTag("tr");
 		}
+		if (empty($this->provider->models)) {
+			print Html::tag("tr", Html::tag("td", Html::tag("h5", $this->provider->textNoData, [
+				"class" => "text-center"
+			]), [
+				"colspan" => count($this->provider->columns) + ($this->provider->menu != false ? 1 : 0),
+			]));
+		}
 		print Html::endTag("tbody");
-	}
-
-	public function renderFooter() {
-		print Html::beginTag("tfoot", [
-			"class" => "table-footer"
-		]);
-		print Html::beginTag("tr");
-		print Html::beginTag("td", [
-			"colspan" => count($this->provider->columns) + ($this->provider->menu != false ? 1 : 0),
-			"class" => "col-xs-12 no-padding"
-		]);
-		print Html::beginTag("div", [
-			"class" => "col-xs-9 text-left"
-		]);
-		if ($this->provider->pagination != false) {
-			print LinkPager::widget([
-				"pagination" => $this->provider->getPagination(),
-				"hideOnSinglePage" => false
-			]);
-		}
-		print Html::endTag("div");
-		print Html::beginTag("div", [
-			"class" => "col-xs-1 text-center"
-		]);
-		print Html::tag("span", "", [
-			"class" => "glyphicon glyphicon-search table-search-icon",
-			"onmouseenter" => "$(this).tooltip('show')",
-			"data-placement" => "left",
-			"data-original-title" => "Поиск"
-		]);
-		print Html::endTag("div");
-		print Html::beginTag("div", [
-			"class" => "col-xs-2"
-		]);
-		if ($this->provider->limits !== false) {
-			$list = [];
-			foreach ($this->provider->limits as $value) {
-				$list[$value] = $value;
-			}
-			if ($this->provider->getPagination() != null) {
-				$limit = $this->provider->getPagination()->pageSize;
-			} else {
-				$limit = $this->provider->limits[0];
-			}
-			if ($limit !== null && !isset($list[$limit])) {
-				$list = [ $limit => $limit ] + $list;
-			} else if ($limit === null) {
-				$limit = "";
-			}
-			print Html::dropDownList("limits", $limit, $list, [
-				"class" => "form-control",
-				"onchange" => "$(this).table('limit', $(this).val())"
-			]);
-		}
-		print Html::endTag("div");
-		print Html::endTag("td");
-		print Html::endTag("tr");
-		print Html::endTag("tfoot");
 	}
 
 	/**

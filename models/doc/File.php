@@ -64,7 +64,7 @@ class File extends \app\core\ActiveRecord {
 			],
 			"parent_id" => [
 				"label" => "Предыдущая версия",
-				"type" => "DropDown",
+				"type" => "dropdown",
 				"table" => [
 					"name" => "doc.file",
 					"key" => "id",
@@ -74,7 +74,7 @@ class File extends \app\core\ActiveRecord {
 			],
 			"file_status_id" => [
 				"label" => "Статус файла",
-				"type" => "DropDown",
+				"type" => "dropdown",
 				"table" => [
 					"name" => "doc.file_status",
 					"key" => "id",
@@ -84,7 +84,7 @@ class File extends \app\core\ActiveRecord {
 			],
 			"file_type_id" => [
 				"label" => "Тип файла",
-				"type" => "DropDown",
+				"type" => "dropdown",
 				"table" => [
 					"name" => "doc.file_type",
 					"key" => "id",
@@ -94,7 +94,7 @@ class File extends \app\core\ActiveRecord {
 			],
 			"file_ext_id" => [
 				"label" => "Расширение файла",
-				"type" => "DropDown",
+				"type" => "dropdown",
 				"table" => [
 					"name" => "doc.file_ext",
 					"key" => "id",

@@ -9,8 +9,8 @@ class FileTable extends Table {
 
 	public $columns = [
 		"id" => "#",
-		"file_ext_id" => "Расширение",
 		"name" => "Название",
+		"file_ext_id" => "Расширение",
 		"upload_date" => "Дата загрузки",
 		"upload_time" => "Время загрузки",
 	];
@@ -20,6 +20,10 @@ class FileTable extends Table {
 			"table-edit-icon" => [
 				"label" => "Редактировать",
 				"icon" => "glyphicon glyphicon-pencil"
+			],
+			"table-remove-icon" => [
+				"label" => "Редактировать",
+				"icon" => "glyphicon glyphicon-remove"
 			]
 		],
 		"mode" => \app\widgets\ControlMenu::MODE_ICON
@@ -30,16 +34,22 @@ class FileTable extends Table {
 		"page" => 0
 	];
 
-	public $primaryKey = "id";
-
 	public $sort = [
 		"attributes" => [
-			"id", "file_ext_id", "name", "upload_date"
+			"id", "name", "file_ext_id", "upload_date"
 		],
 		"defaultOrder" => [
 			"id" => SORT_ASC
 		]
 	];
+
+	public $search = [
+		"attributes" => [
+			"name", "upload_date", "upload_time"
+		]
+	];
+
+	public $fetcher = 'app\models\doc\File';
 
 	public function getQuery() {
 		return File::find();

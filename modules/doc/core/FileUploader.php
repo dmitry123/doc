@@ -56,14 +56,14 @@ class FileUploader {
 		$path = \Yii::$app->getSecurity()->generateRandomString(static::PATH_LENGTH);
 		try {
 			\Yii::$app->getDb()->beginTransaction();
-			$ext = new FileExt([
-				"ext" => $matches["ext"]
-			]);
-			if (!$ext->save()) {
-				throw new Exception("File hasn't been uploaded on server, can't save file's extension in database");
-			}
 			if (!($fileStatus = FileStatus::findOne([ "id" => "new" ]))) {
 				throw new Exception("Can't resolve file's status \new\" in database");
+			}
+			if (!$ext = FileExt::findOne([ "ext" => $matches["ext"] ])) {
+				$ext = new FileExt([ "ext" => $matches["ext"] ]);
+				if (!$ext->save()) {
+					throw new Exception("File hasn't been uploaded on server, can't save file's extension in database");
+				}
 			}
 			$document = new File([
 				"name" => $matches["name"],
