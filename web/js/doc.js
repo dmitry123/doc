@@ -36,8 +36,19 @@ var Doc_Navigation_Menu = {
 var Doc_File_Table = {
 	ready: function() {
 		$("body").on("click", ".table-template-icon", function() {
-			window.location.href = url("doc/editor/view", {
-				file: $(this).parents("tr").attr("data-id")
+			var table = $(this).parents("table").table("before"),
+				id = $(this).parents("tr").attr("data-id");
+			Core.sendPost("doc/template/register", {
+				file: id
+			}, function(response) {
+				console.log(response);
+				setTimeout(function() {
+					window.location.href = url("doc/editor/view", {
+						file: response["file"]
+					});
+				}, 250);
+			}).always(function() {
+				table.table("after");
 			});
 		});
 	}

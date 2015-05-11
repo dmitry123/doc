@@ -73,6 +73,13 @@ class TabMenu extends Widget {
 			} else {
 				$label = "";
 			}
+			if (isset($item["options"])) {
+				if (isset($item["options"]["class"])) {
+					$options["class"] .= " ".$item["options"]["class"];
+				}
+				$options += $item["options"];
+			}
+			unset($item["options"]);
 			unset($item["label"]);
 			print Html::beginTag("li", $options);
 			print Html::a($label, $href, $item);

@@ -53,7 +53,7 @@ class FileUploader {
 		if (($employee = EmployeeHelper::getHelper()->getEmployee()) == null) {
 			throw new Exception("Only employees can upload files on server");
 		}
-		$path = \Yii::$app->getSecurity()->generateRandomString(static::PATH_LENGTH);
+		$path = $this->generateName();
 		try {
 			\Yii::$app->getDb()->beginTransaction();
 			if (!($fileStatus = FileStatus::findOne([ "id" => "new" ]))) {
@@ -90,23 +90,64 @@ class FileUploader {
 	}
 
 	/**
+	 * Just clone file
+	 *
+	 * @param $src string name of source file
+	 * @param $dst string name of destination file
+	 *
+	 * @throws Exception
+	 */
+	public function copy($src, $dst) {
+		if (!@copy($this->getDirectory($src), $this->getDirectory($dst))) {
+			throw new Exception("Can't copy file \"". error_get_last() ."\"");
+		}
+	}
+
+	/**
+	 * Generate unique name of saved file on server
+	 * @return string name of file
+	 */
+	public function generateName() {
+		return \Yii::$app->getSecurity()->generateRandomString(static::PATH_LENGTH);
+	}
+
+	/**
 	 * Get file's directory
 	 * @param string|null $file - Set file's name to get it's path
+	 * @param $absolute bool should path be absolute or relative
 	 * @return string - Directory to files
 	 * @throws Exception
 	 */
-	public function getDirectory($file = null) {
+	public function getDirectory($file = null, $absolute = true) {
 		if ($this->_path != null) {
-			return $this->_path;
+			if ($absolute) {
+				$path = $this->_path;
+			} else {
+				$path = substr($this->_path, strlen(getcwd()) + 1);
+			}
+			if ($file != null) {
+				return $path.$file;
+			} else {
+				return $path;
+			}
+		} else {
+			chdir("..");
 		}
-		chdir("..");
 		if (!@file_exists($path = getcwd().\Yii::$app->params["fileUploadDirectory"]) && !@mkdir($path)) {
 			throw new Exception("Can't create directory for uploaded files \"$path\"");
+		} else {
+			$this->_path = $path;
+		}
+		if ($absolute) {
+			$path = $this->_path;
+		} else {
+			$path = substr($this->_path, strlen(getcwd()) + 1);
 		}
 		if ($file != null) {
 			return $path.$file;
+		} else {
+			return $path;
 		}
-		return $this->_path = $path;
 	}
 
 	private $_path = null;
