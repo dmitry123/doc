@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c7867d1-dabe-479e-927f-a32ef258089e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/widgets/views/Editor_ControlMenu_Nav.php" afterPath="$PROJECT_DIR$/modules/doc/widgets/views/Editor_ControlMenu_Nav.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/widgets/views/Editor_TemplateElement_List.php" afterPath="$PROJECT_DIR$/modules/doc/widgets/views/Editor_TemplateElement_List.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/widgets/views/Editor_Template_Builder.php" afterPath="$PROJECT_DIR$/modules/doc/widgets/views/Editor_Template_Builder.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/logs/app.log" afterPath="$PROJECT_DIR$/runtime/logs/app.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/doc.css" afterPath="$PROJECT_DIR$/web/css/doc.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/loading.js" afterPath="$PROJECT_DIR$/web/js/loading.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -95,35 +96,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileWidget.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/doc/core/FileWidget.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.1875" vertical-offset="129" max-vertical-offset="989">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding>
-                <element signature="e#40#60#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Editor_TemplateElement_List.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/doc/widgets/Editor_TemplateElement_List.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.46875" vertical-offset="139" max-vertical-offset="989">
-              <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Editor_Template_Builder.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Editor_Template_Builder.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/doc/widgets/views/Editor_Template_Builder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3783784" vertical-offset="566" max-vertical-offset="2760">
-              <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
+            <state vertical-scroll-proportion="-13.9375" vertical-offset="980" max-vertical-offset="2760">
+              <caret line="62" column="53" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="53" />
               <folding>
                 <element signature="e#6#61#0#PHP" expanded="true" />
+                <element signature="e#1771#1803#0#PHP" expanded="true" />
+                <element signature="e#1978#2010#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -151,11 +132,31 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="loading.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/js/loading.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7322468" vertical-offset="2269" max-vertical-offset="4163">
+              <caret line="126" column="9" selection-start-line="126" selection-start-column="9" selection-end-line="126" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="doc.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/css/doc.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2024">
-              <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1257" max-vertical-offset="2208">
+              <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="site.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/css/site.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4646">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -183,7 +184,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/modules/doc/widgets/views/TemplateElementViewer.php" />
         <option value="$PROJECT_DIR$/modules/doc/widgets/Edito_TemplateElement_Viewer.php" />
         <option value="$PROJECT_DIR$/modules/doc/widgets/File_TypeMenu_Viewer.php" />
         <option value="$PROJECT_DIR$/core/Widget.php" />
@@ -195,7 +195,6 @@
         <option value="$PROJECT_DIR$/web/js/panel.js" />
         <option value="$PROJECT_DIR$/widgets/Panel.php" />
         <option value="$PROJECT_DIR$/modules/doc/widgets/views/Editor_AboutTemplate_Editor.php" />
-        <option value="$PROJECT_DIR$/modules/doc/widgets/views/Editor_TemplateElement_List.php" />
         <option value="$PROJECT_DIR$/views/site/error.php" />
         <option value="$PROJECT_DIR$/config/params.php" />
         <option value="$PROJECT_DIR$/widgets/TabMenu.php" />
@@ -210,7 +209,6 @@
         <option value="$PROJECT_DIR$/tables/FileTable.php" />
         <option value="$PROJECT_DIR$/web/assets/3a378fa5/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/core/ErrorAction.php" />
-        <option value="$PROJECT_DIR$/web/css/site.css" />
         <option value="$PROJECT_DIR$/modules/doc/widgets/views/Editor_TemplateContent_Editor.php" />
         <option value="$PROJECT_DIR$/modules/doc/core/ElementManager.php" />
         <option value="$PROJECT_DIR$/core/TypeManager.php" />
@@ -232,8 +230,11 @@
         <option value="$PROJECT_DIR$/modules/doc/widgets/views/Editor_ControlFile_Nav.php" />
         <option value="$PROJECT_DIR$/modules/doc/widgets/Editor_ControlMenu_Nav.php" />
         <option value="$PROJECT_DIR$/modules/doc/widgets/views/Editor_ControlMenu_Nav.php" />
-        <option value="$PROJECT_DIR$/web/css/doc.css" />
+        <option value="$PROJECT_DIR$/modules/doc/widgets/views/Editor_TemplateElement_List.php" />
         <option value="$PROJECT_DIR$/modules/doc/widgets/views/Editor_Template_Builder.php" />
+        <option value="$PROJECT_DIR$/web/css/doc.css" />
+        <option value="$PROJECT_DIR$/web/css/site.css" />
+        <option value="$PROJECT_DIR$/web/js/loading.js" />
       </list>
     </option>
   </component>
@@ -327,6 +328,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="validators" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -382,32 +401,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="widgets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="doc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="doc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="doc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="widgets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -535,7 +528,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="doc.css&#9;FILE&#9;file://D:/hosts/doc/web/css/doc.css&#10;doc.js&#9;FILE&#9;file://D:/hosts/doc/web/js/doc.js&#10;FileU&#9;FILE&#9;file://D:/hosts/doc/modules/doc/core/FileUploader.php&#10;site.css&#9;FILE&#9;file://D:/hosts/doc/web/css/site.css&#10;Error&#9;null&#9;null&#10;index&#9;RUN_CONFIGURATION&#9;index.php&#10;panel.js&#9;FILE&#9;file://D:/hosts/doc/web/js/panel.js&#10;table.js&#9;FILE&#9;file://D:/hosts/doc/web/js/table.js&#10;site.cs&#9;FILE&#9;file://D:/hosts/doc/web/css/site.css&#10;Panel&#9;null&#9;null&#10;Table&#9;FILE&#9;file://D:/hosts/doc/core/Table.php&#10;ControlMenu&#9;null&#9;null&#10;module-menu&#9;FILE&#9;file://D:/hosts/doc/web/css/module-menu.css&#10;modules.php&#9;FILE&#9;file://D:/hosts/doc/views/site/modules.php&#10;ActiveQuer&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/db/ActiveQuery.php&#10;GridFoo&#9;FILE&#9;file://D:/hosts/doc/widgets/GridFooter.php&#10;Query&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/db/Query.php&#10;Sort&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/data/Sort.php&#10;table.css&#9;FILE&#9;file://D:/hosts/doc/web/css/table.css&#10;FileUp&#9;FILE&#9;file://D:/hosts/doc/modules/doc/core/FileUploader.php&#10;loading.js&#9;FILE&#9;file://D:/hosts/doc/web/js/loading.js&#10;LinkPager&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/widgets/LinkPager.php&#10;Pagi&#9;null&#9;null&#10;Paginat&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/data/Pagination.php&#10;gridview&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/grid/GridView.php&#10;ExtContr&#9;null&#9;null&#10;sit&#9;FILE&#9;file://D:/hosts/doc/web/css/site.css&#10;Pagina&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/data/Pagination.php&#10;UrlManager&#9;null&#9;null&#10;Paginatio&#9;null&#9;null&#10;ActiveData&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/data/ActiveDataProvider.php&#10;DataProvider&#9;null&#9;null&#10;Widget&#9;null&#9;null&#10;User&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/web/User.php&#10;UserContr&#9;null&#9;null&#10;block.&#9;FILE&#9;file://D:/hosts/doc/views/layouts/block.php&#10;.module-menu-block&#9;null&#9;null&#10;main&#9;FILE&#9;file://D:/hosts/doc/views/layouts/main.php&#10;Panel.&#9;FILE&#9;file://D:/hosts/doc/widgets/Panel.php&#10;core.js&#9;FILE&#9;file://D:/hosts/doc/web/js/core.js&#10;main.php&#9;FILE&#9;file://D:/hosts/doc/views/layouts/main.php&#10;Module&#9;null&#9;null&#10;Controller&#9;FILE&#9;file://D:/hosts/doc/core/Controller.php&#10;form.js&#9;FILE&#9;file://D:/hosts/doc/web/js/form.js&#10;block.js&#9;FILE&#9;file://D:/hosts/doc/web/js/block.js&#10;block.css&#9;FILE&#9;file://D:/hosts/doc/web/css/block.css&#10;UniqueValida&#9;null&#9;null&#10;CompareVa&#9;null&#9;null&#10;UserControl&#9;null&#9;null&#10;yii\bootstrap\ActiveField&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="loading.js&#9;FILE&#9;file://D:/hosts/doc/web/js/loading.js&#10;site.css&#9;FILE&#9;file://D:/hosts/doc/web/css/site.css&#10;doc.css&#9;FILE&#9;file://D:/hosts/doc/web/css/doc.css&#10;doc.js&#9;FILE&#9;file://D:/hosts/doc/web/js/doc.js&#10;FileU&#9;FILE&#9;file://D:/hosts/doc/modules/doc/core/FileUploader.php&#10;Error&#9;null&#9;null&#10;index&#9;RUN_CONFIGURATION&#9;index.php&#10;panel.js&#9;FILE&#9;file://D:/hosts/doc/web/js/panel.js&#10;table.js&#9;FILE&#9;file://D:/hosts/doc/web/js/table.js&#10;site.cs&#9;FILE&#9;file://D:/hosts/doc/web/css/site.css&#10;Panel&#9;null&#9;null&#10;Table&#9;FILE&#9;file://D:/hosts/doc/core/Table.php&#10;ControlMenu&#9;null&#9;null&#10;module-menu&#9;FILE&#9;file://D:/hosts/doc/web/css/module-menu.css&#10;modules.php&#9;FILE&#9;file://D:/hosts/doc/views/site/modules.php&#10;ActiveQuer&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/db/ActiveQuery.php&#10;GridFoo&#9;FILE&#9;file://D:/hosts/doc/widgets/GridFooter.php&#10;Query&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/db/Query.php&#10;Sort&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/data/Sort.php&#10;table.css&#9;FILE&#9;file://D:/hosts/doc/web/css/table.css&#10;FileUp&#9;FILE&#9;file://D:/hosts/doc/modules/doc/core/FileUploader.php&#10;LinkPager&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/widgets/LinkPager.php&#10;Pagi&#9;null&#9;null&#10;Paginat&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/data/Pagination.php&#10;gridview&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/grid/GridView.php&#10;ExtContr&#9;null&#9;null&#10;sit&#9;FILE&#9;file://D:/hosts/doc/web/css/site.css&#10;Pagina&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/data/Pagination.php&#10;UrlManager&#9;null&#9;null&#10;Paginatio&#9;null&#9;null&#10;ActiveData&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/data/ActiveDataProvider.php&#10;DataProvider&#9;null&#9;null&#10;Widget&#9;null&#9;null&#10;User&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/web/User.php&#10;UserContr&#9;null&#9;null&#10;block.&#9;FILE&#9;file://D:/hosts/doc/views/layouts/block.php&#10;.module-menu-block&#9;null&#9;null&#10;main&#9;FILE&#9;file://D:/hosts/doc/views/layouts/main.php&#10;Panel.&#9;FILE&#9;file://D:/hosts/doc/widgets/Panel.php&#10;core.js&#9;FILE&#9;file://D:/hosts/doc/web/js/core.js&#10;main.php&#9;FILE&#9;file://D:/hosts/doc/views/layouts/main.php&#10;Module&#9;null&#9;null&#10;Controller&#9;FILE&#9;file://D:/hosts/doc/core/Controller.php&#10;form.js&#9;FILE&#9;file://D:/hosts/doc/web/js/form.js&#10;block.js&#9;FILE&#9;file://D:/hosts/doc/web/js/block.js&#10;block.css&#9;FILE&#9;file://D:/hosts/doc/web/css/block.css&#10;UniqueValida&#9;null&#9;null&#10;CompareVa&#9;null&#9;null&#10;UserControl&#9;null&#9;null&#10;yii\bootstrap\ActiveField&#9;null&#9;null" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="FullScreen" value="false" />
     <property name="recentsLimit" value="5" />
@@ -616,12 +609,6 @@
       <created>1426978033684</created>
       <option name="number" value="Default" />
       <updated>1426978033684</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Logo fixes + Basic loaders">
-      <created>1427482391498</created>
-      <option name="number" value="00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1427482391498</updated>
     </task>
     <task id="LOCAL-00012" summary="Countries with regions and cities + Widgets fixes + Doc module started">
       <created>1427615345456</created>
@@ -911,7 +898,13 @@
       <option name="project" value="LOCAL" />
       <updated>1431418114582</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="Menu fixes">
+      <created>1431419160934</created>
+      <option name="number" value="00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1431419160934</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -960,7 +953,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Entry page refactor" />
     <MESSAGE value="Finished refactor" />
     <MESSAGE value="New module menu + Tiny fixes" />
     <MESSAGE value="New svg icons added" />
@@ -985,7 +977,8 @@
     <MESSAGE value="Template creation fix" />
     <MESSAGE value="Fixes template content view" />
     <MESSAGE value="Fixes menu list + Editor refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixes menu list + Editor refactor" />
+    <MESSAGE value="Menu fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Menu fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -994,187 +987,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="dbDummy://dbtable:/67b34dc1/4a1bea19-9630-4f7c-a585-745035fe4694/mgup.doc.file_type">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="138">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/migrations/m150503_223647_doc_entry.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36777368" vertical-offset="322" max-vertical-offset="2990">
-          <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
-          <folding>
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="CREATE SCHEM..doc..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="CREATE TABLE..file_ext..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="-- Первичый ..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="-- Название ..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="CREATE TABLE..file_type..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="-- Ключ типа..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="-- Наименова..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="-- Описание ..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="CREATE TABLE..file_status..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="-- Ключ стат..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="-- Наименова..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="CREATE TABLE..file_category..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="-- Первичный..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="-- Наименова..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="-- Родительс..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="CREATE TABLE..file..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="-- Первичный..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="-- Наименова..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="-- Путь к фа..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="-- Сотрудник..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="-- Время заг..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="-- Дата загр..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="-- MIME тип ..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="-- Родительс..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="-- Статус фа..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="-- Расширени..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="CREATE TABLE..file_access..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="-- Первичный..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="-- Уровень д..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="-- Категория..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="-- Привилеги..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="CREATE OR RE..document..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..file..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="CREATE OR RE..table..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..file..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="CREATE OR RE..image..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..file..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="CREATE OR RE..template..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..file..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="CREATE TABLE..file_template_element..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="-- Первичный..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="-- Тип элеме..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="-- Позиция в..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="-- Узел элем..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="DROP TABLE &quot;..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="DROP VIEW &quot;d..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="DROP VIEW &quot;d..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="DROP VIEW &quot;d..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="DROP VIEW &quot;d..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="DROP TABLE &quot;..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="DROP TABLE &quot;..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="DROP TABLE &quot;..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="DROP TABLE &quot;..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="DROP TABLE &quot;..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="DROP TABLE &quot;..." />
-            <marker date="1431316277113" expanded="true" signature="-1:-1" placeholder="DROP SCHEMA ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/migrations/m150503_223439_core_entry.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36777368" vertical-offset="0" max-vertical-offset="3496">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="DROP SCHEMA ..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="DROP SCHEMA ..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="CREATE SCHEM..core..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="CREATE TABLE..security_key..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Идентифик..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Уникальны..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="CREATE TABLE..user..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Первичный..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Уникальны..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Хеш сумма..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Электронн..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Время рег..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Дата реги..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Ключ от C..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Ключ безо..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="CREATE TABLE..role..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Первичный..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Наименова..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="CREATE TABLE..privilege..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Первичный..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Наименова..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="CREATE TABLE..privilege_to_role..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Привилеги..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="CREATE TABLE..institute..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Первичный..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Наименова..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Директор ..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="CREATE TABLE..department..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Первичный..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Наименова..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Институт ..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Менеджер ..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="CREATE TABLE..country..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Первичный..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Наименова..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="CREATE TABLE..region..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Первичный..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Страна, в..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Наименова..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="CREATE TABLE..city..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Первичный..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Страна, в..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Город, в ..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Наименова..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="CREATE TABLE..phone..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Превичный..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Код регио..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Код опера..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Тип телеф..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="CREATE TABLE..employee..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Первичный..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Дата рожд..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Роль сотр..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Пользоват..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Кафедра с..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="-- Является ..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="ALTER TABLE &quot;core&quot;.&quot;department&quot;..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="ALTER TABLE &quot;core&quot;.&quot;institute&quot;..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="CREATE OR RE..about_employee..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="SELECT &quot;e&quot;.*..employee..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="DROP VIEW &quot;c..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="ALTER TABLE &quot;core&quot;.&quot;institute&quot;..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="ALTER TABLE &quot;core&quot;.&quot;department&quot;..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="DROP TABLE &quot;..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="DROP TABLE &quot;..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="DROP TABLE &quot;..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="DROP TABLE &quot;..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="DROP TABLE &quot;..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="DROP TABLE &quot;..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="DROP TABLE &quot;..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="DROP TABLE &quot;..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="DROP TABLE &quot;..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="DROP TABLE &quot;..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="DROP TABLE &quot;..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="DROP TABLE &quot;..." />
-            <marker date="1430731562676" expanded="true" signature="-1:-1" placeholder="DROP SCHEMA ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/UniqueGenerator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.0625" vertical-offset="0" max-vertical-offset="529">
-          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/doc/core/TemplateFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.21648216" vertical-offset="1119" max-vertical-offset="1932">
-          <caret line="47" column="13" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_5.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-17.40625" vertical-offset="23455" max-vertical-offset="26473">
@@ -1283,14 +1095,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1212" max-vertical-offset="2415">
           <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/site.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67832166" vertical-offset="3788" max-vertical-offset="4646">
-          <caret line="190" column="13" selection-start-line="190" selection-start-column="13" selection-end-line="190" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1567,21 +1371,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/doc.css">
+    <entry file="file://$PROJECT_DIR$/modules/doc/widgets/views/Editor_TemplateElement_List.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2024">
-          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.27811366" vertical-offset="0" max-vertical-offset="827">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/doc/widgets/views/Editor_Template_Builder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3783784" vertical-offset="566" max-vertical-offset="2760">
-          <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
+        <state vertical-scroll-proportion="-13.9375" vertical-offset="980" max-vertical-offset="2760">
+          <caret line="62" column="53" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="53" />
           <folding>
             <element signature="e#6#61#0#PHP" expanded="true" />
+            <element signature="e#1771#1803#0#PHP" expanded="true" />
+            <element signature="e#1978#2010#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/doc.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1257" max-vertical-offset="2208">
+          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/site.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4646">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/img/ajax-loader.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/img/ajax-loader-3.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/img/ajax-loader-2.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/loading.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7322468" vertical-offset="2269" max-vertical-offset="4163">
+          <caret line="126" column="9" selection-start-line="126" selection-start-column="9" selection-end-line="126" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>

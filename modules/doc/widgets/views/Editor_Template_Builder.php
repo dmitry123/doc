@@ -61,7 +61,7 @@
 	]
 ]) ?>
 <div class="col-xs-12 editor-template-builder-wrapper">
-<div class="col-xs-7 clear">
+<div class="col-xs-offset-2 col-xs-8">
 	<?= \app\widgets\Panel::widget([
 		"title" => "Содержимое файла",
 		"id" => "doc-editor-content-panel",
@@ -72,44 +72,44 @@
 		"upgradeable" => false
 	]) ?>
 </div>
-<div class="col-xs-5">
-	<?= \app\widgets\Panel::widget([
-		"title" => "Информация",
-		"body" => \app\modules\doc\widgets\Editor_AboutTemplate_Editor::create([
-			"file" => $file->{"id"}
-		])
-	]) ?>
-	<hr>
-	<?= \app\widgets\Panel::widget([
-		"title" => "Элементы шаблонов",
-		"body" => \app\modules\doc\widgets\Editor_TemplateElement_List::create([
-			"manager" => \app\modules\doc\core\ElementManager::getManager()
-		]),
-		"controls" => [
-			"panel-create-button" => [
-				"label" => "Создать",
-				"icon" => "glyphicon glyphicon-plus",
-				"class" => "btn btn-primary btn-sm"
-			],
-			"panel-update-button" => [
-				"label" => "Обновить",
-				"icon" => "glyphicon glyphicon-refresh",
-				"onclick" => "$(this).panel('update')",
-				"class" => "btn btn-default btn-sm",
-			],
-		]
-	]) ?>
-	<hr>
-	<div class="btn-group">
-		<button class="btn btn-success btn-lg">
-			<i class="fa fa-save"></i>&nbsp;&nbsp;Сохранить
-		</button>
-		<button class="btn btn-default btn-lg">
-			<i class="fa fa-file-text-o"></i>&nbsp;&nbsp;Предпросмотр
-		</button>
-		<button class="btn btn-default btn-lg">
-			<i class="fa fa-print"></i>&nbsp;&nbsp;Печать
-		</button>
-	</div>
-</div>
+<!--<div class="col-xs-5">-->
+<!--	--><?//= \app\widgets\Panel::widget([
+//		"title" => "Информация",
+//		"body" => \app\modules\doc\widgets\Editor_AboutTemplate_Editor::create([
+//			"file" => $file->{"id"}
+//		])
+//	]) ?>
+<!--	<hr>-->
+<!--	--><?//= \app\widgets\Panel::widget([
+//		"title" => "Элементы шаблонов",
+//		"body" => \app\modules\doc\widgets\Editor_TemplateElement_List::create([
+//			"manager" => \app\modules\doc\core\ElementManager::getManager()
+//		]),
+//		"controls" => [
+//			"panel-create-button" => [
+//				"label" => "Создать",
+//				"icon" => "glyphicon glyphicon-plus",
+//				"class" => "btn btn-primary btn-sm"
+//			],
+//			"panel-update-button" => [
+//				"label" => "Обновить",
+//				"icon" => "glyphicon glyphicon-refresh",
+//				"onclick" => "$(this).panel('update')",
+//				"class" => "btn btn-default btn-sm",
+//			],
+//		]
+//	]) ?>
+<!--	<hr>-->
+<!--	<div class="btn-group">-->
+<!--		<button class="btn btn-success btn-lg">-->
+<!--			<i class="fa fa-save"></i>&nbsp;&nbsp;Сохранить-->
+<!--		</button>-->
+<!--		<button class="btn btn-default btn-lg">-->
+<!--			<i class="fa fa-file-text-o"></i>&nbsp;&nbsp;Предпросмотр-->
+<!--		</button>-->
+<!--		<button class="btn btn-default btn-lg">-->
+<!--			<i class="fa fa-print"></i>&nbsp;&nbsp;Печать-->
+<!--		</button>-->
+<!--	</div>-->
+<!--</div>-->
 </div>

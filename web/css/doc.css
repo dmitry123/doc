@@ -62,8 +62,12 @@
 }
 
 .doc-template-content-editor {
-    height: 700px;
-    overflow: scroll;
+    /*height: 700px;*/
+    /*overflow: scroll;*/
+}
+
+.doc-template-content-editor p[align='center'] {
+    text-align: center;
 }
 
 .doc-template-content-editor p:not(hr) {
@@ -80,4 +84,8 @@
 
 .editor-template-builder-wrapper {
     margin-top: 40px;
+}
+
+.editor-template-builder-wrapper .panel-body {
+    padding: 5px;
 }

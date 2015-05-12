@@ -11,7 +11,12 @@ var Core = Core || {};
 			width: 75,
 			height: 75,
 			velocity: "fast",
-			color: "lightgray"
+			color: "lightgray",
+			message: false,
+			font: {
+				"font-size": 20,
+				"color": "black"
+			}
 		}, selector);
 	});
 
@@ -29,7 +34,8 @@ var Core = Core || {};
 		} else {
 			index += 1;
 		}
-		this.image = $("<img>", {
+		this.image = true;
+		var image = $("<img>", {
 			css: {
 				"position": "absolute",
 				"height": imageHeight,
@@ -40,6 +46,26 @@ var Core = Core || {};
 			},
 			src: this.property("image")
 		});
+		if (this.property("message") != false) {
+			this.image = $("<div>", {
+				css: {
+					"float": "left"
+				}
+			}).append($("<span>", {
+				text: this.property("message"),
+				style: image.attr("style"),
+				css: $.extend(this.property("font"), {
+					"width": "100%",
+					"left": "0px",
+					"text-align": "center",
+					"margin-top": height / 2 - 30
+				})
+			})).append(image.css({
+				"margin-top": height / 2 - imageHeight / 2 + 30
+			}));
+		} else {
+			this.image = image;
+		}
 		this.selector().before(this.back = $("<div>", {
 			css: {
 				"width": width,
@@ -53,6 +79,67 @@ var Core = Core || {};
 			this.image.fadeIn(this.property("velocity"))
 		);
     };
+
+	Loading.prototype.backdrop = function() {
+		var imageWidth = this.property("width"),
+			imageHeight = this.property("height");
+		if (this.hasOwnProperty("image")) {
+			this.image.remove();
+		}
+		if (this.hasOwnProperty("back")) {
+			this.back.remove();
+		}
+		var image = $("<img>", {
+			css: {
+				"position": "absolute",
+				"height": imageHeight,
+				"width": imageWidth,
+				"left": "calc(50% - " + (imageWidth / 2) + "px)",
+				"top": "calc(50% - " + (imageHeight / 2) + "px)",
+				"z-index": "2001"
+			},
+			src: this.property("image")
+		});
+		if (this.property("message") != false) {
+			this.image = $("<div>", {
+				css: {
+					"float": "left"
+				}
+			}).append($("<span>", {
+				text: this.property("message"),
+				style: image.attr("style"),
+				css: $.extend(this.property("font"), {
+					"width": "100%",
+					"left": "0px",
+					"text-align": "center",
+					"top": "150px",
+					"margin-top": "0px",
+					"font-size": "50px"
+				})
+			})).append(image.css({
+				"top": "200px",
+				"margin-top": "0px",
+				"width": "100px",
+				"height": "100px"
+			}));
+		} else {
+			this.image = image;
+		}
+		this.selector().append(this.back = $("<div>", {
+			css: {
+				"position": "absolute",
+				"width": "100%",
+				"height": "100%",
+				"left": "0px",
+				"top": "0px",
+				"background-color": this.property("color"),
+				"opacity": "0.5",
+				"z-index": "2000"
+			}
+		}).addClass(this.selector().attr("class")).fadeIn(this.property("velocity"))).before(
+			this.image.fadeIn(this.property("velocity"))
+		);
+	};
 
 	Loading.prototype.update = function() {
 		this.render();

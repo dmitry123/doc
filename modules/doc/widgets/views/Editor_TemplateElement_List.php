@@ -6,7 +6,7 @@
 ?>
 <div class="col-xs-12 template-element-collection">
 	<?php foreach ($items as $key => $item): ?>
-		<div class="col-xs-4 text-center template-element-wrapper">
+		<div class="col-xs-6 text-center template-element-wrapper">
 			<?= $item ?>
 		</div>
 	<?php endforeach ?>
