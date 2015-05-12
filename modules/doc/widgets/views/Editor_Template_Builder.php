@@ -21,6 +21,42 @@
 		"builder-print-button" => [
 			"label" => "Печать",
 			"icon" => "fa fa-print"
+		],
+		"builder-element-button" => [
+			"label" => "Элементы",
+			"icon" => "fa fa-tags",
+			"items" => [
+				"builder-element-create-button" => [
+					"label" => "Создать",
+					"icon" => "fa fa-plus"
+				],
+				"builder-element-find-button" => [
+					"label" => "Найти",
+					"icon" => "fa fa-search"
+				],
+				"builder-element-edit-button" => [
+					"label" => "Просмотреть",
+					"icon" => "fa fa-pencil"
+				],
+			]
+		],
+		"builder-macros-button" => [
+			"label" => "Макросы",
+			"icon" => "fa fa-th",
+			"items" => [
+				"builder-macros-create-button" => [
+					"label" => "Создать",
+					"icon" => "fa fa-plus"
+				],
+				"builder-macros-find-button" => [
+					"label" => "Найти",
+					"icon" => "fa fa-search"
+				],
+				"builder-macros-edit-button" => [
+					"label" => "Просмотреть",
+					"icon" => "fa fa-pencil"
+				],
+			]
 		]
 	]
 ]) ?>

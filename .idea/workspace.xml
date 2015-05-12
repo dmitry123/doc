@@ -2,26 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c7867d1-dabe-479e-927f-a32ef258089e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/doc/widgets/Editor_Content_Editor.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/doc/widgets/Editor_ControlMenu_Nav.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/doc/widgets/views/Editor_ControlMenu_Nav.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/doc/widgets/Editor_Template_Builder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/doc/widgets/views/Editor_Template_Builder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/doc/core/FileWidget.php" />
-      <change type="DELETED" beforePath="D:\hosts\doc\modules\doc\widgets\Editor_TemplateContent_Editor.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/controllers/EditorController.php" afterPath="$PROJECT_DIR$/modules/doc/controllers/EditorController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/widgets/Editor_AboutTemplate_Editor.php" afterPath="$PROJECT_DIR$/modules/doc/widgets/Editor_AboutTemplate_Editor.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/widgets/Editor_TemplateElement_List.php" afterPath="$PROJECT_DIR$/modules/doc/widgets/Editor_TemplateElement_List.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/core/ElementManager.php" afterPath="$PROJECT_DIR$/modules/doc/core/ElementManager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/core/FileUploader.php" afterPath="$PROJECT_DIR$/modules/doc/core/FileUploader.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/widgets/File_AboutFile_Viewer.php" afterPath="$PROJECT_DIR$/modules/doc/widgets/File_AboutFile_Viewer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/widgets/File_History_Viewer.php" afterPath="$PROJECT_DIR$/modules/doc/widgets/File_History_Viewer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/TypeManager.php" afterPath="$PROJECT_DIR$/core/TypeManager.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/widgets/views/Editor_ControlMenu_Nav.php" afterPath="$PROJECT_DIR$/modules/doc/widgets/views/Editor_ControlMenu_Nav.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/widgets/views/Editor_Template_Builder.php" afterPath="$PROJECT_DIR$/modules/doc/widgets/views/Editor_Template_Builder.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/logs/app.log" afterPath="$PROJECT_DIR$/runtime/logs/app.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/doc.css" afterPath="$PROJECT_DIR$/web/css/doc.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/views/editor/view.php" afterPath="$PROJECT_DIR$/modules/doc/views/editor/view.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\hosts\doc\modules\doc\widgets\views\Editor_TemplateContent_Editor.php" afterPath="$PROJECT_DIR$/modules/doc/widgets/views/Editor_Content_Editor.php" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -132,34 +117,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Editor_Template_Builder.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Editor_Template_Builder.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modules/doc/widgets/views/Editor_Template_Builder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.15625" vertical-offset="980" max-vertical-offset="1932">
-              <caret line="47" column="39" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.3783784" vertical-offset="566" max-vertical-offset="2760">
+              <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
               <folding>
                 <element signature="e#6#61#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="doc.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/doc.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="581" max-vertical-offset="2231">
-              <caret line="33" column="2" selection-start-line="33" selection-start-column="2" selection-end-line="33" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="doc.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/css/doc.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6158324" vertical-offset="0" max-vertical-offset="1863">
-              <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -177,11 +142,21 @@
       <file leaf-file-name="Editor_ControlMenu_Nav.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/doc/widgets/views/Editor_ControlMenu_Nav.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.3125" vertical-offset="0" max-vertical-offset="644">
-              <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="74" />
+            <state vertical-scroll-proportion="-4.3125" vertical-offset="0" max-vertical-offset="989">
+              <caret line="6" column="75" selection-start-line="6" selection-start-column="75" selection-end-line="6" selection-end-column="75" />
               <folding>
                 <element signature="e#6#62#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="doc.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/css/doc.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2024">
+              <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -208,7 +183,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/modules/doc/widgets/TemplateElementViewer.php" />
         <option value="$PROJECT_DIR$/modules/doc/widgets/views/TemplateElementViewer.php" />
         <option value="$PROJECT_DIR$/modules/doc/widgets/Edito_TemplateElement_Viewer.php" />
         <option value="$PROJECT_DIR$/modules/doc/widgets/File_TypeMenu_Viewer.php" />
@@ -257,8 +231,9 @@
         <option value="$PROJECT_DIR$/modules/doc/widgets/Editor_ControlFile_Nav.php" />
         <option value="$PROJECT_DIR$/modules/doc/widgets/views/Editor_ControlFile_Nav.php" />
         <option value="$PROJECT_DIR$/modules/doc/widgets/Editor_ControlMenu_Nav.php" />
-        <option value="$PROJECT_DIR$/modules/doc/widgets/views/Editor_Template_Builder.php" />
+        <option value="$PROJECT_DIR$/modules/doc/widgets/views/Editor_ControlMenu_Nav.php" />
         <option value="$PROJECT_DIR$/web/css/doc.css" />
+        <option value="$PROJECT_DIR$/modules/doc/widgets/views/Editor_Template_Builder.php" />
       </list>
     </option>
   </component>
@@ -642,12 +617,6 @@
       <option name="number" value="Default" />
       <updated>1426978033684</updated>
     </task>
-    <task id="LOCAL-00010" summary="Document class">
-      <created>1427436627703</created>
-      <option name="number" value="00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1427436627703</updated>
-    </task>
     <task id="LOCAL-00011" summary="Logo fixes + Basic loaders">
       <created>1427482391498</created>
       <option name="number" value="00011" />
@@ -936,7 +905,13 @@
       <option name="project" value="LOCAL" />
       <updated>1431413516453</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Fixes menu list + Editor refactor">
+      <created>1431418114582</created>
+      <option name="number" value="00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1431418114582</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -985,7 +960,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Form model refactor" />
     <MESSAGE value="Entry page refactor" />
     <MESSAGE value="Finished refactor" />
     <MESSAGE value="New module menu + Tiny fixes" />
@@ -1010,7 +984,8 @@
     <MESSAGE value="Error block fix" />
     <MESSAGE value="Template creation fix" />
     <MESSAGE value="Fixes template content view" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixes template content view" />
+    <MESSAGE value="Fixes menu list + Editor refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixes menu list + Editor refactor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1566,13 +1541,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/doc/widgets/views/Editor_ControlMenu_Nav.php">
+    <entry file="file://$PROJECT_DIR$/web/js/doc.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.3125" vertical-offset="0" max-vertical-offset="644">
-          <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="74" />
-          <folding>
-            <element signature="e#6#62#0#PHP" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.2104019" vertical-offset="581" max-vertical-offset="2231">
+          <caret line="33" column="2" selection-start-line="33" selection-start-column="2" selection-end-line="33" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1584,29 +1557,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/doc/widgets/views/Editor_Template_Builder.php">
+    <entry file="file://$PROJECT_DIR$/modules/doc/widgets/views/Editor_ControlMenu_Nav.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.15625" vertical-offset="980" max-vertical-offset="1932">
-          <caret line="47" column="39" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
+        <state vertical-scroll-proportion="-4.3125" vertical-offset="0" max-vertical-offset="989">
+          <caret line="6" column="75" selection-start-line="6" selection-start-column="75" selection-end-line="6" selection-end-column="75" />
           <folding>
-            <element signature="e#6#61#0#PHP" expanded="true" />
+            <element signature="e#6#62#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/doc.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="581" max-vertical-offset="2231">
-          <caret line="33" column="2" selection-start-line="33" selection-start-column="2" selection-end-line="33" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/css/doc.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6158324" vertical-offset="0" max-vertical-offset="1863">
-          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2024">
+          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/doc/widgets/views/Editor_Template_Builder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3783784" vertical-offset="566" max-vertical-offset="2760">
+          <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
+          <folding>
+            <element signature="e#6#61#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
