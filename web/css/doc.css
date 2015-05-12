@@ -24,3 +24,20 @@
     border-radius: 5px;
     /*background-color: #008bb9;*/
 }
+
+.doc-template-content-editor {
+    height: 700px;
+    overflow: scroll;
+}
+
+.doc-template-content-editor p:not(hr) {
+    padding: 1px;
+}
+
+.doc-template-content-editor hr {
+    padding: 0;
+    margin: 5px;
+    border: 1px solid #dddddd;
+    background-color: #dddddd;
+    height: 5px;
+}

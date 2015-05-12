@@ -21,14 +21,6 @@ class FileTable extends Table {
 				"label" => "Создать шаблон",
 				"icon" => "fa fa-copy"
 			],
-			/* "table-edit-icon" => [
-				"label" => "Редактировать",
-				"icon" => "glyphicon glyphicon-pencil"
-			],
-			"table-remove-icon" => [
-				"label" => "Удалить",
-				"icon" => "glyphicon glyphicon-remove"
-			] */
 		],
 		"mode" => \app\widgets\ControlMenu::MODE_ICON
 	];

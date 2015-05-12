@@ -12,6 +12,8 @@ use yii\base\Exception;
 
 class TemplateFactory extends AbstractFactory {
 
+	const EXT = "html";
+
 	/**
 	 * Produce instance of some component via
 	 * your factory singleton instance
@@ -38,10 +40,10 @@ class TemplateFactory extends AbstractFactory {
 			$src = FileUploader::getUploader()->getDirectory($file->{"path"});
 			$path = FileUploader::getUploader()->generateName();
 			$this->castToHtml($src);
-			while (!file_exists($src.".html")) {
+			while (!file_exists($src.".".static::EXT)) {
 				sleep(1);
 			}
-			if (!@rename($src.".html", FileUploader::getUploader()->getDirectory($path))) {
+			if (!@rename($src.".".static::EXT, FileUploader::getUploader()->getDirectory($path))) {
 				throw new Exception("Can't rename just generated template file \"". error_get_last()["message"] ."\"");
 			}
 			$template = new File([
@@ -73,7 +75,7 @@ class TemplateFactory extends AbstractFactory {
 		} else {
 			$py = ".\\python";
 		}
-		$cmd = "$py vendor/unoconv/unoconv.py -f html $src";
+		$cmd = "$py vendor/unoconv/unoconv.py -f ".static::EXT." $src";
 		$msg = system("$cmd", $r);
 		if ($r !== 0) {
 			throw new Exception("Converter returned code \"$r\" with error message \"$msg\" while executing command \"$cmd\"");

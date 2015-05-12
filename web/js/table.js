@@ -85,7 +85,7 @@ var Core = Core || {};
 		}).update();
 	};
 
-	Core.createPlugin("table", function(selector, properties) {
+	$.fn.table = Core.createPlugin("table", function(selector, properties) {
 		var t;
 		if ($(selector).get(0).tagName != "TABLE") {
 			if ((t = $(selector).parents("table")).length != 0) {

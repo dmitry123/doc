@@ -25,7 +25,8 @@ class m150503_223647_doc_entry extends Migration
 		  ('unknown', 'Неизвестный', 'Неизвестный тип файла'),
 		  ('document', 'Документ', 'Текстовый документ'),
 		  ('table', 'Таблица', 'Таблица'),
-		  ('image', 'Изображение', 'Изображение');
+		  ('image', 'Изображение', 'Изображение'),
+		  ('template', 'Шаблон', 'Шаблон');
 
 		CREATE TABLE "doc"."file_status" (
 		  "id" VARCHAR(10) NOT NULL PRIMARY KEY, -- Ключ статуса файла

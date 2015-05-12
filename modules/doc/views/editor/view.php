@@ -2,6 +2,7 @@
 /**
  * @var $this \yii\web\View
  * @var $file int
+ * @var $content string
  */
 ?>
 
@@ -9,9 +10,11 @@
 	<div class="col-xs-7 clear">
 	<?= \app\widgets\Panel::widget([
 		"title" => "Содержимое файла",
+		"id" => "doc-editor-content-panel",
 		"body" => \app\modules\doc\widgets\Editor_TemplateContent_Editor::create([
-			"file" => $file
-		])
+			"file" => $file->{"id"}
+		]),
+		"bodyClass" => "panel-body clear"
 	]) ?>
 	</div>
 	<div class="col-xs-5">
@@ -45,6 +48,9 @@
 	<div class="btn-group">
 		<button class="btn btn-success btn-lg">
 			<i class="fa fa-save"></i>&nbsp;&nbsp;&nbsp;Сохранить
+		</button>
+		<button class="btn btn-default btn-lg">
+			<i class="fa fa-eye"></i>&nbsp;&nbsp;&nbsp;Предпросмотр
 		</button>
 	</div>
 	</div>
