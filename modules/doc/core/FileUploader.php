@@ -66,16 +66,17 @@ class FileUploader {
 				}
 			}
 			$document = new File([
-				"name" => $matches["name"],
-				"path" => $path,
-				"file_category_id" => null,
-				"employee_id" => $employee->{"id"},
-				"mime_type" => $file["type"],
-				"parent_id" => null,
-				"file_status_id" => $fileStatus->{"id"},
-				"file_type_id" => "unknown",
-				"file_ext_id" => $ext->{"id"}
-			] + $config);
+					"name" => $matches["name"],
+					"path" => $path,
+					"employee_id" => $employee->{"id"},
+					"mime_type" => $file["type"],
+					"file_status_id" => $fileStatus->{"id"},
+					"file_ext_id" => $ext->{"id"}
+				] + $config + [
+					"file_category_id" => null,
+					"parent_id" => null,
+					"file_type_id" => "document",
+				]);
 			if (!$document->save()) {
 				throw new Exception("File hasn't been uploaded on server, can't save file info in database");
 			}

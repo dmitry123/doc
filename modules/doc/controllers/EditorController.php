@@ -17,7 +17,7 @@ class EditorController extends Controller {
 				throw new Exception("Можно редактировать только шаблоны файлов");
 			}
 			return $this->render("view", [
-				"file" => $file,
+				"file" => $file->{"id"},
 			]);
 		} else {
 			return $this->render("empty");

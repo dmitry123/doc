@@ -4,7 +4,7 @@ namespace app\core;
 
 class TypeManager {
 
-	public $types = [
+	private $_types = [
 		"boolean" => [
 			"label" => "Логический"
 		],
@@ -47,8 +47,10 @@ class TypeManager {
 	];
 
 	/**
-	 * Get singleton type manager's instance
-	 * @return TypeManager - Type manager instance
+	 * Get singleton type manager's
+	 * instance
+	 *
+	 * @return TypeManager class instance
 	 */
 	public static function getManager() {
 		if (self::$_manager == null) {
@@ -56,6 +58,17 @@ class TypeManager {
 		} else {
 			return self::$_manager;
 		}
+	}
+
+	/**
+	 * Get array with type manager types, you can
+	 * override, but don't forget to invoke parent
+	 * classes, like [parent::getTypes() + []]
+	 *
+	 * @return array with types for current class
+	 */
+	public function getTypes() {
+		return $this->_types;
 	}
 
 	/**
@@ -67,7 +80,7 @@ class TypeManager {
 	 */
 	public function listTypes() {
 		$list = [];
-		foreach ($this->types as $key => $value) {
+		foreach ($this->_types as $key => $value) {
 			$list[$key] = $value["label"];
 		}
 		return $list;

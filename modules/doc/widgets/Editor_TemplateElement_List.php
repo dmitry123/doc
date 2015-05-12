@@ -31,12 +31,8 @@ class Editor_TemplateElement_List extends Widget {
 
 	public function run() {
 		return $this->render("Editor_TemplateElement_List", [
-			"items" => $this->listItems()
+			"items" => ElementManager::getManager()->listTypes()
 		]);
-	}
-
-	public function listItems() {
-		return ElementManager::getManager()->listTypes();
 	}
 
 	public function getAttributes($attributes = null, $excepts = [], $string = null) {

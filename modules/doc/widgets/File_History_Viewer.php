@@ -2,9 +2,9 @@
 
 namespace app\modules\doc\widgets;
 
-use app\core\Widget;
+use app\modules\doc\core\FileWidget;
 
-class File_History_Viewer extends Widget {
+class File_History_Viewer extends FileWidget {
 
 	/**
 	 * Run widget and return it's just rendered content

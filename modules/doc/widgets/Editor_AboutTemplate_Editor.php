@@ -2,11 +2,9 @@
 
 namespace app\modules\doc\widgets;
 
-use app\core\Widget;
+use app\modules\doc\core\FileWidget;
 
-class Editor_AboutTemplate_Editor extends Widget {
-
-	public $file = null;
+class Editor_AboutTemplate_Editor extends FileWidget {
 
 	public function run() {
 		return $this->render("Editor_AboutTemplate_Editor", [
