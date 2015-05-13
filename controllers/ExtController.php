@@ -15,10 +15,8 @@ class ExtController extends Controller {
 	public function actionLoad() {
 		try {
 			/** @var $ext Ext */
-			$ext = ExtFactory::getFactory()->create(
-				$this->requireQuery("module"),
-				$this->requireQuery("ext"),
-				$this->getQuery("params", [])
+			$ext = ExtFactory::getFactory()->createWithModule($this->requireQuery("module"),
+				$this->requireQuery("ext"), $this->getQuery("params", [])
 			);
 			if (empty($ext)) {
 				$this->error("Расширение не поддерживается этим модулем");

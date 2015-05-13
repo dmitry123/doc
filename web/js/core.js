@@ -232,10 +232,11 @@ var Core = Core || {};
 		}, success);
 	};
 
-	Core.loadExt = function(module, ext, success) {
+	Core.loadExt = function(module, ext, params, success) {
 		return Core.sendQuery("ext/load", {
 			module: module,
-			ext: ext
+			ext: ext,
+			params: params
 		}, success);
 	};
 

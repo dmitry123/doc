@@ -20,7 +20,8 @@ class ExtFactory extends AbstractFactory {
 	 * @param $params array with class parameters
 	 *    which copies to itself
 	 *
-	 * @return mixed instance of something
+	 * @return Ext instance of extension component
+	 * 	for module
 	 *
 	 * @throws Exception
 	 */
@@ -36,14 +37,38 @@ class ExtFactory extends AbstractFactory {
 				return null;
 			}
 		}
-		if (!isset(static::$_cached[$class])) {
-			if (!($instance = \Yii::createObject([ "class" => $class ] + $params)) instanceof Ext) {
-				throw new Exception("Extension must be an instance of [app\\core\\Ext] class");
-			} else {
-				return static::$_cached[$class] = $instance;
-			}
+		if (!($instance = \Yii::createObject([ "class" => $class ] + $params)) instanceof Ext) {
+			throw new Exception("Extension must be an instance of [app\\core\\Ext] class");
+		}
+		return $instance;
+	}
+
+	/**
+	 * Try to load extension by it's identification number
+	 * for some module
+	 *
+	 * @param $module string module identification
+	 *  number
+	 *
+	 * @param $id string extension identification
+	 *  number
+	 *
+	 * @param $default mixed default parameter, which
+	 * 	returns if extension doesn't exists
+	 *
+	 * @param $params array with parameters which copies
+	 *    to extension class
+	 *
+	 * @return string with content, that returns extension
+	 *    or empty string
+	 *
+	 * @throws Exception
+	 */
+	public function loadIfCan($module, $id, $default = null, $params = []) {
+		if ($ext = $this->createWithModule($module, $id, $params)) {
+			return $ext->load();
 		} else {
-			return static::$_cached[$class];
+			return $default;
 		}
 	}
 

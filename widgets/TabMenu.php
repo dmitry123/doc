@@ -15,6 +15,12 @@ class TabMenu extends Widget {
 	const STYLE_PILLS_STACKED = "nav nav-pills nav-stacked";
 
 	/**
+	 * @var string identification string of this
+	 * 	widget, if null, then generates automatically
+	 */
+	public $id = null;
+
+	/**
 	 * @var array - Array with items, where item is
 	 * 	array with href, label, options and sub items
 	 * + label - Displayable item label
@@ -43,12 +49,14 @@ class TabMenu extends Widget {
 	/**
 	 * Render tab menu items, if some item has sub-items, then
 	 * it renders it again recursively
-	 * @param array $items - Array with items
-	 * @param bool $root - Is list with items root
+	 *
+	 * @param $items array with items
+	 * @param $depth int tabulation depth
 	 */
-	public function renderItems($items, $root = true) {
+	public function renderItems($items, $depth = 0) {
 		print Html::beginTag("ul", [
-			"class" => ($root ? $this->style : "dropdown-menu"),
+			"class" => $this->style,
+			"id" => $depth ? null : $this->getId(),
 			"role" => "menu"
 		]);
 		foreach ($items as $class => $item) {
@@ -67,7 +75,11 @@ class TabMenu extends Widget {
 			}
 			if (isset($item["items"]) && count($item["items"]) > 0) {
 				$options["class"] .= " dropdown";
+				$list = $item["items"];
+			} else {
+				$list = null;
 			}
+			unset($item["items"]);
 			if (isset($item["label"])) {
 				$label = $item["label"];
 			} else {
@@ -82,14 +94,17 @@ class TabMenu extends Widget {
 			if (isset($item["icon"])) {
 				$label = Html::tag("span", "", [
 					"class" => $item["icon"]
-				]) ."&nbsp;". $label;
+				]) ."&emsp;". $label;
 			}
 			unset($item["options"]);
 			unset($item["label"]);
+			for ($i = 0; $i < (int) $depth; $i++) {
+				$label = "&emsp;".$label;
+			}
 			print Html::beginTag("li", $options);
 			print Html::a($label, $href, $item);
-			if (isset($item["items"]) && count($item["items"]) > 0) {
-				$this->renderItems($item["items"], false);
+			if ($list != null) {
+				$this->renderItems($list, $depth + 1);
 			}
 			print Html::endTag("li");
 		}

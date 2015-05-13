@@ -20,9 +20,9 @@ class ModuleHelper {
 				foreach ($module as $key => $value) {
 					$m[$key] = $value;
 				}
-				$list[] = $m;
+				$list[$id] = $m;
 			} else {
-				$list[] = $module;
+				$list[$id] = $module;
 			}
 		}
 		return static::$_modules = $list;
@@ -33,13 +33,13 @@ class ModuleHelper {
 			return static::$_allowed;
 		}
 		$allowed = [];
-		foreach (static::getModules() as $module) {
+		foreach (static::getModules() as $id => $module) {
 			if (isset($module["roles"])) {
 				if (EmployeeHelper::hasRole($module["roles"])) {
-					$allowed[] = $module;
+					$allowed[$id] = $module;
 				}
 			} else {
-				$allowed[] = $module;
+				$allowed[$id] = $module;
 			}
 		}
 		return $_allowed = $allowed;
@@ -60,7 +60,7 @@ class ModuleHelper {
 			$modules = static::getModules();
 		}
 		$list = [];
-		foreach ($modules as $module) {
+		foreach ($modules as $id => $module) {
 			$attributes = [];
 			if (isset($module["url"]) && !empty($module["url"])) {
 				$attributes["href"] = Yii::$app->urlManager->createUrl($module["url"]);
@@ -77,9 +77,57 @@ class ModuleHelper {
 			} else {
 				$attributes["label"] = "";
 			}
-			$list[] = $attributes;
+			$list[$id] = $attributes;
 		}
 		return $list;
+	}
+
+	public static function getHrefModulesEx(callable $callback, $allowed = true) {
+		$modules = static::getHrefModules($allowed);
+		foreach ($modules as $key => &$module) {
+			$module = $callback($key, $module);
+		}
+		return $modules;
+	}
+
+	public static function getTabModules($allowed = true) {
+		if ($allowed) {
+			$modules = static::getAllowedModules();
+		} else {
+			$modules = static::getModules();
+		}
+		$list = [];
+		foreach ($modules as $id => $module) {
+			$attributes = [
+				"onclick" => "$(this).next().slideToggle('normal')"
+			];
+			if (isset($module["url"]) && !empty($module["url"])) {
+				$attributes["href"] = "javascript:void(0)";
+				$attributes["data-href"] = $module["url"];
+			}
+			if (isset($module["name"])) {
+				$attributes["label"] = $module["name"];
+			} else {
+				$attributes["label"] = "";
+			}
+			if (isset($module["icon"])) {
+				$attributes["label"] = Html::tag("span", "", [
+						"class" => $module["icon"]
+					]) ."&nbsp;&nbsp;". $attributes["label"];
+			} else {
+				$attributes["label"] = "";
+			}
+			$list[$id] = $attributes;
+		}
+		return $list;
+	}
+
+	public static function getTabModulesEx(callable $callback, $allowed = true) {
+		$modules = static::getTabModules($allowed);
+		foreach ($modules as $key => &$module) {
+			$module = $callback($key, $module);
+		}
+		return $modules;
 	}
 
 	public static function getMenuModules($allowed = true) {
@@ -89,7 +137,7 @@ class ModuleHelper {
 			$modules = static::getModules();
 		}
 		$list = [];
-		foreach ($modules as $module) {
+		foreach ($modules as $id => $module) {
 			if (!isset($module["options"])) {
 				$module["options"] = [];
 			}

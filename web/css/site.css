@@ -195,3 +195,7 @@ ul.btn-group {
 .row {
     margin: 0;
 }
+
+.nav > li > ul > li > a {
+    padding: 5px 15px;
+}

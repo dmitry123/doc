@@ -7,7 +7,7 @@
  */
 ?>
 
-<div class="<?= $self->panelClass ?>" id="<?= $self->id ?>" <?= !empty($widget) ? "data-widget=\"$widget\"" : "" ?> <?= !empty($parameters) ? "data-attributes=\"$parameters\"" : "" ?>>
+<div class="<?= $self->panelClass ?>" id="<?= $self->id ?>" <?= !empty($widget) ? "data-widget=\"$widget\"" : "" ?> <?= !empty($parameters) && $self->upgradeable ? "data-attributes=\"$parameters\"" : "" ?>>
     <div class="<?= $self->headingClass ?>">
 		<div class="<?= $self->titleWrapperClass ?>">
 			<span class="<?= $self->titleClass ?>"><?= $self->title ?></span>
