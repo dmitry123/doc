@@ -3,6 +3,7 @@
 namespace app\widgets;
 
 use app\core\Module;
+use app\core\ModuleHelper;
 use app\core\Widget;
 use Yii;
 
@@ -12,7 +13,7 @@ class ModuleMenu extends Widget {
 	public $stacked = false;
 
 	public function run() {
-		$modules = Module::getAllowedModules();
+		$modules = ModuleHelper::getMenuModules();
 		foreach ($modules as $i => $module) {
 			if (!isset($module["options"]) || !isset($module["options"]["data-url"])) {
 				continue;
@@ -25,7 +26,7 @@ class ModuleMenu extends Widget {
 		}
 		return $this->render("ModuleMenu2", [
 			"modules" => $modules,
-			"name" => Module::getModuleName(),
+			"name" => ModuleHelper::currentModuleName(),
 		]);
 	}
 }

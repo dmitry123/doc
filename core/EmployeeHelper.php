@@ -18,6 +18,14 @@ class EmployeeHelper {
 		}
 	}
 
+	public static function getRole() {
+		return static::getInfo()["role_id"];
+	}
+
+	public static function hasRole(array $roles) {
+		return in_array(static::getRole(), $roles);
+	}
+
 	public function getInfo($userId = null) {
 		if ($userId == null) {
 			if (\Yii::$app->getUser()->getIdentity() == null) {

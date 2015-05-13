@@ -35,11 +35,13 @@ class ErrorAction extends \yii\web\ErrorAction {
 			return "$name: $message";
 		} else {
 			$this->controller->layout = "block";
-			return $this->controller->render($this->view ?: $this->id, [
-				'name' => $name,
+			ob_start();
+			print $this->controller->render("error", [
 				'message' => $message,
+				'name' => $name,
 				'exception' => $exception,
 			]);
+			return ob_get_clean();
 		}
 	}
 }

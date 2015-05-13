@@ -4,6 +4,7 @@ namespace app\widgets;
 
 use app\core\ClassTrait;
 use app\core\Module;
+use app\core\ModuleHelper;
 use app\core\Widget;
 use yii\base\Object;
 
@@ -27,7 +28,7 @@ class MasterMenu extends Widget {
 	 */
 	public function run() {
 		return $this->render("MasterMenu", [
-			"items" => $this->getItems(Module::getAllowedModules()),
+			"items" => $this->getItems(ModuleHelper::getMenuModules()),
 			"id" => $this->id,
 			"ext" => $this->ext
 		]);

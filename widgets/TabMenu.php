@@ -79,6 +79,11 @@ class TabMenu extends Widget {
 				}
 				$options += $item["options"];
 			}
+			if (isset($item["icon"])) {
+				$label = Html::tag("span", "", [
+					"class" => $item["icon"]
+				]) ."&nbsp;". $label;
+			}
 			unset($item["options"]);
 			unset($item["label"]);
 			print Html::beginTag("li", $options);

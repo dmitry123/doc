@@ -53,7 +53,7 @@ class TemplateFactory extends AbstractFactory {
 					"mime_type" => $file->{"mime_type"},
 					"file_status_id" => $file->{"file_status_id"},
 					"parent_id" => $file->{"id"},
-					"file_type_id" => "unknown",
+					"file_type_id" => "template",
 				] + $params + [
 					"file_category_id" => null,
 					"name" => FileUploader::getUploader()->generateName(),

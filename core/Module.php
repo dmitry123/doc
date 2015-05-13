@@ -87,53 +87,6 @@ class Module extends \yii\base\Module {
 		}
 	}
 
-	/**
-	 * Get array with allowed modules for current employee
-	 * @param string $module - Name of module to fetch config
-	 * @return array - Array with modules for current employee
-	 */
-	public static function getAllowedModules($module = null) {
-		$modules = Yii::$app->getModules(false);
-		$allowed = [];
-		$array = [];
-		foreach ($modules as $module) {
-			if (!is_array($module)) {
-				$m = [];
-				foreach ($module as $key => $value) {
-					$m[$key] = $value;
-				}
-				$array[] = $m;
-			} else {
-				$array[] = $module;
-			}
-		}
-		foreach ($array as $module) {
-			if (!isset($module["options"])) {
-				$module["options"] = [];
-			}
-			if (!isset($module["url"]) || empty($module["url"])) {
-				$module["options"] += [
-					"data-error" => "not-implemented"
-				];
-			} else {
-				$module["options"] += [
-					"data-url" => $module["url"]
-				];
-			}
-			if (isset($module["roles"])) {
-				if (in_array(EmployeeHelper::getHelper()->getInfo()["role_id"], $module["roles"])) {
-					$allowed[] = $module;
-				}
-			} else {
-				$allowed[] = $module;
-			}
-		}
-		if ($module != null && is_string($module)) {
-			return isset($allowed[$module]) ? $allowed[$module] : null;
-		}
-		return $allowed;
-	}
-
 	public function getWidgetClass($class) {
 		return $this->getClassPath("widgets", $class);
 	}

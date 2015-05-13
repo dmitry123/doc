@@ -14,7 +14,7 @@ use yii\web\View;
 <div class="container-fluid">
 	<div class="navbar-header module-menu-title">
 		<a class="navbar-brand" href="javascript:void(0)">
-			МГУП<?= Module::getModuleName() ?>&nbsp;<span class="caret"></span>
+			МГУП<?= \app\core\ModuleHelper::currentModuleName() ?>&nbsp;<span class="caret"></span>
 			<?= \app\widgets\ModuleMenu::widget() ?>
 		</a>
 	</div>

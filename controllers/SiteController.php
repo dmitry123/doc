@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use app\core\Controller;
 use app\core\Module;
+use app\core\ModuleHelper;
 use Yii;
 
 class SiteController extends Controller {
@@ -16,7 +17,7 @@ class SiteController extends Controller {
 			return $this->render2("block", "employee");
 		}
 		if (Yii::$app->getSession()->has("ACTIVE_MODULE")) {
-			$module = Module::getAllowedModules(Yii::$app->getSession()->get("ACTIVE_MODULE"));
+			$module = ModuleHelper::getModule(Yii::$app->getSession()->get("ACTIVE_MODULE"));
 			if ($module != null) {
 				return $this->render("index");
 			}
@@ -24,7 +25,7 @@ class SiteController extends Controller {
 			return $this->actionIndex();
 		}
 		return $this->render2("block", "modules", [
-			"modules" => Module::getAllowedModules()
+			"modules" => ModuleHelper::getMenuModules()
 		]);
     }
 
