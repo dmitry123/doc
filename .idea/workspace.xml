@@ -2,171 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c7867d1-dabe-479e-927f-a32ef258089e" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\hosts\doc\fields\BooleanField.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\fields\DateField.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\fields\DropDownField.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\fields\EmailField.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\fields\FileField.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\fields\HiddenField.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\fields\MultipleField.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\fields\NumberField.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\fields\PasswordField.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\fields\PhoneField.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\fields\PhoneTypeField.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\fields\RadioField.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\fields\SearchField.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\fields\TextAreaField.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\fields\TextField.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/core/AboutEmployee.php" afterPath="$PROJECT_DIR$/models/core/AboutEmployee.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/admin/core/ActiveRecord.php" afterPath="$PROJECT_DIR$/modules/admin/core/ActiveRecord.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/AdminAsset.php" afterPath="$PROJECT_DIR$/assets/AdminAsset.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/admin/AdminModule.php" afterPath="$PROJECT_DIR$/modules/admin/AdminModule.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/BlockAsset.php" afterPath="$PROJECT_DIR$/assets/BlockAsset.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/chat/ChatModule.php" afterPath="$PROJECT_DIR$/modules/chat/ChatModule.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/core/City.php" afterPath="$PROJECT_DIR$/models/core/City.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/CoreAsset.php" afterPath="$PROJECT_DIR$/assets/CoreAsset.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/core/Country.php" afterPath="$PROJECT_DIR$/models/core/Country.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/core/Department.php" afterPath="$PROJECT_DIR$/models/core/Department.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/DocAsset.php" afterPath="$PROJECT_DIR$/assets/DocAsset.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/DocModule.php" afterPath="$PROJECT_DIR$/modules/doc/DocModule.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/doc/Document.php" afterPath="$PROJECT_DIR$/models/doc/Document.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/admin/controllers/DocumentController.php" afterPath="$PROJECT_DIR$/modules/admin/controllers/DocumentController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/controllers/EditorController.php" afterPath="$PROJECT_DIR$/modules/doc/controllers/EditorController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/widgets/Editor_TemplateElement_List.php" afterPath="$PROJECT_DIR$/modules/doc/widgets/Editor_TemplateElement_List.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/widgets/views/Editor_Template_Builder.php" afterPath="$PROJECT_DIR$/modules/doc/widgets/views/Editor_Template_Builder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/core/ElementManager.php" afterPath="$PROJECT_DIR$/modules/doc/core/ElementManager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/core/Employee.php" afterPath="$PROJECT_DIR$/models/core/Employee.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/EmployeeController.php" afterPath="$PROJECT_DIR$/controllers/EmployeeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/ExtController.php" afterPath="$PROJECT_DIR$/controllers/ExtController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/doc/File.php" afterPath="$PROJECT_DIR$/models/doc/File.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/doc/FileAccess.php" afterPath="$PROJECT_DIR$/models/doc/FileAccess.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/doc/FileCategory.php" afterPath="$PROJECT_DIR$/models/doc/FileCategory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/controllers/FileController.php" afterPath="$PROJECT_DIR$/modules/doc/controllers/FileController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/doc/FileExt.php" afterPath="$PROJECT_DIR$/models/doc/FileExt.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/doc/FileStatus.php" afterPath="$PROJECT_DIR$/models/doc/FileStatus.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/doc/FileType.php" afterPath="$PROJECT_DIR$/models/doc/FileType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/core/FileUploader.php" afterPath="$PROJECT_DIR$/modules/doc/core/FileUploader.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/core/FileWidget.php" afterPath="$PROJECT_DIR$/modules/doc/core/FileWidget.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/widgets/File_TypeMenu_Viewer.php" afterPath="$PROJECT_DIR$/modules/doc/widgets/File_TypeMenu_Viewer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/doc/Image.php" afterPath="$PROJECT_DIR$/models/doc/Image.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/core/Institute.php" afterPath="$PROJECT_DIR$/models/core/Institute.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/LogoAsset.php" afterPath="$PROJECT_DIR$/assets/LogoAsset.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/admin/controllers/MasterController.php" afterPath="$PROJECT_DIR$/modules/admin/controllers/MasterController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/plantation/controllers/MasterController.php" afterPath="$PROJECT_DIR$/modules/plantation/controllers/MasterController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/matrix/MatrixModule.php" afterPath="$PROJECT_DIR$/modules/matrix/MatrixModule.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/core/Phone.php" afterPath="$PROJECT_DIR$/models/core/Phone.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/PlantationAsset.php" afterPath="$PROJECT_DIR$/assets/PlantationAsset.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/extensions/PlantationMasterExt.php" afterPath="$PROJECT_DIR$/modules/doc/extensions/PlantationMasterExt.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/extensions/PlantationMenuExt.php" afterPath="$PROJECT_DIR$/modules/doc/extensions/PlantationMenuExt.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/plantation/PlantationModule.php" afterPath="$PROJECT_DIR$/modules/plantation/PlantationModule.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/widgets/views/Plantation_Ext_Editor.php.php" afterPath="$PROJECT_DIR$/modules/doc/widgets/views/Plantation_Ext_Editor.php.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/widgets/Plantation_Ext_Editor.php" afterPath="$PROJECT_DIR$/modules/doc/widgets/Plantation_Ext_Editor.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/core/Privilege.php" afterPath="$PROJECT_DIR$/models/core/Privilege.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/core/Region.php" afterPath="$PROJECT_DIR$/models/core/Region.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/core/Role.php" afterPath="$PROJECT_DIR$/models/core/Role.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/schedule/ScheduleModule.php" afterPath="$PROJECT_DIR$/modules/schedule/ScheduleModule.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/core/SecurityKey.php" afterPath="$PROJECT_DIR$/models/core/SecurityKey.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/security/SecurityModule.php" afterPath="$PROJECT_DIR$/modules/security/SecurityModule.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/SiteAsset.php" afterPath="$PROJECT_DIR$/assets/SiteAsset.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/SiteController.php" afterPath="$PROJECT_DIR$/controllers/SiteController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/doc/Table.php" afterPath="$PROJECT_DIR$/models/doc/Table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/admin/controllers/TableController.php" afterPath="$PROJECT_DIR$/modules/admin/controllers/TableController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/admin/widgets/TableMenu.php" afterPath="$PROJECT_DIR$/modules/admin/widgets/TableMenu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/admin/widgets/TablePanel.php" afterPath="$PROJECT_DIR$/modules/admin/widgets/TablePanel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/admin/widgets/views/TablePanel.php" afterPath="$PROJECT_DIR$/modules/admin/widgets/views/TablePanel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/doc/Template.php" afterPath="$PROJECT_DIR$/models/doc/Template.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/controllers/TemplateController.php" afterPath="$PROJECT_DIR$/modules/doc/controllers/TemplateController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/core/TemplateFactory.php" afterPath="$PROJECT_DIR$/modules/doc/core/TemplateFactory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/core/User.php" afterPath="$PROJECT_DIR$/models/core/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/UserController.php" afterPath="$PROJECT_DIR$/controllers/UserController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/logs/app.log" afterPath="$PROJECT_DIR$/runtime/logs/app.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/site/employee.php" afterPath="$PROJECT_DIR$/views/site/employee.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/views/editor/empty.php" afterPath="$PROJECT_DIR$/modules/doc/views/editor/empty.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/site/error.php" afterPath="$PROJECT_DIR$/views/site/error.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/employee/index.php" afterPath="$PROJECT_DIR$/views/employee/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/site/login.php" afterPath="$PROJECT_DIR$/views/site/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/migrations/m150503_224320_default_users.php" afterPath="$PROJECT_DIR$/migrations/m150503_224320_default_users.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/views/layouts/main.php" afterPath="$PROJECT_DIR$/modules/doc/views/layouts/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layouts/main.php" afterPath="$PROJECT_DIR$/views/layouts/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/site/modules.php" afterPath="$PROJECT_DIR$/views/site/modules.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/site/register.php" afterPath="$PROJECT_DIR$/views/site/register.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/site/settings.php" afterPath="$PROJECT_DIR$/views/site/settings.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/admin/views/table/view.php" afterPath="$PROJECT_DIR$/modules/admin/views/table/view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/views/file/view.php" afterPath="$PROJECT_DIR$/modules/doc/views/file/view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/plantation/views/master/view.php" afterPath="$PROJECT_DIR$/modules/plantation/views/master/view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/web.php" afterPath="$PROJECT_DIR$/config/web.php" />
+      <change type="DELETED" beforePath="D:\hosts\doc\.idea\dataSources.local.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\runtime\logs\app.log.1" afterPath="" />
+      <change type="DELETED" beforePath="D:\hosts\doc\vendor\unoconv\unoconv.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\hosts\doc\core\AbstractFactory.php" afterPath="$PROJECT_DIR$/components/AbstractFactory.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\core\ActiveDataProvider.php" afterPath="$PROJECT_DIR$/components/ActiveDataProvider.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\core\ActiveField.php" afterPath="$PROJECT_DIR$/components/ActiveField.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\core\ActiveRecord.php" afterPath="$PROJECT_DIR$/components/ActiveRecord.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\core\AssetBundle.php" afterPath="$PROJECT_DIR$/components/AssetBundle.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\core\ClassHelper.php" afterPath="$PROJECT_DIR$/components/ClassHelper.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\core\ClassTrait.php" afterPath="$PROJECT_DIR$/components/ClassTrait.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\core\ConfigManager.php" afterPath="$PROJECT_DIR$/components/ConfigManager.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\core\Controller.php" afterPath="$PROJECT_DIR$/components/Controller.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\core\ControllerEx.php" afterPath="$PROJECT_DIR$/components/ControllerEx.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\core\DropDown.php" afterPath="$PROJECT_DIR$/components/DropDown.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\core\EmployeeHelper.php" afterPath="$PROJECT_DIR$/components/EmployeeHelper.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\core\ErrorAction.php" afterPath="$PROJECT_DIR$/components/ErrorAction.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\core\Ext.php" afterPath="$PROJECT_DIR$/components/Ext.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\core\ExtFactory.php" afterPath="$PROJECT_DIR$/components/ExtFactory.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\core\Factory.php" afterPath="$PROJECT_DIR$/components/Factory.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\core\Fetcher.php" afterPath="$PROJECT_DIR$/components/Fetcher.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\core\Field.php" afterPath="$PROJECT_DIR$/components/Field.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\core\FieldCollection.php" afterPath="$PROJECT_DIR$/components/FieldCollection.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\core\FileProtocol.php" afterPath="$PROJECT_DIR$/components/FileProtocol.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\core\FormControl.php" afterPath="$PROJECT_DIR$/components/FormControl.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\core\FormModel.php" afterPath="$PROJECT_DIR$/components/FormModel.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\core\Module.php" afterPath="$PROJECT_DIR$/components/Module.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\core\ModuleHelper.php" afterPath="$PROJECT_DIR$/components/ModuleHelper.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\core\ObjectHelper.php" afterPath="$PROJECT_DIR$/components/ObjectHelper.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\core\PostgreSQL.php" afterPath="$PROJECT_DIR$/components/PostgreSQL.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\core\Search.php" afterPath="$PROJECT_DIR$/components/Search.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\core\Searchable.php" afterPath="$PROJECT_DIR$/components/Searchable.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\core\Sort.php" afterPath="$PROJECT_DIR$/components/Sort.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\core\Table.php" afterPath="$PROJECT_DIR$/components/Table.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\core\TypeManager.php" afterPath="$PROJECT_DIR$/components/TypeManager.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\core\UniqueGenerator.php" afterPath="$PROJECT_DIR$/components/UniqueGenerator.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\core\User.php" afterPath="$PROJECT_DIR$/components/User.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\core\UserHelper.php" afterPath="$PROJECT_DIR$/components/UserHelper.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\core\ViewTrait.php" afterPath="$PROJECT_DIR$/components/ViewTrait.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\core\Widget.php" afterPath="$PROJECT_DIR$/components/Widget.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\filters\AccessFilter.php" afterPath="$PROJECT_DIR$/components/filters/AccessFilter.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\forms\EmployeeForm.php" afterPath="$PROJECT_DIR$/components/forms/EmployeeForm.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\forms\UserForm.php" afterPath="$PROJECT_DIR$/components/forms/UserForm.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\tables\EmployeeTable.php" afterPath="$PROJECT_DIR$/components/tables/EmployeeTable.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\tables\FileTable.php" afterPath="$PROJECT_DIR$/components/tables/FileTable.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\validators\PhoneValidator.php" afterPath="$PROJECT_DIR$/components/validators/PhoneValidator.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\validators\RequiredValidator.php" afterPath="$PROJECT_DIR$/components/validators/RequiredValidator.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\widgets\ActiveForm.php" afterPath="$PROJECT_DIR$/components/widgets/ActiveForm.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\widgets\AutoForm.php" afterPath="$PROJECT_DIR$/components/widgets/AutoForm.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\widgets\AutoTable.php" afterPath="$PROJECT_DIR$/components/widgets/AutoTable.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\widgets\ConfirmModal.php" afterPath="$PROJECT_DIR$/components/widgets/ConfirmModal.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\widgets\ControlMenu.php" afterPath="$PROJECT_DIR$/components/widgets/ControlMenu.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\widgets\EditableTable.php" afterPath="$PROJECT_DIR$/components/widgets/EditableTable.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\widgets\Form.php" afterPath="$PROJECT_DIR$/components/widgets/Form.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\widgets\Form2.php" afterPath="$PROJECT_DIR$/components/widgets/Form2.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\widgets\Grid.php" afterPath="$PROJECT_DIR$/components/widgets/Grid.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\widgets\GridFooter.php" afterPath="$PROJECT_DIR$/components/widgets/GridFooter.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\widgets\LinkPager.php" afterPath="$PROJECT_DIR$/components/widgets/LinkPager.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\widgets\Logo.php" afterPath="$PROJECT_DIR$/components/widgets/Logo.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\widgets\MasterMenu.php" afterPath="$PROJECT_DIR$/components/widgets/MasterMenu.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\widgets\Modal.php" afterPath="$PROJECT_DIR$/components/widgets/Modal.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\widgets\ModuleMenu.php" afterPath="$PROJECT_DIR$/components/widgets/ModuleMenu.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\widgets\Navigation.php" afterPath="$PROJECT_DIR$/components/widgets/Navigation.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\widgets\Panel.php" afterPath="$PROJECT_DIR$/components/widgets/Panel.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\widgets\TabMenu.php" afterPath="$PROJECT_DIR$/components/widgets/TabMenu.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\widgets\UserPanel.php" afterPath="$PROJECT_DIR$/components/widgets/UserPanel.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\widgets\views\Form.php" afterPath="$PROJECT_DIR$/components/widgets/views/Form.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\widgets\views\Logo.php" afterPath="$PROJECT_DIR$/components/widgets/views/Logo.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\widgets\views\MasterMenu.php" afterPath="$PROJECT_DIR$/components/widgets/views/MasterMenu.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\widgets\views\ModuleMenu.php" afterPath="$PROJECT_DIR$/components/widgets/views/ModuleMenu.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\widgets\views\ModuleMenu2.php" afterPath="$PROJECT_DIR$/components/widgets/views/ModuleMenu2.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\widgets\views\Navigation.php" afterPath="$PROJECT_DIR$/components/widgets/views/Navigation.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\widgets\views\Pagination.php" afterPath="$PROJECT_DIR$/components/widgets/views/Pagination.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\widgets\views\Panel.php" afterPath="$PROJECT_DIR$/components/widgets/views/Panel.php" />
-      <change type="MOVED" beforePath="D:\hosts\doc\widgets\views\UserPanel.php" afterPath="$PROJECT_DIR$/components/widgets/views/UserPanel.php" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -331,7 +170,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -352,6 +190,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -399,20 +238,17 @@
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
     <configuration default="true" type="com.intellij.database.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
       <option name="VM_PARAMETERS" value="" />
       <option name="USER_CFG_CLASS" />
       <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
-    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
-      <BehatRunner />
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
@@ -422,6 +258,9 @@
       <arguments />
       <pass-parent-envs>true</pass-parent-envs>
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="1">
@@ -762,24 +601,24 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="314" y="4" width="1802" height="1019" extended-state="0" />
+    <frame x="314" y="4" width="1802" height="1019" extended-state="1" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277849" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38261852" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919955" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3141892" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.20608497" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="2210" y="3" width="343" height="883" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2495379" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963648" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19919632" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20149253" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919955" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32844242" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40744922" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3141892" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39954853" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277849" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -979,7 +818,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33293977" vertical-offset="1259" max-vertical-offset="3266">
           <caret line="67" column="9" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -987,7 +825,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2139535" vertical-offset="0" max-vertical-offset="4163">
           <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -995,7 +832,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.0282209" vertical-offset="6154" max-vertical-offset="8004">
           <caret line="304" column="12" selection-start-line="304" selection-start-column="12" selection-end-line="304" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1011,7 +847,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.427907" vertical-offset="1035" max-vertical-offset="1909">
           <caret line="61" column="6" selection-start-line="61" selection-start-column="6" selection-end-line="61" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1019,7 +854,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.30555555" vertical-offset="0" max-vertical-offset="828">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1027,7 +861,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5555556" vertical-offset="0" max-vertical-offset="828">
           <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1043,7 +876,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.19444445" vertical-offset="0" max-vertical-offset="828">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1051,7 +883,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8918605" vertical-offset="3764" max-vertical-offset="4738">
           <caret line="197" column="0" selection-start-line="197" selection-start-column="0" selection-end-line="197" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1151,7 +982,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
