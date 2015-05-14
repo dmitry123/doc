@@ -2,10 +2,10 @@
 
 namespace app\models\core;
 
-use app\core\ActiveRecord;
-use app\core\FormModel;
-use app\core\TableProvider;
-use app\forms\UserForm;
+use app\components\ActiveRecord;
+use app\components\FormModel;
+use app\components\TableProvider;
+use app\components\forms\UserForm;
 use yii\web\IdentityInterface;
 
 class User extends ActiveRecord implements IdentityInterface {

@@ -2,7 +2,7 @@
 
 namespace app\assets;
 
-use app\core\AssetBundle;
+use app\components\AssetBundle;
 
 class BlockAsset extends AssetBundle {
 

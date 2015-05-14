@@ -4,9 +4,9 @@
  * @var $self app\modules\admin\widgets\TablePanel
  */
 
-print \app\widgets\Modal::widget([
+print \app\components\widgets\Modal::widget([
 	"title" => "Добавить значение",
-	"body" => \app\widgets\Form::widget([
+	"body" => \app\components\widgets\Form::widget([
 		"model" => $self->form->copyOf("admin.table.register"),
 		"id" => "table-save-form"
 	]),
@@ -19,9 +19,9 @@ print \app\widgets\Modal::widget([
 	],
 	"id" => "table-save-modal"
 ]);
-print \app\widgets\Modal::widget([
+print \app\components\widgets\Modal::widget([
 	"title" => "Редактировать значение",
-	"body" => \app\widgets\Form::widget([
+	"body" => \app\components\widgets\Form::widget([
 		"model" => $self->form->copyOf("admin.table.update"),
 		"id" => "table-update-form"
 	]),
@@ -36,7 +36,7 @@ print \app\widgets\Modal::widget([
 ]); ?>
 
 <?php if (!empty($self->form) && !empty($self->model)): ?>
-	<?= \app\widgets\AutoTable::widget([
+	<?= \app\components\widgets\AutoTable::widget([
 		"model" => $self->model,
 		"form" => $self->form,
 		"modelName" => $self->model->className()

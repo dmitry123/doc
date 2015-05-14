@@ -2,7 +2,7 @@
 
 namespace app\models\core;
 
-use app\core\ActiveRecord;
+use app\components\ActiveRecord;
 
 class Country extends ActiveRecord {
 

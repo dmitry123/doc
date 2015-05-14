@@ -2,7 +2,7 @@
 
 namespace app\models\doc;
 
-use app\core\ActiveRecord;
+use app\components\ActiveRecord;
 
 class FileAccess extends ActiveRecord {
 

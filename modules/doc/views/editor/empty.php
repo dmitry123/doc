@@ -2,12 +2,12 @@
 /**
  * @var $this \yii\web\View
  */
-print \app\widgets\Modal::widget([
+print \app\components\widgets\Modal::widget([
 	"title" => "Список файлов",
-	"body" => \app\widgets\Grid::widget([
-		"provider" => new \app\tables\FileTable()
+	"body" => \app\components\widgets\Grid::widget([
+		"provider" => new \app\components\tables\FileTable()
 	]),
-	"size" => \app\widgets\Modal::SIZE_LARGE,
+	"size" => \app\components\widgets\Modal::SIZE_LARGE,
 	"id" => "doc-editor-file-table-modal",
 ]); ?>
 <div class="col-xs-12 text-center">

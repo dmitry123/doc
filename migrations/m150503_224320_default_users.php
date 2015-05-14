@@ -24,7 +24,7 @@ class m150503_224320_default_users extends Migration
 			$users = [];
 		}
 		foreach ($users as $login => $user) {
-			\app\core\UserHelper::registerUser($login, $user);
+			\app\components\UserHelper::registerUser($login, $user);
 		}
 	}
 
@@ -35,7 +35,7 @@ class m150503_224320_default_users extends Migration
 			$users = [];
 		}
 		foreach ($users as $login => $user) {
-			\app\core\UserHelper::deleteUser($login, $user);
+			\app\components\UserHelper::deleteUser($login, $user);
 		}
 		if (isset(Yii::$app->params["defaultRoles"])) {
 			$roles = Yii::$app->params["defaultRoles"];

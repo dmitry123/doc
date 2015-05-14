@@ -2,7 +2,7 @@
 
 namespace app\modules\admin\controllers;
 
-use app\core\Controller;
+use app\components\Controller;
 use app\modules\admin\widgets\TablePanel;
 use yii\helpers\Inflector;
 

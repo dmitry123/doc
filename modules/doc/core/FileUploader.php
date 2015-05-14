@@ -2,7 +2,7 @@
 
 namespace app\modules\doc\core;
 
-use app\core\EmployeeHelper;
+use app\components\EmployeeHelper;
 use app\models\doc\File;
 use app\models\doc\FileExt;
 use app\models\doc\FileStatus;

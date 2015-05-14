@@ -2,7 +2,7 @@
 
 namespace app\modules\doc\controllers;
 
-use app\core\Controller;
+use app\components\Controller;
 use app\models\doc\File;
 use app\modules\doc\core\FileUploader;
 use yii\base\Exception;

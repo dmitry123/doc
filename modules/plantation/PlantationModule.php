@@ -2,7 +2,7 @@
 
 namespace app\modules\plantation;
 
-use app\core\Module;
+use app\components\Module;
 
 class PlantationModule extends Module {
 

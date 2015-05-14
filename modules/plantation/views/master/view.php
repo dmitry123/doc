@@ -5,16 +5,16 @@
  */
 ?>
 <div class="col-xs-3">
-	<?= \app\widgets\Panel::widget([
-		"body" => \app\widgets\TabMenu::create([
-			"items" => \app\core\ModuleHelper::getTabModulesEx(function($id, $module) {
+	<?= \app\components\widgets\Panel::widget([
+		"body" => \app\components\widgets\TabMenu::create([
+			"items" => \app\components\ModuleHelper::getTabModulesEx(function($id, $module) {
 				return $module + [
-					"items" => \app\core\ExtFactory::getFactory()->loadIfCan($id, "PlantationMenu", []),
+					"items" => \app\components\ExtFactory::getFactory()->loadIfCan($id, "PlantationMenu", []),
 					"data-module" => $id,
 				];
 			}, false),
 			"id" => "plantation-module-menu",
-			"style" => \app\widgets\TabMenu::STYLE_PILLS_STACKED
+			"style" => \app\components\widgets\TabMenu::STYLE_PILLS_STACKED
 		]),
 		"title" => "Модули",
 		"bodyClass" => "panel-body clear",

@@ -3,7 +3,7 @@
  * @var $this yii\web\View
  */
 
-\app\widgets\Logo::begin([
+\app\components\widgets\Logo::begin([
 	"controls" => [
 		"employee-send-button" => [
 			"label" => "Отправить",
@@ -20,8 +20,8 @@
 	]
 ]);
 
-print \app\widgets\Form::widget([
-	"model" => new \app\forms\EmployeeForm("register")
+print \app\components\widgets\Form::widget([
+	"model" => new \app\components\forms\EmployeeForm("register")
 ]);
 
-\app\widgets\Logo::end();
+\app\components\widgets\Logo::end();

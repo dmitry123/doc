@@ -2,7 +2,7 @@
 
 namespace app\models\doc;
 
-class File extends \app\core\ActiveRecord {
+class File extends \app\components\ActiveRecord {
 
 	public function configure() {
 		return [
