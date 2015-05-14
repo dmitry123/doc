@@ -2,7 +2,7 @@
 
 namespace app\modules\doc;
 
-use app\core\Module;
+use app\components\Module;
 
 class DocModule extends Module {
 

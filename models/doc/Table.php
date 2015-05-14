@@ -2,7 +2,7 @@
 
 namespace app\models\doc;
 
-use app\core\ViewTrait;
+use app\components\ViewTrait;
 
 class Table extends File {
 

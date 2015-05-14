@@ -2,9 +2,9 @@
 
 namespace app\modules\admin\widgets;
 
-use app\core\ActiveRecord;
-use app\core\FormModel;
-use app\core\Widget;
+use app\components\ActiveRecord;
+use app\components\FormModel;
+use app\components\Widget;
 
 class TablePanel extends Widget {
 

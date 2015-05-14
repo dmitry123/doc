@@ -3,9 +3,9 @@
  * @var $this yii\web\View
  * @var $modules array
  */
-print \app\widgets\Logo::widget([
-	"body" => \app\widgets\AutoForm::widget([
-		"model" => \app\forms\EmployeeForm::createWithScenario("setup")
+print \app\components\widgets\Logo::widget([
+	"body" => \app\components\widgets\AutoForm::widget([
+		"model" => \app\components\forms\EmployeeForm::createWithScenario("setup")
 	]),
 	"controls" => [
 		"settings-save-button" => [

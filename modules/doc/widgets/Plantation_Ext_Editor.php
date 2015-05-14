@@ -2,7 +2,7 @@
 
 namespace app\modules\doc\widgets;
 
-use app\core\Widget;
+use app\components\Widget;
 
 class Plantation extends Widget {
 

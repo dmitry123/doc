@@ -2,7 +2,7 @@
 
 namespace app\modules\doc\controllers;
 
-use app\core\Controller;
+use app\components\Controller;
 use app\modules\doc\core\FileUploader;
 
 class FileController extends Controller {

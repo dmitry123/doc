@@ -2,7 +2,7 @@
 
 namespace app\modules\admin;
 
-use app\core\Module;
+use app\components\Module;
 
 class AdminModule extends Module {
 

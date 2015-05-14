@@ -2,7 +2,7 @@
 
 namespace app\modules\doc\core;
 
-use app\core\Widget;
+use app\components\Widget;
 use app\models\doc\File;
 use Exception;
 

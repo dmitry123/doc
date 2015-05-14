@@ -6,7 +6,7 @@
 use yii\web\View;
 ?>
 
-<?php \app\widgets\Logo::begin([
+<?php \app\components\widgets\Logo::begin([
 	"controls" => [
 		"modules-settings-button" => [
 			"label" => "Настройки",
@@ -40,4 +40,4 @@ use yii\web\View;
 	</div>
 <?php endforeach; ?>
 </div>
-<?php \app\widgets\Logo::end(); ?>
+<?php \app\components\widgets\Logo::end(); ?>

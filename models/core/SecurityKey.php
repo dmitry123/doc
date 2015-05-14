@@ -2,7 +2,7 @@
 
 namespace app\models\core;
 
-use app\core\ActiveRecord;
+use app\components\ActiveRecord;
 
 class SecurityKey extends ActiveRecord {
 
