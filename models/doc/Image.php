@@ -2,7 +2,7 @@
 
 namespace app\models\doc;
 
-use app\components\ViewTrait;
+use app\core\ViewTrait;
 
 class Image extends File {
 

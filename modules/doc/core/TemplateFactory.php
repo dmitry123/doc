@@ -2,9 +2,9 @@
 
 namespace app\modules\doc\core;
 
-use app\components\AbstractFactory;
-use app\components\EmployeeHelper;
-use app\components\UniqueGenerator;
+use app\core\AbstractFactory;
+use app\core\EmployeeHelper;
+use app\core\UniqueGenerator;
 use app\models\doc\File;
 use Unoconv\Unoconv;
 use yii\base\ErrorException;

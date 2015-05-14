@@ -2,7 +2,7 @@
 
 namespace app\modules\schedule;
 
-use app\components\Module;
+use app\core\Module;
 
 class ScheduleModule extends Module {
 

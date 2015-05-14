@@ -2,9 +2,9 @@
 
 namespace app\modules\admin\core;
 
-use app\components\TableProvider;
+use app\core\TableProvider;
 
-abstract class ActiveRecord extends \app\components\ActiveRecord {
+abstract class ActiveRecord extends \app\core\ActiveRecord {
 
 	/**
 	 * That method will create table provider for

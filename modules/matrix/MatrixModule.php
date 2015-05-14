@@ -2,7 +2,7 @@
 
 namespace app\modules\matrix;
 
-use app\components\Module;
+use app\core\Module;
 
 class MatrixModule extends Module {
 

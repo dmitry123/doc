@@ -2,14 +2,14 @@
 /**
  * @var $self app\modules\doc\widgets\Plantation
  */
-$ft = \app\components\UniqueGenerator::generate("tab");
-$fe = \app\components\UniqueGenerator::generate("tab");
-print \app\components\widgets\Modal::widget([
+$ft = \app\core\UniqueGenerator::generate("tab");
+$fe = \app\core\UniqueGenerator::generate("tab");
+print \app\widgets\Modal::widget([
 	"title" => "Добавить \"Тип файла\"",
 	"id" => "doc-plantation-file-type-register-modal",
 	"body" => "Hello, World"
 ]) ?>
-<?= \app\components\widgets\ControlMenu::widget([
+<?= \app\widgets\ControlMenu::widget([
 	"controls" => [
 		"plantation-file-type-button" => [
 			"label" => "Типы файлов",
@@ -23,12 +23,12 @@ print \app\components\widgets\Modal::widget([
 			"data-target" => "#".$fe
 		]
 	],
-	"mode" => \app\components\widgets\ControlMenu::MODE_LIST
+	"mode" => \app\widgets\ControlMenu::MODE_LIST
 ]) ?>
 
 <div class="tab-content">
 	<div class="tab-pane active in" id="<?= $ft ?>">
-	<?= \app\components\widgets\Panel::widget([
+	<?= \app\widgets\Panel::widget([
 		"title" => "Типы файлов",
 		"body" => \app\modules\doc\widgets\FileTypeTable::create(),
 		"controls" => [
@@ -50,7 +50,7 @@ print \app\components\widgets\Modal::widget([
 	]) ?>
 	</div>
 	<div class="tab-pane fade" id="<?= $fe ?>">
-	<?= \app\components\widgets\Panel::widget([
+	<?= \app\widgets\Panel::widget([
 		"title" => "Расширения файлов",
 		"body" => \app\modules\doc\widgets\FileExtTable::create(),
 		"controls" => [

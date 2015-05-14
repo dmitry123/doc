@@ -2,7 +2,7 @@
 
 namespace app\models\core;
 
-use app\components\ActiveRecord;
+use app\core\ActiveRecord;
 use Exception;
 
 class Phone extends ActiveRecord {

@@ -9,7 +9,7 @@ use yii\helpers\Html;
 
 $this->title = $name;
 ?>
-<?php \app\components\widgets\Logo::begin([
+<?php \app\widgets\Logo::begin([
 	"controls" => [
 		"error-main-button" => [
 			"label" => "Главная",
@@ -27,4 +27,4 @@ $this->title = $name;
     <p>The above error occurred while the Web server was processing your request.</p>
     <p>Please contact us if you think this is a server error. Thank you.</p>
 </div>
-<?php \app\components\widgets\Logo::end() ?>
+<?php \app\widgets\Logo::end() ?>

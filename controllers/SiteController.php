@@ -2,9 +2,9 @@
 
 namespace app\controllers;
 
-use app\components\Controller;
-use app\components\Module;
-use app\components\ModuleHelper;
+use app\core\Controller;
+use app\core\Module;
+use app\core\ModuleHelper;
 use Yii;
 
 class SiteController extends Controller {

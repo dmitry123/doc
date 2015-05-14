@@ -62,7 +62,7 @@
 ]) ?>
 <div class="col-xs-12 editor-template-builder-wrapper">
 <div class="col-xs-offset-2 col-xs-8">
-	<?= \app\components\widgets\Panel::widget([
+	<?= \app\widgets\Panel::widget([
 		"title" => "Содержимое файла",
 		"id" => "doc-editor-content-panel",
 		"body" => \app\modules\doc\widgets\Editor_Content_Editor::create([
@@ -73,14 +73,14 @@
 	]) ?>
 </div>
 <!--<div class="col-xs-5">-->
-<!--	--><?//= \app\components\widgets\Panel::widget([
+<!--	--><?//= \app\widgets\Panel::widget([
 //		"title" => "Информация",
 //		"body" => \app\modules\doc\widgets\Editor_AboutTemplate_Editor::create([
 //			"file" => $file->{"id"}
 //		])
 //	]) ?>
 <!--	<hr>-->
-<!--	--><?//= \app\components\widgets\Panel::widget([
+<!--	--><?//= \app\widgets\Panel::widget([
 //		"title" => "Элементы шаблонов",
 //		"body" => \app\modules\doc\widgets\Editor_TemplateElement_List::create([
 //			"manager" => \app\modules\doc\core\ElementManager::getManager()

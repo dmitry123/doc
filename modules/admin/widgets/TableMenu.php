@@ -2,9 +2,9 @@
 
 namespace app\modules\admin\widgets;
 
-use app\components\ActiveRecord;
-use app\components\PostgreSQL;
-use app\components\Widget;
+use app\core\ActiveRecord;
+use app\core\PostgreSQL;
+use app\core\Widget;
 use yii\helpers\Inflector;
 
 class TableMenu extends Widget {

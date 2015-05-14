@@ -2,7 +2,7 @@
 
 namespace app\modules\admin\controllers;
 
-use app\components\Controller;
+use app\core\Controller;
 
 class MasterController extends Controller {
 

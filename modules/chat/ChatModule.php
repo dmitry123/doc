@@ -2,7 +2,7 @@
 
 namespace app\modules\chat;
 
-use app\components\Module;
+use app\core\Module;
 
 class ChatModule extends Module {
 

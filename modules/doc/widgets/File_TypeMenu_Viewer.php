@@ -3,7 +3,7 @@
 namespace app\modules\doc\widgets;
 
 use app\models\doc\FileType;
-use app\components\widgets\TabMenu;
+use app\widgets\TabMenu;
 use yii\helpers\Html;
 
 class File_TypeMenu_Viewer extends TabMenu {

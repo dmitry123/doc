@@ -2,7 +2,7 @@
 
 namespace app\models\doc;
 
-use app\components\ActiveRecord;
+use app\core\ActiveRecord;
 
 class FileType extends ActiveRecord {
 

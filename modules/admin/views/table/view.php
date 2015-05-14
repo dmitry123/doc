@@ -5,7 +5,7 @@
 ?>
 
 <div class="col-xs-9 admin-table-panel-wrapper">
-	<?= \app\components\widgets\Panel::widget([
+	<?= \app\widgets\Panel::widget([
 		"title" => "Список текущих значений",
 		"id" => "admin-table-view-panel",
 		"body" => \app\modules\admin\widgets\TablePanel::create(),
@@ -25,7 +25,7 @@
 	]) ?>
 </div>
 <div class="col-xs-3">
-	<?= \app\components\widgets\Panel::widget([
+	<?= \app\widgets\Panel::widget([
 		"title" => "Таблицы",
 		"body" => \app\modules\admin\widgets\TableMenu::create(),
 		"id" => "admin-table-menu"

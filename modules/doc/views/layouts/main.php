@@ -7,7 +7,7 @@ app\assets\DocAsset::register($this);
 
 ob_start();
 
-print \app\components\widgets\Modal::widget([
+print \app\widgets\Modal::widget([
 	"title" => "Загрузка документов",
 	"body" => \yii\helpers\Html::input("file", "files[]", null, [
 		"id" => "document-file-upload",

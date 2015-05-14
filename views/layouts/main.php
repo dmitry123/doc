@@ -38,14 +38,14 @@ var doc = <?= json_encode($parameters, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICOD
 <body>
 <?php $this->beginBody() ?>
 <div id="page-content">
-	<?= \app\components\widgets\Navigation::widget(); ?>
+	<?= \app\widgets\Navigation::widget(); ?>
 	<div class="row">
 		<div class="col-xs-12 no-padding" id="page-content">
 			<?= $content ?>
 		</div>
 	</div>
 </div>
-<?= \app\components\widgets\ConfirmModal::widget(); ?>
+<?= \app\widgets\ConfirmModal::widget(); ?>
 <?php $this->endBody() ?>
 </body>
 </html>

@@ -5,7 +5,7 @@
 use yii\web\View;
 ?>
 
-<?php \app\components\widgets\Logo::begin() ?>
+<?php \app\widgets\Logo::begin() ?>
 <?php $form = \yii\widgets\ActiveForm::begin([
 	"fieldClass" => "\\app\\core\\ActiveField",
 	"id" => "user-login-form",
@@ -24,4 +24,4 @@ use yii\web\View;
 	<button class="btn btn-danger btn-lg" id="register-button" type="button">Регистрация</button>
 </div>
 <?php \yii\widgets\ActiveForm::end() ?>
-<?php \app\components\widgets\Logo::end() ?>
+<?php \app\widgets\Logo::end() ?>

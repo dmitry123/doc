@@ -2,7 +2,7 @@
 
 namespace app\modules\security;
 
-use app\components\Module;
+use app\core\Module;
 
 class SecurityModule extends Module {
 

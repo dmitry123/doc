@@ -2,9 +2,9 @@
 
 namespace app\controllers;
 
-use app\components\ActiveRecord;
-use app\components\Controller;
-use app\components\FormModel;
+use app\core\ActiveRecord;
+use app\core\Controller;
+use app\core\FormModel;
 use app\models\Employee;
 use yii\base\Exception;
 

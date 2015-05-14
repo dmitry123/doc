@@ -2,7 +2,7 @@
 
 namespace app\modules\doc\extensions;
 
-use app\components\Ext;
+use app\core\Ext;
 
 class PlantationMenuExt extends Ext {
 

@@ -2,12 +2,12 @@
 
 namespace app\controllers;
 
-use app\components\Controller;
-use app\components\Ext;
-use app\components\ExtFactory;
-use app\components\Module;
-use app\components\Table;
-use app\components\Widget;
+use app\core\Controller;
+use app\core\Ext;
+use app\core\ExtFactory;
+use app\core\Module;
+use app\core\Table;
+use app\core\Widget;
 use yii\base\Exception;
 
 class ExtController extends Controller {

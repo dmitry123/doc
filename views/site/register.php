@@ -5,9 +5,9 @@
  */
 use yii\web\View;
 
-print \app\components\widgets\Logo::widget([
-	"body" => \app\components\widgets\AutoForm::widget([
-		"model" => \app\components\forms\UserForm::createWithScenario("register"),
+print \app\widgets\Logo::widget([
+	"body" => \app\widgets\AutoForm::widget([
+		"model" => \app\forms\UserForm::createWithScenario("register"),
 		"url" => "user/register",
 		"id" => "user-register-form",
 		"except" => [

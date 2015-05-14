@@ -2,7 +2,7 @@
 
 namespace app\modules\plantation\controllers;
 
-use app\components\Controller;
+use app\core\Controller;
 
 class MasterController extends Controller {
 
@@ -13,7 +13,7 @@ class MasterController extends Controller {
 	public function behaviors() {
 		return parent::behaviors() + [
 			"access" => [
-				"class" => "app\\components\\filters\\AccessFilter",
+				"class" => "app\\filters\\AccessFilter",
 				"roles" => [ "super", "admin" ]
 			]
 		];

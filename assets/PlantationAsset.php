@@ -2,7 +2,7 @@
 
 namespace app\assets;
 
-use app\components\AssetBundle;
+use app\core\AssetBundle;
 
 class PlantationAsset extends AssetBundle {
 

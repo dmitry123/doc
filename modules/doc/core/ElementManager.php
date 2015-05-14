@@ -2,7 +2,7 @@
 
 namespace app\modules\doc\core;
 
-use app\components\TypeManager;
+use app\core\TypeManager;
 
 class ElementManager extends TypeManager {
 

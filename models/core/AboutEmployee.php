@@ -2,7 +2,7 @@
 
 namespace app\models\core;
 
-use app\components\ViewTrait;
+use app\core\ViewTrait;
 
 class AboutEmployee extends Employee {
 

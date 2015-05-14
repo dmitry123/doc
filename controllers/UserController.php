@@ -2,8 +2,8 @@
 
 namespace app\controllers;
 
-use app\components\Controller;
-use app\components\forms\UserForm;
+use app\core\Controller;
+use app\forms\UserForm;
 use app\models\core\Employee;
 use app\models\core\User;
 use yii\base\Exception;

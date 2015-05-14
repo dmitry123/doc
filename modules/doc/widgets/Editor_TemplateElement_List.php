@@ -2,8 +2,8 @@
 
 namespace app\modules\doc\widgets;
 
-use app\components\TypeManager;
-use app\components\Widget;
+use app\core\TypeManager;
+use app\core\Widget;
 use app\modules\doc\core\ElementManager;
 use yii\base\Exception;
 
