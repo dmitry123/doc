@@ -11,9 +11,6 @@ class CoreAsset extends AssetBundle {
 		"css/message.css",
 		"css/panel.css",
 		"css/table.css",
-		"css/glyphicons-filetypes.css",
-		"css/glyphicons-halflings.css",
-		"css/glyphicons-social.css",
 		"css/font-awesome.css"
 	];
 
@@ -25,6 +22,7 @@ class CoreAsset extends AssetBundle {
 		"js/loading.js",
 		"js/table.js",
 		"js/panel.js",
+        "js/context.js"
 //		"js/object.js"
 	];
 

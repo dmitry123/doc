@@ -6,6 +6,7 @@ use app\core\Controller;
 use app\core\Ext;
 use app\core\ExtFactory;
 use app\core\Module;
+use app\core\PageFactory;
 use app\core\Table;
 use app\core\Widget;
 use yii\base\Exception;
@@ -15,7 +16,24 @@ class ExtController extends Controller {
 	public function actionLoad() {
 		try {
 			/** @var $ext Ext */
-			$ext = ExtFactory::getFactory()->createWithModule($this->requireQuery("module"),
+			$ext = ExtFactory::getFactory()->createEx($this->requireQuery("module"),
+				$this->requireQuery("ext"), $this->getQuery("params", [])
+			);
+			if (empty($ext)) {
+				$this->error("Расширение не поддерживается этим модулем");
+			}
+			$this->leave([
+				"component" => $ext->load()
+			]);
+		} catch (\Exception $e) {
+			$this->exception($e);
+		}
+	}
+
+	public function actionPage() {
+		try {
+			/** @var $ext Ext */
+			$ext = PageFactory::getFactory()->createEx($this->requireQuery("module"),
 				$this->requireQuery("ext"), $this->getQuery("params", [])
 			);
 			if (empty($ext)) {

@@ -4,7 +4,7 @@ namespace app\modules\doc\extensions;
 
 use app\core\Ext;
 
-class PlantationMenuExt extends Ext {
+class PlantationMenu extends Ext {
 
 	function load() {
 		return [

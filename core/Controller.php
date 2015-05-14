@@ -7,7 +7,6 @@ use yii\base\ErrorException;
 use yii\base\Model;
 use yii\base\Widget;
 use yii\helpers\ArrayHelper;
-use yii\web\Session;
 
 abstract class Controller extends \yii\web\Controller {
 
@@ -75,7 +74,7 @@ abstract class Controller extends \yii\web\Controller {
 	 * @param array $parameters - View parameters
 	 * @return string - Just rendered content
 	 */
-	public function render2($layout, $view, $parameters = []) {
+	public function renderEx($layout, $view, $parameters = []) {
 		$this->layout = $layout;
 		return $this->render($view, $parameters);
 	}

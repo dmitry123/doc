@@ -4,7 +4,7 @@ namespace app\modules\doc\extensions;
 
 use app\core\Ext;
 
-class PlantationMasterExt extends Ext {
+class PlantationMaster extends Ext {
 
 	public $item = null;
 

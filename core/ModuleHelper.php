@@ -171,6 +171,24 @@ class ModuleHelper {
 		}
 	}
 
+	/**
+	 * Create identification number for some component
+	 * by name of module
+	 *
+	 * @param $module string name of module
+	 * @param $component string name of module component
+	 * @param $id string|int component's identification number
+	 *
+	 * @return string|null path to component class
+	 */
+	public static function createPath($module, $component, $id) {
+		if ($module = \Yii::$app->getModule($module)) {
+			return preg_replace("/\\\\\\w+$/", "\\$component\\$id", $module->className());
+		} else {
+			return null;
+		}
+	}
+
 	private static $_modules = null;
 	private static $_allowed = null;
 }

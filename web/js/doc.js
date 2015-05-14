@@ -54,6 +54,30 @@ var Doc_File_Table = {
 	}
 };
 
+var Doc_TemplateContentEditor_Widget = {
+    ready: function() {
+        $(".doc-template-content-editor").menu({
+            menu: {
+                "editor-insert-element": {
+                    "label": "Вставить элемент",
+                    "icon": "fa fa-tags"
+                },
+                "editor-insert-macros": {
+                    "label": "Вставить макрос",
+                    "icon": "fa fa-bookmark"
+                },
+                "editor-insert-reference": {
+                    "label": "Вставить ссылку",
+                    "icon": "fa fa-link"
+                }
+            },
+            click: function(c) {
+                console.log(c);
+            }
+        });
+    }
+};
+
 $(document).ready(function() {
 
 	$.fn.fileinput.defaults = $.extend($.fn.fileinput.defaults, {
@@ -89,4 +113,5 @@ $(document).ready(function() {
 
 	Doc_Navigation_Menu.ready();
 	Doc_File_Table.ready();
+    Doc_TemplateContentEditor_Widget.ready();
 });

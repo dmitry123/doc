@@ -39,13 +39,13 @@ class TemplateFactory extends AbstractFactory {
 			}
 			$src = FileUploader::getUploader()->getDirectory($file->{"path"});
 			$path = FileUploader::getUploader()->generateName();
-			$this->castToHtml($src);
-			while (!file_exists($src.".".static::EXT)) {
-				sleep(1);
-			}
-			if (!@rename($src.".".static::EXT, FileUploader::getUploader()->getDirectory($path))) {
+            FileConverter::getHtmlConverter()
+                ->convert($src)
+                ->wait()
+                ->rename(FileUploader::getUploader()->getDirectory($path));
+			/*if (!@rename($src.".".static::EXT, FileUploader::getUploader()->getDirectory($path))) {
 				throw new Exception("Can't rename just generated template file \"". error_get_last()["message"] ."\"");
-			}
+			}*/
 			$template = new File([
 					"path" => $path,
 					"employee_id" => EmployeeHelper::getHelper()->getEmployee()->{"id"},
@@ -75,11 +75,10 @@ class TemplateFactory extends AbstractFactory {
 		} else {
 			$py = ".\\python";
 		}
-		$cmd = "$py vendor/unoconv/unoconv.py -f ".static::EXT." $src";
+		$cmd = "$py vendor/unoconv/unoconv -f ".static::EXT." $src";
 		$msg = system("$cmd", $r);
 		if ($r !== 0) {
 			throw new Exception("Converter returned code \"$r\" with error message \"$msg\" while executing command \"$cmd\"");
 		}
-		sleep(1);
 	}
 }

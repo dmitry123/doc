@@ -5,7 +5,7 @@ namespace app\core;
 use app\filters\AccessFilter;
 use yii\base\Exception;
 
-class ExtFactory extends AbstractFactory {
+class PageFactory extends AbstractFactory {
 
 	/**
 	 * Produce instance of some component via
@@ -20,13 +20,12 @@ class ExtFactory extends AbstractFactory {
 	 * @param $params array with class parameters
 	 *    which copies to itself
 	 *
-	 * @return Ext instance of extension component
-	 * 	for module
+	 * @return mixed instance of something
 	 *
 	 * @throws Exception
 	 */
 	public function createEx($module, $id, $params = []) {
-		if (!($class = ModuleHelper::createPath($module, "extensions", $id)) || !class_exists($class)) {
+		if (!($class = ModuleHelper::createPath($module, "pages", $id)) || !class_exists($class)) {
 			return null;
 		} else if ($module = \Yii::$app->getModule($module)) {
 			if (!$access = $module->getBehavior("access")) {
@@ -37,39 +36,10 @@ class ExtFactory extends AbstractFactory {
 				return null;
 			}
 		}
-		if (!($instance = \Yii::createObject([ "class" => $class ] + $params)) instanceof Ext) {
-			throw new Exception("Extension must be an instance of [app\\core\\Ext] class");
+		if (!($instance = \Yii::createObject([ "class" => $class ] + $params)) instanceof Page) {
+			throw new Exception("Extension must be an instance of [app\\core\\Page] class");
 		}
 		return $instance;
-	}
-
-	/**
-	 * Try to load extension by it's identification number
-	 * for some module
-	 *
-	 * @param $module string module identification
-	 *  number
-	 *
-	 * @param $id string extension identification
-	 *  number
-	 *
-	 * @param $default mixed default parameter, which
-	 * 	returns if extension doesn't exists
-	 *
-	 * @param $params array with parameters which copies
-	 *    to extension class
-	 *
-	 * @return string with content, that returns extension
-	 *    or empty string
-	 *
-	 * @throws Exception
-	 */
-	public function loadIfCan($module, $id, $default = null, $params = []) {
-		if ($ext = $this->createEx($module, $id, $params)) {
-			return $ext->load();
-		} else {
-			return $default;
-		}
 	}
 
 	/**

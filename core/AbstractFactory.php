@@ -34,7 +34,7 @@ abstract class AbstractFactory implements Factory {
 	 *
 	 * @return mixed instance of something
 	 */
-	public function createWithModule($module, $id, $params = []) {
+	public function createEx($module, $id, $params = []) {
 		return $this->create($id, $params);
 	}
 
