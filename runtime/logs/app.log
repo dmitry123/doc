@@ -57952,3 +57952,1959 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1431690579.12
     'REQUEST_TIME' => 1431690579
 ]
+2015-05-15 04:34:07 [127.0.0.1][2][-][error][Exception] exception 'Exception' with message 'That action requires body parameter "id"' in D:\hosts\doc\core\Controller.php:291
+Stack trace:
+#0 D:\hosts\doc\modules\doc\controllers\FileController.php(63): app\core\Controller->requirePost('id')
+#1 [internal function]: app\modules\doc\controllers\FileController->actionDelete()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('delete', Array)
+#5 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('doc/file/delete', Array)
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2015-05-15 04:34:07 [127.0.0.1][2][-][info][application] $_POST = [
+    'file' => '31'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    'USER_LOGIN' => 'system'
+    'USER_ID' => 2
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+    'EMPLOYEE_ID' => 1
+    'EMPLOYEE_SURNAME' => 'Савонин'
+    'EMPLOYEE_NAME' => 'Дмитрий'
+    'EMPLOYEE_PATRONYMIC' => 'Александрович'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '7'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ORIGIN' => 'http://www.doc.my'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '62278'
+    'REDIRECT_URL' => '/doc/file/delete'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/file/delete'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431693247.541
+    'REQUEST_TIME' => 1431693247
+]
+2015-05-15 04:49:57 [127.0.0.1][2][-][error][yii\base\Exception] exception 'yii\base\Exception' with message 'Can't resolve file with "" identification number' in D:\hosts\doc\modules\doc\controllers\EditorController.php:15
+Stack trace:
+#0 [internal function]: app\modules\doc\controllers\EditorController->actionView()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('view', Array)
+#4 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('doc/editor/view', Array)
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#7 {main}
+2015-05-15 04:49:57 [127.0.0.1][2][-][info][application] $_GET = [
+    'file' => '50'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    'USER_LOGIN' => 'system'
+    'USER_ID' => 2
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+    'EMPLOYEE_ID' => 1
+    'EMPLOYEE_SURNAME' => 'Савонин'
+    'EMPLOYEE_NAME' => 'Дмитрий'
+    'EMPLOYEE_PATRONYMIC' => 'Александрович'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '62051'
+    'REDIRECT_QUERY_STRING' => 'file=50'
+    'REDIRECT_URL' => '/doc/editor/view'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'file=50'
+    'REQUEST_URI' => '/doc/editor/view?file=50'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431694197.504
+    'REQUEST_TIME' => 1431694197
+]
+2015-05-15 04:50:09 [127.0.0.1][2][-][error][yii\base\Exception] exception 'yii\base\Exception' with message 'Can't resolve file with "" identification number' in D:\hosts\doc\modules\doc\controllers\EditorController.php:15
+Stack trace:
+#0 [internal function]: app\modules\doc\controllers\EditorController->actionView()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('view', Array)
+#4 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('doc/editor/view', Array)
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#7 {main}
+2015-05-15 04:50:09 [127.0.0.1][2][-][info][application] $_GET = [
+    'file' => '20'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    'USER_LOGIN' => 'system'
+    'USER_ID' => 2
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+    'EMPLOYEE_ID' => 1
+    'EMPLOYEE_SURNAME' => 'Савонин'
+    'EMPLOYEE_NAME' => 'Дмитрий'
+    'EMPLOYEE_PATRONYMIC' => 'Александрович'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '62061'
+    'REDIRECT_QUERY_STRING' => 'file=20'
+    'REDIRECT_URL' => '/doc/editor/view'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'file=20'
+    'REQUEST_URI' => '/doc/editor/view?file=20'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431694209.664
+    'REQUEST_TIME' => 1431694209
+]
+2015-05-15 05:51:05 [127.0.0.1][-][-][error][yii\base\Exception] exception 'yii\base\Exception' with message 'Grid provider model mustn't be empty field' in D:\hosts\doc\core\GridProviderEx.php:55
+Stack trace:
+#0 D:\hosts\doc\core\ActiveDataProvider.php(87): app\core\GridProviderEx->getQuery()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\Object.php(107): app\core\ActiveDataProvider->init()
+#2 D:\hosts\doc\controllers\ExtController.php(85): yii\base\Object->__construct()
+#3 [internal function]: app\controllers\ExtController->actionTable()
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('table', Array)
+#7 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('ext/table', Array)
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2015-05-15 05:51:05 [127.0.0.1][-][-][info][application] $_GET = [
+    'widget' => 'app\\widgets\\Grid'
+    'provider' => 'app\\core\\GridProviderEx'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '64129'
+    'REDIRECT_QUERY_STRING' => 'widget=app%5Cwidgets%5CGrid&provider=app%5Ccore%5CGridProviderEx'
+    'REDIRECT_URL' => '/ext/table'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'widget=app%5Cwidgets%5CGrid&provider=app%5Ccore%5CGridProviderEx'
+    'REQUEST_URI' => '/ext/table?widget=app%5Cwidgets%5CGrid&provider=app%5Ccore%5CGridProviderEx'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431697865.887
+    'REQUEST_TIME' => 1431697865
+]
+2015-05-15 05:55:07 [127.0.0.1][-][-][error][yii\base\Exception] exception 'yii\base\Exception' with message 'File's identification number mustn't be empty' in D:\hosts\doc\modules\doc\grids\TemplateManagerGridProvider.php:59
+Stack trace:
+#0 D:\hosts\doc\core\ActiveDataProvider.php(87): app\modules\doc\grids\TemplateManagerGridProvider->getQuery()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\Object.php(107): app\core\ActiveDataProvider->init()
+#2 D:\hosts\doc\modules\doc\widgets\views\File_TemplateManager_Viewer.php(20): yii\base\Object->__construct()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\hosts\doc\mo...')
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\hosts\doc\mo...', Array)
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\hosts\doc\mo...', Array, Object(app\modules\doc\widgets\File_TemplateManager_Viewer))
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php(182): yii\base\View->render('File_TemplateMa...', Array, Object(app\modules\doc\widgets\File_TemplateManager_Viewer))
+#7 D:\hosts\doc\modules\doc\widgets\File_TemplateManager_Viewer.php(14): yii\base\Widget->render('File_TemplateMa...', Array)
+#8 D:\hosts\doc\controllers\ExtController.php(64): app\modules\doc\widgets\File_TemplateManager_Viewer->run()
+#9 [internal function]: app\controllers\ExtController->actionWidget()
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('widget', Array)
+#13 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('ext/widget', Array)
+#14 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#16 {main}
+2015-05-15 05:55:07 [127.0.0.1][-][-][info][application] $_GET = [
+    'module' => 'doc'
+    'class' => 'File_TemplateManager_Viewer'
+    'config' => [
+        'file' => '37'
+    ]
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '64162'
+    'REDIRECT_QUERY_STRING' => 'module=doc&class=File_TemplateManager_Viewer&config%5Bfile%5D=37'
+    'REDIRECT_URL' => '/ext/widget'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'module=doc&class=File_TemplateManager_Viewer&config%5Bfile%5D=37'
+    'REQUEST_URI' => '/ext/widget?module=doc&class=File_TemplateManager_Viewer&config%5Bfile%5D=37'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431698107.448
+    'REQUEST_TIME' => 1431698107
+]
+2015-05-15 05:57:23 [127.0.0.1][-][-][error][yii\base\Exception] exception 'yii\base\Exception' with message 'File's identification number mustn't be empty' in D:\hosts\doc\modules\doc\grids\TemplateManagerGridProvider.php:57
+Stack trace:
+#0 D:\hosts\doc\core\ActiveDataProvider.php(87): app\modules\doc\grids\TemplateManagerGridProvider->getQuery()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\Object.php(107): app\core\ActiveDataProvider->init()
+#2 D:\hosts\doc\controllers\ExtController.php(85): yii\base\Object->__construct()
+#3 [internal function]: app\controllers\ExtController->actionTable()
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('table', Array)
+#7 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('ext/table', Array)
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2015-05-15 05:57:23 [127.0.0.1][-][-][info][application] $_GET = [
+    'widget' => 'app\\widgets\\Grid'
+    'provider' => 'app\\modules\\doc\\grids\\TemplateManagerGridProvider'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '64207'
+    'REDIRECT_QUERY_STRING' => 'widget=app%5Cwidgets%5CGrid&provider=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider'
+    'REDIRECT_URL' => '/ext/table'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'widget=app%5Cwidgets%5CGrid&provider=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider'
+    'REQUEST_URI' => '/ext/table?widget=app%5Cwidgets%5CGrid&provider=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431698243.859
+    'REQUEST_TIME' => 1431698243
+]
+2015-05-15 06:00:48 [127.0.0.1][-][-][error][yii\base\Exception] exception 'yii\base\Exception' with message 'File's identification number mustn't be empty' in D:\hosts\doc\modules\doc\grids\TemplateManagerGridProvider.php:57
+Stack trace:
+#0 D:\hosts\doc\core\ActiveDataProvider.php(104): app\modules\doc\grids\TemplateManagerGridProvider->getQuery()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\Object.php(107): app\core\ActiveDataProvider->init()
+#2 D:\hosts\doc\core\ActiveDataProvider.php(95): yii\base\Object->__construct(Array)
+#3 D:\hosts\doc\controllers\ExtController.php(85): app\core\ActiveDataProvider->__construct()
+#4 [internal function]: app\controllers\ExtController->actionTable()
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#7 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('table', Array)
+#8 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('ext/table', Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2015-05-15 06:00:48 [127.0.0.1][-][-][info][application] $_GET = [
+    'widget' => 'app\\widgets\\Grid'
+    'provider' => 'app\\modules\\doc\\grids\\TemplateManagerGridProvider'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '64232'
+    'REDIRECT_QUERY_STRING' => 'widget=app%5Cwidgets%5CGrid&provider=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider'
+    'REDIRECT_URL' => '/ext/table'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'widget=app%5Cwidgets%5CGrid&provider=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider'
+    'REQUEST_URI' => '/ext/table?widget=app%5Cwidgets%5CGrid&provider=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431698448.541
+    'REQUEST_TIME' => 1431698448
+]
+2015-05-15 06:02:06 [127.0.0.1][-][-][error][yii\base\Exception] exception 'yii\base\Exception' with message 'File's identification number mustn't be empty' in D:\hosts\doc\modules\doc\grids\TemplateManagerGridProvider.php:57
+Stack trace:
+#0 D:\hosts\doc\core\ActiveDataProvider.php(104): app\modules\doc\grids\TemplateManagerGridProvider->getQuery()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\Object.php(107): app\core\ActiveDataProvider->init()
+#2 D:\hosts\doc\core\ActiveDataProvider.php(95): yii\base\Object->__construct(Array)
+#3 D:\hosts\doc\controllers\ExtController.php(85): app\core\ActiveDataProvider->__construct()
+#4 [internal function]: app\controllers\ExtController->actionTable()
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#7 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('table', Array)
+#8 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('ext/table', Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2015-05-15 06:02:06 [127.0.0.1][-][-][info][application] $_GET = [
+    'widget' => 'app\\widgets\\Grid'
+    'provider' => 'app\\modules\\doc\\grids\\TemplateManagerGridProvider'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '64255'
+    'REDIRECT_QUERY_STRING' => 'widget=app%5Cwidgets%5CGrid&provider=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider'
+    'REDIRECT_URL' => '/ext/table'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'widget=app%5Cwidgets%5CGrid&provider=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider'
+    'REQUEST_URI' => '/ext/table?widget=app%5Cwidgets%5CGrid&provider=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431698526.919
+    'REQUEST_TIME' => 1431698526
+]
+2015-05-15 06:02:39 [127.0.0.1][-][-][error][yii\base\Exception] exception 'yii\base\Exception' with message 'File's identification number mustn't be empty' in D:\hosts\doc\modules\doc\grids\TemplateManagerGridProvider.php:57
+Stack trace:
+#0 D:\hosts\doc\core\ActiveDataProvider.php(104): app\modules\doc\grids\TemplateManagerGridProvider->getQuery()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\Object.php(107): app\core\ActiveDataProvider->init()
+#2 D:\hosts\doc\core\ActiveDataProvider.php(95): yii\base\Object->__construct(Array)
+#3 D:\hosts\doc\controllers\ExtController.php(85): app\core\ActiveDataProvider->__construct()
+#4 [internal function]: app\controllers\ExtController->actionTable()
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#7 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('table', Array)
+#8 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('ext/table', Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2015-05-15 06:02:39 [127.0.0.1][-][-][info][application] $_GET = [
+    'widget' => 'app\\widgets\\Grid'
+    'provider' => 'app\\modules\\doc\\grids\\TemplateManagerGridProvider'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '64266'
+    'REDIRECT_QUERY_STRING' => 'widget=app%5Cwidgets%5CGrid&provider=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider'
+    'REDIRECT_URL' => '/ext/table'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'widget=app%5Cwidgets%5CGrid&provider=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider'
+    'REQUEST_URI' => '/ext/table?widget=app%5Cwidgets%5CGrid&provider=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431698559.398
+    'REQUEST_TIME' => 1431698559
+]
+2015-05-15 06:03:49 [127.0.0.1][-][-][error][yii\base\Exception] exception 'yii\base\Exception' with message 'File's identification number mustn't be empty' in D:\hosts\doc\modules\doc\grids\TemplateManagerGridProvider.php:57
+Stack trace:
+#0 D:\hosts\doc\core\ActiveDataProvider.php(104): app\modules\doc\grids\TemplateManagerGridProvider->getQuery()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\Object.php(107): app\core\ActiveDataProvider->init()
+#2 D:\hosts\doc\core\ActiveDataProvider.php(95): yii\base\Object->__construct(Array)
+#3 D:\hosts\doc\controllers\ExtController.php(85): app\core\ActiveDataProvider->__construct()
+#4 [internal function]: app\controllers\ExtController->actionTable()
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#7 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('table', Array)
+#8 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('ext/table', Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2015-05-15 06:03:49 [127.0.0.1][-][-][info][application] $_GET = [
+    'widget' => 'app\\widgets\\Grid'
+    'provider' => 'app\\modules\\doc\\grids\\TemplateManagerGridProvider'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '64267'
+    'REDIRECT_QUERY_STRING' => 'widget=app%5Cwidgets%5CGrid&provider=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider'
+    'REDIRECT_URL' => '/ext/table'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'widget=app%5Cwidgets%5CGrid&provider=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider'
+    'REQUEST_URI' => '/ext/table?widget=app%5Cwidgets%5CGrid&provider=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431698629.379
+    'REQUEST_TIME' => 1431698629
+]
+2015-05-15 06:04:20 [127.0.0.1][-][-][error][yii\base\Exception] exception 'yii\base\Exception' with message 'File's identification number mustn't be empty' in D:\hosts\doc\modules\doc\grids\TemplateManagerGridProvider.php:57
+Stack trace:
+#0 D:\hosts\doc\core\ActiveDataProvider.php(104): app\modules\doc\grids\TemplateManagerGridProvider->getQuery()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\Object.php(107): app\core\ActiveDataProvider->init()
+#2 D:\hosts\doc\core\ActiveDataProvider.php(95): yii\base\Object->__construct(Array)
+#3 D:\hosts\doc\controllers\ExtController.php(85): app\core\ActiveDataProvider->__construct()
+#4 [internal function]: app\controllers\ExtController->actionTable()
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#7 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('table', Array)
+#8 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('ext/table', Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2015-05-15 06:04:20 [127.0.0.1][-][-][info][application] $_GET = [
+    'widget' => 'app\\widgets\\Grid'
+    'provider' => 'app\\modules\\doc\\grids\\TemplateManagerGridProvider'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '64268'
+    'REDIRECT_QUERY_STRING' => 'widget=app%5Cwidgets%5CGrid&provider=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider'
+    'REDIRECT_URL' => '/ext/table'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'widget=app%5Cwidgets%5CGrid&provider=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider'
+    'REQUEST_URI' => '/ext/table?widget=app%5Cwidgets%5CGrid&provider=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431698660.472
+    'REQUEST_TIME' => 1431698660
+]
+2015-05-15 06:08:40 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Cannot unset string offsets' in D:\hosts\doc\controllers\ExtController.php:81
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-05-15 06:08:39 [127.0.0.1][-][-][info][application] $_GET = [
+    'widget' => 'app\\widgets\\Grid'
+    'provider' => 'app\\modules\\doc\\grids\\TemplateManagerGridProvider'
+    'config' => [
+        'file' => '37'
+    ]
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '64311'
+    'REDIRECT_QUERY_STRING' => 'widget=app%5Cwidgets%5CGrid&provider=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider&config%5Bfile%5D=37'
+    'REDIRECT_URL' => '/ext/table'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'widget=app%5Cwidgets%5CGrid&provider=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider&config%5Bfile%5D=37'
+    'REQUEST_URI' => '/ext/table?widget=app%5Cwidgets%5CGrid&provider=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider&config%5Bfile%5D=37'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431698919.931
+    'REQUEST_TIME' => 1431698919
+]
+2015-05-15 06:09:27 [127.0.0.1][-][-][error][yii\base\Exception] exception 'yii\base\Exception' with message 'File's identification number mustn't be empty' in D:\hosts\doc\modules\doc\grids\TemplateManagerGridProvider.php:57
+Stack trace:
+#0 D:\hosts\doc\core\ActiveDataProvider.php(104): app\modules\doc\grids\TemplateManagerGridProvider->getQuery()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\Object.php(107): app\core\ActiveDataProvider->init()
+#2 D:\hosts\doc\core\ActiveDataProvider.php(95): yii\base\Object->__construct(Array)
+#3 D:\hosts\doc\controllers\ExtController.php(88): app\core\ActiveDataProvider->__construct()
+#4 [internal function]: app\controllers\ExtController->actionTable()
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#7 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('table', Array)
+#8 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('ext/table', Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2015-05-15 06:09:27 [127.0.0.1][-][-][info][application] $_GET = [
+    'widget' => 'app\\widgets\\Grid'
+    'provider' => 'app\\modules\\doc\\grids\\TemplateManagerGridProvider'
+    'config' => [
+        'file' => '37'
+    ]
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '64312'
+    'REDIRECT_QUERY_STRING' => 'widget=app%5Cwidgets%5CGrid&provider=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider&config%5Bfile%5D=37'
+    'REDIRECT_URL' => '/ext/table'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'widget=app%5Cwidgets%5CGrid&provider=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider&config%5Bfile%5D=37'
+    'REQUEST_URI' => '/ext/table?widget=app%5Cwidgets%5CGrid&provider=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider&config%5Bfile%5D=37'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431698967.207
+    'REQUEST_TIME' => 1431698967
+]
+2015-05-15 06:09:54 [127.0.0.1][-][-][error][yii\base\Exception] exception 'yii\base\Exception' with message 'File's identification number mustn't be empty' in D:\hosts\doc\modules\doc\grids\TemplateManagerGridProvider.php:57
+Stack trace:
+#0 D:\hosts\doc\core\ActiveDataProvider.php(104): app\modules\doc\grids\TemplateManagerGridProvider->getQuery()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\Object.php(107): app\core\ActiveDataProvider->init()
+#2 D:\hosts\doc\core\ActiveDataProvider.php(95): yii\base\Object->__construct(Array)
+#3 D:\hosts\doc\controllers\ExtController.php(88): app\core\ActiveDataProvider->__construct()
+#4 [internal function]: app\controllers\ExtController->actionTable()
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#7 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('table', Array)
+#8 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('ext/table', Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2015-05-15 06:09:53 [127.0.0.1][-][-][info][application] $_GET = [
+    'widget' => 'app\\widgets\\Grid'
+    'provider' => 'app\\modules\\doc\\grids\\TemplateManagerGridProvider'
+    'config' => [
+        'file' => '37'
+    ]
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '64315'
+    'REDIRECT_QUERY_STRING' => 'widget=app%5Cwidgets%5CGrid&provider=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider&config%5Bfile%5D=37'
+    'REDIRECT_URL' => '/ext/table'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'widget=app%5Cwidgets%5CGrid&provider=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider&config%5Bfile%5D=37'
+    'REQUEST_URI' => '/ext/table?widget=app%5Cwidgets%5CGrid&provider=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider&config%5Bfile%5D=37'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431698993.991
+    'REQUEST_TIME' => 1431698993
+]
+2015-05-15 06:27:24 [127.0.0.1][-][-][error][yii\base\Exception] exception 'yii\base\Exception' with message 'File's identification number mustn't be empty' in D:\hosts\doc\modules\doc\grids\TemplateManagerGridProvider.php:57
+Stack trace:
+#0 D:\hosts\doc\core\ActiveDataProvider.php(134): app\modules\doc\grids\TemplateManagerGridProvider->getQuery()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\data\BaseDataProvider.php(79): app\core\ActiveDataProvider->prepareModels()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\data\BaseDataProvider.php(92): yii\data\BaseDataProvider->prepare()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Component.php(130): yii\data\BaseDataProvider->getModels()
+#4 D:\hosts\doc\widgets\Grid.php(164): yii\base\Component->__get('models')
+#5 D:\hosts\doc\widgets\Grid.php(85): app\widgets\Grid->renderBody()
+#6 D:\hosts\doc\widgets\Grid.php(53): app\widgets\Grid->renderTable()
+#7 D:\hosts\doc\controllers\ExtController.php(123): app\widgets\Grid->run()
+#8 [internal function]: app\controllers\ExtController->actionPanel()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('panel', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('ext/panel', Array)
+#13 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#15 {main}
+2015-05-15 06:27:24 [127.0.0.1][-][-][info][application] $_GET = [
+    'config' => [
+        'provider' => 'app\\modules\\doc\\grids\\TemplateManagerGridProvider'
+    ]
+    'widget' => 'app\\widgets\\Grid'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '64368'
+    'REDIRECT_QUERY_STRING' => 'config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider&widget=app%5Cwidgets%5CGrid'
+    'REDIRECT_URL' => '/ext/panel'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider&widget=app%5Cwidgets%5CGrid'
+    'REQUEST_URI' => '/ext/panel?config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider&widget=app%5Cwidgets%5CGrid'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431700044.279
+    'REQUEST_TIME' => 1431700044
+]
+2015-05-15 06:27:30 [127.0.0.1][-][-][error][yii\base\Exception] exception 'yii\base\Exception' with message 'File's identification number mustn't be empty' in D:\hosts\doc\modules\doc\grids\TemplateManagerGridProvider.php:57
+Stack trace:
+#0 D:\hosts\doc\core\ActiveDataProvider.php(134): app\modules\doc\grids\TemplateManagerGridProvider->getQuery()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\data\BaseDataProvider.php(79): app\core\ActiveDataProvider->prepareModels()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\data\BaseDataProvider.php(92): yii\data\BaseDataProvider->prepare()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Component.php(130): yii\data\BaseDataProvider->getModels()
+#4 D:\hosts\doc\widgets\Grid.php(164): yii\base\Component->__get('models')
+#5 D:\hosts\doc\widgets\Grid.php(85): app\widgets\Grid->renderBody()
+#6 D:\hosts\doc\widgets\Grid.php(53): app\widgets\Grid->renderTable()
+#7 D:\hosts\doc\controllers\ExtController.php(123): app\widgets\Grid->run()
+#8 [internal function]: app\controllers\ExtController->actionPanel()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('panel', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('ext/panel', Array)
+#13 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#15 {main}
+2015-05-15 06:27:30 [127.0.0.1][-][-][info][application] $_GET = [
+    'config' => [
+        'provider' => 'app\\modules\\doc\\grids\\TemplateManagerGridProvider'
+    ]
+    'widget' => 'app\\widgets\\Grid'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '64372'
+    'REDIRECT_QUERY_STRING' => 'config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider&widget=app%5Cwidgets%5CGrid'
+    'REDIRECT_URL' => '/ext/panel'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider&widget=app%5Cwidgets%5CGrid'
+    'REQUEST_URI' => '/ext/panel?config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider&widget=app%5Cwidgets%5CGrid'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431700050.8
+    'REQUEST_TIME' => 1431700050
+]
+2015-05-15 06:27:53 [127.0.0.1][-][-][error][yii\base\Exception] exception 'yii\base\Exception' with message 'File's identification number mustn't be empty' in D:\hosts\doc\modules\doc\grids\TemplateManagerGridProvider.php:57
+Stack trace:
+#0 D:\hosts\doc\core\ActiveDataProvider.php(134): app\modules\doc\grids\TemplateManagerGridProvider->getQuery()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\data\BaseDataProvider.php(79): app\core\ActiveDataProvider->prepareModels()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\data\BaseDataProvider.php(92): yii\data\BaseDataProvider->prepare()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Component.php(130): yii\data\BaseDataProvider->getModels()
+#4 D:\hosts\doc\widgets\Grid.php(164): yii\base\Component->__get('models')
+#5 D:\hosts\doc\widgets\Grid.php(85): app\widgets\Grid->renderBody()
+#6 D:\hosts\doc\widgets\Grid.php(53): app\widgets\Grid->renderTable()
+#7 D:\hosts\doc\controllers\ExtController.php(123): app\widgets\Grid->run()
+#8 [internal function]: app\controllers\ExtController->actionPanel()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('panel', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('ext/panel', Array)
+#13 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#15 {main}
+2015-05-15 06:27:53 [127.0.0.1][-][-][info][application] $_GET = [
+    'config' => [
+        'provider' => 'app\\modules\\doc\\grids\\TemplateManagerGridProvider'
+    ]
+    'widget' => 'app\\widgets\\Grid'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '64374'
+    'REDIRECT_QUERY_STRING' => 'config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider&widget=app%5Cwidgets%5CGrid'
+    'REDIRECT_URL' => '/ext/panel'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider&widget=app%5Cwidgets%5CGrid'
+    'REQUEST_URI' => '/ext/panel?config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider&widget=app%5Cwidgets%5CGrid'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431700073.301
+    'REQUEST_TIME' => 1431700073
+]
+2015-05-15 06:28:31 [127.0.0.1][-][-][error][yii\base\Exception] exception 'yii\base\Exception' with message 'File's identification number mustn't be empty' in D:\hosts\doc\modules\doc\grids\TemplateManagerGridProvider.php:57
+Stack trace:
+#0 D:\hosts\doc\core\ActiveDataProvider.php(134): app\modules\doc\grids\TemplateManagerGridProvider->getQuery()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\data\BaseDataProvider.php(79): app\core\ActiveDataProvider->prepareModels()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\data\BaseDataProvider.php(92): yii\data\BaseDataProvider->prepare()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Component.php(130): yii\data\BaseDataProvider->getModels()
+#4 D:\hosts\doc\widgets\Grid.php(164): yii\base\Component->__get('models')
+#5 D:\hosts\doc\widgets\Grid.php(85): app\widgets\Grid->renderBody()
+#6 D:\hosts\doc\widgets\Grid.php(53): app\widgets\Grid->renderTable()
+#7 D:\hosts\doc\controllers\ExtController.php(123): app\widgets\Grid->run()
+#8 [internal function]: app\controllers\ExtController->actionPanel()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('panel', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('ext/panel', Array)
+#13 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#15 {main}
+2015-05-15 06:28:31 [127.0.0.1][-][-][info][application] $_GET = [
+    'config' => [
+        'provider' => 'app\\modules\\doc\\grids\\TemplateManagerGridProvider'
+    ]
+    'widget' => 'app\\widgets\\Grid'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '64380'
+    'REDIRECT_QUERY_STRING' => 'config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider&widget=app%5Cwidgets%5CGrid'
+    'REDIRECT_URL' => '/ext/panel'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider&widget=app%5Cwidgets%5CGrid'
+    'REQUEST_URI' => '/ext/panel?config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider&widget=app%5Cwidgets%5CGrid'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431700111.446
+    'REQUEST_TIME' => 1431700111
+]
+2015-05-15 06:28:34 [127.0.0.1][-][-][error][yii\base\Exception] exception 'yii\base\Exception' with message 'File's identification number mustn't be empty' in D:\hosts\doc\modules\doc\grids\TemplateManagerGridProvider.php:57
+Stack trace:
+#0 D:\hosts\doc\core\ActiveDataProvider.php(134): app\modules\doc\grids\TemplateManagerGridProvider->getQuery()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\data\BaseDataProvider.php(79): app\core\ActiveDataProvider->prepareModels()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\data\BaseDataProvider.php(92): yii\data\BaseDataProvider->prepare()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Component.php(130): yii\data\BaseDataProvider->getModels()
+#4 D:\hosts\doc\widgets\Grid.php(164): yii\base\Component->__get('models')
+#5 D:\hosts\doc\widgets\Grid.php(85): app\widgets\Grid->renderBody()
+#6 D:\hosts\doc\widgets\Grid.php(53): app\widgets\Grid->renderTable()
+#7 D:\hosts\doc\controllers\ExtController.php(123): app\widgets\Grid->run()
+#8 [internal function]: app\controllers\ExtController->actionPanel()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('panel', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('ext/panel', Array)
+#13 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#15 {main}
+2015-05-15 06:28:34 [127.0.0.1][-][-][info][application] $_GET = [
+    'config' => [
+        'provider' => 'app\\modules\\doc\\grids\\TemplateManagerGridProvider'
+    ]
+    'widget' => 'app\\widgets\\Grid'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '64384'
+    'REDIRECT_QUERY_STRING' => 'config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider&widget=app%5Cwidgets%5CGrid'
+    'REDIRECT_URL' => '/ext/panel'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider&widget=app%5Cwidgets%5CGrid'
+    'REQUEST_URI' => '/ext/panel?config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider&widget=app%5Cwidgets%5CGrid'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431700114.243
+    'REQUEST_TIME' => 1431700114
+]
+2015-05-15 06:31:33 [127.0.0.1][-][-][error][yii\base\Exception] exception 'yii\base\Exception' with message 'File's identification number mustn't be empty' in D:\hosts\doc\modules\doc\grids\TemplateManagerGridProvider.php:57
+Stack trace:
+#0 D:\hosts\doc\core\ActiveDataProvider.php(134): app\modules\doc\grids\TemplateManagerGridProvider->getQuery()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\data\BaseDataProvider.php(79): app\core\ActiveDataProvider->prepareModels()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\data\BaseDataProvider.php(92): yii\data\BaseDataProvider->prepare()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Component.php(130): yii\data\BaseDataProvider->getModels()
+#4 D:\hosts\doc\widgets\Grid.php(164): yii\base\Component->__get('models')
+#5 D:\hosts\doc\widgets\Grid.php(85): app\widgets\Grid->renderBody()
+#6 D:\hosts\doc\widgets\Grid.php(53): app\widgets\Grid->renderTable()
+#7 D:\hosts\doc\controllers\ExtController.php(123): app\widgets\Grid->run()
+#8 [internal function]: app\controllers\ExtController->actionPanel()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('panel', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('ext/panel', Array)
+#13 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#15 {main}
+2015-05-15 06:31:33 [127.0.0.1][-][-][info][application] $_GET = [
+    'config' => [
+        'provider' => 'app\\modules\\doc\\grids\\TemplateManagerGridProvider'
+    ]
+    'widget' => 'app\\widgets\\Grid'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '64447'
+    'REDIRECT_QUERY_STRING' => 'config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider&widget=app%5Cwidgets%5CGrid'
+    'REDIRECT_URL' => '/ext/panel'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider&widget=app%5Cwidgets%5CGrid'
+    'REQUEST_URI' => '/ext/panel?config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider&widget=app%5Cwidgets%5CGrid'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431700293.879
+    'REQUEST_TIME' => 1431700293
+]
+2015-05-15 06:34:15 [127.0.0.1][2][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\grids\DocumentGridProvider::menuAlignment' in D:\hosts\doc\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 D:\hosts\doc\widgets\Grid.php(150): yii\base\Component->__get('menuAlignment')
+#1 D:\hosts\doc\widgets\Grid.php(184): app\widgets\Grid->renderMenu()
+#2 D:\hosts\doc\widgets\Grid.php(85): app\widgets\Grid->renderBody()
+#3 D:\hosts\doc\widgets\Grid.php(53): app\widgets\Grid->renderTable()
+#4 D:\hosts\doc\core\Widget.php(17): app\widgets\Grid->run()
+#5 D:\hosts\doc\widgets\Panel.php(151): app\core\Widget->call()
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\Object.php(107): app\widgets\Panel->init()
+#7 [internal function]: yii\base\Object->__construct(Array)
+#8 D:\hosts\doc\vendor\yiisoft\yii2\di\Container.php(372): ReflectionClass->newInstanceArgs(Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\di\Container.php(151): yii\di\Container->build('app\widgets\Pan...', Array, Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('app\widgets\Pan...', Array, Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php(95): yii\BaseYii::createObject(Array)
+#12 D:\hosts\doc\modules\doc\views\file\view.php(20): yii\base\Widget::widget(Array)
+#13 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\hosts\doc\mo...')
+#14 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\hosts\doc\mo...', Array)
+#15 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\hosts\doc\mo...', Array, Object(app\modules\doc\controllers\FileController))
+#16 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('view', Array, Object(app\modules\doc\controllers\FileController))
+#17 D:\hosts\doc\modules\doc\controllers\FileController.php(19): yii\base\Controller->render('view', Array)
+#18 [internal function]: app\modules\doc\controllers\FileController->actionView()
+#19 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#20 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#21 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('view', Array)
+#22 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('doc/file/view', Array)
+#23 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#24 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#25 {main}
+2015-05-15 06:34:15 [127.0.0.1][2][-][info][application] $_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    'USER_LOGIN' => 'system'
+    'USER_ID' => 2
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+    'EMPLOYEE_ID' => 1
+    'EMPLOYEE_SURNAME' => 'Савонин'
+    'EMPLOYEE_NAME' => 'Дмитрий'
+    'EMPLOYEE_PATRONYMIC' => 'Александрович'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/editor/view?file=40'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '55504'
+    'REDIRECT_URL' => '/doc/file/view'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/file/view'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431700455.449
+    'REQUEST_TIME' => 1431700455
+]
+2015-05-15 06:35:13 [127.0.0.1][-][-][error][yii\base\Exception] exception 'yii\base\Exception' with message 'File's identification number mustn't be empty' in D:\hosts\doc\modules\doc\grids\TemplateManagerGridProvider.php:59
+Stack trace:
+#0 D:\hosts\doc\core\ActiveDataProvider.php(134): app\modules\doc\grids\TemplateManagerGridProvider->getQuery()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\data\BaseDataProvider.php(79): app\core\ActiveDataProvider->prepareModels()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\data\BaseDataProvider.php(92): yii\data\BaseDataProvider->prepare()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Component.php(130): yii\data\BaseDataProvider->getModels()
+#4 D:\hosts\doc\widgets\Grid.php(164): yii\base\Component->__get('models')
+#5 D:\hosts\doc\widgets\Grid.php(85): app\widgets\Grid->renderBody()
+#6 D:\hosts\doc\widgets\Grid.php(53): app\widgets\Grid->renderTable()
+#7 D:\hosts\doc\controllers\ExtController.php(123): app\widgets\Grid->run()
+#8 [internal function]: app\controllers\ExtController->actionPanel()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('panel', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('ext/panel', Array)
+#13 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#15 {main}
+2015-05-15 06:35:13 [127.0.0.1][-][-][info][application] $_GET = [
+    'config' => [
+        'provider' => 'app\\modules\\doc\\grids\\TemplateManagerGridProvider'
+    ]
+    'widget' => 'app\\widgets\\Grid'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '55545'
+    'REDIRECT_QUERY_STRING' => 'config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider&widget=app%5Cwidgets%5CGrid'
+    'REDIRECT_URL' => '/ext/panel'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider&widget=app%5Cwidgets%5CGrid'
+    'REQUEST_URI' => '/ext/panel?config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CTemplateManagerGridProvider&widget=app%5Cwidgets%5CGrid'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431700513.831
+    'REQUEST_TIME' => 1431700513
+]
+2015-05-15 06:56:17 [127.0.0.1][-][-][error][yii\base\Exception] exception 'yii\base\Exception' with message 'File's identification number mustn't be empty' in D:\hosts\doc\modules\doc\grids\File_TemplateManager_Grid.php:59
+Stack trace:
+#0 D:\hosts\doc\core\ActiveDataProvider.php(134): app\modules\doc\grids\File_TemplateManager_Grid->getQuery()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\data\BaseDataProvider.php(79): app\core\ActiveDataProvider->prepareModels()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\data\BaseDataProvider.php(92): yii\data\BaseDataProvider->prepare()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Component.php(130): yii\data\BaseDataProvider->getModels()
+#4 D:\hosts\doc\widgets\Grid.php(164): yii\base\Component->__get('models')
+#5 D:\hosts\doc\widgets\Grid.php(85): app\widgets\Grid->renderBody()
+#6 D:\hosts\doc\widgets\Grid.php(53): app\widgets\Grid->renderTable()
+#7 D:\hosts\doc\controllers\ExtController.php(123): app\widgets\Grid->run()
+#8 [internal function]: app\controllers\ExtController->actionPanel()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('panel', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('ext/panel', Array)
+#13 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#15 {main}
+2015-05-15 06:56:17 [127.0.0.1][-][-][info][application] $_GET = [
+    'config' => [
+        'provider' => 'app\\modules\\doc\\grids\\File_TemplateManager_Grid'
+    ]
+    'widget' => 'app\\widgets\\Grid'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '55652'
+    'REDIRECT_QUERY_STRING' => 'config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CFile_TemplateManager_Grid&widget=app%5Cwidgets%5CGrid'
+    'REDIRECT_URL' => '/ext/panel'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CFile_TemplateManager_Grid&widget=app%5Cwidgets%5CGrid'
+    'REQUEST_URI' => '/ext/panel?config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CFile_TemplateManager_Grid&widget=app%5Cwidgets%5CGrid'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431701777.604
+    'REQUEST_TIME' => 1431701777
+]
+2015-05-15 06:59:12 [127.0.0.1][-][-][error][yii\base\Exception] exception 'yii\base\Exception' with message 'File's identification number mustn't be empty' in D:\hosts\doc\modules\doc\grids\File_TemplateManager_Grid.php:59
+Stack trace:
+#0 D:\hosts\doc\core\ActiveDataProvider.php(134): app\modules\doc\grids\File_TemplateManager_Grid->getQuery()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\data\BaseDataProvider.php(79): app\core\ActiveDataProvider->prepareModels()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\data\BaseDataProvider.php(92): yii\data\BaseDataProvider->prepare()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Component.php(130): yii\data\BaseDataProvider->getModels()
+#4 D:\hosts\doc\widgets\Grid.php(164): yii\base\Component->__get('models')
+#5 D:\hosts\doc\widgets\Grid.php(85): app\widgets\Grid->renderBody()
+#6 D:\hosts\doc\widgets\Grid.php(53): app\widgets\Grid->renderTable()
+#7 D:\hosts\doc\controllers\ExtController.php(123): app\widgets\Grid->run()
+#8 [internal function]: app\controllers\ExtController->actionPanel()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('panel', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('ext/panel', Array)
+#13 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#15 {main}
+2015-05-15 06:59:12 [127.0.0.1][-][-][info][application] $_GET = [
+    'config' => [
+        'provider' => 'app\\modules\\doc\\grids\\File_TemplateManager_Grid'
+    ]
+    'widget' => 'app\\widgets\\Grid'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '55697'
+    'REDIRECT_QUERY_STRING' => 'config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CFile_TemplateManager_Grid&widget=app%5Cwidgets%5CGrid'
+    'REDIRECT_URL' => '/ext/panel'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CFile_TemplateManager_Grid&widget=app%5Cwidgets%5CGrid'
+    'REQUEST_URI' => '/ext/panel?config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CFile_TemplateManager_Grid&widget=app%5Cwidgets%5CGrid'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431701952.243
+    'REQUEST_TIME' => 1431701952
+]
+2015-05-15 06:59:16 [127.0.0.1][-][-][error][yii\base\Exception] exception 'yii\base\Exception' with message 'File's identification number mustn't be empty' in D:\hosts\doc\modules\doc\grids\File_TemplateManager_Grid.php:59
+Stack trace:
+#0 D:\hosts\doc\core\ActiveDataProvider.php(134): app\modules\doc\grids\File_TemplateManager_Grid->getQuery()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\data\BaseDataProvider.php(79): app\core\ActiveDataProvider->prepareModels()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\data\BaseDataProvider.php(92): yii\data\BaseDataProvider->prepare()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Component.php(130): yii\data\BaseDataProvider->getModels()
+#4 D:\hosts\doc\widgets\Grid.php(164): yii\base\Component->__get('models')
+#5 D:\hosts\doc\widgets\Grid.php(85): app\widgets\Grid->renderBody()
+#6 D:\hosts\doc\widgets\Grid.php(53): app\widgets\Grid->renderTable()
+#7 D:\hosts\doc\controllers\ExtController.php(123): app\widgets\Grid->run()
+#8 [internal function]: app\controllers\ExtController->actionPanel()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('panel', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('ext/panel', Array)
+#13 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#15 {main}
+2015-05-15 06:59:16 [127.0.0.1][-][-][info][application] $_GET = [
+    'config' => [
+        'provider' => 'app\\modules\\doc\\grids\\File_TemplateManager_Grid'
+    ]
+    'widget' => 'app\\widgets\\Grid'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '55703'
+    'REDIRECT_QUERY_STRING' => 'config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CFile_TemplateManager_Grid&widget=app%5Cwidgets%5CGrid'
+    'REDIRECT_URL' => '/ext/panel'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CFile_TemplateManager_Grid&widget=app%5Cwidgets%5CGrid'
+    'REQUEST_URI' => '/ext/panel?config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CFile_TemplateManager_Grid&widget=app%5Cwidgets%5CGrid'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431701956.894
+    'REQUEST_TIME' => 1431701956
+]
+2015-05-15 07:00:15 [127.0.0.1][2][8m4dj3aknvlvqub1aul4vs9091][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\grids\DocumentGridProvider' not found' in D:\hosts\doc\modules\doc\views\file\view.php:17
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-05-15 07:00:14 [127.0.0.1][2][8m4dj3aknvlvqub1aul4vs9091][info][application] $_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    'USER_LOGIN' => 'system'
+    'USER_ID' => 2
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+    'EMPLOYEE_ID' => 1
+    'EMPLOYEE_SURNAME' => 'Савонин'
+    'EMPLOYEE_NAME' => 'Дмитрий'
+    'EMPLOYEE_PATRONYMIC' => 'Александрович'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/editor/view?file=38'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '55719'
+    'REDIRECT_URL' => '/doc/file/view'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/file/view'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431702014.977
+    'REQUEST_TIME' => 1431702014
+]
+2015-05-15 07:02:44 [127.0.0.1][2][-][error][yii\base\InvalidParamException] exception 'yii\base\InvalidParamException' with message 'The view file does not exist: D:\hosts\doc\modules\doc\widgets\views\File_MasterTable_Table.php' in D:\hosts\doc\vendor\yiisoft\yii2\base\View.php:226
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\hosts\doc\mo...', Array, Object(app\modules\doc\widgets\File_MasterTable_Table))
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php(182): yii\base\View->render('File_MasterTabl...', Array, Object(app\modules\doc\widgets\File_MasterTable_Table))
+#2 D:\hosts\doc\modules\doc\widgets\File_MasterTable_Table.php(24): yii\base\Widget->render('File_MasterTabl...', Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php(96): app\modules\doc\widgets\File_MasterTable_Table->run()
+#4 D:\hosts\doc\modules\doc\views\layouts\main.php(27): yii\base\Widget::widget(Array)
+#5 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\hosts\doc\mo...')
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\hosts\doc\mo...', Array)
+#7 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(382): yii\base\View->renderFile('D:\hosts\doc\mo...', Array, Object(app\modules\doc\controllers\FileController))
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(368): yii\base\Controller->renderContent('?<div id="doc-f...')
+#9 D:\hosts\doc\modules\doc\controllers\FileController.php(19): yii\base\Controller->render('view', Array)
+#10 [internal function]: app\modules\doc\controllers\FileController->actionView()
+#11 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#13 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('view', Array)
+#14 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('doc/file/view', Array)
+#15 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#17 {main}
+2015-05-15 07:02:43 [127.0.0.1][2][-][info][application] $_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    'USER_LOGIN' => 'system'
+    'USER_ID' => 2
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+    'EMPLOYEE_ID' => 1
+    'EMPLOYEE_SURNAME' => 'Савонин'
+    'EMPLOYEE_NAME' => 'Дмитрий'
+    'EMPLOYEE_PATRONYMIC' => 'Александрович'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/editor/view?file=38'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '55738'
+    'REDIRECT_URL' => '/doc/file/view'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/doc/file/view'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431702163.695
+    'REQUEST_TIME' => 1431702163
+]
+2015-05-15 07:03:28 [127.0.0.1][-][-][error][yii\base\Exception] exception 'yii\base\Exception' with message 'File's identification number mustn't be empty' in D:\hosts\doc\modules\doc\grids\File_TemplateManager_GridProvider.php:59
+Stack trace:
+#0 D:\hosts\doc\core\ActiveDataProvider.php(134): app\modules\doc\grids\File_TemplateManager_GridProvider->getQuery()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\data\BaseDataProvider.php(79): app\core\ActiveDataProvider->prepareModels()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\data\BaseDataProvider.php(92): yii\data\BaseDataProvider->prepare()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Component.php(130): yii\data\BaseDataProvider->getModels()
+#4 D:\hosts\doc\widgets\Grid.php(164): yii\base\Component->__get('models')
+#5 D:\hosts\doc\widgets\Grid.php(85): app\widgets\Grid->renderBody()
+#6 D:\hosts\doc\widgets\Grid.php(53): app\widgets\Grid->renderTable()
+#7 D:\hosts\doc\controllers\ExtController.php(123): app\widgets\Grid->run()
+#8 [internal function]: app\controllers\ExtController->actionPanel()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('panel', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('ext/panel', Array)
+#13 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#15 {main}
+2015-05-15 07:03:28 [127.0.0.1][-][-][info][application] $_GET = [
+    'config' => [
+        'provider' => 'app\\modules\\doc\\grids\\File_TemplateManager_GridProvider'
+    ]
+    'widget' => 'app\\widgets\\Grid'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '55754'
+    'REDIRECT_QUERY_STRING' => 'config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CFile_TemplateManager_GridProvider&widget=app%5Cwidgets%5CGrid'
+    'REDIRECT_URL' => '/ext/panel'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CFile_TemplateManager_GridProvider&widget=app%5Cwidgets%5CGrid'
+    'REQUEST_URI' => '/ext/panel?config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CFile_TemplateManager_GridProvider&widget=app%5Cwidgets%5CGrid'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431702208.516
+    'REQUEST_TIME' => 1431702208
+]

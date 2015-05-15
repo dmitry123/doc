@@ -142,7 +142,7 @@ nav .form-group .form-group {
 }
 
 #confirm-delete-modal .modal-content {
-    /*top: 200px;*/
+    margin-top: 50%;
 }
 
 .pagination > li > a {

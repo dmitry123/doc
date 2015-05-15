@@ -78,13 +78,29 @@ abstract class ActiveDataProvider extends \yii\data\ActiveDataProvider {
 	 */
 	public $search = false;
 
+    /**
+     * @var array with data provider configuration, which
+     *  copies to widget which uses it
+     *
+     * @internal only for internal usage
+     */
+    public $config = [];
+
+    /**
+     * Construct class instance with configuration
+     * @param $config array with class configuration
+     */
+    public function __construct($config = []) {
+        $this->config = $config;
+        parent::__construct($config);
+    }
+
 	/**
 	 * Initialize table component, it ensures pagination,
 	 * sort classes and invokes parent's init method
 	 */
 	public function init() {
 		parent::init();
-		$this->query = $this->getQuery();
 	}
 
 	/**
@@ -114,6 +130,9 @@ abstract class ActiveDataProvider extends \yii\data\ActiveDataProvider {
 	 * @return array with prepared models
 	 */
 	protected function prepareModels(){
+        if (!$this->query) {
+            $this->query = $this->getQuery();
+        }
 		$models = parent::prepareModels();
 		if ($this->fetcher !== false) {
 			$this->getFetcher()->fetch($models);

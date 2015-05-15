@@ -50,12 +50,14 @@ var Doc_File_Table = {
                 table.table("after");
             });
             me.active = id;
-		}).on("click", ".file-remove-icon", function() {
+		}).on("click", ".file-remove-icon, .template-remove-icon", function() {
             var table = $(this).parents("table").table("before");
             Core.sendPost("doc/file/delete", {
-                file: $(this).parents("tr[data-id]").attr("data-id")
+                id: $(this).parents("tr[data-id]").attr("data-id")
             }, function() {
-
+                setTimeout(function() {
+                    table.table("update");
+                }, 250);
             }).always(function() {
                 table.table("after");
             });

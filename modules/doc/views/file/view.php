@@ -14,7 +14,7 @@ print \app\widgets\Modal::widget([
 	<?= \app\widgets\Panel::widget([
 		"title" => "Список файлов",
 		"body" => \app\widgets\Grid::create([
-			"provider" => new \app\grids\DocumentGridProvider()
+			"provider" => new \app\modules\doc\grids\File_DocumentTable_GridProvider()
 		]),
 		"bodyClass" => "panel-body clear"
 	]) ?>

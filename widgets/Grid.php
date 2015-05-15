@@ -6,6 +6,7 @@ use app\core\ObjectHelper;
 use app\core\GridProvider;
 use app\core\Widget;
 use yii\base\Exception;
+use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 
 class Grid extends Widget {
@@ -45,6 +46,9 @@ class Grid extends Widget {
 				throw new Exception("Table provider must be an instance of [app\\core\\Table] class");
 			}
 		}
+        $this->config = ArrayHelper::merge(
+            $this->config, $this->provider->config
+        );
 		ob_start();
 		$this->renderTable();
 		return ob_get_clean();

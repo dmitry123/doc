@@ -14,6 +14,14 @@ class DocModule extends Module {
 				"href" => "doc/file/view"
 			]
 		],
+        "menu-doc-master" => [
+            "label" => "Мастер",
+            "icon" => "glyphicon glyphicon-globe",
+            "options" => [
+                "data-toggle" => "modal",
+                "data-target" => "#file-master-modal"
+            ]
+        ],
 		"menu-doc-upload" => [
 			"label" => "Загрузить",
 			"icon" => "glyphicon glyphicon-upload",

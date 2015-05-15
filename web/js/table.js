@@ -48,6 +48,9 @@ var Core = Core || {};
 			}
 			scope[key] = properties[key];
 		}
+        if (!$.isPlainObject(properties)) {
+            scope = properties;
+        }
 		config[attribute] = scope;
 		this.property("config", config);
 		return this;

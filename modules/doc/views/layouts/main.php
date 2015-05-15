@@ -20,6 +20,15 @@ print \app\widgets\Modal::widget([
 	"wrapper" => "col-xs-12"
 ]);
 
+print \app\widgets\Modal::widget([
+    "title" => "Мастер файл",
+    "body" => \app\modules\doc\widgets\File_MasterTable_Table::widget([
+
+    ]),
+    "id" => "file-master-modal",
+    "wrapper" => "col-xs-12"
+]);
+
 print $this->renderFile(Yii::$app->getLayoutPath() . "/main.php", [
 	"content" => $content . ob_get_clean()
 ]);

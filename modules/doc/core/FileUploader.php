@@ -90,19 +90,17 @@ class FileUploader {
 		}
 	}
 
-	/**
-	 * Just clone file
-	 *
-	 * @param $src string name of source file
-	 * @param $dst string name of destination file
-	 *
-	 * @throws Exception
-	 */
-	public function copy($src, $dst) {
-		if (!@copy($this->getDirectory($src), $this->getDirectory($dst))) {
-			throw new Exception("Can't copy file \"". error_get_last() ."\"");
-		}
-	}
+    /**
+     * @param File $file
+     * @throws Exception
+     */
+    public function remove($file) {
+        if (!$file instanceof File) {
+            throw new Exception("File must be an instance of [app\\models\\doc\\File] class");
+        } else if (!@unlink($this->getDirectory($file->{"path"}))) {
+            throw new Exception("Can't remove file from filesystem: \"". error_get_last()["message"] ."\"");
+        }
+    }
 
 	/**
 	 * Generate unique name of saved file on server

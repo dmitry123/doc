@@ -1,11 +1,11 @@
 <?php
 
-namespace app\grids;
+namespace app\modules\doc\grids;
 
 use app\core\GridProvider;
 use app\models\doc\File;
 
-class DocumentGridProvider extends GridProvider {
+class File_DocumentTable_GridProvider extends GridProvider {
 
 	public $columns = [
 		"id" => "#",
@@ -64,8 +64,9 @@ class DocumentGridProvider extends GridProvider {
 	public $fetcher = 'app\models\doc\File';
 
 	public function getQuery() {
-		return File::find()->where("file_type_id = :file_type_id", [
-            ":file_type_id" => "document"
+		return File::find()->where("file_type_id = :file_type_id and file_status_id = :file_status_id", [
+            ":file_type_id" => "document",
+            ":file_status_id" => "new"
         ]);
 	}
 }

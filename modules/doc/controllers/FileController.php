@@ -3,7 +3,9 @@
 namespace app\modules\doc\controllers;
 
 use app\core\Controller;
+use app\models\doc\File;
 use app\modules\doc\core\FileUploader;
+use yii\base\Exception;
 
 class FileController extends Controller {
 
@@ -56,6 +58,22 @@ class FileController extends Controller {
 	}
 
     public function actionDelete() {
+        try {
+            /** @var $file File */
+            if (!$file = File::findOne([ "id" => $this->requirePost("id") ])) {
+                throw new Exception("Can't resolve file's identification number");
+            }
+            $file->{"file_status_id"} = "removed";
+            if (!$file->save()) {
+                throw new Exception("Can't change file's status to removed");
+            }
+            
+            return $this->leave([
+                "message" => "Файл был успешно удален"
+            ]);
+        } catch (\Exception $e) {
+            return $this->exception($e);
+        }
     }
 
 	/**

@@ -77,6 +77,9 @@ class ExtController extends Controller {
 				/* Default Table Configuration */
 			]);
 			foreach ($config as $key => &$value) {
+                if (!is_array($value)) {
+                    continue;
+                }
 				foreach ([ "class", "widget" ] as $k) {
 					unset($value[$k]);
 				}

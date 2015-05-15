@@ -49,7 +49,7 @@ abstract class GridProvider extends ActiveDataProvider {
 	 * 	limits
 	 */
 	public $limits = [
-		1, 2, 5, 10, 25, 50, 75
+		10, 25, 50, 75
 	];
 
 	/**
