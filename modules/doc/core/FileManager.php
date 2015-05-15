@@ -8,17 +8,17 @@ use app\models\doc\FileExt;
 use app\models\doc\FileStatus;
 use yii\base\Exception;
 
-class FileUploader {
+class FileManager {
 
 	const PATH_LENGTH = 32;
 
 	/**
 	 * Get single file uploader instance
-	 * @return FileUploader - Instance of file uploader
+	 * @return FileManager - Instance of file uploader
 	 */
-	public static function getUploader() {
+	public static function getManager() {
 		if (self::$uploader == null) {
-			return self::$uploader = new FileUploader();
+			return self::$uploader = new FileManager();
 		} else {
 			return self::$uploader;
 		}
@@ -91,13 +91,15 @@ class FileUploader {
 	}
 
     /**
-     * @param File $file
+     * @param $name string
+     * @param bool $ready
      * @throws Exception
      */
-    public function remove($file) {
-        if (!$file instanceof File) {
-            throw new Exception("File must be an instance of [app\\models\\doc\\File] class");
-        } else if (!@unlink($this->getDirectory($file->{"path"}))) {
+    public function remove($name, $ready = false) {
+        if (!$ready) {
+            $name = $this->getDirectory($name);
+        }
+        if (!@unlink($name)) {
             throw new Exception("Can't remove file from filesystem: \"". error_get_last()["message"] ."\"");
         }
     }
@@ -159,7 +161,7 @@ class FileUploader {
 	}
 
 	/**
-	 * @var FileUploader - single file uploader instance
+	 * @var FileManager - single file uploader instance
 	 */
 	private static $uploader = null;
 }

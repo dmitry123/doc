@@ -4,7 +4,7 @@ namespace app\modules\doc\controllers;
 
 use app\core\Controller;
 use app\models\doc\File;
-use app\modules\doc\core\FileUploader;
+use app\modules\doc\core\FileManager;
 use yii\base\Exception;
 
 class EditorController extends Controller {
@@ -32,7 +32,7 @@ class EditorController extends Controller {
 				throw new Exception("Можно редактировать только шаблоны файлов");
 			}
 			$content = iconv("Windows-1251", "UTF-8", file_get_contents(
-				FileUploader::getUploader()->getDirectory($file->{"path"}), FILE_TEXT
+				FileManager::getManager()->getDirectory($file->{"path"}), FILE_TEXT
 			));
 			print preg_replace('~(\<br.*\>)+~', "", $content);
 		} catch (Exception $e) {

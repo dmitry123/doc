@@ -48,9 +48,15 @@ class FileConverter {
         return $this;
     }
 
+    public function path() {
+        return $this->_file.".".$this->_ext;
+    }
+
     public function rename($name) {
         if (!@rename($this->_file.".".$this->_ext, $name)) {
-            throw new Exception("Can't rename just generated template file \"". error_get_last()["message"] ."\"");
+            throw new Exception("Can't rename file: \"". error_get_last()["message"] ."\"");
+        } else {
+            return $this;
         }
     }
 

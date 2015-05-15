@@ -59908,3 +59908,1996 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1431702208.516
     'REQUEST_TIME' => 1431702208
 ]
+2015-05-15 07:04:58 [127.0.0.1][-][-][error][yii\base\Exception] exception 'yii\base\Exception' with message 'File's identification number mustn't be empty' in D:\hosts\doc\modules\doc\grids\File_TemplateManager_GridProvider.php:59
+Stack trace:
+#0 D:\hosts\doc\core\ActiveDataProvider.php(134): app\modules\doc\grids\File_TemplateManager_GridProvider->getQuery()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\data\BaseDataProvider.php(79): app\core\ActiveDataProvider->prepareModels()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\data\BaseDataProvider.php(92): yii\data\BaseDataProvider->prepare()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Component.php(130): yii\data\BaseDataProvider->getModels()
+#4 D:\hosts\doc\widgets\Grid.php(164): yii\base\Component->__get('models')
+#5 D:\hosts\doc\widgets\Grid.php(85): app\widgets\Grid->renderBody()
+#6 D:\hosts\doc\widgets\Grid.php(53): app\widgets\Grid->renderTable()
+#7 D:\hosts\doc\controllers\ExtController.php(123): app\widgets\Grid->run()
+#8 [internal function]: app\controllers\ExtController->actionPanel()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('panel', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('ext/panel', Array)
+#13 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#15 {main}
+2015-05-15 07:04:58 [127.0.0.1][-][-][info][application] $_GET = [
+    'config' => [
+        'provider' => 'app\\modules\\doc\\grids\\File_TemplateManager_GridProvider'
+    ]
+    'widget' => 'app\\widgets\\Grid'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '55783'
+    'REDIRECT_QUERY_STRING' => 'config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CFile_TemplateManager_GridProvider&widget=app%5Cwidgets%5CGrid'
+    'REDIRECT_URL' => '/ext/panel'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CFile_TemplateManager_GridProvider&widget=app%5Cwidgets%5CGrid'
+    'REQUEST_URI' => '/ext/panel?config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CFile_TemplateManager_GridProvider&widget=app%5Cwidgets%5CGrid'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431702298.721
+    'REQUEST_TIME' => 1431702298
+]
+2015-05-15 07:16:57 [127.0.0.1][-][-][error][yii\base\Exception] exception 'yii\base\Exception' with message 'File's identification number mustn't be empty' in D:\hosts\doc\modules\doc\grids\File_TemplateManager_GridProvider.php:59
+Stack trace:
+#0 D:\hosts\doc\core\ActiveDataProvider.php(134): app\modules\doc\grids\File_TemplateManager_GridProvider->getQuery()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\data\BaseDataProvider.php(79): app\core\ActiveDataProvider->prepareModels()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\data\BaseDataProvider.php(92): yii\data\BaseDataProvider->prepare()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Component.php(130): yii\data\BaseDataProvider->getModels()
+#4 D:\hosts\doc\widgets\Grid.php(164): yii\base\Component->__get('models')
+#5 D:\hosts\doc\widgets\Grid.php(85): app\widgets\Grid->renderBody()
+#6 D:\hosts\doc\widgets\Grid.php(53): app\widgets\Grid->renderTable()
+#7 D:\hosts\doc\controllers\ExtController.php(123): app\widgets\Grid->run()
+#8 [internal function]: app\controllers\ExtController->actionPanel()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('panel', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('ext/panel', Array)
+#13 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#15 {main}
+2015-05-15 07:16:57 [127.0.0.1][-][-][info][application] $_GET = [
+    'config' => [
+        'provider' => 'app\\modules\\doc\\grids\\File_TemplateManager_GridProvider'
+    ]
+    'widget' => 'app\\widgets\\Grid'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '52605'
+    'REDIRECT_QUERY_STRING' => 'config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CFile_TemplateManager_GridProvider&widget=app%5Cwidgets%5CGrid'
+    'REDIRECT_URL' => '/ext/panel'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CFile_TemplateManager_GridProvider&widget=app%5Cwidgets%5CGrid'
+    'REQUEST_URI' => '/ext/panel?config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CFile_TemplateManager_GridProvider&widget=app%5Cwidgets%5CGrid'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431703017.57
+    'REQUEST_TIME' => 1431703017
+]
+2015-05-15 07:26:09 [127.0.0.1][-][-][error][yii\base\Exception] exception 'yii\base\Exception' with message 'File's identification number mustn't be empty' in D:\hosts\doc\modules\doc\grids\File_TemplateManager_GridProvider.php:60
+Stack trace:
+#0 D:\hosts\doc\core\ActiveDataProvider.php(134): app\modules\doc\grids\File_TemplateManager_GridProvider->getQuery()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\data\BaseDataProvider.php(79): app\core\ActiveDataProvider->prepareModels()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\data\BaseDataProvider.php(92): yii\data\BaseDataProvider->prepare()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Component.php(130): yii\data\BaseDataProvider->getModels()
+#4 D:\hosts\doc\widgets\Grid.php(173): yii\base\Component->__get('models')
+#5 D:\hosts\doc\widgets\Grid.php(85): app\widgets\Grid->renderBody()
+#6 D:\hosts\doc\widgets\Grid.php(53): app\widgets\Grid->renderTable()
+#7 D:\hosts\doc\controllers\ExtController.php(123): app\widgets\Grid->run()
+#8 [internal function]: app\controllers\ExtController->actionPanel()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('panel', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('ext/panel', Array)
+#13 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#15 {main}
+2015-05-15 07:26:09 [127.0.0.1][-][-][info][application] $_GET = [
+    'config' => [
+        'provider' => 'app\\modules\\doc\\grids\\File_TemplateManager_GridProvider'
+    ]
+    'widget' => 'app\\widgets\\Grid'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '52813'
+    'REDIRECT_QUERY_STRING' => 'config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CFile_TemplateManager_GridProvider&widget=app%5Cwidgets%5CGrid'
+    'REDIRECT_URL' => '/ext/panel'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CFile_TemplateManager_GridProvider&widget=app%5Cwidgets%5CGrid'
+    'REQUEST_URI' => '/ext/panel?config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CFile_TemplateManager_GridProvider&widget=app%5Cwidgets%5CGrid'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431703569.172
+    'REQUEST_TIME' => 1431703569
+]
+2015-05-15 07:59:23 [127.0.0.1][-][-][error][yii\base\Exception] exception 'yii\base\Exception' with message 'File's identification number mustn't be empty' in D:\hosts\doc\modules\doc\grids\File_TemplateManager_GridProvider.php:59
+Stack trace:
+#0 D:\hosts\doc\core\ActiveDataProvider.php(134): app\modules\doc\grids\File_TemplateManager_GridProvider->getQuery()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\data\BaseDataProvider.php(79): app\core\ActiveDataProvider->prepareModels()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\data\BaseDataProvider.php(92): yii\data\BaseDataProvider->prepare()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Component.php(130): yii\data\BaseDataProvider->getModels()
+#4 D:\hosts\doc\widgets\Grid.php(173): yii\base\Component->__get('models')
+#5 D:\hosts\doc\widgets\Grid.php(85): app\widgets\Grid->renderBody()
+#6 D:\hosts\doc\widgets\Grid.php(53): app\widgets\Grid->renderTable()
+#7 D:\hosts\doc\controllers\ExtController.php(123): app\widgets\Grid->run()
+#8 [internal function]: app\controllers\ExtController->actionPanel()
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('panel', Array)
+#12 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('ext/panel', Array)
+#13 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#15 {main}
+2015-05-15 07:59:23 [127.0.0.1][-][-][info][application] $_GET = [
+    'config' => [
+        'provider' => 'app\\modules\\doc\\grids\\File_TemplateManager_GridProvider'
+    ]
+    'widget' => 'app\\widgets\\Grid'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '64858'
+    'REDIRECT_QUERY_STRING' => 'config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CFile_TemplateManager_GridProvider&widget=app%5Cwidgets%5CGrid'
+    'REDIRECT_URL' => '/ext/panel'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CFile_TemplateManager_GridProvider&widget=app%5Cwidgets%5CGrid'
+    'REQUEST_URI' => '/ext/panel?config%5Bprovider%5D=app%5Cmodules%5Cdoc%5Cgrids%5CFile_TemplateManager_GridProvider&widget=app%5Cwidgets%5CGrid'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431705563.39
+    'REQUEST_TIME' => 1431705563
+]
+2015-05-15 08:01:11 [127.0.0.1][2][-][error][Exception] exception 'Exception' with message 'That action requires body parameter "file"' in D:\hosts\doc\core\Controller.php:291
+Stack trace:
+#0 D:\hosts\doc\modules\doc\controllers\FileController.php(67): app\core\Controller->requirePost('file')
+#1 [internal function]: app\modules\doc\controllers\FileController->actionDownload()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('download', Array)
+#5 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('doc/file/downlo...', Array)
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2015-05-15 08:01:11 [127.0.0.1][2][-][info][application] $_GET = [
+    'id' => '37'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    'USER_LOGIN' => 'system'
+    'USER_ID' => 2
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+    'EMPLOYEE_ID' => 1
+    'EMPLOYEE_SURNAME' => 'Савонин'
+    'EMPLOYEE_NAME' => 'Дмитрий'
+    'EMPLOYEE_PATRONYMIC' => 'Александрович'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '64875'
+    'REDIRECT_QUERY_STRING' => 'id=37'
+    'REDIRECT_URL' => '/doc/file/download'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=37'
+    'REQUEST_URI' => '/doc/file/download?id=37'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431705671.614
+    'REQUEST_TIME' => 1431705671
+]
+2015-05-15 08:01:25 [127.0.0.1][2][-][error][Exception] exception 'Exception' with message 'That action requires body parameter "file"' in D:\hosts\doc\core\Controller.php:291
+Stack trace:
+#0 D:\hosts\doc\modules\doc\controllers\FileController.php(67): app\core\Controller->requirePost('file')
+#1 [internal function]: app\modules\doc\controllers\FileController->actionDownload()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('download', Array)
+#5 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('doc/file/downlo...', Array)
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2015-05-15 08:01:25 [127.0.0.1][2][-][info][application] $_GET = [
+    'file' => '37'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    'USER_LOGIN' => 'system'
+    'USER_ID' => 2
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+    'EMPLOYEE_ID' => 1
+    'EMPLOYEE_SURNAME' => 'Савонин'
+    'EMPLOYEE_NAME' => 'Дмитрий'
+    'EMPLOYEE_PATRONYMIC' => 'Александрович'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '64881'
+    'REDIRECT_QUERY_STRING' => 'file=37'
+    'REDIRECT_URL' => '/doc/file/download'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'file=37'
+    'REQUEST_URI' => '/doc/file/download?file=37'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431705685.377
+    'REQUEST_TIME' => 1431705685
+]
+2015-05-15 08:20:21 [127.0.0.1][2][8m4dj3aknvlvqub1aul4vs9091][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to undefined function app\modules\doc\controllers\mime_content_type()' in D:\hosts\doc\modules\doc\controllers\FileController.php:89
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-05-15 08:20:21 [127.0.0.1][2][8m4dj3aknvlvqub1aul4vs9091][info][application] $_GET = [
+    'file' => '37'
+    'ext' => '25'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    'USER_LOGIN' => 'system'
+    'USER_ID' => 2
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+    'EMPLOYEE_ID' => 1
+    'EMPLOYEE_SURNAME' => 'Савонин'
+    'EMPLOYEE_NAME' => 'Дмитрий'
+    'EMPLOYEE_PATRONYMIC' => 'Александрович'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '52670'
+    'REDIRECT_QUERY_STRING' => 'file=37&ext=25'
+    'REDIRECT_URL' => '/doc/file/download'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'file=37&ext=25'
+    'REQUEST_URI' => '/doc/file/download?file=37&ext=25'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431706821.737
+    'REQUEST_TIME' => 1431706821
+]
+2015-05-15 08:22:57 [127.0.0.1][2][8m4dj3aknvlvqub1aul4vs9091][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to undefined function app\modules\doc\controllers\mime_content_type()' in D:\hosts\doc\modules\doc\controllers\FileController.php:89
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-05-15 08:22:57 [127.0.0.1][2][8m4dj3aknvlvqub1aul4vs9091][info][application] $_GET = [
+    'file' => '37'
+    'ext' => '25'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    'USER_LOGIN' => 'system'
+    'USER_ID' => 2
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+    'EMPLOYEE_ID' => 1
+    'EMPLOYEE_SURNAME' => 'Савонин'
+    'EMPLOYEE_NAME' => 'Дмитрий'
+    'EMPLOYEE_PATRONYMIC' => 'Александрович'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '52690'
+    'REDIRECT_QUERY_STRING' => 'file=37&ext=25'
+    'REDIRECT_URL' => '/doc/file/download'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'file=37&ext=25'
+    'REQUEST_URI' => '/doc/file/download?file=37&ext=25'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431706977.006
+    'REQUEST_TIME' => 1431706977
+]
+2015-05-15 08:23:17 [127.0.0.1][2][8m4dj3aknvlvqub1aul4vs9091][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to undefined function mime_content_type()' in D:\hosts\doc\modules\doc\controllers\FileController.php:89
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-05-15 08:23:17 [127.0.0.1][2][8m4dj3aknvlvqub1aul4vs9091][info][application] $_GET = [
+    'file' => '37'
+    'ext' => '25'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    'USER_LOGIN' => 'system'
+    'USER_ID' => 2
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+    'EMPLOYEE_ID' => 1
+    'EMPLOYEE_SURNAME' => 'Савонин'
+    'EMPLOYEE_NAME' => 'Дмитрий'
+    'EMPLOYEE_PATRONYMIC' => 'Александрович'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '52698'
+    'REDIRECT_QUERY_STRING' => 'file=37&ext=25'
+    'REDIRECT_URL' => '/doc/file/download'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'file=37&ext=25'
+    'REQUEST_URI' => '/doc/file/download?file=37&ext=25'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431706997.726
+    'REQUEST_TIME' => 1431706997
+]
+2015-05-15 08:49:19 [127.0.0.1][2][8m4dj3aknvlvqub1aul4vs9091][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Maximum execution time of 80 seconds exceeded' in D:\hosts\doc\modules\doc\core\FileConverter.php:47
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-05-15 08:47:59 [127.0.0.1][2][8m4dj3aknvlvqub1aul4vs9091][info][application] $_GET = [
+    'file' => '37'
+    'ext' => '25'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    'USER_LOGIN' => 'system'
+    'USER_ID' => 2
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+    'EMPLOYEE_ID' => 1
+    'EMPLOYEE_SURNAME' => 'Савонин'
+    'EMPLOYEE_NAME' => 'Дмитрий'
+    'EMPLOYEE_PATRONYMIC' => 'Александрович'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '52785'
+    'REDIRECT_QUERY_STRING' => 'file=37&ext=25'
+    'REDIRECT_URL' => '/doc/file/download'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'file=37&ext=25'
+    'REQUEST_URI' => '/doc/file/download?file=37&ext=25'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431708479.19
+    'REQUEST_TIME' => 1431708479
+]
+2015-05-15 08:52:49 [127.0.0.1][2][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[22P02]: Invalid text representation: 7 ОШИБКА:  неверное значение для целого числа: "t"' in D:\hosts\doc\vendor\yiisoft\yii2\db\Command.php:822
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\db\Command.php(822): PDOStatement->execute()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\db\Command.php(364): yii\db\Command->queryInternal('fetch', NULL)
+#2 D:\hosts\doc\vendor\yiisoft\yii2\db\Query.php(243): yii\db\Command->queryOne()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\db\ActiveQuery.php(285): yii\db\Query->one(NULL)
+#4 D:\hosts\doc\vendor\yiisoft\yii2\db\BaseActiveRecord.php(101): yii\db\ActiveQuery->one()
+#5 D:\hosts\doc\modules\doc\controllers\FileController.php(76): yii\db\BaseActiveRecord::findOne(Array)
+#6 [internal function]: app\modules\doc\controllers\FileController->actionDownload()
+#7 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('download', Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('doc/file/downlo...', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#13 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[22P02]: Invalid text representation: 7 ОШИБКА:  неверное значение для целого числа: "t"
+The SQL being executed was: SELECT * FROM "doc"."file_ext" WHERE "id"=1' in D:\hosts\doc\vendor\yiisoft\yii2\db\Schema.php:534
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\db\Command.php(837): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM "...')
+#1 D:\hosts\doc\vendor\yiisoft\yii2\db\Command.php(364): yii\db\Command->queryInternal('fetch', NULL)
+#2 D:\hosts\doc\vendor\yiisoft\yii2\db\Query.php(243): yii\db\Command->queryOne()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\db\ActiveQuery.php(285): yii\db\Query->one(NULL)
+#4 D:\hosts\doc\vendor\yiisoft\yii2\db\BaseActiveRecord.php(101): yii\db\ActiveQuery->one()
+#5 D:\hosts\doc\modules\doc\controllers\FileController.php(76): yii\db\BaseActiveRecord::findOne(Array)
+#6 [internal function]: app\modules\doc\controllers\FileController->actionDownload()
+#7 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('download', Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('doc/file/downlo...', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 22P02
+    [1] => 7
+    [2] => ОШИБКА:  неверное значение для целого числа: "t"
+)
+
+2015-05-15 08:52:48 [127.0.0.1][2][-][info][application] $_GET = [
+    'file' => '37'
+    'ext' => '25'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    'USER_LOGIN' => 'system'
+    'USER_ID' => 2
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+    'EMPLOYEE_ID' => 1
+    'EMPLOYEE_SURNAME' => 'Савонин'
+    'EMPLOYEE_NAME' => 'Дмитрий'
+    'EMPLOYEE_PATRONYMIC' => 'Александрович'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '52810'
+    'REDIRECT_QUERY_STRING' => 'file=37&ext=25'
+    'REDIRECT_URL' => '/doc/file/download'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'file=37&ext=25'
+    'REQUEST_URI' => '/doc/file/download?file=37&ext=25'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431708768.465
+    'REQUEST_TIME' => 1431708768
+]
+2015-05-15 08:55:51 [127.0.0.1][2][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[22P02]: Invalid text representation: 7 ОШИБКА:  неверное значение для целого числа: "t"' in D:\hosts\doc\vendor\yiisoft\yii2\db\Command.php:822
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\db\Command.php(822): PDOStatement->execute()
+#1 D:\hosts\doc\vendor\yiisoft\yii2\db\Command.php(364): yii\db\Command->queryInternal('fetch', NULL)
+#2 D:\hosts\doc\vendor\yiisoft\yii2\db\Query.php(243): yii\db\Command->queryOne()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\db\ActiveQuery.php(285): yii\db\Query->one(NULL)
+#4 D:\hosts\doc\vendor\yiisoft\yii2\db\BaseActiveRecord.php(101): yii\db\ActiveQuery->one()
+#5 D:\hosts\doc\modules\doc\controllers\FileController.php(76): yii\db\BaseActiveRecord::findOne(Array)
+#6 [internal function]: app\modules\doc\controllers\FileController->actionDownload()
+#7 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('download', Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('doc/file/downlo...', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#13 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[22P02]: Invalid text representation: 7 ОШИБКА:  неверное значение для целого числа: "t"
+The SQL being executed was: SELECT * FROM "doc"."file_ext" WHERE "id"=1' in D:\hosts\doc\vendor\yiisoft\yii2\db\Schema.php:534
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\db\Command.php(837): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM "...')
+#1 D:\hosts\doc\vendor\yiisoft\yii2\db\Command.php(364): yii\db\Command->queryInternal('fetch', NULL)
+#2 D:\hosts\doc\vendor\yiisoft\yii2\db\Query.php(243): yii\db\Command->queryOne()
+#3 D:\hosts\doc\vendor\yiisoft\yii2\db\ActiveQuery.php(285): yii\db\Query->one(NULL)
+#4 D:\hosts\doc\vendor\yiisoft\yii2\db\BaseActiveRecord.php(101): yii\db\ActiveQuery->one()
+#5 D:\hosts\doc\modules\doc\controllers\FileController.php(76): yii\db\BaseActiveRecord::findOne(Array)
+#6 [internal function]: app\modules\doc\controllers\FileController->actionDownload()
+#7 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('download', Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('doc/file/downlo...', Array)
+#11 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 22P02
+    [1] => 7
+    [2] => ОШИБКА:  неверное значение для целого числа: "t"
+)
+
+2015-05-15 08:55:51 [127.0.0.1][2][-][info][application] $_GET = [
+    'file' => '37'
+    'ext' => '25'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    'USER_LOGIN' => 'system'
+    'USER_ID' => 2
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+    'EMPLOYEE_ID' => 1
+    'EMPLOYEE_SURNAME' => 'Савонин'
+    'EMPLOYEE_NAME' => 'Дмитрий'
+    'EMPLOYEE_PATRONYMIC' => 'Александрович'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '52830'
+    'REDIRECT_QUERY_STRING' => 'file=37&ext=25'
+    'REDIRECT_URL' => '/doc/file/download'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'file=37&ext=25'
+    'REQUEST_URI' => '/doc/file/download?file=37&ext=25'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431708951.284
+    'REQUEST_TIME' => 1431708951
+]
+2015-05-15 08:56:56 [127.0.0.1][2][-][error][yii\base\Exception] exception 'yii\base\Exception' with message 'Can't remove file from filesystem: "unlink(D:\hosts\doc/uploads/files/D:\hosts\doc/uploads/files/Oo2XoJmBR_PH-_2xGy_lBmRMaeyN7PIY.pdf): Invalid argument"' in D:\hosts\doc\modules\doc\core\FileManager.php:99
+Stack trace:
+#0 D:\hosts\doc\modules\doc\controllers\FileController.php(92): app\modules\doc\core\FileManager->remove('D:\hosts\doc/up...')
+#1 [internal function]: app\modules\doc\controllers\FileController->actionDownload()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('download', Array)
+#5 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('doc/file/downlo...', Array)
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2015-05-15 08:56:51 [127.0.0.1][2][-][info][application] $_GET = [
+    'file' => '37'
+    'ext' => '25'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    'USER_LOGIN' => 'system'
+    'USER_ID' => 2
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+    'EMPLOYEE_ID' => 1
+    'EMPLOYEE_SURNAME' => 'Савонин'
+    'EMPLOYEE_NAME' => 'Дмитрий'
+    'EMPLOYEE_PATRONYMIC' => 'Александрович'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '52846'
+    'REDIRECT_QUERY_STRING' => 'file=37&ext=25'
+    'REDIRECT_URL' => '/doc/file/download'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'file=37&ext=25'
+    'REQUEST_URI' => '/doc/file/download?file=37&ext=25'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431709011.334
+    'REQUEST_TIME' => 1431709011
+]
+2015-05-15 08:57:23 [127.0.0.1][2][-][error][yii\base\Exception] exception 'yii\base\Exception' with message 'Can't remove file from filesystem: "unlink(D:\hosts\doc/uploads/files/D:\hosts\doc/uploads/files/Oo2XoJmBR_PH-_2xGy_lBmRMaeyN7PIY.pdf): Invalid argument"' in D:\hosts\doc\modules\doc\core\FileManager.php:99
+Stack trace:
+#0 D:\hosts\doc\modules\doc\controllers\FileController.php(92): app\modules\doc\core\FileManager->remove('D:\hosts\doc/up...')
+#1 [internal function]: app\modules\doc\controllers\FileController->actionDownload()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('download', Array)
+#5 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('doc/file/downlo...', Array)
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2015-05-15 08:57:20 [127.0.0.1][2][-][info][application] $_GET = [
+    'file' => '37'
+    'ext' => '25'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    'USER_LOGIN' => 'system'
+    'USER_ID' => 2
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+    'EMPLOYEE_ID' => 1
+    'EMPLOYEE_SURNAME' => 'Савонин'
+    'EMPLOYEE_NAME' => 'Дмитрий'
+    'EMPLOYEE_PATRONYMIC' => 'Александрович'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '52854'
+    'REDIRECT_QUERY_STRING' => 'file=37&ext=25'
+    'REDIRECT_URL' => '/doc/file/download'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'file=37&ext=25'
+    'REQUEST_URI' => '/doc/file/download?file=37&ext=25'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431709040.31
+    'REQUEST_TIME' => 1431709040
+]
+2015-05-15 09:09:11 [127.0.0.1][2][-][error][yii\base\Exception] exception 'yii\base\Exception' with message 'Can't remove file from filesystem: "unlink(D:\hosts\doc/uploads/files/D:\hosts\doc/uploads/files/Oo2XoJmBR_PH-_2xGy_lBmRMaeyN7PIY.docx): Invalid argument"' in D:\hosts\doc\modules\doc\core\FileManager.php:99
+Stack trace:
+#0 D:\hosts\doc\modules\doc\controllers\FileController.php(92): app\modules\doc\core\FileManager->remove('D:\hosts\doc/up...')
+#1 [internal function]: app\modules\doc\controllers\FileController->actionDownload()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('download', Array)
+#5 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('doc/file/downlo...', Array)
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2015-05-15 09:09:08 [127.0.0.1][2][-][info][application] $_GET = [
+    'file' => '37'
+    'ext' => '21'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    'USER_LOGIN' => 'system'
+    'USER_ID' => 2
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+    'EMPLOYEE_ID' => 1
+    'EMPLOYEE_SURNAME' => 'Савонин'
+    'EMPLOYEE_NAME' => 'Дмитрий'
+    'EMPLOYEE_PATRONYMIC' => 'Александрович'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '52880'
+    'REDIRECT_QUERY_STRING' => 'file=37&ext=21'
+    'REDIRECT_URL' => '/doc/file/download'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'file=37&ext=21'
+    'REQUEST_URI' => '/doc/file/download?file=37&ext=21'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431709748.251
+    'REQUEST_TIME' => 1431709748
+]
+2015-05-15 09:09:15 [127.0.0.1][2][-][error][yii\base\Exception] exception 'yii\base\Exception' with message 'Can't remove file from filesystem: "unlink(D:\hosts\doc/uploads/files/D:\hosts\doc/uploads/files/Oo2XoJmBR_PH-_2xGy_lBmRMaeyN7PIY.docx): Invalid argument"' in D:\hosts\doc\modules\doc\core\FileManager.php:99
+Stack trace:
+#0 D:\hosts\doc\modules\doc\controllers\FileController.php(92): app\modules\doc\core\FileManager->remove('D:\hosts\doc/up...')
+#1 [internal function]: app\modules\doc\controllers\FileController->actionDownload()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('download', Array)
+#5 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('doc/file/downlo...', Array)
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2015-05-15 09:09:11 [127.0.0.1][2][-][info][application] $_GET = [
+    'file' => '37'
+    'ext' => '21'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    'USER_LOGIN' => 'system'
+    'USER_ID' => 2
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+    'EMPLOYEE_ID' => 1
+    'EMPLOYEE_SURNAME' => 'Савонин'
+    'EMPLOYEE_NAME' => 'Дмитрий'
+    'EMPLOYEE_PATRONYMIC' => 'Александрович'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '52882'
+    'REDIRECT_QUERY_STRING' => 'file=37&ext=21'
+    'REDIRECT_URL' => '/doc/file/download'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'file=37&ext=21'
+    'REQUEST_URI' => '/doc/file/download?file=37&ext=21'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431709751.827
+    'REQUEST_TIME' => 1431709751
+]
+2015-05-15 09:10:02 [127.0.0.1][2][-][error][yii\base\Exception] exception 'yii\base\Exception' with message 'Can't remove file from filesystem: "unlink(D:\hosts\doc/uploads/files/D:\hosts\doc/uploads/files/Oo2XoJmBR_PH-_2xGy_lBmRMaeyN7PIY.pdf): Invalid argument"' in D:\hosts\doc\modules\doc\core\FileManager.php:99
+Stack trace:
+#0 D:\hosts\doc\modules\doc\controllers\FileController.php(92): app\modules\doc\core\FileManager->remove('D:\hosts\doc/up...')
+#1 [internal function]: app\modules\doc\controllers\FileController->actionDownload()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('download', Array)
+#5 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('doc/file/downlo...', Array)
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2015-05-15 09:09:58 [127.0.0.1][2][-][info][application] $_GET = [
+    'file' => '37'
+    'ext' => '25'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    'USER_LOGIN' => 'system'
+    'USER_ID' => 2
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+    'EMPLOYEE_ID' => 1
+    'EMPLOYEE_SURNAME' => 'Савонин'
+    'EMPLOYEE_NAME' => 'Дмитрий'
+    'EMPLOYEE_PATRONYMIC' => 'Александрович'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '52917'
+    'REDIRECT_QUERY_STRING' => 'file=37&ext=25'
+    'REDIRECT_URL' => '/doc/file/download'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'file=37&ext=25'
+    'REQUEST_URI' => '/doc/file/download?file=37&ext=25'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431709798.613
+    'REQUEST_TIME' => 1431709798
+]
+2015-05-15 09:10:06 [127.0.0.1][2][-][error][yii\base\Exception] exception 'yii\base\Exception' with message 'Can't remove file from filesystem: "unlink(D:\hosts\doc/uploads/files/D:\hosts\doc/uploads/files/Oo2XoJmBR_PH-_2xGy_lBmRMaeyN7PIY.pdf): Invalid argument"' in D:\hosts\doc\modules\doc\core\FileManager.php:99
+Stack trace:
+#0 D:\hosts\doc\modules\doc\controllers\FileController.php(92): app\modules\doc\core\FileManager->remove('D:\hosts\doc/up...')
+#1 [internal function]: app\modules\doc\controllers\FileController->actionDownload()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('download', Array)
+#5 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('doc/file/downlo...', Array)
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2015-05-15 09:10:02 [127.0.0.1][2][-][info][application] $_GET = [
+    'file' => '37'
+    'ext' => '25'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    'USER_LOGIN' => 'system'
+    'USER_ID' => 2
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+    'EMPLOYEE_ID' => 1
+    'EMPLOYEE_SURNAME' => 'Савонин'
+    'EMPLOYEE_NAME' => 'Дмитрий'
+    'EMPLOYEE_PATRONYMIC' => 'Александрович'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '52921'
+    'REDIRECT_QUERY_STRING' => 'file=37&ext=25'
+    'REDIRECT_URL' => '/doc/file/download'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'file=37&ext=25'
+    'REQUEST_URI' => '/doc/file/download?file=37&ext=25'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431709802.439
+    'REQUEST_TIME' => 1431709802
+]
+2015-05-15 09:10:14 [127.0.0.1][2][-][error][yii\base\Exception] exception 'yii\base\Exception' with message 'Can't remove file from filesystem: "unlink(D:\hosts\doc/uploads/files/D:\hosts\doc/uploads/files/Oo2XoJmBR_PH-_2xGy_lBmRMaeyN7PIY.pdf): Invalid argument"' in D:\hosts\doc\modules\doc\core\FileManager.php:99
+Stack trace:
+#0 D:\hosts\doc\modules\doc\controllers\FileController.php(92): app\modules\doc\core\FileManager->remove('D:\hosts\doc/up...')
+#1 [internal function]: app\modules\doc\controllers\FileController->actionDownload()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('download', Array)
+#5 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('doc/file/downlo...', Array)
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2015-05-15 09:10:11 [127.0.0.1][2][-][info][application] $_GET = [
+    'file' => '37'
+    'ext' => '25'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    'USER_LOGIN' => 'system'
+    'USER_ID' => 2
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+    'EMPLOYEE_ID' => 1
+    'EMPLOYEE_SURNAME' => 'Савонин'
+    'EMPLOYEE_NAME' => 'Дмитрий'
+    'EMPLOYEE_PATRONYMIC' => 'Александрович'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '52925'
+    'REDIRECT_QUERY_STRING' => 'file=37&ext=25'
+    'REDIRECT_URL' => '/doc/file/download'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'file=37&ext=25'
+    'REQUEST_URI' => '/doc/file/download?file=37&ext=25'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431709811.171
+    'REQUEST_TIME' => 1431709811
+]
+2015-05-15 09:10:48 [127.0.0.1][2][-][error][yii\base\Exception] exception 'yii\base\Exception' with message 'Can't remove file from filesystem: "unlink(D:\hosts\doc/uploads/files/D:\hosts\doc/uploads/files/Oo2XoJmBR_PH-_2xGy_lBmRMaeyN7PIY.pdf): Invalid argument"' in D:\hosts\doc\modules\doc\core\FileManager.php:99
+Stack trace:
+#0 D:\hosts\doc\modules\doc\controllers\FileController.php(96): app\modules\doc\core\FileManager->remove('D:\hosts\doc/up...')
+#1 [internal function]: app\modules\doc\controllers\FileController->actionDownload()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('download', Array)
+#5 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('doc/file/downlo...', Array)
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2015-05-15 09:10:44 [127.0.0.1][2][-][info][application] $_GET = [
+    'file' => '37'
+    'ext' => '25'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    'USER_LOGIN' => 'system'
+    'USER_ID' => 2
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+    'EMPLOYEE_ID' => 1
+    'EMPLOYEE_SURNAME' => 'Савонин'
+    'EMPLOYEE_NAME' => 'Дмитрий'
+    'EMPLOYEE_PATRONYMIC' => 'Александрович'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '52929'
+    'REDIRECT_QUERY_STRING' => 'file=37&ext=25'
+    'REDIRECT_URL' => '/doc/file/download'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'file=37&ext=25'
+    'REQUEST_URI' => '/doc/file/download?file=37&ext=25'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431709844.942
+    'REQUEST_TIME' => 1431709844
+]
+2015-05-15 09:11:17 [127.0.0.1][2][-][error][yii\base\Exception] exception 'yii\base\Exception' with message 'Can't remove file from filesystem: "unlink(D:\hosts\doc/uploads/files/D:\hosts\doc/uploads/files/Oo2XoJmBR_PH-_2xGy_lBmRMaeyN7PIY.doc): Invalid argument"' in D:\hosts\doc\modules\doc\core\FileManager.php:99
+Stack trace:
+#0 D:\hosts\doc\modules\doc\controllers\FileController.php(95): app\modules\doc\core\FileManager->remove('D:\hosts\doc/up...')
+#1 [internal function]: app\modules\doc\controllers\FileController->actionDownload()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('download', Array)
+#5 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('doc/file/downlo...', Array)
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2015-05-15 09:11:13 [127.0.0.1][2][-][info][application] $_GET = [
+    'file' => '37'
+    'ext' => '22'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    'USER_LOGIN' => 'system'
+    'USER_ID' => 2
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+    'EMPLOYEE_ID' => 1
+    'EMPLOYEE_SURNAME' => 'Савонин'
+    'EMPLOYEE_NAME' => 'Дмитрий'
+    'EMPLOYEE_PATRONYMIC' => 'Александрович'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '52937'
+    'REDIRECT_QUERY_STRING' => 'file=37&ext=22'
+    'REDIRECT_URL' => '/doc/file/download'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'file=37&ext=22'
+    'REQUEST_URI' => '/doc/file/download?file=37&ext=22'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431709873.698
+    'REQUEST_TIME' => 1431709873
+]
+2015-05-15 09:11:21 [127.0.0.1][2][-][error][yii\base\Exception] exception 'yii\base\Exception' with message 'Can't remove file from filesystem: "unlink(D:\hosts\doc/uploads/files/D:\hosts\doc/uploads/files/Oo2XoJmBR_PH-_2xGy_lBmRMaeyN7PIY.doc): Invalid argument"' in D:\hosts\doc\modules\doc\core\FileManager.php:99
+Stack trace:
+#0 D:\hosts\doc\modules\doc\controllers\FileController.php(95): app\modules\doc\core\FileManager->remove('D:\hosts\doc/up...')
+#1 [internal function]: app\modules\doc\controllers\FileController->actionDownload()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('download', Array)
+#5 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('doc/file/downlo...', Array)
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2015-05-15 09:11:17 [127.0.0.1][2][-][info][application] $_GET = [
+    'file' => '37'
+    'ext' => '22'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    'USER_LOGIN' => 'system'
+    'USER_ID' => 2
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+    'EMPLOYEE_ID' => 1
+    'EMPLOYEE_SURNAME' => 'Савонин'
+    'EMPLOYEE_NAME' => 'Дмитрий'
+    'EMPLOYEE_PATRONYMIC' => 'Александрович'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '52948'
+    'REDIRECT_QUERY_STRING' => 'file=37&ext=22'
+    'REDIRECT_URL' => '/doc/file/download'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'file=37&ext=22'
+    'REQUEST_URI' => '/doc/file/download?file=37&ext=22'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431709877.541
+    'REQUEST_TIME' => 1431709877
+]
+2015-05-15 09:11:53 [127.0.0.1][2][-][error][yii\base\Exception] exception 'yii\base\Exception' with message 'Can't remove file from filesystem: "unlink(D:\hosts\doc/uploads/files/D:\hosts\doc/uploads/files/Oo2XoJmBR_PH-_2xGy_lBmRMaeyN7PIY.doc): Invalid argument"' in D:\hosts\doc\modules\doc\core\FileManager.php:99
+Stack trace:
+#0 D:\hosts\doc\modules\doc\controllers\FileController.php(96): app\modules\doc\core\FileManager->remove('D:\hosts\doc/up...')
+#1 [internal function]: app\modules\doc\controllers\FileController->actionDownload()
+#2 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('download', Array)
+#5 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('doc/file/downlo...', Array)
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2015-05-15 09:11:50 [127.0.0.1][2][-][info][application] $_GET = [
+    'file' => '37'
+    'ext' => '22'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    'USER_LOGIN' => 'system'
+    'USER_ID' => 2
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+    'EMPLOYEE_ID' => 1
+    'EMPLOYEE_SURNAME' => 'Савонин'
+    'EMPLOYEE_NAME' => 'Дмитрий'
+    'EMPLOYEE_PATRONYMIC' => 'Александрович'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '52959'
+    'REDIRECT_QUERY_STRING' => 'file=37&ext=22'
+    'REDIRECT_URL' => '/doc/file/download'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'file=37&ext=22'
+    'REQUEST_URI' => '/doc/file/download?file=37&ext=22'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431709910.304
+    'REQUEST_TIME' => 1431709910
+]
+2015-05-15 09:30:52 [127.0.0.1][2][8m4dj3aknvlvqub1aul4vs9091][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to undefined function app\modules\doc\controllers\finfo_open()' in D:\hosts\doc\modules\doc\controllers\FileController.php:90
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-05-15 09:30:48 [127.0.0.1][2][8m4dj3aknvlvqub1aul4vs9091][info][application] $_GET = [
+    'file' => '37'
+    'ext' => '25'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    'USER_LOGIN' => 'system'
+    'USER_ID' => 2
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+    'EMPLOYEE_ID' => 1
+    'EMPLOYEE_SURNAME' => 'Савонин'
+    'EMPLOYEE_NAME' => 'Дмитрий'
+    'EMPLOYEE_PATRONYMIC' => 'Александрович'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '54309'
+    'REDIRECT_QUERY_STRING' => 'file=37&ext=25'
+    'REDIRECT_URL' => '/doc/file/download'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'file=37&ext=25'
+    'REQUEST_URI' => '/doc/file/download?file=37&ext=25'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431711048.145
+    'REQUEST_TIME' => 1431711048
+]
+2015-05-15 09:32:10 [127.0.0.1][2][8m4dj3aknvlvqub1aul4vs9091][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'finfo' not found' in D:\hosts\doc\modules\doc\controllers\FileController.php:90
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-05-15 09:32:07 [127.0.0.1][2][8m4dj3aknvlvqub1aul4vs9091][info][application] $_GET = [
+    'file' => '37'
+    'ext' => '25'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    'USER_LOGIN' => 'system'
+    'USER_ID' => 2
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+    'EMPLOYEE_ID' => 1
+    'EMPLOYEE_SURNAME' => 'Савонин'
+    'EMPLOYEE_NAME' => 'Дмитрий'
+    'EMPLOYEE_PATRONYMIC' => 'Александрович'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '54321'
+    'REDIRECT_QUERY_STRING' => 'file=37&ext=25'
+    'REDIRECT_URL' => '/doc/file/download'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'file=37&ext=25'
+    'REQUEST_URI' => '/doc/file/download?file=37&ext=25'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431711127.644
+    'REQUEST_TIME' => 1431711127
+]
+2015-05-15 09:33:29 [127.0.0.1][2][8m4dj3aknvlvqub1aul4vs9091][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'finfo' not found' in D:\hosts\doc\modules\doc\controllers\FileController.php:90
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-05-15 09:33:25 [127.0.0.1][2][8m4dj3aknvlvqub1aul4vs9091][info][application] $_GET = [
+    'file' => '37'
+    'ext' => '25'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    'USER_LOGIN' => 'system'
+    'USER_ID' => 2
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+    'EMPLOYEE_ID' => 1
+    'EMPLOYEE_SURNAME' => 'Савонин'
+    'EMPLOYEE_NAME' => 'Дмитрий'
+    'EMPLOYEE_PATRONYMIC' => 'Александрович'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '54368'
+    'REDIRECT_QUERY_STRING' => 'file=37&ext=25'
+    'REDIRECT_URL' => '/doc/file/download'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'file=37&ext=25'
+    'REQUEST_URI' => '/doc/file/download?file=37&ext=25'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431711205.529
+    'REQUEST_TIME' => 1431711205
+]
+2015-05-15 09:37:56 [127.0.0.1][2][8m4dj3aknvlvqub1aul4vs9091][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'finfo' not found' in D:\hosts\doc\modules\doc\controllers\FileController.php:90
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-05-15 09:37:52 [127.0.0.1][2][8m4dj3aknvlvqub1aul4vs9091][info][application] $_GET = [
+    'file' => '37'
+    'ext' => '25'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '8m4dj3aknvlvqub1aul4vs9091'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    'USER_LOGIN' => 'system'
+    'USER_ID' => 2
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+    'EMPLOYEE_ID' => 1
+    'EMPLOYEE_SURNAME' => 'Савонин'
+    'EMPLOYEE_NAME' => 'Дмитрий'
+    'EMPLOYEE_PATRONYMIC' => 'Александрович'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=8m4dj3aknvlvqub1aul4vs9091'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '60782'
+    'REDIRECT_QUERY_STRING' => 'file=37&ext=25'
+    'REDIRECT_URL' => '/doc/file/download'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'file=37&ext=25'
+    'REQUEST_URI' => '/doc/file/download?file=37&ext=25'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431711472.815
+    'REQUEST_TIME' => 1431711472
+]

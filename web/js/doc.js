@@ -38,53 +38,93 @@ var Doc_File_Table = {
         var me = this,
             modal = $("#doc-file-template-manager-modal");
 		$("body").on("click", ".file-open-icon", function() {
-			var table = $(this).parents("table").table("before"),
+			var table = $(this).parents("table"),
 				id = $(this).parents("tr").attr("data-id");
-            Core.loadWidget("File_TemplateManager_Viewer", {
-                file: id
-            }, function(response) {
-                modal.modal("show").find(".modal-body").empty().append(
-                    response["component"]
-                );
-            }).always(function() {
-                table.table("after");
-            });
-            me.active = id;
+            me.open(id, table);
 		}).on("click", ".file-remove-icon, .template-remove-icon", function() {
-            var table = $(this).parents("table").table("before");
-            Core.sendPost("doc/file/delete", {
-                id: $(this).parents("tr[data-id]").attr("data-id")
-            }, function() {
-                setTimeout(function() {
-                    table.table("update");
-                }, 250);
-            }).always(function() {
-                table.table("after");
-            });
+            var table = $(this).parents("table"),
+                id = $(this).parents("tr").attr("data-id");
+            me.remove(id, table);
         }).on("click", ".template-create-icon, .create-template-button", function() {
             var table, id;
             if ($(this).is("button")) {
-                table = $(this).parents(".panel:eq(0)").find("table").table("before");
+                table = $(this).parents(".panel:eq(0)").find("table");
             } else {
-                table = $(this).parents("table").table("before");
+                table = $(this).parents("table");
             }
             id = $(this).parents("tr").attr("data-id");
             if (!id && !(id = me.active)) {
                 throw new Error("Can't resolve file's identification number");
             }
-            Core.sendPost("doc/template/register", {
-                file: id
-            }, function(response) {
-                setTimeout(function() {
-                    window.location.href = url("doc/editor/view", {
-                        file: response["file"]
-                    });
-                }, 250);
-            }).always(function() {
-                table.table("after");
-            });
+            me.create(id, table);
+        }).on("click", ".file-template-manager-download-button", function() {
+            if (!me.active) {
+                throw new Error("Can't resolve file's identification number");
+            } else {
+                me.download(me.active);
+            }
         });
 	},
+    open: function(id, table) {
+        table && table.table("before");
+        Core.loadWidget("File_TemplateManager_Viewer", {
+            file: id
+        }, function(response) {
+            $("#doc-file-template-manager-modal").modal("show").find(".modal-body").empty().append(
+                response["component"]
+            );
+        }).always(function() {
+            table && table.table("after");
+        });
+        this.active = id;
+    },
+    remove: function(id, table) {
+        table && table.table("before");
+        Core.sendPost("doc/file/delete", {
+            file: id
+        }, function() {
+            setTimeout(function() {
+                table.table("update");
+            }, 250);
+        }).always(function() {
+            table && table.table("after");
+        });
+    },
+    create: function(id, table) {
+        table && table.table("before");
+        Core.sendPost("doc/template/register", {
+            file: id
+        }, function(response) {
+            setTimeout(function() {
+                window.location.href = url("doc/editor/view", {
+                    file: response["file"]
+                });
+            }, 250);
+        }).always(function() {
+            table && table.table("after");
+        });
+    },
+    download: function(id) {
+        var frame = $(".download-frame"),
+            ext = frame.parent().find("select[name='ext']");
+        if (ext.length > 0) {
+            ext = ext.val();
+        } else {
+            ext = null;
+        }
+        window.location.href = url("doc/file/download", {
+            file: id,
+            ext: ext
+        });
+        //Core.sendQuery("doc/file/download", {
+        //    file: id,
+        //    ext: ext
+        //});
+        //frame.attr("src", url("doc/file/download", {
+        //    file: id,
+        //    ext: ext
+        //}));
+    },
     active: null
 };
 

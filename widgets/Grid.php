@@ -146,8 +146,17 @@ class Grid extends Widget {
 		if ($this->provider->menu == false) {
 			return ;
 		}
+        if ($this->provider->menuAlignment === null) {
+            if ($this->provider->getMenu()->mode == ControlMenu::MODE_MENU) {
+                $alignment = "right";
+            } else {
+                $alignment = "middle";
+            }
+        } else {
+            $alignment = $this->provider->menuAlignment;
+        }
 		print Html::beginTag("td", [
-			"align" => $this->provider->menuAlignment,
+			"align" => $alignment,
 			"width" => $this->provider->menuWidth
 		]);
 		/** @var $menu ControlMenu */

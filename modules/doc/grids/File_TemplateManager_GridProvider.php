@@ -17,30 +17,30 @@ class File_TemplateManager_GridProvider extends GridProvider {
     public $columns = [
         "id" => "#",
         "name" => "Название",
-        "file_ext_id" => "Расширение",
-        "upload_date" => "Дата"
+        "upload_date" => "Создан",
+        "upload_time" => ""
     ];
 
     public $menu = [
         "controls" => [
             "template-view-icon" => [
                 "label" => "Просмотреть",
-                "icon" => "glyphicon glyphicon-ok"
+                "icon" => "fa fa-book"
             ],
             "template-edit-icon" => [
                 "label" => "Редактировать",
-                "icon" => "glyphicon glyphicon-pencil"
+                "icon" => "fa fa-edit"
             ],
             "template-remove-icon" => [
                 "label" => "Удалить",
-                "icon" => "glyphicon glyphicon-remove font-danger",
+                "icon" => "fa fa-trash font-danger",
                 "onclick" => "confirmDelete()"
             ],
         ],
-        "mode" => ControlMenu::MODE_ICON,
-        "special" => "template-table-control",
+        "mode" => ControlMenu::MODE_MENU
     ];
 
+    public $menuAlignment = "right";
     public $fetcher = '\app\models\doc\Template';
     public $menuWidth = 100;
     public $pagination = false;

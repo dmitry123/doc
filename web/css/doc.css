@@ -30,6 +30,10 @@
     padding: 5px 15px;
 }
 
+.dropdown-menu > li > a {
+    padding: 10px 15px;
+}
+
 .nav a[data-toggle='modal']:focus {
     background-color: #333333 !important;
     outline: 0;
@@ -88,10 +92,4 @@
 
 .editor-template-builder-wrapper .panel-body {
     padding: 5px;
-}
-
-.template-table-control {
-    padding-left: 3px;
-    padding-right: 3px;
-    font-size: 14px;
 }

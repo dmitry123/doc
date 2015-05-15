@@ -9,7 +9,7 @@ class FileExt extends ActiveRecord {
 	public function configure() {
 		return [
 			"id" => [
-				"label" => "Наименование",
+				"label" => "Идентификатор",
 				"type" => "hidden",
 				"rules" => "numerical"
 			],

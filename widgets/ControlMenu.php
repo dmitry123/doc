@@ -205,7 +205,8 @@ class ControlMenu extends Widget {
 			"class" => "dropdown"
 		]);
 		print Html::tag("div", Html::tag("span", "", [
-			"class" => $this->menuIcon
+			"class" => $this->menuIcon,
+            "style" => "margin-right: 10px"
 		]), [
 			"href" => "javascript:void(0)",
 			"class" => "dropdown-toggle",
@@ -228,7 +229,7 @@ class ControlMenu extends Widget {
 			}
 			if (!empty($required["icon"])) {
 				$label = Html::tag("span", "", [
-						"class" => $required["icon"]
+						"class" => $required["icon"],
 					]) ."&nbsp;&nbsp;". $label;
 			}
 			$options["class"] = preg_replace($this->buttonRegexp, "", $options["class"]);

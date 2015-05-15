@@ -55,7 +55,7 @@ abstract class GridProvider extends ActiveDataProvider {
 	/**
 	 * @var string control menu elements alignment
 	 */
-	public $menuAlignment = "middle";
+	public $menuAlignment = null;
 
 	/**
 	 * @var bool should table be empty after first page load, set

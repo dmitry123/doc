@@ -3,9 +3,17 @@
 namespace app\modules\doc\controllers;
 
 use app\core\Controller;
+use app\core\EmployeeHelper;
+use app\core\MimeTypeMatcher;
 use app\models\doc\File;
-use app\modules\doc\core\FileUploader;
+use app\models\doc\FileExt;
+use app\modules\doc\core\FileConverter;
+use app\modules\doc\core\FileManager;
 use yii\base\Exception;
+use yii\base\UserException;
+use yii\web\HeaderCollection;
+use yii\web\HtmlResponseFormatter;
+use yii\web\YiiAsset;
 
 class FileController extends Controller {
 
@@ -35,7 +43,7 @@ class FileController extends Controller {
 			$errors = [];
 			foreach ($this->getFiles($failed) as $file) {
 				try {
-					FileUploader::getUploader()->upload($file);
+					FileManager::getManager()->upload($file);
 				} catch (\Exception $e) {
 					$errors[$file["name"]] = $e->getMessage();
 				}
@@ -57,17 +65,68 @@ class FileController extends Controller {
 		}
 	}
 
+    public function actionDownload() {
+        try {
+            $path = null;
+            /** @var $file File */
+            if (!$file = File::findOne([ "id" => $this->requireQuery("file") ])) {
+                throw new Exception("Can't resolve file's identification number");
+            } else {
+                $dir = FileManager::getManager()->getDirectory($file->{"path"});
+            }
+            if (($ext = $this->getQuery("ext")) != null && $ext != $file->{"file_ext_id"}) {
+                if (!$ext = FileExt::findOne([ "id" => $ext ])) {
+                    throw new Exception("Can't resolve file's extension");
+                }
+                $prepared = File::findOne([
+                    "file_ext_id" => $ext->{"id"},
+                    "parent_id" => $file->{"id"},
+                    "file_type_id" => "prepared",
+                ]);
+                if ($prepared == null) {
+                    FileConverter::getDefaultConverter($ext->{"ext"})
+                        ->convert($dir)
+                        ->wait()
+                        ->rename($dir = FileManager::getManager()->generateName());
+                    $mimeType = MimeTypeMatcher::match($ext->{"ext"});
+                    $prepared = new File([
+                        "path" => $dir,
+                        "employee_id" => $file->{"employee_id"},
+                        "file_ext_id" => $file->{"file_ext_id"},
+                        "mime_type" => $mimeType,
+                        "parent_id" => $file->{"id"},
+                        "file_type_id" => "prepared",
+                        "file_status_id" => "prepared",
+                        "file_category_id" => null,
+                        "name" => FileManager::getManager()->generateName(),
+                    ]);
+                    if (!$prepared->save()) {
+                        throw new Exception("File hasn't been prepared to download, can't register changes in database");
+                    }
+                }
+            } else if (!$ext = FileExt::findOne([ "id" => $file->{"file_ext_id"} ])) {
+                throw new Exception("Can't resolve file's extension");
+            }
+            if (!file_exists($dir)) {
+                throw new UserException("Файл отсутствует на сервере, возможно он был изменен или удален");
+            }
+            \Yii::$app->getResponse()->setDownloadHeaders($file->{"name"}.".".$ext->{"ext"})
+                ->sendFile($dir);
+        } catch (\Exception $e) {
+            $this->exception($e);
+        }
+    }
+
     public function actionDelete() {
         try {
             /** @var $file File */
-            if (!$file = File::findOne([ "id" => $this->requirePost("id") ])) {
+            if (!$file = File::findOne([ "id" => $this->requirePost("file") ])) {
                 throw new Exception("Can't resolve file's identification number");
             }
             $file->{"file_status_id"} = "removed";
             if (!$file->save()) {
                 throw new Exception("Can't change file's status to removed");
             }
-            
             return $this->leave([
                 "message" => "Файл был успешно удален"
             ]);
