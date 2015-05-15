@@ -5,7 +5,7 @@ namespace app\core;
 use app\widgets\ControlMenu;
 use app\widgets\GridFooter;
 
-abstract class Table extends ActiveDataProvider {
+abstract class GridProvider extends ActiveDataProvider {
 
 	/**
 	 * Default control menu display mode. To override it change

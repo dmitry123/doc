@@ -1,11 +1,11 @@
 <?php
 
-namespace app\tables;
+namespace app\grids;
 
-use app\core\Table;
+use app\core\GridProvider;
 use app\models\doc\File;
 
-class FileTable extends Table {
+class DocumentGridProvider extends GridProvider {
 
 	public $columns = [
 		"id" => "#",
@@ -17,12 +17,17 @@ class FileTable extends Table {
 
 	public $menu = [
 		"controls" => [
-			"table-template-icon" => [
-				"label" => "Создать шаблон",
-				"icon" => "fa fa-copy"
+			"file-open-icon" => [
+				"label" => "Открыть файл",
+				"icon" => "fa fa-folder-open-o"
 			],
+            "file-remove-icon" => [
+                "label" => "Удалить файл",
+                "icon" => "fa fa-trash font-danger",
+                "onclick" => "confirmDelete()"
+            ],
 		],
-		"mode" => \app\widgets\ControlMenu::MODE_ICON
+		"mode" => \app\widgets\ControlMenu::MODE_MENU
 	];
 
 	public $footer = [
@@ -59,6 +64,8 @@ class FileTable extends Table {
 	public $fetcher = 'app\models\doc\File';
 
 	public function getQuery() {
-		return File::find();
+		return File::find()->where("file_type_id = :file_type_id", [
+            ":file_type_id" => "document"
+        ]);
 	}
 }

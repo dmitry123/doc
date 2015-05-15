@@ -1,11 +1,11 @@
 <?php
 
-namespace app\tables;
+namespace app\grids;
 
-use app\core\Table;
+use app\core\GridProvider;
 use app\models\core\AboutEmployee;
 
-class EmployeeTable extends Table {
+class EmployeeGridProvider extends GridProvider {
 
 	public $columns = [
 		"id" => "#",

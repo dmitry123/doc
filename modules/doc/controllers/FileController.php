@@ -55,6 +55,9 @@ class FileController extends Controller {
 		}
 	}
 
+    public function actionDelete() {
+    }
+
 	/**
 	 * Get array with files, that has been uploaded without
 	 * any errors and has tmp file in system, other files

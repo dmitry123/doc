@@ -34,9 +34,23 @@ abstract class AbstractFactory implements Factory {
 	 *
 	 * @return mixed instance of something
 	 */
-	public function createEx($module, $id, $params = []) {
-		return $this->create($id, $params);
-	}
+	public abstract function createEx($module, $id, $params = []);
+
+    /**
+     * Produce instance of some component via
+     * your factory singleton instance
+     *
+     * @param $id int|string identification number
+     *    of your object, which will be produced
+     *
+     * @param $params array with class parameters
+     *    which copies to itself
+     *
+     * @return mixed instance of something
+     */
+    public function create($id, $params = []) {
+        return $this->createEx(ModuleHelper::currentModuleID(), $id, $params);
+    }
 
 	/**
 	 * Cache some component in factory by it's

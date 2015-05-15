@@ -2,12 +2,8 @@
 
 namespace app\core;
 
-use yii\base\ErrorException;
 use yii\base\Exception;
 use yii\base\Model;
-use yii\db\ActiveQuery;
-use yii\db\Query;
-use yii\helpers\ArrayHelper;
 use yii\helpers\Inflector;
 
 abstract class ActiveRecord extends \yii\db\ActiveRecord {
@@ -149,37 +145,6 @@ abstract class ActiveRecord extends \yii\db\ActiveRecord {
 	}
 
 	/**
-	 * Create new instance of table provider class for
-	 * current active record class
-	 *
-	 * @param $fetchQuery Query to fetch rows from
-	 *  database's table
-	 *
-	 * @return TableProvider instance of table provider class
-	 */
-	public static function createTableProvider($fetchQuery) {
-		return new TableProvider(new static(), $fetchQuery);
-	}
-
-	/**
-	 * Create default instance of table provider with default [fetchQuery]
-	 * and [countQuery] queries for [@see app\widgets\Table] widget
-	 *
-	 * @param $model string|null name of active record class
-	 *
-	 * @see TableProvider::fetchQuery
-	 * @see TableProvider::countQuery
-	 *
-	 * @return TableProvider
-	 */
-	public static function search($model = null) {
-		if ($model == null) {
-			$model = get_called_class();
-		}
-		return new TableProvider(new $model());
-	}
-
-	/**
 	 * Get array with labels for every column
 	 * in current active record class
 	 *
@@ -187,26 +152,6 @@ abstract class ActiveRecord extends \yii\db\ActiveRecord {
 	 */
 	public function attributeLabels() {
 		return $this->getManager()->labels;
-	}
-
-	/**
-	 * Moved from Yii 1.1 for backward compatibility with some
-	 * methods which has been moved from old projects
-	 *
-	 * @param $id int|string unique primary key value
-	 *
-	 * @return integer|false the number of rows deleted, or false
-	 * 	if the deletion is unsuccessful for some reason
-	 *
-	 * @throws ErrorException will be thrown, if table hasn't
-	 * 	primary key
-	 *
-	 * @throws \Exception
-	 */
-	public function deleteByPk($id) {
-		return $this->deleteAll([
-			$this->getTableSchema()->primaryKey[0] => $id
-		]);
 	}
 
 	private $_config = null;

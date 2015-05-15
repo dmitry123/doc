@@ -2,7 +2,6 @@
 
 namespace app\core;
 
-use yii\base\ErrorException;
 use yii\base\Model;
 
 abstract class FormModel extends Model {

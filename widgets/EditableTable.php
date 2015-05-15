@@ -13,7 +13,7 @@ class EditableTable extends Table {
 		],
 		"table-remove-icon" => [
 			"label" => "Удалить",
-			"icon" => "glyphicon glyphicon-remove confirm-delete font-red"
+			"icon" => "glyphicon glyphicon-remove confirm-delete font-danger"
 		]
 	];
 

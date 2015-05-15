@@ -213,9 +213,11 @@ var Core = Core || {};
 	};
 
 	Core.loadWidget = function(widget, attributes, success, module) {
-		return Core.sendQuery("ext/widget", $.extend(attributes, {
-			class: widget, module: module || doc["module"]
-		}), success);
+		return Core.sendQuery("ext/widget", {
+            "module": module || doc["module"],
+			"class": widget,
+            "config": attributes
+		}, success);
 	};
 
 	Core.loadPanel = function(widget, attributes, success) {

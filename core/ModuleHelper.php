@@ -171,6 +171,14 @@ class ModuleHelper {
 		}
 	}
 
+    public static function currentModuleID() {
+        if (Yii::$app->module->id != null) {
+            return Yii::$app->module->id;
+        } else {
+            return null;
+        }
+    }
+
 	/**
 	 * Create identification number for some component
 	 * by name of module

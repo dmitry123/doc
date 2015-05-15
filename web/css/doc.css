@@ -89,3 +89,9 @@
 .editor-template-builder-wrapper .panel-body {
     padding: 5px;
 }
+
+.template-table-control {
+    padding-left: 3px;
+    padding-right: 3px;
+    font-size: 14px;
+}

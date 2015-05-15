@@ -2,6 +2,7 @@
 
 namespace app\core;
 
+use app\widgets\Modal;
 use yii\base\Exception;
 
 class Widget extends \yii\base\Widget {
@@ -37,6 +38,23 @@ class Widget extends \yii\base\Widget {
 		$w->_config = $config;
 		return $w;
 	}
+
+    /**
+     * Wrap your widget with bootstrap modal window
+     *
+     * @param $config array with basic widget
+     *  configuration
+     *
+     * @param $modal array with widget configuration
+     *  for modal window class
+     *
+     * @return string with modal rendered content
+     */
+    public static function modal($config = [], $modal = []) {
+        return Modal::widget([
+                "body" => static::create($config)
+            ] + $modal);
+    }
 
 	/**
 	 * Get widget's configuration that should be

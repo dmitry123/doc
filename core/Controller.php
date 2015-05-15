@@ -2,10 +2,9 @@
 
 namespace app\core;
 
-use app\widgets\Form;
-use yii\base\ErrorException;
+use yii\base\Exception;
 use yii\base\Model;
-use yii\base\Widget;
+use yii\base\UserException;
 use yii\helpers\ArrayHelper;
 
 abstract class Controller extends \yii\web\Controller {
@@ -117,17 +116,17 @@ abstract class Controller extends \yii\web\Controller {
 	 * @param string $name - Form's name will be in that field
 	 * @param string $scenario - Form's module usage scenario
 	 * @return FormModel - Form's model with attributes
-	 * @throws ErrorException
+	 * @throws Exception
 	 */
 	public function getUrlForm($form, $error = true, $scenario = null, &$name = "") {
 		if (!is_string($form)) {
-			throw new ErrorException("Form's model must be serialized form string");
+			throw new Exception("Form's model must be serialized form string");
 		}
 		$array = $this->decode($form, $name);
 		$name = "\\app\\forms\\" . $name;
 		$form = new $name($scenario);
 		if (!($form instanceof FormModel)) {
-			throw new ErrorException("Form must be instance of LFormModel class");
+			throw new Exception("Form must be instance of LFormModel class");
 		}
 		$form->attributes = $array;
 		foreach ($array as $i => $value) {
@@ -171,7 +170,7 @@ abstract class Controller extends \yii\web\Controller {
 	 * @param string $method - Receive method type
 	 * @param string $scenario - Name of scenario
 	 * @return FormModel|Array - Model with attributes or array with founded forms
-	 * @throws ErrorException
+	 * @throws Exception
 	 */
 	public function getFormModel($model = "model", $method = "post", $scenario = "default") {
 		$form = $this->$method($model);
@@ -189,80 +188,15 @@ abstract class Controller extends \yii\web\Controller {
 	}
 
 	/**
-	 * That action will catch widget update and returns
-	 * new just rendered component. Override that method
-	 * to check necessary privileges and invoke super method
-	 */
-	public function actionWidget() {
-		try {
-			// Get widget's class component and unique identification number and method
-			$class = $this->requireQueryOnce("class");
-
-			if (isset($_GET["model"])) {
-				$model = $this->requireQueryOnce("model");
-			} else {
-				$model = null;
-			}
-			if (isset($_GET["method"])) {
-				$method = $this->requireQueryOnce("method");
-			} else {
-				$method = "GET";
-			}
-			if (isset($_GET["form"])) {
-				$form = $this->requireQueryOnce("form");
-				if (is_string($form)) {
-					$form = $this->decode($form);
-				}
-			} else {
-				$form = null;
-			}
-
-			if (strtoupper($method) == "POST") {
-				foreach ($_GET as $key => $value) {
-					$_POST[$key] = $value;
-				}
-				$parameters = $_POST;
-			} else {
-				$parameters = $_GET;
-			}
-
-			if ($model != null) {
-				$parameters += [
-					"model" => new $model(null)
-				];
-			}
-
-			// Create widget, check for LWidget instance and copy parameters
-			$widget = $this->createWidget($class, $parameters);
-
-			if (!($widget instanceof Widget)) {
-				throw new ErrorException("Can't update widget which don't extends LWidget component");
-			}
-			if ($form != null && $widget instanceof Form && is_array($form)) {
-				foreach ($form as $key => $value) {
-					$widget->model->$key = $value;
-				}
-			}
-			$this->leave([
-				"id" => isset($widget->id) ? $widget->id : null,
-				"component" => $widget->call(),
-				"model" => $form
-			]);
-		} catch (ErrorException $e) {
-			$this->exception($e);
-		}
-	}
-
-	/**
 	 * Create new widget (for backward capability)
 	 * @param string $class - Name of class to load
 	 * @param array $parameters - List with widget parameters
 	 * @return \app\core\Widget - Widget component
-	 * @throws ErrorException
+	 * @throws Exception
 	 */
 	public function createWidget($class, $parameters = []) {
 		if (!class_exists($class)) {
-			throw new ErrorException("Unresolved widget module or path \"$class\"");
+			throw new Exception("Unresolved widget module or path \"$class\"");
 		}
 		return new $class($parameters);
 	}
@@ -332,7 +266,6 @@ abstract class Controller extends \yii\web\Controller {
 	 * Try to get and unset variable from GET method or throw an exception
 	 * @param String $name - Name of parameter in GET array
 	 * @return Mixed - Some received value
-	 * @throws ErrorException - If parameter hasn't been declared in _GET array
 	 */
 	public function requireQueryOnce($name) {
 		$value = $this->requireQuery($name);
@@ -401,10 +334,12 @@ abstract class Controller extends \yii\web\Controller {
 	 * @throws \Exception
 	 */
 	public function exception(\Exception $exception) {
+        if ($exception instanceof UserException) {
+            $this->error($exception->getMessage());
+        } else if (!\Yii::$app->getRequest()->getIsAjax() || true) {
+            throw $exception;
+        }
 		$method = $exception->getTrace()[0];
-		if (!\Yii::$app->getRequest()->getIsAjax() || true) {
-			throw $exception;
-		}
 		$this->leave([
 			"message" => basename($method["file"])."[".$method["line"]."] ".$method["class"]."::".$method["function"]."(): \"".$exception->getMessage()."\"",
 			"file" => basename($method["file"]),

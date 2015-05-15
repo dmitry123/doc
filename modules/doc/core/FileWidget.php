@@ -5,10 +5,18 @@ namespace app\modules\doc\core;
 use app\core\Widget;
 use app\models\doc\File;
 use Exception;
+use yii\base\UserException;
 
 class FileWidget extends Widget {
 
-	const DEFAULT_ALLOWED_FILE_TYPE = "template";
+    /**
+     * @var string|array with supported file types, if widget
+     *  assumes another, then exception will be thrown
+     *
+     * @internal only for internal usage, don't
+     *  use that field as widget's configuration
+     */
+    public $allowed = "template";
 
 	/**
 	 * @var File|int file's identification number, which
@@ -31,8 +39,10 @@ class FileWidget extends Widget {
 		} else if (!is_object($this->file)) {
 			throw new Exception("File must be an class instance of File class or it's identification number");
 		}
-		if (static::DEFAULT_ALLOWED_FILE_TYPE != null && $this->file->{"file_type_id"} != static::DEFAULT_ALLOWED_FILE_TYPE) {
-			throw new Exception("Only template file type supported");
-		}
+        if (is_array($this->allowed) && !in_array($this->file->{"file_type_id"}, $this->allowed) ||
+            is_string($this->allowed) && $this->file->{"file_type_id"} != $this->allowed
+        ) {
+            throw new UserException("Данный тип файла не поддерживается этой операцией");
+        }
 	}
 }

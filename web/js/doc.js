@@ -35,23 +35,55 @@ var Doc_Navigation_Menu = {
 
 var Doc_File_Table = {
 	ready: function() {
-		$("body").on("click", ".table-template-icon", function() {
+        var me = this,
+            modal = $("#doc-file-template-manager-modal");
+		$("body").on("click", ".file-open-icon", function() {
 			var table = $(this).parents("table").table("before"),
 				id = $(this).parents("tr").attr("data-id");
-			Core.sendPost("doc/template/register", {
-				file: id
-			}, function(response) {
-				console.log(response);
-				setTimeout(function() {
-					window.location.href = url("doc/editor/view", {
-						file: response["file"]
-					});
-				}, 250);
-			}).always(function() {
-				table.table("after");
-			});
-		});
-	}
+            Core.loadWidget("File_TemplateManager_Viewer", {
+                file: id
+            }, function(response) {
+                modal.modal("show").find(".modal-body").empty().append(
+                    response["component"]
+                );
+            }).always(function() {
+                table.table("after");
+            });
+            me.active = id;
+		}).on("click", ".file-remove-icon", function() {
+            var table = $(this).parents("table").table("before");
+            Core.sendPost("doc/file/delete", {
+                file: $(this).parents("tr[data-id]").attr("data-id")
+            }, function() {
+
+            }).always(function() {
+                table.table("after");
+            });
+        }).on("click", ".template-create-icon, .create-template-button", function() {
+            var table, id;
+            if ($(this).is("button")) {
+                table = $(this).parents(".panel:eq(0)").find("table").table("before");
+            } else {
+                table = $(this).parents("table").table("before");
+            }
+            id = $(this).parents("tr").attr("data-id");
+            if (!id && !(id = me.active)) {
+                throw new Error("Can't resolve file's identification number");
+            }
+            Core.sendPost("doc/template/register", {
+                file: id
+            }, function(response) {
+                setTimeout(function() {
+                    window.location.href = url("doc/editor/view", {
+                        file: response["file"]
+                    });
+                }, 250);
+            }).always(function() {
+                table.table("after");
+            });
+        });
+	},
+    active: null
 };
 
 var Doc_TemplateContentEditor_Widget = {
@@ -74,6 +106,16 @@ var Doc_TemplateContentEditor_Widget = {
             click: function(c) {
                 console.log(c);
             }
+        });
+    }
+};
+
+var Doc_TemplateManager_Viewer = {
+    ready: function() {
+        $(document).on("click", ".template-edit-icon", function() {
+            window.location.href = url("doc/editor/view", {
+                file: $(this).parents("tr[data-id]").attr("data-id")
+            });
         });
     }
 };
@@ -114,4 +156,5 @@ $(document).ready(function() {
 	Doc_Navigation_Menu.ready();
 	Doc_File_Table.ready();
     Doc_TemplateContentEditor_Widget.ready();
+    Doc_TemplateManager_Viewer.ready();
 });

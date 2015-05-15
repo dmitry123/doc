@@ -8,7 +8,7 @@ use yii\helpers\Html;
 class GridFooter extends Widget {
 
 	/**
-	 * @var \app\core\Table class instance, which provides
+	 * @var \app\core\GridProvider class instance, which provides
 	 * 	manipulations with ActiveRecord models
 	 */
 	public $provider = null;

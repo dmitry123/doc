@@ -5,6 +5,7 @@ namespace app\widgets;
 use app\core\Widget;
 use Exception;
 use yii\helpers\Html;
+use yii\web\AssetManager;
 
 class ControlMenu extends Widget {
 

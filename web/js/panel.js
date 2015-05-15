@@ -41,11 +41,9 @@ var Core = Core || {};
 		} else {
 			refresh.rotate(360, 500, "swing");
 		}
-		this.selector().trigger("panel.update");
 	};
 
 	Panel.prototype.after = function() {
-		this.selector().trigger("panel.updated");
 		this.selector().loading("destroy");
 	};
 
@@ -57,16 +55,23 @@ var Core = Core || {};
 			throw new Error("Layout hasn't declared [doc::widget] field via [Widget::createUrl] method");
 		}
 		this.before();
-		var params = $.parseJSON(this.selector().attr("data-attributes"));
+        var params = this.selector().attr("data-attributes");
+        if (params) {
+            params = $.parseJSON(params);
+        } else {
+            params = {};
+        }
 		if (params.length !== void 0 && !params.length) {
 			params = {};
 		}
+        this.selector().trigger("panel.update");
 		Core.loadPanel(this.selector().attr("data-widget"), {
 			config: params
 		}, function(response) {
 			me.selector().find(".panel-content").fadeOut("fast", function() {
 				$(this).empty().append(response["component"]).hide().fadeIn("fast");
 			});
+            me.selector().trigger("panel.updated");
 		}).always(function() {
 			me.after();
 		});

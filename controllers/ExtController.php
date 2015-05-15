@@ -7,7 +7,7 @@ use app\core\Ext;
 use app\core\ExtFactory;
 use app\core\Module;
 use app\core\PageFactory;
-use app\core\Table;
+use app\core\GridProvider;
 use app\core\Widget;
 use yii\base\Exception;
 
@@ -49,22 +49,14 @@ class ExtController extends Controller {
 
 	public function actionWidget() {
 		try {
-			if (!$class = \Yii::$app->request->getQueryParam("class")) {
-				throw new Exception("Widget action requires [class] parameter");
-			} else {
-				$params = \Yii::$app->request->getQueryParam("attributes");
-			}
-			if (!$module = \Yii::$app->request->getQueryParam("module")) {
-				$module = \Yii::$app->controller->module;
-			} else {
-				$module = \Yii::$app->getModule($module);
-			}
+            $class = $this->requireQuery("class");
+            $module = \Yii::$app->getModule($this->requireQuery("module"));
 			if ($module instanceof Module) {
 				$class = $module->getWidgetClass($class);
 			} else {
 				$class = "app\\widgets\\".$class;
 			}
-			$widget = $this->createWidget($class, $params);
+			$widget = $this->createWidget($class, $this->getQuery("config", []));
 			if (!$widget instanceof Widget) {
 				throw new Exception("Loaded widget must be an instance of [app\\core\\Widget] class");
 			}
@@ -89,7 +81,7 @@ class ExtController extends Controller {
 					unset($value[$k]);
 				}
 			}
-			/** @var $class Table */
+			/** @var $class GridProvider */
 			$provider = new $class();
 			foreach ($config as $key => &$value) {
 				if (is_array($provider->$key)) {
@@ -98,7 +90,7 @@ class ExtController extends Controller {
 					$provider->$key = $value;
 				}
 			}
-			if (!$provider instanceof Table) {
+			if (!$provider instanceof GridProvider) {
 				throw new Exception("Table provider must be an instance of [app\\core\\Table] class");
 			}
 			$widget = $this->createWidget($this->requireQuery("widget"), [

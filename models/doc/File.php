@@ -114,14 +114,4 @@ class File extends \app\core\ActiveRecord {
 	public static function tableName() {
 		return "doc.file";
 	}
-
-	public static function getMainTableProvider($fileType) {
-		return static::createTableProvider(static::find()
-			->select("*")
-			->from("doc.file as f")
-			->where("f.file_type_id = :file_type_id", [
-				":file_type_id" => $fileType
-			])
-		);
-	}
 }

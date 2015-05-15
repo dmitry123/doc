@@ -33,4 +33,7 @@ var ConfirmDeleteModal = {
 $(document).ready(function() {
 	$('[data-toggle="tooltip"]').tooltip();
     ConfirmDeleteModal.ready();
+    window["confirmDelete"] = function() {
+        ConfirmDeleteModal.confirm(window.event);
+    };
 });

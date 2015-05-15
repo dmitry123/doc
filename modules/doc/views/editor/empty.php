@@ -5,7 +5,7 @@
 print \app\widgets\Modal::widget([
 	"title" => "Список файлов",
 	"body" => \app\widgets\Grid::widget([
-		"provider" => new \app\tables\FileTable()
+		"provider" => new \app\grids\DocumentGridProvider()
 	]),
 	"size" => \app\widgets\Modal::SIZE_LARGE,
 	"id" => "doc-editor-file-table-modal",

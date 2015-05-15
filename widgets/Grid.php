@@ -3,7 +3,7 @@
 namespace app\widgets;
 
 use app\core\ObjectHelper;
-use app\core\Table;
+use app\core\GridProvider;
 use app\core\Widget;
 use yii\base\Exception;
 use yii\helpers\Html;
@@ -19,7 +19,7 @@ class Grid extends Widget {
 	public $id = null;
 
 	/**
-	 * @var \app\core\Table class instance, which provides
+	 * @var \app\core\GridProvider class instance, which provides
 	 * 	manipulations with ActiveRecord models
 	 */
 	public $provider = null;
@@ -41,7 +41,7 @@ class Grid extends Widget {
 	public function run() {
 		if (is_string($this->provider)) {
 			$this->provider = new $this->provider();
-			if (!$this->provider instanceof Table) {
+			if (!$this->provider instanceof GridProvider) {
 				throw new Exception("Table provider must be an instance of [app\\core\\Table] class");
 			}
 		}
@@ -79,7 +79,7 @@ class Grid extends Widget {
 			$this->renderHeader();
 		}
 		$this->renderBody();
-		if ($this->provider->getFooter() !== false) {
+		if ($this->provider->hasFooter && $this->provider->getFooter() !== false) {
 			print $this->provider->getFooter()->run();
 		}
 		print Html::endTag("table");
@@ -218,4 +218,10 @@ class Grid extends Widget {
 			"label" => $label
 		];
 	}
+
+    public function getAttributes($attributes = null, $excepts = [], $string = null) {
+        return parent::getAttributes($attributes, $excepts, [
+            "provider"
+        ]);
+    }
 }

@@ -2,7 +2,7 @@
 
 namespace app\core;
 
-use yii\base\ErrorException;
+use yii\base\Exception;
 
 class FieldCollection {
 
@@ -24,12 +24,12 @@ class FieldCollection {
 	/**
 	 * Insert field into collection
 	 * @param Field $field - Field to register
-	 * @throws ErrorException
+	 * @throws Exception
 	 */
 	public function add($field) {
 		$key = strtolower($field->getType());
 		if (isset($this->fields[$key])) {
-			throw new ErrorException("Field with that key already registered in collection ({$field->getType()})");
+			throw new Exception("Field with that key already registered in collection ({$field->getType()})");
 		}
 		$this->fields[$key] = $field;
 		$this->select[$key] = $field->getName();
@@ -39,12 +39,12 @@ class FieldCollection {
 	 * Find field by it's key in collection
 	 * @param String $key - Field's key
 	 * @return Field - Field instance
-	 * @throws ErrorException
+	 * @throws Exception
 	 */
 	public function find($key) {
 		$key = strtolower($key);
 		if (!isset($this->fields[$key])) {
-			throw new ErrorException("Unresolved or not implemented field type ({$key})");
+			throw new Exception("Unresolved or not implemented field type ({$key})");
 		}
 		return $this->fields[$key];
 	}
@@ -82,7 +82,7 @@ class FieldCollection {
 	private function __construct() {
 		$handle = opendir(static::DIRECTORY);
 		if ($handle === false) {
-			throw new ErrorException("Can't read folder with fields");
+			throw new Exception("Can't read folder with fields");
 		}
 		while (($entry = readdir($handle)) !== false) {
 			if ($entry != "." && $entry != "..") {

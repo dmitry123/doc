@@ -5,9 +5,8 @@ namespace app\widgets;
 use app\core\FormModel;
 use app\core\Widget;
 use app\core\FieldCollection;
-use app\core\FormModelEx;
 use Yii;
-use yii\base\ErrorException;
+use yii\base\Exception;
 use yii\db\Query;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
@@ -56,7 +55,6 @@ class Form extends Widget {
 
     /**
      * Override that method to return just rendered component
-     * @throws ErrorException
      * @return string - Just rendered component or nothing
      */
     public function run() {
@@ -83,11 +81,11 @@ class Form extends Widget {
      * Test model for LFormModel inheritance and not null
      * @param Mixed $model - Model which must extends LFormModel
      * @return bool - True if everything ok
-     * @throws ErrorException
+     * @throws Exception
      */
     private function test($model) {
         if (!$model || !($model instanceof FormModel)) {
-            throw new ErrorException("Unresolved model field or form model isn't instance of LFormModel ".(int)$model);
+            throw new Exception("Unresolved model field or form model isn't instance of LFormModel ".(int)$model);
         }
         return true;
     }
@@ -128,11 +126,11 @@ class Form extends Widget {
      *  + name - Name of displayable table
      * @param array $table - Array with table configuration
      * @return array - Array with prepared data
-     * @throws ErrorException
+     * @throws Exception
      */
     public static function fetch($table) {
         if (!isset($table["name"]) && !isset($table["value"])) {
-            throw new ErrorException("AutoTable configuration requires key, value and name");
+            throw new Exception("AutoTable configuration requires key, value and name");
         }
         if (!isset($table["key"])) {
             $table["key"] = "id";
@@ -201,7 +199,7 @@ class Form extends Widget {
      * @param ActiveForm $form - Active form instance
      * @param string $key - Field name
      * @return string - Result string
-     * @throws ErrorException - If field's type hasn't been implemented in renderer
+     * @throws Exception - If field's type hasn't been implemented in renderer
      */
     public function renderField($form, $key) {
 		return $this->prepare($key)->render($form, $this->model);

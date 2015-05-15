@@ -54,7 +54,6 @@ class AutoTable extends Table {
 	 * Run widget
 	 * @return string - Rendered content
 	 * @throws Exception
-	 * @throws \yii\base\ErrorException
 	 */
 	public function init() {
 		$columns = [];
