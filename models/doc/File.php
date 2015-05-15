@@ -114,4 +114,13 @@ class File extends \app\core\ActiveRecord {
 	public static function tableName() {
 		return "doc.file";
 	}
+
+    public static function findCached($ext, $parent) {
+        return static::findOne([
+            "file_ext_id" => $ext,
+            "parent_id" => $parent,
+            "file_type_id" => "cached",
+            "file_status_id" => "cached"
+        ]);
+    }
 }

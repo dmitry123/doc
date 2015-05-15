@@ -3,6 +3,7 @@
 namespace app\modules\doc\core;
 
 use app\core\EmployeeHelper;
+use app\core\MimeTypeMatcher;
 use app\models\doc\File;
 use app\models\doc\FileExt;
 use app\models\doc\FileStatus;
@@ -14,7 +15,8 @@ class FileManager {
 
 	/**
 	 * Get single file uploader instance
-	 * @return FileManager - Instance of file uploader
+     *
+	 * @return FileManager instance of file uploader
 	 */
 	public static function getManager() {
 		if (self::$uploader == null) {
@@ -53,7 +55,7 @@ class FileManager {
 		if (($employee = EmployeeHelper::getHelper()->getEmployee()) == null) {
 			throw new Exception("Only employees can upload files on server");
 		}
-		$path = $this->generateName();
+		$path = $this->getName();
 		try {
 			\Yii::$app->getDb()->beginTransaction();
 			if (!($fileStatus = FileStatus::findOne([ "id" => "new" ]))) {
@@ -107,11 +109,49 @@ class FileManager {
         }
     }
 
+    /**
+     *
+     *
+     * @param $file File instance of file model class, which stores information about current
+     *  file, which should be  prepared and cached for next downloads and registered in database
+     *
+     * @param $ext FileExt instance of extension class, which stores information
+     *  about new file's extension
+     *
+     * @return File instance of new file, which prepared
+     *  for downloads and other manipulations
+     *
+     * @throws Exception
+     */
+    public function cache($file, $ext) {
+        $name = FileManager::getManager()->getName();
+        $path = FileManager::getManager()->getDirectory($name);
+        FileConverter::getDefaultConverter($ext->{"ext"})
+            ->convert($this->getDirectory($file->{"path"}))
+            ->wait()
+            ->rename($path);
+        $cached = new File([
+            "path" => $name,
+            "employee_id" => $file->{"employee_id"},
+            "file_ext_id" => $ext->{"id"},
+            "mime_type" => MimeTypeMatcher::match($ext->{"ext"}),
+            "parent_id" => $file->{"id"},
+            "file_status_id" => "cached",
+            "file_type_id" => "cached",
+            "file_category_id" => null,
+            "name" => FileManager::getManager()->getName(),
+        ]);
+        if (!$cached->save()) {
+            throw new Exception("File hasn't been prepared to download, can't register changes in database");
+        }
+        return $cached;
+    }
+
 	/**
 	 * Generate unique name of saved file on server
 	 * @return string name of file
 	 */
-	public function generateName() {
+	public function getName() {
 		return \Yii::$app->getSecurity()->generateRandomString(static::PATH_LENGTH);
 	}
 

@@ -33,7 +33,7 @@ class TemplateFactory extends AbstractFactory {
             throw new UserException("Файл должен иметь тип документа");
         }
         $src = FileManager::getManager()->getDirectory($file->{"path"});
-        $path = FileManager::getManager()->generateName();
+        $path = FileManager::getManager()->getName();
         FileConverter::getHtmlConverter()
             ->convert($src)
             ->wait()
@@ -48,7 +48,7 @@ class TemplateFactory extends AbstractFactory {
                 "file_type_id" => "template",
             ] + $params + [
                 "file_category_id" => null,
-                "name" => FileManager::getManager()->generateName(),
+                "name" => FileManager::getManager()->getName(),
             ]);
         if (!$template->save()) {
             throw new Exception("File hasn't been uploaded on server, can't save file info in database");
