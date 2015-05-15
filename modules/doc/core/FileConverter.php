@@ -6,6 +6,8 @@ use yii\base\Exception;
 
 class FileConverter {
 
+    const WAIT_TIMEOUT = 5;
+
     public static function getDefaultConverter($ext) {
         return new FileConverter($ext);
     }
@@ -39,10 +41,14 @@ class FileConverter {
     }
 
     public function wait($file = null) {
+        $limit = 0;
         if ($file == null) {
             $file = $this->_file;
         }
         while ($file != null && !file_exists($file.".".$this->_ext)) {
+            if (++$limit == static::WAIT_TIMEOUT) {
+                throw new Exception("Something gone wrong, we've spent over 10 seconds to wait filesystem changes for file \"$file\"");
+            }
             sleep(1);
         }
         return $this;

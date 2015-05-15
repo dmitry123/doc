@@ -60,7 +60,10 @@ class FileManager {
 				throw new Exception("Can't resolve file's status \new\" in database");
 			}
 			if (!$ext = FileExt::findOne([ "ext" => $matches["ext"] ])) {
-				$ext = new FileExt([ "ext" => $matches["ext"] ]);
+				$ext = new FileExt([
+                    "ext" => $matches["ext"],
+                    "file_type_id" => "unknown"
+                ]);
 				if (!$ext->save()) {
 					throw new Exception("File hasn't been uploaded on server, can't save file's extension in database");
 				}

@@ -473,7 +473,9 @@
     <table name="file_ext" schema="doc" catalog="mgup" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnZG9jLmZpbGVfZXh0X2lkX3NlcSc6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
       <column name="ext" sqlType="varchar" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="file_type_id" sqlType="varchar" precision="10" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="file_ext_pkey" columns="id"/>
+      <foreign-key name="file_ext_file_type_id_fkey" columns="file_type_id" ref-table="file_type" ref-schema="doc" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
       <exported-key name="file_file_ext_id_fkey" table="file" schema="doc" catalog="mgup" columns="file_ext_id"/>
     </table>
     <table name="file_ext_id_seq" schema="doc" catalog="mgup" type="SEQUENCE">
@@ -533,6 +535,7 @@
       <column name="description" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="file_type_pkey" columns="id"/>
       <exported-key name="file_file_type_id_fkey" table="file" schema="doc" catalog="mgup" columns="file_type_id"/>
+      <exported-key name="file_ext_file_type_id_fkey" table="file_ext" schema="doc" catalog="mgup" columns="file_type_id"/>
     </table>
     <table name="image" schema="doc" catalog="mgup" type="VIEW">
       <column name="id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>

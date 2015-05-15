@@ -9,6 +9,7 @@ use app\models\doc\File;
 use app\models\doc\FileExt;
 use app\modules\doc\core\FileConverter;
 use app\modules\doc\core\FileManager;
+use app\widgets\Panel;
 use yii\base\Exception;
 use yii\base\UserException;
 use yii\web\HeaderCollection;
@@ -67,12 +68,11 @@ class FileController extends Controller {
 
     public function actionDownload() {
         try {
-            $path = null;
             /** @var $file File */
             if (!$file = File::findOne([ "id" => $this->requireQuery("file") ])) {
                 throw new Exception("Can't resolve file's identification number");
             } else {
-                $dir = FileManager::getManager()->getDirectory($file->{"path"});
+                $path = FileManager::getManager()->getDirectory($file->{"path"});
             }
             if (($ext = $this->getQuery("ext")) != null && $ext != $file->{"file_ext_id"}) {
                 if (!$ext = FileExt::findOne([ "id" => $ext ])) {
@@ -82,17 +82,21 @@ class FileController extends Controller {
                     "file_ext_id" => $ext->{"id"},
                     "parent_id" => $file->{"id"},
                     "file_type_id" => "prepared",
+                    "file_status_id" => "prepared"
                 ]);
                 if ($prepared == null) {
+                    $name = FileManager::getManager()->generateName();
+                    $new = FileManager::getManager()->getDirectory($name);
                     FileConverter::getDefaultConverter($ext->{"ext"})
-                        ->convert($dir)
+                        ->convert($path)
                         ->wait()
-                        ->rename($dir = FileManager::getManager()->generateName());
+                        ->rename($new);
+                    $path = $new;
                     $mimeType = MimeTypeMatcher::match($ext->{"ext"});
                     $prepared = new File([
-                        "path" => $dir,
+                        "path" => $name,
                         "employee_id" => $file->{"employee_id"},
-                        "file_ext_id" => $file->{"file_ext_id"},
+                        "file_ext_id" => $ext->{"id"},
                         "mime_type" => $mimeType,
                         "parent_id" => $file->{"id"},
                         "file_type_id" => "prepared",
@@ -107,11 +111,12 @@ class FileController extends Controller {
             } else if (!$ext = FileExt::findOne([ "id" => $file->{"file_ext_id"} ])) {
                 throw new Exception("Can't resolve file's extension");
             }
-            if (!file_exists($dir)) {
+            if (!file_exists($path)) {
                 throw new UserException("Файл отсутствует на сервере, возможно он был изменен или удален");
             }
-            \Yii::$app->getResponse()->setDownloadHeaders($file->{"name"}.".".$ext->{"ext"})
-                ->sendFile($dir);
+            $mimeType = MimeTypeMatcher::match($ext->{"ext"});
+            \Yii::$app->getResponse()->setDownloadHeaders($file->{"name"}.".".$ext->{"ext"}, $mimeType)
+                ->sendFile($path);
         } catch (\Exception $e) {
             $this->exception($e);
         }
