@@ -24,7 +24,7 @@ class TemplateController extends Controller {
 	public function actionRegister() {
 		try {
 			$template = TemplateFactory::getFactory()->create($this->requirePost("file"), [
-//				"name" => "Test Template"
+
 			]);
 			$this->leave([
 				"message" => "Шаблон был успешно сгенерирован",

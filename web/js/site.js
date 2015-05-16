@@ -36,4 +36,17 @@ $(document).ready(function() {
     window["confirmDelete"] = function() {
         ConfirmDeleteModal.confirm(window.event);
     };
+    $(".modal").on("show.bs.modal", function() {
+        if ($("body").height() > $(window).height()) {
+            $("#navigation").find("> .container-fluid").css({
+                "margin-right": "17px"
+            });
+        }
+    }).on("hidden.bs.modal", function() {
+        if ($("body").height() > $(window).height()) {
+            $("#navigation").find("> .container-fluid").css({
+                "margin-right": "0"
+            });
+        }
+    });
 });

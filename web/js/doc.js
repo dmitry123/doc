@@ -116,14 +116,6 @@ var Doc_File_Table = {
             file: id,
             ext: ext
         });
-        //Core.sendQuery("doc/file/download", {
-        //    file: id,
-        //    ext: ext
-        //});
-        //frame.attr("src", url("doc/file/download", {
-        //    file: id,
-        //    ext: ext
-        //}));
     },
     active: null
 };

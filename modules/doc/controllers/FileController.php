@@ -79,42 +79,10 @@ class FileController extends Controller {
                 if (!$ext = FileExt::findOne([ "id" => $ext ])) {
                     throw new Exception("Can't resolve file's extension");
                 }
-//                $cached = File::findOne([
-//                    "file_ext_id" => $ext->{"id"},
-//                    "parent_id" => $file->{"id"},
-//                    "file_type_id" => "cached",
-//                    "file_status_id" => "cached"
-//                ]);
                 if (!$cached = File::findCached($ext->{"id"}, $file->{"id"})) {
                     $cached = FileManager::getManager()->cache($file, $ext);;
                 }
                 $path = FileManager::getManager()->getDirectory($cached->{"path"});
-//                if ($cached == null) {
-//                    $name = FileManager::getManager()->getName();
-//                    $new = FileManager::getManager()->getDirectory($name);
-//                    FileConverter::getDefaultConverter($ext->{"ext"})
-//                        ->convert($path)
-//                        ->wait()
-//                        ->rename($new);
-//                    $path = $new;
-//                    $mimeType = MimeTypeMatcher::match($ext->{"ext"});
-//                    $prepared = new File([
-//                        "path" => $name,
-//                        "employee_id" => $file->{"employee_id"},
-//                        "file_ext_id" => $ext->{"id"},
-//                        "mime_type" => $mimeType,
-//                        "parent_id" => $file->{"id"},
-//                        "file_type_id" => "prepared",
-//                        "file_status_id" => "prepared",
-//                        "file_category_id" => null,
-//                        "name" => FileManager::getManager()->getName(),
-//                    ]);
-//                    if (!$prepared->save()) {
-//                        throw new Exception("File hasn't been prepared to download, can't register changes in database");
-//                    }
-//                } else {
-//                    $path = FileManager::getManager()->getDirectory($cached->{"path"});
-//                }
             } else if (!$ext = FileExt::findOne([ "id" => $file->{"file_ext_id"} ])) {
                 throw new Exception("Can't resolve file's extension");
             }
