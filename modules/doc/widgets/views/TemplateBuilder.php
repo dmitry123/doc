@@ -17,7 +17,7 @@ print \app\widgets\Modal::widget([
 ]);
 print \app\widgets\Modal::widget([
     "title" => "Создание нового макроса",
-    "body" => "",
+    "body" => \app\modules\doc\widgets\MacroMaker::widget([]),
     "id" => "builder-create-macros-modal"
 ]);
 print \app\widgets\Modal::widget([

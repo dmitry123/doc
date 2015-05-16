@@ -63699,3 +63699,201 @@ Array
     ]
     'argc' => 3
 ]
+2015-05-16 13:41:50 [127.0.0.1][2][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Setting unknown property: yii\bootstrap\ActiveForm::model' in D:\hosts\doc\vendor\yiisoft\yii2\base\Component.php:197
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\BaseYii.php(518): yii\base\Component->__set('model', Object(app\modules\doc\forms\MacroCreateForm))
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(yii\bootstrap\ActiveForm), Array)
+#2 [internal function]: yii\base\Object->__construct(Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\di\Container.php(372): ReflectionClass->newInstanceArgs(Array)
+#4 D:\hosts\doc\vendor\yiisoft\yii2\di\Container.php(151): yii\di\Container->build('yii\bootstrap\A...', Array, Array)
+#5 D:\hosts\doc\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\bootstrap\A...', Array, Array)
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php(56): yii\BaseYii::createObject(Array)
+#7 D:\hosts\doc\modules\doc\widgets\views\MacroMaker.php(9): yii\base\Widget::begin(Array)
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\hosts\doc\mo...')
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\hosts\doc\mo...', Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\hosts\doc\mo...', Array, Object(app\modules\doc\widgets\MacroMaker))
+#11 D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php(182): yii\base\View->render('MacroMaker', Array, Object(app\modules\doc\widgets\MacroMaker))
+#12 D:\hosts\doc\modules\doc\widgets\MacroMaker.php(13): yii\base\Widget->render('MacroMaker', Array)
+#13 D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php(96): app\modules\doc\widgets\MacroMaker->run()
+#14 D:\hosts\doc\modules\doc\widgets\views\TemplateBuilder.php(20): yii\base\Widget::widget(Array)
+#15 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\hosts\doc\mo...')
+#16 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\hosts\doc\mo...', Array)
+#17 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\hosts\doc\mo...', Array, Object(app\modules\doc\widgets\TemplateBuilder))
+#18 D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php(182): yii\base\View->render('TemplateBuilder', Array, Object(app\modules\doc\widgets\TemplateBuilder))
+#19 D:\hosts\doc\modules\doc\widgets\TemplateBuilder.php(12): yii\base\Widget->render('TemplateBuilder', Array)
+#20 D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php(96): app\modules\doc\widgets\TemplateBuilder->run()
+#21 D:\hosts\doc\modules\doc\views\editor\view.php(10): yii\base\Widget::widget(Array)
+#22 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\hosts\doc\mo...')
+#23 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\hosts\doc\mo...', Array)
+#24 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\hosts\doc\mo...', Array, Object(app\modules\doc\controllers\EditorController))
+#25 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('view', Array, Object(app\modules\doc\controllers\EditorController))
+#26 D:\hosts\doc\modules\doc\controllers\EditorController.php(21): yii\base\Controller->render('view', Array)
+#27 [internal function]: app\modules\doc\controllers\EditorController->actionView()
+#28 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#29 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#30 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('view', Array)
+#31 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('doc/editor/view', Array)
+#32 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#33 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#34 {main}
+2015-05-16 13:41:50 [127.0.0.1][2][-][info][application] $_GET = [
+    'file' => '38'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '771f3uni7rkc911oo2uu150sg2'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    'USER_LOGIN' => 'system'
+    'USER_ID' => 2
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+    'EMPLOYEE_ID' => 1
+    'EMPLOYEE_SURNAME' => 'Савонин'
+    'EMPLOYEE_NAME' => 'Дмитрий'
+    'EMPLOYEE_PATRONYMIC' => 'Александрович'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=771f3uni7rkc911oo2uu150sg2'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '49708'
+    'REDIRECT_QUERY_STRING' => 'file=38'
+    'REDIRECT_URL' => '/doc/editor/view'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'file=38'
+    'REQUEST_URI' => '/doc/editor/view?file=38'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431812510.419
+    'REQUEST_TIME' => 1431812510
+]
+2015-05-16 13:43:10 [127.0.0.1][2][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Setting unknown property: yii\widgets\ActiveForm::model' in D:\hosts\doc\vendor\yiisoft\yii2\base\Component.php:197
+Stack trace:
+#0 D:\hosts\doc\vendor\yiisoft\yii2\BaseYii.php(518): yii\base\Component->__set('model', Object(app\modules\doc\forms\MacroCreateForm))
+#1 D:\hosts\doc\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(yii\widgets\ActiveForm), Array)
+#2 [internal function]: yii\base\Object->__construct(Array)
+#3 D:\hosts\doc\vendor\yiisoft\yii2\di\Container.php(372): ReflectionClass->newInstanceArgs(Array)
+#4 D:\hosts\doc\vendor\yiisoft\yii2\di\Container.php(151): yii\di\Container->build('yii\widgets\Act...', Array, Array)
+#5 D:\hosts\doc\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\widgets\Act...', Array, Array)
+#6 D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php(56): yii\BaseYii::createObject(Array)
+#7 D:\hosts\doc\modules\doc\widgets\views\MacroMaker.php(11): yii\base\Widget::begin(Array)
+#8 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\hosts\doc\mo...')
+#9 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\hosts\doc\mo...', Array)
+#10 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\hosts\doc\mo...', Array, Object(app\modules\doc\widgets\MacroMaker))
+#11 D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php(182): yii\base\View->render('MacroMaker', Array, Object(app\modules\doc\widgets\MacroMaker))
+#12 D:\hosts\doc\modules\doc\widgets\MacroMaker.php(13): yii\base\Widget->render('MacroMaker', Array)
+#13 D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php(96): app\modules\doc\widgets\MacroMaker->run()
+#14 D:\hosts\doc\modules\doc\widgets\views\TemplateBuilder.php(20): yii\base\Widget::widget(Array)
+#15 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\hosts\doc\mo...')
+#16 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\hosts\doc\mo...', Array)
+#17 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\hosts\doc\mo...', Array, Object(app\modules\doc\widgets\TemplateBuilder))
+#18 D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php(182): yii\base\View->render('TemplateBuilder', Array, Object(app\modules\doc\widgets\TemplateBuilder))
+#19 D:\hosts\doc\modules\doc\widgets\TemplateBuilder.php(12): yii\base\Widget->render('TemplateBuilder', Array)
+#20 D:\hosts\doc\vendor\yiisoft\yii2\base\Widget.php(96): app\modules\doc\widgets\TemplateBuilder->run()
+#21 D:\hosts\doc\modules\doc\views\editor\view.php(10): yii\base\Widget::widget(Array)
+#22 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(325): require('D:\hosts\doc\mo...')
+#23 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\hosts\doc\mo...', Array)
+#24 D:\hosts\doc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\hosts\doc\mo...', Array, Object(app\modules\doc\controllers\EditorController))
+#25 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('view', Array, Object(app\modules\doc\controllers\EditorController))
+#26 D:\hosts\doc\modules\doc\controllers\EditorController.php(21): yii\base\Controller->render('view', Array)
+#27 [internal function]: app\modules\doc\controllers\EditorController->actionView()
+#28 D:\hosts\doc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#29 D:\hosts\doc\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#30 D:\hosts\doc\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('view', Array)
+#31 D:\hosts\doc\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('doc/editor/view', Array)
+#32 D:\hosts\doc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#33 D:\hosts\doc\web\index.php(12): yii\base\Application->run()
+#34 {main}
+2015-05-16 13:43:10 [127.0.0.1][2][-][info][application] $_GET = [
+    'file' => '38'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '771f3uni7rkc911oo2uu150sg2'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+    'USER_LOGIN' => 'system'
+    'USER_ID' => 2
+    'USER_EMAIL' => 'dmitry123@inbox.ru'
+    'EMPLOYEE_ID' => 1
+    'EMPLOYEE_SURNAME' => 'Савонин'
+    'EMPLOYEE_NAME' => 'Дмитрий'
+    'EMPLOYEE_PATRONYMIC' => 'Александрович'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.doc.my'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.doc.my/doc/file/view'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.8,pt;q=0.6,sr;q=0.4,bg;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=771f3uni7rkc911oo2uu150sg2'
+    'PATH' => 'C:\\Python34\\;C:\\Python34\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1m PHP/5.5.23'
+    'SERVER_NAME' => 'www.doc.my'
+    'SERVER_ADDR' => '127.0.0.2'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/hosts/doc/web'
+    'SERVER_ADMIN' => 'dmitry123@inbox.ru'
+    'SCRIPT_FILENAME' => 'D:/hosts/doc/web/index.php'
+    'REMOTE_PORT' => '49729'
+    'REDIRECT_QUERY_STRING' => 'file=38'
+    'REDIRECT_URL' => '/doc/editor/view'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'file=38'
+    'REQUEST_URI' => '/doc/editor/view?file=38'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1431812590.068
+    'REQUEST_TIME' => 1431812590
+]
