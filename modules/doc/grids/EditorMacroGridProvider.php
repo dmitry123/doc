@@ -5,23 +5,26 @@ namespace app\modules\doc\grids;
 use app\core\GridProvider;
 use app\models\doc\Macro;
 
-class Editor_MacroTable_Grid extends GridProvider {
+class EditorMacroGridProvider extends GridProvider {
 
     public $columns = [
         "id" => [
             "label" => "#",
             "width" => "50px"
         ],
+        "name" => [
+            "label" => "Название",
+            "width" => "200px"
+        ],
         "type" => [
             "label" => "Тип",
             "width" => "150px"
-        ],
-        "value" => "Значение"
+        ]
     ];
 
     public $sort = [
         "attributes" => [
-            "id", "type", "value"
+            "id", "type", "name"
         ],
         "orderBy" => [
             "id" => SORT_DESC

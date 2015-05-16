@@ -19,7 +19,7 @@ class MasterTable extends Widget {
      * @return string content of just rendered widget
      */
     public function run() {
-        return $this->render("File_MasterTable_Table", [
+        return $this->render("MasterTable", [
             "controls" => $this->controls
         ]);
     }

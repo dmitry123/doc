@@ -14,6 +14,11 @@ class Macro extends ActiveRecord {
                 "type" => "hidden",
                 "rules" => "numerical"
             ],
+            "name" => [
+                "label" => "Название",
+                "type" => "text",
+                "rules" => "required"
+            ],
             "type" => [
                 "label" => "Тип данных",
                 "type" => "dropdown",
@@ -29,7 +34,8 @@ class Macro extends ActiveRecord {
 
     public function rules() {
         return [
-            [ "type", "string", "max" => 10 ]
+            [ "type", "string", "max" => 10 ],
+            [ "name", "string", "max" => 100 ]
         ];
     }
 

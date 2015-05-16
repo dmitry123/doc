@@ -553,6 +553,7 @@
     </table>
     <table name="macro" schema="doc" catalog="mgup" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnZG9jLm1hY3JvX2lkX3NlcSc6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
+      <column name="name" sqlType="varchar" precision="100" scale="0" nullable="false" jdbcType="12"/>
       <column name="type" sqlType="varchar" precision="10" scale="0" nullable="false" jdbcType="12"/>
       <column name="value" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="macro_pkey" columns="id"/>

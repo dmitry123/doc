@@ -67,7 +67,7 @@ var Doc_File_Table = {
 	},
     open: function(id, table) {
         table && table.table("before");
-        Core.loadWidget("File_TemplateManager_Viewer", {
+        Core.loadWidget("FileManager", {
             file: id
         }, function(response) {
             $("#doc-file-template-manager-modal").modal("show").find(".modal-body").empty().append(

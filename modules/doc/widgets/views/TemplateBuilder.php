@@ -27,7 +27,7 @@ print \app\widgets\Modal::widget([
 print \app\widgets\Modal::widget([
     "title" => "Просмотр списка макросов",
     "body" => \app\widgets\Grid::widget([
-        "provider" => new \app\modules\doc\grids\Editor_MacroTable_Grid()
+        "provider" => new \app\modules\doc\grids\EditorMacroGridProvider()
     ]),
     "id" => "builder-view-macros-modal"
 ]) ?>
