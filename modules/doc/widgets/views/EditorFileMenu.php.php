@@ -2,7 +2,7 @@
 /**
  * @var $this \yii\web\View
  * @var $items array
- * @var $self app\modules\doc\widgets\Editor_ControlMenu_Nav
+ * @var $self app\modules\doc\widgets\EditorFileMenu
  */
 ?>
 <nav class="navbar navbar-default navbar-fixed-top editor-control-menu-nav">

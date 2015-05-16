@@ -6,7 +6,7 @@ use app\models\doc\FileType;
 use app\widgets\TabMenu;
 use yii\helpers\Html;
 
-class File_TypeMenu_Viewer extends TabMenu {
+class FileTypeMenu extends TabMenu {
 
 	public $style = self::STYLE_TABS_STACKED;
 	public $id = "file-type-menu";

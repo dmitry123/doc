@@ -4,7 +4,7 @@ namespace app\modules\doc\widgets;
 
 use app\modules\doc\core\FileWidget;
 
-class File_History_Viewer extends FileWidget {
+class FileHistory extends FileWidget {
 
 	/**
 	 * Run widget and return it's just rendered content

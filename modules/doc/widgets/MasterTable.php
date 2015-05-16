@@ -4,7 +4,7 @@ namespace app\modules\doc\widgets;
 
 use app\core\Widget;
 
-class File_MasterTable_Table extends Widget {
+class MasterTable extends Widget {
 
     /**
      * @var array with configuration for ControlMenu

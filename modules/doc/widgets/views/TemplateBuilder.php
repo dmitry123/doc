@@ -17,6 +17,7 @@ print \app\widgets\Modal::widget([
 ]);
 print \app\widgets\Modal::widget([
     "title" => "Создание нового макроса",
+    "body" => "",
     "id" => "builder-create-macros-modal"
 ]);
 print \app\widgets\Modal::widget([
@@ -30,7 +31,7 @@ print \app\widgets\Modal::widget([
     ]),
     "id" => "builder-view-macros-modal"
 ]) ?>
-<?= \app\modules\doc\widgets\Editor_ControlMenu_Nav::widget([
+<?= \app\modules\doc\widgets\EditorFileMenu::widget([
 	"items" => [
 		"builder-open-button" => [
 			"label" => "Открыть",
@@ -97,7 +98,7 @@ print \app\widgets\Modal::widget([
 	<?= \app\widgets\Panel::widget([
 		"title" => "Содержимое файла",
 		"id" => "doc-editor-content-panel",
-		"body" => \app\modules\doc\widgets\Editor_Content_Editor::create([
+		"body" => \app\modules\doc\widgets\TemplateEditor::create([
 			"file" => $file->{"id"}
 		]),
 		"bodyClass" => "panel-body clear",

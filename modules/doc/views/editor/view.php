@@ -5,6 +5,6 @@
  * @var $content string
  */
 
-print \app\modules\doc\widgets\Editor_Template_Builder::widget([
+print \app\modules\doc\widgets\TemplateBuilder::widget([
 	"file" => $file
 ]);

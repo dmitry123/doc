@@ -22,7 +22,7 @@ print \app\widgets\Modal::widget([
 
 print \app\widgets\Modal::widget([
     "title" => "Мастер файл",
-    "body" => \app\modules\doc\widgets\File_MasterTable_Table::widget([
+    "body" => \app\modules\doc\widgets\MasterTable::widget([
 
     ]),
     "id" => "file-master-modal",

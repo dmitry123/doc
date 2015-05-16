@@ -5,12 +5,12 @@ namespace app\modules\doc\widgets;
 use yii\bootstrap\Widget;
 use yii\helpers\Html;
 
-class Editor_ControlMenu_Nav extends Widget {
+class EditorFileMenu extends Widget {
 
 	public $items = [];
 
 	public function run() {
-		return $this->render("Editor_ControlMenu_Nav", [
+		return $this->render("EditorFileMenu", [
 			"items" => $this->items,
             "self" => $this
 		]);

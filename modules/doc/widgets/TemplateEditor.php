@@ -5,7 +5,7 @@ namespace app\modules\doc\widgets;
 use app\modules\doc\core\FileManager;
 use app\modules\doc\core\FileWidget;
 
-class Editor_Content_Editor extends FileWidget {
+class TemplateEditor extends FileWidget {
 
 	public $regexp = '/(<p[^>]*>\s*<br[^>]*>\s*<\/p>\s*)+/iu';
 
@@ -14,7 +14,7 @@ class Editor_Content_Editor extends FileWidget {
 			FileManager::getManager()->getDirectory($this->file->{"path"}), FILE_TEXT
 		));
 		$content = preg_replace($this->regexp, "<hr>", $content);
-		return $this->render("Editor_Content_Editor", [
+		return $this->render("TemplateEditor", [
 			"content" => $content,
 			"self" => $this,
 			"file" => $this->file

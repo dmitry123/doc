@@ -2,7 +2,7 @@
 /**
  * @var $this \yii\web\View
  * @var $content string
- * @var $self app\modules\doc\widgets\Editor_Content_Editor
+ * @var $self app\modules\doc\widgets\TemplateEditor
  * @var $file mixed
  */
 ?>
