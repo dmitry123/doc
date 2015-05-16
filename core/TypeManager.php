@@ -44,6 +44,9 @@ class TypeManager {
 		"textarea" => [
 			"label" => "Текстовая область"
 		],
+        "system" => [
+            "label" => "Системный"
+        ]
 	];
 
 	/**

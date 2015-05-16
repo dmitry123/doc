@@ -29,7 +29,7 @@ abstract class Migration extends \yii\db\Migration {
             return;
         }
         foreach (explode(";", $sql) as $s) {
-            $s = preg_replace('/\s+/', " ", trim($s));
+            $s = preg_replace('/ +/', " ", trim($s));
             if (empty($s)) {
                 continue;
             }

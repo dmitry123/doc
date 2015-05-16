@@ -83,7 +83,9 @@ class Grid extends Widget {
 			$this->renderHeader();
 		}
 		$this->renderBody();
-		if ($this->provider->hasFooter && $this->provider->getFooter() !== false) {
+		if ($this->provider->hasFooter && $this->provider->getFooter() !== false &&
+            count($this->provider->models) > 0
+        ) {
 			print $this->provider->getFooter()->run();
 		}
 		print Html::endTag("table");

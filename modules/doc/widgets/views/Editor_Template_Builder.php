@@ -15,7 +15,21 @@ print \app\widgets\Modal::widget([
     "title" => "Просмотр списка элементов",
     "id" => "builder-view-element-modal"
 ]);
-?>
+print \app\widgets\Modal::widget([
+    "title" => "Создание нового макроса",
+    "id" => "builder-create-macros-modal"
+]);
+print \app\widgets\Modal::widget([
+    "title" => "Поиск макроса",
+    "id" => "builder-find-macros-modal"
+]);
+print \app\widgets\Modal::widget([
+    "title" => "Просмотр списка макросов",
+    "body" => \app\widgets\Grid::widget([
+        "provider" => new \app\modules\doc\grids\Editor_MacroTable_Grid()
+    ]),
+    "id" => "builder-view-macros-modal"
+]) ?>
 <?= \app\modules\doc\widgets\Editor_ControlMenu_Nav::widget([
 	"items" => [
 		"builder-open-button" => [
@@ -61,15 +75,18 @@ print \app\widgets\Modal::widget([
 			"items" => [
 				"builder-macros-create-button" => [
 					"label" => "Создать",
-					"icon" => "fa fa-plus"
+					"icon" => "fa fa-plus",
+                    "href" => "javascript:$('#builder-create-macros-modal').modal('show')",
 				],
 				"builder-macros-find-button" => [
 					"label" => "Найти",
-					"icon" => "fa fa-search"
+					"icon" => "fa fa-search",
+                    "href" => "javascript:$('#builder-edit-macros-modal').modal('show')",
 				],
 				"builder-macros-edit-button" => [
 					"label" => "Просмотреть",
-					"icon" => "fa fa-pencil"
+					"icon" => "fa fa-pencil",
+                    "href" => "javascript:$('#builder-view-macros-modal').modal('show')",
 				],
 			]
 		]

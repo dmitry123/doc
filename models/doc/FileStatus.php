@@ -16,7 +16,7 @@ class FileStatus extends ActiveRecord {
 			"name" => [
 				"label" => "Наименование",
 				"type" => "text",
-				"rules" => "required"
+				"rules" => "required",
 			]
 		];
 	}

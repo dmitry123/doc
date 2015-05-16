@@ -62,7 +62,7 @@ class GridFooter extends Widget {
 		print Html::beginTag("div", [
 			"class" => "col-xs-2"
 		]);
-		if ($this->withLimit) {
+		if ($this->withLimit && count($this->provider->models) > 0) {
 			$this->renderLimit();
 		}
 		print Html::endTag("div");

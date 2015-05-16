@@ -123,4 +123,15 @@ class File extends \app\core\ActiveRecord {
             "file_status_id" => "cached"
         ]);
     }
+
+    public static function findMacro($file) {
+        $rows = Macro::find()->select("m.*")
+            ->from("doc.macro as m")
+            ->innerJoin("doc.macro_to_file as m_f", "m.id = m_f.macro_id")
+            ->innerJoin("doc.file as f", "m_f.file_id = f.id")
+            ->where("f.id = :file_id", [
+                ":file_id" => $file
+            ])->all();
+        return $rows;
+    }
 }
