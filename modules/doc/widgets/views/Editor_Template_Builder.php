@@ -3,6 +3,18 @@
  * @var $this \yii\web\View
  * @var $file mixed
  */
+print \app\widgets\Modal::widget([
+    "title" => "Создание нового элемента",
+    "id" => "builder-create-element-modal"
+]);
+print \app\widgets\Modal::widget([
+    "title" => "Поиск элемента",
+    "id" => "builder-find-element-modal"
+]);
+print \app\widgets\Modal::widget([
+    "title" => "Просмотр списка элементов",
+    "id" => "builder-view-element-modal"
+]);
 ?>
 <?= \app\modules\doc\widgets\Editor_ControlMenu_Nav::widget([
 	"items" => [
@@ -28,15 +40,18 @@
 			"items" => [
 				"builder-element-create-button" => [
 					"label" => "Создать",
-					"icon" => "fa fa-plus"
+					"icon" => "fa fa-plus",
+                    "href" => "javascript:$('#builder-create-element-modal').modal('show')",
 				],
 				"builder-element-find-button" => [
 					"label" => "Найти",
-					"icon" => "fa fa-search"
+					"icon" => "fa fa-search",
+                    "href" => "javascript:$('#builder-find-element-modal').modal('show')",
 				],
 				"builder-element-edit-button" => [
 					"label" => "Просмотреть",
-					"icon" => "fa fa-pencil"
+					"icon" => "fa fa-pencil",
+                    "href" => "javascript:$('#builder-view-element-modal').modal('show')",
 				],
 			]
 		],
