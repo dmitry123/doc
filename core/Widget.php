@@ -56,6 +56,23 @@ class Widget extends \yii\base\Widget {
             ] + $modal);
     }
 
+    /**
+     * Use that method to require some widget's attribute and
+     * avoid extra conditions
+     *
+     * @param $key string name of widget's field
+     * @return mixed value of this attribute
+     *
+     * @throws Exception
+     */
+    public function requireAttribute($key) {
+        if (!isset($this->$key) || empty($this->$key)) {
+            throw new Exception("Class [". get_called_class() ."] attribute \"$key\" can't be empty");
+        } else {
+            return $this->$key;
+        }
+    }
+
 	/**
 	 * Get widget's configuration that should be
 	 * serialised before update after it's create

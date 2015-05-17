@@ -30,6 +30,11 @@ class Employee extends ActiveRecord {
 				"type" => "text",
 				"rules" => "required"
 			],
+            "birthday" => [
+                "label" => "Дата рождения",
+                "type" => "date",
+                "rules" => "required"
+            ],
 			"role_id" => [
 				"label" => "Роль",
 				"type" => "DropDown",

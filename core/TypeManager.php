@@ -5,49 +5,76 @@ namespace app\core;
 class TypeManager {
 
 	private $_types = [
+        "text" => [
+            "label" => "Текстовое поле",
+            "field" => "textInput"
+        ],
+        "number" => [
+            "label" => "Число",
+            "field" => "numberInput"
+        ],
 		"boolean" => [
-			"label" => "Логический"
+			"label" => "Логический",
+            "field" => "booleanInput"
 		],
 		"date" => [
-			"label" => "Дата"
+			"label" => "Дата",
+            "field" => "dateInput"
 		],
+        "time" => [
+            "label" => "Время",
+            "field" => "timeInput"
+        ],
 		"dropdown" => [
-			"label" => "Выпадающий список"
+			"label" => "Выпадающий список",
+            "field" => "dropDownList"
 		],
 		"multiple" => [
-			"label" => "Множественный выбор"
+			"label" => "Множественный выбор",
+            "field" => "multipleInput"
 		],
 		"email" => [
-			"label" => "Почтовый ящик"
-		],
-		"text" => [
-			"label" => "Текстовое поле"
+			"label" => "Почтовый ящик",
+            "field" => "emailInput"
 		],
 		"file" => [
-			"label" => "Файл"
+			"label" => "Файл",
+            "field" => "fileInput"
 		],
 		"hidden" => [
-			"label" => "Невидимое поле"
-		],
-		"number" => [
-			"label" => "Число"
+			"label" => "Невидимое поле",
+            "field" => "hiddenInput"
 		],
 		"password" => [
-			"label" => "Пароль"
+			"label" => "Пароль",
+            "field" => "passwordInput"
 		],
 		"phone" => [
-			"label" => "Телефон"
+			"label" => "Телефон",
+            "field" => "phoneInput"
 		],
 		"radio" => [
-			"label" => "Радио"
+			"label" => "Радио",
+            "field" => "radioInput"
 		],
 		"textarea" => [
-			"label" => "Текстовая область"
+			"label" => "Текстовая область",
+            "field" => "textAreaInput"
 		],
         "system" => [
-            "label" => "Системный"
+            "label" => "Системный",
+            "field" => "systemInput"
         ]
 	];
+
+    private $_system = [
+        "SYSTEM_CURRENT_DATE" => [
+            "label" => "Текущая дата"
+        ],
+        "SYSTEM_CURRENT_TIME" => [
+            "label" => "Текущее время"
+        ]
+    ];
 
 	/**
 	 * Get singleton type manager's
@@ -74,6 +101,23 @@ class TypeManager {
 		return $this->_types;
 	}
 
+    /**
+     * Get name of type renderer, see ActiveField class
+     * for more information about how to render field
+     *
+     * @param $type string name of type
+     *
+     * @return string|null name of render
+     *  method
+     */
+    public function getField($type) {
+        if (isset($this->_types[$type]) && isset($this->_types[$type]["field"])) {
+            return $this->_types[$type]["field"];
+        } else {
+            return null;
+        }
+    }
+
 	/**
 	 * Get array with dropdown list for HTML select
 	 * element
@@ -88,6 +132,21 @@ class TypeManager {
 		}
 		return $list;
 	}
+
+    /**
+     * Get array with dropdown list for HTML select
+     * element
+     *
+     * @return array with default list system types optimized
+     * 	for HTML select element
+     */
+    public function listSystem() {
+        $list = [];
+        foreach ($this->_system as $key => $value) {
+            $list[$key] = $value["label"];
+        }
+        return $list;
+    }
 
 	/**
 	 * Locked, use [@see getManager] method to get

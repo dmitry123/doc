@@ -28,24 +28,33 @@ var Core = Core || {};
 		if (this.hasOwnProperty("image")) {
 			return void 0;
 		}
-		var index;
+		var index, image;
 		if (!(index = parseInt(this.selector().css("z-index")))) {
 			index = this.property("depth");
 		} else {
 			index += 1;
 		}
 		this.image = true;
-		var image = $("<img>", {
-			css: {
-				"position": "absolute",
-				"height": imageHeight,
-				"width": imageWidth,
-				"left": "calc(50% - " + (imageWidth / 2) + "px)",
-				"margin-top": height / 2 - imageHeight / 2,
-				"z-index": index
-			},
-			src: this.property("image")
-		});
+        if (this.property("image")) {
+            image = $("<img>", {
+                css: {
+                    "position": "absolute",
+                    "height": imageHeight,
+                    "width": imageWidth,
+                    "left": "calc(50% - " + (imageWidth / 2) + "px)",
+                    "margin-top": height / 2 - imageHeight / 2,
+                    "z-index": index
+                },
+                src: this.property("image")
+            });
+        } else {
+            image = $("<img>", {
+                css: {
+                    "position": "absolute",
+                    "visibility": "hidden"
+                }
+            });
+        }
 		if (this.property("message") != false) {
 			this.image = $("<div>", {
 				css: {
@@ -154,12 +163,12 @@ var Core = Core || {};
 
     Loading.prototype.reset = function(after) {
 		var me = this;
-		this.image.fadeOut(this.property("velocity"), function() {
+        this.image && this.image.fadeOut(this.property("velocity"), function() {
 			$(this).remove();
 			delete me.image;
 			after && after.call(me);
 		});
-		this.back.fadeOut(this.property("velocity"), function() {
+        this.back && this.back.fadeOut(this.property("velocity"), function() {
 			$(this).remove();
 			delete me.back;
 		});

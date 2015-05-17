@@ -72,11 +72,11 @@ var Core = Core || {};
             class: "multiple-control",
             role: "group",
             style: {
-                width: this.selector().width()
+                width: this.selector().width() || "100%"
             }
         }).append(
             $("<button>", {
-                class: "btn btn-default multiple-collapse-button",
+                class: "btn btn-default btn-sm multiple-collapse-button",
                 type: "button",
                 html: $("<span>", {
                     text: "Развернуть / Свернуть"
@@ -85,7 +85,7 @@ var Core = Core || {};
             })
         ).append(
             $("<button>", {
-                class: "btn btn-default multiple-down-button",
+                class: "btn btn-default btn-sm multiple-down-button",
                 type: "button",
                 html: $("<span>", {
                     class: "glyphicon glyphicon-arrow-down"
@@ -94,7 +94,7 @@ var Core = Core || {};
             })
         ).append(
             $("<button>", {
-                class: "btn btn-default multiple-up-button",
+                class: "btn btn-default btn-sm multiple-up-button",
                 type: "button",
                 html: $("<span>", {
                     class: "glyphicon glyphicon-arrow-up"
@@ -103,7 +103,7 @@ var Core = Core || {};
             })
         ).append(
 			$("<button>", {
-				class: "btn btn-default multiple-insert-button",
+				class: "btn btn-default btn-sm multiple-insert-button",
 				type: "button",
 				html: $("<span>", {
 					class: "glyphicon glyphicon-plus"
@@ -113,7 +113,7 @@ var Core = Core || {};
 		return $("<div>", {
 			class: "multiple"
 		}).css({
-			width: s.width()
+			width: s.width() || "100%"
 		}).append(s).append(g).append(
 			$("<div>", {
 				class: "multiple-container form-control"
@@ -270,7 +270,10 @@ var Core = Core || {};
 		var multiple = this.selector();
 		if (typeof key == "string") {
 			if (key.trim() !== "") {
-				key = $.parseJSON(key);
+                try {
+                    key = $.parseJSON(key);
+                } catch (ignored) {
+                }
 			} else {
 				key = [];
 			}
@@ -302,7 +305,7 @@ var Core = Core || {};
 		}
 		var r, t;
 		t = $("<div>", {
-			style: "text-align: left; width: 100%",
+			style: "width: 100%",
 			class: "multiple-chosen disable-selection row"
 		}).append(
 			$("<div>", {
@@ -318,6 +321,7 @@ var Core = Core || {};
 		r.click(function() {
 			me.remove($(this).parent("div").children("div"));
 		});
+        this.selector().trigger("change");
 	};
 
 	$.valHooks["select-multiple"] = {

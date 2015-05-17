@@ -1,6 +1,7 @@
 
 .multiple .multiple-value {
     min-height: 100px;
+    margin-bottom: 5px;
 }
 
 .multiple-container {
@@ -14,6 +15,11 @@
 .multiple-container .multiple-chosen {
     border-radius: 2px;
     padding: 2px;
+    text-align: right
+}
+
+.multiple-chosen > div {
+    float: left;
 }
 
 .multiple-container .multiple-chosen:hover, select[multiple] option:hover {

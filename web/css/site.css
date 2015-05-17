@@ -175,3 +175,7 @@ ul.btn-group {
 .fa-danger {
     color: #a94442;
 }
+
+textarea {
+    resize: vertical;
+}

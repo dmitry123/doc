@@ -28,7 +28,7 @@ class Department extends ActiveRecord {
 				],
 				"rules" => "required"
 			],
-			"manager" => [
+			"manager_id" => [
 				"label" => "Заведующий",
 				"type" => "DropDown",
 				"table" => [

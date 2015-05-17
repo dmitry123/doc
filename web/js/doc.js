@@ -154,6 +154,128 @@ var Doc_TemplateManager_Viewer = {
     }
 };
 
+const DOC_MCF_VELOCITY = 300;
+
+var Doc_MacroCreateForm = {
+    ready: function() {
+        var me = this;
+        $(".doc-macro-create-form").on("change", "select[name='MacroCreateForm[columns][]']", function() {
+            me.change($(this), $(this).val());
+        });
+        $("[name='MacroCreateForm[type]']").change(function() {
+            var val = $(this).val(),
+                form = $(this).parents("form:eq(0)");
+            me.form = form;
+            var v = form.find(".form-group[data-field]:visible").slideUp(DOC_MCF_VELOCITY, function() {
+                me.show(val);
+            });
+            if (!v.length) {
+                me.show(val);
+            }
+        });
+        $("[name='MacroCreateForm[table]']").change(function() {
+            var val = $(this).val(),
+                form = $(this).parents("form:eq(0)"),
+                it = $(this);
+            me.form = form;
+            if (val == 0) {
+                form.find("select[name='MacroCreateForm[columns][]']").val("");
+                form.find(".macro-multiple-container")
+                    .slideUp(DOC_MCF_VELOCITY);
+                form.find("[name='MacroCreateForm[value]']").parent(".form-group")
+                    .slideUp(DOC_MCF_VELOCITY);
+                return void 0;
+            }
+            it.loading({ image: false }).loading("render");
+            Core.sendQuery("doc/macro/describe", {
+                hash: val
+            }, function(response) {
+                if (response["empty"]) {
+                    return void 0;
+                }
+                var c = form.find(".macro-multiple-container");
+                var e = $(response["component"]);
+                if (c.children().length > 0) {
+                    c.slideUp(DOC_MCF_VELOCITY, function() {
+                        c.hide().empty().append(e);
+                        e.multiple();
+                        c.slideDown(DOC_MCF_VELOCITY);
+                    });
+                } else {
+                    c.hide().append(e);
+                    e.multiple();
+                    c.slideDown(DOC_MCF_VELOCITY);
+                }
+                setTimeout(function() {
+                    form.find("[name='MacroCreateForm[columns]'],[name='MacroCreateForm[columns][]']")
+                        .parents(".form-group").slideDown(DOC_MCF_VELOCITY);
+                }, DOC_MCF_VELOCITY);
+            }).always(function() {
+                it.loading("reset");
+            });
+            me.hash = val;
+        });
+    },
+    show: function(type) {
+        var form = this.form;
+        form.find(".form-group[data-field='" + type + "']").slideDown(DOC_MCF_VELOCITY, function() {
+            if (type == "dropdown" || type == "multiple") {
+                form.find("[name='MacroCreateForm[table]']").parent(".form-group").slideDown(DOC_MCF_VELOCITY);
+            } else {
+                form.find("[name='MacroCreateForm[table]']").parent(".form-group").slideUp(DOC_MCF_VELOCITY);
+                form.find("select[name='MacroCreateForm[columns][]']").val("");
+                form.find("select[name='MacroCreateForm[table]']").val(0);
+                form.find(".macro-multiple-container")
+                    .slideUp(DOC_MCF_VELOCITY);
+            }
+        });
+    },
+    change: function(multiple, columns) {
+        var me = this;
+        if (!this.hash) {
+            throw new Error("Can't resolve active record hash");
+        }
+        if (!columns) {
+            for (var i in this.queue) {
+                this.queue[i].abort();
+            }
+            this.queue = [];
+            me.form.find("[name='MacroCreateForm[value]']").empty().append(
+                $("<option></option>", {
+                    value: 0,
+                    text: "Нет"
+                })
+            );
+            return void 0;
+        }
+        multiple.loading("reset").loading("render");
+        var ajax = Core.sendQuery("doc/macro/fetch", {
+            type: this.form.find("[name='MacroCreateForm[type]']").val(),
+            columns: columns,
+            hash: this.hash
+        }, function(response) {
+            if (!response["component"]) {
+                return void 0;
+            }
+            var m = me.form.find("[name='MacroCreateForm[value]']");
+            if (!m.length) {
+                m = me.form.find("[name='MacroCreateForm[value][]']");
+            }
+            m.replaceWith(response["component"]);
+            if (m.attr("multiple")) {
+                m.multiple();
+            }
+            multiple.loading("reset");
+        }).fail(function() {
+            multiple.loading("reset");
+        });
+        this.queue.push(ajax);
+    },
+    form: null,
+    hash: null,
+    queue: []
+};
+
 $(document).ready(function() {
 
 	$.fn.fileinput.defaults = $.extend($.fn.fileinput.defaults, {
@@ -183,7 +305,6 @@ $(document).ready(function() {
 		uploadAsync: true,
 		showUpload: true,
 		showRemove: false,
-		//showPreview: false,
 		dropZoneEnabled: true
 	});
 
@@ -191,4 +312,19 @@ $(document).ready(function() {
 	Doc_File_Table.ready();
     Doc_TemplateContentEditor_Widget.ready();
     Doc_TemplateManager_Viewer.ready();
+    Doc_MacroCreateForm.ready();
+
+    $("input[type='file'][data-toggle='fileinput']").fileinput({
+        uploadUrl: url("doc/file/upload"),
+        uploadAsync: true,
+        showPreview: false,
+        showUpload: false,
+        ajaxSettings: {
+            success: function() {
+            }
+        },
+        uploadExtraData: {
+            form: $("file-upload-modal").find("form")
+        }
+    });
 });
