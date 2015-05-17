@@ -4,7 +4,7 @@
     <data-source name="PostgreSQL - mgup@localhost" uuid="4a1bea19-9630-4f7c-a585-745035fe4694">
       <secret-storage>master_key</secret-storage>
       <user-name>postgres</user-name>
-      <schema-pattern>mgup.core mgup.doc mgup.information_schema mgup.public</schema-pattern>
+      <schema-pattern>mgup.core mgup.doc mgup.public</schema-pattern>
       <default-schemas>mgup.pg_catalog mgup.public</default-schemas>
     </data-source>
   </component>
