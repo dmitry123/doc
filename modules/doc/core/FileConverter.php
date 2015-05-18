@@ -47,7 +47,7 @@ class FileConverter {
         }
         while ($file != null && !file_exists($file.".".$this->_ext)) {
             if (++$limit == static::WAIT_TIMEOUT) {
-                throw new Exception("Something gone wrong, we've spent over 10 seconds to wait filesystem changes for file \"$file\"");
+                throw new Exception("Something gone wrong, we've spent over ".static::WAIT_TIMEOUT." seconds to wait filesystem changes for file \"$file\"");
             }
             sleep(1);
         }
