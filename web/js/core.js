@@ -387,6 +387,7 @@ var Core = Core || {};
         } else if (url.charAt(0) != "/") {
 			url = window["doc"]["url"] + "/" + url;
         }
+        url = url.replace(/\/{2,}/, "/");
 		if (!params) {
 			return url;
 		}

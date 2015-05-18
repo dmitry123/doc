@@ -23,7 +23,7 @@ class FileConverter {
         if (substr(php_uname(), 0, 7) == "Windows") {
             $py = "start python.exe";
         } else {
-            $py = ".\\python";
+            $py = "python";
         }
         $cmd = "$py vendor/unoconv/unoconv -f ".$this->_ext." $file";
         $msg = system("$cmd", $r);
