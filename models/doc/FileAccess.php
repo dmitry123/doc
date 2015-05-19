@@ -16,7 +16,7 @@ class FileAccess extends ActiveRecord {
 			"id" => [
 				"label" => "Идентификатор",
 				"type" => "hidden",
-				"rules" => "numerical"
+				"rules" => "integer"
 			],
 			"mode" => [
 				"label" => "Режим",

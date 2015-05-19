@@ -13,7 +13,7 @@ class Employee extends ActiveRecord {
 			"id" => [
 				"label" => "Идентификатор",
 				"type" => "hidden",
-				"rules" => "numerical"
+				"rules" => "integer"
 			],
 			"surname" => [
 				"label" => "Фамилия",

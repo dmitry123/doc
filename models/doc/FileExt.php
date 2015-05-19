@@ -11,7 +11,7 @@ class FileExt extends ActiveRecord {
 			"id" => [
 				"label" => "Идентификатор",
 				"type" => "hidden",
-				"rules" => "numerical"
+				"rules" => "integer"
 			],
 			"ext" => [
 				"label" => "Расширение",

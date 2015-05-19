@@ -9,12 +9,12 @@ class PhoneValidator extends Validator {
 
 	/**
 	 * Validates a single attribute. This method should be overridden by child classes.
-	 * @param mixed|FormModel $object - The data object being validated
+	 * @param mixed|FormModel $model - The data object being validated
 	 * @param string $attribute - The name of the attribute to be validated.
 	 */
-	public function validateAttribute($object, $attribute) {
-		if (!$this->isEmpty($object->$attribute) && !preg_match($this->pattern, "{$object->$attribute}")) {
-			$this->addError($object, $attribute, "\"{attribute}\" не является телефонным номером");
+	public function validateAttribute($model, $attribute) {
+		if (!$this->isEmpty($model->$attribute) && !preg_match($this->pattern, "{$model->$attribute}")) {
+			$this->addError($model, $attribute, "\"{attribute}\" не является телефонным номером");
 		}
 	}
 }

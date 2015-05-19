@@ -134,7 +134,7 @@ abstract class Controller extends \yii\web\Controller {
 		}
 		if (!$form->validate()) {
 			if ($error) {
-				$this->postValidationErrors($form);
+				$this->postErrors($form);
 			} else {
 				$this->errors += $form->getErrors();
 			}
@@ -146,7 +146,7 @@ abstract class Controller extends \yii\web\Controller {
 	 * Post validation errors and return as JSON response
 	 * @param Model $model - Model with errors
 	 */
-	public function postValidationErrors($model = null) {
+	public function postErrors($model = null) {
 		if ($model != null) {
 			$errors = [];
 			foreach ($model->getErrors() as $key => $value) {
@@ -182,7 +182,7 @@ abstract class Controller extends \yii\web\Controller {
 			$array[] = $this->getUrlForm($f, false, $scenario);
 		}
 		if (count($this->errors) > 0) {
-			$this->postValidationErrors();
+			$this->postErrors();
 		}
 		return $array;
 	}

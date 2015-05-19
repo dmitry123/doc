@@ -3,6 +3,7 @@
 namespace app\core;
 
 use yii\base\Exception;
+use yii\helpers\ArrayHelper;
 
 class ConfigManager {
 
@@ -12,9 +13,7 @@ class ConfigManager {
 	 * @return array - Array with rules replacements
 	 */
 	public function replace() {
-		return [
-			"required" => "\\app\\validators\\RequiredValidator"
-		];
+		return [];
 	}
 
 	public $labels = [];
@@ -23,8 +22,16 @@ class ConfigManager {
 	public $tables = [];
 	public $attrs = [];
 
-	public static function createManager( array $config = null) {
+	public static function createManager(array $config = null) {
 		return new static($config);
+	}
+
+	public function mergeWith(ConfigManager $manager) {
+		foreach ($this as $k => &$v) {
+			if (is_array($v)) {
+				$v = ArrayHelper::merge($v, $manager->$k);
+			}
+		}
 	}
 
 	public function __construct(array $config = null) {
@@ -119,10 +126,10 @@ class ConfigManager {
 		foreach (explode(",", $rules) as $i => $rule) {
 			$rule = trim($rule);
 			$this->replaceRules($rule);
-			if (!isset($container[$rule])) {
-				$container[$rule] = [];
+			if (!isset($this->rules[$rule])) {
+				$this->rules[$rule] = [];
 			}
-			array_push($container[$rule], $key);
+			array_push($this->rules[$rule], $key);
 		}
 		return $this->rules;
 	}

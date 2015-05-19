@@ -122,12 +122,18 @@ class TypeManager {
 	 * Get array with dropdown list for HTML select
 	 * element
 	 *
+	 * @param $allowed array with allowed types that
+	 * 	should be returned
+	 *
 	 * @return array with default list types optimized
-	 * 	for HTML select element
+	 *    for HTML select element
 	 */
-	public function listTypes() {
+	public function listTypes(array $allowed = null) {
 		$list = [];
 		foreach ($this->_types as $key => $value) {
+			if ($allowed != null && !in_array($key, $allowed)) {
+				continue;
+			}
 			$list[$key] = $value["label"];
 		}
 		return $list;

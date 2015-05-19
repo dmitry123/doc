@@ -11,7 +11,7 @@ class FileCategory extends ActiveRecord {
 			"id" => [
 				"label" => "Идентификатор",
 				"type" => "hidden",
-				"rules" => "numerical"
+				"rules" => "integer"
 			],
 			"name" => [
 				"label" => "Наименование",

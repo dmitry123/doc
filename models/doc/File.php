@@ -9,7 +9,7 @@ class File extends \app\core\ActiveRecord {
 			"id" => [
 				"label" => "Идентификатор",
 				"type" => "hidden",
-				"rules" => "numerical"
+				"rules" => "integer"
 			],
 			"name" => [
 				"label" => "Название",

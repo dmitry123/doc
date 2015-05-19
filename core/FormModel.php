@@ -2,9 +2,18 @@
 
 namespace app\core;
 
-use yii\base\Model;
-
 abstract class FormModel extends Model {
+
+	public $id;
+
+	/**
+	 * Override that method to return extra
+	 *
+	 * @return array
+	 */
+	public function configure() {
+		return [];
+	}
 
 	/**
 	 * Override that method to return new instance of
@@ -26,6 +35,15 @@ abstract class FormModel extends Model {
 			return $this->_model = $this->createActiveRecord();
 		} else {
 			return $this->_model;
+		}
+	}
+
+	public function init() {
+		$config = $this->configure();
+		if (!empty($config)) {
+			$this->getActiveRecord()->getManager()->mergeWith(
+				ConfigManager::createManager($config)
+			);
 		}
 	}
 

@@ -31,12 +31,25 @@ class Macro extends ActiveRecord {
         "core.tester"
     ];
 
+	public static $allowedTypes = [
+		"text",
+		"number",
+		"boolean",
+		"date",
+		"time",
+		"dropdown",
+		"email",
+		"phone",
+		"textarea",
+		"system"
+	];
+
     public function configure() {
         return [
             "id" => [
                 "label" => "Идентификатор",
                 "type" => "hidden",
-                "rules" => "numerical"
+                "rules" => "integer"
             ],
             "name" => [
                 "label" => "Название",
@@ -51,7 +64,8 @@ class Macro extends ActiveRecord {
             ],
             "value" => [
                 "label" => "Значение",
-                "type" => "text"
+                "type" => "text",
+				"rules" => "required"
             ]
         ];
     }
@@ -59,7 +73,7 @@ class Macro extends ActiveRecord {
     public function rules() {
         return [
             [ "type", "string", "max" => 10 ],
-            [ "name", "string", "max" => 100 ]
+            [ "name", "string", "max" => 100 ],
         ];
     }
 
@@ -68,7 +82,7 @@ class Macro extends ActiveRecord {
     }
 
     public static function listTypes() {
-        return TypeManager::getManager()->listTypes();
+        return TypeManager::getManager()->listTypes(static::$allowedTypes);
     }
 
     public static function listTables() {

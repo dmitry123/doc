@@ -7,6 +7,7 @@ use app\core\ActiveRecord;
 use app\core\Controller;
 use app\core\Fetcher;
 use app\core\PostgreSQL;
+use app\modules\doc\forms\MacroCreateForm;
 use yii\base\Exception;
 use yii\helpers\Html;
 use yii\helpers\Inflector;
@@ -85,4 +86,18 @@ class MacroController extends Controller {
             $this->exception($e);
         }
     }
+
+	public function actionNew() {
+		try {
+			$form = new MacroCreateForm();
+			if (!$form->load(\Yii::$app->request->bodyParams)) {
+				throw new Exception("Can't load [MacroCreateForm] client model");
+			} else if (!$form->validate()) {
+				$this->postErrors($form);
+			}
+			print_r($form);
+		} catch (\Exception $e) {
+			$this->exception($e);
+		}
+	}
 }

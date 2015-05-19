@@ -16,7 +16,7 @@ class Phone extends ActiveRecord {
 			"id" => [
 				"label" => "Идентификатор",
 				"type" => "hidden",
-				"rules" => "numerical"
+				"rules" => "integer"
 			],
 			"region" => [
 				"label" => "Регион",

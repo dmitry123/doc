@@ -11,7 +11,7 @@ class City extends ActiveRecord {
 			"id" => [
 				"label" => "Первичный ключ",
 				"type" => "hidden",
-				"rules" => "numerical"
+				"rules" => "integer"
 			],
 			"name" => [
 				"label" => "Наименование",

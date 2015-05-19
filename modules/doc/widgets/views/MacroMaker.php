@@ -4,7 +4,7 @@
  * @var $model app\modules\doc\forms\MacroCreateForm
  */
 $form = app\widgets\ActiveForm::begin([
-    "action" => Yii::$app->getUrlManager()->createUrl("doc/macro/create"),
+    "action" => Yii::$app->getUrlManager()->createUrl("doc/macro/new"),
     "options" => [
         "class" => "doc-macro-create-form",
         "role" => "form"
@@ -28,6 +28,8 @@ foreach (\app\models\doc\Macro::listTypes() as $key => $type) {
             "data-field" => $key,
             "style" => "display: none"
         ]
-    ])->renderEx($key, \app\core\TypeManager::getManager()->getField($key));
+    ])->renderEx($key, \app\core\TypeManager::getManager()->getField($key), [
+		"name" => "MacroCreateForm[value][$key]"
+	]);
 }
 $form->end();

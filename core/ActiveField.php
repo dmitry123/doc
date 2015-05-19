@@ -61,6 +61,8 @@ class ActiveField extends \yii\bootstrap\ActiveField {
     }
 
     public function systemInput($options = []) {
-        return $this->dropDownList(TypeManager::getManager()->listSystem(), $options);
+        return $this->dropDownList([
+				0 => "Нет"
+			] + TypeManager::getManager()->listSystem(), $options);
     }
 }

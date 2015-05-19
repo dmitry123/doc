@@ -13,10 +13,25 @@ class MacroCreateForm extends FormModel {
     public $columns;
     public $value;
 
-    public function attributeLabels() {
+	public function configure() {
+		return [
+			"table" => [
+				"label" => "Таблица",
+				"type" => "dropdown",
+				"rules" => "required"
+			]
+		];
+	}
+
+	public function rules() {
+		return parent::rules() + [
+			[ "table", "required" ]
+		];
+	}
+
+	public function attributeLabels() {
         return parent::attributeLabels() + [
-            "columns" => "Столбцы",
-            "table" => "Таблица"
+            "columns" => "Столбцы"
         ];
     }
 

@@ -7,6 +7,9 @@ use yii\base\Model;
 
 class ActiveForm extends \yii\bootstrap\ActiveForm {
 
+	public $enableClientValidation = false;
+	public $enableAjaxValidation = false;
+
 	public $fieldClass = '\app\core\ActiveField';
 
     /**

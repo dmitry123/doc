@@ -215,6 +215,14 @@ var Doc_MacroCreateForm = {
             });
             me.hash = val;
         });
+		$(".modal .builder-save-macro-button").click(function() {
+			var modal = $(this).parents(".modal");
+			modal.find(".doc-macro-create-form").form({
+				success: function() {
+					modal.modal("hide");
+				}
+			}).form("send");
+		});
     },
     show: function(type) {
         var form = this.form;

@@ -15,7 +15,7 @@ class User extends ActiveRecord implements IdentityInterface {
 			"id" => [
 				"label" => "Идентификатор",
 				"type" => "hidden",
-				"rules" => "numerical"
+				"rules" => "integer"
 			],
 			"login" => [
 				"label" => "Логин",

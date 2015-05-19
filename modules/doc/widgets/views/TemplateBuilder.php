@@ -18,6 +18,14 @@ print \app\widgets\Modal::widget([
 print \app\widgets\Modal::widget([
     "title" => "Создание нового макроса",
     "body" => \app\modules\doc\widgets\MacroMaker::widget([]),
+	"buttons" => [
+		"builder-save-macro-button" => [
+			"text" => "Сохранить",
+			"class" => "btn btn-primary",
+			"type" => "button",
+			"onclick" => "",
+		]
+	],
     "id" => "builder-create-macros-modal"
 ]);
 print \app\widgets\Modal::widget([

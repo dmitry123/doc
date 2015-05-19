@@ -31,7 +31,7 @@ class UserController extends Controller {
 				throw new Exception("Can't load registration form");
 			}
 			if (!$model->validate()) {
-				$this->postValidationErrors($model);
+				$this->postErrors($model);
 			}
 			if (User::findOne([ "email" => $model->{"email"} ]) != null) {
 				$this->error("Пользователь с таким почтовым ящиком уже зарегистрирован \"{$model->{"email"}}\"");
@@ -43,7 +43,7 @@ class UserController extends Controller {
 			$ar->setAttributes($model->getAttributes());
 			if (!$ar->save()) {
 				if ($ar->hasErrors()) {
-					$this->postValidationErrors($ar);
+					$this->postErrors($ar);
 				} else {
 					$this->error("Произошли ошибки во время сохранения данных");
 				}

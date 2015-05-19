@@ -11,7 +11,7 @@ class SecurityKey extends ActiveRecord {
 			"id" => [
 				"label" => "Идентификатор",
 				"type" => "hidden",
-				"rules" => "numerical"
+				"rules" => "integer"
 			],
 			"key" => [
 				"label" => "Ключ безопасности",

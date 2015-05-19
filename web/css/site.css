@@ -23,7 +23,8 @@ body {
 }
 
 /* Styles for required */
-.required {
+.required > label:after {
+    content: '*';
     white-space: nowrap;
     color: red;
 }
