@@ -1,0 +1,3 @@
+sudo chmod 1777 /private/tmp
+sudo chmod 1777 /uploads
+sudo chmod 1777 /uploads/files
