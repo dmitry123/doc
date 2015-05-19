@@ -33,7 +33,6 @@ class FileController extends Controller {
 
 	/**
 	 * That action uploads files on server
-	 * @see DocumentController::getFiles
 	 * @see FileUploader::upload
 	 */
 	public function actionUpload() {

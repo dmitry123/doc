@@ -9,8 +9,8 @@ print \app\widgets\Modal::widget([
     ]),
     "id" => "doc-file-template-manager-modal"
 ]) ?>
-<div class="col-xs-12">
-	<div class="col-xs-8 clear">
+<div class="col-xs-12 clear">
+	<div class="col-xs-8">
 	<?= \app\widgets\Panel::widget([
 		"title" => "Список файлов",
 		"body" => \app\widgets\Grid::create([
