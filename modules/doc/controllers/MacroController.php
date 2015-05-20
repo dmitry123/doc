@@ -7,7 +7,8 @@ use app\core\ActiveRecord;
 use app\core\Controller;
 use app\core\Fetcher;
 use app\core\PostgreSQL;
-use app\modules\doc\forms\MacroCreateForm;
+use app\models\doc\Macro;
+use app\modules\doc\forms\MacroForm;
 use yii\base\Exception;
 use yii\helpers\Html;
 use yii\helpers\Inflector;
@@ -41,10 +42,11 @@ class MacroController extends Controller {
                     $data[$column["name"]] = $column["name"];
                 }
             }
+			$component = Html::dropDownList("MacroForm[columns]", null, $data, [
+				"multiple" => "multiple"
+			]);
             $this->leave([
-                "component" => Html::dropDownList("MacroCreateForm[columns]", null, $data, [
-                    "multiple" => "multiple"
-                ])
+                "component" => str_replace("MacroForm[columns][]", "MacroForm[columns]", $component)
             ]);
         } catch (\Exception $e) {
             $this->exception($e);
@@ -77,10 +79,12 @@ class MacroController extends Controller {
             } else {
                 $options = [];
             }
+			$data = [ 0 => "Нет" ] + $data;
             $this->leave([
-                "component" => Html::dropDownList("MacroCreateForm[value]", null, $data, $options + [
+                "component" => Html::dropDownList("MacroForm[value][$type]", null, $data, $options + [
                     "class" => "form-control"
-                ])
+                ]),
+				"type" => $type
             ]);
         } catch (\Exception $e) {
             $this->exception($e);
@@ -89,13 +93,21 @@ class MacroController extends Controller {
 
 	public function actionNew() {
 		try {
-			$form = new MacroCreateForm();
+			$form = new MacroForm();
 			if (!$form->load(\Yii::$app->request->bodyParams)) {
-				throw new Exception("Can't load [MacroCreateForm] client model");
-			} else if (!$form->validate()) {
+				throw new Exception("Can't load [MacroForm] client model");
+			}
+			if (!$form->validate()) {
 				$this->postErrors($form);
 			}
-			print_r($form);
+			$ar = new Macro();
+			$ar->setAttributes($form->getAttributes());
+			if (!$ar->save()) {
+				$this->postErrors($ar);
+			}
+			$this->leave([
+				"message" => "Макрос успешно создан"
+			]);
 		} catch (\Exception $e) {
 			$this->exception($e);
 		}

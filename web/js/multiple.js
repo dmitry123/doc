@@ -70,10 +70,7 @@ var Core = Core || {};
             }).addClass("form-control");
         var g = $("<div>", {
             class: "multiple-control",
-            role: "group",
-            style: {
-                width: this.selector().width() || "100%"
-            }
+            role: "group"
         }).append(
             $("<button>", {
                 class: "btn btn-default btn-sm multiple-collapse-button",
@@ -188,7 +185,7 @@ var Core = Core || {};
 		она находит опцию со значением -3 и вызывает событие для обработки
 		 */
 		this.selector().find(".multiple-control .multiple-insert-button:visible").click(function() {
-			var t; applyInsertForSelect.call(t = me.selector().find(".multiple-value").get(0), t);
+			var t; applyInsertForSelect && applyInsertForSelect.call(t = me.selector().find(".multiple-value").get(0), t);
 		});
 	};
 

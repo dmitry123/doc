@@ -3,7 +3,6 @@
 namespace app\core;
 
 use yii\base\Exception;
-use yii\base\Model;
 use yii\helpers\Inflector;
 
 abstract class ActiveRecord extends \yii\db\ActiveRecord {

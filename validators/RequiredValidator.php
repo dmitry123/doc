@@ -4,9 +4,16 @@ namespace app\validators;
 
 use Yii;
 use app\core\FormModel;
-use yii\validators\ValidationAsset;
 
 class RequiredValidator extends \yii\validators\RequiredValidator {
+
+	public static function validateValueEx($type, $value, $model = null) {
+		if (in_array($type, [ "dropdown", "multiple" ]) && is_scalar($value) && (string) $value === "0") {
+			return false;
+		} else {
+			return true;
+		}
+	}
 
 	public function init() {
 		parent::init();
@@ -21,32 +28,12 @@ class RequiredValidator extends \yii\validators\RequiredValidator {
 		} else {
 			$type = null;
 		}
-		if (in_array($type, [ "dropdown", "multiple" ]) && is_scalar($model->$attribute) && (string) $model->$attribute === "0") {
+		if ($type != null && !$this->validateValueEx($type, $model->$attribute, $model)) {
 			$this->error($model, $attribute);
 		}
 	}
 
 	protected function error($object, $attribute) {
 		$this->addError($object, $attribute, Yii::t("yii", "Поле \"{attribute}\" должно быть заполнено."));
-	}
-
-	public function clientValidateAttribute($model, $attribute, $view) {
-		$options = [];
-		if ($this->requiredValue !== null) {
-			$options['message'] = Yii::$app->getI18n()->format($this->message, [
-				'requiredValue' => $this->requiredValue,
-			], Yii::$app->language);
-			$options['requiredValue'] = $this->requiredValue;
-		} else {
-			$options['message'] = $this->message;
-		}
-		if ($this->strict) {
-			$options['strict'] = 1;
-		}
-		$options['message'] = Yii::$app->getI18n()->format($options['message'], [
-			'attribute' => $model->getAttributeLabel($attribute),
-		], Yii::$app->language);
-		ValidationAsset::register($view);
-		return 'yii.validation.required(value, messages, ' . json_encode($options, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) . ');';
 	}
 }

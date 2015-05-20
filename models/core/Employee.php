@@ -6,8 +6,6 @@ use app\core\ActiveRecord;
 
 class Employee extends ActiveRecord {
 
-	public $login;
-
 	public function configure() {
 		return [
 			"id" => [

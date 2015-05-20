@@ -33,5 +33,6 @@ class Validator extends \yii\validators\Validator {
 		],
 		'unique' => 'yii\validators\UniqueValidator',
 		'url' => 'yii\validators\UrlValidator',
+		'mixed' => 'app\validators\MixedValidator',
 	];
 }

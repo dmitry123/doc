@@ -156,13 +156,13 @@ var Doc_TemplateManager_Viewer = {
 
 const DOC_MCF_VELOCITY = 300;
 
-var Doc_MacroCreateForm = {
+var Doc_MacroForm = {
     ready: function() {
         var me = this;
-        $(".doc-macro-create-form").on("change", "select[name='MacroCreateForm[columns][]']", function() {
+        $(".doc-macro-create-form").on("change", "select[name='MacroForm[columns]']", function() {
             me.change($(this), $(this).val());
         });
-        $("[name='MacroCreateForm[type]']").change(function() {
+        $("[name='MacroForm[type]']").change(function() {
             var val = $(this).val(),
                 form = $(this).parents("form:eq(0)");
             me.form = form;
@@ -173,16 +173,16 @@ var Doc_MacroCreateForm = {
                 me.show(val);
             }
         });
-        $("[name='MacroCreateForm[table]']").change(function() {
+        $("[name='MacroForm[table]']").change(function() {
             var val = $(this).val(),
                 form = $(this).parents("form:eq(0)"),
                 it = $(this);
             me.form = form;
             if (val == 0) {
-                form.find("select[name='MacroCreateForm[columns][]']").val("");
+                form.find("select[name='MacroForm[columns]']").val("");
                 form.find(".macro-multiple-container")
                     .slideUp(DOC_MCF_VELOCITY);
-                form.find("[name='MacroCreateForm[value]']").parent(".form-group")
+                form.find("[name='MacroForm[value]']").parent(".form-group")
                     .slideUp(DOC_MCF_VELOCITY);
                 return void 0;
             }
@@ -193,21 +193,17 @@ var Doc_MacroCreateForm = {
                 if (response["empty"]) {
                     return void 0;
                 }
-                var c = form.find(".macro-multiple-container");
+				var c = form.find(".field-macroform-columns");
                 var e = $(response["component"]);
-                if (c.children().length > 0) {
-                    c.slideUp(DOC_MCF_VELOCITY, function() {
-                        c.hide().empty().append(e);
-                        e.multiple();
-                        c.slideDown(DOC_MCF_VELOCITY);
-                    });
-                } else {
-                    c.hide().append(e);
-                    e.multiple();
-                    c.slideDown(DOC_MCF_VELOCITY);
-                }
+				c.slideUp(DOC_MCF_VELOCITY, function() {
+					c.children(".multiple").remove();
+					c.children("input[type='hidden']").remove();
+					c.children("label").after(e);
+					e.multiple();
+					c.slideDown(DOC_MCF_VELOCITY);
+				});
                 setTimeout(function() {
-                    form.find("[name='MacroCreateForm[columns]'],[name='MacroCreateForm[columns][]']")
+                    form.find("[name='MacroForm[columns]'],[name='MacroForm[columns]']")
                         .parents(".form-group").slideDown(DOC_MCF_VELOCITY);
                 }, DOC_MCF_VELOCITY);
             }).always(function() {
@@ -228,11 +224,11 @@ var Doc_MacroCreateForm = {
         var form = this.form;
         form.find(".form-group[data-field='" + type + "']").slideDown(DOC_MCF_VELOCITY, function() {
             if (type == "dropdown" || type == "multiple") {
-                form.find("[name='MacroCreateForm[table]']").parent(".form-group").slideDown(DOC_MCF_VELOCITY);
+                form.find("[name='MacroForm[table]']").parent(".form-group").slideDown(DOC_MCF_VELOCITY);
             } else {
-                form.find("[name='MacroCreateForm[table]']").parent(".form-group").slideUp(DOC_MCF_VELOCITY);
-                form.find("select[name='MacroCreateForm[columns][]']").val("");
-                form.find("select[name='MacroCreateForm[table]']").val(0);
+                form.find("[name='MacroForm[table]']").parent(".form-group").slideUp(DOC_MCF_VELOCITY);
+                form.find("select[name='MacroForm[columns]']").val("");
+                form.find("select[name='MacroForm[table]']").val(0);
                 form.find(".macro-multiple-container")
                     .slideUp(DOC_MCF_VELOCITY);
             }
@@ -248,7 +244,7 @@ var Doc_MacroCreateForm = {
                 this.queue[i].abort();
             }
             this.queue = [];
-            me.form.find("[name='MacroCreateForm[value]']").empty().append(
+            me.form.find("[name='MacroForm[value]']").empty().append(
                 $("<option></option>", {
                     value: 0,
                     text: "Нет"
@@ -258,17 +254,14 @@ var Doc_MacroCreateForm = {
         }
         multiple.loading("reset").loading("render");
         var ajax = Core.sendQuery("doc/macro/fetch", {
-            type: this.form.find("[name='MacroCreateForm[type]']").val(),
+            type: this.form.find("[name='MacroForm[type]']").val(),
             columns: columns,
             hash: this.hash
         }, function(response) {
             if (!response["component"]) {
                 return void 0;
             }
-            var m = me.form.find("[name='MacroCreateForm[value]']");
-            if (!m.length) {
-                m = me.form.find("[name='MacroCreateForm[value][]']");
-            }
+			var m = me.form.find("[name='MacroForm[value]["+ response["type"] +"]']");
             m.replaceWith(response["component"]);
             if (m.attr("multiple")) {
                 m.multiple();
@@ -320,7 +313,7 @@ $(document).ready(function() {
 	Doc_File_Table.ready();
     Doc_TemplateContentEditor_Widget.ready();
     Doc_TemplateManager_Viewer.ready();
-    Doc_MacroCreateForm.ready();
+    Doc_MacroForm.ready();
 
     $("input[type='file'][data-toggle='fileinput']").fileinput({
         uploadUrl: url("doc/file/upload"),

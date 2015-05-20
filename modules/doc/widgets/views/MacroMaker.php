@@ -1,7 +1,7 @@
 <?php
 /**
  * @var $this \yii\web\View
- * @var $model app\modules\doc\forms\MacroCreateForm
+ * @var $model app\modules\doc\forms\MacroForm
  */
 $form = app\widgets\ActiveForm::begin([
     "action" => Yii::$app->getUrlManager()->createUrl("doc/macro/new"),
@@ -18,9 +18,12 @@ print $form->field($model, "table", [
         "style" => "display: none"
     ]
 ])->dropDownList([ 0 => "Нет" ] + \app\models\doc\Macro::listTables());
-print \yii\helpers\Html::tag("div", "", [
-    "class" => "macro-multiple-container"
-]);
+print $form->field($model, "columns", [
+	"options" => [
+		"class" => "form-group",
+		"style" => "display: none"
+	]
+])->multipleInput([]);
 foreach (\app\models\doc\Macro::listTypes() as $key => $type) {
     print $form->field($model, "value", [
         "options" => [
@@ -29,7 +32,7 @@ foreach (\app\models\doc\Macro::listTypes() as $key => $type) {
             "style" => "display: none"
         ]
     ])->renderEx($key, \app\core\TypeManager::getManager()->getField($key), [
-		"name" => "MacroCreateForm[value][$key]"
+		"name" => "MacroForm[value][$key]"
 	]);
 }
 $form->end();

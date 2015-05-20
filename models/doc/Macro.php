@@ -64,8 +64,8 @@ class Macro extends ActiveRecord {
             ],
             "value" => [
                 "label" => "Значение",
-                "type" => "text",
-				"rules" => "required"
+                "type" => "mixed",
+				"rules" => "mixed"
             ]
         ];
     }
