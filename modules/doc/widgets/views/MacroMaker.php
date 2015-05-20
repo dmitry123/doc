@@ -23,7 +23,9 @@ print $form->field($model, "columns", [
 		"class" => "form-group",
 		"style" => "display: none"
 	]
-])->multipleInput([]);
+])->multipleInput([
+	"name" => ""
+]);
 foreach (\app\models\doc\Macro::listTypes() as $key => $type) {
     print $form->field($model, "value", [
         "options" => [

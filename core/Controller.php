@@ -146,16 +146,21 @@ abstract class Controller extends \yii\web\Controller {
 	 * Post validation errors and return as JSON response
 	 * @param Model $model - Model with errors
 	 */
-	public function postErrors($model = null) {
+	public static function postErrors($model = null) {
 		if ($model != null) {
 			$errors = [];
 			foreach ($model->getErrors() as $key => $value) {
 				$errors[ClassTrait::createID($model->className())."-".$key] = $value;
 			}
 		} else {
-			$errors = $this->errors;
+			$c = \Yii::$app->controller;
+			if ($c instanceof Controller) {
+				$errors = $c->errors;
+			} else {
+				$errors = [];
+			}
 		}
-		$this->leave([
+		static::leave([
 			"message" => "Произошли ошибки во время валидации формы",
 			"errors" => $errors,
 			"error" => "form",
@@ -194,7 +199,7 @@ abstract class Controller extends \yii\web\Controller {
 	 * @return \app\core\Widget - Widget component
 	 * @throws Exception
 	 */
-	public function createWidget($class, $parameters = []) {
+	public static function createWidget($class, $parameters = []) {
 		if (!class_exists($class)) {
 			throw new Exception("Unresolved widget module or path \"$class\"");
 		}
@@ -246,7 +251,7 @@ abstract class Controller extends \yii\web\Controller {
 	 * @return mixed - Some received stuff
 	 * @throws \Exception - If parameter hasn't been declared in _GET array
 	 */
-	public function requireQuery($name) {
+	public static function requireQuery($name) {
 		if (!isset(\Yii::$app->request->queryParams[$name])) {
 			throw new \Exception("That action requires query parameter \"$name\"");
 		} else {
@@ -254,7 +259,7 @@ abstract class Controller extends \yii\web\Controller {
 		}
 	}
 
-	public function getQuery($name, $default = null) {
+	public static function getQuery($name, $default = null) {
 		if (isset(\Yii::$app->request->queryParams[$name])) {
 			return \Yii::$app->request->queryParams[$name];
 		} else {
@@ -267,14 +272,14 @@ abstract class Controller extends \yii\web\Controller {
 	 * @param String $name - Name of parameter in GET array
 	 * @return Mixed - Some received value
 	 */
-	public function requireQueryOnce($name) {
-		$value = $this->requireQuery($name);
+	public static function requireQueryOnce($name) {
+		$value = static::requireQuery($name);
 		unset($_GET[$name]);
 		return $value;
 	}
 
-	public function getQueryOnce($name, $default = null) {
-		$value = $this->getQuery($name, $default);
+	public static function getQueryOnce($name, $default = null) {
+		$value = static::getQuery($name, $default);
 		unset($_POST[$name]);
 		return $value;
 	}
@@ -286,7 +291,7 @@ abstract class Controller extends \yii\web\Controller {
 	 * @return mixed - Some received stuff
 	 * @throws \Exception - If parameter hasn't been declared in _POST array
 	 */
-	public function requirePost($name) {
+	public static function requirePost($name) {
 		if (!isset(\Yii::$app->request->bodyParams[$name])) {
 			throw new \Exception("That action requires body parameter \"$name\"");
 		} else {
@@ -294,7 +299,7 @@ abstract class Controller extends \yii\web\Controller {
 		}
 	}
 
-	public function getPost($name, $default = null) {
+	public static function getPost($name, $default = null) {
 		if (isset(\Yii::$app->request->bodyParams[$name])) {
 			return \Yii::$app->request->bodyParams[$name];
 		} else {
@@ -306,8 +311,8 @@ abstract class Controller extends \yii\web\Controller {
 	 * Post error message and terminate script evaluation
 	 * @param $message String - Message with error
 	 */
-	public function error($message) {
-		$this->leave([
+	public static function error($message) {
+		static::leave([
 			"message" => $message,
 			"status" => false
 		]);
@@ -318,7 +323,7 @@ abstract class Controller extends \yii\web\Controller {
 	 * @param $parameters array - Array with parameters to return
 	 * @return null - Nothing
 	 */
-	public function leave(array $parameters) {
+	public static function leave(array $parameters) {
 		if (!isset($parameters["status"])) {
 			$parameters["status"] = true;
 		}
@@ -333,14 +338,14 @@ abstract class Controller extends \yii\web\Controller {
 	 * @return null - Nothing
 	 * @throws \Exception
 	 */
-	public function exception(\Exception $exception) {
+	public static function exception(\Exception $exception) {
         if ($exception instanceof UserException) {
-            $this->error($exception->getMessage());
+            static::error($exception->getMessage());
         } else if (!\Yii::$app->getRequest()->getIsAjax() || true) {
             throw $exception;
         }
 		$method = $exception->getTrace()[0];
-		$this->leave([
+		static::leave([
 			"message" => basename($method["file"])."[".$method["line"]."] ".$method["class"]."::".$method["function"]."(): \"".$exception->getMessage()."\"",
 			"file" => basename($method["file"]),
 			"method" => $method["class"]."::".$method["function"]."()",

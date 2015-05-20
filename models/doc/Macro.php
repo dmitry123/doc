@@ -66,7 +66,17 @@ class Macro extends ActiveRecord {
                 "label" => "Значение",
                 "type" => "mixed",
 				"rules" => "mixed"
-            ]
+            ],
+			"columns" => [
+				"label" => "Столбцы",
+				"type" => "text",
+				"rules" => "safe"
+			],
+			"table" => [
+				"label" => "Таблица",
+				"type" => "dropdown",
+				"rules" => "safe"
+			]
         ];
     }
 
@@ -81,17 +91,17 @@ class Macro extends ActiveRecord {
         return "doc.macro";
     }
 
-    public static function listTypes() {
-        return TypeManager::getManager()->listTypes(static::$allowedTypes);
-    }
-
     public static function listTables() {
-        $array = ArrayHelper::map(PostgreSQL::findOrderedAndHashed(static::$allowedTables), function($element) {
-            return $element["hash"];
-        }, "localize");
+        $array = ArrayHelper::map(PostgreSQL::findOrderedAndHashed(static::$allowedTables),
+			"hash", "localize"
+		);
         uasort($array, function($left, $right) {
             return strcasecmp($left, $right);
         });
         return $array;
     }
+
+	public static function listTypes() {
+		return TypeManager::getManager()->listTypes(static::$allowedTypes);
+	}
 }

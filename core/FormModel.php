@@ -28,10 +28,13 @@ abstract class FormModel extends Model {
 	 * instance automatically, so you can revoke it
 	 * many times
 	 *
+	 * @param $new bool true if new active record instance
+	 * 	should be provided not look at cached models
+	 *
 	 * @return ActiveRecord instance of table model class
 	 */
-	public function getActiveRecord() {
-		if ($this->_model == null) {
+	public function getActiveRecord($new = false) {
+		if ($this->_model == null || $new == true) {
 			return $this->_model = $this->createActiveRecord();
 		} else {
 			return $this->_model;

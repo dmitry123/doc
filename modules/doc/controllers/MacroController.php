@@ -42,11 +42,10 @@ class MacroController extends Controller {
                     $data[$column["name"]] = $column["name"];
                 }
             }
-			$component = Html::dropDownList("MacroForm[columns]", null, $data, [
-				"multiple" => "multiple"
-			]);
             $this->leave([
-                "component" => str_replace("MacroForm[columns][]", "MacroForm[columns]", $component)
+                "component" => Html::dropDownList("MacroForm[columns]", null, $data, [
+					"multiple" => "multiple"
+				])
             ]);
         } catch (\Exception $e) {
             $this->exception($e);
@@ -96,18 +95,15 @@ class MacroController extends Controller {
 			$form = new MacroForm();
 			if (!$form->load(\Yii::$app->request->bodyParams)) {
 				throw new Exception("Can't load [MacroForm] client model");
-			}
-			if (!$form->validate()) {
+			} else if (!$form->validate()) {
 				$this->postErrors($form);
+			} else if (!$form->save()) {
+				$this->postErrors($form->getActiveRecord());
+			} else {
+				$this->leave([
+					"message" => "Макрос успешно создан"
+				]);
 			}
-			$ar = new Macro();
-			$ar->setAttributes($form->getAttributes());
-			if (!$ar->save()) {
-				$this->postErrors($ar);
-			}
-			$this->leave([
-				"message" => "Макрос успешно создан"
-			]);
 		} catch (\Exception $e) {
 			$this->exception($e);
 		}

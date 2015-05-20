@@ -159,7 +159,7 @@ const DOC_MCF_VELOCITY = 300;
 var Doc_MacroForm = {
     ready: function() {
         var me = this;
-        $(".doc-macro-create-form").on("change", "select[name='MacroForm[columns]']", function() {
+        $(".doc-macro-create-form").on("change", "select[name='MacroForm[columns][]']", function() {
             me.change($(this), $(this).val());
         });
         $("[name='MacroForm[type]']").change(function() {
@@ -179,7 +179,7 @@ var Doc_MacroForm = {
                 it = $(this);
             me.form = form;
             if (val == 0) {
-                form.find("select[name='MacroForm[columns]']").val("");
+                form.find("select[name='MacroForm[columns][]']").val("");
                 form.find(".macro-multiple-container")
                     .slideUp(DOC_MCF_VELOCITY);
                 form.find("[name='MacroForm[value]']").parent(".form-group")
@@ -203,7 +203,7 @@ var Doc_MacroForm = {
 					c.slideDown(DOC_MCF_VELOCITY);
 				});
                 setTimeout(function() {
-                    form.find("[name='MacroForm[columns]'],[name='MacroForm[columns]']")
+                    form.find("[name='MacroForm[columns][]'],[name='MacroForm[columns][]']")
                         .parents(".form-group").slideDown(DOC_MCF_VELOCITY);
                 }, DOC_MCF_VELOCITY);
             }).always(function() {
@@ -227,7 +227,7 @@ var Doc_MacroForm = {
                 form.find("[name='MacroForm[table]']").parent(".form-group").slideDown(DOC_MCF_VELOCITY);
             } else {
                 form.find("[name='MacroForm[table]']").parent(".form-group").slideUp(DOC_MCF_VELOCITY);
-                form.find("select[name='MacroForm[columns]']").val("");
+                form.find("select[name='MacroForm[columns][]']").val("");
                 form.find("select[name='MacroForm[table]']").val(0);
                 form.find(".macro-multiple-container")
                     .slideUp(DOC_MCF_VELOCITY);
