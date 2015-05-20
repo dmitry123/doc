@@ -64,17 +64,17 @@ print \app\widgets\Modal::widget([
 				"builder-element-create-button" => [
 					"label" => "Создать",
 					"icon" => "fa fa-plus",
-                    "href" => "javascript:$('#builder-create-element-modal').modal('show')",
+                    "onclick" => "$('#builder-create-element-modal').modal('show')",
 				],
 				"builder-element-find-button" => [
 					"label" => "Найти",
 					"icon" => "fa fa-search",
-                    "href" => "javascript:$('#builder-find-element-modal').modal('show')",
+                    "onclick" => "$('#builder-find-element-modal').modal('show')",
 				],
 				"builder-element-edit-button" => [
 					"label" => "Просмотреть",
 					"icon" => "fa fa-pencil",
-                    "href" => "javascript:$('#builder-view-element-modal').modal('show')",
+                    "onclick" => "$('#builder-view-element-modal').modal('show')",
 				],
 			]
 		],
@@ -85,17 +85,17 @@ print \app\widgets\Modal::widget([
 				"builder-macros-create-button" => [
 					"label" => "Создать",
 					"icon" => "fa fa-plus",
-                    "href" => "javascript:$('#builder-create-macros-modal').modal('show')",
+                    "onclick" => "$('#builder-create-macros-modal').modal('show')",
 				],
 				"builder-macros-find-button" => [
 					"label" => "Найти",
 					"icon" => "fa fa-search",
-                    "href" => "javascript:$('#builder-edit-macros-modal').modal('show')",
+                    "onclick" => "$('#builder-edit-macros-modal').modal('show')",
 				],
 				"builder-macros-edit-button" => [
 					"label" => "Просмотреть",
 					"icon" => "fa fa-pencil",
-                    "href" => "javascript:$('#builder-view-macros-modal').modal('show')",
+                    "onclick" => "$('#builder-view-macros-modal').modal('show')",
 				],
 			]
 		]
