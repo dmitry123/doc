@@ -2,13 +2,25 @@
 
 namespace app\validators;
 
+use app\core\Model;
+use app\core\TypeManager;
 use Yii;
 use app\core\FormModel;
 
 class RequiredValidator extends \yii\validators\RequiredValidator {
 
+	/**
+	 * Validate value for required rule, even if it has dropdown
+	 * or multiple types, that method also uses by subclasses
+	 *
+	 * @param $type string name of value's type
+	 * @param $value mixed value to be validated
+	 * @param $model Model instance of form model
+	 *
+	 * @return bool true of success validation
+	 */
 	public static function validateValueEx($type, $value, $model = null) {
-		if (in_array($type, [ "dropdown", "multiple" ]) && is_scalar($value) && (string) $value === "0") {
+		if (TypeManager::getManager()->test("list", $type) && is_scalar($value) && (string) $value === "0") {
 			return false;
 		} else {
 			return true;

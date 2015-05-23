@@ -328,4 +328,9 @@ $(document).ready(function() {
             form: $("file-upload-modal").find("form")
         }
     });
+
+	$("#builder-create-macro-modal").on("show.bs.modal", function() {
+		$(this).find(".field-macroform-table, .field-macroform-columns, .field-macroform-value").hide();
+		$(this).cleanup();
+	});
 });

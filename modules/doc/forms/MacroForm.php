@@ -4,6 +4,7 @@ namespace app\modules\doc\forms;
 
 use app\core\Controller;
 use app\core\FormModel;
+use app\core\TypeManager;
 use app\models\doc\Macro;
 use app\models\doc\MacroColumn;
 use yii\helpers\ArrayHelper;
@@ -38,21 +39,27 @@ class MacroForm extends FormModel {
 			$ar = $this->getActiveRecord(true);
 			$ar->setAttributes($this->getAttributes(), false);
 			$r = $ar->save();
-			foreach ($this->columns as $column) {
-				$mc = new MacroColumn();
-				$mc->setAttributes([
-					"column" => $column,
-					"macro_id" => $ar->{"id"}
-				], false);
-				if (!$mc->save()) {
-					Controller::postErrors($mc);
-				}
+			if (TypeManager::getManager()->test("list", $this->type)) {
+				$this->saveTypes($ar);
 			}
 			$transaction->commit();
 			return $r;
 		} catch (\Exception $e) {
 			$transaction->rollBack();
 			throw $e;
+		}
+	}
+
+	private function saveTypes($macro) {
+		foreach ($this->columns as $column) {
+			$mc = new MacroColumn();
+			$mc->setAttributes([
+				"column" => $column,
+				"macro_id" => $macro->{"id"}
+			], false);
+			if (!$mc->save()) {
+				Controller::postErrors($mc);
+			}
 		}
 	}
 

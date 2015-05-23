@@ -7,7 +7,66 @@ use yii\helpers\Html;
 
 class EditorFileMenu extends Widget {
 
-	public $items = [];
+	public $items = [
+		"builder-open-button" => [
+			"label" => "Открыть",
+			"icon" => "fa fa-folder-open-o"
+		],
+		"builder-save-button" => [
+			"label" => "Сохранить",
+			"icon" => "fa fa-save"
+		],
+		"builder-preview-button" => [
+			"label" => "Предпросмотр",
+			"icon" => "fa fa-file-text-o"
+		],
+		"builder-print-button" => [
+			"label" => "Печать",
+			"icon" => "fa fa-print"
+		],
+		"builder-element-button" => [
+			"label" => "Элементы",
+			"icon" => "fa fa-tags",
+			"items" => [
+				"builder-element-create-button" => [
+					"label" => "Создать",
+					"icon" => "fa fa-plus",
+					"onclick" => "$('#builder-create-element-modal').modal('show')",
+				],
+				"builder-element-find-button" => [
+					"label" => "Найти",
+					"icon" => "fa fa-search",
+					"onclick" => "$('#builder-find-element-modal').modal('show')",
+				],
+				"builder-element-edit-button" => [
+					"label" => "Просмотреть",
+					"icon" => "fa fa-pencil",
+					"onclick" => "$('#builder-view-element-modal').modal('show')",
+				],
+			]
+		],
+		"builder-macros-button" => [
+			"label" => "Макросы",
+			"icon" => "fa fa-th",
+			"items" => [
+				"builder-macros-create-button" => [
+					"label" => "Создать",
+					"icon" => "fa fa-plus",
+					"onclick" => "$('#builder-create-macro-modal').modal('show')",
+				],
+				"builder-macros-find-button" => [
+					"label" => "Найти",
+					"icon" => "fa fa-search",
+					"onclick" => "$('#builder-find-macro-modal').modal('show')",
+				],
+				"builder-macros-edit-button" => [
+					"label" => "Просмотреть",
+					"icon" => "fa fa-pencil",
+					"onclick" => "$('#builder-view-macro-modal').modal('show')",
+				],
+			]
+		]
+	];
 
 	public function run() {
 		return $this->render("EditorFileMenu", [

@@ -567,7 +567,7 @@
       <column name="column" sqlType="varchar" precision="50" scale="0" nullable="false" jdbcType="12"/>
       <column name="macro_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <primary-key name="macro_column_pkey" columns="id"/>
-      <foreign-key name="macro_column_macro_id_fkey" columns="macro_id" ref-table="macro" ref-schema="doc" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="macro_column_macro_id_fkey" columns="macro_id" ref-table="macro" ref-schema="doc" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
     </table>
     <table name="macro_column_id_seq" schema="doc" catalog="mgup" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>

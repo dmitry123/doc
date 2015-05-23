@@ -138,7 +138,6 @@ var Core = Core || {};
 
 	/**
 	 * Cleanup component's value and all errors or warnings
-	 * @static
 	 * @param component
 	 */
 	Common.cleanup = function(component) {
@@ -422,6 +421,12 @@ var Core = Core || {};
 				if (step) return step.apply(e, arguments);
 			};
 			$({deg: deg}).animate({deg: angle}, args);
+		});
+	};
+
+	$.fn.cleanup = function() {
+		return this.each(function(i, e) {
+			Common.cleanup(e);
 		});
 	};
 

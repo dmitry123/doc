@@ -12,7 +12,7 @@ class m150520_032543_doc_macro_columns extends Migration
 		CREATE TABLE "doc"."macro_column" (
 			"id" SERIAL PRIMARY KEY,
 			"column" VARCHAR(50) NOT NULL,
-			"macro_id" INT REFERENCES "doc"."macro"("id")
+			"macro_id" INT REFERENCES "doc"."macro"("id") ON DELETE CASCADE
 		);
 
 		ALTER TABLE "doc"."macro" ADD "table" VARCHAR(100) DEFAULT NULL;

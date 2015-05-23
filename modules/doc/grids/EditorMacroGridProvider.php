@@ -4,6 +4,7 @@ namespace app\modules\doc\grids;
 
 use app\core\GridProvider;
 use app\models\doc\Macro;
+use app\widgets\ControlMenu;
 
 class EditorMacroGridProvider extends GridProvider {
 
@@ -35,13 +36,14 @@ class EditorMacroGridProvider extends GridProvider {
         "controls" => [
             "macro-edit-button" => [
                 "label" => "Изменить",
-                "icon" => "fa fa-edit",
+                "icon" => "fa fa-pencil",
             ],
             "macro-delete-button" => [
                 "label" => "Удалить",
-                "icon" => "fa fa-trash"
+                "icon" => "fa fa-trash font-danger"
             ]
-        ]
+        ],
+		"mode" => ControlMenu::MODE_MENU
     ];
 
     public function getQuery() {
