@@ -2,46 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c7867d1-dabe-479e-927f-a32ef258089e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/doc/forms/MacroChooseForm.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/doc/widgets/MacroChooser.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/doc/widgets/views/MacroChooser.php" />
-      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\22ac1108\yii.activeForm.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\22ac1108\yii.captcha.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\22ac1108\yii.gridView.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\22ac1108\yii.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\22ac1108\yii.validation.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\3a378fa5\css\bootstrap-theme.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\3a378fa5\css\bootstrap-theme.css.map" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\3a378fa5\css\bootstrap-theme.min.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\3a378fa5\css\bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\3a378fa5\css\bootstrap.css.map" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\3a378fa5\css\bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\3a378fa5\fonts\glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\3a378fa5\fonts\glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\3a378fa5\fonts\glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\3a378fa5\fonts\glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\3a378fa5\fonts\glyphicons-halflings-regular.woff2" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\3a378fa5\js\bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\3a378fa5\js\bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\3a378fa5\js\npm.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\8d6f3813\jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\8d6f3813\jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\web\assets\8d6f3813\jquery.min.map" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2-bootstrap/BootstrapAsset.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2-bootstrap/BootstrapAsset.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/ConfigManager.php" afterPath="$PROJECT_DIR$/core/ConfigManager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/CoreAsset.php" afterPath="$PROJECT_DIR$/assets/CoreAsset.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/widgets/EditorFileMenu.php" afterPath="$PROJECT_DIR$/modules/doc/widgets/EditorFileMenu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/grids/EditorMacroGridProvider.php" afterPath="$PROJECT_DIR$/modules/doc/grids/EditorMacroGridProvider.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/grids/File_TemplateManager_GridProvider.php" afterPath="$PROJECT_DIR$/modules/doc/grids/File_TemplateManager_GridProvider.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/validators/MixedValidator.php" afterPath="$PROJECT_DIR$/validators/MixedValidator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/Controller.php" afterPath="$PROJECT_DIR$/core/Controller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/FormModel.php" afterPath="$PROJECT_DIR$/core/FormModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/forms/MacroChooseForm.php" afterPath="$PROJECT_DIR$/modules/doc/forms/MacroChooseForm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/widgets/views/MacroChooser.php" afterPath="$PROJECT_DIR$/modules/doc/widgets/views/MacroChooser.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/controllers/MacroController.php" afterPath="$PROJECT_DIR$/modules/doc/controllers/MacroController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/validators/RequiredValidator.php" afterPath="$PROJECT_DIR$/validators/RequiredValidator.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/widgets/views/TemplateBuilder.php" afterPath="$PROJECT_DIR$/modules/doc/widgets/views/TemplateBuilder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/TypeManager.php" afterPath="$PROJECT_DIR$/core/TypeManager.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/logs/app.log" afterPath="$PROJECT_DIR$/runtime/logs/app.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/bower/bootstrap/dist/css/bootstrap.css" afterPath="$PROJECT_DIR$/vendor/bower/bootstrap/dist/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/bower/bootstrap/dist/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/vendor/bower/bootstrap/dist/css/bootstrap.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/core.js" afterPath="$PROJECT_DIR$/web/js/core.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/doc.css" afterPath="$PROJECT_DIR$/web/css/doc.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/doc.js" afterPath="$PROJECT_DIR$/web/js/doc.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/site.css" afterPath="$PROJECT_DIR$/web/css/site.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/table.css" afterPath="$PROJECT_DIR$/web/css/table.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/table.js" afterPath="$PROJECT_DIR$/web/js/table.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -127,45 +100,81 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="doc.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/js/doc.js">
+      <file leaf-file-name="core.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/core.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.50060755" vertical-offset="6442" max-vertical-offset="8763">
-              <caret line="298" column="24" selection-start-line="298" selection-start-column="24" selection-end-line="298" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="4947" max-vertical-offset="12305">
+              <caret line="232" column="34" selection-start-line="232" selection-start-column="34" selection-end-line="232" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MacroForm.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/doc/forms/MacroForm.php">
+      <file leaf-file-name="ExtController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/ExtController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.125" vertical-offset="0" max-vertical-offset="1702">
-              <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-              <folding>
-                <element signature="e#41#65#0#PHP" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="-4.5" vertical-offset="822" max-vertical-offset="2967">
+              <caret line="49" column="32" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MacroChooseForm.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/doc/forms/MacroChooseForm.php">
+      <file leaf-file-name="doc.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/js/doc.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.09375" vertical-offset="0" max-vertical-offset="782">
-              <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
-              <folding>
-                <element signature="e#41#64#0#PHP" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.6131387" vertical-offset="3866" max-vertical-offset="10511">
+              <caret line="190" column="16" selection-start-line="190" selection-start-column="16" selection-end-line="190" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EditorFileMenu.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/doc/widgets/EditorFileMenu.php">
+      <file leaf-file-name="DHTML.js" pinned="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.125" vertical-offset="276" max-vertical-offset="2921">
-              <caret line="41" column="10" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="38412" max-vertical-offset="110423">
+              <caret line="1682" column="0" selection-start-line="1682" selection-start-column="0" selection-end-line="1682" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="table.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/table.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="397" max-vertical-offset="2484">
+              <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/admin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2967">
+              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="view.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/doc/views/editor/view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="253">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="doc.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/css/doc.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1543" max-vertical-offset="2852">
+              <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -174,41 +183,19 @@
       <file leaf-file-name="TemplateBuilder.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/doc/widgets/views/TemplateBuilder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.90625" vertical-offset="254" max-vertical-offset="1403">
-              <caret line="29" column="3" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+            <state vertical-scroll-proportion="-16.46875" vertical-offset="462" max-vertical-offset="1610">
+              <caret line="43" column="3" selection-start-line="43" selection-start-column="3" selection-end-line="43" selection-end-column="3" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MacroChooser.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/doc/widgets/views/MacroChooser.php">
+      <file leaf-file-name="TypeManager.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/TypeManager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.34375" vertical-offset="0" max-vertical-offset="483">
-              <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+            <state vertical-scroll-proportion="-8.625" vertical-offset="4025" max-vertical-offset="5106">
+              <caret line="187" column="21" selection-start-line="187" selection-start-column="21" selection-end-line="187" selection-end-column="21" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MacroController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/doc/controllers/MacroController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="52.1875" vertical-offset="1670" max-vertical-offset="2461">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MacroChooser.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/doc/widgets/MacroChooser.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.90625" vertical-offset="0" max-vertical-offset="460">
-              <caret line="11" column="42" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="42" />
-              <folding>
-                <element signature="e#43#63#0#PHP" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -225,8 +212,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/widgets/ActiveForm.php" />
-        <option value="$PROJECT_DIR$/core/Model.php" />
         <option value="$PROJECT_DIR$/web/index.php" />
         <option value="$PROJECT_DIR$/vendor/yiisoft/yii2/base/ArrayableTrait.php" />
         <option value="$PROJECT_DIR$/vendor/yiisoft/yii2/base/Model.php" />
@@ -239,10 +224,7 @@
         <option value="$PROJECT_DIR$/models/core/Institute.php" />
         <option value="$PROJECT_DIR$/core/RequiredProtocol.php" />
         <option value="$PROJECT_DIR$/models/doc/Macro.php" />
-        <option value="$PROJECT_DIR$/core/FormModel.php" />
         <option value="$PROJECT_DIR$/modules/doc/widgets/views/MacroMaker.php" />
-        <option value="$PROJECT_DIR$/modules/doc/controllers/MacroController.php" />
-        <option value="$PROJECT_DIR$/core/Controller.php" />
         <option value="$PROJECT_DIR$/models/doc/MacroColumn.php" />
         <option value="$PROJECT_DIR$/modules/doc/forms/MacroForm.php" />
         <option value="dbtable:/67b34dc1/4a1bea19-9630-4f7c-a585-745035fe4694/mgup.doc.macro_column" />
@@ -251,8 +233,6 @@
         <option value="$PROJECT_DIR$/migrations/m150520_032543_doc_macro_columns.php" />
         <option value="$PROJECT_DIR$/validators/TimeValidator.php" />
         <option value="$PROJECT_DIR$/core/Validator.php" />
-        <option value="$PROJECT_DIR$/core/TypeManager.php" />
-        <option value="$PROJECT_DIR$/validators/RequiredValidator.php" />
         <option value="$PROJECT_DIR$/vendor/yiisoft/yii2/validators/EmailValidator.php" />
         <option value="$PROJECT_DIR$/validators/MixedValidator.php" />
         <option value="$PROJECT_DIR$/assets/CoreAsset.php" />
@@ -269,12 +249,19 @@
         <option value="$PROJECT_DIR$/modules/doc/widgets/EditorFileMenu.php" />
         <option value="$PROJECT_DIR$/modules/doc/grids/EditorMacroGridProvider.php" />
         <option value="$PROJECT_DIR$/web/js/site.js" />
-        <option value="$PROJECT_DIR$/web/js/core.js" />
-        <option value="$PROJECT_DIR$/modules/doc/widgets/views/TemplateBuilder.php" />
         <option value="$PROJECT_DIR$/modules/doc/forms/MacroChooseForm.js" />
         <option value="$PROJECT_DIR$/modules/doc/widgets/MacroChooser.php" />
-        <option value="$PROJECT_DIR$/modules/doc/forms/MacroChooseForm.php" />
         <option value="$PROJECT_DIR$/modules/doc/widgets/views/MacroChooser.php" />
+        <option value="$PROJECT_DIR$/modules/doc/forms/MacroChooseForm.php" />
+        <option value="$PROJECT_DIR$/core/FormModel.php" />
+        <option value="$PROJECT_DIR$/validators/RequiredValidator.php" />
+        <option value="$PROJECT_DIR$/core/Controller.php" />
+        <option value="$PROJECT_DIR$/modules/doc/controllers/MacroController.php" />
+        <option value="$PROJECT_DIR$/core/TypeManager.php" />
+        <option value="$PROJECT_DIR$/modules/doc/widgets/views/TemplateBuilder.php" />
+        <option value="$PROJECT_DIR$/web/js/table.js" />
+        <option value="$PROJECT_DIR$/web/js/core.js" />
+        <option value="$PROJECT_DIR$/web/css/doc.css" />
         <option value="$PROJECT_DIR$/web/js/doc.js" />
       </list>
     </option>
@@ -284,8 +271,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 5.5" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="75" />
-    <option name="y" value="15" />
+    <option name="x" value="165" />
+    <option name="y" value="62" />
     <option name="width" value="1539" />
     <option name="height" value="995" />
   </component>
@@ -717,7 +704,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="doc.js&#9;FILE&#9;file://D:/hosts/doc/web/js/doc.js&#10;core.js&#9;FILE&#9;file://D:/hosts/doc/web/js/core.js&#10;site.js&#9;FILE&#9;file://D:/hosts/doc/web/js/site.js&#10;table.css&#9;FILE&#9;file://D:/hosts/doc/web/css/table.css&#10;view&#9;FILE&#9;file://D:/hosts/doc/modules/doc/views/file/view.php&#10;site.css&#9;FILE&#9;file://D:/hosts/doc/web/css/site.css&#10;yii\bootstrap\BootstrapAsset&#9;null&#9;null&#10;Va&#9;FILE&#9;file://D:/hosts/doc/core/Validator.php&#10;TypeMana&#9;FILE&#9;file://D:/hosts/doc/core/TypeManager.php&#10;Validator&#9;FILE&#9;file://D:/hosts/doc/core/Validator.php&#10;MixedValida&#9;FILE&#9;file://D:/hosts/doc/validators/MixedValidator.php&#10;MacroForm&#9;FILE&#9;file://D:/hosts/doc/modules/doc/forms/MacroForm.php&#10;TypeMa&#9;null&#9;null&#10;MacroMaker&#9;FILE&#9;file://D:/hosts/doc/modules/doc/widgets/views/MacroMaker.php&#10;Mixedva&#9;FILE&#9;file://D:/hosts/doc/validators/MixedValidator.php&#10;Validat&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/validators/Validator.php&#10;Req&#9;FILE&#9;file://D:/hosts/doc/validators/RequiredValidator.php&#10;CompareVal&#9;null&#9;null&#10;RequireVa&#9;FILE&#9;file://D:/hosts/doc/validators/RequiredValidator.php&#10;Mac&#9;FILE&#9;file://D:/hosts/doc/models/doc/Macro.php&#10;require&#9;FILE&#9;file://D:/hosts/doc/validators/RequiredValidator.php&#10;MacroContr&#9;FILE&#9;file://D:/hosts/doc/modules/doc/controllers/MacroController.php&#10;multi&#9;FILE&#9;file://D:/hosts/doc/web/js/multiple.js&#10;RequireVali&#9;FILE&#9;file://D:/hosts/doc/validators/RequiredValidator.php&#10;doc&#9;FILE&#9;file://D:/hosts/doc/web/js/doc.js&#10;Requi&#9;FILE&#9;file://D:/hosts/doc/validators/RequiredValidator.php&#10;StringVali&#9;null&#9;null&#10;NumberVali&#9;null&#9;null&#10;Valida&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/validators/Validator.php&#10;Confi&#9;FILE&#9;file://D:/hosts/doc/core/ConfigManager.php&#10;Required&#9;null&#9;null&#10;FileManager&#9;null&#9;null&#10;block.&#9;FILE&#9;file://D:/hosts/doc/views/layouts/block.php&#10;.module-menu-block&#9;null&#9;null&#10;site.cs&#9;FILE&#9;file://D:/hosts/doc/web/css/site.css&#10;main&#9;FILE&#9;file://D:/hosts/doc/views/layouts/main.php&#10;Panel.&#9;FILE&#9;file://D:/hosts/doc/widgets/Panel.php&#10;panel.js&#9;FILE&#9;file://D:/hosts/doc/web/js/panel.js&#10;main.php&#9;FILE&#9;file://D:/hosts/doc/views/layouts/main.php&#10;Panel&#9;null&#9;null&#10;ExtContr&#9;null&#9;null&#10;Table&#9;null&#9;null&#10;table.js&#9;FILE&#9;file://D:/hosts/doc/web/js/table.js&#10;Module&#9;null&#9;null&#10;UserContr&#9;FILE&#9;file://D:/hosts/doc/controllers/UserController.php&#10;Controller&#9;FILE&#9;file://D:/hosts/doc/core/Controller.php&#10;form.js&#9;FILE&#9;file://D:/hosts/doc/web/js/form.js&#10;block.js&#9;FILE&#9;file://D:/hosts/doc/web/js/block.js&#10;block.css&#9;FILE&#9;file://D:/hosts/doc/web/css/block.css&#10;UniqueValida&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="ExtContr&#9;null&#9;null&#10;TypeMana&#9;FILE&#9;file://D:/hosts/doc/core/TypeManager.php&#10;doc.css&#9;FILE&#9;file://D:/hosts/doc/web/css/doc.css&#10;doc.js&#9;FILE&#9;file://D:/hosts/doc/web/js/doc.js&#10;require&#9;FILE&#9;file://D:/hosts/doc/validators/RequiredValidator.php&#10;core.js&#9;FILE&#9;file://D:/hosts/doc/web/js/core.js&#10;site.js&#9;FILE&#9;file://D:/hosts/doc/web/js/site.js&#10;table.css&#9;FILE&#9;file://D:/hosts/doc/web/css/table.css&#10;view&#9;FILE&#9;file://D:/hosts/doc/modules/doc/views/file/view.php&#10;site.css&#9;FILE&#9;file://D:/hosts/doc/web/css/site.css&#10;yii\bootstrap\BootstrapAsset&#9;null&#9;null&#10;Va&#9;FILE&#9;file://D:/hosts/doc/core/Validator.php&#10;Validator&#9;FILE&#9;file://D:/hosts/doc/core/Validator.php&#10;MixedValida&#9;FILE&#9;file://D:/hosts/doc/validators/MixedValidator.php&#10;MacroForm&#9;FILE&#9;file://D:/hosts/doc/modules/doc/forms/MacroForm.php&#10;TypeMa&#9;null&#9;null&#10;MacroMaker&#9;FILE&#9;file://D:/hosts/doc/modules/doc/widgets/views/MacroMaker.php&#10;Mixedva&#9;FILE&#9;file://D:/hosts/doc/validators/MixedValidator.php&#10;Validat&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/validators/Validator.php&#10;Req&#9;FILE&#9;file://D:/hosts/doc/validators/RequiredValidator.php&#10;CompareVal&#9;null&#9;null&#10;RequireVa&#9;FILE&#9;file://D:/hosts/doc/validators/RequiredValidator.php&#10;Mac&#9;FILE&#9;file://D:/hosts/doc/models/doc/Macro.php&#10;MacroContr&#9;FILE&#9;file://D:/hosts/doc/modules/doc/controllers/MacroController.php&#10;multi&#9;FILE&#9;file://D:/hosts/doc/web/js/multiple.js&#10;RequireVali&#9;FILE&#9;file://D:/hosts/doc/validators/RequiredValidator.php&#10;doc&#9;FILE&#9;file://D:/hosts/doc/web/js/doc.js&#10;Requi&#9;FILE&#9;file://D:/hosts/doc/validators/RequiredValidator.php&#10;StringVali&#9;null&#9;null&#10;NumberVali&#9;null&#9;null&#10;Valida&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/validators/Validator.php&#10;Confi&#9;FILE&#9;file://D:/hosts/doc/core/ConfigManager.php&#10;Required&#9;null&#9;null&#10;FileManager&#9;null&#9;null&#10;block.&#9;FILE&#9;file://D:/hosts/doc/views/layouts/block.php&#10;.module-menu-block&#9;null&#9;null&#10;site.cs&#9;FILE&#9;file://D:/hosts/doc/web/css/site.css&#10;main&#9;FILE&#9;file://D:/hosts/doc/views/layouts/main.php&#10;Panel.&#9;FILE&#9;file://D:/hosts/doc/widgets/Panel.php&#10;panel.js&#9;FILE&#9;file://D:/hosts/doc/web/js/panel.js&#10;main.php&#9;FILE&#9;file://D:/hosts/doc/views/layouts/main.php&#10;Panel&#9;null&#9;null&#10;Table&#9;null&#9;null&#10;table.js&#9;FILE&#9;file://D:/hosts/doc/web/js/table.js&#10;Module&#9;null&#9;null&#10;UserContr&#9;FILE&#9;file://D:/hosts/doc/controllers/UserController.php&#10;Controller&#9;FILE&#9;file://D:/hosts/doc/core/Controller.php&#10;form.js&#9;FILE&#9;file://D:/hosts/doc/web/js/form.js&#10;block.js&#9;FILE&#9;file://D:/hosts/doc/web/js/block.js" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="FullScreen" value="false" />
     <property name="recentsLimit" value="5" />
@@ -796,12 +783,6 @@
       <created>1426978033684</created>
       <option name="number" value="Default" />
       <updated>1426978033684</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Module fixes + Modules samples">
-      <created>1427019235474</created>
-      <option name="number" value="00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1427019235474</updated>
     </task>
     <task id="LOCAL-00003" summary="Migration fix + Module buttons depends on employee role + Tiny fixes">
       <created>1427021430968</created>
@@ -1091,31 +1072,37 @@
       <option name="project" value="LOCAL" />
       <updated>1432343402949</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Context menu fixes + Macro form">
+      <created>1432355292764</created>
+      <option name="number" value="00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1432355292764</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="75" y="15" width="1539" height="995" extended-state="0" />
+    <frame x="165" y="62" width="1539" height="995" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277849" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277849" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38006952" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31828704" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3174971" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.24698795" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="2142" y="6" width="404" height="809" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2495379" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963648" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22515213" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295711" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32908458" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3267671" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3267671" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277849" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.59411013" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1140,7 +1127,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="New bootstrap theme" />
     <MESSAGE value="New models and forms + Admin modules fixes + New module menu" />
     <MESSAGE value="New modules for admin modules + Tiny fixes" />
     <MESSAGE value="Logo fixes + New control elements" />
@@ -1165,7 +1151,8 @@
     <MESSAGE value="Macro column fix + New migrations" />
     <MESSAGE value="Fixed javascript href for Firefox and IE browsers" />
     <MESSAGE value="Validation fixes + Macro form fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Validation fixes + Macro form fixes" />
+    <MESSAGE value="Context menu fixes + Macro form" />
+    <option name="LAST_COMMIT_MESSAGE" value="Context menu fixes + Macro form" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1174,115 +1161,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="dbDummy://dbtable:/67b34dc1/4a1bea19-9630-4f7c-a585-745035fe4694/mgup.doc.macro_to_file">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="138">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/migrations/m150520_032543_doc_macro_columns.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45828146" vertical-offset="0" max-vertical-offset="805">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/SPL.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2886076" vertical-offset="623" max-vertical-offset="47564">
-          <caret line="37" column="41" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/pcre.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.5625" vertical-offset="1589" max-vertical-offset="11615">
-          <caret line="81" column="9" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/Validator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11442786" vertical-offset="0" max-vertical-offset="1035">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/TypeManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2591656" vertical-offset="3130" max-vertical-offset="5037">
-          <caret line="145" column="29" selection-start-line="145" selection-start-column="29" selection-end-line="145" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/Model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1744627" vertical-offset="0" max-vertical-offset="791">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/validators/TimeValidator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="230" max-vertical-offset="437">
-          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/messages/ru/yii.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49240506" vertical-offset="1267" max-vertical-offset="2461">
-          <caret line="88" column="26" selection-start-line="88" selection-start-column="26" selection-end-line="88" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/base/Application.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3329114" vertical-offset="12732" max-vertical-offset="15157">
-          <caret line="569" column="20" selection-start-line="569" selection-start-column="20" selection-end-line="569" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/validators/Validator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.21875" vertical-offset="6200" max-vertical-offset="8418">
-          <caret line="287" column="23" selection-start-line="287" selection-start-column="23" selection-end-line="287" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/validators/EmailValidator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3754741" vertical-offset="1175" max-vertical-offset="2668">
-          <caret line="71" column="5" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/validators/RequiredValidator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44879898" vertical-offset="243" max-vertical-offset="1403">
-          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
-          <folding>
-            <element signature="e#34#53#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/67b34dc1/4a1bea19-9630-4f7c-a585-745035fe4694/mgup.doc.macro_column">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1292,19 +1170,6 @@
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="138">
           <caret line="0" column="2" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/67b34dc1/4a1bea19-9630-4f7c-a585-745035fe4694/mgup.doc.macro">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="138">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1383,14 +1248,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/FormModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43362832" vertical-offset="1750" max-vertical-offset="3082">
-          <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/doc/views/file/view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.51492536" vertical-offset="0" max-vertical-offset="920">
@@ -1441,34 +1298,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/lib.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="60998" max-vertical-offset="326531">
-          <caret line="2686" column="7" selection-start-line="2686" selection-start-column="7" selection-end-line="2686" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27703524" vertical-offset="25900" max-vertical-offset="110423">
-          <caret line="1136" column="14" selection-start-line="1136" selection-start-column="14" selection-end-line="1136" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/E4X.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3325359" vertical-offset="4092" max-vertical-offset="7268">
           <caret line="190" column="14" selection-start-line="190" selection-start-column="14" selection-end-line="190" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/core.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="9458" max-vertical-offset="11684">
-          <caret line="427" column="12" selection-start-line="427" selection-start-column="12" selection-end-line="427" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -1507,29 +1340,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/doc/widgets/EditorFileMenu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.125" vertical-offset="276" max-vertical-offset="2921">
-          <caret line="41" column="10" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/js/context.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4690158" vertical-offset="649" max-vertical-offset="2369">
           <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/doc/forms/MacroForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.125" vertical-offset="0" max-vertical-offset="1702">
-          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-          <folding>
-            <element signature="e#41#65#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1553,22 +1368,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/doc/controllers/MacroController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="52.1875" vertical-offset="1670" max-vertical-offset="2461">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/doc/widgets/views/TemplateBuilder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.90625" vertical-offset="254" max-vertical-offset="1403">
-          <caret line="29" column="3" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/widgets/ActiveField.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4045512" vertical-offset="577" max-vertical-offset="18653">
@@ -1585,28 +1384,213 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/validators/RequiredValidator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.06835443" vertical-offset="590" max-vertical-offset="1403">
+          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+          <folding>
+            <element signature="e#34#53#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/FormModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13797468" vertical-offset="2444" max-vertical-offset="3266">
+          <caret line="111" column="9" selection-start-line="111" selection-start-column="9" selection-end-line="111" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/doc/forms/MacroForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.125" vertical-offset="0" max-vertical-offset="1702">
+          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+          <folding>
+            <element signature="e#41#65#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/doc/widgets/EditorFileMenu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.125" vertical-offset="276" max-vertical-offset="2921">
+          <caret line="41" column="10" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/modules/doc/forms/MacroChooseForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.09375" vertical-offset="0" max-vertical-offset="782">
-          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+        <state vertical-scroll-proportion="-5.03125" vertical-offset="0" max-vertical-offset="782">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
           <folding>
             <element signature="e#41#64#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/http.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.875" vertical-offset="0" max-vertical-offset="74244">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/web/HttpException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.21875" vertical-offset="657" max-vertical-offset="1472">
+          <caret line="44" column="20" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.65625" vertical-offset="5487" max-vertical-offset="8303">
+          <caret line="256" column="41" selection-start-line="256" selection-start-column="41" selection-end-line="256" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/helpers/BaseHtml.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.21875" vertical-offset="31891" max-vertical-offset="45057">
+          <caret line="1407" column="27" selection-start-line="1407" selection-start-column="27" selection-end-line="1407" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/doc/views/editor/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="835">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1194" max-vertical-offset="21574">
+          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/TypeManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.625" vertical-offset="4025" max-vertical-offset="5106">
+          <caret line="187" column="21" selection-start-line="187" selection-start-column="21" selection-end-line="187" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/ActiveField.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6562889" vertical-offset="876" max-vertical-offset="1679">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/doc/controllers/MacroController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5050633" vertical-offset="2292" max-vertical-offset="3082">
+          <caret line="130" column="97" selection-start-line="130" selection-start-column="97" selection-end-line="130" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/modules/doc/widgets/views/MacroChooser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.34375" vertical-offset="0" max-vertical-offset="483">
-          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.48692402" vertical-offset="0" max-vertical-offset="803">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/doc/widgets/views/TemplateBuilder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.46875" vertical-offset="462" max-vertical-offset="1610">
+          <caret line="43" column="3" selection-start-line="43" selection-start-column="3" selection-end-line="43" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/lib.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="9041" max-vertical-offset="326531">
+          <caret line="418" column="4" selection-start-line="418" selection-start-column="4" selection-end-line="418" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/67b34dc1/4a1bea19-9630-4f7c-a585-745035fe4694/mgup.doc.macro">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="138">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2967">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/table.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="397" max-vertical-offset="2484">
+          <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/ExtController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.5" vertical-offset="822" max-vertical-offset="2967">
+          <caret line="49" column="32" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/core.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4947" max-vertical-offset="12305">
+          <caret line="232" column="34" selection-start-line="232" selection-start-column="34" selection-end-line="232" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="38412" max-vertical-offset="110423">
+          <caret line="1682" column="0" selection-start-line="1682" selection-start-column="0" selection-end-line="1682" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/doc.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1543" max-vertical-offset="2852">
+          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/doc.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50060755" vertical-offset="6442" max-vertical-offset="8763">
-          <caret line="298" column="24" selection-start-line="298" selection-start-column="24" selection-end-line="298" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.6131387" vertical-offset="3866" max-vertical-offset="10511">
+          <caret line="190" column="16" selection-start-line="190" selection-start-column="16" selection-end-line="190" selection-end-column="16" />
           <folding />
         </state>
       </provider>

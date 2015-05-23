@@ -225,12 +225,39 @@ var Core = Core || {};
 		}), success);
 	};
 
-	Core.loadTable = function(widget, provider, config, success) {
-		return Core.sendQuery("ext/table", {
-			widget: widget,
-			provider: provider,
-			config: config
-		}, success);
+	Core.loadTable = function(widget, provider, config, success, cache) {
+		if (cache === void 0) {
+			cache = true;
+		}
+		return $.ajax({
+			url: url("ext/table"),
+			data: {
+				widget: widget,
+				provider: provider,
+				config: config
+			},
+			dataType: "json",
+			cache: cache
+		}).done(function(response) {
+			if (!response["status"]) {
+				if (response["error"] !== "form") {
+					return Core.createMessage({
+						message: response["message"]
+					});
+				}
+			} else if (response["message"]) {
+				Core.createMessage({
+					message: response["message"],
+					type: "success",
+					sign: "ok"
+				});
+			}
+			success && success(response);
+		}).fail(function() {
+			return Core.createMessage({
+				message: "Произошла ошибка при обработке запроса. Обратитесь к администратору"
+			});
+		});
 	};
 
 	Core.loadExt = function(module, ext, params, success) {

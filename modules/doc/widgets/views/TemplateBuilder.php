@@ -30,7 +30,16 @@ print \app\widgets\Modal::widget([
 ]);
 print \app\widgets\Modal::widget([
     "title" => "Поиск макроса",
-	"body" => \app\modules\doc\widgets\MacroChooser::widget([]),
+	"body" => \app\widgets\Grid::widget([
+		"provider" => new \app\modules\doc\grids\EditorMacroGridProvider()
+	]),
+	"buttons" => [
+		"builder-apply-macro-button" => [
+			"text" => "Выбрать",
+			"class" => "btn btn-primary",
+			"type" => "button"
+		]
+	],
     "id" => "builder-find-macro-modal",
 ]);
 print \app\widgets\Modal::widget([

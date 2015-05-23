@@ -76,6 +76,7 @@
 
 .doc-template-content-editor p:not(hr) {
     padding: 1px;
+    line-height: 140% !important;
 }
 
 .doc-template-content-editor hr {
@@ -92,4 +93,27 @@
 
 .editor-template-builder-wrapper .panel-body {
     padding: 5px;
+}
+
+.builder-item-wrapper {
+    border: 1px solid #f5f5f5;
+    background-color: #008bb9;
+    border-radius: 4px;
+    padding: 2px 5px;
+    color: #f5f5f5;
+}
+
+.builder-item-control {
+    padding-left: 5px;
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+.builder-item-control:hover {
+    color: darkred;
+}
+
+#builder-find-macro-modal tbody > tr:hover {
+    background-color: #00aade !important;
+    cursor: pointer;
 }

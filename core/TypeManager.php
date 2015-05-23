@@ -82,7 +82,10 @@ class TypeManager {
         ],
         'SYSTEM_CURRENT_TIME' => [
             'label' => 'Текущее время'
-        ]
+        ],
+		'SYSTEM_CURRENT_YEAR' => [
+			'label' => 'Текущий год'
+		]
     ];
 
 	private $_groups = [

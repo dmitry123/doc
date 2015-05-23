@@ -125,40 +125,97 @@ var Doc_TemplateContentEditor_Widget = {
 		var me = this;
         $(".doc-template-content-editor").menu({
             menu: {
-                "editor-insert-macros": {
-                    "label": "Заменить на макрос",
-                    "icon": "fa fa-bookmark",
-					"items": [
-
-					]
-                }
+                "editor-insert-macro": {
+                    "label": "Макрос",
+                    "icon": "fa fa-tag"
+                },
+				"editor-insert-system": {
+					"label": "Системный компонент",
+					"icon": "fa fa-cog"
+				}
             },
             click: function(c) {
 				me.click(c);
             }
         });
+		$(".builder-apply-macro-button").click(function() {
+			var form = $(this).parents(".modal").modal("hide").find("form"),
+				macro = form.find("[name='MacroChooseForm[macro]']");
+			me.insertMacro(me.last.node, me.last.text, macro.val(),
+				macro.children("option[value='"+ macro.val() +"']").text()
+			);
+		});
+		$(document).on("click", ".builder-item-control", function() {
+			me.deleteMacro($(this).parent());
+		});
+		$("#builder-find-macro-modal").on("click", "tbody > tr", function() {
+			me.insertMacro(me.last.node, me.last.text, $(this).attr("data-id"),
+				$(this).children("td:eq(1)").text()
+			);
+			$(this).parents(".modal").modal("hide");
+		}).on("shown.bs.modal", function() {
+			$(this).find("table").table("update");
+		});
     },
 	click: function(c) {
-		if (c == "editor-insert-macros") {
-			$("#builder-find-macro-modal").modal("show");
+		if (c == "editor-insert-macro") {
+			this.insertSelectedMacro();
 		}
 	},
-	insertMacroSelected: function() {
+	insertSelectedMacro: function() {
 		var selection = window.getSelection(),
 			node = $(selection.focusNode.parentNode);
-		if (selection.length > 0) {
-			node.text(node.text().replace(selection, ""));
-		}
-		this.insertMacro(node, selection.toString());
+		this.last = {
+			node: node,
+			text: selection.toString().trim(),
+			offset: selection.anchorOffset
+		};
+		$("#builder-find-macro-modal").modal("show");
 	},
-	insertMacro: function(node, text) {
+	insertMacro: function(node, text, val, name) {
 		if (!node instanceof jQuery) {
 			node = $(node);
 		}
-		node.replaceWith(node[0].outerHTML.replace(text, $("<span></span>", {
-			text: "SYSTEM_CURRENT_YEAR"
-		})[0].outerHTML));
-		this.inserted[node.path()] = text;
+		var path = node.path(),
+			macro = this.renderItem(name, val, path, text);
+			//nt = node.text(),
+			//left = nt.substr(0, this.last.offset),
+			//right = nt.substr(this.last.offset + text.length);
+		//node.html(left + macro[0].outerHTML + right);
+		/* # fix for <font> tag */
+		$("#builder-find-macro-modal").hide();
+		if (node.is("font")) {
+			var bak = node[0].innerHTML;
+			node.html($("<span></span>", {
+				html: bak
+			}));
+			node = node.children("span");
+		}
+		var t = node[0].outerHTML;
+		text = text.replace(/[\s ]+/, " ");
+		t = t.replace(/[\s ]+/, " ");
+		t = t.replace(text, macro[0].outerHTML);;
+		node.replaceWith(t);
+		this.inserted[path] = text;
+	},
+	renderItem: function(name, value, path, previous) {
+		return $("<b></b>", {
+			"class": "builder-item-wrapper",
+			"data-value": value,
+			"data-previous": previous,
+			"data-path": path,
+			"text": name
+		}).append($("<i></i>", {
+			"class": "builder-item-control fa fa-remove"
+		}));
+	},
+	deleteMacro: function(element) {
+		delete this.inserted[$(element).attr("data-path")];
+		$(element).replaceWith($(element).attr("data-previous"));
+	},
+	last: {
+		node: null,
+		text: null
 	},
 	inserted: {}
 };
@@ -178,7 +235,7 @@ const DOC_MCF_VELOCITY = 300;
 var Doc_Macro_Form = {
     ready: function() {
         var me = this;
-        $(".doc-macro-create-form").on("change", function() {
+        $(".doc-macro-create-form").on("change", "[name='MacroForm[columns][]']", function() {
             me.change($(this), $(this).val());
         });
         $("[name='MacroForm[type]'], [name='MacroChooseForm[type]']").change(function() {
@@ -197,6 +254,7 @@ var Doc_Macro_Form = {
                 form = $(this).parents("form:eq(0)"),
                 it = $(this);
             me.form = form;
+			me.hash = val;
             if (val == 0) {
                 form.find("select[name='MacroForm[columns][]']").val("");
                 form.find(".macro-multiple-container")
@@ -228,7 +286,6 @@ var Doc_Macro_Form = {
             }).always(function() {
                 it.loading("reset");
             });
-            me.hash = val;
         });
 		$(".modal .builder-save-macro-button").click(function() {
 			var modal = $(this).parents(".modal");
@@ -291,14 +348,14 @@ var Doc_Macro_Form = {
         });
         this.queue.push(ajax);
     },
-	slide: function(form, name, show) {
+	slide: function(form, name, show, callback) {
 		var g = form.find("[name='"+ name +"']").parent(".form-group");
-		if (show === void 0 || show) {
-			g.slideDown();
+		if (show) {
+			return g.slideDown(DOC_MCF_VELOCITY, callback);
 		} else {
-			g.slideUp();
-		}}
-	,
+			return g.slideUp(DOC_MCF_VELOCITY, callback);
+		}
+	},
     form: null,
     hash: null,
     queue: []
@@ -308,10 +365,29 @@ var Doc_MacroChoose_Form = {
 	ready: function() {
 		$("[name='MacroChooseForm[type]']").change(function() {
 			var val = $(this).val(),
-				form = $(this).parents("form:eq(0)");
-			if (!val) {
-				Doc_Macro_Form.slide(form, "MacroChooseForm[macro]");
+				form = $(this).parents("form:eq(0)"),
+				it = $(this);
+			if (val == 0) {
+				return Doc_Macro_Form.slide(form, "MacroChooseForm[macro]", false);
 			}
+			it.loading({ image: false }).loading("render");
+			$.get(url("doc/macro/list"), form.serialize(), function(response) {
+				if (!response["status"]) {
+					Doc_Macro_Form.slide(form, "MacroChooseForm[macro]", false);
+					return Core.createMessage({
+						message: response["status"]
+					});
+				} else {
+					form.find("[name='MacroChooseForm[macro]']").replaceWith(
+						response["component"]
+					);
+				}
+				Doc_Macro_Form.slide(form, "MacroChooseForm[macro]", true);
+			}, "json").always(function() {
+				it.loading("reset");
+			}).fail(function() {
+				Doc_Macro_Form.slide(form, "MacroChooseForm[macro]", false);
+			});
 		});
 	}
 };

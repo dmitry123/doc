@@ -3,7 +3,6 @@
 namespace app\modules\doc\forms;
 
 use app\core\FormModel;
-use app\models\doc\Macro;
 use yii\helpers\ArrayHelper;
 
 class MacroChooseForm extends FormModel {
@@ -19,11 +18,12 @@ class MacroChooseForm extends FormModel {
 
 	public function attributeLabels() {
 		return parent::attributeLabels() + [
+			"type" => "Тип",
 			"macro" => "Макрос"
 		];
 	}
 
 	public function createActiveRecord() {
-		return new Macro();
+		return null;
 	}
 }

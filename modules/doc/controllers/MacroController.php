@@ -7,11 +7,15 @@ use app\core\ActiveRecord;
 use app\core\Controller;
 use app\core\Fetcher;
 use app\core\PostgreSQL;
+use app\core\TypeManager;
 use app\models\doc\Macro;
+use app\modules\doc\forms\MacroChooseForm;
 use app\modules\doc\forms\MacroForm;
 use yii\base\Exception;
+use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\helpers\Inflector;
+use yii\web\HttpException;
 
 class MacroController extends Controller {
 
@@ -104,6 +108,33 @@ class MacroController extends Controller {
 					"message" => "Макрос успешно создан"
 				]);
 			}
+		} catch (\Exception $e) {
+			$this->exception($e);
+		}
+	}
+
+	public function actionList() {
+		try {
+			$form = new MacroChooseForm();
+			if (!$form->load(\Yii::$app->request->queryParams)) {
+				throw new Exception("Can't load [MacroChooseForm] client model");
+			} else if (!$form->validate()) {
+				$this->postErrors($form);
+			}
+			if ($form->type != "system") {
+				$component = Html::activeDropDownList($form, "macro", [ 0 => "Нет" ] +
+					ArrayHelper::map(Macro::findAll([ "type" => $form->type ]), "id", "name"), [
+						"class" => "form-control"
+					]
+				);
+			} else {
+				$component = Html::activeDropDownList($form, "macro", TypeManager::getManager()->listSystem(), [
+					"class" => "form-control"
+				]);
+			}
+			$this->leave([
+				"component" => $component
+			]);
 		} catch (\Exception $e) {
 			$this->exception($e);
 		}

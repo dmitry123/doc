@@ -43,7 +43,7 @@ abstract class FormModel extends Model {
 
 	public function init() {
 		$config = $this->configure();
-		if (!empty($config)) {
+		if (!empty($config) && $this->getActiveRecord() != null) {
 			$this->getActiveRecord()->getManager()->mergeWith(
 				ConfigManager::createManager($config)
 			);
@@ -87,7 +87,11 @@ abstract class FormModel extends Model {
 	 * @return array with database model rules
 	 */
 	public function rules() {
-		return $this->getActiveRecord()->getManager()->finalize();
+		if ($this->getActiveRecord() != null) {
+			return $this->getActiveRecord()->getManager()->finalize();
+		} else {
+			return [];
+		}
 	}
 
 	/**
@@ -122,7 +126,11 @@ abstract class FormModel extends Model {
 	 * @return Array - Array with labels associated with fields names
 	 */
 	public function attributeLabels() {
-		return $this->getActiveRecord()->attributeLabels();
+		if ($this->getActiveRecord() != null) {
+			return $this->getActiveRecord()->attributeLabels();
+		} else {
+			return [];
+		}
 	}
 
 	private $_model = null;

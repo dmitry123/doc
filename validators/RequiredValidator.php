@@ -36,7 +36,7 @@ class RequiredValidator extends \yii\validators\RequiredValidator {
 
 	public function validateAttribute($model, $attribute) {
 		parent::validateAttribute($model, $attribute);
-		if ($model instanceof FormModel) {
+		if ($model instanceof FormModel && $model->getActiveRecord() != null) {
 			$type = $model->getActiveRecord()->getManager()->getType($attribute);
 		} else {
 			$type = null;

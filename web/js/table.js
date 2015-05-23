@@ -33,7 +33,7 @@ var Core = Core || {};
 			});
 		}).fail(function() {
 			me.after();
-		});
+		}, false);
 	};
 
 	Table.prototype.configure = function(attribute, properties, strong) {
