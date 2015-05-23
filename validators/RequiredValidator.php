@@ -6,6 +6,7 @@ use app\core\Model;
 use app\core\TypeManager;
 use Yii;
 use app\core\FormModel;
+use yii\base\Exception;
 
 class RequiredValidator extends \yii\validators\RequiredValidator {
 
@@ -40,8 +41,12 @@ class RequiredValidator extends \yii\validators\RequiredValidator {
 		} else {
 			$type = null;
 		}
-		if ($type != null && !$this->validateValueEx($type, $model->$attribute, $model)) {
-			$this->error($model, $attribute);
+		if ($type != null && ($b = $this->validateValueEx($type, $model->$attribute, $model)) !== true) {
+			if (is_string($b)) {
+				$this->addError($model, $attribute, $b);
+			} else if (!$b) {
+				$this->error($model, $attribute);
+			}
 		}
 	}
 
