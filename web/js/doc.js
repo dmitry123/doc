@@ -122,26 +122,45 @@ var Doc_File_Table = {
 
 var Doc_TemplateContentEditor_Widget = {
     ready: function() {
+		var me = this;
         $(".doc-template-content-editor").menu({
             menu: {
-                "editor-insert-element": {
-                    "label": "Вставить элемент",
-                    "icon": "fa fa-tags"
-                },
                 "editor-insert-macros": {
-                    "label": "Вставить макрос",
-                    "icon": "fa fa-bookmark"
-                },
-                "editor-insert-reference": {
-                    "label": "Вставить ссылку",
-                    "icon": "fa fa-link"
+                    "label": "Заменить на макрос",
+                    "icon": "fa fa-bookmark",
+					"items": [
+
+					]
                 }
             },
             click: function(c) {
-                console.log(c);
+				me.click(c);
             }
         });
-    }
+    },
+	click: function(c) {
+		if (c == "editor-insert-macros") {
+			$("#builder-find-macro-modal").modal("show");
+		}
+	},
+	insertMacroSelected: function() {
+		var selection = window.getSelection(),
+			node = $(selection.focusNode.parentNode);
+		if (selection.length > 0) {
+			node.text(node.text().replace(selection, ""));
+		}
+		this.insertMacro(node, selection.toString());
+	},
+	insertMacro: function(node, text) {
+		if (!node instanceof jQuery) {
+			node = $(node);
+		}
+		node.replaceWith(node[0].outerHTML.replace(text, $("<span></span>", {
+			text: "SYSTEM_CURRENT_YEAR"
+		})[0].outerHTML));
+		this.inserted[node.path()] = text;
+	},
+	inserted: {}
 };
 
 var Doc_TemplateManager_Viewer = {
@@ -156,13 +175,13 @@ var Doc_TemplateManager_Viewer = {
 
 const DOC_MCF_VELOCITY = 300;
 
-var Doc_MacroForm = {
+var Doc_Macro_Form = {
     ready: function() {
         var me = this;
-        $(".doc-macro-create-form").on("change", "select[name='MacroForm[columns][]']", function() {
+        $(".doc-macro-create-form").on("change", function() {
             me.change($(this), $(this).val());
         });
-        $("[name='MacroForm[type]']").change(function() {
+        $("[name='MacroForm[type]'], [name='MacroChooseForm[type]']").change(function() {
             var val = $(this).val(),
                 form = $(this).parents("form:eq(0)");
             me.form = form;
@@ -272,9 +291,29 @@ var Doc_MacroForm = {
         });
         this.queue.push(ajax);
     },
+	slide: function(form, name, show) {
+		var g = form.find("[name='"+ name +"']").parent(".form-group");
+		if (show === void 0 || show) {
+			g.slideDown();
+		} else {
+			g.slideUp();
+		}}
+	,
     form: null,
     hash: null,
     queue: []
+};
+
+var Doc_MacroChoose_Form = {
+	ready: function() {
+		$("[name='MacroChooseForm[type]']").change(function() {
+			var val = $(this).val(),
+				form = $(this).parents("form:eq(0)");
+			if (!val) {
+				Doc_Macro_Form.slide(form, "MacroChooseForm[macro]");
+			}
+		});
+	}
 };
 
 $(document).ready(function() {
@@ -313,7 +352,8 @@ $(document).ready(function() {
 	Doc_File_Table.ready();
     Doc_TemplateContentEditor_Widget.ready();
     Doc_TemplateManager_Viewer.ready();
-    Doc_MacroForm.ready();
+    Doc_Macro_Form.ready();
+	Doc_MacroChoose_Form.ready();
 
     $("input[type='file'][data-toggle='fileinput']").fileinput({
         uploadUrl: url("doc/file/upload"),

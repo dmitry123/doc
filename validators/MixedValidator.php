@@ -20,6 +20,8 @@ class MixedValidator extends RequiredValidator {
 	public static function validateValueEx($type, $value, $model = null) {
 		if (!in_array($type, [ 'mixed' ]) || !is_array($value)) {
 			return false;
+		} else {
+			$value = $value[$model->{'type'}];
 		}
 		if (!isset($model->{'type'}) || empty($model->{'type'})) {
 			throw new \InvalidArgumentException('MixedValidator requires form model\'s not empty [type] field');
@@ -28,9 +30,8 @@ class MixedValidator extends RequiredValidator {
 			$model->{'type'}, $model, $model->attributes
 		);
 		if ($validator != null && ($r = $validator->validate($value, $error)) != true) {
-			print (int)$r;
 			return $error;
 		}
-		return parent::validateValueEx($model->{'type'}, $value[$model->{'type'}]);
+		return parent::validateValueEx($model->{'type'}, $value);
 	}
 }

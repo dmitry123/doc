@@ -45,20 +45,20 @@ class ConfigManager {
 			return $this->_config;
 		}
 		foreach ($config as $key => &$column) {
-			if (!isset($column["label"]) || !isset($column["type"])) {
-				throw new Exception("ActiveRecord column's configuration for \"$key\" requires [label] and [type] fields");
+			if (!isset($column['label']) || !isset($column['type'])) {
+				throw new Exception('ActiveRecord column\'s configuration for \'$key\' requires [label] and [type] fields');
 			} else {
-				if (isset($column["attributes"])) {
-					$this->attrs[$key] = $column["attributes"];
+				if (isset($column['attributes'])) {
+					$this->attrs[$key] = $column['attributes'];
 				}
-				$this->labels[$key] = $column["label"];
-				$this->types[$key] = $column["type"];
+				$this->labels[$key] = $column['label'];
+				$this->types[$key] = $column['type'];
 			}
-			if (isset($column["rules"])) {
-				$this->buildRule($key, $column["rules"]);
+			if (isset($column['rules'])) {
+				$this->buildRule($key, $column['rules']);
 			}
-			if (isset($column["table"])) {
-				$this->tables[$key] = $this->buildTable($column["table"]);
+			if (isset($column['table'])) {
+				$this->tables[$key] = $this->buildTable($column['table']);
 			}
 		}
 		return $this->_config = $config;
@@ -68,13 +68,13 @@ class ConfigManager {
 		if ($this->_cached != null) {
 			return $this->_cached;
 		} else if (!$this->_config) {
-			throw new Exception("Invoke [build] method first before finalizing");
+			throw new Exception('Invoke [build] method first before finalizing');
 		}
 		$result = [];
 		foreach ($this->rules as $rule => $rules) {
 			if (is_string($rules)) {
 				array_push($result, [
-					implode(", ", $rules), $rule
+					implode(',', $rules), $rule
 				]);
 			} else {
 				array_push($result, [
@@ -121,9 +121,9 @@ class ConfigManager {
 
 	protected function buildRule($key, $rules) {
 		if (!is_string($rules)) {
-			throw new Exception("Rule must be string value, use [rules] method for class Yii rules");
+			throw new Exception('Rule must be string value, use [rules] method for class Yii rules');
 		}
-		foreach (explode(",", $rules) as $i => $rule) {
+		foreach (explode(',', $rules) as $i => $rule) {
 			$rule = trim($rule);
 			$this->replaceRules($rule);
 			if (!isset($this->rules[$rule])) {
@@ -149,10 +149,10 @@ class ConfigManager {
 				$rule = str_replace($old, $new, $rule);
 			}
 			$result = [];
-			foreach (explode(",", $rule) as $r) {
+			foreach (explode(',', $rule) as $r) {
 				$result[] = trim($r);
 			}
-			$rule = implode(",", $result);
+			$rule = implode(',', $result);
 		} else if (is_array($rule)) {
 			foreach ($rule as &$r) {
 				$this->replaceRules($r);

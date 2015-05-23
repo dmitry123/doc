@@ -33,11 +33,6 @@ class EditorFileMenu extends Widget {
 					"icon" => "fa fa-plus",
 					"onclick" => "$('#builder-create-element-modal').modal('show')",
 				],
-				"builder-element-find-button" => [
-					"label" => "Найти",
-					"icon" => "fa fa-search",
-					"onclick" => "$('#builder-find-element-modal').modal('show')",
-				],
 				"builder-element-edit-button" => [
 					"label" => "Просмотреть",
 					"icon" => "fa fa-pencil",
@@ -53,11 +48,6 @@ class EditorFileMenu extends Widget {
 					"label" => "Создать",
 					"icon" => "fa fa-plus",
 					"onclick" => "$('#builder-create-macro-modal').modal('show')",
-				],
-				"builder-macros-find-button" => [
-					"label" => "Найти",
-					"icon" => "fa fa-search",
-					"onclick" => "$('#builder-find-macro-modal').modal('show')",
 				],
 				"builder-macros-edit-button" => [
 					"label" => "Просмотреть",

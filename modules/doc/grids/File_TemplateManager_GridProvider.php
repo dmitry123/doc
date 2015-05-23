@@ -29,7 +29,8 @@ class File_TemplateManager_GridProvider extends GridProvider {
             ],
             "template-edit-icon" => [
                 "label" => "Редактировать",
-                "icon" => "fa fa-edit"
+                "icon" => "fa fa-edit",
+				"href" => "#"
             ],
             "template-remove-icon" => [
                 "label" => "Удалить",

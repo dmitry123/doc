@@ -30,7 +30,8 @@ print \app\widgets\Modal::widget([
 ]);
 print \app\widgets\Modal::widget([
     "title" => "Поиск макроса",
-    "id" => "builder-find-macro-modal"
+	"body" => \app\modules\doc\widgets\MacroChooser::widget([]),
+    "id" => "builder-find-macro-modal",
 ]);
 print \app\widgets\Modal::widget([
     "title" => "Просмотр списка макросов",

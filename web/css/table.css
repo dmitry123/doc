@@ -1,5 +1,5 @@
 
-.table {
+.table-wrapped {
     border: 1px solid #d3d3d3;
 }
 
@@ -37,8 +37,4 @@
 
 .table-footer > tr > td > div {
     padding: 0;
-}
-
-.table-footer > tr > td > div > * {
-
 }

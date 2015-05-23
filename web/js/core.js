@@ -397,6 +397,16 @@ var Core = Core || {};
 		return url.replace(/&$/, "");
     };
 
+	window.selected = function() {
+		var text = "";
+		if (window.getSelection) {
+			text = window.getSelection().toString();
+		} else if (document.selection && document.selection.type != "Control") {
+			text = document.selection.createRange().text;
+		}
+		return text;
+	};
+
 	window.serialize = function(obj, prefix) {
 		var str = [];
 		for(var p in obj) {
@@ -408,6 +418,30 @@ var Core = Core || {};
 			}
 		}
 		return str.join("&");
+	};
+
+	jQuery.fn.path = function () {
+		if (this.length != 1) {
+			throw new Error("Requires one element");
+		}
+		var path = null,
+			node = this;
+		while (node.length) {
+			var realNode = node[0],
+				name = realNode.localName;
+			if (!name) {
+				break;
+			}
+			name = name.toLowerCase();
+			var parent = node.parent();
+			var siblings = parent.children(name);
+			if (siblings.length > 1) {
+				name += ':eq(' + siblings.index(realNode) + ')';
+			}
+			path = name + (path ? '>' + path : '');
+			node = parent;
+		}
+		return path;
 	};
 
 	$.fn.rotate = function(angle, duration, easing, deg, complete) {

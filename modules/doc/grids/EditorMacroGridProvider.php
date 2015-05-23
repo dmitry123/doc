@@ -40,7 +40,8 @@ class EditorMacroGridProvider extends GridProvider {
             ],
             "macro-delete-button" => [
                 "label" => "Удалить",
-                "icon" => "fa fa-trash font-danger"
+                "icon" => "fa fa-trash font-danger",
+				"onclick" => "confirmDelete()"
             ]
         ],
 		"mode" => ControlMenu::MODE_MENU
