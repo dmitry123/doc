@@ -16,6 +16,8 @@ class MacroForm extends FormModel {
     public $table;
     public $columns;
     public $value;
+	public $is_static;
+	public $file_id;
 
 	public function rules() {
 		return ArrayHelper::merge(parent::rules(), [
@@ -24,6 +26,9 @@ class MacroForm extends FormModel {
 			} ],
 			[ "columns", "required", "when" => function($model) {
 				return is_scalar($model->table) && (string) $model->table != "0";
+			} ],
+			[ "value", "mixed", "when" => function($model) {
+				return $model->is_static == "true";
 			} ]
 		]);
 	}

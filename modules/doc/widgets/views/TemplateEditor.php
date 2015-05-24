@@ -4,8 +4,14 @@
  * @var $content string
  * @var $self app\modules\doc\widgets\TemplateEditor
  * @var $file mixed
+ * @var $macro mixed[]
  */
-?>
-<?= \yii\helpers\Html::tag("div", $content, [
+print \yii\helpers\Html::tag("div", $content, [
 	"class" => "row clear doc-template-content-editor"
-]) ?>
+]);
+foreach ($macro as $m) {
+	$this->registerJs(<<< JS
+	Doc_TemplateEditor_Widget.insertMacro($(".doc-template-content-editor > {$m['path']}"), "{$m['content']}", "{$m['id']}", "{$m['name']}");
+JS
+	);
+}

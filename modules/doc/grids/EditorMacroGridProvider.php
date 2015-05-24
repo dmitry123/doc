@@ -8,6 +8,9 @@ use app\widgets\ControlMenu;
 
 class EditorMacroGridProvider extends GridProvider {
 
+	public $static = 1;
+	public $file = 0;
+
     public $columns = [
         "id" => [
             "label" => "#",
@@ -44,10 +47,24 @@ class EditorMacroGridProvider extends GridProvider {
 				"onclick" => "confirmDelete()"
             ]
         ],
-		"mode" => ControlMenu::MODE_MENU
+		"mode" => ControlMenu::MODE_ICON,
+		"special" => "builder-control-menu-icon"
     ];
 
+	public $menuWidth = 100;
+
     public function getQuery() {
-        return Macro::find();
+		if (empty($this->file)) {
+			$this->file = \Yii::$app->getRequest()->getQueryParam("file");
+		}
+        $query = Macro::find()->where("is_static = :static", [
+			":static" => $this->static
+		]);
+		if (!empty($this->file)) {
+			$query->andWhere("file_id = :file", [
+				":file" => $this->file
+			]);
+		}
+		return $query;
     }
 }

@@ -43,7 +43,7 @@ var Core = Core || {};
         );
     };
 
-    Form.prototype.update = function(after) {
+    Form.prototype.update = function(success) {
         var me = this;
         var form = this.selector();
         if (!this.property("url")) {
@@ -77,7 +77,7 @@ var Core = Core || {};
             );
             me.after();
             me.activate();
-            after && after(me);
+            success && success(me);
         }, "json");
     };
 
@@ -114,10 +114,8 @@ var Core = Core || {};
 					me.property("fail").call(me, json);
 				}
 				return Core.postFormErrors(me.selector(), json);
-			} else {
-				if (me.property("success")) {
-					me.property("success").call(me, json);
-				}
+			} else if (me.property("success")) {
+				me.property("success").call(me, json);
 			}
 			$("#" + me.selector().attr("id")).trigger("success", json);
 			success && success.call(this, json);

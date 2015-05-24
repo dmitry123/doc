@@ -3,6 +3,7 @@
 namespace app\modules\doc\controllers;
 
 use app\core\Controller;
+use app\core\TypeManager;
 use app\models\doc\File;
 use yii\base\Exception;
 

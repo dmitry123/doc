@@ -125,12 +125,16 @@ var Doc_TemplateEditor_Widget = {
 		var me = this;
         $(".doc-template-content-editor").menu({
             menu: {
+				"editor-insert-element": {
+					"label": "Элемент",
+					"icon": "fa fa-tags"
+				},
                 "editor-insert-macro": {
                     "label": "Макрос",
-                    "icon": "fa fa-tag"
+                    "icon": "fa fa-globe"
                 },
 				"editor-insert-system": {
-					"label": "Системный компонент",
+					"label": "Системный",
 					"icon": "fa fa-cog"
 				}
             },
@@ -148,21 +152,23 @@ var Doc_TemplateEditor_Widget = {
 		$(document).on("click", ".builder-item-control", function() {
 			me.deleteMacro($(this).parent());
 		});
-		$("#builder-find-macro-modal").on("click", "tbody > tr", function() {
+		$("#builder-find-macro-modal, #builder-find-element-modal").on("click", "tbody > tr", function() {
 			me.insertMacro(me.last.node, me.last.text, $(this).attr("data-id"),
 				$(this).children("td:eq(1)").text()
 			);
 			$(this).parents(".modal").modal("hide");
-		}).on("shown.bs.modal", function() {
-			$(this).find("table").table("update");
 		});
     },
 	click: function(c) {
 		if (c == "editor-insert-macro") {
-			this.insertSelectedMacro();
+			this.insertSelectedMacro("#builder-find-macro-modal");
+		} else if (c == "editor-insert-element") {
+			this.insertSelectedMacro("#builder-find-element-modal");
+		} else if (c == "editor-insert-system") {
+
 		}
 	},
-	insertSelectedMacro: function() {
+	insertSelectedMacro: function(modal) {
 		var selection = window.getSelection(),
 			node = $(selection.focusNode.parentNode);
 		this.last = {
@@ -170,7 +176,7 @@ var Doc_TemplateEditor_Widget = {
 			text: selection.toString().trim(),
 			offset: selection.anchorOffset
 		};
-		$("#builder-find-macro-modal").modal("show");
+		$(modal).modal("show");
 	},
 	insertMacro: function(node, text, id, name) {
 		if (!node instanceof jQuery) {
@@ -183,7 +189,6 @@ var Doc_TemplateEditor_Widget = {
 			//right = nt.substr(this.last.offset + text.length);
 		//node.html(left + macro[0].outerHTML + right);
 		/* # fix for <font> tag */
-		$("#builder-find-macro-modal").hide();
 		if (node.is("font")) {
 			var bak = node[0].innerHTML;
 			node.html($("<span></span>", {
@@ -192,10 +197,11 @@ var Doc_TemplateEditor_Widget = {
 			node = node.children("span");
 		}
 		var t = node[0].outerHTML;
-		text = text.replace(/[\s ]+/, " ");
-		t = t.replace(/[\s ]+/, " ");
+		t = $(t).text();
+		text = text.replace(/[\s ]+/g, "&nbsp;");
+		t = t.replace(/[\s ]/g, "&nbsp;");
 		t = t.replace(text, macro[0].outerHTML);
-		node.replaceWith(t);
+		node.replaceWith($(node[0].outerHTML).html(t));
 		this.inserted.push({
 			path: path,
 			text: text,
@@ -307,11 +313,14 @@ var Doc_Macro_Form = {
         });
 		$(".modal .builder-save-macro-button").click(function() {
 			var modal = $(this).parents(".modal");
-			modal.find(".doc-macro-create-form").form({
-				success: function() {
-					modal.modal("hide");
+			modal.find(".doc-macro-create-form").form("send", function() {
+				if (modal.attr("id") == "builder-create-macro-modal") {
+					$("#builder-macro-panel").find("table").table("update");
+				} else {
+					$("#builder-element-panel").find("table").table("update");
 				}
-			}).form("send");
+				modal.modal("hide");
+			});
 		});
     },
     show: function(type) {
@@ -483,8 +492,23 @@ $(document).ready(function() {
         }
     });
 
-	$("#builder-create-macro-modal").on("show.bs.modal", function() {
-		$(this).find(".field-macroform-table, .field-macroform-columns, .field-macroform-value").hide();
+	$("#builder-create-macro-modal, #builder-create-element-modal").on("show.bs.modal", function() {
+		$(this).find(
+			".field-macroform-table," +
+			".field-macroform-columns," +
+			".field-macroform-value"
+		).hide();
 		$(this).cleanup();
+	});
+
+	var updateTables = [
+		"#builder-find-macro-modal",
+		"#builder-view-macro-modal",
+		"#builder-find-element-modal",
+		"#builder-view-element-modal"
+	];
+
+	$(updateTables.join(",")).on("shown.bs.modal", function() {
+		$(this).find("table").table("update");
 	});
 });

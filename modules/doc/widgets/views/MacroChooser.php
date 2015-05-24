@@ -7,7 +7,7 @@ $form = \yii\bootstrap\ActiveForm::begin([
 	'enableClientValidation' => false
 ]);
 print $form->field($model, 'type')->dropDownList(
-	[ 0 => "Нет" ] + \app\models\doc\Macro::listTypes()
+	[ 0 => "Нет" ] + \app\models\doc\Macro::listStaticTypes()
 );
 print $form->field($model, 'macro', [
 	'options' => [

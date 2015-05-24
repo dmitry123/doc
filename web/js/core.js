@@ -225,10 +225,7 @@ var Core = Core || {};
 		}), success);
 	};
 
-	Core.loadTable = function(widget, provider, config, success, cache) {
-		if (cache === void 0) {
-			cache = true;
-		}
+	Core.loadTable = function(widget, provider, config, success) {
 		return $.ajax({
 			url: url("ext/table"),
 			data: {
@@ -237,7 +234,7 @@ var Core = Core || {};
 				config: config
 			},
 			dataType: "json",
-			cache: cache
+			cache: false
 		}).done(function(response) {
 			if (!response["status"]) {
 				if (response["error"] !== "form") {

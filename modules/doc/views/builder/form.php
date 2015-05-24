@@ -7,25 +7,40 @@ use app\models\doc\Macro;
  * @var $macro array
  */
 
-//require "vendor/simplehtmldom/simple_html_dom.php";
-//require "vendor/selector/selector.php";
-//require "vendor/querypath/src/qp.php";
 require "vendor/cdom/CDom.php";
-
-//$html = str_get_html($content
 
 $html = CDom::fromString($content);
 
+print \yii\helpers\Html::beginTag("div", [
+	"class" => "col-xs-5"
+]);
+
+\app\widgets\Panel::begin([
+	"title" => "Форма шаблона"
+]);
+
+$form = \app\widgets\ActiveForm::begin([
+	"action" => Yii::$app->getUrlManager()->createUrl([ "doc/builder/save" ])
+]);
+
+print "<pre>";
+print_r($macro);
+print "</pre>";
+
+$model = new \yii\base\DynamicModel([]);
+
 foreach ($macro as $m) {
-	$a = $html->find("p:eq(44)");
+	$a = $html->find($m["path"]);
 	if (!count($a)) {
 		continue;
 	}
 	$element = $a[0];
-	print $element->html();
+	$str = $element->html();
+	$str = str_replace($m["content"], $m["value"], $str);
+	$element->html($str);
 }
 
-//foreach ($html->find("p") as $element) {
-	/* @var $element simple_html_dom_node */
-//	print_r($element->{"plaintext"});
-//}
+$form->end();
+\app\widgets\Panel::end();
+
+print \yii\helpers\Html::endTag("div");

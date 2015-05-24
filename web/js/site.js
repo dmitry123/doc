@@ -49,4 +49,5 @@ $(document).ready(function() {
             });
         }
     });
+	$.fn.modal.Constructor.DEFAULTS.keyboard = false
 });

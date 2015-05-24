@@ -2,6 +2,7 @@
 
 namespace app\modules\doc\widgets;
 
+use app\models\doc\File;
 use app\modules\doc\core\FileManager;
 use app\modules\doc\core\FileWidget;
 
@@ -16,8 +17,9 @@ class TemplateEditor extends FileWidget {
 //		$content = preg_replace($this->regexp, "<hr>", $content);
 		return $this->render("TemplateEditor", [
 			"content" => $content,
+			"macro" => File::findFileMacro($this->file->{"id"}),
+			"file" => $this->file,
 			"self" => $this,
-			"file" => $this->file
 		]);
 	}
 }

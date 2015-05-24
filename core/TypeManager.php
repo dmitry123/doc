@@ -2,6 +2,8 @@
 
 namespace app\core;
 
+use yii\base\Exception;
+
 class TypeManager {
 
 	private $_types = [
@@ -78,13 +80,16 @@ class TypeManager {
 
     private $_system = [
         'SYSTEM_CURRENT_DATE' => [
-            'label' => 'Текущая дата'
+            'label' => 'Текущая дата',
+			'eval' => 'return date("Y-m-d");',
         ],
         'SYSTEM_CURRENT_TIME' => [
-            'label' => 'Текущее время'
+            'label' => 'Текущее время',
+			'eval' => 'return date("m:s");',
         ],
 		'SYSTEM_CURRENT_YEAR' => [
-			'label' => 'Текущий год'
+			'label' => 'Текущий год',
+			'eval' => 'return date("Y");'
 		]
     ];
 
@@ -203,6 +208,15 @@ class TypeManager {
 	 */
 	public function test($group, $type) {
 		return isset($this->_groups[$group]) && in_array($type, $this->_groups[$group]);
+	}
+
+	public function execute($type) {
+		if (!isset($this->_system[$type])) {
+			throw new Exception("System component [$type] doesn't exist");
+		} else if (!isset($this->_system[$type]["eval"])) {
+			throw new Exception("System component [$type] doesn't support execution");
+		}
+		return eval($this->_system[$type]["eval"]);
 	}
 
 	/**

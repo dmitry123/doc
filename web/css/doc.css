@@ -118,7 +118,25 @@
     color: darkred;
 }
 
+#builder-find-element-modal tbody > tr:hover,
 #builder-find-macro-modal tbody > tr:hover {
     background-color: #00aade !important;
     cursor: pointer;
+}
+
+.builder-control-menu-icon {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.builder-panel-wrapper {
+    position: fixed;
+    left: 66%;
+}
+
+.modal-open .builder-panel-wrapper {
+    left: calc(66% - 11px);
+    width: calc(100% - 66% - 17px);
 }

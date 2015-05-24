@@ -21,7 +21,7 @@ class RequiredValidator extends \yii\validators\RequiredValidator {
 	 * @return bool true of success validation
 	 */
 	public static function validateValueEx($type, $value, $model = null) {
-		if (TypeManager::getManager()->test("list", $type) && is_scalar($value) && (string) $value === "0") {
+		if (TypeManager::getManager()->test("list", $type) && is_scalar($value) && (string) $value === "0" || empty($value)) {
 			return false;
 		} else {
 			return true;

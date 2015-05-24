@@ -11,7 +11,7 @@ $form = app\widgets\ActiveForm::begin([
     ]
 ]);
 print $form->field($model, "name")->textInput();
-print $form->field($model, "type")->dropDownList([ 0 => "Нет" ] + \app\models\doc\Macro::listTypes());
+print $form->field($model, "type")->dropDownList([ 0 => "Нет" ] + \app\models\doc\Macro::listStaticTypes());
 print $form->field($model, "table", [
     "options" => [
         "class" => "form-group",
@@ -26,7 +26,7 @@ print $form->field($model, "columns", [
 ])->multipleInput([
 	"name" => ""
 ]);
-foreach (\app\models\doc\Macro::listTypes() as $key => $type) {
+foreach (\app\models\doc\Macro::listStaticTypes() as $key => $type) {
     print $form->field($model, "value", [
         "options" => [
             "class" => "form-group",
@@ -37,4 +37,20 @@ foreach (\app\models\doc\Macro::listTypes() as $key => $type) {
 		"name" => "MacroForm[value][$key]"
 	]);
 }
+print $form->field($model, "is_static", [
+	"options" => [
+		"class" => "form-group",
+		"style" => "display: none"
+	]
+])->hiddenInput([
+	"data-cleanup" => "false"
+]);
+print $form->field($model, "file_id", [
+	"options" => [
+		"class" => "form-group",
+		"style" => "display: none"
+	]
+])->hiddenInput([
+	"data-cleanup" => "false"
+]);
 $form->end();

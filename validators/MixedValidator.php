@@ -4,8 +4,12 @@ namespace app\validators;
 
 use app\core\Model;
 use app\core\TypeManager;
+use yii\base\Exception;
 
 class MixedValidator extends RequiredValidator {
+
+	public $skipOnEmpty = true;
+	public $skipOnError = true;
 
 	/**
 	 * Validate value for required rule, even if it has dropdown
@@ -20,11 +24,10 @@ class MixedValidator extends RequiredValidator {
 	public static function validateValueEx($type, $value, $model = null) {
 		if (!in_array($type, [ 'mixed' ]) || !is_array($value)) {
 			return false;
+		} else if (!isset($model->{'type'}) || empty($model->{'type'})) {
+			throw new \InvalidArgumentException('MixedValidator requires form model\'s not empty [type] field');
 		} else {
 			$value = $value[$model->{'type'}];
-		}
-		if (!isset($model->{'type'}) || empty($model->{'type'})) {
-			throw new \InvalidArgumentException('MixedValidator requires form model\'s not empty [type] field');
 		}
 		$validator = TypeManager::getManager()->getValidator(
 			$model->{'type'}, $model, $model->attributes

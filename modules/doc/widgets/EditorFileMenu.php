@@ -24,7 +24,7 @@ class EditorFileMenu extends Widget {
 			"label" => "Печать",
 			"icon" => "fa fa-print"
 		],
-		"builder-element-button" => [
+		/* "builder-element-button" => [
 			"label" => "Элементы",
 			"icon" => "fa fa-tags",
 			"items" => [
@@ -55,7 +55,7 @@ class EditorFileMenu extends Widget {
 					"onclick" => "$('#builder-view-macro-modal').modal('show')",
 				],
 			]
-		]
+		] */
 	];
 
 	public function run() {

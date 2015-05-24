@@ -7,6 +7,7 @@ use app\models\doc\File;
 use app\models\doc\FileMacro;
 use app\modules\doc\core\TemplateFactory;
 use yii\base\Exception;
+use yii\helpers\ArrayHelper;
 use yii\web\HttpException;
 
 class TemplateController extends Controller {
@@ -44,7 +45,15 @@ class TemplateController extends Controller {
 			if (!$file = File::findOne([ "id" => $this->requirePost("file") ])) {
 				throw new HttpException(404, "Unresolved template identification number (". $this->requirePost("file") .")");
 			}
+			$prev = FileMacro::find()->where("file_id = :file_id", [
+				":file_id" => $file->{"id"}
+			])->all();
+			$prev = ArrayHelper::map($prev, "path", "id");
 			foreach ($this->getPost("items", []) as $item) {
+				if (in_array($item["path"], $prev)) {
+					array_splice($prev, $item["path"]);
+					continue;
+				}
 				$ar = new FileMacro();
 				$ar->setAttributes([
 					"macro_id" => $item["id"],
@@ -53,6 +62,9 @@ class TemplateController extends Controller {
 					"name" => $item["text"]
 				], false);
 				$ar->save();
+			}
+			foreach ($prev as $p => $id) {
+				FileMacro::deleteAll([ "id" => $id ]);
 			}
 			$t->commit();
 			$this->leave([

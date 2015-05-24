@@ -31,7 +31,20 @@ class Macro extends ActiveRecord {
         "core.tester"
     ];
 
-	public static $allowedTypes = [
+	public static $allowedStaticTypes = [
+		"text",
+		"number",
+		"boolean",
+		"date",
+		"time",
+		"dropdown",
+		"email",
+		"phone",
+		"textarea",
+		"system"
+	];
+
+	public static $allowedDynamicTypes = [
 		"text",
 		"number",
 		"boolean",
@@ -65,7 +78,7 @@ class Macro extends ActiveRecord {
             "value" => [
                 "label" => "Значение",
                 "type" => "mixed",
-				"rules" => "mixed"
+				"rules" => "safe"
             ],
 			"columns" => [
 				"label" => "Столбцы",
@@ -75,6 +88,21 @@ class Macro extends ActiveRecord {
 			"table" => [
 				"label" => "Таблица",
 				"type" => "dropdown",
+				"rules" => "safe"
+			],
+			"file_id" => [
+				"label" => "Файл",
+				"type" => "dropdown",
+				"table" => [
+					"name" => "doc.template",
+					"key" => "id",
+					"value" => "name"
+				],
+				"rules" => "safe"
+			],
+			"is_static" => [
+				"label" => "Статический",
+				"type" => "boolean",
 				"rules" => "safe"
 			]
         ];
@@ -87,10 +115,6 @@ class Macro extends ActiveRecord {
         ];
     }
 
-    public static function tableName() {
-        return "doc.macro";
-    }
-
     public static function listTables() {
         $array = ArrayHelper::map(PostgreSQL::findOrderedAndHashed(static::$allowedTables),
 			"hash", "localize"
@@ -101,7 +125,15 @@ class Macro extends ActiveRecord {
         return $array;
     }
 
-	public static function listTypes() {
-		return TypeManager::getManager()->listTypes(static::$allowedTypes);
+	public static function listStaticTypes() {
+		return TypeManager::getManager()->listTypes(static::$allowedStaticTypes);
+	}
+
+	public static function listDynamicTypes() {
+		return TypeManager::getManager()->listTypes(static::$allowedDynamicTypes);
+	}
+
+	public static function tableName() {
+		return "doc.macro";
 	}
 }
