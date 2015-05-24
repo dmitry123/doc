@@ -196,12 +196,15 @@ var Doc_TemplateEditor_Widget = {
 			}));
 			node = node.children("span");
 		}
-		var t = node[0].outerHTML;
-		t = $(t).text();
+		var t = $(node[0].outerHTML);
+		t.children("p").children().remove();
+		t = t[0].innerHTML.replace(/<[^<^>.]+>[^<^>.]*<[^<^>.]+>/g, "");
+		var old = t;
 		text = text.replace(/[\s ]+/g, "&nbsp;");
 		t = t.replace(/[\s ]/g, "&nbsp;");
+		t = node[0].outerHTML.replace(old, t);
 		t = t.replace(text, macro[0].outerHTML);
-		node.replaceWith($(node[0].outerHTML).html(t));
+		node.replaceWith(t);
 		this.inserted.push({
 			path: path,
 			text: text,

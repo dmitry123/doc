@@ -2,32 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c7867d1-dabe-479e-927f-a32ef258089e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/migrations/m150524_203451_doc_macro_fixes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/controllers/EditorController.php" afterPath="$PROJECT_DIR$/modules/doc/controllers/EditorController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/widgets/EditorFileMenu.php" afterPath="$PROJECT_DIR$/modules/doc/widgets/EditorFileMenu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/grids/EditorMacroGridProvider.php" afterPath="$PROJECT_DIR$/modules/doc/grids/EditorMacroGridProvider.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/doc/Macro.php" afterPath="$PROJECT_DIR$/models/doc/Macro.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/widgets/views/MacroChooser.php" afterPath="$PROJECT_DIR$/modules/doc/widgets/views/MacroChooser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/forms/MacroForm.php" afterPath="$PROJECT_DIR$/modules/doc/forms/MacroForm.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/widgets/MacroMaker.php" afterPath="$PROJECT_DIR$/modules/doc/widgets/MacroMaker.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/widgets/views/MacroMaker.php" afterPath="$PROJECT_DIR$/modules/doc/widgets/views/MacroMaker.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/validators/MixedValidator.php" afterPath="$PROJECT_DIR$/validators/MixedValidator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/validators/RequiredValidator.php" afterPath="$PROJECT_DIR$/validators/RequiredValidator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/widgets/views/TemplateBuilder.php" afterPath="$PROJECT_DIR$/modules/doc/widgets/views/TemplateBuilder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/controllers/TemplateController.php" afterPath="$PROJECT_DIR$/modules/doc/controllers/TemplateController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/widgets/TemplateEditor.php" afterPath="$PROJECT_DIR$/modules/doc/widgets/TemplateEditor.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/widgets/views/TemplateEditor.php" afterPath="$PROJECT_DIR$/modules/doc/widgets/views/TemplateEditor.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/TypeManager.php" afterPath="$PROJECT_DIR$/core/TypeManager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/logs/app.log" afterPath="$PROJECT_DIR$/runtime/logs/app.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/core.js" afterPath="$PROJECT_DIR$/web/js/core.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/doc.css" afterPath="$PROJECT_DIR$/web/css/doc.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/doc.js" afterPath="$PROJECT_DIR$/web/js/doc.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/form.js" afterPath="$PROJECT_DIR$/web/js/form.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/views/builder/form.php" afterPath="$PROJECT_DIR$/modules/doc/views/builder/form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/site.css" afterPath="$PROJECT_DIR$/web/css/site.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/site.js" afterPath="$PROJECT_DIR$/web/js/site.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -84,8 +59,8 @@
       <file leaf-file-name="doc.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/js/doc.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.50121653" vertical-offset="4027" max-vertical-offset="11937">
-              <caret line="193" column="42" selection-start-line="193" selection-start-column="42" selection-end-line="193" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.7810219" vertical-offset="4119" max-vertical-offset="12006">
+              <caret line="207" column="28" selection-start-line="207" selection-start-column="28" selection-end-line="207" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -606,12 +581,6 @@
       <option name="number" value="Default" />
       <updated>1426978033684</updated>
     </task>
-    <task id="LOCAL-00005" summary="Block interface fixes">
-      <created>1427072697828</created>
-      <option name="number" value="00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1427072697828</updated>
-    </task>
     <task id="LOCAL-00006" summary="Navigation bar menu + Module menu + Asset fixes">
       <created>1427082800847</created>
       <option name="number" value="00006" />
@@ -900,7 +869,13 @@
       <option name="project" value="LOCAL" />
       <updated>1432430744809</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Template builder fixes">
+      <created>1432508421466</created>
+      <option name="number" value="00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1432508421466</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -949,7 +924,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Logo fixes + New control elements" />
     <MESSAGE value="Tiny fixes" />
     <MESSAGE value="Access filter fix" />
     <MESSAGE value="Plantation module + Extensions + Tiny fixes" />
@@ -974,7 +948,8 @@
     <MESSAGE value="Context menu fixes + Macro form" />
     <MESSAGE value="Entry of template generator via macros" />
     <MESSAGE value="Template builder entry" />
-    <option name="LAST_COMMIT_MESSAGE" value="Template builder entry" />
+    <MESSAGE value="Template builder fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Template builder fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1438,8 +1413,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/doc.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50121653" vertical-offset="4027" max-vertical-offset="11937">
-          <caret line="193" column="42" selection-start-line="193" selection-start-column="42" selection-end-line="193" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.7810219" vertical-offset="4119" max-vertical-offset="12006">
+          <caret line="207" column="28" selection-start-line="207" selection-start-column="28" selection-end-line="207" selection-end-column="28" />
           <folding />
         </state>
       </provider>
