@@ -27,9 +27,17 @@ class File_TemplateManager_GridProvider extends GridProvider {
                 "label" => "Просмотреть",
                 "icon" => "fa fa-book"
             ],
+			"template-build-form-icon" => [
+				"label" => "Создать (Форма)",
+				"icon" => "fa fa-file-text-o"
+			],
+			"template-build-template-icon" => [
+				"label" => "Создать",
+				"icon" => "fa fa-file-text"
+			],
             "template-edit-icon" => [
                 "label" => "Редактировать",
-                "icon" => "fa fa-edit",
+                "icon" => "fa fa-pencil",
 				"href" => "#"
             ],
             "template-remove-icon" => [

@@ -120,7 +120,7 @@ var Doc_File_Table = {
     active: null
 };
 
-var Doc_TemplateContentEditor_Widget = {
+var Doc_TemplateEditor_Widget = {
     ready: function() {
 		var me = this;
         $(".doc-template-content-editor").menu({
@@ -172,12 +172,12 @@ var Doc_TemplateContentEditor_Widget = {
 		};
 		$("#builder-find-macro-modal").modal("show");
 	},
-	insertMacro: function(node, text, val, name) {
+	insertMacro: function(node, text, id, name) {
 		if (!node instanceof jQuery) {
 			node = $(node);
 		}
-		var path = node.path(),
-			macro = this.renderItem(name, val, path, text);
+		var path = node.path(".doc-template-content-editor"),
+			macro = this.renderItem(name, id, path, text);
 			//nt = node.text(),
 			//left = nt.substr(0, this.last.offset),
 			//right = nt.substr(this.last.offset + text.length);
@@ -194,9 +194,14 @@ var Doc_TemplateContentEditor_Widget = {
 		var t = node[0].outerHTML;
 		text = text.replace(/[\s ]+/, " ");
 		t = t.replace(/[\s ]+/, " ");
-		t = t.replace(text, macro[0].outerHTML);;
+		t = t.replace(text, macro[0].outerHTML);
 		node.replaceWith(t);
-		this.inserted[path] = text;
+		this.inserted.push({
+			path: path,
+			text: text,
+			name: name,
+			id: id
+		});
 	},
 	renderItem: function(name, value, path, previous) {
 		return $("<b></b>", {
@@ -210,14 +215,19 @@ var Doc_TemplateContentEditor_Widget = {
 		}));
 	},
 	deleteMacro: function(element) {
-		delete this.inserted[$(element).attr("data-path")];
+		for (var i in this.inserted) {
+			if (this.inserted[i].path == $(element).attr("data-path")) {
+				this.inserted.splice(i, 1);
+				break;
+			}
+		}
 		$(element).replaceWith($(element).attr("data-previous"));
 	},
 	last: {
 		node: null,
 		text: null
 	},
-	inserted: {}
+	inserted: []
 };
 
 var Doc_TemplateManager_Viewer = {
@@ -226,7 +236,15 @@ var Doc_TemplateManager_Viewer = {
             window.location.href = url("doc/editor/view", {
                 file: $(this).parents("tr[data-id]").attr("data-id")
             });
-        });
+        }).on("click", ".template-build-form-icon", function() {
+			window.location.href = url("doc/builder/file", {
+				file: $(this).parents("tr[data-id]").attr("data-id")
+			});
+		}).on("click", ".template-build-form-icon", function() {
+			window.location.href = url("doc/builder/form", {
+				file: $(this).parents("tr[data-id]").attr("data-id")
+			});
+		})
     }
 };
 
@@ -392,6 +410,25 @@ var Doc_MacroChoose_Form = {
 	}
 };
 
+var Doc_TemplateEditor_Saver = {
+	ready: function() {
+		var me = this;
+		$(".builder-save-button").click(function() {
+			me.save();
+		});
+	},
+	save: function() {
+		var items = Doc_TemplateEditor_Widget.inserted;
+		Core.sendPost("doc/template/save", {
+			items: items,
+			file: getQuery("file")
+		}, function() {
+		}).always(function() {
+		});
+		console.log(items);
+	}
+};
+
 $(document).ready(function() {
 
 	$.fn.fileinput.defaults = $.extend($.fn.fileinput.defaults, {
@@ -426,10 +463,11 @@ $(document).ready(function() {
 
 	Doc_Navigation_Menu.ready();
 	Doc_File_Table.ready();
-    Doc_TemplateContentEditor_Widget.ready();
+    Doc_TemplateEditor_Widget.ready();
     Doc_TemplateManager_Viewer.ready();
     Doc_Macro_Form.ready();
 	Doc_MacroChoose_Form.ready();
+	Doc_TemplateEditor_Saver.ready();
 
     $("input[type='file'][data-toggle='fileinput']").fileinput({
         uploadUrl: url("doc/file/upload"),

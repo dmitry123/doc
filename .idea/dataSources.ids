@@ -415,6 +415,7 @@
       <foreign-key name="file_file_type_id_fkey" columns="file_type_id" ref-table="file_type" ref-schema="doc" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="2" deferrability="2"/>
       <exported-key name="file_parent_id_fkey" table="file" schema="doc" catalog="mgup" columns="parent_id"/>
       <exported-key name="file_access_file_id_fkey" table="file_access" schema="doc" catalog="mgup" columns="file_id"/>
+      <exported-key name="file_macro_file_id_fkey" table="file_macro" schema="doc" catalog="mgup" columns="file_id"/>
       <exported-key name="file_template_element_file_id_fkey" table="file_template_element" schema="doc" catalog="mgup" columns="file_id"/>
     </table>
     <table name="file_access" schema="doc" catalog="mgup" type="TABLE">
@@ -502,6 +503,28 @@
       <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
       <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
     </table>
+    <table name="file_macro" schema="doc" catalog="mgup" type="TABLE">
+      <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnZG9jLmZpbGVfbWFjcm9faWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
+      <column name="macro_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="file_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="path" sqlType="text" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="name" sqlType="text" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="file_macro_pkey" columns="id"/>
+      <foreign-key name="file_macro_file_id_fkey" columns="file_id" ref-table="file" ref-schema="doc" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
+      <foreign-key name="file_macro_macro_id_fkey" columns="macro_id" ref-table="macro" ref-schema="doc" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
+    </table>
+    <table name="file_macro_id_seq" schema="doc" catalog="mgup" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
     <table name="file_status" schema="doc" catalog="mgup" type="TABLE">
       <column name="id" sqlType="varchar" precision="10" scale="0" nullable="false" jdbcType="12"/>
       <column name="name" sqlType="varchar" precision="50" scale="0" nullable="false" jdbcType="12"/>
@@ -558,6 +581,7 @@
       <column name="value" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="table" sqlType="varchar" precision="100" scale="0" nullable="true" jdbcType="12" def="TlVMTA=="/>
       <primary-key name="macro_pkey" columns="id"/>
+      <exported-key name="file_macro_macro_id_fkey" table="file_macro" schema="doc" catalog="mgup" columns="macro_id"/>
       <exported-key name="macro_column_macro_id_fkey" table="macro_column" schema="doc" catalog="mgup" columns="macro_id"/>
       <exported-key name="macro_to_file_file_id_fkey" table="macro_to_file" schema="doc" catalog="mgup" columns="file_id"/>
       <exported-key name="macro_to_file_macro_id_fkey" table="macro_to_file" schema="doc" catalog="mgup" columns="macro_id"/>

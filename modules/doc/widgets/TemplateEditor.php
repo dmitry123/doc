@@ -13,7 +13,7 @@ class TemplateEditor extends FileWidget {
 		$content = iconv("Windows-1251", "UTF-8", file_get_contents(
 			FileManager::getManager()->getDirectory($this->file->{"path"}), FILE_TEXT
 		));
-		$content = preg_replace($this->regexp, "<hr>", $content);
+//		$content = preg_replace($this->regexp, "<hr>", $content);
 		return $this->render("TemplateEditor", [
 			"content" => $content,
 			"self" => $this,

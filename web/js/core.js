@@ -434,6 +434,13 @@ var Core = Core || {};
 		return text;
 	};
 
+	window.getQuery = function(name) {
+		name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+		var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+			results = regex.exec(location.search);
+		return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+	};
+
 	window.serialize = function(obj, prefix) {
 		var str = [];
 		for(var p in obj) {
@@ -447,7 +454,8 @@ var Core = Core || {};
 		return str.join("&");
 	};
 
-	jQuery.fn.path = function () {
+	jQuery.fn.path = function(root) {
+		root = root || $("html");
 		if (this.length != 1) {
 			throw new Error("Requires one element");
 		}
@@ -456,7 +464,7 @@ var Core = Core || {};
 		while (node.length) {
 			var realNode = node[0],
 				name = realNode.localName;
-			if (!name) {
+			if (!name || realNode == $(root)[0]) {
 				break;
 			}
 			name = name.toLowerCase();

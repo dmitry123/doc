@@ -2,6 +2,8 @@
 
 namespace app\models\doc;
 
+use yii\db\mssql\PDO;
+
 class File extends \app\core\ActiveRecord {
 
 	public function configure() {
@@ -134,4 +136,13 @@ class File extends \app\core\ActiveRecord {
             ])->all();
         return $rows;
     }
+
+	public static function findFileMacro($file) {
+		return FileMacro::find()->select("fm.*, m.*, fm.name as content")
+			->from("doc.file_macro as fm")
+			->innerJoin("doc.macro as m", "fm.macro_id = m.id")
+			->where("fm.file_id = :file", [
+				":file" => $file
+			])->createCommand()->queryAll(PDO::FETCH_ASSOC);
+	}
 }

@@ -6,7 +6,7 @@ use yii\base\Exception;
 
 class FileConverter {
 
-    const WAIT_TIMEOUT = 5;
+    const WAIT_TIMEOUT = 20;
 
     public static function getDefaultConverter($ext) {
         return new FileConverter($ext);
@@ -51,6 +51,7 @@ class FileConverter {
             }
             sleep(1);
         }
+		sleep(1);
         return $this;
     }
 

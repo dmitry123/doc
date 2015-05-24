@@ -6,7 +6,6 @@ use yii\base\Exception;
 use yii\base\Model;
 use yii\base\UserException;
 use yii\helpers\ArrayHelper;
-use yii\web\HttpException;
 
 abstract class Controller extends \yii\web\Controller {
 
@@ -254,7 +253,7 @@ abstract class Controller extends \yii\web\Controller {
 	 */
 	public static function requireQuery($name) {
 		if (!isset(\Yii::$app->request->queryParams[$name])) {
-			throw new HttpException(404, "That action requires query parameter \"$name\"");
+			throw new Exception(404, "That action requires query parameter \"$name\"");
 		} else {
 			return \Yii::$app->request->queryParams[$name];
 		}
@@ -294,7 +293,7 @@ abstract class Controller extends \yii\web\Controller {
 	 */
 	public static function requirePost($name) {
 		if (!isset(\Yii::$app->request->bodyParams[$name])) {
-			throw new \HttpException("That action requires body parameter \"$name\"");
+			throw new \Exception("That action requires body parameter \"$name\"");
 		} else {
 			return \Yii::$app->request->bodyParams[$name];
 		}

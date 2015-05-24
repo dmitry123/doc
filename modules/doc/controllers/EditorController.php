@@ -3,9 +3,7 @@
 namespace app\modules\doc\controllers;
 
 use app\core\Controller;
-use app\core\PostgreSQL;
 use app\models\doc\File;
-use app\modules\doc\core\FileManager;
 use yii\base\Exception;
 
 class EditorController extends Controller {
