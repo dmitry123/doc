@@ -137,12 +137,16 @@ class File extends \app\core\ActiveRecord {
         return $rows;
     }
 
-	public static function findFileMacro($file) {
-		return FileMacro::find()->select("fm.*, m.*, fm.name as content")
+	public static function findFileMacro($file, $static = false) {
+		$query = FileMacro::find()->select("fm.*, m.*, fm.name as content")
 			->from("doc.file_macro as fm")
 			->innerJoin("doc.macro as m", "fm.macro_id = m.id")
 			->where("fm.file_id = :file", [
 				":file" => $file
-			])->createCommand()->queryAll(PDO::FETCH_ASSOC);
+			]);
+		if ($static !== false) {
+			$query->andWhere([ "is_static" => $static ]);
+		}
+		return $query->createCommand()->queryAll(PDO::FETCH_ASSOC);
 	}
 }

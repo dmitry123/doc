@@ -46,7 +46,9 @@ class ActiveField extends \yii\bootstrap\ActiveField {
     }
 
     public function textAreaInput(array $options = []) {
-        return $this->textarea($options);
+        return $this->textarea($options + [
+				"rows" => 7
+			]);
     }
 
     public function radioInput(array $options = []) {

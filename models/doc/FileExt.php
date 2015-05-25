@@ -27,6 +27,15 @@ class FileExt extends ActiveRecord {
 		];
 	}
 
+	public static function findByExt($ext) {
+		if (!$row = static::findOne([ "ext" => $ext ])) {
+			$row = new FileExt();
+			$row->setAttribute("ext", $ext);
+			$row->save();
+		}
+		return $row;
+	}
+
 	public static function tableName() {
 		return "doc.file_ext";
 	}

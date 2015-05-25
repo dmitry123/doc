@@ -28,7 +28,12 @@ var Doc_Navigation_Menu = {
 				Core.createMessage({ message: i + ": " + errors[i], delay: 7000 });
 			}
         } else {
-			//$("#file-upload-modal").modal("hide");
+			Core.createMessage({
+				message: json["message"],
+				delay: 2500,
+				type: "success",
+				sign: "ok"
+			});
 		}
     }
 };
@@ -441,6 +446,19 @@ var Doc_TemplateEditor_Saver = {
 	}
 };
 
+var Doc_TemplateBuilder_Form = {
+	ready: function() {
+		$(".builder-compile-button").click(function() {
+			$(this).parents("form:eq(0)").form("send").success(function(response) {
+				$("#page-content .col-xs-7 .panel-content").html(
+					response["content"]
+				);
+			}).always(function() {
+			});
+		});
+	}
+};
+
 $(document).ready(function() {
 
 	$.fn.fileinput.defaults = $.extend($.fn.fileinput.defaults, {
@@ -480,6 +498,7 @@ $(document).ready(function() {
     Doc_Macro_Form.ready();
 	Doc_MacroChoose_Form.ready();
 	Doc_TemplateEditor_Saver.ready();
+	Doc_TemplateBuilder_Form.ready();
 
     $("input[type='file'][data-toggle='fileinput']").fileinput({
         uploadUrl: url("doc/file/upload"),

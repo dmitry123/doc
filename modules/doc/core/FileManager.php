@@ -8,6 +8,7 @@ use app\models\doc\File;
 use app\models\doc\FileExt;
 use app\models\doc\FileStatus;
 use yii\base\Exception;
+use yii\db\ActiveRecord;
 
 class FileManager {
 
@@ -109,43 +110,65 @@ class FileManager {
         }
     }
 
-    /**
-     *
-     *
-     * @param $file File instance of file model class, which stores information about current
-     *  file, which should be  prepared and cached for next downloads and registered in database
-     *
-     * @param $ext FileExt instance of extension class, which stores information
-     *  about new file's extension
-     *
-     * @return File instance of new file, which prepared
-     *  for downloads and other manipulations
-     *
-     * @throws Exception
-     */
-    public function cache($file, $ext) {
-        $name = FileManager::getManager()->getName();
+	/**
+	 *
+	 *
+	 * @param $file File instance of file model class, which stores information about current
+	 *  file, which should be  prepared and cached for next downloads and registered in database
+	 *
+	 * @param $ext FileExt|ActiveRecord|static instance of extension class, which stores information
+	 *  about new file's extension
+	 *
+	 * @param $alias string|null name of future document file
+	 *
+	 * @param $type string name of file type, that should be set
+	 *    for database cortege
+	 *
+	 * @return File instance of new file, which prepared
+	 *  for downloads and other manipulations
+	 *
+	 * @throws Exception
+	 */
+    public function cache($file, $ext, $alias = null, $type = "cached") {
+		if ($alias == null) {
+			$alias = FileManager::getManager()->getName();
+		}
+		$name = FileManager::getManager()->getName();
         $path = FileManager::getManager()->getDirectory($name);
-        FileConverter::getDefaultConverter($ext->{"ext"})
-            ->convert($this->getDirectory($file->{"path"}))
-            ->wait()
-            ->rename($path);
+		FileConverter::getDefaultConverter($ext->{"ext"})
+			->convert($this->getDirectory($file->{"path"}))
+			->wait()
+			->rename($path);
         $cached = new File([
             "path" => $name,
             "employee_id" => $file->{"employee_id"},
             "file_ext_id" => $ext->{"id"},
             "mime_type" => MimeTypeMatcher::match($ext->{"ext"}),
             "parent_id" => $file->{"id"},
-            "file_status_id" => "cached",
-            "file_type_id" => "cached",
+            "file_status_id" => "new",
+            "file_type_id" => $type,
             "file_category_id" => null,
-            "name" => FileManager::getManager()->getName(),
+            "name" => $alias,
         ]);
         if (!$cached->save()) {
             throw new Exception("File hasn't been prepared to download, can't register changes in database");
         }
         return $cached;
     }
+
+	/**
+	 * Load file's content by it's cortege
+	 *
+	 * @param $file File active record instance
+	 * @return string file's content
+	 *
+	 * @throws Exception
+	 */
+	public function load($file) {
+		return iconv("Windows-1251", "UTF-8", file_get_contents(
+			\app\modules\doc\core\FileManager::getManager()->getDirectory($file->{"path"}), FILE_TEXT
+		));
+	}
 
 	/**
 	 * Generate unique name of saved file on server

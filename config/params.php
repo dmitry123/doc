@@ -1,7 +1,7 @@
 <?php
 
 return [
-	"fileUploadDirectory" => "/uploads/files/",
+	"fileUploadDirectory" => "/uploads/",
 	"file" => "",
 	"defaultRoles" => [
 		"super" => [

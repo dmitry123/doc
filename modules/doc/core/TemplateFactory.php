@@ -6,6 +6,7 @@ use app\core\AbstractFactory;
 use app\core\EmployeeHelper;
 use app\filters\AccessFilter;
 use app\models\doc\File;
+use app\models\doc\FileExt;
 use yii\base\Exception;
 use yii\base\UserException;
 
@@ -41,7 +42,7 @@ class TemplateFactory extends AbstractFactory {
         $template = new File([
                 "path" => $path,
                 "employee_id" => EmployeeHelper::getHelper()->getEmployee()->{"id"},
-                "file_ext_id" => $file->{"file_ext_id"},
+                "file_ext_id" => FileExt::findByExt("html"),
                 "mime_type" => $file->{"mime_type"},
                 "file_status_id" => $file->{"file_status_id"},
                 "parent_id" => $file->{"id"},
