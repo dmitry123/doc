@@ -42,7 +42,7 @@ class TemplateFactory extends AbstractFactory {
         $template = new File([
                 "path" => $path,
                 "employee_id" => EmployeeHelper::getHelper()->getEmployee()->{"id"},
-                "file_ext_id" => FileExt::findByExt("html"),
+                "file_ext_id" => FileExt::findByExt("html")->{"id"},
                 "mime_type" => $file->{"mime_type"},
                 "file_status_id" => $file->{"file_status_id"},
                 "parent_id" => $file->{"id"},

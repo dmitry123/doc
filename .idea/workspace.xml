@@ -2,192 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c7867d1-dabe-479e-927f-a32ef258089e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/doc/core/Dom.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/doc/core/FileCompiler.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/doc/core/Lexer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/doc/widgets/TemplateForm.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/doc/widgets/views/TemplateForm.php" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\cdom\CDom.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\cdom\CLexer.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\cdom\README.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\cdom\examples.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\cdom\tests\Test_Dom.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\cdom\tests\data_Dom\bash.org.ru_1251_modified.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\cdom\tests\data_Dom\bash.org.ru_1251_original.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\cdom\tests\data_Dom\bash.org.ru_utf-8_modified.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\API" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\COPYING-MIT.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\CREDITS" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\INSTALL" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\Makefile" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\README.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\RELEASE" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\bin\base-package.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\bin\compactor.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\bin\compactor.sh" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\bin\gendocs.sh" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\bin\package.sh" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\bin\package.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\bin\package_builder.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\build.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\composer.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\config.doxy" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\examples\The_Beatles.rdf" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\examples\at_a_glance.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\examples\database_import.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\examples\dbpedia.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\examples\dirty_html.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\examples\doc.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\examples\doc.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\examples\docx.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\examples\docx_document.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\examples\fetch_rss.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\examples\html.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\examples\matching_text_content.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\examples\musicbrainz.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\examples\odt.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\examples\openoffice.odt" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\examples\out.svg" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\examples\parse_php.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\examples\querypath.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\examples\rss.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\examples\simple_example.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\examples\sparql.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\examples\svg.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\examples\techniques.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\examples\test.docx" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\examples\testGrid.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\examples\xml.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\package.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\package_compatible.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\patches\QueryPath-RyanMahoney.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\pear-summary.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\phar\README.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\phar\basic_loader.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\quickstart-guide.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\src\QueryPath.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\src\QueryPath\CSS\DOMTraverser.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\src\QueryPath\CSS\DOMTraverser\PseudoClass.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\src\QueryPath\CSS\DOMTraverser\Util.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\src\QueryPath\CSS\EventHandler.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\src\QueryPath\CSS\InputStream.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\src\QueryPath\CSS\NotImplementedException.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\src\QueryPath\CSS\ParseException.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\src\QueryPath\CSS\Parser.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\src\QueryPath\CSS\QueryPathEventHandler.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\src\QueryPath\CSS\Scanner.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\src\QueryPath\CSS\Selector.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\src\QueryPath\CSS\SimpleSelector.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\src\QueryPath\CSS\Token.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\src\QueryPath\CSS\Traverser.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\src\QueryPath\DOMQuery.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\src\QueryPath\Entities.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\src\QueryPath\Exception.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\src\QueryPath\Extension.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\src\QueryPath\ExtensionRegistry.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\src\QueryPath\Extension\QPXML.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\src\QueryPath\Extension\QPXSL.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\src\QueryPath\IOException.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\src\QueryPath\Options.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\src\QueryPath\ParseException.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\src\QueryPath\Query.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\src\QueryPath\QueryPathIterator.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\src\documentation.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\src\qp.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\src\qp_functions.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\test\DOMTraverserTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\test\Tests\QueryPath\CSS\DOMTraverserTest.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\test\Tests\QueryPath\CSS\ParserTest.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\test\Tests\QueryPath\CSS\PseudoClassTest.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\test\Tests\QueryPath\CSS\QueryPathEventHandlerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\test\Tests\QueryPath\CSS\SelectorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\test\Tests\QueryPath\CSS\TokenTest.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\test\Tests\QueryPath\CSS\UtilTest.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\test\Tests\QueryPath\DOMQueryTest.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\test\Tests\QueryPath\EntitiesTest.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\test\Tests\QueryPath\ExtensionTest.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\test\Tests\QueryPath\Extensions\QPXMLTest.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\test\Tests\QueryPath\Extensions\QPXSLTest.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\test\Tests\QueryPath\OptionsTest.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\test\Tests\QueryPath\QueryPathTest.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\test\Tests\QueryPath\TestCase.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\test\Tests\QueryPath\XMLIshTest.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\test\advanced.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\test\amplify.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\test\coverage.sh" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\test\data.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\test\data.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\test\html.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\test\no-writing.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\test\runTests.sh" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\test\test.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\tutorials\Examples\Examples.pkg" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\tutorials\QueryPath\QueryPath.pkg" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\tutorials\QueryPath\QueryPath.pkg.ini" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\tutorials\QueryPath\css.pkg" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\tutorials\QueryPath\css.pkg.ini" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\tutorials\QueryPath\cssexamples.pkg" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\tutorials\QueryPath\csspseudo.pkg" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\querypath\tutorials\Tests\Tests.pkg" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\selector\selector.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\app\google.htm" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\app\index.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\app\js\images\treeview-default-line.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\app\js\images\treeview-default.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\app\js\jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\app\js\jquery.treeview.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\app\js\jquery.treeview.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\app\js\screen.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\change_log.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\example\example_advanced_selector.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\example\example_basic_selector.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\example\example_callback.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\example\example_extract_html.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\example\example_modify_contents.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\example\scraping\example_scraping_digg.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\example\scraping\example_scraping_imdb.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\example\scraping\example_scraping_slashdot.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\example\simple_html_dom_utility.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\manual\css\default.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\manual\css\ui.tabs.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\manual\img\tab.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\manual\js\jquery-1.2.3.pack.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\manual\js\ui.tabs.pack.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\manual\manual.htm" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\manual\manual_api.htm" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\manual\manual_faq.htm" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\simple_html_dom.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\testcase\all_test.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\testcase\callback_testcase.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\testcase\dom_testcase.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\testcase\element_testcase.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\testcase\invalid_testcase.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\testcase\jquery-1.2.3.pack.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\testcase\mass_test.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\testcase\memory_test.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\testcase\misc_testcase.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\testcase\performance_test.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\testcase\reader\all_test.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\testcase\reader\element_testcase.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\testcase\reader\memory_test.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\testcase\reader\performance_test.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\testcase\reader\selector_testcase.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\testcase\selector_testcase.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\testcase\slick_test.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\testcase\slickspeed.htm" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\testcase\std_testcase.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\hosts\doc\vendor\simplehtmldom\testcase\strip_testcase.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/ActiveField.php" afterPath="$PROJECT_DIR$/core/ActiveField.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/controllers/BuilderController.php" afterPath="$PROJECT_DIR$/modules/doc/controllers/BuilderController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/doc/File.php" afterPath="$PROJECT_DIR$/models/doc/File.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/doc/FileExt.php" afterPath="$PROJECT_DIR$/models/doc/FileExt.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/core/FileManager.php" afterPath="$PROJECT_DIR$/modules/doc/core/FileManager.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/core/TemplateFactory.php" afterPath="$PROJECT_DIR$/modules/doc/core/TemplateFactory.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/logs/app.log" afterPath="$PROJECT_DIR$/runtime/logs/app.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/doc.js" afterPath="$PROJECT_DIR$/web/js/doc.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/views/builder/form.php" afterPath="$PROJECT_DIR$/modules/doc/views/builder/form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/params.php" afterPath="$PROJECT_DIR$/config/params.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -247,24 +63,6 @@
         <option name="myItemId" value="PostgreSQL - mgup@localhost" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="mgup.doc" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="file_ext" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="PostgreSQL - mgup@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
     </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
@@ -273,65 +71,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TemplateForm.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/modules/doc/widgets/views/TemplateForm.php">
+      <file leaf-file-name="TemplateFactory.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/modules/doc/core/TemplateFactory.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4863184" vertical-offset="0" max-vertical-offset="1150">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding>
-                <element signature="e#6#119#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TemplateForm.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/doc/widgets/TemplateForm.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.78125" vertical-offset="0" max-vertical-offset="644">
-              <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileCompiler.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/doc/core/FileCompiler.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.21875" vertical-offset="82" max-vertical-offset="1150">
-              <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-              <folding>
-                <element signature="e#103#127#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileExt.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/doc/FileExt.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.875" vertical-offset="222" max-vertical-offset="1081">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BuilderController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/doc/controllers/BuilderController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.09375" vertical-offset="497" max-vertical-offset="1472">
-              <caret line="50" column="46" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="doc.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/doc.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="163" max-vertical-offset="12443">
-              <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.6814159" vertical-offset="519" max-vertical-offset="1909">
+              <caret line="52" column="15" selection-start-line="52" selection-start-column="15" selection-end-line="52" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -394,12 +138,12 @@
         <option value="$PROJECT_DIR$/web/js/doc.js" />
         <option value="$PROJECT_DIR$/core/ActiveField.php" />
         <option value="$PROJECT_DIR$/models/doc/FileExt.php" />
-        <option value="$PROJECT_DIR$/modules/doc/core/TemplateFactory.php" />
         <option value="$PROJECT_DIR$/modules/doc/core/FileCompiler.php" />
         <option value="$PROJECT_DIR$/modules/doc/widgets/TemplateForm.php" />
         <option value="$PROJECT_DIR$/modules/doc/widgets/views/TemplateForm.php" />
         <option value="$PROJECT_DIR$/modules/doc/core/FileManager.php" />
         <option value="$PROJECT_DIR$/modules/doc/controllers/BuilderController.php" />
+        <option value="$PROJECT_DIR$/modules/doc/core/TemplateFactory.php" />
       </list>
     </option>
   </component>
@@ -611,7 +355,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="TemplateFa&#9;null&#9;null&#10;FileManager&#9;FILE&#9;file://D:/hosts/doc/modules/doc/core/FileManager.php&#10;TemplateContr&#9;FILE&#9;file://D:/hosts/doc/modules/doc/controllers/TemplateController.php&#10;ActiveF&#9;FILE&#9;file://D:/hosts/doc/core/ActiveField.php&#10;doc.js&#9;FILE&#9;file://D:/hosts/doc/web/js/doc.js&#10;templatecom&#9;FILE&#9;file://D:/hosts/doc/modules/doc/core/TemplateCompiler.php&#10;BuilderContr&#9;FILE&#9;file://D:/hosts/doc/modules/doc/controllers/BuilderController.php&#10;FileMana&#9;null&#9;null&#10;Build&#9;FILE&#9;file://D:/hosts/doc/modules/doc/controllers/BuilderController.php&#10;BuilderCont&#9;FILE&#9;file://D:/hosts/doc/modules/doc/controllers/BuilderController.php&#10;form.php&#9;FILE&#9;file://D:/hosts/doc/modules/doc/views/builder/form.php&#10;TypeMana&#9;null&#9;null&#10;EditorCon&#9;null&#9;null&#10;BuilderCon&#9;null&#9;null&#10;MacroContr&#9;FILE&#9;file://D:/hosts/doc/modules/doc/controllers/MacroController.php&#10;site.js&#9;FILE&#9;file://D:/hosts/doc/web/js/site.js&#10;site.css&#9;FILE&#9;file://D:/hosts/doc/web/css/site.css&#10;modal.js&#9;FILE&#9;file://D:/hosts/doc/vendor/bower/bootstrap/js/modal.js&#10;doc.css&#9;FILE&#9;file://D:/hosts/doc/web/css/doc.css&#10;MacroCon&#9;FILE&#9;file://D:/hosts/doc/modules/doc/controllers/MacroController.php&#10;MixedVali&#9;FILE&#9;file://D:/hosts/doc/validators/MixedValidator.php&#10;Mixedva&#9;FILE&#9;file://D:/hosts/doc/validators/MixedValidator.php&#10;MixedVa&#9;FILE&#9;file://D:/hosts/doc/validators/MixedValidator.php&#10;core.js&#9;FILE&#9;file://D:/hosts/doc/web/js/core.js&#10;Macro&#9;null&#9;null&#10;DefaultVali&#9;null&#9;null&#10;MacroController&#9;null&#9;null&#10;MacroForm&#9;null&#9;null&#10;FileMa&#9;FILE&#9;dbDummy://dbtable:/67b34dc1/4a1bea19-9630-4f7c-a585-745035fe4694/mgup.doc.file_macro&#10;EditorContr&#9;null&#9;null&#10;FileConve&#9;null&#9;null&#10;Controller&#9;FILE&#9;file://D:/hosts/doc/core/Controller.php&#10;ExtContr&#9;null&#9;null&#10;require&#9;FILE&#9;file://D:/hosts/doc/validators/RequiredValidator.php&#10;table.css&#9;FILE&#9;file://D:/hosts/doc/web/css/table.css&#10;view&#9;FILE&#9;file://D:/hosts/doc/modules/doc/views/file/view.php&#10;yii\bootstrap\BootstrapAsset&#9;null&#9;null&#10;Va&#9;FILE&#9;file://D:/hosts/doc/core/Validator.php&#10;Validator&#9;FILE&#9;file://D:/hosts/doc/core/Validator.php&#10;MixedValida&#9;FILE&#9;file://D:/hosts/doc/validators/MixedValidator.php&#10;TypeMa&#9;null&#9;null&#10;MacroMaker&#9;FILE&#9;file://D:/hosts/doc/modules/doc/widgets/views/MacroMaker.php&#10;Validat&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/validators/Validator.php&#10;Req&#9;FILE&#9;file://D:/hosts/doc/validators/RequiredValidator.php&#10;CompareVal&#9;null&#9;null&#10;RequireVa&#9;FILE&#9;file://D:/hosts/doc/validators/RequiredValidator.php&#10;Mac&#9;FILE&#9;file://D:/hosts/doc/models/doc/Macro.php&#10;multi&#9;FILE&#9;file://D:/hosts/doc/web/js/multiple.js&#10;RequireVali&#9;FILE&#9;file://D:/hosts/doc/validators/RequiredValidator.php&#10;doc&#9;FILE&#9;file://D:/hosts/doc/web/js/doc.js" />
+    <property name="SearchEverywhereHistoryKey" value="TemplateFa&#9;FILE&#9;file://D:/hosts/doc/modules/doc/core/TemplateFactory.php&#10;FileManager&#9;FILE&#9;file://D:/hosts/doc/modules/doc/core/FileManager.php&#10;TemplateContr&#9;FILE&#9;file://D:/hosts/doc/modules/doc/controllers/TemplateController.php&#10;ActiveF&#9;FILE&#9;file://D:/hosts/doc/core/ActiveField.php&#10;doc.js&#9;FILE&#9;file://D:/hosts/doc/web/js/doc.js&#10;templatecom&#9;FILE&#9;file://D:/hosts/doc/modules/doc/core/TemplateCompiler.php&#10;BuilderContr&#9;FILE&#9;file://D:/hosts/doc/modules/doc/controllers/BuilderController.php&#10;FileMana&#9;null&#9;null&#10;Build&#9;FILE&#9;file://D:/hosts/doc/modules/doc/controllers/BuilderController.php&#10;BuilderCont&#9;FILE&#9;file://D:/hosts/doc/modules/doc/controllers/BuilderController.php&#10;form.php&#9;FILE&#9;file://D:/hosts/doc/modules/doc/views/builder/form.php&#10;TypeMana&#9;null&#9;null&#10;EditorCon&#9;null&#9;null&#10;BuilderCon&#9;null&#9;null&#10;MacroContr&#9;FILE&#9;file://D:/hosts/doc/modules/doc/controllers/MacroController.php&#10;site.js&#9;FILE&#9;file://D:/hosts/doc/web/js/site.js&#10;site.css&#9;FILE&#9;file://D:/hosts/doc/web/css/site.css&#10;modal.js&#9;FILE&#9;file://D:/hosts/doc/vendor/bower/bootstrap/js/modal.js&#10;doc.css&#9;FILE&#9;file://D:/hosts/doc/web/css/doc.css&#10;MacroCon&#9;FILE&#9;file://D:/hosts/doc/modules/doc/controllers/MacroController.php&#10;MixedVali&#9;FILE&#9;file://D:/hosts/doc/validators/MixedValidator.php&#10;Mixedva&#9;FILE&#9;file://D:/hosts/doc/validators/MixedValidator.php&#10;MixedVa&#9;FILE&#9;file://D:/hosts/doc/validators/MixedValidator.php&#10;core.js&#9;FILE&#9;file://D:/hosts/doc/web/js/core.js&#10;Macro&#9;null&#9;null&#10;DefaultVali&#9;null&#9;null&#10;MacroController&#9;null&#9;null&#10;MacroForm&#9;null&#9;null&#10;FileMa&#9;FILE&#9;dbDummy://dbtable:/67b34dc1/4a1bea19-9630-4f7c-a585-745035fe4694/mgup.doc.file_macro&#10;EditorContr&#9;null&#9;null&#10;FileConve&#9;null&#9;null&#10;Controller&#9;FILE&#9;file://D:/hosts/doc/core/Controller.php&#10;ExtContr&#9;null&#9;null&#10;require&#9;FILE&#9;file://D:/hosts/doc/validators/RequiredValidator.php&#10;table.css&#9;FILE&#9;file://D:/hosts/doc/web/css/table.css&#10;view&#9;FILE&#9;file://D:/hosts/doc/modules/doc/views/file/view.php&#10;yii\bootstrap\BootstrapAsset&#9;null&#9;null&#10;Va&#9;FILE&#9;file://D:/hosts/doc/core/Validator.php&#10;Validator&#9;FILE&#9;file://D:/hosts/doc/core/Validator.php&#10;MixedValida&#9;FILE&#9;file://D:/hosts/doc/validators/MixedValidator.php&#10;TypeMa&#9;null&#9;null&#10;MacroMaker&#9;FILE&#9;file://D:/hosts/doc/modules/doc/widgets/views/MacroMaker.php&#10;Validat&#9;FILE&#9;file://D:/hosts/doc/vendor/yiisoft/yii2/validators/Validator.php&#10;Req&#9;FILE&#9;file://D:/hosts/doc/validators/RequiredValidator.php&#10;CompareVal&#9;null&#9;null&#10;RequireVa&#9;FILE&#9;file://D:/hosts/doc/validators/RequiredValidator.php&#10;Mac&#9;FILE&#9;file://D:/hosts/doc/models/doc/Macro.php&#10;multi&#9;FILE&#9;file://D:/hosts/doc/web/js/multiple.js&#10;RequireVali&#9;FILE&#9;file://D:/hosts/doc/validators/RequiredValidator.php&#10;doc&#9;FILE&#9;file://D:/hosts/doc/web/js/doc.js" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="FullScreen" value="false" />
     <property name="recentsLimit" value="5" />
@@ -690,12 +434,6 @@
       <created>1426978033684</created>
       <option name="number" value="Default" />
       <updated>1426978033684</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Runtime log + Idea config">
-      <created>1427086862747</created>
-      <option name="number" value="00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1427086862747</updated>
     </task>
     <task id="LOCAL-00008" summary="Fixes">
       <created>1427306050394</created>
@@ -985,7 +723,13 @@
       <option name="project" value="LOCAL" />
       <updated>1432509467705</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Fixed form building">
+      <created>1432520856542</created>
+      <option name="number" value="00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1432520856542</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1034,7 +778,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Access filter fix" />
     <MESSAGE value="Plantation module + Extensions + Tiny fixes" />
     <MESSAGE value="Fixes" />
     <MESSAGE value="Global refactor + New database architecture" />
@@ -1059,7 +802,8 @@
     <MESSAGE value="Template builder entry" />
     <MESSAGE value="Template builder fixes" />
     <MESSAGE value="Finally fixed template macro replacer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finally fixed template macro replacer" />
+    <MESSAGE value="Fixed form building" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed form building" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1068,22 +812,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/js/site.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="499" max-vertical-offset="1334">
-          <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/site.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2137" max-vertical-offset="4301">
-          <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/doc/controllers/MacroController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.55316454" vertical-offset="1771" max-vertical-offset="3082">
@@ -1104,19 +832,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.21875" vertical-offset="4613" max-vertical-offset="5428">
           <caret line="212" column="20" selection-start-line="212" selection-start-column="20" selection-end-line="212" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/67b34dc1/4a1bea19-9630-4f7c-a585-745035fe4694/mgup.doc.macro_column">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="138">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1272,36 +987,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/67b34dc1/4a1bea19-9630-4f7c-a585-745035fe4694/mgup.doc.macro">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="138">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/pcre.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34639695" vertical-offset="4970" max-vertical-offset="11615">
           <caret line="228" column="9" selection-start-line="228" selection-start-column="9" selection-end-line="228" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/67b34dc1/4a1bea19-9630-4f7c-a585-745035fe4694/mgup.doc.file_access">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="138">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1322,32 +1011,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/67b34dc1/4a1bea19-9630-4f7c-a585-745035fe4694/mgup.doc.file_type">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="138">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/67b34dc1/4a1bea19-9630-4f7c-a585-745035fe4694/mgup.doc.file_category">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="138">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/ActiveField.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.03125" vertical-offset="805" max-vertical-offset="1725">
@@ -1364,19 +1027,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/67b34dc1/4a1bea19-9630-4f7c-a585-745035fe4694/mgup.doc.file_macro">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="138">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_7.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.5625" vertical-offset="3544" max-vertical-offset="25714">
@@ -1389,14 +1039,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.5625" vertical-offset="5016" max-vertical-offset="25185">
           <caret line="230" column="9" selection-start-line="230" selection-start-column="9" selection-end-line="230" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/doc/core/TemplateFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72692794" vertical-offset="483" max-vertical-offset="1909">
-          <caret line="52" column="15" selection-start-line="52" selection-start-column="15" selection-end-line="52" selection-end-column="15" />
           <folding />
         </state>
       </provider>
@@ -1467,23 +1109,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/67b34dc1/4a1bea19-9630-4f7c-a585-745035fe4694/mgup.doc.file_ext">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="775">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/doc/core/FileManager.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7977244" vertical-offset="2704" max-vertical-offset="5336">
           <caret line="151" column="11" selection-start-line="151" selection-start-column="11" selection-end-line="151" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/doc/controllers/BuilderController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.09375" vertical-offset="497" max-vertical-offset="1472">
+          <caret line="50" column="46" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
           <folding />
         </state>
       </provider>
@@ -1501,10 +1138,129 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/doc/controllers/BuilderController.php">
+    <entry file="dbDummy://dbtable:/67b34dc1/4a1bea19-9630-4f7c-a585-745035fe4694/mgup.doc.file_access">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="138">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/67b34dc1/4a1bea19-9630-4f7c-a585-745035fe4694/mgup.doc.file_category">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="138">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/67b34dc1/4a1bea19-9630-4f7c-a585-745035fe4694/mgup.doc.file_macro">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="138">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/67b34dc1/4a1bea19-9630-4f7c-a585-745035fe4694/mgup.doc.file_status">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="138">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/67b34dc1/4a1bea19-9630-4f7c-a585-745035fe4694/mgup.doc.file_template_element">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="138">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/67b34dc1/4a1bea19-9630-4f7c-a585-745035fe4694/mgup.doc.file_type">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="138">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/67b34dc1/4a1bea19-9630-4f7c-a585-745035fe4694/mgup.doc.macro">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="138">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/67b34dc1/4a1bea19-9630-4f7c-a585-745035fe4694/mgup.doc.macro_column">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="138">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/doc/widgets/views/TemplateForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.09375" vertical-offset="497" max-vertical-offset="1472">
-          <caret line="50" column="46" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.4863184" vertical-offset="0" max-vertical-offset="1150">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#119#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/67b34dc1/4a1bea19-9630-4f7c-a585-745035fe4694/mgup.doc.file_ext">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="775">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1517,13 +1273,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/doc/widgets/views/TemplateForm.php">
+    <entry file="file://$PROJECT_DIR$/modules/doc/core/TemplateFactory.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4863184" vertical-offset="0" max-vertical-offset="1150">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#119#0#PHP" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.6814159" vertical-offset="519" max-vertical-offset="1909">
+          <caret line="52" column="15" selection-start-line="52" selection-start-column="15" selection-end-line="52" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>
