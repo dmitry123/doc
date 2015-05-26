@@ -33,7 +33,7 @@ print \app\widgets\Panel::widget([
 ]);
 \app\widgets\Panel::begin([
     "title" => "Выгрузка файла",
-    "upgradeable" => false
+    "upgradable" => false
 ]) ?>
 <div class="col-xs-6">
 <?= Html::dropDownList("ext", $ext->id,

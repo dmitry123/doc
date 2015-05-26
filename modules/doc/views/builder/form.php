@@ -10,7 +10,7 @@ use app\models\doc\File;
 		"body" => \app\modules\doc\widgets\TemplateForm::create([
 			"file" => $file
 		]),
-		"upgradeable" => false
+		"upgradable" => false
 	]) ?>
 </div>
 <div class="col-xs-7">
@@ -19,6 +19,6 @@ use app\models\doc\File;
 		"body" => \yii\helpers\Html::tag("h3", "Не реализовано", [
 			"class" => "text-center"
 		]),
-		"upgradeable" => false
+		"upgradable" => false
 	]) ?>
 </div>

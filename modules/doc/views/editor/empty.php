@@ -3,12 +3,12 @@
  * @var $this \yii\web\View
  */
 
-use app\modules\doc\grids\File_DocumentTable_GridProvider;
+use app\modules\doc\grids\FileDocumentGridProvider;
 
 print \app\widgets\Modal::widget([
 	"title" => "Список файлов",
 	"body" => \app\widgets\Grid::widget([
-		"provider" => new File_DocumentTable_GridProvider()
+		"provider" => new FileDocumentGridProvider()
 	]),
 	"size" => \app\widgets\Modal::SIZE_LARGE,
 	"id" => "doc-editor-file-table-modal",

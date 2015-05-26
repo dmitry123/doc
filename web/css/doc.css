@@ -66,8 +66,7 @@
 }
 
 .doc-template-content-editor {
-    /*height: 700px;*/
-    /*overflow: scroll;*/
+    padding: 25px;
 }
 
 .doc-template-content-editor p[align='center'] {
@@ -139,4 +138,13 @@
 .modal-open .builder-panel-wrapper {
     left: calc(66% - 11px);
     width: calc(100% - 66% - 17px);
+}
+
+.doc-about-file-icon {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.doc-about-file-panel .btn-group-justified  > .btn-group {
+    padding: 2px;
 }

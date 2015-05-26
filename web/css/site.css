@@ -180,3 +180,18 @@ ul.btn-group {
 textarea {
     resize: vertical;
 }
+
+.control-menu-button {
+    cursor: pointer;
+}
+
+.hr-10 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-danger {
+    color: #ffffff;
+    background-color: #a94442;
+    border-color: #a94442;
+}

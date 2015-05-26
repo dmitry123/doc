@@ -58,7 +58,7 @@ class Widget extends \yii\base\Widget {
 
     /**
      * Use that method to require some widget's attribute and
-     * avoid extra conditions
+     * to avoid extra conditions
      *
      * @param $key string name of widget's field
      * @return mixed value of this attribute
@@ -67,7 +67,7 @@ class Widget extends \yii\base\Widget {
      */
     public function requireAttribute($key) {
         if (!isset($this->$key) || empty($this->$key)) {
-            throw new Exception("Class [". get_called_class() ."] attribute \"$key\" can't be empty");
+            throw new Exception("Widget [". get_called_class() ."] attribute \"$key\" can't be empty");
         } else {
             return $this->$key;
         }

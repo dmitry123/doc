@@ -65,6 +65,15 @@ class ControlMenu extends Widget {
 	const MODE_LIST = 5;
 
 	/**
+	 * Control elements displays as buttons wrapped by
+	 * justified group, attributes:
+	 *  + label - button text
+	 *  + [icon] - glyphicon before button's text
+	 *  + ... - other HTML attributes
+	 */
+	const MODE_GROUP = 6;
+
+	/**
 	 * @var int - How to display control elements, set it
 	 * 	to CONTROL_MODE_NONE to disable control elements
 	 */
@@ -97,6 +106,12 @@ class ControlMenu extends Widget {
 	 * 	only for [MODE_MENU] renders mode
 	 */
 	public $menuIcon = "glyphicon glyphicon-list";
+
+	/**
+	 * @var string placement of tooltip message, only
+	 * 	for [MODE_ICON] renders mode
+	 */
+	public $placement = "left";
 
 	/**
 	 * Run widget to render control elements
@@ -175,7 +190,7 @@ class ControlMenu extends Widget {
 				$options += [
 					"onmouseenter" => "$(this).tooltip('show')",
 					"title" => $required["label"],
-					"data-placement" => "left"
+					"data-placement" => $this->placement
 				];
 			}
 			$options["class"] = preg_replace($this->buttonRegexp, "", $options["class"]);
@@ -187,7 +202,7 @@ class ControlMenu extends Widget {
 		foreach ($this->controls as $class => $options) {
 			$required = $this->prepareControl($class, $options);
 			if (empty($required["label"])) {
-				throw new Exception("Panel's controls mode [CONTROL_MODE_BUTTON] requires [label] attribute");
+				$label = "";
 			} else {
 				$label = $required["label"];
 			}
@@ -198,6 +213,29 @@ class ControlMenu extends Widget {
 			}
 			print Html::tag("button", $label, $options);
 		}
+	}
+
+	public function renderGroupControls() {
+		print Html::beginTag("div", [
+			"class" => "btn-group btn-group-justified"
+		]);
+		foreach ($this->controls as $class => $options) {
+			$required = $this->prepareControl($class, $options);
+			if (empty($required["label"])) {
+				$label = "";
+			} else {
+				$label = $required["label"];
+			}
+			if (!empty($required["icon"])) {
+				$label = Html::tag("span", "", [
+						"class" => $required["icon"]
+					]) ."&nbsp;&nbsp;". $label;
+			}
+			print Html::tag("div", Html::tag("button", $label, $options), [
+				"class" => "btn-group"
+			]);
+		}
+		print Html::endTag("div");
 	}
 
 	public function renderMenuControls() {
@@ -295,6 +333,9 @@ class ControlMenu extends Widget {
 				break;
 			case self::MODE_BUTTON:
 				$this->renderButtonControls();
+				break;
+			case self::MODE_GROUP:
+				$this->renderGroupControls();
 				break;
 			case self::MODE_MENU:
 				$this->renderMenuControls();

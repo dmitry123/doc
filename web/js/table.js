@@ -56,12 +56,24 @@ var Core = Core || {};
 		return this;
 	};
 
-	Table.prototype.before = function(callback) {
-		this.selector().loading("render", callback);
+	Table.prototype.before = function() {
+		var me = this;
+		me._before = true;
+		setTimeout(function() {
+			if (me._before == true) {
+				me.selector().loading("render");
+			}
+		}, 250);
 	};
 
 	Table.prototype.after = function(callback) {
-		this.selector().loading("destroy", callback);
+		var me = this;
+		me._before = false;
+		if (this.selector().data("core-loading")) {
+			me.selector().loading("destroy", callback);
+		} else {
+			callback && callback();
+		}
 	};
 
 	Table.prototype.order = function(key) {

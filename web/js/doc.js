@@ -74,10 +74,12 @@ var Doc_File_Table = {
         table && table.table("before");
         Core.loadWidget("FileManager", {
             file: id
-        }, function(response) {
-            $("#doc-file-template-manager-modal").modal("show").find(".modal-body").empty().append(
-                response["component"]
-            );
+        }, function(widget) {
+            $("#doc-file-template-manager-modal")
+				.modal("show")
+				.find(".modal-body")
+				.empty()
+				.append(widget);
         }).always(function() {
             table && table.table("after");
         });
@@ -115,11 +117,10 @@ var Doc_File_Table = {
         if (ext.length > 0) {
             ext = ext.val();
         } else {
-            ext = null;
+            ext = "";
         }
         window.location.href = url("doc/file/download", {
-            file: id,
-            ext: ext
+            file: id, ext: ext
         });
     },
     active: null
@@ -450,11 +451,41 @@ var Doc_TemplateBuilder_Form = {
 	ready: function() {
 		$(".builder-compile-button").click(function() {
 			$(this).parents("form:eq(0)").form("send").success(function(response) {
-				$("#page-content .col-xs-7 .panel-content").html(
+				$("#page-content").find(".col-xs-7 .panel-content").html(
 					response["content"]
 				);
 			}).always(function() {
 			});
+		});
+	}
+};
+
+var Doc_FileDocument_Grid = {
+	ready: function() {
+		var me = this;
+		$(document).on("click", ".doc-file-document-grid > tbody > tr", function() {
+			me.loadAboutFile($(this).attr("data-id"));
+		});
+	},
+	loadAboutFile: function(id) {
+		var panel = $(".doc-about-file-panel");
+		Core.loadWidget("AboutFile", {
+			file: id
+		}, function(component) {
+			panel.replaceWith(component);
+		}).always(function() {
+		});
+	}
+};
+
+var Doc_AboutFile_Widget = {
+	ready: function() {
+		$(document).on("click", ".doc-about-file-download-icon", function() {
+			Doc_File_Table.download($(this).attr("data-id"));
+		}).on("click", ".doc-about-file-export-icon", function() {
+			Doc_File_Table.open($(this).attr("data-id"));
+		}).on("click", ".doc-about-file-template-icon", function() {
+			Doc_File_Table.open($(this).attr("data-id"));
 		});
 	}
 };
@@ -499,6 +530,8 @@ $(document).ready(function() {
 	Doc_MacroChoose_Form.ready();
 	Doc_TemplateEditor_Saver.ready();
 	Doc_TemplateBuilder_Form.ready();
+	Doc_FileDocument_Grid.ready();
+	Doc_AboutFile_Widget.ready();
 
     $("input[type='file'][data-toggle='fileinput']").fileinput({
         uploadUrl: url("doc/file/upload"),

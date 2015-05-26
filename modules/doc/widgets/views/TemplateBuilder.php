@@ -93,7 +93,7 @@ print \app\widgets\Modal::widget([
 				"file" => $file->{"id"}
 			]),
 			"bodyClass" => "panel-body clear",
-			"upgradeable" => false
+			"upgradable" => false
 		]) ?>
 	</div>
 	<div class="col-xs-4 builder-panel-wrapper">
@@ -121,7 +121,7 @@ print \app\widgets\Modal::widget([
 					"class" => "btn btn-default btn-xs",
 				],
 			],
-			"upgradeable" => false
+			"upgradable" => false
 		]) ?>
 		<hr>
 		<?= \app\widgets\Panel::widget([
@@ -148,7 +148,7 @@ print \app\widgets\Modal::widget([
 					"class" => "btn btn-default btn-xs",
 				],
 			],
-			"upgradeable" => false
+			"upgradable" => false
 		]) ?>
 		<hr>
 		<div class="col-xs-12 clear text-center">

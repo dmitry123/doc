@@ -7,7 +7,7 @@
  * @var $macro mixed[]
  */
 print \yii\helpers\Html::tag("div", $content, [
-	"class" => "row clear doc-template-content-editor"
+	"class" => "row no-margin doc-template-content-editor"
 ]);
 foreach ($macro as $m) {
 	$this->registerJs(<<< JS

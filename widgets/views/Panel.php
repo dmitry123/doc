@@ -7,7 +7,7 @@
  */
 ?>
 
-<div class="<?= $self->panelClass ?>" id="<?= $self->id ?>" <?= !empty($widget) ? "data-widget=\"$widget\"" : "" ?> <?= !empty($parameters) && $self->upgradeable !== false ? "data-attributes=\"$parameters\"" : "" ?>>
+<div class="<?= $self->panelClass ?>" id="<?= $self->id ?>" <?= !empty($widget) ? "data-widget=\"$widget\"" : "" ?> <?= !empty($parameters) && $self->upgradable !== false ? "data-attributes=\"$parameters\"" : "" ?>>
     <div class="<?= $self->headingClass ?>">
 		<div class="<?= $self->titleWrapperClass ?>">
 			<span class="<?= $self->titleClass ?>"><?= $self->title ?></span>
@@ -23,4 +23,9 @@
 			</div>
 		</div>
 	</div>
+	<?php if ($self->footer): ?>
+		<div class="panel-footer">
+			<?= $self->footer ?>
+		</div>
+	<?php endif ?>
 </div>

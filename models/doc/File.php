@@ -2,9 +2,34 @@
 
 namespace app\models\doc;
 
+use app\models\core\Employee;
 use yii\db\mssql\PDO;
 
 class File extends \app\core\ActiveRecord {
+
+	public function findCategory() {
+		return FileType::findOne([ "id" => $this->{"file_category_id"} ]);
+	}
+
+	public function findEmployee() {
+		return Employee::findOne([ "id" => $this->{"employee_id"} ]);
+	}
+
+	public function findParent() {
+		return Employee::findOne([ "id" => $this->{"parent_id"} ]);
+	}
+
+	public function findStatus() {
+		return FileStatus::findOne([ "id" => $this->{"file_status_id"} ]);
+	}
+
+	public function findType() {
+		return FileType::findOne([ "id" => $this->{"file_type_id"} ]);
+	}
+
+	public function findExt() {
+		return FileExt::findOne([ "id" => $this->{"file_ext_id"} ]);
+	}
 
 	public function configure() {
 		return [

@@ -18,7 +18,7 @@
 		]),
 		"title" => "Модули",
 		"bodyClass" => "panel-body clear",
-		"upgradeable" => false
+		"upgradable" => false
 	]) ?>
 </div>
 <div class="col-xs-9" id="plantation-module-content">

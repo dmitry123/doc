@@ -95,7 +95,7 @@ class Panel extends Widget {
 	 * @see body
 	 * @see Widget::createWidget
 	 */
-	public $upgradeable = null;
+	public $upgradable = true;
 
 	/**
 	 * @var array with control elements, it's attributes depends on
@@ -107,20 +107,7 @@ class Panel extends Widget {
 	 * @see ControlMenu
 	 * @see controlMode
 	 */
-	public $controls = [
-		"panel-update-button" => [
-			"label" => "Обновить",
-			"icon" => "glyphicon glyphicon-refresh",
-			"onclick" => "$(this).panel('update')",
-			"class" => "btn btn-default btn-sm",
-		],
-		"panel-collapse-button" => [
-			"label" => "Свернуть/Развернуть",
-			"icon" => "glyphicon glyphicon-asterisk",
-			"onclick" => "$(this).panel('toggle')",
-			"class" => "btn btn-default btn-sm",
-		]
-	];
+	public $controls = [];
 
 	/**
 	 * @var int how to display control elements, set it
@@ -137,6 +124,11 @@ class Panel extends Widget {
 	public $attributes = null;
 
 	/**
+	 * @var string content of panel's footer
+	 */
+	public $footer = null;
+
+	/**
 	 * Initialize widget
 	 */
     public function init() {
@@ -150,22 +142,41 @@ class Panel extends Widget {
 			$this->attributes = $this->body->getAttributes($config);
             $this->body = $this->body->call();
         } else {
-			if ($this->upgradeable !== null) {
-				$this->upgradeable = false;
+			if ($this->upgradable !== null) {
+				$this->upgradable = false;
 			}
 			$this->_widget = null;
 		}
 		if (empty($this->id)) {
 			$this->id = UniqueGenerator::generate("panel");
 		}
+		if ($this->footer instanceof Widget) {
+			ob_start();
+			print $this->footer->run();
+			$this->footer =  ob_get_clean();
+		}
 		if ($this->body == null) {
 			ob_start();
 		}
-		if ($this->collapsible == false) {
-			unset($this->controls["panel-collapse-button"]);
+		if ($this->upgradable) {
+			$this->controls += [
+				"panel-update-button" => [
+					"label" => "Обновить",
+					"icon" => "glyphicon glyphicon-refresh",
+					"onclick" => "$(this).panel('update')",
+					"class" => "btn btn-default btn-sm",
+				],
+			];
 		}
-		if ($this->upgradeable === false) {
-			unset($this->controls["panel-update-button"]);
+		if ($this->collapsible) {
+			$this->controls += [
+				"panel-collapse-button" => [
+					"label" => "Свернуть/Развернуть",
+					"icon" => "glyphicon glyphicon-asterisk",
+					"onclick" => "$(this).panel('toggle')",
+					"class" => "btn btn-default btn-sm",
+				]
+			];
 		}
     }
 

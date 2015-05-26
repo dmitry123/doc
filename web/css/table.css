@@ -38,3 +38,9 @@
 .table-footer > tr > td > div {
     padding: 0;
 }
+
+.table-hover > tbody > tr[data-id]:hover {
+    background-color: #008bb9 !important;
+    color: white;
+    cursor: pointer;
+}

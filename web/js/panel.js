@@ -35,7 +35,8 @@ var Core = Core || {};
 	};
 
 	Panel.prototype.before = function() {
-		var refresh = this.selector().loading("render").find(".panel-update-button");
+		this.selector().loading("render");
+		var refresh = this.selector().find(".panel-update-button");
 		if (refresh[0].tagName != "SPAN") {
 			refresh.children("span").rotate(360, 500, "swing");
 		} else {
@@ -44,7 +45,7 @@ var Core = Core || {};
 	};
 
 	Panel.prototype.after = function() {
-		this.selector().loading("destroy");
+		this.selector().loading("reset");
 	};
 
 	Panel.prototype.update = function() {
@@ -55,6 +56,12 @@ var Core = Core || {};
 			throw new Error("Layout hasn't declared [doc::widget] field via [Widget::createUrl] method");
 		}
 		this.before();
+		if (this.selector().find(".panel-content > *:eq(0)").is("table")) {
+			this.selector().find(".panel-content > table").table("update");
+			this.after();
+			this.selector().trigger("panel.updated");
+			return void 0;
+		}
         var params = this.selector().attr("data-attributes");
         if (params) {
             params = $.parseJSON(params);

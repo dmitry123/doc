@@ -216,7 +216,9 @@ var Core = Core || {};
             "module": module || doc["module"],
 			"class": widget,
             "config": attributes
-		}, success);
+		}, function(response) {
+			success && success(response["component"]);
+		});
 	};
 
 	Core.loadPanel = function(widget, attributes, success) {
