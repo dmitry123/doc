@@ -6,6 +6,7 @@
  * @var $ext app\models\doc\FileExt
  * @var $status app\models\doc\FileStatus
  * @var $type app\models\doc\FileType
+ * @var $employee app\models\core\Employee
  */
 ob_start() ?>
 <div class="col-xs-6 text-left">
@@ -51,6 +52,10 @@ ob_start() ?>
 	]),
 	"panelClass" => "panel panel-default doc-about-file-panel",
 ]) ?>
+<div class="row clear">
+	<div class="col-xs-6 text-left"><b>Загрузил</b></div>
+	<div class="col-xs-6 text-left"><?= $employee->{"surname"}." ".$employee->{"name"}." ".$employee->{"patronymic"} ?></div>
+</div>
 <div class="row clear">
 	<div class="col-xs-6 text-left"><b>Дата загрузки</b></div>
 	<div class="col-xs-6 text-left"><?= $file->{"upload_date"} ?></div>

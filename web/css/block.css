@@ -132,3 +132,9 @@ button:active, button .active {
 #page-content > .page-block > .row {
     border-radius: 7px;
 }
+
+.btn-danger {
+    color: #ffffff;
+    background-color: #b90001;
+    border-color: #a94442;
+}

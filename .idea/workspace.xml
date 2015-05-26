@@ -2,32 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c7867d1-dabe-479e-927f-a32ef258089e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/doc/widgets/FileExporter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/doc/widgets/views/FileExporter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/widgets/AboutFile.php" afterPath="$PROJECT_DIR$/modules/doc/widgets/AboutFile.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/widgets/views/AboutFile.php" afterPath="$PROJECT_DIR$/modules/doc/widgets/views/AboutFile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widgets/ControlMenu.php" afterPath="$PROJECT_DIR$/widgets/ControlMenu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/doc/File.php" afterPath="$PROJECT_DIR$/models/doc/File.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/widgets/views/FileManager.php" afterPath="$PROJECT_DIR$/modules/doc/widgets/views/FileManager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widgets/Panel.php" afterPath="$PROJECT_DIR$/widgets/Panel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widgets/views/Panel.php" afterPath="$PROJECT_DIR$/widgets/views/Panel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/widgets/views/TemplateBuilder.php" afterPath="$PROJECT_DIR$/modules/doc/widgets/views/TemplateBuilder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/widgets/views/TemplateEditor.php" afterPath="$PROJECT_DIR$/modules/doc/widgets/views/TemplateEditor.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/Widget.php" afterPath="$PROJECT_DIR$/core/Widget.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/logs/app.log" afterPath="$PROJECT_DIR$/runtime/logs/app.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/core.js" afterPath="$PROJECT_DIR$/web/js/core.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/doc.css" afterPath="$PROJECT_DIR$/web/css/doc.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/doc.js" afterPath="$PROJECT_DIR$/web/js/doc.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/views/editor/empty.php" afterPath="$PROJECT_DIR$/modules/doc/views/editor/empty.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/views/builder/form.php" afterPath="$PROJECT_DIR$/modules/doc/views/builder/form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/panel.js" afterPath="$PROJECT_DIR$/web/js/panel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/block.css" afterPath="$PROJECT_DIR$/web/css/block.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/site.css" afterPath="$PROJECT_DIR$/web/css/site.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/table.css" afterPath="$PROJECT_DIR$/web/css/table.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/table.js" afterPath="$PROJECT_DIR$/web/js/table.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/views/file/view.php" afterPath="$PROJECT_DIR$/modules/doc/views/file/view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/plantation/views/master/view.php" afterPath="$PROJECT_DIR$/modules/plantation/views/master/view.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\hosts\doc\modules\doc\grids\File_DocumentTable_GridProvider.php" afterPath="$PROJECT_DIR$/modules/doc/grids/FileDocumentGridProvider.php" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -94,18 +72,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="view.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/doc/views/file/view.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.34375" vertical-offset="69" max-vertical-offset="1012">
-              <caret line="16" column="62" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
-              <folding>
-                <element signature="e#6#40#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="FileDocumentGridProvider.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/doc/grids/FileDocumentGridProvider.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -131,19 +97,43 @@
       <file leaf-file-name="doc.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/css/doc.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1243" max-vertical-offset="3565">
-              <caret line="76" column="1" selection-start-line="76" selection-start-column="1" selection-end-line="76" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2177" max-vertical-offset="3565">
+              <caret line="149" column="1" selection-start-line="149" selection-start-column="1" selection-end-line="149" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="panel.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="panel.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/js/panel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6359223" vertical-offset="1017" max-vertical-offset="2392">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1017" max-vertical-offset="2392">
               <caret line="67" column="16" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="16" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AboutFile.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/doc/widgets/views/AboutFile.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.46875" vertical-offset="921" max-vertical-offset="1932">
+              <caret line="56" column="84" selection-start-line="56" selection-start-column="84" selection-end-line="56" selection-end-column="84" />
+              <folding>
+                <element signature="e#6#259#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AboutFile.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/doc/widgets/AboutFile.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-19.40625" vertical-offset="874" max-vertical-offset="1725">
+              <caret line="65" column="46" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="46" />
+              <folding>
+                <element signature="e#43#63#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -151,8 +141,18 @@
       <file leaf-file-name="site.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/css/site.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2636" max-vertical-offset="4646">
-              <caret line="187" column="2" selection-start-line="187" selection-start-column="1" selection-end-line="187" selection-end-column="2" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="3810" max-vertical-offset="4646">
+              <caret line="192" column="0" selection-start-line="192" selection-start-column="0" selection-end-line="196" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="block.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/css/block.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.36722487" vertical-offset="2407" max-vertical-offset="3335">
+              <caret line="118" column="18" selection-start-line="118" selection-start-column="18" selection-end-line="118" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -178,26 +178,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="doc.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/doc.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="10766" max-vertical-offset="13202">
-              <caret line="479" column="0" selection-start-line="479" selection-start-column="0" selection-end-line="479" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/doc/controllers/FileController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.28125" vertical-offset="1120" max-vertical-offset="3243">
-              <caret line="75" column="37" selection-start-line="75" selection-start-column="37" selection-end-line="75" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -210,7 +190,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/migrations/m150524_203451_doc_macro_fixes.php" />
         <option value="$PROJECT_DIR$/modules/doc/widgets/views/MacroMaker.php" />
         <option value="$PROJECT_DIR$/models/doc/Macro.php" />
         <option value="$PROJECT_DIR$/validators/RequiredValidator.php" />
@@ -246,13 +225,11 @@
         <option value="$PROJECT_DIR$/core/Widget.php" />
         <option value="$PROJECT_DIR$/models/doc/File.php" />
         <option value="$PROJECT_DIR$/modules/doc/widgets/AboutFile.php" />
-        <option value="$PROJECT_DIR$/web/css/site.css" />
         <option value="$PROJECT_DIR$/widgets/views/Panel.php" />
         <option value="$PROJECT_DIR$/widgets/Panel.php" />
         <option value="$PROJECT_DIR$/modules/doc/widgets/FileExporter.php" />
         <option value="$PROJECT_DIR$/modules/doc/widgets/views/FileExporter.php" />
         <option value="$PROJECT_DIR$/widgets/ControlMenu.php" />
-        <option value="$PROJECT_DIR$/modules/doc/widgets/views/AboutFile.php" />
         <option value="$PROJECT_DIR$/modules/doc/views/file/view.php" />
         <option value="$PROJECT_DIR$/web/js/doc.js" />
         <option value="$PROJECT_DIR$/modules/doc/grids/FileDocumentGridProvider.php" />
@@ -261,6 +238,9 @@
         <option value="$PROJECT_DIR$/modules/doc/widgets/views/TemplateEditor.php" />
         <option value="$PROJECT_DIR$/web/css/doc.css" />
         <option value="$PROJECT_DIR$/web/js/panel.js" />
+        <option value="$PROJECT_DIR$/modules/doc/widgets/views/AboutFile.php" />
+        <option value="$PROJECT_DIR$/web/css/site.css" />
+        <option value="$PROJECT_DIR$/web/css/block.css" />
       </list>
     </option>
   </component>
@@ -269,7 +249,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 5.5" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="198" />
+    <option name="x" value="1208" />
     <option name="y" value="35" />
     <option name="width" value="1541" />
     <option name="height" value="996" />
@@ -512,7 +492,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="panel.js&#9;FILE&#9;file://D:/hosts/doc/web/js/panel.js&#10;table&#9;FILE&#9;file://D:/hosts/doc/web/css/table.css&#10;FileContr&#9;FILE&#9;file://D:/hosts/doc/modules/doc/controllers/FileController.php&#10;doc.cs&#9;FILE&#9;file://D:/hosts/doc/web/css/doc.css&#10;site.cs&#9;FILE&#9;file://D:/hosts/doc/web/css/site.css&#10;File&#9;null&#9;null&#10;loading.js&#9;FILE&#9;file://D:/hosts/doc/web/js/loading.js&#10;FileWi&#9;FILE&#9;file://D:/hosts/doc/modules/doc/core/FileWidget.php&#10;doc.css&#9;FILE&#9;file://D:/hosts/doc/web/css/doc.css&#10;site.css&#9;FILE&#9;file://D:/hosts/doc/web/css/site.css&#10;doc.js&#9;FILE&#9;file://D:/hosts/doc/web/js/doc.js&#10;table.css&#9;FILE&#9;file://D:/hosts/doc/web/css/table.css&#10;table.js&#9;FILE&#9;file://D:/hosts/doc/web/js/table.js&#10;TemplateFa&#9;FILE&#9;file://D:/hosts/doc/modules/doc/core/TemplateFactory.php&#10;FileManager&#9;FILE&#9;file://D:/hosts/doc/modules/doc/core/FileManager.php&#10;TemplateContr&#9;FILE&#9;file://D:/hosts/doc/modules/doc/controllers/TemplateController.php&#10;ActiveF&#9;FILE&#9;file://D:/hosts/doc/core/ActiveField.php&#10;templatecom&#9;FILE&#9;file://D:/hosts/doc/modules/doc/core/TemplateCompiler.php&#10;BuilderContr&#9;FILE&#9;file://D:/hosts/doc/modules/doc/controllers/BuilderController.php&#10;FileMana&#9;null&#9;null&#10;Build&#9;FILE&#9;file://D:/hosts/doc/modules/doc/controllers/BuilderController.php&#10;BuilderCont&#9;FILE&#9;file://D:/hosts/doc/modules/doc/controllers/BuilderController.php&#10;form.php&#9;FILE&#9;file://D:/hosts/doc/modules/doc/views/builder/form.php&#10;TypeMana&#9;null&#9;null&#10;EditorCon&#9;null&#9;null&#10;BuilderCon&#9;null&#9;null&#10;MacroContr&#9;FILE&#9;file://D:/hosts/doc/modules/doc/controllers/MacroController.php&#10;site.js&#9;FILE&#9;file://D:/hosts/doc/web/js/site.js&#10;modal.js&#9;FILE&#9;file://D:/hosts/doc/vendor/bower/bootstrap/js/modal.js&#10;MacroCon&#9;FILE&#9;file://D:/hosts/doc/modules/doc/controllers/MacroController.php&#10;MixedVali&#9;FILE&#9;file://D:/hosts/doc/validators/MixedValidator.php&#10;Mixedva&#9;FILE&#9;file://D:/hosts/doc/validators/MixedValidator.php&#10;MixedVa&#9;FILE&#9;file://D:/hosts/doc/validators/MixedValidator.php&#10;core.js&#9;FILE&#9;file://D:/hosts/doc/web/js/core.js&#10;Macro&#9;null&#9;null&#10;DefaultVali&#9;null&#9;null&#10;MacroController&#9;null&#9;null&#10;MacroForm&#9;null&#9;null&#10;FileMa&#9;FILE&#9;dbDummy://dbtable:/67b34dc1/4a1bea19-9630-4f7c-a585-745035fe4694/mgup.doc.file_macro&#10;EditorContr&#9;null&#9;null&#10;FileConve&#9;null&#9;null&#10;Controller&#9;FILE&#9;file://D:/hosts/doc/core/Controller.php&#10;ExtContr&#9;null&#9;null&#10;require&#9;FILE&#9;file://D:/hosts/doc/validators/RequiredValidator.php&#10;view&#9;FILE&#9;file://D:/hosts/doc/modules/doc/views/file/view.php&#10;yii\bootstrap\BootstrapAsset&#9;null&#9;null&#10;Va&#9;FILE&#9;file://D:/hosts/doc/core/Validator.php&#10;Validator&#9;FILE&#9;file://D:/hosts/doc/core/Validator.php&#10;MixedValida&#9;FILE&#9;file://D:/hosts/doc/validators/MixedValidator.php&#10;TypeMa&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="block.css&#9;FILE&#9;file://D:/hosts/doc/web/css/block.css&#10;panel.js&#9;FILE&#9;file://D:/hosts/doc/web/js/panel.js&#10;table&#9;FILE&#9;file://D:/hosts/doc/web/css/table.css&#10;FileContr&#9;FILE&#9;file://D:/hosts/doc/modules/doc/controllers/FileController.php&#10;doc.cs&#9;FILE&#9;file://D:/hosts/doc/web/css/doc.css&#10;site.cs&#9;FILE&#9;file://D:/hosts/doc/web/css/site.css&#10;File&#9;null&#9;null&#10;loading.js&#9;FILE&#9;file://D:/hosts/doc/web/js/loading.js&#10;FileWi&#9;FILE&#9;file://D:/hosts/doc/modules/doc/core/FileWidget.php&#10;doc.css&#9;FILE&#9;file://D:/hosts/doc/web/css/doc.css&#10;site.css&#9;FILE&#9;file://D:/hosts/doc/web/css/site.css&#10;doc.js&#9;FILE&#9;file://D:/hosts/doc/web/js/doc.js&#10;table.css&#9;FILE&#9;file://D:/hosts/doc/web/css/table.css&#10;table.js&#9;FILE&#9;file://D:/hosts/doc/web/js/table.js&#10;TemplateFa&#9;FILE&#9;file://D:/hosts/doc/modules/doc/core/TemplateFactory.php&#10;FileManager&#9;FILE&#9;file://D:/hosts/doc/modules/doc/core/FileManager.php&#10;TemplateContr&#9;FILE&#9;file://D:/hosts/doc/modules/doc/controllers/TemplateController.php&#10;ActiveF&#9;FILE&#9;file://D:/hosts/doc/core/ActiveField.php&#10;templatecom&#9;FILE&#9;file://D:/hosts/doc/modules/doc/core/TemplateCompiler.php&#10;BuilderContr&#9;FILE&#9;file://D:/hosts/doc/modules/doc/controllers/BuilderController.php&#10;FileMana&#9;null&#9;null&#10;Build&#9;FILE&#9;file://D:/hosts/doc/modules/doc/controllers/BuilderController.php&#10;BuilderCont&#9;FILE&#9;file://D:/hosts/doc/modules/doc/controllers/BuilderController.php&#10;form.php&#9;FILE&#9;file://D:/hosts/doc/modules/doc/views/builder/form.php&#10;TypeMana&#9;null&#9;null&#10;EditorCon&#9;null&#9;null&#10;BuilderCon&#9;null&#9;null&#10;MacroContr&#9;FILE&#9;file://D:/hosts/doc/modules/doc/controllers/MacroController.php&#10;site.js&#9;FILE&#9;file://D:/hosts/doc/web/js/site.js&#10;modal.js&#9;FILE&#9;file://D:/hosts/doc/vendor/bower/bootstrap/js/modal.js&#10;MacroCon&#9;FILE&#9;file://D:/hosts/doc/modules/doc/controllers/MacroController.php&#10;MixedVali&#9;FILE&#9;file://D:/hosts/doc/validators/MixedValidator.php&#10;Mixedva&#9;FILE&#9;file://D:/hosts/doc/validators/MixedValidator.php&#10;MixedVa&#9;FILE&#9;file://D:/hosts/doc/validators/MixedValidator.php&#10;core.js&#9;FILE&#9;file://D:/hosts/doc/web/js/core.js&#10;Macro&#9;null&#9;null&#10;DefaultVali&#9;null&#9;null&#10;MacroController&#9;null&#9;null&#10;MacroForm&#9;null&#9;null&#10;FileMa&#9;FILE&#9;dbDummy://dbtable:/67b34dc1/4a1bea19-9630-4f7c-a585-745035fe4694/mgup.doc.file_macro&#10;EditorContr&#9;null&#9;null&#10;FileConve&#9;null&#9;null&#10;Controller&#9;FILE&#9;file://D:/hosts/doc/core/Controller.php&#10;ExtContr&#9;null&#9;null&#10;require&#9;FILE&#9;file://D:/hosts/doc/validators/RequiredValidator.php&#10;view&#9;FILE&#9;file://D:/hosts/doc/modules/doc/views/file/view.php&#10;yii\bootstrap\BootstrapAsset&#9;null&#9;null&#10;Va&#9;FILE&#9;file://D:/hosts/doc/core/Validator.php&#10;Validator&#9;FILE&#9;file://D:/hosts/doc/core/Validator.php&#10;MixedValida&#9;FILE&#9;file://D:/hosts/doc/validators/MixedValidator.php" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="FullScreen" value="false" />
     <property name="recentsLimit" value="5" />
@@ -591,12 +571,6 @@
       <created>1426978033684</created>
       <option name="number" value="Default" />
       <updated>1426978033684</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Basic document loaders">
-      <created>1427436472477</created>
-      <option name="number" value="00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1427436472477</updated>
     </task>
     <task id="LOCAL-00010" summary="Document class">
       <created>1427436627703</created>
@@ -886,14 +860,21 @@
       <option name="project" value="LOCAL" />
       <updated>1432541090128</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Interface improvements">
+      <created>1432626670963</created>
+      <option name="number" value="00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1432626670963</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="198" y="35" width="1541" height="996" extended-state="0" />
+    <frame x="1208" y="35" width="1541" height="996" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32601157" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277849" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277849" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38006952" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -910,7 +891,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277849" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.59411013" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -935,7 +915,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Fixes" />
     <MESSAGE value="Global refactor + New database architecture" />
     <MESSAGE value="Form model refactor" />
     <MESSAGE value="Entry page refactor" />
@@ -960,7 +939,8 @@
     <MESSAGE value="Finally fixed template macro replacer" />
     <MESSAGE value="Fixed form building" />
     <MESSAGE value="Template factory fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Template factory fix" />
+    <MESSAGE value="Interface improvements" />
+    <option name="LAST_COMMIT_MESSAGE" value="Interface improvements" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -969,13 +949,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/modules/doc/controllers/TemplateController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.65625" vertical-offset="690" max-vertical-offset="1771">
-          <caret line="55" column="17" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_7.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.5625" vertical-offset="3544" max-vertical-offset="25714">
@@ -1254,16 +1227,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/doc/widgets/AboutFile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.40625" vertical-offset="874" max-vertical-offset="1725">
-          <caret line="65" column="46" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="46" />
-          <folding>
-            <element signature="e#43#63#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/widgets/ControlMenu.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.61868685" vertical-offset="4639" max-vertical-offset="8050">
@@ -1277,16 +1240,6 @@
         <state vertical-scroll-proportion="-9.34375" vertical-offset="1173" max-vertical-offset="4830">
           <caret line="66" column="62" selection-start-line="66" selection-start-column="33" selection-end-line="66" selection-end-column="62" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/doc/widgets/views/AboutFile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.90625" vertical-offset="0" max-vertical-offset="1817">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-          <folding>
-            <element signature="e#6#216#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1381,14 +1334,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/site.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3809" max-vertical-offset="4646">
-          <caret line="187" column="2" selection-start-line="187" selection-start-column="1" selection-end-line="187" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/css/table.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="290" max-vertical-offset="1173">
@@ -1405,18 +1350,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/doc.css">
+    <entry file="file://$PROJECT_DIR$/web/js/panel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1243" max-vertical-offset="3565">
-          <caret line="76" column="1" selection-start-line="76" selection-start-column="1" selection-end-line="76" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1017" max-vertical-offset="2392">
+          <caret line="67" column="16" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/panel.js">
+    <entry file="file://$PROJECT_DIR$/modules/doc/widgets/AboutFile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6359223" vertical-offset="1017" max-vertical-offset="2392">
-          <caret line="67" column="16" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="16" />
+        <state vertical-scroll-proportion="-19.40625" vertical-offset="874" max-vertical-offset="1725">
+          <caret line="65" column="46" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="46" />
+          <folding>
+            <element signature="e#43#63#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/doc/widgets/views/AboutFile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.46875" vertical-offset="921" max-vertical-offset="1932">
+          <caret line="56" column="84" selection-start-line="56" selection-start-column="84" selection-end-line="56" selection-end-column="84" />
+          <folding>
+            <element signature="e#6#259#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/doc.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2177" max-vertical-offset="3565">
+          <caret line="149" column="1" selection-start-line="149" selection-start-column="1" selection-end-line="149" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/site.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3810" max-vertical-offset="4646">
+          <caret line="192" column="0" selection-start-line="192" selection-start-column="0" selection-end-line="196" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/block.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36722487" vertical-offset="2407" max-vertical-offset="3335">
+          <caret line="118" column="18" selection-start-line="118" selection-start-column="18" selection-end-line="118" selection-end-column="18" />
           <folding />
         </state>
       </provider>
