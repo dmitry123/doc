@@ -2,6 +2,8 @@
 /**
  * @var $this yii\web\View
  */
+use app\modules\doc\grids\CityGridProvider;
+
 print \app\widgets\Modal::widget([
     "title" => "Шаблоны документа",
     "body" => \yii\helpers\Html::tag("h1", "Документ не выбран", [
@@ -33,6 +35,14 @@ print \app\widgets\Modal::widget([
 			"title" => "Информация",
 			"body" => \app\modules\doc\widgets\AboutFile::create(),
 			"panelClass" => "panel panel-default doc-about-file-panel",
+			"upgradable" => false,
+		]) ?>
+		<?= \app\widgets\Panel::widget([
+			"title" => "Предпросмотр",
+			"body" => \yii\helpers\Html::tag("h4", "Не поддерживается", [
+				"class" => "text-center"
+			]),
+			"panelClass" => "panel panel-default doc-file-preview-panel",
 			"upgradable" => false,
 		]) ?>
 	</div>

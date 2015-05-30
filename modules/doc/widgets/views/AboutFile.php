@@ -1,6 +1,7 @@
 <?php
 /**
  * @var $this yii\web\View
+ * @var $string string
  * @var $file app\models\doc\File
  * @var $columns string[]
  * @var $ext app\models\doc\FileExt
@@ -9,11 +10,8 @@
  * @var $employee app\models\core\Employee
  */
 ob_start() ?>
-<div class="col-xs-6 text-left">
-	Информация о <?= $type->{"name"} ?>е
-</div>
-<div class="col-xs-6 text-right">
-	<h4 class="clear"><b><?= $file->{"name"} ?></b></h4>
+<div class="col-xs-12 text-right">
+	<h4 class="clear"><b><?= $string ?></b></h4>
 </div>
 <? $panel = \app\widgets\Panel::begin([
 	"title" => ob_get_clean(),

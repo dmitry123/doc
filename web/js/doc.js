@@ -9,13 +9,14 @@ var Doc_Navigation_Menu = {
 			uploadUrl: url("doc/file/upload"),
             uploadAsync: true,
             ajaxSettings: {
-                success: me.afterUpload
+                success: function() {
+					$("#document-file-upload").fileinput("clearFileInput");
+					me.afterUpload();
+				}
             },
 			uploadExtraData: {
 				form: $("file-upload-modal").find("form")
 			}
-		}).on("filebatchselected", function() {
-			//$(this).fileinput("upload");
 		});
 		$("#file-upload-modal").on("show.bs.modal", function() {
 			$("#document-file-upload").fileinput("clearFileInput");
@@ -464,16 +465,19 @@ var Doc_FileDocument_Grid = {
 	ready: function() {
 		var me = this;
 		$(document).on("click", ".doc-file-document-grid > tbody > tr", function() {
-			me.loadAboutFile($(this).attr("data-id"));
+			me.loadFileInfo($(this).attr("data-id"));
 		});
 	},
-	loadAboutFile: function(id) {
+	loadFileInfo: function(id) {
+		var wrapper = $(".doc-file-document-grid").parents(".panel")
+			.loading("render");
 		var panel = $(".doc-about-file-panel");
 		Core.loadWidget("AboutFile", {
 			file: id
 		}, function(component) {
 			panel.replaceWith(component);
 		}).always(function() {
+			wrapper.loading("reset");
 		});
 	}
 };
@@ -516,6 +520,8 @@ $(document).ready(function() {
 		uploadTitle: "Загрузить выбранные файлы",
 		uploadIcon: "<i class=\"glyphicon glyphicon-upload\"></i> ",
 		dropZoneTitle: "Перетащите файлы сюда &hellip;",
+		previewTemplates: {},
+		allowedPreviewTypes: [],
 		uploadAsync: true,
 		showUpload: true,
 		showRemove: false,

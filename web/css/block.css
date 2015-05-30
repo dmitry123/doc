@@ -125,16 +125,10 @@ button:active, button .active {
     color: #008bb9;
 }
 
-.module-cell:hover .module-icon-wrapper[data-error='not-implemented'] .module-icon {
+.module-cell:hover .module-icon-wrapper[data-error] .module-icon {
     color: #d8534f;
 }
 
 #page-content > .page-block > .row {
     border-radius: 7px;
-}
-
-.btn-danger {
-    color: #ffffff;
-    background-color: #b90001;
-    border-color: #a94442;
 }

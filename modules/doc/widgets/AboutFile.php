@@ -58,8 +58,14 @@ class AboutFile extends Widget {
 				"field" => $field
 			];
 		}
+		$ext = $this->file->findExt();
+		$string = mb_strtoupper($this->file->{"name"}.".".$ext->{"ext"}, "UTF-8");
+		if (strlen($string) > 40) {
+			$string = substr($string, 0, 40)." ...";
+		}
 		return $this->render("AboutFile", [
-			"ext" => $this->file->findExt(),
+			"string" => $string,
+			"ext" => $ext,
 			"employee" => $this->file->findEmployee(),
 			"file" => $this->file,
 			"status" => $this->file->findStatus(),

@@ -51,6 +51,8 @@ SQL;
 	public function safeDown() {
 		$sql = <<< SQL
 
+		DELETE FROM "core"."employee";
+
 		DELETE FROM "core"."role" WHERE
 		  "id" = 'director' OR
 		  "id" = 'manager' OR

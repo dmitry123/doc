@@ -57,6 +57,16 @@
 		],
 		"url" => "plantation/master/view"
 	],
+	"security" => [
+		"class" => "app\\modules\\security\\SecurityModule",
+		"name" => "Безопасность",
+		"icon" => "fa fa-lock",
+		"roles" => [
+			"admin",
+			"super",
+		],
+		"url" => "security/role/list"
+	],
 	"admin" => [
 		"class" => "app\\modules\\admin\\AdminModule",
 		"name" => "Управление",
@@ -67,13 +77,4 @@
 		],
 		"url" => "admin/master/view"
 	],
-//	"security" => [
-//		"class" => "app\\modules\\security\\SecurityModule",
-//		"name" => "Безопасность",
-//		"icon" => "glyphicon glyphicon-lock",
-//		"roles" => [
-//			"admin",
-//			"super",
-//		]
-//	]
 ];
