@@ -1,43 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c7867d1-dabe-479e-927f-a32ef258089e" name="Default" comment="Unoconv fixes for OS X">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/22ac1108/yii.activeForm.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/22ac1108/yii.captcha.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/22ac1108/yii.gridView.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/22ac1108/yii.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/22ac1108/yii.validation.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/3a378fa5/css/bootstrap-theme.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/3a378fa5/css/bootstrap-theme.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/3a378fa5/css/bootstrap-theme.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/3a378fa5/css/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/3a378fa5/css/bootstrap.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/3a378fa5/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/3a378fa5/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/3a378fa5/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/3a378fa5/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/3a378fa5/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/3a378fa5/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/3a378fa5/js/bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/3a378fa5/js/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/3a378fa5/js/npm.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/8d6f3813/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/8d6f3813/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/8d6f3813/jquery.min.map" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/widgets/AboutFile.php" afterPath="$PROJECT_DIR$/modules/doc/widgets/AboutFile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/widgets/views/AboutFile.php" afterPath="$PROJECT_DIR$/modules/doc/widgets/views/AboutFile.php" />
+    <list default="true" id="3c7867d1-dabe-479e-927f-a32ef258089e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/core/FileConverter.php" afterPath="$PROJECT_DIR$/modules/doc/core/FileConverter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/core/FileManager.php" afterPath="$PROJECT_DIR$/modules/doc/core/FileManager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/logs/app.log" afterPath="$PROJECT_DIR$/runtime/logs/app.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/cladr_city.sql" afterPath="$PROJECT_DIR$/doc/cladr_city.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/cladr_country.sql" afterPath="$PROJECT_DIR$/doc/cladr_country.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/cladr_region.sql" afterPath="$PROJECT_DIR$/doc/cladr_region.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/doc.js" afterPath="$PROJECT_DIR$/web/js/doc.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/site.css" afterPath="$PROJECT_DIR$/web/css/site.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/site.js" afterPath="$PROJECT_DIR$/web/js/site.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/upload.txt" afterPath="$PROJECT_DIR$/doc/upload.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/doc/views/file/view.php" afterPath="$PROJECT_DIR$/modules/doc/views/file/view.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -126,7 +92,7 @@
       <file leaf-file-name="FileConverter.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modules/doc/core/FileConverter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49159664" vertical-offset="162" max-vertical-offset="1615">
+            <state vertical-scroll-proportion="0.49297753" vertical-offset="162" max-vertical-offset="1615">
               <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
               <folding>
                 <element signature="e#40#63#0#PHP" expanded="true" />
@@ -239,8 +205,8 @@
         <option value="$PROJECT_DIR$/vendor/unoconv/unoconv" />
         <option value="$PROJECT_DIR$/modules/doc/core/FileManager.php" />
         <option value="$PROJECT_DIR$/web/index.php" />
-        <option value="$PROJECT_DIR$/modules/doc/core/FileConverter.php" />
         <option value="$PROJECT_DIR$/doc/upload.txt" />
+        <option value="$PROJECT_DIR$/modules/doc/core/FileConverter.php" />
       </list>
     </option>
   </component>
@@ -813,7 +779,13 @@
       <option name="project" value="LOCAL" />
       <updated>1431969474341</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Finally unoconv fully works under OS X">
+      <created>1433710323453</created>
+      <option name="number" value="00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1433710323453</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -822,22 +794,22 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277849" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3815621" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3192848" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24749643" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="680" y="439" width="128" height="40" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3192848" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963648" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295711" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32650447" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277849" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2495379" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963648" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23247497" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295711" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32650447" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32731378" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277849" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -862,7 +834,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Type manager" />
     <MESSAGE value="Bootstrap fonts + Tiny refactor" />
     <MESSAGE value="Merge with master" />
     <MESSAGE value="Object fixes" />
@@ -887,7 +858,8 @@
     <MESSAGE value="Fix url for client side" />
     <MESSAGE value="Upload file comment for OS X platform" />
     <MESSAGE value="Unoconv fixes for OS X" />
-    <option name="LAST_COMMIT_MESSAGE" value="Unoconv fixes for OS X" />
+    <MESSAGE value="Finally unoconv fully works under OS X" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finally unoconv fully works under OS X" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1292,7 +1264,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/doc/core/FileConverter.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49159664" vertical-offset="162" max-vertical-offset="1615">
+        <state vertical-scroll-proportion="0.49297753" vertical-offset="162" max-vertical-offset="1615">
           <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
           <folding>
             <element signature="e#40#63#0#PHP" expanded="true" />

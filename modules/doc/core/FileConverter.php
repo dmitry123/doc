@@ -25,7 +25,7 @@ class FileConverter {
             $py = 'start python.exe';
         } else {
             $py = 'python';
-        }inally
+        }
         $cmd = $py .' '. getcwd() .'/vendor/unoconv/unoconv -v -T 10 -f '.$this->_ext.' '. $file;
 		if (file_exists($file.'.'.$this->_ext)) {
 			@unlink($file.'.'.$this->_ext);
