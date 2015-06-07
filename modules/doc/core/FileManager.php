@@ -169,7 +169,7 @@ class FileManager {
 			\app\modules\doc\core\FileManager::getManager()->getDirectory($file->{"path"}), FILE_TEXT
 		));
 	}
-
+	
 	/**
 	 * Generate unique name of saved file on server
 	 * @return string name of file
@@ -185,7 +185,7 @@ class FileManager {
 	 * @return string - Directory to files
 	 * @throws Exception
 	 */
-	public function getDirectory($file = null, $absolute = true) {
+	public function getDirectory($file = null, $absolute = false) {
 		if ($this->_path != null) {
 			if ($absolute) {
 				$path = $this->_path;

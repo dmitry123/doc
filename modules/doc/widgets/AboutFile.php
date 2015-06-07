@@ -59,7 +59,7 @@ class AboutFile extends Widget {
 			];
 		}
 		$ext = $this->file->findExt();
-		$string = mb_strtoupper($this->file->{"name"}.".".$ext->{"ext"}, "UTF-8");
+		$string = $this->file->{"name"};
 		if (strlen($string) > 40) {
 			$string = substr($string, 0, 40)." ...";
 		}

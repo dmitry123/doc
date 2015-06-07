@@ -23,6 +23,9 @@ var Doc_Navigation_Menu = {
 		});
 	},
     afterUpload: function(json) {
+        if (!json) {
+            return void 0;
+        }
         if (!json["status"]) {
 			var errors = json["errors"];
 			for (var i in errors) {
@@ -73,6 +76,7 @@ var Doc_File_Table = {
 	},
     open: function(id, table) {
         table && table.table("before");
+        this.active = id;
         Core.loadWidget("FileManager", {
             file: id
         }, function(widget) {
@@ -84,7 +88,6 @@ var Doc_File_Table = {
         }).always(function() {
             table && table.table("after");
         });
-        this.active = id;
     },
     remove: function(id, table) {
         table && table.table("before");
@@ -99,17 +102,18 @@ var Doc_File_Table = {
         });
     },
     create: function(id, table) {
-        table && table.table("before");
+        table && table.loading("render");
         Core.sendPost("doc/template/register", {
             file: id
         }, function(response) {
-            setTimeout(function() {
+            table.table("update");
+            /* setTimeout(function() {
                 window.location.href = url("doc/editor/view", {
                     file: response["file"]
                 });
-            }, 250);
+            }, 250); */
         }).always(function() {
-            table && table.table("after");
+            table && table.loading("reset");
         });
     },
     download: function(id) {
@@ -471,11 +475,15 @@ var Doc_FileDocument_Grid = {
 	loadFileInfo: function(id) {
 		var wrapper = $(".doc-file-document-grid").parents(".panel")
 			.loading("render");
-		var panel = $(".doc-about-file-panel");
+		var panel = $(".doc-about-file-wrapper");
+        if (!panel.length) {
+            panel = $(".doc-about-file-panel");
+        }
+        Doc_File_Table.active = id;
 		Core.loadWidget("AboutFile", {
 			file: id
 		}, function(component) {
-			panel.replaceWith(component);
+            panel.replaceWith(component);
 		}).always(function() {
 			wrapper.loading("reset");
 		});

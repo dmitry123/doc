@@ -10967,5 +10967,4 @@ INSERT INTO core.city (country_id, region_id, name) VALUES
 	((SELECT id FROM core.country WHERE name = 'Япония' LIMIT 1), (SELECT id FROM core.region WHERE name = 'Ямагути' LIMIT 1), 'Хофу'), 
 	((SELECT id FROM core.country WHERE name = 'Япония' LIMIT 1), (SELECT id FROM core.region WHERE name = 'Ямагути' LIMIT 1), 'Шимоносеки'), 
 	((SELECT id FROM core.country WHERE name = 'Япония' LIMIT 1), (SELECT id FROM core.region WHERE name = 'Ямагути' LIMIT 1), 'Ямагучи'), 
-	((SELECT id FROM core.country WHERE name = 'Япония' LIMIT 1), (SELECT id FROM core.region WHERE name = 'Яманаси' LIMIT 1), 'Кофу');
-
+	((SELECT id FROM core.country WHERE name = 'Япония' LIMIT 1), (SELECT id FROM core.region WHERE name = 'Яманаси' LIMIT 1), 'Кофу')

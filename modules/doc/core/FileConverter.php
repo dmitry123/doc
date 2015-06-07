@@ -3,6 +3,7 @@
 namespace app\modules\doc\core;
 
 use yii\base\Exception;
+use yii\base\UserException;
 
 class FileConverter {
 
@@ -13,22 +14,26 @@ class FileConverter {
     }
 
     public static function getHtmlConverter() {
-        return new FileConverter("html");
+        return new FileConverter('html');
     }
 
     public function convert($file) {
         if ($this->_ext == null) {
-            throw new Exception("Not configured output extension type");
+            throw new Exception('Not configured output extension type');
         }
-        if (substr(php_uname(), 0, 7) == "Windows") {
-            $py = "start python.exe";
+        if (substr(php_uname(), 0, 7) == 'Windows') {
+            $py = 'start python.exe';
         } else {
-            $py = "python";
-        }
-        $cmd = "$py vendor/unoconv/unoconv -f ".$this->_ext." $file";
-        $msg = system("$cmd", $r);
-        if ($r !== 0) {
-            throw new Exception("Converter returned code \"$r\" with error message \"$msg\" while executing command \"$cmd\"");
+            $py = 'python';
+        }inally
+        $cmd = $py .' '. getcwd() .'/vendor/unoconv/unoconv -v -T 10 -f '.$this->_ext.' '. $file;
+		if (file_exists($file.'.'.$this->_ext)) {
+			@unlink($file.'.'.$this->_ext);
+		}
+		$msg = exec($cmd, $output, $r);
+        /* $msg = system('$cmd', $r); */
+        if ($r !== 0 || empty($output)) {
+            throw new Exception('Converter returned code \''.$r.'\' with error message \''.$msg.' - '. implode(', ', $output) .'\' while executing command \''.$cmd.'\'');
         } else {
             $this->_file = $file;
         }
@@ -45,23 +50,22 @@ class FileConverter {
         if ($file == null) {
             $file = $this->_file;
         }
-        while ($file != null && !file_exists($file.".".$this->_ext)) {
+        while ($file != null && !file_exists($file.'.'.$this->_ext)) {
             if (++$limit == static::WAIT_TIMEOUT) {
-                throw new Exception("Something gone wrong, we've spent over ".static::WAIT_TIMEOUT." seconds to wait filesystem changes for file \"$file\"");
+                throw new UserException('Произошла ошибка при конвертации файла, попробуйте отправить запрос ещё раз');
             }
             sleep(1);
         }
-		sleep(1);
         return $this;
     }
 
     public function path() {
-        return $this->_file.".".$this->_ext;
+        return $this->_file.'.'.$this->_ext;
     }
 
     public function rename($name) {
-        if (!@rename($this->_file.".".$this->_ext, $name)) {
-            throw new Exception("Can't rename file: \"". error_get_last()["message"] ."\"");
+        if (!@rename($this->_file.'.'.$this->_ext, $name)) {
+            throw new Exception('Can\'t rename file: \''. error_get_last()['message'] .'\'');
         } else {
             return $this;
         }

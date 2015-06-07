@@ -1,7 +1,6 @@
 /* Page height offset for fixed navigation bar */
-html,
 body {
-    padding-top: 30px;
+    padding-top: 60px;
 }
 
 .no-padding {

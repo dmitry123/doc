@@ -1,11 +1,14 @@
 var ConfirmDeleteModal = {
-    confirm: function(e) {
+    confirm: function(e, message) {
         if (!this.lock) {
             this.item = $(e.target);
         } else {
             return void 0;
         }
-        $("#confirm-delete-modal").modal();
+        var m = $("#confirm-delete-modal").modal();
+        if (message != void 0) {
+            m.find(".modal-body > div > div").text(message);
+        }
         e.stopImmediatePropagation();
         return false;
     },
@@ -33,8 +36,8 @@ var ConfirmDeleteModal = {
 $(document).ready(function() {
 	$('[data-toggle="tooltip"]').tooltip();
     ConfirmDeleteModal.ready();
-    window["confirmDelete"] = function() {
-        ConfirmDeleteModal.confirm(window.event);
+    window["confirmDelete"] = function(message) {
+        ConfirmDeleteModal.confirm(window.event, message);
     };
     $(".modal").on("show.bs.modal", function() {
         if ($("body").height() > $(window).height()) {

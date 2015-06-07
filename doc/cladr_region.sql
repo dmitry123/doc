@@ -920,5 +920,4 @@ INSERT INTO core.region (country_id, name) VALUES
 	((SELECT id FROM core.country WHERE name = 'Япония' LIMIT 1), 'Эхиме'), 
 	((SELECT id FROM core.country WHERE name = 'Япония' LIMIT 1), 'Ямагата'), 
 	((SELECT id FROM core.country WHERE name = 'Япония' LIMIT 1), 'Ямагути'), 
-	((SELECT id FROM core.country WHERE name = 'Япония' LIMIT 1), 'Яманаси');
-
+	((SELECT id FROM core.country WHERE name = 'Япония' LIMIT 1), 'Яманаси')
