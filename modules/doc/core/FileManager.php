@@ -165,11 +165,14 @@ class FileManager {
 	 * @throws Exception
 	 */
 	public function load($file) {
-		return iconv("Windows-1251", "UTF-8", file_get_contents(
-			\app\modules\doc\core\FileManager::getManager()->getDirectory($file->{"path"}), FILE_TEXT
-		));
+		$content = file_get_contents($this->getDirectory($file->{"path"}), FILE_TEXT);
+		if (($result = @iconv("Windows-1251", "UTF-8", $content)) !== false) {
+			return $result;
+		} else {
+			return $content;
+		}
 	}
-	
+
 	/**
 	 * Generate unique name of saved file on server
 	 * @return string name of file

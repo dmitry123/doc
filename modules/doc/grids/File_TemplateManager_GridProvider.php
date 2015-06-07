@@ -18,7 +18,6 @@ class File_TemplateManager_GridProvider extends GridProvider {
         "id" => "#",
         "name" => "Название",
         "upload_date" => "Создан",
-        "upload_time" => ""
     ];
 
     public $menu = [
@@ -51,7 +50,7 @@ class File_TemplateManager_GridProvider extends GridProvider {
 
     public $menuAlignment = "right";
     public $fetcher = '\app\models\doc\Template';
-    public $menuWidth = 100;
+    public $menuWidth = 25;
     public $pagination = false;
     public $sort = false;
     public $hasFooter = false;

@@ -93,25 +93,25 @@ class ControlMenu extends Widget {
 	 * @var string - Regular expression to remove button classes from
 	 * 	icon and text elements
 	 */
-	public $buttonRegexp = "/btn\\-*[a-z]* /";
+	public $buttonRegexp = '/btn\\-*[a-z]* /';
 
 	/**
 	 * @var string - Name of special class which automatically
 	 * 	adds to every control element
 	 */
-	public $special = "control-menu-button";
+	public $special = 'control-menu-button';
 
 	/**
 	 * @var string with name of class for default menu icon, works
 	 * 	only for [MODE_MENU] renders mode
 	 */
-	public $menuIcon = "glyphicon glyphicon-list";
+	public $menuIcon = 'glyphicon glyphicon-list';
 
 	/**
 	 * @var string placement of tooltip message, only
 	 * 	for [MODE_ICON] renders mode
 	 */
-	public $placement = "left";
+	public $placement = 'left';
 
 	/**
 	 * Run widget to render control elements
@@ -123,201 +123,202 @@ class ControlMenu extends Widget {
 	}
 
 	public function prepareControl($key, array& $attributes) {
-		if (!isset($attributes["class"])) {
-			$attributes["class"] = "$this->special $key";
+		if (!isset($attributes['class'])) {
+			$attributes['class'] = ' '.$this->special.' '.$key;
 		} else {
-			$attributes["class"] .= " $this->special $key";
+			$attributes['class'] .= ' '.$this->special.' '.$key;
 		}
-		if (isset($attributes["label"])) {
-			$label = $attributes["label"];
+		if (isset($attributes['label'])) {
+			$label = $attributes['label'];
 		} else {
 			$label = null;
 		}
-		if (isset($attributes["icon"])) {
-			$icon = $attributes["icon"];
+		if (isset($attributes['icon'])) {
+			$icon = $attributes['icon'];
 		} else {
 			$icon = null;
 		}
-		if (isset($attributes["parent"])) {
-			$parent = $attributes["parent"];
+		if (isset($attributes['parent'])) {
+			$parent = $attributes['parent'];
 		} else {
 			$parent = [];
 		}
-		if (isset($attributes["items"])) {
-			$items = $attributes["items"];
+		if (isset($attributes['items'])) {
+			$items = $attributes['items'];
 		} else {
 			$items = [];
 		}
-		unset($attributes["label"]);
-		unset($attributes["icon"]);
-		unset($attributes["parent"]);
-		unset($attributes["items"]);
+		unset($attributes['label']);
+		unset($attributes['icon']);
+		unset($attributes['parent']);
+		unset($attributes['items']);
 		return [
-			"label" => $label,
-			"icon" => $icon,
-			"parent" => $parent,
-			"items" => $items
+			'label' => $label,
+			'icon' => $icon,
+			'parent' => $parent,
+			'items' => $items
 		];
 	}
 
 	public function renderTextControls() {
 		foreach ($this->controls as $class => $options) {
 			$required = $this->prepareControl($class, $options);
-			if (empty($required["label"])) {
-				throw new Exception("Panel's controls mode [CONTROL_MODE_BUTTON] requires [label] attribute");
+			if (empty($required['label'])) {
+				throw new Exception('Panel\'s controls mode [CONTROL_MODE_BUTTON] requires [label] attribute');
 			} else {
-				$label = $required["label"];
+				$label = $required['label'];
 			}
-			if (!empty($required["icon"])) {
-				$label = Html::tag("span", "", [
-						"class" => $required["icon"]
-					]) ."&nbsp;&nbsp;". $label;
+			if (!empty($required['icon'])) {
+				$label = Html::tag('span', '', [
+						'class' => $required['icon']
+					]) .'&nbsp;&nbsp;'. $label;
 			}
-			$options["class"] = preg_replace($this->buttonRegexp, "", $options["class"]);
-			print Html::tag("a", $label, $options);
+			$options['class'] = preg_replace($this->buttonRegexp, '', $options['class']);
+			print Html::tag('a', $label, $options);
 		}
 	}
 
 	public function renderIconControls() {
 		foreach ($this->controls as $class => $options) {
 			$required = $this->prepareControl($class, $options);
-			if (empty($required["icon"])) {
-				throw new Exception("Panel's controls mode [CONTROL_MODE_ICON] requires [icon] attribute");
+			if (empty($required['icon'])) {
+				throw new Exception('Panel\'s controls mode [CONTROL_MODE_ICON] requires [icon] attribute');
 			} else {
-				$options["class"] .= " ".$required["icon"];
+				$options['class'] .= ' '.$required['icon'];
 			}
-			if (!empty($required["label"])) {
+			if (!empty($required['label'])) {
 				$options += [
-					"onmouseenter" => "$(this).tooltip('show')",
-					"title" => $required["label"],
-					"data-placement" => $this->placement
+					'onmouseenter' => '$(this).tooltip("show")',
+					'title' => $required['label'],
+					'data-placement' => $this->placement
 				];
 			}
-			$options["class"] = preg_replace($this->buttonRegexp, "", $options["class"]);
-			print Html::tag("span", "", $options);
+			$options['class'] = preg_replace($this->buttonRegexp, '', $options['class']);
+			print Html::tag('span', '', $options);
 		}
 	}
 
 	public function renderButtonControls() {
 		foreach ($this->controls as $class => $options) {
 			$required = $this->prepareControl($class, $options);
-			if (empty($required["label"])) {
-				$label = "";
+			if (empty($required['label'])) {
+				$label = '';
 			} else {
-				$label = $required["label"];
+				$label = $required['label'];
 			}
-			if (!empty($required["icon"])) {
-				$label = Html::tag("span", "", [
-					"class" => $required["icon"]
-				]) ."&nbsp;&nbsp;". $label;
+			if (!empty($required['icon'])) {
+				$label = Html::tag('span', '', [
+					'class' => $required['icon']
+				]) .'&nbsp;&nbsp;'. $label;
 			}
-			print Html::tag("button", $label, $options);
+			print Html::tag('button', $label, $options);
 		}
 	}
 
 	public function renderGroupControls() {
-		print Html::beginTag("div", [
-			"class" => "btn-group btn-group-justified"
+		print Html::beginTag('div', [
+			'class' => 'btn-group btn-group-justified'
 		]);
 		foreach ($this->controls as $class => $options) {
 			$required = $this->prepareControl($class, $options);
-			if (empty($required["label"])) {
-				$label = "";
+			if (empty($required['label'])) {
+				$label = '';
 			} else {
-				$label = $required["label"];
+				$label = $required['label'];
 			}
-			if (!empty($required["icon"])) {
-				$label = Html::tag("span", "", [
-						"class" => $required["icon"]
-					]) ."&nbsp;&nbsp;". $label;
+			if (!empty($required['icon'])) {
+				$label = Html::tag('span', '', [
+						'class' => $required['icon']
+					]) .'&nbsp;&nbsp;'. $label;
 			}
-			print Html::tag("div", Html::tag("button", $label, $options), [
-				"class" => "btn-group"
+			print Html::tag('div', Html::tag('button', $label, $options), [
+				'class' => 'btn-group'
 			]);
 		}
-		print Html::endTag("div");
+		print Html::endTag('div');
 	}
 
 	public function renderMenuControls() {
-		print Html::beginTag("div", [
-			"class" => "dropdown"
+		print Html::beginTag('div', [
+			'class' => 'dropdown',
+			'style' => 'margin-left: -158px',
 		]);
-		print Html::tag("div", Html::tag("span", "", [
-			"class" => $this->menuIcon,
-            "style" => "margin-right: 10px"
+		print Html::tag('div', Html::tag('span', '', [
+			'class' => $this->menuIcon,
+            'style' => 'margin-right: 10px'
 		]), [
-			"href" => "javascript:void(0)",
-			"class" => "dropdown-toggle",
-			"data-toggle" => "dropdown",
-			"aria-haspopup" => "true",
-			"role" => "button",
-			"aria-expanded" => "false",
-			"style" => "cursor: pointer",
+			'href' => 'javascript:void(0)',
+			'class' => 'dropdown-toggle',
+			'data-toggle' => 'dropdown',
+			'aria-haspopup' => 'true',
+			'role' => 'button',
+			'aria-expanded' => 'false',
+			'style' => 'cursor: pointer',
 		]);
-		print Html::beginTag("ul", [
-			"class" => "dropdown-menu",
-			"role" => "menu"
+		print Html::beginTag('ul', [
+			'class' => 'dropdown-menu',
+			'role' => 'menu'
 		]);
 		foreach ($this->controls as $class => $options) {
 			$required = $this->prepareControl($class, $options);
-			if (empty($required["label"])) {
-				throw new Exception("Panel's controls mode [CONTROL_MODE_MENU] requires [label] attribute");
+			if (empty($required['label'])) {
+				throw new Exception('Panel\'s controls mode [CONTROL_MODE_MENU] requires [label] attribute');
 			} else {
-				$label = $required["label"];
+				$label = $required['label'];
 			}
-			if (!empty($required["icon"])) {
-				$label = Html::tag("span", "", [
-						"class" => $required["icon"],
-					]) ."&nbsp;&nbsp;". $label;
+			if (!empty($required['icon'])) {
+				$label = Html::tag('span', '', [
+						'class' => $required['icon'],
+					]) .'&nbsp;&nbsp;'. $label;
 			}
-			$options["class"] = preg_replace($this->buttonRegexp, "", $options["class"]);
-			if (isset($required["parent"]["class"])) {
-				$required["parent"]["class"] .= " text-left";
+			$options['class'] = preg_replace($this->buttonRegexp, '', $options['class']);
+			if (isset($required['parent']['class'])) {
+				$required['parent']['class'] .= ' text-left';
 			} else {
-				$required["parent"]["class"] = "text-left";
+				$required['parent']['class'] = 'text-left';
 			}
-			print Html::tag("li", Html::tag("a", $label, [
-					"role" => "menuitem",
-					"tagindex" => "-1"
-				] + $options), $required["parent"] + [
-					"role" => "presentation"
+			print Html::tag('li', Html::tag('a', $label, [
+					'role' => 'menuitem',
+					'tagindex' => '-1'
+				] + $options), $required['parent'] + [
+					'role' => 'presentation'
 				]
 			);
 		}
-		print Html::endTag("ul");
-		print Html::endTag("div");
+		print Html::endTag('ul');
+		print Html::endTag('div');
 	}
 
 	public function renderListControls($items = null) {
-		print Html::beginTag("ul", [
-			"class" => "btn-group btn-group-justified",
-			"role" => "group"
+		print Html::beginTag('ul', [
+			'class' => 'btn-group btn-group-justified',
+			'role' => 'group'
 		]);
 		if ($items === null) {
 			$items = $this->controls;
 		}
 		foreach ($items as $class => $options) {
 			$required = $this->prepareControl($class, $options);
-			if (!empty($required["items"])) {
-				$options["class"] .= " dropdown";
+			if (!empty($required['items'])) {
+				$options['class'] .= ' dropdown';
 			}
-			if (isset($options["class"])) {
-				$options["class"] .= " btn btn-lg btn-default";
+			if (isset($options['class'])) {
+				$options['class'] .= ' btn btn-lg btn-default';
 			} else {
-				$options["class"] = "btn btn-lg btn-default";
+				$options['class'] = 'btn btn-lg btn-default';
 			}
-			if (isset($required["parent"]["class"])) {
-				$required["parent"]["class"] .= " btn-group";
+			if (isset($required['parent']['class'])) {
+				$required['parent']['class'] .= ' btn-group';
 			} else {
-				$required["parent"]["class"] = " btn-group";
+				$required['parent']['class'] = ' btn-group';
 			}
-			print Html::beginTag("li", $required["parent"]);
-			print Html::tag("a", $required["label"], $options + [
-				"type" => "button"
+			print Html::beginTag('li', $required['parent']);
+			print Html::tag('a', $required['label'], $options + [
+				'type' => 'button'
 			]);
-			print Html::endTag("li");
+			print Html::endTag('li');
 		}
-		print Html::endTag("ul");
+		print Html::endTag('ul');
 	}
 
 	/**

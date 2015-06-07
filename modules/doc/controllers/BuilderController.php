@@ -51,7 +51,8 @@ class BuilderController extends Controller {
 			$clone = FileManager::getManager()->cache(
 				$file, FileExt::findByExt("html"), $model->{"name"}, "document"
 			);
-			$handle = fopen(FileManager::getManager()->getDirectory($clone->{"path"}), "wb");
+			$dir = FileManager::getManager()->getDirectory($clone->{"path"}, true);
+			$handle = fopen($dir, "wb+");
 			$content = preg_replace('/<meta[^>.]*>/', "", $content);
 			fwrite($handle, $content, strlen($content));
 			fclose($handle);

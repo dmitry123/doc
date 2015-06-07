@@ -14,15 +14,15 @@ class EditorMacroGridProvider extends GridProvider {
     public $columns = [
         "id" => [
             "label" => "#",
-            "width" => "50px"
+            "width" => "60px"
         ],
         "name" => [
             "label" => "Название",
-            "width" => "200px"
+            "width" => "250px"
         ],
         "type" => [
             "label" => "Тип",
-            "width" => "150px"
+            "width" => "100px"
         ]
     ];
 
@@ -48,7 +48,7 @@ class EditorMacroGridProvider extends GridProvider {
             ]
         ],
 		"mode" => ControlMenu::MODE_ICON,
-		"special" => "builder-control-menu-icon"
+		"special" => "builder-control-menu-icon",
     ];
 
 	public $menuWidth = 100;

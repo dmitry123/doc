@@ -37,6 +37,9 @@ var Core = Core || {};
 	Panel.prototype.before = function() {
 		this.selector().loading("render");
 		var refresh = this.selector().find(".panel-update-button");
+        if (!refresh.length) {
+            return void 0;
+        }
 		if (refresh[0].tagName != "SPAN") {
 			refresh.children("span").rotate(360, 500, "swing");
 		} else {

@@ -11,9 +11,7 @@ class TemplateEditor extends FileWidget {
 	public $regexp = '/(<p[^>]*>\s*<br[^>]*>\s*<\/p>\s*)+/iu';
 
 	public function run() {
-		$content = iconv("Windows-1251", "UTF-8", file_get_contents(
-			FileManager::getManager()->getDirectory($this->file->{"path"}), FILE_TEXT
-		));
+		$content = FileManager::getManager()->load($this->file);
 //		$content = preg_replace($this->regexp, "<hr>", $content);
 		return $this->render("TemplateEditor", [
 			"content" => $content,
