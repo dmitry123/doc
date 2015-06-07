@@ -27,7 +27,7 @@ abstract class ActiveRecord extends \yii\db\ActiveRecord {
 	 * @return static instance of current active record class
 	 * @throws Exception if type doesn't matches array or Model object
 	 */
-	public static function createWithModel($model) {
+	public static function createWithModel($model = []) {
 		$var = new static();
 		if ($model instanceof Model) {
 			$attributes = $model->getAttributes();

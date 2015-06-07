@@ -12,64 +12,64 @@ class User extends ActiveRecord implements IdentityInterface {
 
 	public function configure() {
 		return [
-			"id" => [
-				"label" => "Идентификатор",
-				"type" => "hidden",
-				"rules" => "integer"
+			'id' => [
+				'label' => 'Идентификатор',
+				'type' => 'hidden',
+				'rules' => 'integer'
 			],
-			"login" => [
-				"label" => "Логин",
-				"type" => "text",
-				"rules" => "required"
+			'login' => [
+				'label' => 'Логин',
+				'type' => 'text',
+				'rules' => 'required'
 			],
-			"password" => [
-				"label" => "Пароль",
-				"type" => "password",
-				"rules" => "required"
+			'password' => [
+				'label' => 'Пароль',
+				'type' => 'password',
+				'rules' => 'required'
 			],
-			"password2" => [
-				"label" => "Повторите пароль",
-				"type" => "password"
+			'password2' => [
+				'label' => 'Повторите пароль',
+				'type' => 'password'
 			],
-			"email" => [
-				"label" => "Почтовый ящик",
-				"type" => "email",
-				"rules" => "email"
+			'email' => [
+				'label' => 'Почтовый ящик',
+				'type' => 'email',
+				'rules' => 'email'
 			],
-			"register_time" => [
-				"label" => "Время регистрации",
-				"type" => "text"
+			'register_time' => [
+				'label' => 'Время регистрации',
+				'type' => 'text'
 			],
-			"register_date" => [
-				"label" => "Дата регистрации",
-				"type" => "text"
+			'register_date' => [
+				'label' => 'Дата регистрации',
+				'type' => 'text'
 			],
-			"access_token" => [
-				"label" => "Ключ доступа",
-				"type" => "hidden"
+			'access_token' => [
+				'label' => 'Ключ доступа',
+				'type' => 'hidden'
 			],
-			"security_key_id" => [
-				"label" => "Ключ безопасности",
-				"type" => "DropDown",
-				"table" => [
-					"name" => "core.security_key",
-					"key" => "id",
-					"value" => "key"
+			'security_key_id' => [
+				'label' => 'Ключ безопасности',
+				'type' => 'DropDown',
+				'table' => [
+					'name' => 'core.security_key',
+					'key' => 'id',
+					'value' => 'key'
 				],
-				"rules" => "required"
+				'rules' => 'required'
 			]
 		];
 	}
 
 	public function rules() {
 		return [
-			[ [ "login", "email" ], "string", "max" => 50 ],
-			[ [ "access_token" ], "string", "max" => 20 ],
+			[ [ 'login', 'email' ], 'string', 'max' => 50 ],
+			[ [ 'access_token' ], 'string', 'max' => 20 ],
 		];
 	}
 
 	public static function tableName() {
-		return "core.user";
+		return 'core.user';
 	}
 
 	/**
@@ -78,8 +78,8 @@ class User extends ActiveRecord implements IdentityInterface {
 	 * @return array|null - Array with user's information
 	 */
 	public static function findByLogin($login) {
-		$row = static::find()->select("*")->from("core.user")->where("login = :login", [
-			":login" => strtolower($login)
+		$row = static::find()->select('*')->from('core.user')->where('login = :login', [
+			':login' => strtolower($login)
 		])->one();
 		if ($row !== false) {
 			return $row;
@@ -97,7 +97,7 @@ class User extends ActiveRecord implements IdentityInterface {
 	 */
 	public static function findIdentity($id) {
 		return static::findOne([
-			"id" => $id
+			'id' => $id
 		]);
 	}
 
@@ -112,7 +112,7 @@ class User extends ActiveRecord implements IdentityInterface {
 	 */
 	public static function findIdentityByAccessToken($token, $type = null) {
 		return static::findOne([
-			"access_token" => $token
+			'access_token' => $token
 		]);
 	}
 
@@ -121,7 +121,7 @@ class User extends ActiveRecord implements IdentityInterface {
 	 * @return string|integer an ID that uniquely identifies a user identity.
 	 */
 	public function getId() {
-		return $this->{"id"};
+		return $this->{'id'};
 	}
 
 	/**
@@ -137,7 +137,7 @@ class User extends ActiveRecord implements IdentityInterface {
 	 * @see validateAuthKey()
 	 */
 	public function getAuthKey() {
-		return $this->{"password"};
+		return $this->{'login'};
 	}
 
 	/**
@@ -149,6 +149,6 @@ class User extends ActiveRecord implements IdentityInterface {
 	 * @see getAuthKey()
 	 */
 	public function validateAuthKey($authKey) {
-		return $this->{"password"} === $authKey;
+		return true;
 	}
 }

@@ -13,43 +13,43 @@ class Phone extends ActiveRecord {
 
 	public function configure() {
 		return [
-			"id" => [
-				"label" => "Идентификатор",
-				"type" => "hidden",
-				"rules" => "integer"
+			'id' => [
+				'label' => 'Идентификатор',
+				'type' => 'hidden',
+				'rules' => 'integer'
 			],
-			"region" => [
-				"label" => "Регион",
-				"type" => "number",
-				"rules" => "required, numerical"
+			'region' => [
+				'label' => 'Регион',
+				'type' => 'number',
+				'rules' => 'required, numerical'
 			],
-			"code" => [
-				"label" => "Код оператора",
-				"type" => "number",
-				"rules" => "required, numerical"
+			'code' => [
+				'label' => 'Код оператора',
+				'type' => 'number',
+				'rules' => 'required, numerical'
 			],
-			"phone" => [
-				"label" => "Телефон",
-				"type" => "text",
-				"rules" => "required"
+			'phone' => [
+				'label' => 'Телефон',
+				'type' => 'text',
+				'rules' => 'required'
 			],
-			"type" => [
-				"label" => "Тип телефона",
-				"type" => "DropDown",
-				"source" => "listTypes",
-				"rules" => "required, numerical"
+			'type' => [
+				'label' => 'Тип телефона',
+				'type' => 'DropDown',
+				'source' => 'listTypes',
+				'rules' => 'required, numerical'
 			]
 		];
 	}
 
 	public function rules() {
 		return [
-			[ "phone", "string", "max" => 30 ]
+			[ 'phone', 'string', 'max' => 30 ]
 		];
 	}
 
 	public static function tableName() {
-		return "core.phone";
+		return 'core.phone';
 	}
 
 	/**
@@ -58,9 +58,9 @@ class Phone extends ActiveRecord {
 	 */
 	public static function listTypes() {
 		return [
-			Phone::TYPE_CITY => "Городской",
-			Phone::TYPE_MOBILE => "Мобильный",
-			Phone::TYPE_JOB => "Служебный"
+			Phone::TYPE_CITY => 'Городской',
+			Phone::TYPE_MOBILE => 'Мобильный',
+			Phone::TYPE_JOB => 'Служебный'
 		];
 	}
 
@@ -76,13 +76,13 @@ class Phone extends ActiveRecord {
 	 */
 	public static function registerHelper($phone) {
 		if (!preg_match(static::REGEXP, $phone, $matches) || count($matches) != 4) {
-			throw new Exception("Phone ($phone) doesn't match pattern [".static::REGEXP."]");
+			throw new Exception('Phone ($phone) doesn\'t match pattern ['.static::REGEXP.']');
 		}
 		$phone = new static([
-			"region" => $matches[1],
-			"code" => $matches[2],
-			"phone" => preg_replace('/[^0-9]*/', "", $matches[3]),
-			"type" => static::TYPE_MOBILE
+			'region' => $matches[1],
+			'code' => $matches[2],
+			'phone' => preg_replace('/[^0-9]*/', '', $matches[3]),
+			'type' => static::TYPE_MOBILE
 		]);
 		if (!$phone->save(true)) {
 			return false;

@@ -8,89 +8,89 @@ class Employee extends ActiveRecord {
 
 	public function configure() {
 		return [
-			"id" => [
-				"label" => "Идентификатор",
-				"type" => "hidden",
-				"rules" => "integer"
+			'id' => [
+				'label' => 'Идентификатор',
+				'type' => 'hidden',
+				'rules' => 'integer'
 			],
-			"surname" => [
-				"label" => "Фамилия",
-				"type" => "text",
-				"rules" => "required"
+			'surname' => [
+				'label' => 'Фамилия',
+				'type' => 'text',
+				'rules' => 'required'
 			],
-			"name" => [
-				"label" => "Имя",
-				"type" => "text",
-				"rules" => "required"
+			'name' => [
+				'label' => 'Имя',
+				'type' => 'text',
+				'rules' => 'required'
 			],
-			"patronymic" => [
-				"label" => "Отчество",
-				"type" => "text",
-				"rules" => "required"
+			'patronymic' => [
+				'label' => 'Отчество',
+				'type' => 'text',
+				'rules' => 'required'
 			],
-            "birthday" => [
-                "label" => "Дата рождения",
-                "type" => "date",
-                "rules" => "required"
+            'birthday' => [
+                'label' => 'Дата рождения',
+                'type' => 'date',
+                'rules' => 'required'
             ],
-			"role_id" => [
-				"label" => "Роль",
-				"type" => "DropDown",
-				"table" => [
-					"name" => "core.role",
-					"key" => "id",
-					"value" => "name"
+			'role_id' => [
+				'label' => 'Роль',
+				'type' => 'DropDown',
+				'table' => [
+					'name' => 'core.role',
+					'key' => 'id',
+					'value' => 'name'
 				],
-				"rules" => "required",
+				'rules' => 'required',
 			],
-			"user_id" => [
-				"label" => "Пользователь",
-				"type" => "DropDown",
-				"table" => [
-					"name" => "core.user",
-					"key" => "id",
-					"value" => "login"
+			'user_id' => [
+				'label' => 'Пользователь',
+				'type' => 'DropDown',
+				'table' => [
+					'name' => 'core.user',
+					'key' => 'id',
+					'value' => 'login'
 				],
-				"rules" => "required",
+				'rules' => 'required',
 			],
-			"department_id" => [
-				"label" => "Кафедра",
-				"type" => "DropDown",
-				"table" => [
-					"name" => "core.department",
-					"key" => "id",
-					"value" => "name"
+			'department_id' => [
+				'label' => 'Кафедра',
+				'type' => 'DropDown',
+				'table' => [
+					'name' => 'core.department',
+					'key' => 'id',
+					'value' => 'name'
 				],
-				"rules" => "required",
+				'rules' => 'required',
 			],
-			"phone_id" => [
-				"label" => "Телефон",
-				"type" => "DropDown",
-				"table" => [
-					"name" => "core.phone",
-					"key" => "id",
-					"format" => "+%{region} (%{code}) %{phone}",
-					"values" => "region, code, phone"
+			'phone_id' => [
+				'label' => 'Телефон',
+				'type' => 'DropDown',
+				'table' => [
+					'name' => 'core.phone',
+					'key' => 'id',
+					'format' => '+%{region} (%{code}) %{phone}',
+					'values' => 'region, code, phone'
 				],
-				"rules" => "required"
+				'rules' => 'required'
 			],
-			"is_validated" => [
-				"label" => "Подтвержден?",
-				"type" => "Boolean",
-				"rules" => "required"
+			'is_validated' => [
+				'label' => 'Подтвержден?',
+				'type' => 'Boolean',
+				'rules' => 'required'
 			]
 		];
 	}
 
 	public function rules() {
 		return [
-			[ [ "surname", "patronymic" ], "string", "max" => 100 ],
-			[ "name", "string", "max" => 50 ],
-			[ "role_id", "string", "max" => 20 ]
+			[ [ 'surname', 'patronymic' ], 'string', 'max' => 100 ],
+			[ 'name', 'string', 'max' => 50 ],
+			[ 'role_id', 'string', 'max' => 20 ]
 		];
 	}
 
 	public static function tableName() {
-		return "core.employee";
+		return 'core.employee';
 	}
 }
