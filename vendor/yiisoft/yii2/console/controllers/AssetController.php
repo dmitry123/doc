@@ -88,7 +88,7 @@ class AssetController extends Controller
      *     'css' => 'css/all-{hash}.css',
      *     'depends' => [
      *         // Include only 'backend' assets:
-     *         'app\assets\AdminAsset'
+     *         'app\assets\ServiceAsset'
      *     ],
      * ],
      * 'allFrontEnd' => [

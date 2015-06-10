@@ -34,8 +34,8 @@ class ModuleHelper {
 		}
 		$allowed = [];
 		foreach (static::getModules() as $id => $module) {
-			if (isset($module["roles"])) {
-				if (EmployeeHelper::hasRole($module["roles"])) {
+			if (isset($module['roles'])) {
+				if (EmployeeHelper::hasRole($module['roles'])) {
 					$allowed[$id] = $module;
 				}
 			} else {
@@ -62,20 +62,20 @@ class ModuleHelper {
 		$list = [];
 		foreach ($modules as $id => $module) {
 			$attributes = [];
-			if (isset($module["url"]) && !empty($module["url"])) {
-				$attributes["href"] = Yii::$app->urlManager->createUrl($module["url"]);
+			if (isset($module['url']) && !empty($module['url'])) {
+				$attributes['href'] = Yii::$app->urlManager->createUrl($module['url']);
 			}
-			if (isset($module["name"])) {
-				$attributes["label"] = $module["name"];
+			if (isset($module['name'])) {
+				$attributes['label'] = $module['name'];
 			} else {
-				$attributes["label"] = "";
+				$attributes['label'] = '';
 			}
-			if (isset($module["icon"])) {
-				$attributes["label"] = Html::tag("span", "", [
-					"class" => $module["icon"]
-				]) ."&nbsp;&nbsp;". $attributes["label"];
+			if (isset($module['icon'])) {
+				$attributes['label'] = Html::tag('span', '', [
+						'class' => $module['icon']
+					]) .'&nbsp;&nbsp;'. $attributes['label'];
 			} else {
-				$attributes["label"] = "";
+				$attributes['label'] = '';
 			}
 			$list[$id] = $attributes;
 		}
@@ -99,23 +99,23 @@ class ModuleHelper {
 		$list = [];
 		foreach ($modules as $id => $module) {
 			$attributes = [
-				"onclick" => "$(this).next().slideToggle('normal')"
+				'onclick' => '$(this).next().slideToggle("normal")'
 			];
-			if (isset($module["url"]) && !empty($module["url"])) {
-				$attributes["href"] = "javascript:void(0)";
-				$attributes["data-href"] = $module["url"];
+			if (isset($module['url']) && !empty($module['url'])) {
+				$attributes['href'] = 'javascript:void(0)';
+				$attributes['data-href'] = $module['url'];
 			}
-			if (isset($module["name"])) {
-				$attributes["label"] = $module["name"];
+			if (isset($module['name'])) {
+				$attributes['label'] = $module['name'];
 			} else {
-				$attributes["label"] = "";
+				$attributes['label'] = '';
 			}
-			if (isset($module["icon"])) {
-				$attributes["label"] = Html::tag("span", "", [
-						"class" => $module["icon"]
-					]) ."&nbsp;&nbsp;". $attributes["label"];
+			if (isset($module['icon'])) {
+				$attributes['label'] = Html::tag('span', '', [
+						'class' => $module['icon']
+					]) .'&nbsp;&nbsp;'. $attributes['label'];
 			} else {
-				$attributes["label"] = "";
+				$attributes['label'] = '';
 			}
 			$list[$id] = $attributes;
 		}
@@ -138,16 +138,16 @@ class ModuleHelper {
 		}
 		$list = [];
 		foreach ($modules as $id => $module) {
-			if (!isset($module["options"])) {
-				$module["options"] = [];
+			if (!isset($module['options'])) {
+				$module['options'] = [];
 			}
-			if (!isset($module["url"]) || empty($module["url"])) {
-				$module["options"] += [
-					"data-error" => "not-implemented"
+			if (!isset($module['url']) || empty($module['url'])) {
+				$module['options'] += [
+					'data-error' => 'not-implemented'
 				];
 			} else {
-				$module["options"] += [
-					"data-url" => $module["url"]
+				$module['options'] += [
+					'data-url' => $module['url']
 				];
 			}
 			$list[] = $module;
@@ -157,7 +157,7 @@ class ModuleHelper {
 
 	public static function currentModuleName() {
 		if (($module = Yii::$app->controller->module) instanceof Application) {
-			return "";
+			return '';
 		}
 		if ($module instanceof Module) {
 			$name = $module->name;
@@ -165,19 +165,19 @@ class ModuleHelper {
 			$name = $module->id;
 		}
 		if ($name != Yii::$app->id && !empty($name)) {
-			return ".".$name ;
+			return '.'.$name ;
 		} else {
-			return "";
+			return '';
 		}
 	}
 
-    public static function currentModuleID() {
-        if (Yii::$app->module->id != null) {
-            return Yii::$app->module->id;
-        } else {
-            return null;
-        }
-    }
+	public static function currentModuleID() {
+		if (Yii::$app->module->id != null) {
+			return Yii::$app->module->id;
+		} else {
+			return null;
+		}
+	}
 
 	/**
 	 * Create identification number for some component

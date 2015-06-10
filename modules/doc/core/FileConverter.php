@@ -32,7 +32,7 @@ class FileConverter {
 		}
 		$msg = exec($cmd, $output, $r);
         /* $msg = system('$cmd', $r); */
-        if ($r !== 0 || empty($output)) {
+        if ($r !== 0) {
             throw new Exception('Converter returned code \''.$r.'\' with error message \''.$msg.' - '. implode(', ', $output) .'\' while executing command \''.$cmd.'\'');
         } else {
             $this->_file = $file;

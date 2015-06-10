@@ -30,9 +30,9 @@
     padding: 5px 15px;
 }
 
-.dropdown-menu > li > a {
-    padding: 10px 15px;
-}
+/*.dropdown-menu > li > a {*/
+    /*padding: 10px 15px;*/
+/*}*/
 
 .nav a[data-toggle='modal']:focus {
     background-color: #333333 !important;

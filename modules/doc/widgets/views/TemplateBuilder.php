@@ -22,7 +22,7 @@ print \app\widgets\Modal::widget([
 	'title' => 'Поиск элементов',
 	'body' => \app\widgets\Grid::widget([
 		'provider' => new \app\modules\doc\grids\EditorMacroGridProvider([
-			'static' => 0
+			'static' => 0, 'file' => $file->{'id'}
 		])
 	]),
 	'buttons' => [
@@ -38,7 +38,7 @@ print \app\widgets\Modal::widget([
 	'title' => 'Просмотр списка элементов',
 	'body' => \app\widgets\Grid::widget([
 		'provider' => new \app\modules\doc\grids\EditorMacroGridProvider([
-			'static' => 0
+			'static' => 0, 'file' => $file->{'id'}
 		])
 	]),
 	'id' => 'builder-view-element-modal'
@@ -105,7 +105,7 @@ print \app\widgets\Modal::widget([
 			'id' => 'builder-macro-panel',
 			'body' => \app\widgets\Grid::create([
 				'provider' => new \app\modules\doc\grids\EditorMacroGridProvider([
-					'static' => 1
+					'static' => 1, 'file' => $file->{'id'}
 				])
 			]),
 			'controls' => [
@@ -134,7 +134,7 @@ print \app\widgets\Modal::widget([
 			'id' => 'builder-element-panel',
 			'body' => \app\widgets\Grid::create([
 				'provider' => new \app\modules\doc\grids\EditorMacroGridProvider([
-					'static' => 0
+					'static' => 0, 'file' => $file->{'id'}
 				])
 			]),
 			'controls' => [

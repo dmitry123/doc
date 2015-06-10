@@ -29,12 +29,11 @@ use yii\web\View;
 			</a>
 			<ul class="dropdown-menu" role="menu">
 				<li><a href="#">Пусто</a></li>
-				<li><a href="#">Настройки</a></li>
 				<li><a href="#">Пусто</a></li>
-				<li class="divider"></li>
-				<li><a href="<?= \yii\helpers\Url::to("@web/user/logout") ?>">Выйти</a></li>
+				<li><a href="#">Пусто</a></li>
 			</ul>
 		</li>
+		<li><a href="<?= \yii\helpers\Url::to("@web/user/logout") ?>"><span class="fa fa-sign-out"></span></a></li>
 	</ul>
 </div>
 </nav>

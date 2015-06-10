@@ -15,7 +15,7 @@ print \app\widgets\Modal::widget([
 	<?= \app\widgets\Panel::widget([
 		"title" => "Список файлов",
 		"body" => \app\widgets\Grid::create([
-			"provider" => new \app\modules\doc\grids\FileDocumentGridProvider()
+			"provider" => new \app\modules\doc\grids\DocumentGridProvider()
 		]),
 		"controls" => [
 			"doc-file-upload-icon" => [

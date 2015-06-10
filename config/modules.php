@@ -37,46 +37,24 @@ return [
 		],
 		'url' => 'doc/file/view'
 	],
-//	'chat' => [
-//		'class' => 'app\modules\chat\ChatModule',
-//		'name' => 'Чат',
-//		'icon' => 'glyphicon glyphicon-send',
-//		'roles' => [
-//			'admin',
-//			'director',
-//			'manager',
-//			'teacher',
-//			'super',
-//		]
-//	],
-	'plantation' => [
-		'class' => 'app\modules\plantation\PlantationModule',
-		'name' => 'Внедрение',
-		'icon' => 'fa fa-user-secret',
-		'roles' => [
-			'admin',
-			'super',
-		],
-		'url' => 'plantation/master/view'
-	],
 	'security' => [
 		'class' => 'app\modules\security\SecurityModule',
 		'name' => 'Безопасность',
-		'icon' => 'fa fa-lock',
+		'icon' => 'fa fa-user-secret',
 		'roles' => [
 			'admin',
 			'super',
 		],
 		'url' => 'security/role/list'
 	],
-	'admin' => [
-		'class' => 'app\modules\admin\AdminModule',
+	'service' => [
+		'class' => 'app\modules\service\ServiceModule',
 		'name' => 'Управление',
 		'icon' => 'fa fa-wrench',
 		'roles' => [
 			'admin',
 			'super',
 		],
-		'url' => 'admin/master/view'
+		'url' => 'service/setting'
 	],
 ];

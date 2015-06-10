@@ -23,7 +23,7 @@ abstract class GridProvider extends ActiveDataProvider {
 	 * @see ControlMenu::special
 	 * @see menu
 	 */
-	const CONTROL_MENU_SPECIAL = "table-control-icon";
+	const CONTROL_MENU_SPECIAL = 'table-control-icon';
 
 	/**
 	 * @var array with name of columns identifications
@@ -42,7 +42,7 @@ abstract class GridProvider extends ActiveDataProvider {
 	 * @var string name of model's primary key which
 	 * 	copies to every <tr> element
 	 */
-	public $primaryKey = "id";
+	public $primaryKey = 'id';
 
 	/**
 	 * @var array with list of available page
@@ -78,9 +78,9 @@ abstract class GridProvider extends ActiveDataProvider {
 	 * 	renders
 	 */
 	public $footer = [
-		"withPagination" => true,
-		"withLimit" => true,
-		"withSearch" => false,
+		'withPagination' => true,
+		'withLimit' => true,
+		'withSearch' => false,
 	];
 
 	/**
@@ -93,13 +93,13 @@ abstract class GridProvider extends ActiveDataProvider {
 	 * @var string default table class which wraps table's
 	 * 	header, body and footer
 	 */
-	public $tableClass = "table table-striped";
+	public $tableClass = 'table table-striped';
 
 	/**
 	 * @var string text message for received empty array
 	 * 	with data
 	 */
-	public $textNoData = "Нет данных";
+	public $textNoData = 'Нет данных';
 
 	/**
 	 * @var string message will be displayed if
@@ -107,18 +107,18 @@ abstract class GridProvider extends ActiveDataProvider {
 	 *
 	 * @see emptyData
 	 */
-	public $textEmptyData = "Не выбраны критерии поиска";
+	public $textEmptyData = 'Не выбраны критерии поиска';
 
 	/**
 	 * @var string default placement for bootstrap tooltip
 	 * 	component [left, right, top, bottom]
 	 */
-	public $tooltipDefaultPlacement = "left";
+	public $tooltipDefaultPlacement = 'left';
 
 	/**
 	 * @var string width of column with control elements
 	 */
-	public $menuWidth = "50px";
+	public $menuWidth = '50px';
 
 	/**
 	 * @var string identification string of current
@@ -133,13 +133,13 @@ abstract class GridProvider extends ActiveDataProvider {
 	 * @var string with name of glyphicon class for
 	 * 	chevron order icon (DESC)
 	 */
-	public $chevronUpClass = "glyphicon glyphicon-chevron-up";
+	public $chevronUpClass = 'glyphicon glyphicon-chevron-up';
 
 	/**
 	 * @var string with name of glyphicon class for
 	 * 	chevron order icon (ASC)
 	 */
-	public $chevronDownClass = "glyphicon glyphicon-chevron-down";
+	public $chevronDownClass = 'glyphicon glyphicon-chevron-down';
 
 	/**
 	 * @var string with javascript code which provides actions on
@@ -168,8 +168,8 @@ abstract class GridProvider extends ActiveDataProvider {
 
 	public function setMenu($menu) {
 		return $this->_menu = ObjectHelper::ensure($menu, ControlMenu::className(), [
-			"special" => static::CONTROL_MENU_SPECIAL,
-			"mode" => static::CONTROL_MENU_MODE,
+			'special' => static::CONTROL_MENU_SPECIAL,
+			'mode' => static::CONTROL_MENU_MODE,
 		]);
 	}
 
@@ -187,7 +187,7 @@ abstract class GridProvider extends ActiveDataProvider {
 
 	public function setFooter($footer) {
 		return $this->_footer = ObjectHelper::ensure($footer, GridFooter::className(), [
-			"provider" => $this
+			'provider' => $this
 		]);
 	}
 

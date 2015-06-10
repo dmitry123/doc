@@ -500,6 +500,37 @@ var Core = Core || {};
 
 })(Core);
 
+var AssetManager = {
+	loadScript: function(file, callback) {
+		file = url(file);
+		if (this.file[file] || $("script").filter("[src='"+ file +"']").length > 0) {
+			callback && callback();
+			return void 0;
+		} else {
+			this.file[file] = true;
+		}
+		$.getScript(file, callback);
+	},
+	loadStyle: function(file, callback) {
+		file = url(file);
+		if (this.file[file] || $("link").filter("[href='"+ file +"']").length > 0) {
+			callback && callback();
+			return void 0;
+		} else {
+			this.file[file] = true;
+		}
+		var style = $("<link>", {
+			rel: "stylesheet",
+			type: "text/css",
+			href: file
+		}).load(function() {
+			callback && callback();
+		});
+		$('head').append(style);
+	},
+	file: {}
+};
+
 $(document).ready(function() {
 	$(document).on('show.bs.modal', '.modal', function(e) {
 		if (!$(e.target).hasClass("modal")) {
@@ -512,26 +543,3 @@ $(document).ready(function() {
 		}, 0);
 	});
 });
-
-/*
-$(document).ready(function() {
-$("input[data-regexp][type='text']").each(function(i, item) {
-	var regexp = new RegExp($(item).data("regexp"));
-	$(item).keydown(function(e) {
-		console.log($(item).val());
-		console.log(regexp.test($(item).val()));
-	});
-});
-});
-var isStrValid = function(str) {
-return ((str.match(/[^\d^.]/) === null)
-&& (str.replace(/\d+\.?\d?\d?/, "") === ""));
-};
-
-var node = dojo.byId("txt");
-dojo.connect(node, "onkeyup", function() {
-if (!isStrValid(node.value)) {
-node.value = node.value.substring(0, node.value.length-1);
-}
-});
-* */

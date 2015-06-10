@@ -168,9 +168,9 @@ ul.btn-group {
     margin: 0;
 }
 
-.nav > li > ul > li > a {
-    padding: 5px 15px;
-}
+/*.nav > li > ul > li > a {*/
+    /*padding: 5px 15px;*/
+/*}*/
 
 .fa-danger {
     color: #a94442;

@@ -172,6 +172,9 @@ var Core = Core || {};
 			$(this).remove();
 			delete me.back;
 		});
+		if (!this.image && !this.back) {
+			after && after.call(me);
+		}
     };
 
 	$.fn.loading = Core.createPlugin("loading", function(selector, properties) {

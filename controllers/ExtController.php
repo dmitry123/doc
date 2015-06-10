@@ -15,32 +15,31 @@ class ExtController extends Controller {
 
 	public function actionLoad() {
 		try {
-			/** @var $ext Ext */
-			$ext = ExtFactory::getFactory()->createEx($this->requireQuery("module"),
-				$this->requireQuery("ext"), $this->getQuery("params", [])
-			);
-			if (empty($ext)) {
-				$this->error("Расширение не поддерживается этим модулем");
+			$module = $this->requireQuery('module');
+			$id = $this->requireQuery('ext');
+			$params = $this->getQuery('params', []);
+			if (!$ext = ExtFactory::getFactory()->createEx($module, $id, $params)) {
+				$this->error('Расширение не поддерживается этим модулем');
 			}
-			$this->leave([
-				"component" => $ext->load()
+			ob_start();
+			$r = $ext->invoke();
+			if ($r === false) {
+				ob_clean();
+				$this->error('Расширение не поддерживается этим модулем');
+			} else {
+				print $r;
+			}
+			\Yii::$app->getSession()->set('ext', [
+				'module' => $module,
+				'id' => $id,
+				'params' => $params,
 			]);
-		} catch (\Exception $e) {
-			$this->exception($e);
-		}
-	}
-
-	public function actionPage() {
-		try {
-			/** @var $ext Ext */
-			$ext = PageFactory::getFactory()->createEx($this->requireQuery("module"),
-				$this->requireQuery("ext"), $this->getQuery("params", [])
-			);
-			if (empty($ext)) {
-				$this->error("Расширение не поддерживается этим модулем");
-			}
 			$this->leave([
-				"component" => $ext->load()
+				'component' => ob_get_clean(),
+				'requires' => [
+					'js' => $ext->js,
+					'css' => $ext->css,
+				]
 			]);
 		} catch (\Exception $e) {
 			$this->exception($e);
@@ -49,21 +48,21 @@ class ExtController extends Controller {
 
 	public function actionWidget() {
 		try {
-            $class = $this->requireQuery("class");
-            $module = \Yii::$app->getModule($this->requireQuery("module"));
+			$module = \Yii::$app->getModule($this->requireQuery('module'));
+            $class = $this->requireQuery('class');
 			if ($module instanceof Module) {
 				$class = $module->getWidgetClass($class);
 			} else {
 				$class = "app\\widgets\\".$class;
 			}
-			$widget = $this->createWidget($class, $this->getQuery("config", []));
+			$widget = $this->createWidget($class, $this->getQuery('config', []));
 			if (!$widget instanceof Widget) {
-				throw new Exception("Loaded widget must be an instance of [app\\core\\Widget] class");
+				throw new Exception('Loaded widget must be an instance of [app\core\Widget] class');
 			}
 			ob_start();
 			print $widget->run();
 			$this->leave([
-				"component" => ob_get_clean()
+				'component' => ob_get_clean()
 			]);
 		} catch (\Exception $e) {
 			$this->exception($e);
@@ -72,15 +71,15 @@ class ExtController extends Controller {
 
 	public function actionTable() {
 		try {
-			$class = $this->requireQuery("provider");
-			$config = $this->getQuery("config", [
+			$class = $this->requireQuery('provider');
+			$config = $this->getQuery('config', [
 				/* Default Table Configuration */
 			]);
 			foreach ($config as $key => &$value) {
                 if (!is_array($value)) {
                     continue;
                 }
-				foreach ([ "class", "widget" ] as $k) {
+				foreach ([ 'class', 'widget' ] as $k) {
 					unset($value[$k]);
 				}
 			}
@@ -94,19 +93,19 @@ class ExtController extends Controller {
 				}
 			}
 			if (!$provider instanceof GridProvider) {
-				throw new Exception("Table provider must be an instance of [app\\core\\Table] class");
+				throw new Exception('Table provider must be an instance of [app\core\Table] class');
 			}
-			$widget = $this->createWidget($this->requireQuery("widget"), [
-				"provider" => $provider,
-				"config" => $config
+			$widget = $this->createWidget($this->requireQuery('widget'), [
+				'provider' => $provider,
+				'config' => $config
 			]);
 			if (!$widget instanceof Widget) {
-				throw new Exception("Loaded widget must be an instance of [app\\core\\Widget] class");
+				throw new Exception('Loaded widget must be an instance of [app\core\Widget] class');
 			}
 			ob_start();
 			print $widget->run();
 			$this->leave([
-				"component" => ob_get_clean()
+				'component' => ob_get_clean()
 			]);
 		} catch (\Exception $e) {
 			$this->exception($e);
@@ -115,14 +114,14 @@ class ExtController extends Controller {
 
 	public function actionPanel() {
 		try {
-			$widget = $this->createWidget($this->requireQuery("widget"), $this->getQuery("config", []));
+			$widget = $this->createWidget($this->requireQuery('widget'), $this->getQuery('config', []));
 			if (!$widget instanceof Widget) {
-				throw new Exception("Loaded widget must be an instance of [app\\core\\Widget] class");
+				throw new Exception('Loaded widget must be an instance of [app\core\Widget] class');
 			}
 			ob_start();
 			print $widget->run();
 			$this->leave([
-				"component" => ob_get_clean()
+				'component' => ob_get_clean()
 			]);
 		} catch (\Exception $e) {
 			$this->exception($e);

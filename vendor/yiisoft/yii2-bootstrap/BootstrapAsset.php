@@ -20,10 +20,14 @@ class BootstrapAsset extends AssetBundle {
     public $sourcePath = '@bower/bootstrap/dist';
 
     public $css = [
-        "css/bootstrap.min.css",
+        'css/bootstrap.min.css',
     ];
 
 	public $js = [
-		"js/bootstrap.js"
+		'js/bootstrap.js'
+	];
+
+	public $depends = [
+		'yii\web\YiiAsset'
 	];
 }

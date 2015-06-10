@@ -24,7 +24,7 @@ class ModuleMenu extends Widget {
 			array_splice($module, $i, 1);
 			break;
 		}
-		return $this->render("ModuleMenu2", [
+		return $this->render("ModuleMenu", [
 			"modules" => $modules,
 			"name" => ModuleHelper::currentModuleName(),
 		]);

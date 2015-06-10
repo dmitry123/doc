@@ -61,7 +61,7 @@ class EditorMacroGridProvider extends GridProvider {
 			":static" => $this->static
 		]);
 		if (!empty($this->file)) {
-			$query->andWhere("file_id = :file", [
+			$query->andWhere("file_id = :file or file_id is null", [
 				":file" => $this->file
 			]);
 		}

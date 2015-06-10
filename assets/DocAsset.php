@@ -7,14 +7,14 @@ use app\core\AssetBundle;
 class DocAsset extends AssetBundle {
 
 	public $css = [
-		"css/doc.css"
+		'css/doc.css'
 	];
 
 	public $js = [
-		"js/doc.js"
+		'js/doc.js'
 	];
 
 	public $depends = [
-		"app\\assets\\SiteAsset"
+		'app\assets\SiteAsset'
 	];
 }
