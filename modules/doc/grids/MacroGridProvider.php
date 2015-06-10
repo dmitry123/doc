@@ -6,7 +6,7 @@ use app\core\GridProvider;
 use app\models\doc\Macro;
 use app\widgets\ControlMenu;
 
-class EditorMacroGridProvider extends GridProvider {
+class MacroGridProvider extends GridProvider {
 
 	public $static = 1;
 	public $file = 0;

@@ -21,7 +21,7 @@ print \app\widgets\Modal::widget([
 print \app\widgets\Modal::widget([
 	'title' => 'Поиск элементов',
 	'body' => \app\widgets\Grid::widget([
-		'provider' => new \app\modules\doc\grids\EditorMacroGridProvider([
+		'provider' => new \app\modules\doc\grids\MacroGridProvider([
 			'static' => 0, 'file' => $file->{'id'}
 		])
 	]),
@@ -37,7 +37,7 @@ print \app\widgets\Modal::widget([
 print \app\widgets\Modal::widget([
 	'title' => 'Просмотр списка элементов',
 	'body' => \app\widgets\Grid::widget([
-		'provider' => new \app\modules\doc\grids\EditorMacroGridProvider([
+		'provider' => new \app\modules\doc\grids\MacroGridProvider([
 			'static' => 0, 'file' => $file->{'id'}
 		])
 	]),
@@ -61,7 +61,7 @@ print \app\widgets\Modal::widget([
 print \app\widgets\Modal::widget([
 	'title' => 'Поиск макроса',
 	'body' => \app\widgets\Grid::widget([
-		'provider' => new \app\modules\doc\grids\EditorMacroGridProvider([
+		'provider' => new \app\modules\doc\grids\MacroGridProvider([
 			'static' => 1
 		])
 	]),
@@ -77,7 +77,7 @@ print \app\widgets\Modal::widget([
 print \app\widgets\Modal::widget([
 	'title' => 'Просмотр списка макросов',
 	'body' => \app\widgets\Grid::widget([
-		'provider' => new \app\modules\doc\grids\EditorMacroGridProvider([
+		'provider' => new \app\modules\doc\grids\MacroGridProvider([
 			'static' => 1
 		])
 	]),
@@ -104,7 +104,7 @@ print \app\widgets\Modal::widget([
 			'controlsWrapperClass' => 'col-xs-10 text-right no-padding',
 			'id' => 'builder-macro-panel',
 			'body' => \app\widgets\Grid::create([
-				'provider' => new \app\modules\doc\grids\EditorMacroGridProvider([
+				'provider' => new \app\modules\doc\grids\MacroGridProvider([
 					'static' => 1, 'file' => $file->{'id'}
 				])
 			]),
@@ -133,7 +133,7 @@ print \app\widgets\Modal::widget([
 			'controlsWrapperClass' => 'col-xs-10 text-right no-padding',
 			'id' => 'builder-element-panel',
 			'body' => \app\widgets\Grid::create([
-				'provider' => new \app\modules\doc\grids\EditorMacroGridProvider([
+				'provider' => new \app\modules\doc\grids\MacroGridProvider([
 					'static' => 0, 'file' => $file->{'id'}
 				])
 			]),

@@ -7,7 +7,7 @@ use app\widgets\ControlMenu;
 use yii\base\Exception;
 use yii\db\ActiveQuery;
 
-class File_TemplateManager_GridProvider extends GridProvider {
+class TemplateGridProvider extends GridProvider {
 
     /**
      * @var int file identification number

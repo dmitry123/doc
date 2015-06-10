@@ -12,7 +12,7 @@ print Html::beginTag("div", [
 print \app\widgets\Panel::widget([
     "title" => "Список шаблонов",
     "body" => \app\widgets\Grid::create([
-        "provider" => new \app\modules\doc\grids\File_TemplateManager_GridProvider([
+        "provider" => new \app\modules\doc\grids\TemplateGridProvider([
             "file" => $file->{"id"}
         ])
     ]),
