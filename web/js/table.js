@@ -4,8 +4,8 @@ var Core = Core || {};
 
 	"use strict";
 
-	const SORT_ASC  = 4;
-	const SORT_DESC = 3;
+	var SORT_ASC  = 4;
+	var SORT_DESC = 3;
 
 	var Table = Core.createComponent(function(properties, selector) {
 		Core.Component.call(this, properties, {
