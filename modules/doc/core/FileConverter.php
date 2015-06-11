@@ -22,7 +22,7 @@ class FileConverter {
             throw new Exception('Not configured output extension type');
         }
         if (substr(php_uname(), 0, 7) == 'Windows') {
-            $py = 'start python.exe';
+            $py = 'start c:\Program Files (x86)\LibreOffice 4\program\python.exe';
         } else {
             $py = 'python';
         }

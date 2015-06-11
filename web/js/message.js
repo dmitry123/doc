@@ -68,7 +68,7 @@ var Core = Core || {};
 		if (parseInt(this.selector().css("left")) < 0) {
 			this.selector().animate({
 				"left": "5px"
-			}, "slow", null, function() {
+			}, "slow", "swing", function() {
 				if (me.property("open")) {
 					me.property("open").call(me);
 				}
