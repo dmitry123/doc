@@ -1,7 +1,7 @@
 <?php
 /**
  * @var $this yii\web\View
- * @var $self app\modules\service\controllers\SettingController
+ * @var $self app\modules\service\controllers\MainController
  * @var $ext string
  * @var $items array
  */
@@ -23,7 +23,7 @@
 		'controls' => [
 			'service-refresh-icon' => [
 				'label' => 'Обновить страницу',
-				'icon' => 'fa fa-refresh',
+				'icon' => 'glyphicon glyphicon-refresh',
 			]
 		],
 		'controlMode' => \app\widgets\ControlMenu::MODE_ICON,

@@ -2,15 +2,15 @@
 var Admin_ModuleMenu_TabMenu = {
 	ready: function() {
 		var me = this, menu = $("#service-module-menu");
-		menu.find("li > ul > li > a").click(function() {
-			me.load($(this).parents("ul:eq(0)").prev().attr("data-module"), $(this).attr("data-ext"));
+		menu.find("li > ul > li:not(.dropdown) > a").click(function() {
+			me.load($(this).attr("data-module"), $(this).attr("data-ext"), $(this).attr("data-action"));
 		});
 		$(".service-refresh-icon").click(function() {
 			menu.find("li > ul > li.active > a").trigger("click");
 			$(this).rotate(360, 500, "swing");
 		});
 	},
-	load: function(module, id) {
+	load: function(module, id, action) {
 		var container = $("#service-module-content"),
 			menu = $("#service-module-menu");
 		var body = menu.parents(".panel").find(".panel-body").loading({
@@ -30,10 +30,19 @@ var Admin_ModuleMenu_TabMenu = {
 				progress();
 			}
 		};
-		Core.loadExt(module, "service/" + id, {}, function(response) {
+		Core.loadExt(module, "service/" + id, {
+            'action': action
+        }, function(response) {
 			container.empty().append(response["component"]);
-			menu.find("li > ul > li.active").removeClass("active");
-			menu.find("li > ul > li > a[data-ext='"+ id +"']").parents("li:eq(0)").addClass("active");
+			menu.find("li.active").removeClass("active");
+            var a = menu.find("li > a[data-module='"+ module +"']");
+            if (action) {
+                a = a.filter("[data-action='"+ action +"']");
+            }
+            if (id) {
+                a = a.filter("[data-ext='"+ id +"']");
+            }
+			a.parents("li:eq(0)").addClass("active");
 			var requires = response["requires"];
 			if (requires && requires["js"]) {
 				var js = requires["js"];

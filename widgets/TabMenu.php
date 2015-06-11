@@ -52,18 +52,30 @@ class TabMenu extends Widget {
 	 *
 	 * @param $items array with items
 	 * @param $depth int tabulation depth
+	 * @param $parent array with parent configuration
 	 */
-	public function renderItems($items, $depth = 0) {
+	public function renderItems($items, $depth = 0, $parent = null) {
+		$style = null;
 		print Html::beginTag("ul", [
 			"class" => $this->style,
 			"id" => $depth ? null : $this->getId(),
-			"role" => "menu"
+			"role" => "menu",
+			"style" => $style,
 		]);
 		foreach ($items as $class => $item) {
 			if (isset($item["href"])) {
 				$href = $item["href"];
 			} else {
 				$href = "javascript:void(0)";
+			}
+			if (!isset($item['data-module']) && !isset($item['data-ext'])) {
+				$item['data-action'] = $class;
+			}
+			if ($parent != null && !isset($item['data-module'])) {
+				$item['data-module'] = $parent['data-module'];
+			}
+			if ($parent != null && isset($parent['data-ext'])) {
+				$item['data-ext'] = $parent['data-ext'];
 			}
 			$options = [
 				"role" => "presentation"
@@ -75,6 +87,7 @@ class TabMenu extends Widget {
 			}
 			if (isset($item["items"]) && count($item["items"]) > 0) {
 				$options["class"] .= " dropdown";
+				$item["onclick"] = '$(this).next().slideToggle("normal")';
 				$list = $item["items"];
 			} else {
 				$list = null;
@@ -104,7 +117,7 @@ class TabMenu extends Widget {
 			print Html::beginTag("li", $options);
 			print Html::a($label, $href, $item);
 			if ($list != null) {
-				$this->renderItems($list, $depth + 1);
+				$this->renderItems($list, $depth + 1, $item);
 			}
 			print Html::endTag("li");
 		}

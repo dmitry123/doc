@@ -3,19 +3,21 @@
 namespace app\modules\security\grids;
 
 use app\core\GridProviderWrite;
-use app\models\core\Role;
+use app\models\core\Module;
 
-class RoleGridProvider extends GridProviderWrite {
+class ModuleGridProvider extends GridProviderWrite {
 
 	public $columns = [
 		'id' => '#',
+		'access_id' => 'Доступ',
 		'name' => 'Название',
-		'description' => 'Описание',
+		'icon' => 'Иконка',
+		'url' => ' Главная',
 	];
 
 	public $sort = [
 		'attributes' => [
-			'id', 'name', 'description',
+			'id', 'access_id', 'name', 'icon', 'url',
 		],
 		'orderBy' => [
 			'name' => SORT_ASC,
@@ -24,11 +26,11 @@ class RoleGridProvider extends GridProviderWrite {
 
 	public $search = [
 		'attributes' => [
-			'id', 'name', 'description',
+			'id', 'access_id', 'name', 'icon', 'url',
 		]
 	];
 
 	public function getQuery() {
-		return Role::find();
+		return Module::find();
 	}
 }

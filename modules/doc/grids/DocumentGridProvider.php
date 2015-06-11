@@ -13,6 +13,12 @@ class DocumentGridProvider extends GridProvider {
 	 */
 	public $type = 'document';
 
+	/**
+	 * @var string name of file status, that should loaded, by
+	 * 	default [new] status uses
+	 */
+	public $status = 'new';
+
 	public $tableClass = 'table table-striped table-hover doc-file-document-grid';
 
 	public $columns = [
@@ -58,8 +64,7 @@ class DocumentGridProvider extends GridProvider {
 
 	public function getQuery() {
 		return File::find()->where('file_type_id = :file_type_id and file_status_id = :file_status_id', [
-            ':file_type_id' => 'document',
-            ':file_status_id' => 'new'
+            ':file_type_id' => $this->type, ':file_status_id' => 'new'
         ]);
 	}
 }

@@ -3,9 +3,9 @@
 namespace app\modules\security\grids;
 
 use app\core\GridProviderWrite;
-use app\models\core\Role;
+use app\models\core\Privilege;
 
-class RoleGridProvider extends GridProviderWrite {
+class PrivilegeGridProvider extends GridProviderWrite {
 
 	public $columns = [
 		'id' => '#',
@@ -29,6 +29,6 @@ class RoleGridProvider extends GridProviderWrite {
 	];
 
 	public function getQuery() {
-		return Role::find();
+		return Privilege::find();
 	}
 }

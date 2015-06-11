@@ -32,6 +32,19 @@ class Grid extends Widget {
 	 */
 	public $config = [];
 
+	public function init() {
+		if (is_string($this->provider)) {
+			$this->provider = new $this->provider();
+			if (!$this->provider instanceof GridProvider) {
+				throw new Exception("Table provider must be an instance of [app\\core\\Table] class");
+			}
+		}
+		$this->config = ArrayHelper::merge(
+			$this->config, $this->provider->config
+		);
+		parent::init();
+	}
+
 	/**
 	 * Run widget to catch just rendered table's content
 	 * and return it as widget result
@@ -40,15 +53,6 @@ class Grid extends Widget {
 	 * @throws Exception
 	 */
 	public function run() {
-		if (is_string($this->provider)) {
-			$this->provider = new $this->provider();
-			if (!$this->provider instanceof GridProvider) {
-				throw new Exception("Table provider must be an instance of [app\\core\\Table] class");
-			}
-		}
-        $this->config = ArrayHelper::merge(
-            $this->config, $this->provider->config
-        );
 		ob_start();
 		$this->renderTable();
 		return ob_get_clean();

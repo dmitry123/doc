@@ -7,7 +7,7 @@ use app\core\Ext;
 use app\core\UniqueGenerator;
 use Yii;
 
-class SettingController extends Controller {
+class MainController extends Controller {
 
 	/**
 	 * Define behaviors for admin module
@@ -56,7 +56,16 @@ class SettingController extends Controller {
 			$result = [];
 			foreach ($menu as $k => $m) {
 				if ($ext != null && $ext['key'] == $k) {
-					$m['options'] = [ 'class' => 'active' ];
+					if (isset($m['items']) && count($m['items']) > 0 && isset($ext['params']['action'])) {
+						foreach ($m['items'] as $k2 => &$v2) {
+							if ($k2 == $ext['params']['action']) {
+								$v2['options'] = [ 'class' => 'active' ];
+								break;
+							}
+						}
+					} else {
+						$m['options'] = [ 'class' => 'active' ];
+					}
 					$active = $instance;
 				}
 				$result[UniqueGenerator::generate('a')] = $m + [ 'data-ext' => $k ];
@@ -64,9 +73,7 @@ class SettingController extends Controller {
 			return $config + [ 'items' => $result, 'data-module' => $id ];
 		});
 		if ($active != null) {
-			$depends = [
-				'app\assets\SiteAsset'
-			];
+			$depends = [ 'app\assets\SiteAsset' ];
 			foreach ($active->js as $js) {
 				$this->getView()->registerJsFile('@web/'.$js, [ 'depends' => $depends ]);
 			}

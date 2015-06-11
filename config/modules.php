@@ -55,6 +55,6 @@ return [
 			'admin',
 			'super',
 		],
-		'url' => 'service/setting'
+		'url' => 'service/main'
 	],
 ];
