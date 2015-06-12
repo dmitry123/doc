@@ -36,6 +36,11 @@ class TabMenu extends Widget {
 	 */
 	public $style = self::STYLE_TABS;
 
+    /**
+     * @var string with path for item, that should be displayed
+     */
+    public $display = null;
+
 	/**
 	 * Run widget to return just rendered content
 	 * @return string - Just rendered content
@@ -55,7 +60,15 @@ class TabMenu extends Widget {
 	 * @param $parent array with parent configuration
 	 */
 	public function renderItems($items, $depth = 0, $parent = null) {
-		$style = null;
+        if ($depth > 0) {
+            if ($this->display !== null) {
+                $style = null;
+            } else {
+                $style = 'display: none;';
+            }
+        } else {
+            $style = null;
+        }
 		print Html::beginTag("ul", [
 			"class" => $this->style,
 			"id" => $depth ? null : $this->getId(),
