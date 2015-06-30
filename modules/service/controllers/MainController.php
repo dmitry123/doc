@@ -26,6 +26,10 @@ class MainController extends Controller {
 		return $this->actionView();
 	}
 
+	public function actionTest() {
+		return $this->render('test');
+	}
+
 	public function actionView() {
 		return $this->render('view', [ 'self' => $this,
 			'ext' => Yii::$app->getSession()->get('ext', null),
